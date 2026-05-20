@@ -16,14 +16,14 @@ The folder is small by design. The scope test is simple: would removing this fil
 ```
 Operations/
 ├── Operations Guide.md         (this file)
-├── argos-pause.md              (the kill-switch)
+├── agent-pause.md              (AI autonomy kill-switch)
 ├── email-signature.md          (canonical signature payload)
 └── agent-messaging-policy.md   (per-channel rules, optional)
 ```
 
-**argos-pause.md.** The kill-switch. Any agent sending a message on your behalf must check this file first. If the file contains anything other than a clear "go" signal, the agent stops and reports rather than sending. This gives you a one-line override when you need to silence the stack quickly.
+**agent-pause.md.** The AI autonomy kill-switch. Any agent sending a message on your behalf must check this file first. If the file contains anything other than a clear "go" signal, the agent stops and reports rather than sending. This gives you a one-line override when you need to silence the stack quickly.
 
-The filename is conventional. If you rename your upstream agent, you can rename the file to match (`{{agent_name}}-pause.md`), but every messaging skill in `Skills/` needs to be updated in lockstep.
+The filename is conventional. If you want to scope the kill-switch to a specific named agent, rename the file (`<agent-name>-pause.md`), but every messaging skill in `Skills/` needs to be updated in lockstep.
 
 **email-signature.md.** The canonical signature payload your agents append to outbound email. Single source of truth. The messaging skill loads this file, applies its content, and signs every message identically. Direct calls to the email send API outside the skill are a defect: the API send path typically bypasses the email client's signature settings.
 
@@ -33,7 +33,7 @@ The filename is conventional. If you rename your upstream agent, you can rename 
 
 Required fields per file type.
 
-**argos-pause.md** carries no formal frontmatter; the file body is the signal. By convention the file content reads either:
+**agent-pause.md** carries no formal frontmatter; the file body is the signal. By convention the file content reads either:
 
 ```
 go
@@ -79,7 +79,7 @@ If you're not sure whether something belongs, default to "no". Operations is mea
 
 **Changes are load-bearing.** Editing `email-signature.md` changes how every outbound message looks. Edit deliberately, commit with a clear message, and check the affected messaging skills still load it correctly.
 
-**Kill-switch hygiene.** Flip `argos-pause.md` to a paused state when investigating any issue with agent behaviour. The cost of an unnecessary pause is zero; the cost of an unpaused stack misbehaving in public is not.
+**Kill-switch hygiene.** Flip `agent-pause.md` to a paused state when investigating any issue with agent behaviour. The cost of an unnecessary pause is zero; the cost of an unpaused stack misbehaving in public is not.
 
 ## Canonical example
 

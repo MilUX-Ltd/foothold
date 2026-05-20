@@ -90,7 +90,7 @@ The Obsidian page and the coordination cards are cross-linked by URL in both dir
 
 These files are load-bearing. They govern how your agents represent you to the outside world. Treat changes to them with the same care you'd apply to a public-facing biography.
 
-The kill-switch file (`Operations/argos-pause.md` by default) is a hard safety mechanism. Any agent sending a message on your behalf must check this file first; if it has been flipped, the agent stops and reports rather than sending. This gives you a one-line override when you need to silence the stack quickly.
+The AI autonomy kill-switch file (`Operations/agent-pause.md` by default) is a hard safety mechanism. Any agent sending a message on your behalf must check this file first; if it has been flipped, the agent stops and reports rather than sending. This gives you a one-line override when you need to silence the stack quickly.
 
 ## Promotion Pattern
 
