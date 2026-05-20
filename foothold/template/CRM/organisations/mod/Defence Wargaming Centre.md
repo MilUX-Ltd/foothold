@@ -57,6 +57,7 @@ DWC supports customers across UK defence and security. Confirmed customer surfac
 ### Wider context
 
 - [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|Dstl]] (inside NA-Innov): parent organisation.
+- [[CRM/organisations/mod/Defence Modelling and Simulation Office|Defence Modelling and Simulation Office (DMSO)]]: closely related M&S capability across MOD.
 - [[CRM/organisations/mod/Defence Academy of the United Kingdom|Defence Academy of the United Kingdom]]: runs the wargaming training pipeline.
 - [[Intelligence/defence-landscape/Centres of Excellence|Centres of Excellence overview]].
 - [[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]]: parent.

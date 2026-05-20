@@ -47,7 +47,7 @@ Application areas explicitly cited:
 
 ### Leadership and partners
 
-- **Lead partner.** The [Henry Royce Institute](https://www.royce.ac.uk/news/dstl-centre-of-excellence/) for advanced materials. Operates its hub at the University of Manchester.
+- **Lead partner.** The [Henry Royce Institute](https://www.royce.ac.uk/news/dstl-centre-of-excellence/) for advanced materials. Operates its hub at the [[CRM/organisations/academia/University of Manchester|University of Manchester]].
 - **Other named partners.** 23 partners across academia, industry, and research organisations, including the Catapult Network.
 - **University of Sheffield** is a named academic partner. See [Sheffield to partner in new £42.5m Dstl Materials Centre of Excellence](https://www.sheffield.ac.uk/engineering/news/sheffield-partner-new-ps425m-dstl-materials-centre-excellence).
 - **Knowledge Centre for Materials Chemistry (KCMC)** is also engaged. See [KCMC: Dstl launch £42.5M advanced materials Centre of Excellence](https://www.materialschemistry.org.uk/news/2024/dstl-launch-42-5m-advanced-materials-centre-of-excellence).
@@ -66,7 +66,7 @@ Cranfield University hosts a separate but adjacent [Centre of Excellence in Ener
 ### Adjacent
 
 - [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|Dstl]]: parent funder and host.
-- Henry Royce Institute: lead academic partner.
+- [[CRM/organisations/academia/University of Manchester|University of Manchester]]: hosts the Henry Royce Institute lead partner.
 - [[Intelligence/defence-landscape/Centres of Excellence|Centres of Excellence overview]].
 - [[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]]: parent.
 
