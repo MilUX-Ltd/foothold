@@ -31,4 +31,4 @@ Organisations publicly associated with the cluster's launch and early activity i
 
 ## Related
 
-- [[Intelligence/defence-landscape/Clusters/Clusters Index|UK RDSC index]]
+- [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|UK RDSC index]]

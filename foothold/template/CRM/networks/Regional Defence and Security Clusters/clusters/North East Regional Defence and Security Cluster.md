@@ -33,4 +33,4 @@ With strong links to digital, chemical, maritime, advanced manufacturing, and of
 
 ## Related
 
-- [[Intelligence/defence-landscape/Clusters/Clusters Index|UK RDSC index]]
+- [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|UK RDSC index]]

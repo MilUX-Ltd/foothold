@@ -33,5 +33,5 @@ The region has the potential to become one of the largest and most influential d
 
 ## Related
 
-- [[Intelligence/defence-landscape/Clusters/Clusters Index|UK RDSC index]]
-- [[Intelligence/defence-landscape/Clusters/South West Regional Defence and Security Cluster|SWRDSC]] (neighbouring cluster)
+- [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|UK RDSC index]]
+- [[CRM/networks/Regional Defence and Security Clusters/clusters/South West Regional Defence and Security Cluster|SWRDSC]] (neighbouring cluster)
