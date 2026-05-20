@@ -1,126 +1,138 @@
 # Architecture and Working Conventions
 
-This document describes how {{pack_owner}}'s Foothold pack is organised and the rules for how agents operate within it. Any agent working on {{pack_owner_first}}'s behalf should read this before acting.
+This document describes how {{pack_owner}}'s Foothold pack is organised. It carries the conventions that make the pack work, and it scales: solo founders working alone use the same shape as teams running multi-agent stacks. Where a pattern only matters once you add agents, that's called out.
 
-## The Agents
+## Who works in this vault
 
-This pack assumes a multi-agent stack with clearly separated roles. The Foothold default runs this stack inside Anthropic's Cowork; you can adapt it to other AI tools without changing the structural conventions below.
+By default, just you. The pack is built for solo operation first and grows as you add agents.
 
-- **{{pack_owner}}** — human, the only person who commits to canonical knowledge.
-- **Upstream agents** — research and curation. Work with {{pack_owner_first}} to shape, define, research, and refine work before it is committed. May write directly to the vault as part of normal work.
-- **Downstream agents** — execution. Operate on self-contained briefs prepared upstream. Write only to operational systems (the outputs queue, code repositories, messaging), never to the vault.
+If and when you bring agents into your workflow:
 
-The number of agents in each tier is your choice. The pattern is what matters: research and curation upstream, execution downstream, explicit handoffs between.
+- **You ({{pack_owner}})** are the only person who commits to canonical knowledge. Everything else happens in support of that.
+- **Research and curation agents** help you shape, define, research, and refine work before you commit it. They may write into the vault under your supervision.
+- **Execution agents** do downstream work on briefs you (or your curation agents) prepare. They write to operational systems (code repositories, messaging tools, outputs queues), never directly into the vault.
 
-## Three-Tier Architecture
+You can run with zero, one, or many agents in each role. The conventions below hold either way.
 
-**Upstream tier — research, curation, vault writes.**
-{{pack_owner}} and upstream agents. Read everything. Write to the vault.
+## Three kinds of work
 
-**Execution tier — downstream work on curated briefs.**
-Downstream agents. Operate on self-contained briefs. Write to operational systems only.
+Whether one person or one team does the work, three kinds of work happen against this vault.
 
-**Coordination tier — work tracking and audit.**
-A coordination system (Businessmap, Linear, Asana, Trello, your choice) sits above the other tiers as the work-tracking and audit layer. Every agent posts a progress comment on the relevant card after completing a unit of work, referencing the resulting artefact.
+**Research and curation.** Reading source material, talking to people, sense-making, drafting. Output lands in the vault.
 
-## Tool Roles
+**Execution.** Producing deliverables based on a brief: a piece of content, a code change, a sent message, a deck. Output lands in operational systems and gets logged back into the vault when it's worth keeping.
 
-The pack assumes the following classes of tool. The specific product in each slot is your call; the role each plays in the system is the structural commitment.
+**Coordination.** Tracking what's in flight, what's blocked, what's done. If you have a separate work-tracking system, that's where coordination lives. If you don't, the `Initiatives/` folder and a daily note are enough.
 
-**Obsidian (this vault).** The primary knowledge base. Holds long-form notes, meeting context, contact knowledge, initiative and project pages, CRM-style records. Synced across your machines via your chosen method.
+The conventions in this document apply to all three.
 
-**Reference library.** A separate system for source material, PDFs, web captures, binary assets, long-term research archives. Anything that doesn't earn a place in the active vault. DEVONthink, Apple Notes, Notion, or similar. Accessed by upstream agents only.
+## What lives where
 
-**Structured outputs queue.** The staging area between agents and the vault. Downstream agents deposit here; upstream agents curate from here into the vault. Notion database, Linear project, Airtable base, or similar.
+Foothold assumes Obsidian as the primary knowledge base. Everything else is optional and only relevant if you have or add the tool.
 
-**Coordination layer.** Work tracking and audit. Businessmap, Linear, Asana, or similar.
+**Obsidian (this vault).** The primary knowledge base. Long-form notes, meeting context, contact knowledge, initiative pages, CRM-style records. This is the source of truth.
 
-**Code and versioned artefacts.** Git-hosted code and scripts. GitHub, GitLab, or similar.
+**Optional — a reference library.** Source material, PDFs, web captures, binary assets, long-term research archives that don't earn a place in the active vault. DEVONthink, Apple Notes, a Notion archive, even a simple Downloads folder. Your choice.
 
-**Messaging integration.** For agents that send messages on your behalf. Unipile, native API integrations, or similar. See `Operations/` for the runtime policy that governs how agents represent you in messages.
+**Optional — a work-tracking system.** Linear, Asana, Trello, Businessmap, your choice. Lives outside the vault. Tracks cycle time, WIP, and ownership. Cross-linked to initiative pages here when relevant.
 
-## Write Boundaries — The Core Rule
+**Optional — a structured outputs queue.** Where downstream agents deposit work for your review before it gets promoted into the vault. Notion database, Airtable base, similar. Only needed once you have agents producing material.
 
-1. **Downstream agents write to operational systems only.** Never to the vault. Enforce this at the tool level (deploy-key restrictions, etc.) rather than relying on instruction alone.
-2. **Upstream agents may write directly to the vault** as part of normal work with {{pack_owner_first}}.
-3. **{{pack_owner}} may write anywhere.**
-4. **Promotion from the outputs queue into the vault is a deliberate curation step** performed by {{pack_owner}} or an upstream agent. This step is the gate between agent-produced output and canonical knowledge.
+**Optional — code and versioned artefacts.** Git-hosted code and scripts. You may have your own.
 
-## Workflow Patterns
+**Optional — messaging integrations.** For agents that send messages on your behalf. See `Operations/` for the runtime policy that governs how that works.
 
-### Research → Execute → Promote
+The pattern: Obsidian is the canonical record. Other systems serve specific operational roles. Knowledge stays in the vault; operation stays in its operational system.
 
-1. Upstream does the research using the reference library, the vault, and the web.
-2. Research lands in the outputs queue as a structured brief.
-3. Downstream picks up the brief and executes the work.
-4. {{pack_owner_first}} or an upstream agent reviews and promotes the result into the vault where appropriate.
-5. The coordination card is updated with progress comments at each stage.
+## Write boundaries
 
-### Research Brief Template
+These rules apply when you have agents working in the vault. If you're operating solo, you write everything yourself and these rules are background.
 
-Use this structure when preparing a brief for a downstream agent. Downstream agents typically cannot reach the reference library or private vault paths, so the brief must be self-contained.
+1. **Execution agents write to operational systems only.** Never directly to the vault. Enforce this at the tool layer (deploy-key restrictions, write-scoped credentials) rather than relying on instruction alone.
+2. **Research and curation agents may write into the vault** as part of normal work with you, with your supervision.
+3. **You may write anywhere.**
+4. **Promotion from an outputs queue into the vault is always a deliberate step.** It's the gate between agent-produced output and your vetted knowledge base.
+
+If you're solo, only rule 3 applies and everything else is on the road map for when you scale.
+
+## Workflow patterns
+
+These patterns scale from solo work up to a multi-agent stack. Use as much or as little of them as your setup justifies.
+
+### Research → Decide → Capture (the solo baseline)
+
+1. You research using the vault, the web, your reference library.
+2. You decide what's worth keeping.
+3. You write the decision into the vault.
+
+The vault grows by deliberate addition. Drift comes from un-decided content sitting around. Decide and capture, or skip and move on.
+
+### Research → Execute → Promote (the scaled version)
+
+Once you have agents in the stack, the workflow distributes:
+
+1. Research lands in the vault or in an outputs queue.
+2. Execution happens against a written brief (see below).
+3. Output gets reviewed and promoted into the vault where worth keeping.
+4. Work-tracking system gets updated at each stage.
+
+### Brief template
+
+When you're handing work to anyone (an agent or a person who doesn't have vault access), structure the brief like this:
 
 - **Context.** Why this work is happening and what it fits into.
 - **Constraints.** Time, scope, dependencies, things to avoid.
-- **Source material.** The actual content needed, copied into the brief rather than referenced out.
+- **Source material.** The actual content needed, copied into the brief rather than referenced out. The recipient may not be able to reach your reference library.
 - **Specific ask.** The concrete output expected, including format, length, and destination.
 - **Out of scope.** Things not to do, even if they seem adjacent.
 
-### Coordination Card Convention
+Useful even when you're briefing yourself. Writing it down sharpens it.
 
-After completing a work unit:
+### Promotion
 
-- Post a progress comment on the relevant card linking to the produced artefact (vault path, code repository commit, outputs queue row).
-- Move the card forward if the workflow step has advanced.
-- When handing off downstream, the comment should include the brief's location so the next agent can find it.
+When something agent-produced or externally-drafted needs to become canonical vault knowledge:
 
-## Initiatives and Projects
+1. Write the vault note at the path the content type implies (LinkedIn post → `Marketing/Marketing Outputs/LinkedIn Posts/<Title>.md`, initiative research → the relevant initiative folder).
+2. Update the source (outputs queue row, draft document) with the vault destination so the trail stays clear.
+3. Log on the work-tracking system if you use one.
 
-Initiatives are knowledge artefacts with an operational layer. They live in Obsidian under `Initiatives/active/` and `Initiatives/completed/`. See `Initiatives/Initiatives Guide.md` for the folder layout and index-page template.
+Reversal exists: if a promoted item needs to come back out, archive or delete the vault note, flip the source back to draft, log it. Rare but defined.
 
-- **Obsidian.** Canonical home for each initiative. Scope, goals, acceptance criteria, meeting notes, decisions, retrospectives, and wiki-links into contacts, intelligence, and resources.
-- **Coordination layer.** The cards underneath. Cycle time and WIP are tracked here, not in the vault.
-- **Outputs queue.** Used as an interface layer when an initiative needs to share derivative output with collaborators who don't have vault access.
+## Initiatives and projects
 
-The Obsidian page and the coordination cards are cross-linked by URL in both directions.
+Initiatives are knowledge artefacts with an operational layer. They live under `Initiatives/active/` and `Initiatives/completed/`. See `Initiatives/Initiatives Guide.md` for the folder layout.
 
-## Operations and Policy
+- **Obsidian.** Canonical home for each initiative. Scope, goals, acceptance criteria, meeting notes, decisions, retrospectives.
+- **Work-tracking system (optional).** The cards underneath the initiative. Cycle time and WIP tracked there.
+- **Outputs queue (optional).** Where derivative outputs land for review before promotion.
 
-`Operations/` carries the policy and runtime assets agents read at message-send time: your email signature stub, your kill-switch file, runtime guards.
+If you don't have a work-tracking system yet, the initiative page in the vault carries the workload itself: a status section, a tasks section, a decisions log. Add the tracking system when scale justifies it.
 
-These files are load-bearing. They govern how your agents represent you to the outside world. Treat changes to them with the same care you'd apply to a public-facing biography.
+## Operations and policy
 
-The AI autonomy kill-switch file (`Operations/agent-pause.md` by default) is a hard safety mechanism. Any agent sending a message on your behalf must check this file first; if it has been flipped, the agent stops and reports rather than sending. This gives you a one-line override when you need to silence the stack quickly.
+`Operations/` carries the runtime policy files your agents read at message-send time: your email signature stub, the AI autonomy kill-switch.
 
-## Promotion Pattern
+If you don't have message-sending agents yet, these files just sit there. When you do add them, they become load-bearing. They govern how your agents represent you to the outside world.
 
-Promotion is the moment an agent-produced output crosses from the outputs queue into the canonical vault. It is the explicit gate between "drafted by an agent" and "{{pack_owner_first}}'s vetted knowledge base."
+The AI autonomy kill-switch file (`Operations/agent-pause.md` by default) is a hard safety mechanism. Any agent sending a message on your behalf must check this file first; if it has been flipped, the agent stops and reports rather than sending. Your one-line override when you need to silence the stack quickly.
 
-**Three mechanical steps per item promoted:**
+## Frontmatter conventions
 
-1. **Write the vault note** at the destination path implied by the content type (e.g. `Marketing/Marketing Outputs/LinkedIn Posts/<Title>.md` for a LinkedIn post, the relevant initiative folder for initiative-destined research).
-2. **Flip the outputs queue row** from "ready for review" to "promoted", noting the vault destination path.
-3. **Log on the coordination card** with the vault path and any outstanding items (typically a publish date or a published URL).
-
-**Reversal ("unpromote").** If you later want to unpromote, archive or delete the vault note, flip the outputs queue row back to "ready for review" or "archived", and post a reversal comment on the coordination card. Unpromotion should be rare; it exists as a defined escape hatch, not a routine move.
-
-## Frontmatter Conventions
-
-Every page in the vault carries YAML frontmatter. The required fields depend on the page type; see the per-folder Guide for specifics. Common patterns:
+Every page in the vault carries YAML frontmatter. Required fields depend on the page type; see the per-folder Guide for specifics. Common patterns:
 
 - `type:` — the page type (contact, organisation, initiative, meeting, framework, etc.).
 - `status:` — the page's current state (active, completed, archived, draft).
 - `created:` — ISO date the page was first written.
 - `tags:` — vault-wide taxonomy. See `Knowledge/tagging-policy.md`.
 
-## Naming Conventions
+## Naming conventions
 
-- **Folders.** Title Case for major folders (`Customer-Facing Services/`), kebab-case for initiative folders (`milux-brain/`), Title Case for canonical organisations and people.
+- **Folders.** Title Case for major folders (`Customer-Facing Services/`), kebab-case for initiative folders (`my-initiative/`), Title Case for canonical organisations and people.
 - **Files.** Match the canonical name of the entity. Acronyms in parentheses where useful: `National Armaments Materiel (NA-M).md`.
 - **Wikilinks.** Use display text for readability: `[[CRM/contacts/Jane Smith|Jane Smith]]`.
 - **Wikilinks in table cells** must escape the pipe: `[[CRM/contacts/Jane Smith\|Jane Smith]]`. Obsidian otherwise treats the pipe as a column separator and the table breaks.
 
-## Per-Folder Guides
+## Per-folder Guides
 
 Every top-level folder ships with a `<Folder Name> Guide.md` at its root. The Guide is the contract for what belongs in the folder. Five sections:
 
@@ -132,12 +144,12 @@ Every top-level folder ships with a `<Folder Name> Guide.md` at its root. The Gu
 
 When you're not sure where something goes, read the relevant Guide.
 
-## Adapting This Pack
+## Adapting this pack
 
-Foothold is opinionated. The conventions in this document and in the per-folder Guides are the load-bearing defaults that make the pack work. Adapt where you need to, but adapt deliberately:
+Foothold is opinionated. The conventions in this document and the per-folder Guides are the defaults that make the pack work. Adapt where you need to, but adapt deliberately:
 
 - Add folders if you have a domain not covered by the defaults.
-- Don't rename folders without checking what links into them. Use `Knowledge/rules.md` to record any deviations from the defaults.
-- Don't add agents to the upstream tier without enforcing the write boundaries at the tool layer.
+- Don't rename folders without checking what links into them. Record any deviations in `Knowledge/rules.md`.
+- Don't add agents to research and curation without enforcing the write boundaries at the tool layer.
 
 The pack works because the conventions are kept tight. Drift is the fastest way to break it.
