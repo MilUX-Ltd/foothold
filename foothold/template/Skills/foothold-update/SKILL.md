@@ -1,6 +1,6 @@
 ---
 name: foothold-update
-description: Pull the latest content from the public Foothold GitHub repo into the user's installed pack and reconcile it with anything they've edited locally. Compares each shipping file three ways — what was last pulled, what's currently on GitHub, and what the user has locally — and uses that to categorise files as in-sync / new / upstream-only-changed / locally-edited-only / conflicted. New and upstream-only files are added or updated. Conflicts are surfaced to the user with take-theirs / keep-mine / merge options. Use when the user says "update Foothold", "/foothold-update", "pull the latest from Foothold", "check for changes", "is there anything new in Foothold", "refresh my pack", "see if there are any updates", or any similar phrasing. Does NOT require plugin reinstall, marketplace sync, or terminal access.
+description: Pull the latest content from the public Foothold GitHub repo into the user's installed pack and reconcile it with anything they've edited locally. Self-upgrades first if a newer version of the skill itself is on GitHub, so future skill changes propagate automatically. Compares each shipping file three ways — what was last pulled, what's currently on GitHub, and what the user has locally — and uses that to categorise files as in-sync / new / upstream-only-changed / locally-edited-only / conflicted. New and upstream-only files are added or updated. Conflicts are surfaced to the user with take-theirs / keep-mine / merge options. Use when the user says "update Foothold", "/foothold-update", "pull the latest from Foothold", "check for changes", "is there anything new in Foothold", "refresh my pack", "see if there are any updates", or any similar phrasing. Does NOT require plugin reinstall, marketplace sync, or terminal access.
 ---
 
 # Foothold — Update (three-way reconcile)
@@ -20,6 +20,8 @@ This version does a **three-way reconcile** using GitHub blob SHAs:
 - The combination of those three tells the skill exactly what state each file is in, and what action is safe to take.
 
 The user stays in control of every conflict.
+
+The skill is also **self-aware**: before doing anything else, it checks whether its own `SKILL.md` has changed upstream and offers to upgrade itself first. That means future changes to the skill propagate automatically with the user's explicit consent, and you never need to send users a copy of the file by hand once they're on this version or newer.
 
 ## What this skill does
 
@@ -52,9 +54,99 @@ Confirm the user is in a Foothold pack:
   - The substitution values: `pack_owner`, `pack_owner_first`, `pack_owner_email`, `pack_owner_linkedin`, `pack_owner_phone`, `pack_org`, `pack_org_slug`, `pack_org_website`, plus today's date for `install_date`.
   - The current `last_known_shas:` map (may be empty on first-ever update run; treat missing as "no prior pull recorded").
 
+## Self-update check (runs before everything else)
+
+The update skill propagates itself through the same mechanism it uses to propagate content: it's a tracked file at `Skills/foothold-update/SKILL.md`. If the skill itself has changed on GitHub since the user last ran it, the right thing to do is upgrade the skill first, then run the reconcile under the new behaviour.
+
+This step runs **before** the main file-by-file reconcile, immediately after Pre-flight. It is single-purpose: ensure the user is on the latest version of `Skills/foothold-update/SKILL.md` before any other work happens.
+
+### Sub-step S.1 — Fetch only the skill file's SHA
+
+Make a small targeted call to the GitHub tree API and pull out the entry for `foothold/template/Skills/foothold-update/SKILL.md`. The full tree fetch will happen in Step 1; this just front-loads the one entry we need to decide whether to self-upgrade.
+
+In practice the cheapest path is to call the same tree API endpoint Step 1 uses, but only consume the entry for the skill file from the response. Hold the rest of the tree in memory for Step 1.
+
+```
+GET https://api.github.com/repos/MilUX-Ltd/foothold/git/trees/main?recursive=1
+```
+
+From the response, find the entry where `path == "foothold/template/Skills/foothold-update/SKILL.md"`. Record its `sha` as `remote_skill_sha`.
+
+### Sub-step S.2 — Determine the local skill SHA
+
+The vault has the running copy at `Skills/foothold-update/SKILL.md`. Compute its git-blob SHA the same way Step 2 will compute every other file's SHA:
+
+```
+git hash-object Skills/foothold-update/SKILL.md
+```
+
+Or the Python equivalent if git isn't available. Record this as `local_skill_sha`.
+
+Also look up `stored_skill_sha = last_known_shas["Skills/foothold-update/SKILL.md"]` from `.foothold/config.yml`. May be absent on legacy installs.
+
+### Sub-step S.3 — Decide whether to upgrade the skill
+
+Apply the same categorisation logic the rest of the skill uses, just to the skill file:
+
+| Condition | Self-update action |
+|---|---|
+| `local_skill_sha == remote_skill_sha` | Skill is current. Continue silently to Step 1. |
+| `local_skill_sha != remote_skill_sha` and (`stored_skill_sha` absent OR `stored_skill_sha == local_skill_sha`) | Upstream-only update available. Offer to upgrade (see S.4). |
+| `local_skill_sha != remote_skill_sha` and `stored_skill_sha != local_skill_sha` and `stored_skill_sha != remote_skill_sha` | Conflict — the user has edited their own copy of the skill, and upstream has new changes too. Show the diff summary, offer take-theirs / keep-mine / merge, same UX as any conflict. |
+
+### Sub-step S.4 — Offer the self-upgrade
+
+Tell the user, briefly and honestly:
+
+> "There's a newer version of the update skill itself on GitHub. Upgrading it first means the rest of this run uses the new behaviour. Want me to upgrade and continue?"
+
+Use AskUserQuestion with three options:
+
+- `Upgrade and continue` — recommended. Replace the local skill file with the GitHub version, then re-invoke the update skill so the new logic drives the rest of the run.
+- `Continue with the version I've got` — proceed to Step 1 using the current in-memory instructions. The skill file stays as-is and `last_known_shas` is left unchanged for the skill file (so the user will be asked again next run).
+- `Cancel` — exit cleanly without changes.
+
+### Sub-step S.5 — Apply the upgrade (if chosen)
+
+If the user picks **Upgrade and continue**:
+
+1. Fetch the raw content of the new SKILL.md from GitHub:
+
+   ```
+   GET https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/foothold-update/SKILL.md
+   ```
+
+2. Apply placeholder substitution (the skill file shouldn't normally contain `{{...}}` tokens, but run the pass for consistency).
+
+3. Write it to `Skills/foothold-update/SKILL.md`, overwriting the existing file.
+
+4. Update `last_known_shas["Skills/foothold-update/SKILL.md"]` to `remote_skill_sha` in `.foothold/config.yml`. Write the config.
+
+5. Tell the user, in one line: "Update skill upgraded to the latest version. Re-invoking with the new behaviour now."
+
+6. **Re-invoke the skill.** Use the Skill tool to call `foothold-update` again from the top. The next invocation will:
+   - Run Pre-flight (cheap).
+   - Run the Self-update check again and find `local == remote` (so it'll skip immediately).
+   - Continue into Step 1 onwards with the new logic.
+
+   If the Skill tool can't self-invoke in the current Claude environment, fall back: tell the user "Skill file upgraded. Please run `/foothold-update` again to use the new behaviour." Then stop cleanly.
+
+### Sub-step S.6 — Merge path (if the user has a conflict on the skill itself)
+
+This is rare but possible (some users will edit their copy of the skill). If the user picks **Merge** on the skill-file conflict:
+
+- Read both versions.
+- Show the user the diff so they can decide.
+- Propose a merged version. In most cases the user's local edits are likely to be small (a comment, a tweaked instruction) and upstream's changes are likely to be the whole point of the update (new step, new sub-step, new behaviour). Lean towards taking upstream as the base and re-applying the user's localised edits on top.
+- Ask for confirmation before writing.
+- After write, update `last_known_shas` to the merged file's freshly-computed SHA.
+- Re-invoke as in S.5.
+
 ## Step 1 — Fetch the latest file tree from GitHub
 
-Call the GitHub tree API:
+If the Self-update check already fetched the tree in Sub-step S.1, reuse that response — no need to call the API twice in the same run.
+
+Otherwise, call the GitHub tree API:
 
 ```
 GET https://api.github.com/repos/MilUX-Ltd/foothold/git/trees/main?recursive=1
