@@ -60,8 +60,9 @@ The skill takes over from here. It will:
 2. **Ask six quick questions.** One at a time. Each has quick-pick options plus an "Other" option for free text. Skip any you want. The questions cover who you are, what you sell into defence, your positioning, your voice, your current priorities, and your tool stack.
 3. **Offer a context drop.** One final question inviting you to paste links, upload files, or point at a local folder of source material. The more you give it, the more personalised your vault will be.
 4. **Build your canonical pages.** Silently. The skill drafts your operator profile, organisation page, brand and strategy pages, email signature, and voice notes from the answers and corpus.
+5. **Offer to schedule updates.** Final question asking whether you want `/foothold-update` to run automatically on a weekly or monthly cadence. Pick a cadence and the skill sets up the scheduled task for you; pick manual and you trigger updates yourself.
 
-When the skill finishes, it tells you where the vault was created.
+When the skill finishes, it tells you where the vault was created and which schedule (if any) is now in place.
 
 ### Step 4 — Open your vault in Obsidian
 
@@ -116,6 +117,12 @@ In the first hour, focus on:
 2. **Read the per-folder Guides.** Every folder has a `<Folder Name> Guide.md` at its root. Knowledge Guide, Operations Guide, Context Guide, and CRM Guide are the load-bearing ones.
 3. **Connect Cowork to your vault.** Point Cowork at your new vault folder. Cowork and Obsidian now work against the same files; agents you run in Cowork write into the vault, and you see them in Obsidian.
 
+## Share back
+
+Foothold gets better the more it knows about the landscape. If you come across something useful that isn't in here — a new MOD body, a framework or programme nobody else has documented well, a portal that's just launched, a sharper definition for an acronym, a piece of doctrine worth surfacing in the Reading List — send it to Matt. A line of LinkedIn, an email, or a screenshot of the page will do. He'll integrate it into the next update so everyone else on the network gets the benefit.
+
+Email: matt@milux.co.uk. LinkedIn: [Matt Odell](https://www.linkedin.com/in/mattodell/).
+
 ## Troubleshooting
 
 **"Could not find marketplace MilUX-Ltd/foothold"** — Cowork couldn't fetch the marketplace metadata. Try `/plugin marketplace add MilUX-Ltd/foothold` again. If it still fails, email Matt.
@@ -134,4 +141,4 @@ In the first hour, focus on:
 
 ## Provenance
 
-Foothold is built by [MilUX](https://milux.co.uk). Its structure, conventions, and skills come from MilUX's own working vault.
+Foothold is built by [MilUX](https://milux.co.uk). Its structure, conventions, and skills come from MilUX's own working vault. It improves with every contribution from the network — if you find something useful that isn't in here, see [Share back](#share-back).

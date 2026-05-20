@@ -1,6 +1,6 @@
 ---
 name: foothold-setup
-description: Install Foothold — bootstrap the vault structure and run conversational onboarding. Fetches the latest template directly from the public Foothold GitHub repo, creates folders at the user's chosen path, substitutes placeholders, then interviews the user via six sequential AskUserQuestion calls to personalise the canonical pages. Use when the user says "set up Foothold", "install Foothold", "onboard me", or runs /foothold-setup. Does NOT require terminal access.
+description: Install Foothold — bootstrap the vault structure and run conversational onboarding. Fetches the latest template directly from the public Foothold GitHub repo, creates folders at the user's chosen path, substitutes placeholders, interviews the user via six sequential AskUserQuestion calls to personalise the canonical pages, and offers to schedule `/foothold-update` on a weekly or monthly cadence. Use when the user says "set up Foothold", "install Foothold", "onboard me", or runs /foothold-setup. Does NOT require terminal access.
 ---
 
 # Foothold — Install and Onboarding (GitHub fetch)
@@ -9,12 +9,14 @@ USE WHEN the user runs `/foothold-setup` or asks to install Foothold, set up a n
 
 This skill fetches directly from the public GitHub repo at `MilUX-Ltd/foothold`. It does not rely on the local plugin install's template directory, so installs are always against the latest published content.
 
-Four-phase process:
+Five-phase process:
 
 - **Phase A: Bootstrap.** Silent. Resolve target path, fetch the template tree from GitHub, substitute placeholders, write files.
 - **Phase B: Onboarding.** Six sequential questions via AskUserQuestion, one per call.
 - **Phase B+: Context drop.** One optional question inviting files, links, or folder paths to deepen personalisation.
 - **Phase B Build:** Populate the canonical pages from the corpus assembled across Phase B and Phase B+.
+- **Phase C: Schedule updates.** One question offering to schedule `/foothold-update` on a recurring cadence (weekly, monthly, or manual).
+- **Phase D: Confirm completion.** Final summary, including the schedule the user opted into if any.
 
 ## Pre-flight Check
 
@@ -278,13 +280,52 @@ Foothold pack set up today. Onboarding complete: canonical pages drafted from th
 
 ---
 
-## Phase C: Confirm completion
+## Phase C: Offer scheduled updates
+
+Foothold gets new content added over time — new MOD bodies surface, frameworks get refreshed, the acronym glossary grows. The user can either remember to run `/foothold-update` themselves, or have it scheduled to run automatically. Offer the choice.
+
+Use AskUserQuestion with **one** question:
+
+- Header: `Schedule`
+- Question: "Foothold adds new content over time — new MOD bodies, refreshed frameworks, expanded glossary entries. Want me to schedule `/foothold-update` to run automatically so your pack stays current?"
+- Options:
+  - `Weekly` — "Run every Monday morning"
+  - `Monthly` — "Run on the 1st of each month"
+  - `Custom cadence` — "I'll tell you when in 'Other'"
+  - `No, I'll run it manually` — "I'll trigger updates myself"
+- `multiSelect: false`
+
+### Acting on the answer
+
+- **Weekly**: call `mcp__scheduled-tasks__create_scheduled_task` with cron expression `0 9 * * 1` (every Monday at 09:00) and prompt `Run /foothold-update to pull the latest content from the Foothold repository into the vault at <vault path>. Apply the three-way reconcile per the SKILL.md; surface any conflicts to the user.`
+- **Monthly**: same as weekly but cron `0 9 1 * *` (1st of the month at 09:00).
+- **Custom cadence**: read what the user typed in `Other`. If it parses to a clear cadence (e.g. "every Wednesday at 7am", "twice a month", "every two weeks"), construct the matching cron expression and create the task. If it's ambiguous, ask one clarifying question, then create. If still ambiguous, default to weekly and tell the user.
+- **No, I'll run it manually**: do not create a scheduled task. Briefly remind the user they can re-run `/foothold-setup` later (or ask Cowork directly) to set up a schedule down the line.
+
+### Record the choice in `.foothold/config.yml`
+
+Whatever the user picks, append a `schedule:` section to `.foothold/config.yml` so the choice is auditable and can be re-asked on re-run:
+
+```yaml
+schedule:
+  cadence: weekly | monthly | custom | manual
+  cron: "<cron expression>" or null if manual
+  task_id: "<scheduled-tasks task id>" or null if manual
+  set_on: <today's ISO date>
+```
+
+If the user later wants to change the cadence (or remove the schedule), they can ask Cowork to update or cancel the scheduled task by ID, or re-run `/foothold-setup` which will see the existing schedule and offer to amend it.
+
+---
+
+## Phase D: Confirm completion
 
 Tell the user:
 
 - A one-line summary of what was created.
 - "Open this folder in Obsidian to see your vault."
-- "If you want to pull new content from Foothold later, just run `/foothold-update` here in Cowork. No need to reinstall anything."
+- If they opted into a scheduled update: "I've scheduled `/foothold-update` to run <cadence — e.g. every Monday at 9 AM>. You'll get a notification each time it runs and can review any conflicts before they're applied."
+- If they declined: "If you want to pull new content from Foothold later, just run `/foothold-update` here in Cowork. No need to reinstall anything."
 - Suggest one concrete next action based on the user's Q answers.
 
 ---
