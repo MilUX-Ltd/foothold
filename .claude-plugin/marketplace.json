@@ -8,8 +8,8 @@
     {
       "name": "foothold",
       "source": "./foothold",
-      "description": "The defence-sector founder's second-brain pack. Install, rename, update.",
-      "version": "0.1.0"
+      "description": "The defence-sector founder's second-brain pack. Install and update.",
+      "version": "0.2.0"
     }
   ]
 }
