@@ -68,21 +68,29 @@ Your vault is live. The top-level folders appear in the sidebar.
 
 ## Keeping your pack up to date
 
-Foothold evolves. New content gets added, existing pages get sharpened, new skills land. Pulling the latest into your installed pack is one step:
+Foothold evolves. New content gets added, existing pages get sharpened, new skills land. After your initial install, all updates happen through a skill that lives inside your vault — no marketplace refreshing, no plugin reinstalling, no Cowork restarting.
 
-In a Cowork chat, type:
+### How to trigger an update
 
-```
-/foothold-update
-```
+1. Open Cowork and make sure it's pointed at your Foothold vault folder. Cowork picks up the vault's skills automatically from the vault's `Skills/` folder.
+2. In a Cowork chat, type:
 
-Or just ask in natural language: "update Foothold", "pull the latest from the Foothold repo", "see if there's anything new in Foothold". Any of those triggers the same skill.
+   ```
+   /foothold-update
+   ```
 
-The skill goes straight to the public Foothold repository on GitHub, lists what's there, compares to your installed vault, and adds any new files. It does not touch files you've already got, so your personalised content stays exactly as you left it. When it finishes, you'll see a short report of what was added.
+   Or ask in natural language: "update Foothold", "pull the latest from the Foothold repo", "see if there's anything new in Foothold". Any of those triggers the same skill.
 
-No need to refresh the marketplace, reinstall the plugin, or restart Cowork. The skill goes directly to GitHub every time.
+3. The skill goes straight to the public Foothold repository on GitHub via a plain HTTPS request, lists what's there, compares to your installed vault, and adds any new files. It does not touch files you've already got, so your personalised content stays exactly as you left it.
+4. When it finishes, you'll see a short report of what was added.
 
-If you want to refresh a specific file you've previously edited (for example, you want the latest version of a Guide that you'd customised), delete your local copy first, then re-run `/foothold-update`. It will treat the file as a new addition.
+### Why this works without any setup
+
+The `/foothold-update` skill lives at `Skills/foothold-update/SKILL.md` inside your vault. It was placed there by the initial `/foothold-setup` run. Cowork sees it the moment your vault is open. The skill makes a plain HTTPS request to the public Foothold GitHub URLs — no GitHub account, no auth, no Terminal, no Git on your machine.
+
+### If you want the latest version of a file you've already edited
+
+The update skill never overwrites your local edits. If you've customised a Guide or other file and you want the latest shipped version, delete your local copy first, then re-run `/foothold-update`. It will treat the file as a new addition and copy in the fresh version. Your old text is preserved in Obsidian's file-recovery / version history if you turned that on, and in any Obsidian Sync versions if you use it.
 
 ## What's next
 
