@@ -29,27 +29,20 @@ This is the install walkthrough. The whole thing takes about ten minutes once yo
 
 ### Step 1 — Add the Foothold marketplace
 
-Open Cowork. In a new chat, type:
-
-```
-/plugin marketplace add MilUX-Ltd/foothold
-```
-
-Press Enter. Cowork fetches the marketplace metadata.
+1. Open the Claude desktop app and switch to the **Cowork** tab.
+2. Click **Customize** in the left sidebar. This is where Cowork keeps your plugins, skills, and connectors.
+3. Click the **+** button.
+4. Select **Add marketplace from GitHub**.
+5. Enter the repository URL: `https://github.com/MilUX-Ltd/foothold`
+6. Confirm.
 
 ### Step 2 — Install the Foothold plugin
 
-In the same chat:
-
-```
-/plugin install foothold@milux
-```
-
-Press Enter. Cowork installs the plugin and makes the Foothold skills available.
+Once the marketplace is added, Cowork lists the plugins available in it. Find **Foothold** in the list and click **Install**. The plugin activates automatically; its skills become available in any Cowork chat.
 
 ### Step 3 — Run the setup skill
 
-In the same chat:
+In a new Cowork chat, type:
 
 ```
 /foothold-setup
