@@ -127,7 +127,7 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 | CTC | Counter-Terrorist Check | Second-tier UK personnel clearance |
 | SC | Security Check | Third-tier UK personnel clearance |
 | eSC | Enhanced Security Check | Above SC |
-| DV | Developed Vettin | Highest UK personnel clearance |
+| DV | Developed Vetting | Highest UK personnel clearance |
 | List X | List X | Site security accreditation for handling protectively-marked material |
 
 ## Cyber and digital
