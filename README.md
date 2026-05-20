@@ -66,6 +66,28 @@ When the skill finishes, it tells you where the vault was created.
 
 Your vault is live. The top-level folders appear in the sidebar.
 
+## Keeping your pack up to date
+
+Foothold evolves. New content gets added, existing pages get sharpened, new skills land. To pull those changes into your installed pack:
+
+### Step 1 — Refresh the marketplace in Cowork
+
+In Cowork's **Customize** panel, find the Foothold marketplace in the list and click **Update**. Cowork compares the latest commit on GitHub against what it last synced, validates the manifest, and refreshes the plugin. This can take a few minutes.
+
+If you want this to happen automatically every time Foothold publishes a change, toggle **Sync automatically** on the marketplace entry. Cowork then syncs whenever a change lands on GitHub.
+
+### Step 2 — Pull the new content into your vault
+
+In a Cowork chat:
+
+```
+/foothold-update
+```
+
+The skill walks the latest plugin template and adds any new files to your vault. It does not touch files you've already got, so your personalised content stays exactly as you left it. When it finishes, you'll see a short report of what was added.
+
+If you want to refresh a specific file you've previously edited (for example, you want the latest version of a Guide that you'd customised), delete your local copy first, then re-run `/foothold-update`. It will treat the file as a new addition.
+
 ## What's next
 
 In the first hour, focus on:
