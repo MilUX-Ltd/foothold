@@ -43,6 +43,24 @@ Then report what was done.
 - Does not delete files. If a file has been removed from the upstream template, the local copy stays.
 - Does not re-run onboarding. Operator profile and personalised pages are left alone unless they show up as upstream changes the user explicitly accepts.
 - Does not touch files outside the Foothold shipping set. Anything the user has added that wasn't in Foothold to begin with is untouched.
+- **Does not touch the protected install-built files** (see next section). These are built during `/foothold-setup` from the interview answers, and overwriting them would destroy the user's personalisation.
+
+## Protected files — never updated, regardless of SHA state
+
+The following files are built by `/foothold-setup` from the install interview. Their upstream templates exist only as skeletons the setup skill fills in; they are not content meant to be propagated to existing installs. The update skill must skip them entirely — no fetch, no write, no SHA comparison, no prompt.
+
+Protected paths (vault-relative, after placeholder substitution):
+
+- `Context/<pack_owner>.md` — operator profile. The filename resolves via `pack_owner` from `.foothold/config.yml`. Match by post-substitution path, not by template token.
+- `Context/Brand.md`
+- `Context/Strategy.md`
+- `Context/Team.md`
+- `Context/Stakeholders.md`
+- `Operations/email-signature.md`
+
+Match against the **post-substitution** vault path, so the operator profile is caught regardless of who installed the pack.
+
+If the user explicitly asks for a refresh of one of these files ("pull the latest Brand template from Foothold and overwrite mine"), that's a separate manual operation, not part of the routine update flow. Routine `/foothold-update` runs leave them alone every time.
 
 ## Pre-flight
 
@@ -189,7 +207,9 @@ For each shipping file:
 
 ## Step 3 — Categorise each file
 
-For each shipping file, using `stored = last_known_shas[path]`, `local = locally-computed SHA`, `remote = SHA from the GitHub tree`:
+For each shipping file, first check the protected list. If the post-substitution vault path matches one of the protected paths listed in the "Protected files" section above, category is **PROTECTED** and no further work is done on that file in any later step — no fetch, no write, no `last_known_shas` update, no prompt. Move to the next file.
+
+Otherwise, using `stored = last_known_shas[path]`, `local = locally-computed SHA`, `remote = SHA from the GitHub tree`:
 
 | Condition | Category |
 |---|---|
@@ -214,7 +234,10 @@ Foothold update — what changed since your last pull:
   K conflicts          (you've edited these AND upstream has new changes)
   X local-only edits   (you've edited; no upstream change — nothing to do)
   Y already in sync    (no action)
+  P protected          (install-built files, never updated)
 ```
+
+The protected line is only shown if `P > 0`. Keep it terse — the user doesn't need a per-file list of skipped install-built files on every run.
 
 Then use the AskUserQuestion tool with these questions, in this order, only asking the ones that are relevant:
 
@@ -267,6 +290,7 @@ That is:
 - For CONFLICT take-theirs → remote SHA.
 - For CONFLICT keep-mine → unchanged.
 - For CONFLICT merge → re-compute the merged file's SHA locally and record that. The merged result is a new baseline; next run, if upstream changes again, it'll be a fresh comparison from this point.
+- For PROTECTED → do not write to `last_known_shas` at all. These files are out of band and should not be tracked by the reconcile mechanism. If a stored SHA is somehow present for one (e.g. set by an earlier version of the skill before protection landed), leave it as-is; do not actively prune.
 
 Also update:
 
