@@ -35,7 +35,11 @@ Stated value proposition is the combination of insight and authority delivered b
 
 ## RUSI and UK defence discourse
 
-RUSI publishes extensively on UK defence reform, the Strategic Defence Review, defence innovation, and capability-specific topics. Useful for defence-sector SMEs as an open-source feed on the structural and policy changes inside UK defence.
+RUSI publishes extensively on UK defence reform, the Strategic Defence Review, defence innovation, and capability-specific topics. Useful for defence-sector SMEs as an open-source feed on the structural and policy changes inside UK defence. Recent RUSI commentary that defence SMEs may find useful:
+
+- [Same, Same but Different? Launching UK Defence Innovation](https://www.rusi.org/explore-our-research/publications/commentary/same-same-different-launching-uk-defence-innovation): UKDI launch analysis.
+- [From Reform to Results: Incentives, Culture and the UK's Military Intelligence Services](https://www.rusi.org/explore-our-research/publications/commentary/reform-results-incentives-culture-and-uks-military-intelligence-services): MIS launch analysis.
+- Annual major events including the [RUSI Director General at Davos](https://rusi.org/news-and-comment/rusi-news/rusi-director-general-davos) speaking series.
 
 Routes for engagement: RUSI memberships, conference attendance, and direct outreach via researchers publishing on topics relevant to your work.
 

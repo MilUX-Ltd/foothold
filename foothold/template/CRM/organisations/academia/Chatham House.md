@@ -26,9 +26,17 @@ tags: [think-tank, international, uk, chatham-house, riia, chatham-house-rule]
 
 ## What Chatham House does
 
-Chatham House (officially the Royal Institute of International Affairs) is a British think tank focused on international affairs. Research spans security, geopolitics, energy, environment, economy, and global health. The Institute is also the originator of the **Chatham House Rule**, the convention by which information from a meeting may be used but neither the identity nor affiliation of speakers or other participants may be revealed.
+Chatham House (officially the Royal Institute of International Affairs) is a British think tank focused on international affairs. Research spans security, geopolitics, energy, environment, economy, and global health. The Institute is also the originator of the **Chatham House Rule**.
 
-Chatham House's stated partners include the UK Ministry of Defence and the Foreign, Commonwealth and Development Office. The [International Security Programme](https://www.chathamhouse.org/about-us/our-departments/international-security-programme/uk-security-and-defence) covers UK security and defence and is the most defence-relevant department.
+Chatham House's stated partners include the UK Ministry of Defence and the Foreign, Commonwealth and Development Office. The [International Security Programme](https://www.chathamhouse.org/about-us/our-departments/international-security-programme/uk-security-and-defence) covers UK security and defence and is the most defence-relevant department. The Head of the Security Issues Programme has typically been seconded from the MOD.
+
+## The Chatham House Rule
+
+Canonical wording, as published by Chatham House:
+
+> When a meeting, or part thereof, is held under the Chatham House Rule, participants are free to use the information received, but neither the identity nor the affiliation of the speaker(s), nor that of any other participant, may be revealed.
+
+First formulated in 1927 and refined in 1992 and 2002. The Rule is the property of Chatham House; the canonical explanation, FAQ, and guidance on use live at [chathamhouse.org/about-us/chatham-house-rule](https://www.chathamhouse.org/about-us/chatham-house-rule).
 
 ## Defence-relevant context
 

@@ -15,9 +15,18 @@ tags: [programme, joint, tactical-communications, in-service]
 
 ## Summary
 
-Falcon is the in-service tactical secure communications platform delivering deployable Wide Area Network (WAN) and local area distribution capability for UK deployed forces. Operated by Royal Signals to support deployed HQ and by the RAF across remote airfields.
+Falcon is the in-service tactical secure communications platform delivering deployable Wide Area Network (WAN) and local area distribution capability for UK deployed forces. Operated by Royal Signals to support deployed HQ and by the RAF across remote airfields. Provides data connectivity and integrated telephony interoperable with UK and Coalition Partner ICT platforms.
 
-Being superseded by [[Intelligence/defence-landscape/Programmes/TRINITY|TRINITY]], the next-generation WAN.
+## Capability
+
+- Operates up to **UK / NATO SECRET**.
+- Two fixed UK Anchor Points linking deployed HQ via Beyond Line of Sight (BLOS) bearers.
+- Provides deployed users access to MOD Core Network (SLI, RLI, FV-O, FV-S).
+- Enables assured global cross-domain calling.
+
+## Successor
+
+Being superseded by [[Intelligence/defence-landscape/Programmes/TRINITY|TRINITY]], the next-generation WAN. The Falcon-to-TRINITY transition is one of HQ & WAN's wider DLOD activities.
 
 ## Related
 
