@@ -39,49 +39,34 @@ If the target directory already contains files, verify with the user before cont
 
 ### Step A.2: Resolve plugin bundle paths
 
-This SKILL.md lives inside the Foothold plugin bundle. The templated vault content lives at the top of the same bundle, in directories named for each top-level vault folder (`Capabilities and Services/`, `Context/`, etc.).
+This SKILL.md lives at `skills/foothold-setup/SKILL.md` inside the Foothold plugin bundle. The templated vault content lives in `template/` at the plugin root (two levels up from this file).
 
 Run a one-time discovery step to locate the plugin root from this SKILL.md's directory:
 
 ```bash
-# Find the Foothold plugin root by walking up from this SKILL.md.
-find / -type d -name "Foothold" -path "*/plugins/*" 2>/dev/null | head -1
+# Find the Foothold plugin root (the directory containing 'template/' and 'skills/').
+find / -type d -name "foothold" -path "*/plugins/*" 2>/dev/null | head -1
 ```
 
-Cache the result for the rest of Phase A. Use that absolute path as the prefix for every file read in the copy step below.
+Cache the result for the rest of Phase A. The template content is at `<plugin_root>/template/`.
 
 ### Step A.3: Copy templated content to the target
 
-Copy every file matching the shipping manifest from the plugin bundle into the target directory. Preserve directory structure.
+Copy everything inside `template/` from the plugin bundle into the target directory. Preserve directory structure. The simplest implementation:
 
-**Ship (copy to target):**
+```bash
+# Copy the entire template tree into the target.
+cp -R "<plugin_root>/template/." "<target_path>/"
+```
 
-| Path in bundle | Path at target |
-|----------------|----------------|
-| `.obsidian/` | `.obsidian/` |
-| `CLAUDE.md` | `CLAUDE.md` |
-| `Home.md` | `Home.md` (if present) |
-| `Capabilities and Services/` | `Capabilities and Services/` |
-| `Context/` | `Context/` |
-| `CRM/` | `CRM/` |
-| `Daily/` | `Daily/` |
-| `Ideas/` | `Ideas/` |
-| `Initiatives/` | `Initiatives/` |
-| `Intelligence/` | `Intelligence/` |
-| `Knowledge/` | `Knowledge/` |
-| `Marketing/` | `Marketing/` |
-| `Operations/` | `Operations/` |
-| `Resources/` | `Resources/` |
-| `Skills/` | `Skills/` |
+`template/` contains the full templated vault:
 
-**Do not ship:**
+- `.obsidian/` — Obsidian config the recipient inherits.
+- `CLAUDE.md` — vault-level architecture and agent rules.
+- `Home.md` (if present) — vault landing page.
+- All top-level vault folders: `Capabilities and Services/`, `Context/`, `CRM/`, `Daily/`, `Ideas/`, `Initiatives/`, `Intelligence/`, `Knowledge/`, `Marketing/`, `Operations/`, `Resources/`, `Skills/`.
 
-- `.claude-plugin/` — plugin metadata, lives in the plugin install, not in the user's pack.
-- `.gitignore` — Foothold repo concern, not the user's pack concern.
-- `.git/` — Foothold repo history, not the user's pack history.
-- `README.md` — Foothold project readme. The user's pack does not need it.
-- `docs/` — Foothold project docs.
-- `installer/` — internal scripts.
+Nothing outside `template/` ships to the user's pack. The plugin manifest, this skill itself, and the broader repo machinery (README, docs, installer scripts) stay in the plugin install location, not in the user's vault.
 
 ### Step A.4: Run the placeholder substitution pass
 
