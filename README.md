@@ -68,23 +68,19 @@ Your vault is live. The top-level folders appear in the sidebar.
 
 ## Keeping your pack up to date
 
-Foothold evolves. New content gets added, existing pages get sharpened, new skills land. To pull those changes into your installed pack:
+Foothold evolves. New content gets added, existing pages get sharpened, new skills land. Pulling the latest into your installed pack is one step:
 
-### Step 1 — Refresh the marketplace in Cowork
-
-In Cowork's **Customize** panel, find the Foothold marketplace in the list and click **Update**. Cowork compares the latest commit on GitHub against what it last synced, validates the manifest, and refreshes the plugin. This can take a few minutes.
-
-If you want this to happen automatically every time Foothold publishes a change, toggle **Sync automatically** on the marketplace entry. Cowork then syncs whenever a change lands on GitHub.
-
-### Step 2 — Pull the new content into your vault
-
-In a Cowork chat:
+In a Cowork chat, type:
 
 ```
 /foothold-update
 ```
 
-The skill walks the latest plugin template and adds any new files to your vault. It does not touch files you've already got, so your personalised content stays exactly as you left it. When it finishes, you'll see a short report of what was added.
+Or just ask in natural language: "update Foothold", "pull the latest from the Foothold repo", "see if there's anything new in Foothold". Any of those triggers the same skill.
+
+The skill goes straight to the public Foothold repository on GitHub, lists what's there, compares to your installed vault, and adds any new files. It does not touch files you've already got, so your personalised content stays exactly as you left it. When it finishes, you'll see a short report of what was added.
+
+No need to refresh the marketplace, reinstall the plugin, or restart Cowork. The skill goes directly to GitHub every time.
 
 If you want to refresh a specific file you've previously edited (for example, you want the latest version of a Guide that you'd customised), delete your local copy first, then re-run `/foothold-update`. It will treat the file as a new addition.
 
