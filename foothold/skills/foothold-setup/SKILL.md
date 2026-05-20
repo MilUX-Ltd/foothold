@@ -71,7 +71,7 @@ Order doesn't matter; the tree fetch gives you the full list in one call, then p
 
 ### Step A.4: Write `.foothold/config.yml`
 
-Create `.foothold/config.yml` at the target root with the substitution values used:
+Create `.foothold/config.yml` at the target root with the substitution values used **and** a baseline `last_known_shas:` map keyed by vault-relative path, set to the GitHub blob SHA each file came from in the tree fetch:
 
 ```yaml
 foothold:
@@ -87,9 +87,14 @@ foothold:
   pack_org: <value>
   pack_org_slug: <value>
   pack_org_website: <value>
+
+last_known_shas:
+  Knowledge/rules.md: <sha from tree fetch>
+  Knowledge/tagging-policy.md: <sha from tree fetch>
+  # ...one entry per shipping file, keyed by post-substitution vault-relative path
 ```
 
-This file is the source of truth for future `/foothold-update` runs.
+The SHA map is the source of truth for the three-way reconcile in future `/foothold-update` runs. It tells the update skill exactly which version each file is "at" when the user runs it, so the skill can distinguish between an unedited file the user is happy to overwrite and a file the user has personalised.
 
 ### Step A.5: Confirm bootstrap
 
