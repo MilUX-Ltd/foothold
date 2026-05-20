@@ -17,6 +17,7 @@ UK procurement and supplier portals that defence-sector SMEs need to know. Each 
 - [[Intelligence/defence-landscape/Portals/Defence Sourcing Portal|Defence Sourcing Portal]]. MOD-specific supplier portal.
 - [[Intelligence/defence-landscape/Portals/MOD Acquisition Pipeline|MOD Acquisition Pipeline]]. Forward-look publication for upcoming MOD procurement activity.
 - [[Intelligence/defence-landscape/Portals/Central Digital Platform|Central Digital Platform]]. Procurement Act 2023 platform.
+- [[Intelligence/defence-landscape/Portals/D3IP|D3IP]]. Innovation-as-a-service community portal for Dorset Innovation Park, co-located with the Defence BattleLab.
 
 ## Related
 
