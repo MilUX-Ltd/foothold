@@ -1,0 +1,9 @@
+{
+  "name": "foothold",
+  "description": "Installable Obsidian vault pack for defence-sector founders. One bash command lays down a working second-brain: folder structure, page templates, skills, and pre-populated open-source defence reference content. Includes /foothold-setup (install and conversational onboarding), /foothold-rename (whitelabel the pack), and /foothold-update (pull new content as Foothold evolves).",
+  "version": "0.1.0",
+  "author": {
+    "name": "MilUX",
+    "url": "https://milux.co.uk"
+  }
+}

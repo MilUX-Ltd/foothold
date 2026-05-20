@@ -1,0 +1,15 @@
+{
+  "name": "foothold",
+  "owner": {
+    "name": "MilUX",
+    "url": "https://milux.co.uk"
+  },
+  "plugins": [
+    {
+      "name": "foothold",
+      "source": ".",
+      "description": "The defence-sector founder's second-brain pack. Install, rename, update.",
+      "version": "0.1.0"
+    }
+  ]
+}
