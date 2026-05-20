@@ -8,8 +8,8 @@
     {
       "name": "foothold",
       "source": "./foothold",
-      "description": "The defence-sector founder's second-brain pack. Plugin-bundled lifecycle skills (install, update) plus vault-bundled content skills (add-contact, add-organisation, add-event, prompt-master, process-interviewer, newsletter-writer, meeting-prep, late-payment-reminder).",
-      "version": "0.5.2"
+      "description": "The defence-sector founder's second-brain pack. Plugin-bundled lifecycle skill (install) plus vault-bundled content and update skills.",
+      "version": "0.6.0"
     }
   ]
 }
