@@ -29,6 +29,6 @@ The cluster seeks to aggregate and raise the profile of regional defence and sec
 
 ## Related
 
-- [[Intelligence/defence-landscape/Clusters/Clusters Index|UK RDSC index]]
-- [[Intelligence/defence-landscape/Clusters/South Central Regional Defence and Security Cluster|SCRDSC]] (sister cluster)
-- [[Intelligence/defence-landscape/Clusters/South West Regional Defence and Security Cluster|SWRDSC]] (sister cluster)
+- [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|UK RDSC index]]
+- [[CRM/networks/Regional Defence and Security Clusters/clusters/South Central Regional Defence and Security Cluster|SCRDSC]] (sister cluster)
+- [[CRM/networks/Regional Defence and Security Clusters/clusters/South West Regional Defence and Security Cluster|SWRDSC]] (sister cluster)

@@ -31,4 +31,4 @@ The region is home to leading defence companies and academic institutions, as we
 
 ## Related
 
-- [[Intelligence/defence-landscape/Clusters/Clusters Index|UK RDSC index]]
+- [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|UK RDSC index]]

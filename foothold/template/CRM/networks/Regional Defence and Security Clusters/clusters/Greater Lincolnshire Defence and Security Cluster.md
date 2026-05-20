@@ -37,4 +37,4 @@ The ambition is to establish Greater Lincolnshire as a national defence and secu
 
 ## Related
 
-- [[Intelligence/defence-landscape/Clusters/Clusters Index|UK RDSC index]]
+- [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|UK RDSC index]]

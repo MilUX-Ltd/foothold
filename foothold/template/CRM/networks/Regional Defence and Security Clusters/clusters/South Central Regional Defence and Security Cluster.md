@@ -32,6 +32,6 @@ The region benefits from a significant Armed Forces presence, being home to the 
 
 ## Related
 
-- [[Intelligence/defence-landscape/Clusters/Clusters Index|UK RDSC index]]
-- [[Intelligence/defence-landscape/Clusters/South West Regional Defence and Security Cluster|SWRDSC]] (sister cluster)
-- [[Intelligence/defence-landscape/Clusters/London Regional Defence and Security Cluster|LRDSC]] (sister cluster)
+- [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|UK RDSC index]]
+- [[CRM/networks/Regional Defence and Security Clusters/clusters/South West Regional Defence and Security Cluster|SWRDSC]] (sister cluster)
+- [[CRM/networks/Regional Defence and Security Clusters/clusters/London Regional Defence and Security Cluster|LRDSC]] (sister cluster)
