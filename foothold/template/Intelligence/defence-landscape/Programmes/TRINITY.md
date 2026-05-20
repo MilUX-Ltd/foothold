@@ -18,7 +18,13 @@ tags: [programme, joint, tactical-communications, trinity, bae, team-vigilant]
 
 TRINITY is the MOD's next-generation deployable Wide Area Network (WAN) capability, successor to the in-service Falcon system. Significantly increased bandwidth and information mobility versus current systems; designed to be compliant with the Network Reference Architecture, assuring integrity and availability of data forming part of the Protected Core Network.
 
-A five-year contract has been placed with BAE Systems as the Design and System Integration Delivery Partner; the delivery vehicle is Team Vigilant. The programme has been approved at Single Decision Meeting and received HM Treasury authorisation to progress to the Demonstration & Manufacture phase.
+A five-year contract has been placed with BAE Systems as the Design and System Integration Delivery Partner; the delivery vehicle is Team Vigilant. The programme has been approved at Single Decision Meeting (SDM) and received HM Treasury Outletter authorising progression to the Demonstration & Manufacture phase.
+
+## Timeline
+
+- **June 2025** — Manufacturing Data Pack Review.
+- **Late 2025** — entry into test and acceptance phase.
+- **Mid 2026** — first-of-type equipment delivery.
 
 ## Form factors
 
