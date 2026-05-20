@@ -20,7 +20,7 @@ Founders in the MilUX network running defence-sector businesses. Curated handoff
 
 ## Status
 
-In development. v1 is not yet ready for install. If you're in the beta cohort, you'll hear when it's ready to land on your machine.
+v1 beta. If you've been invited to the cohort, see [docs/getting-started.md](docs/getting-started.md) for setup instructions.
 
 ## Provenance
 
