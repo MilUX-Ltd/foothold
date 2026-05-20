@@ -1,7 +1,7 @@
 {
   "name": "foothold",
-  "description": "Installable Obsidian vault pack for defence-sector founders. One command lays down a working second-brain: folder structure, page templates, skills, and pre-populated open-source defence reference content. Includes /foothold-setup (install and conversational onboarding) and /foothold-update (pull new content into an existing pack without re-running setup).",
-  "version": "0.2.0",
+  "description": "Installable Obsidian vault pack for defence-sector founders. One command lays down a working second-brain: folder structure, page templates, skills, and pre-populated open-source defence reference content. Includes /foothold-setup (install and conversational onboarding), /foothold-update (pull new content into an existing pack without re-running setup), /add-contact (capture a person into the CRM), /add-organisation (capture a company or MOD body), and /add-event (log an event, with Chatham House check at intake).",
+  "version": "0.3.0",
   "author": {
     "name": "MilUX",
     "url": "https://milux.co.uk"
