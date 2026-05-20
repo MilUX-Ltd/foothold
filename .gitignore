@@ -5,10 +5,10 @@
 Thumbs.db
 
 # Obsidian per-user state (don't ship workspace layout to clients)
-.obsidian/workspace.json
-.obsidian/workspaces.json
-.obsidian/cache
-.obsidian/cache-v2
+**/.obsidian/workspace.json
+**/.obsidian/workspaces.json
+**/.obsidian/cache
+**/.obsidian/cache-v2
 
 # Obsidian trash
 .trash/
