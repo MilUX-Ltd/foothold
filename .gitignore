@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Obsidian per-user state (don't ship workspace layout to clients)
+.obsidian/workspace.json
+.obsidian/workspaces.json
+.obsidian/cache
+.obsidian/cache-v2
+
+# Obsidian trash
+.trash/
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
