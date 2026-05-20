@@ -1,17 +1,19 @@
 ---
 name: foothold-setup
-description: Install Foothold — bootstrap the vault structure and run conversational onboarding. Creates folders, lays down templated content, substitutes placeholders, then interviews the user via six sequential AskUserQuestion calls to personalise the canonical pages. Use when the user says "set up Foothold", "install Foothold", "onboard me", or runs /foothold-setup.
+description: Install Foothold — bootstrap the vault structure and run conversational onboarding. Fetches the latest template directly from the public Foothold GitHub repo, creates folders at the user's chosen path, substitutes placeholders, then interviews the user via six sequential AskUserQuestion calls to personalise the canonical pages. Use when the user says "set up Foothold", "install Foothold", "onboard me", or runs /foothold-setup. Does NOT require terminal access.
 ---
 
-# Foothold — Install and Onboarding
+# Foothold — Install and Onboarding (GitHub fetch)
 
 USE WHEN the user runs `/foothold-setup` or asks to install Foothold, set up a new pack, or onboard themselves into a fresh Foothold vault.
 
-This is a four-phase process:
+This skill fetches directly from the public GitHub repo at `MilUX-Ltd/foothold`. It does not rely on the local plugin install's template directory, so installs are always against the latest published content.
 
-- **Phase A: Bootstrap.** Silent. Create the vault structure at the target location, copy templated content from this plugin's bundle, substitute placeholders, write the config file.
-- **Phase B: Onboarding.** Six sequential questions to anchor personalisation. AskUserQuestion, one question per call. Never batched.
-- **Phase B+: Context drop.** One optional question inviting files, links, and folder paths to deepen personalisation.
+Four-phase process:
+
+- **Phase A: Bootstrap.** Silent. Resolve target path, fetch the template tree from GitHub, substitute placeholders, write files.
+- **Phase B: Onboarding.** Six sequential questions via AskUserQuestion, one per call.
+- **Phase B+: Context drop.** One optional question inviting files, links, or folder paths to deepen personalisation.
 - **Phase B Build:** Populate the canonical pages from the corpus assembled across Phase B and Phase B+.
 
 ## Pre-flight Check
@@ -29,82 +31,53 @@ Check if `CLAUDE.md` exists in the target directory (only at the exact target pa
 
 ## Phase A: Bootstrap
 
-Phase A is fully automated. No user input. Lay down the vault structure and templated content, then move to Phase B.
+Phase A is fully automated. No user input. Lay down the vault structure from the latest GitHub state, then move to Phase B.
 
 ### Step A.1: Resolve target directory
 
-Default target: `~/Obsidian/{{pack_name}}/`. If `{{pack_name}}` is not yet set, default to `~/Obsidian/Foothold/` and rename later via `/foothold-rename`.
+Default target: `~/Obsidian/{{pack_name}}/`. If `{{pack_name}}` is not yet set, default to `~/Obsidian/Foothold/`.
 
 If the target directory already contains files, verify with the user before continuing. Do not overwrite without consent.
 
-### Step A.2: Resolve plugin bundle paths
+### Step A.2: Fetch the latest file tree from GitHub
 
-This SKILL.md lives at `skills/foothold-setup/SKILL.md` inside the Foothold plugin bundle. The templated vault content lives in `template/` at the plugin root (two levels up from this file).
+Call the GitHub tree API:
 
-Run a one-time discovery step to locate the plugin root from this SKILL.md's directory:
-
-```bash
-# Find the Foothold plugin root (the directory containing 'template/' and 'skills/').
-find / -type d -name "foothold" -path "*/plugins/*" 2>/dev/null | head -1
+```
+GET https://api.github.com/repos/MilUX-Ltd/foothold/git/trees/main?recursive=1
 ```
 
-Cache the result for the rest of Phase A. The template content is at `<plugin_root>/template/`.
+Use the WebFetch tool. Public repo, no auth required.
 
-### Step A.3: Copy templated content to the target
+Filter the response to entries where `type == "blob"` and `path` starts with `foothold/template/`.
 
-Copy everything inside `template/` from the plugin bundle into the target directory. Preserve directory structure. The simplest implementation:
+### Step A.3: Fetch and write the template
 
-```bash
-# Copy the entire template tree into the target.
-cp -R "<plugin_root>/template/." "<target_path>/"
-```
+For each shipping file (collected in Step A.2):
 
-`template/` contains the full templated vault:
+1. Compute the corresponding target path. Strip the `foothold/template/` prefix from the GitHub path.
+2. Apply placeholder substitution to the filename (any `{{...}}` token gets replaced with the value the user provides in Phase B, or a sensible default).
+3. Fetch the raw content from GitHub:
 
-- `.obsidian/` — Obsidian config the recipient inherits.
-- `CLAUDE.md` — vault-level architecture and agent rules.
-- `Home.md` (if present) — vault landing page.
-- All top-level vault folders: `Capabilities and Services/`, `Context/`, `CRM/`, `Daily/`, `Ideas/`, `Initiatives/`, `Intelligence/`, `Knowledge/`, `Marketing/`, `Operations/`, `Resources/`, `Skills/`.
+   ```
+   GET https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/<full-path>
+   ```
 
-Nothing outside `template/` ships to the user's pack. The plugin manifest, this skill itself, and the broader repo machinery (README, docs, installer scripts) stay in the plugin install location, not in the user's vault.
+4. Apply placeholder substitution to the file content.
+5. Create any missing parent directories at the target.
+6. Write the file.
 
-### Step A.4: Run the placeholder substitution pass
+Order doesn't matter; the tree fetch gives you the full list in one call, then per-file fetches can run in parallel where convenient.
 
-Walk every file copied in Step A.3. Substitute placeholders.
+### Step A.4: Write `.foothold/config.yml`
 
-Placeholders the installer recognises:
-
-| Placeholder | Source | Default if not set |
-|-------------|--------|--------------------|
-| `{{pack_name}}` | Pack display name | `Foothold` |
-| `{{pack_slug}}` | Slugified pack name | `foothold` |
-| `{{pack_owner}}` | Operator's full name | Asked in Phase B Q1 |
-| `{{pack_owner_first}}` | First name only | Derived from `{{pack_owner}}` |
-| `{{pack_owner_email}}` | Operator's primary email | Asked in Phase B Q1 |
-| `{{pack_owner_linkedin}}` | LinkedIn URL | Asked in Phase B Q1 (optional) |
-| `{{pack_owner_phone}}` | Phone | Asked in Phase B Q1 (optional) |
-| `{{pack_org}}` | Organisation name | Asked in Phase B Q2 |
-| `{{pack_org_slug}}` | Slugified org name | Derived from `{{pack_org}}` |
-| `{{pack_org_website}}` | Organisation website URL | Asked in Phase B Q2 |
-| `{{install_date}}` | ISO date of install | Today's date |
-
-Substitution applies to:
-- File contents (every `.md` file).
-- Filenames that contain `{{...}}` (e.g. `Context/{{pack_owner}}.md` becomes `Context/<actual name>.md`).
-- Folder names that contain `{{...}}`.
-
-Wikilinks substitute too. `[[Context/{{pack_owner}}|{{pack_owner}}]]` becomes `[[Context/Jane Smith|Jane Smith]]`.
-
-At install time, the operator name and email come from Phase B Q1, not from defaults. So Phase B runs before final substitution where possible. If you have to copy before asking, use defaults and re-substitute after Phase B.
-
-### Step A.5: Write `.foothold/config.yml`
-
-Create `.foothold/config.yml` at the target root with the current substitution values:
+Create `.foothold/config.yml` at the target root with the substitution values used:
 
 ```yaml
 foothold:
-  installed_at: YYYY-MM-DD
-  version: 1.0
+  installed_at: <today's ISO date>
+  version: <from foothold/.claude-plugin/plugin.json at latest commit>
+  last_synced: <today's ISO date>
   pack_name: <value>
   pack_slug: <value>
   pack_owner: <value>
@@ -116,9 +89,9 @@ foothold:
   pack_org_website: <value>
 ```
 
-This file is the source of truth for future `/foothold-rename` and `/foothold-update` runs.
+This file is the source of truth for future `/foothold-update` runs.
 
-### Step A.6: Confirm bootstrap
+### Step A.5: Confirm bootstrap
 
 Tell the user briefly:
 - "Vault structure created at `<target path>`."
@@ -232,13 +205,9 @@ After Q6 (or "skip all"), call one final `AskUserQuestion` to invite extra sourc
 
 1. Collect everything they share. Be greedy.
 2. For each link: call WebFetch (or WebSearch if the URL is a search). Extract relevant content.
-3. For each uploaded file or local file path:
-   - `.md`, `.txt`, `.json`, `.yaml`, `.csv` → read directly with Read.
-   - `.pdf` → read with Read (use `pages` parameter for >10 pages).
-   - `.docx`, `.pptx`, `.xlsx` → use Bash with `pandoc` or `textutil` if available; otherwise tell the user to export to PDF or MD and re-share.
-   - Images → read with Read (multimodal).
+3. For each uploaded file or local file path: read directly with Read (or Bash with pandoc for docx/pptx).
 4. For a local folder path: use Glob to enumerate, then read each file.
-5. Maintain a **context corpus** in working memory — every fact, name, number, quote, URL. Tag each by likely target page.
+5. Maintain a context corpus in working memory — every fact, name, number, quote, URL. Tag each by likely target page.
 6. After ingestion, briefly tell the user what you pulled. One sentence. Then proceed to Build.
 
 **If the user picks `No` or `Skip`**: proceed straight to Build with only the Q1–Q6 answers.
@@ -271,8 +240,8 @@ For each file below, populate from Q answers + corpus. Skip files where there is
 
 | File | Sources | Frontmatter to set |
 |------|---------|--------------------|
-| `Context/{{pack_owner}}.md` | Q1 (name, role, background), Q3 (POV), Q6 (drains) + corpus | `name`, `role`, `email`, `linkedin`, `created` |
-| `Context/{{pack_org}}.md` | Q2 (offer, customer), Q5 (engagements) + corpus | `name`, `website`, `founded`, `created` |
+| `Context/<pack_owner>.md` | Q1 (name, role, background), Q3 (POV), Q6 (drains) + corpus | `name`, `role`, `email`, `linkedin`, `created` |
+| `Context/<pack_org>.md` | Q2 (offer, customer), Q5 (engagements) + corpus | `name`, `website`, `founded`, `created` |
 | `Context/Brand.md` | Q3 (positioning), Q4 (voice) + corpus | `last_reviewed` |
 | `Context/Strategy.md` | Q5 (priorities, initiatives, engagements) + corpus | `last_reviewed` |
 | `Context/Team.md` | Q1 + corpus (if user mentions a team) | `last_reviewed` |
@@ -308,20 +277,21 @@ Foothold pack set up today. Onboarding complete: canonical pages drafted from th
 
 Tell the user:
 
-- A one-line summary of what was created (e.g. "Set up Foothold pack at `~/Obsidian/Your Pack/`. Personalised eight canonical pages from your answers and the files you shared.").
+- A one-line summary of what was created.
 - "Open this folder in Obsidian to see your vault."
-- "If you want to rename the pack later, run `/foothold-rename`. To pull new content as Foothold evolves, run `/foothold-update`."
-- Suggest one concrete next action based on the user's Q answers (e.g. if they mentioned a specific MOD body in Q5, suggest they look at `Intelligence/defence-landscape/` for relevant reference content).
+- "If you want to pull new content from Foothold later, just run `/foothold-update` here in Cowork. No need to reinstall anything."
+- Suggest one concrete next action based on the user's Q answers.
 
 ---
 
 ## Guidelines
 
-- Phase A is fully silent. No user input. Bootstrap then move on.
+- Always fetch from GitHub, never from the local plugin install's template directory. The plugin only delivers the skills; GitHub is the source of truth for content.
+- Phase A is fully silent. No user input.
 - Phase B is exactly six questions, asked one at a time via AskUserQuestion. No follow-ups inside a question. No batching.
 - Phase B+ is one final AskUserQuestion offering files / links / folders. Always ask, even if Q1–Q6 looked rich.
 - For every link the user pastes, fetch it (WebFetch / WebSearch). For every file or folder, read it (Read / Glob). Merge into a single corpus before building.
-- **Templates are scaffolds, never outputs.** Replace every placeholder. If a section has no data after exhausting answers + corpus, omit it. Never leave a bracketed placeholder or italicised hint text in a written file.
+- Templates are scaffolds, never outputs. Replace every placeholder. If a section has no data after exhausting answers + corpus, omit it.
 - Preserve specificity. Use the user's exact names, numbers, URLs, and phrasing.
 - Only create canonical pages that have real content. Don't populate empty templates.
 - Don't narrate file-by-file. Build silently. Summarise at the end.
