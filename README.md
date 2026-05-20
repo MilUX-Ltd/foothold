@@ -2,13 +2,13 @@
 
 Defence is hard to get into. The information sits in fragmented places. Small businesses spend months figuring out what the larger players already know. Foothold is built to short-circuit that.
 
-Foothold is an installable Obsidian vault pack for defence-sector founders. One bash command lays down a working second-brain in an evening: folder structure, page templates, skills, and pre-populated open-source defence reference content. You walk into Monday with a knowledge system that already knows where the public frameworks live and which MOD body owns what.
+Foothold is an installable Obsidian vault pack for defence-sector founders. One command lays down a working second-brain in an evening: folder structure, page templates, skills, and pre-populated open-source defence reference content. You walk into Monday with a knowledge system that already knows where the public frameworks live and which MOD body owns what.
 
-The structure is built to slot into Anthropic's Cowork. A Foothold vault opened in Obsidian, with Cowork running alongside, gives a small defence-sector business something that, until recently, needed a dedicated team to put together. That's the competitive advantage Foothold is shipping.
+The structure is built to slot into Anthropic's Cowork. A Foothold vault opened in Obsidian, with Cowork running alongside, gives a small defence-sector business something that, until recently, needed a dedicated team to put together.
 
 ## What you get
 
-- A bash one-shot installer.
+- A Claude plugin that installs the whole pack with one command.
 - A re-runnable `rename` step that whitelabels the pack to your name.
 - A manual `update` command for pulling new content as Foothold evolves.
 - Skills for the high-frequency adds: events, contacts, organisations.
@@ -16,12 +16,87 @@ The structure is built to slot into Anthropic's Cowork. A Foothold vault opened 
 
 ## Audience
 
-Founders in the MilUX network running defence-sector businesses. Curated handoff, not a public download.
+Founders running defence-sector businesses, in MilUX's network. Curated handoff, not a public download. v1 is beta; install access is by invitation.
 
-## Status
+## Getting started
 
-v1 beta. If you've been invited to the cohort, see [docs/getting-started.md](docs/getting-started.md) for setup instructions.
+This is the install walkthrough. The whole thing takes about ten minutes once you have Cowork and Obsidian open.
+
+### What you'll need
+
+- **Cowork.** Anthropic's desktop app for non-developers. Sign up at [claude.com](https://claude.com) and download Cowork from there.
+- **Obsidian.** Free knowledge management app. Download from [obsidian.md](https://obsidian.md).
+
+### Step 1 — Add the Foothold marketplace
+
+Open Cowork. In a new chat, type:
+
+```
+/plugin marketplace add MilUX-Ltd/foothold
+```
+
+Press Enter. Cowork fetches the marketplace metadata.
+
+### Step 2 — Install the Foothold plugin
+
+In the same chat:
+
+```
+/plugin install foothold@milux
+```
+
+Press Enter. Cowork installs the plugin and makes the Foothold skills available.
+
+### Step 3 — Run the setup skill
+
+In the same chat:
+
+```
+/foothold-setup
+```
+
+The skill takes over from here. It will:
+
+1. **Lay down your vault.** Create a folder structure at `~/Obsidian/Foothold/` (or a custom path if you specify one). Silent step, takes a few seconds.
+2. **Ask six quick questions.** One at a time. Each has quick-pick options plus an "Other" option for free text. Skip any you want. The questions cover who you are, what you sell into defence, your positioning, your voice, your current priorities, and your tool stack.
+3. **Offer a context drop.** One final question inviting you to paste links, upload files, or point at a local folder of source material. The more you give it, the more personalised your vault will be.
+4. **Build your canonical pages.** Silently. The skill drafts your operator profile, organisation page, brand and strategy pages, email signature, and voice notes from the answers and corpus.
+
+When the skill finishes, it tells you where the vault was created.
+
+### Step 4 — Open your vault in Obsidian
+
+1. Launch Obsidian.
+2. Click "Open folder as vault".
+3. Point at your new Foothold vault folder (default: `~/Obsidian/Foothold/`).
+4. Click "Open".
+
+Your vault is live. The top-level folders appear in the sidebar.
+
+## What's next
+
+In the first hour, focus on:
+
+1. **Open `Context/<your name>.md`.** Check the operator profile reads well. Revise anything that needs sharpening.
+2. **Read the per-folder Guides.** Every folder has a `<Folder Name> Guide.md` at its root. Knowledge Guide, Operations Guide, Context Guide, and CRM Guide are the load-bearing ones.
+3. **Connect Cowork to your vault.** Point Cowork at your new vault folder. Cowork and Obsidian now work against the same files; agents you run in Cowork write into the vault, and you see them in Obsidian.
+
+## Troubleshooting
+
+**"Could not find marketplace MilUX-Ltd/foothold"** — Cowork couldn't fetch the marketplace metadata. Try `/plugin marketplace add MilUX-Ltd/foothold` again. If it still fails, email Matt.
+
+**The install skill leaves `{{placeholder}}` text in some files** — That's a bug. Tell Matt which files and which placeholder, and we'll fix it.
+
+**Obsidian doesn't see the vault** — Make sure you point "Open folder as vault" at the Foothold root, not at a subfolder.
+
+**Anything else** — Email Matt at matt@milux.co.uk or open an issue at https://github.com/MilUX-Ltd/foothold/issues.
+
+## Help
+
+- Email: matt@milux.co.uk
+- GitHub issues: https://github.com/MilUX-Ltd/foothold/issues
+- LinkedIn: [Matt Odell](https://www.linkedin.com/in/mattodell/)
 
 ## Provenance
 
-Foothold is built by [MilUX](https://milux.co.uk).
+Foothold is built by [MilUX](https://milux.co.uk). Its structure, conventions, and skills come from MilUX's own working vault.
