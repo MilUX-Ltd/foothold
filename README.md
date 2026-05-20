@@ -87,16 +87,26 @@ Foothold evolves. New content gets added, existing pages get sharpened, new skil
 
    Or ask in natural language: "update Foothold", "pull the latest from the Foothold repo", "see if there's anything new in Foothold". Any of those triggers the same skill.
 
-3. The skill goes straight to the public Foothold repository on GitHub via a plain HTTPS request, lists what's there, compares to your installed vault, and adds any new files. It does not touch files you've already got, so your personalised content stays exactly as you left it.
-4. When it finishes, you'll see a short report of what was added.
+3. The skill goes straight to the public Foothold repository on GitHub via a plain HTTPS request and compares what's there to what you have. It works out the state of every file: new on GitHub, changed upstream since you last pulled, edited locally, or in conflict (you've edited and so has upstream). You're told what's safe to apply automatically and asked what to do about anything you've personalised.
+4. When it finishes, you'll see a short report of what was added, what was updated, what was merged, and what was left alone.
 
 ### Why this works without any setup
 
 The `/foothold-update` skill lives at `Skills/foothold-update/SKILL.md` inside your vault. It was placed there by the initial `/foothold-setup` run. Cowork sees it the moment your vault is open. The skill makes a plain HTTPS request to the public Foothold GitHub URLs — no GitHub account, no auth, no Terminal, no Git on your machine.
 
-### If you want the latest version of a file you've already edited
+### How conflicts are handled
 
-The update skill never overwrites your local edits. If you've customised a Guide or other file and you want the latest shipped version, delete your local copy first, then re-run `/foothold-update`. It will treat the file as a new addition and copy in the fresh version. Your old text is preserved in Obsidian's file-recovery / version history if you turned that on, and in any Obsidian Sync versions if you use it.
+The update skill is a three-way reconcile. It tracks the SHA (the GitHub blob identifier) of every file at the moment it was last pulled to your vault, stored in `.foothold/config.yml` under `last_known_shas:`. On each run, it compares three things per file: what was last pulled, what's currently on GitHub, and the SHA of the version sitting in your vault right now.
+
+That tells it which of these situations each file is in:
+
+- **Untouched both sides.** Skip — nothing to do.
+- **Upstream-only change.** You haven't edited the file; upstream has. Safe to apply, applied by default with a chance to veto.
+- **Local edit only.** You've edited; upstream hasn't changed. Skip — there's nothing new to bring in.
+- **New on GitHub.** Add it.
+- **Conflict.** You've edited the file AND upstream has new changes. You're asked per file: take theirs (overwrite local), keep mine (skip), or merge (the skill proposes a combined version that integrates upstream's changes into your edited file and asks you to confirm before writing).
+
+Your personalised content is never overwritten without an explicit yes from you.
 
 ## What's next
 
