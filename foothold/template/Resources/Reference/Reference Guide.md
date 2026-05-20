@@ -26,6 +26,14 @@ tags: [...]
 ---
 ```
 
+## What's already in here
+
+The Foothold defaults ship three substantive defence-reference pages:
+
+- [[Resources/Reference/Defence Acronyms|Defence Acronyms]] — quick-lookup glossary of the acronyms you'll meet every week in UK defence.
+- [[Resources/Reference/Defence Reading List|Defence Reading List]] — curated UK defence publications worth reading early.
+- [[Resources/Reference/MOD Policy Library|MOD Policy Library]] — navigation surface for JSPs, Def Stans, JDPs, and the wider MOD policy library.
+
 ## Related
 
 - [[Resources/Resources Guide|Resources Guide]] — parent

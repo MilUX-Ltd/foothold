@@ -30,6 +30,7 @@ The D3IP directory and event calendar are the main entry points. Membership via 
 
 ## Related
 
+- [[Intelligence/defence-landscape/Portals/D3IP|D3IP]] — co-located innovation community portal running the day-to-day events and member directory at the park
 - [[CRM/networks/Regional Defence and Security Clusters/clusters/South West Regional Defence and Security Cluster|SWRDSC]] — regional cluster, runs events at the BattleLab
 - [[Intelligence/defence-landscape/MOD Structure|MOD Structure]] — where the BattleLab sits in MOD
 - [[Intelligence/defence-landscape/Innovation Organisations|Innovation Organisations overview]]

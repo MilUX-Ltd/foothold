@@ -18,7 +18,7 @@ tags:
 
 # Centre of Excellence in Defence, Risk and Resilience (CEDRR)
 
-A University of Portsmouth-hosted Centre of Excellence bringing together expertise across global governance, geopolitical conflict, risk, security, deterrence, AI and autonomy, ethics, disaster response, and organisational and community resilience.
+A [[CRM/organisations/academia/University of Portsmouth|University of Portsmouth]]-hosted Centre of Excellence bringing together expertise across global governance, geopolitical conflict, risk, security, deterrence, AI and autonomy, ethics, disaster response, and organisational and community resilience.
 
 University of Portsmouth: [Centre of Excellence in Defence, Risk and Resilience](https://www.port.ac.uk/research/research-centres-and-institutes/centre-of-excellence-in-defence-risk-and-resilience-cedrr). Research portal: [CEDRR](https://researchportal.port.ac.uk/en/organisations/centre-of-excellence-in-defence-risk-resilience).
 
@@ -65,7 +65,7 @@ The Loughborough University-led [SCALE Centre](https://www.lboro.ac.uk/news-even
 
 ### Adjacent
 
-- University of Portsmouth: host institution.
+- [[CRM/organisations/academia/University of Portsmouth|University of Portsmouth]]: host institution.
 - [[Intelligence/defence-landscape/Centres of Excellence|Centres of Excellence overview]].
 - [[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]]: parent.
 
