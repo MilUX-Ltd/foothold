@@ -28,7 +28,7 @@ Initiatives/
         └── ...
 ```
 
-**`active/`** holds initiatives in flight. One folder per initiative. The folder name is kebab-case (`milux-brain/`, `client-rollout-q3/`). Inside, an index page named the same as the folder is the canonical entry point.
+**`active/`** holds initiatives in flight. One folder per initiative. The folder name is kebab-case (`customer-rollout-q3/`, `product-launch-2026/`). Inside, an index page named the same as the folder is the canonical entry point.
 
 **`completed/`** holds finished initiatives. Move the whole folder from `active/` to `completed/` when the work wraps. Don't delete.
 

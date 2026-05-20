@@ -47,9 +47,11 @@ Then report what was done.
 
 ## Protected files — never updated, regardless of SHA state
 
-The following files are built by `/foothold-setup` from the install interview. Their upstream templates exist only as skeletons the setup skill fills in; they are not content meant to be propagated to existing installs. The update skill must skip them entirely — no fetch, no write, no SHA comparison, no prompt.
+Two classes of files are excluded from the reconcile entirely. The update skill must skip them — no fetch, no write, no SHA comparison, no prompt.
 
-Protected paths (vault-relative, after placeholder substitution):
+### Class 1 — Install-built files
+
+Built by `/foothold-setup` from the install interview. Their upstream templates exist only as skeletons the setup skill fills in. Overwriting them would destroy the user's personalisation.
 
 - `Context/<pack_owner>.md` — operator profile. The filename resolves via `pack_owner` from `.foothold/config.yml`. Match by post-substitution path, not by template token.
 - `Context/Brand.md`
@@ -58,9 +60,22 @@ Protected paths (vault-relative, after placeholder substitution):
 - `Context/Stakeholders.md`
 - `Operations/email-signature.md`
 
-Match against the **post-substitution** vault path, so the operator profile is caught regardless of who installed the pack.
+### Class 2 — Files containing `{{pack_owner}}` placeholders
 
-If the user explicitly asks for a refresh of one of these files ("pull the latest Brand template from Foothold and overwrite mine"), that's a separate manual operation, not part of the routine update flow. Routine `/foothold-update` runs leave them alone every time.
+These get personalised at install through placeholder substitution. Even though the substitution is deterministic and could in principle be re-applied on update, the conservative position is to skip them so install-time personalisation isn't at risk of being clobbered.
+
+- `CLAUDE.md`
+- `Home.md`
+- `Context/Context Guide.md`
+
+### Matching rules
+
+- Match against the **post-substitution** vault path, so the operator profile is caught regardless of who installed the pack.
+- The list is hardcoded above. If a new template file containing `{{pack_owner}}` is added to Foothold in future, append it here in the same release. Don't try to detect placeholder-containing files dynamically — the heuristic would require fetching every file's remote content even for skipped categories, and the list is short enough to maintain by hand.
+
+### Manual refresh
+
+If the user explicitly asks for a refresh of one of these files ("pull the latest CLAUDE.md from Foothold and overwrite mine"), that's a separate manual operation, not part of the routine update flow. Routine `/foothold-update` runs leave them alone every time.
 
 ## Pre-flight
 
