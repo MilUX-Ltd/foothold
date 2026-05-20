@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "foothold",
-      "source": ".",
+      "source": "./foothold",
       "description": "The defence-sector founder's second-brain pack. Install, rename, update.",
       "version": "0.1.0"
     }
