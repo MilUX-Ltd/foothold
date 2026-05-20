@@ -1,10 +1,16 @@
 # Foothold
 
-Defence is hard to get into. The information sits in fragmented places. Small businesses spend months figuring out what the larger players already know. Foothold is built to short-circuit that.
+In military terms, a **foothold** is the secured ground on the far side of an obstacle. Cross the river, take a toehold, hold it. Once you have one, the rest of the force can come across. Without one, you stay on the wrong bank.
 
-Foothold is an installable Obsidian vault pack for defence-sector founders. One command lays down a working second-brain in an evening: folder structure, page templates, skills, and pre-populated open-source defence reference content. You walk into Monday with a knowledge system that already knows where the public frameworks live and which MOD body owns what.
+For defence-sector founders, that obstacle is the landscape itself. The MOD reorganises faster than the briefing notes can keep up. The named bodies are a thicket of acronyms (NAD Group, NA-Innov, DASA, FCI, jHub, DCTO, CSOC, IDA). The frameworks have different operators, different routes in, different gatekeepers. The information is public, but it is fragmented across hundreds of gov.uk pages, trade-body briefings, supplier directories, and Hansard transcripts. Months disappear into figuring out what the larger players already know.
+
+Foothold gives you that secured ground in an evening.
+
+It is an installable Obsidian vault pack for defence-sector founders. One command lays down a working second-brain: folder structure, page templates, skills, and pre-populated open-source defence reference content. Walk into Monday with a knowledge system that already knows where the public frameworks live, which MOD body owns what, and how the pieces fit together after the post-SDR reorganisation.
 
 The structure is built to slot into Anthropic's Cowork. A Foothold vault opened in Obsidian, with Cowork running alongside, gives a small defence-sector business something that, until recently, needed a dedicated team to put together.
+
+The river crossing still has to be made. Foothold is the ground you start from.
 
 ## What you get
 
