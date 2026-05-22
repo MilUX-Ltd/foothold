@@ -44,6 +44,12 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 
 | Programme | Status |
 |-----------|--------|
+| [[Intelligence/defence-landscape/Programmes/Type 83 Destroyer\|Type 83 Destroyer]] | Active (Concept Phase from Mar 2025; outline business case targeted Jun 2026) |
+| [[Intelligence/defence-landscape/Programmes/Type 31 Frigate\|Type 31 Frigate]] | Active (HMS Venturer launched Jun 2025; HMS Active rolled out Feb 2026; 5-ship class, Babcock Rosyth) |
+| [[Intelligence/defence-landscape/Programmes/Fleet Solid Support (FSS) Ships\|Fleet Solid Support (FSS) Ships]] | Active (£1.6bn Team Resolute contract Jan 2023; RFA Resurgent steel cut Dec 2025; first ship 2031) |
+| [[Intelligence/defence-landscape/Programmes/Multi-Role Strike Ship (MRSS)\|Multi-Role Strike Ship (MRSS)]] | Active (up to 6 ships; first-phase approval May 2024; in service 2033/34) |
+| [[Intelligence/defence-landscape/Programmes/NavyX\|NavyX]] | Active (Royal Navy autonomy & lethality accelerator; XV Patrick Blackett; £75m boost 2025) |
+| [[Intelligence/defence-landscape/Programmes/DragonFire\|DragonFire]] | Active (Royal Navy fielding from 2027 on Type 45) |
 | [[Intelligence/defence-landscape/Programmes/Strike Net\|Strike Net]] | Active (launched 2022) |
 | NEXUS / RAVEN | Active |
 | NELSON | Active |
@@ -58,11 +64,14 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | Programme | Status |
 |-----------|--------|
 | [[Intelligence/defence-landscape/Programmes/TEMPEST (GCAP)\|TEMPEST (GCAP)]] | Active |
+| [[Intelligence/defence-landscape/Programmes/Eurofighter Typhoon\|Eurofighter Typhoon]] | Active (£453.5m ECRS Mk2 radar contract Jan 2026; APKWS deployed May 2026 with 9 Sqn) |
+| [[Intelligence/defence-landscape/Programmes/New Medium Helicopter (NMH)\|New Medium Helicopter (NMH)]] | Active (£1bn Leonardo AW149 contract Mar 2026; 23 aircraft; replaces Puma HC2) |
+| [[Intelligence/defence-landscape/Programmes/Autonomous Collaborative Platforms (ACP)\|Autonomous Collaborative Platforms (ACP)]] | Active (RAF Strategy Mar 2024; StormShroud Mk1 in service May 2025; Project NYX bidders Anduril UK, BAE, Tekever, Thales UK awarded May 2026) |
 | ASTRA | Active |
 | ARIEL | Active |
 | Rapstone | Active |
 | BRAKESTOP | Active |
-| NYX | Active |
+| NYX | Active (see ACP for Project NYX — Apache loyal wingman, land domain) |
 | Pj BOYD | Active (publicly named on inink Valley of Death canvas; cross-Service tag uncertain) |
 
 ## Joint / cross-domain
@@ -70,9 +79,11 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | Programme | Status |
 |-----------|--------|
 | [[Intelligence/defence-landscape/Programmes/SKYNET\|SKYNET]] | Active (satcomms) |
+| [[Intelligence/defence-landscape/Programmes/SKYNET 6A\|SKYNET 6A]] | Active (Airbus Defence and Space UK; SpaceX launch 2027; 3.5x Skynet 5 capacity) |
 | [[Intelligence/defence-landscape/Programmes/Picasso\|Picasso]] | Active (GEOINT) |
 | [[Intelligence/defence-landscape/Programmes/TRINITY\|TRINITY]] | Demonstration & Manufacture |
 | [[Intelligence/defence-landscape/Programmes/Programme Cortisone\|Programme Cortisone]] | Delivery (DMS digital healthcare) |
+| [[Intelligence/defence-landscape/Programmes/AUKUS Pillar 2\|AUKUS Pillar 2]] | Active (UK / US / Australia trilateral; DARC, AURAS named initiatives) |
 | Digital Targeting Web | Active |
 | CABOT | Active |
 | NCGI | Active |
@@ -82,6 +93,41 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | BEEHIVE | Active (publicly named on inink Valley of Death canvas) |
 | OCSM | Active (publicly named on inink Valley of Death canvas) |
 | DIAG | Active (publicly named on inink Valley of Death canvas) |
+
+## Home Office / Security
+
+| Programme | Status |
+|-----------|--------|
+| [[Intelligence/defence-landscape/Programmes/Emergency Services Network (ESN)\|Emergency Services Network (ESN)]] | Active (LTE replacement for Airwave TETRA; IBM took over user services Jan 2025) |
+| [[Intelligence/defence-landscape/Programmes/Home Office Biometrics (HOB)\|Home Office Biometrics (HOB)]] | Active (Business Case v10 approved Jul 2024; programme to Dec 2026; £1.55bn lifetime; Leidos UK on transformation) |
+
+## Civil aerospace and dual-use
+
+UK civil aerospace and innovation funding programmes; dual-use crossover into defence work via the supply chain and SME-friendly entry routes.
+
+| Programme | Status |
+|-----------|--------|
+| [[Intelligence/defence-landscape/Programmes/Aerospace Technology Institute (ATI) Programme\|ATI Programme]] | Active (£2.3bn budget to 2035; £975m FY25/26 to FY29/30; 467 projects to date) |
+| [[Intelligence/defence-landscape/Programmes/BridgeAI\|BridgeAI]] | Active (£100m, Innovate UK; launched Apr 2023; consortium with Digital Catapult, Turing, Hartree, BSI) |
+| [[Intelligence/defence-landscape/Programmes/Future Flight Challenge\|Future Flight Challenge]] | Active (Phases 1-3: £300m 2019-2024; 2025/26 cycle £4.4m for 14 projects) |
+| [[Intelligence/defence-landscape/Programmes/Sustainable Aviation Fuel Innovation Programme\|SAF Innovation Programme]] | Active (DfT; 10% SAF in UK jet fuel mix by 2030; AFF £198m to date) |
+| [[Intelligence/defence-landscape/Programmes/SC21 - Supply Chains for the 21st Century\|SC21 — Supply Chains for the 21st Century]] | Active (launched 2006; >1,000 companies; Bronze/Silver/Gold Performance Standard Awards) |
+| [[Intelligence/defence-landscape/Programmes/EUREKA SMART\|EUREKA SMART]] | Active (Innovate UK; £5m UK support for 6th SMART Cluster Call from Sep 2022) |
+
+## Space
+
+| Programme | Status |
+|-----------|--------|
+| [[Intelligence/defence-landscape/Programmes/Connectivity in Low Earth Orbit (C-LEO)\|C-LEO]] | Active (UKSA flagship; £160m / 6 years; delivered via ESA ARTES; Call 2 closes Jun 2026) |
+| [[Intelligence/defence-landscape/Programmes/ESA Phi-Lab UK\|ESA Phi-Lab UK]] | Active (UK national branch of ESA Phi-Lab; UKSA-supported) |
+| [[Intelligence/defence-landscape/Programmes/SKYNET 6A\|SKYNET 6A]] | (see Joint / cross-domain) |
+
+## Innovation Routes
+
+| Body / Programme | Status |
+|------------------|--------|
+| [[Intelligence/defence-landscape/Programmes/HMGCC Co-Creation\|HMGCC Co-Creation]] | Active; rolling challenges (e.g. counter-drone & ground station) |
+| [[Intelligence/defence-landscape/Programmes/Defence Innovation Loans\|Defence Innovation Loans]] | Active (DASA / Innovate UK Loans Ltd; £100k–£1m at 7.4% APR; rolling cycles every 6-8 weeks) |
 
 ## Programme-to-SME engagement patterns
 
