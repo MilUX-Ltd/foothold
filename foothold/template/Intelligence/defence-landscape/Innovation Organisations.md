@@ -27,6 +27,9 @@ Organisations within the UK defence ecosystem that drive innovation, experimenta
 - **Disruptive Capabilities and Technologies Office.** Navy-focused innovation office.
 - **Centre for Intelligence Innovation.** Innovation hub for the intelligence community.
 - **Defence Modelling and Simulation Office.** Central coordination for modelling and simulation across MOD.
+- [[CRM/organisations/mod/HMGCC Co-Creation|HMGCC Co-Creation]]. Open-innovation arm of His Majesty's Government Communications Centre. Runs at OFFICIAL classification so no clearance is needed to participate.
+- [[CRM/organisations/mod/Integration Design Authority|Integration Design Authority (IDA)]]. CSOC's integration-architecture body; owns the Integrated Procurement Model and Multi-Domain Integration doctrine.
+- [[CRM/organisations/mod/Innovation and Research InSight Unit|Innovation and Research InSight Unit (IRIS)]]. MOD horizon-scanning function inside the Defence Science and Technology group.
 
 ## Service-specific innovation
 
