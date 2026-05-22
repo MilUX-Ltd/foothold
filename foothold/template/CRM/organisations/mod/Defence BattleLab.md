@@ -28,6 +28,8 @@ Defence BattleLab (DBL) is a Ministry of Defence innovation facility located at 
 
 The D3IP directory and event calendar are the main entry points. Membership via D3IP gives access to the community and the events programme on the park.
 
+The **Defence BattleLab Co-Collaboration Space** ([battlelab-cc.def-ideas.wazoku.com](https://battlelab-cc.def-ideas.wazoku.com/homepage/home)) is the dedicated online platform for external collaboration with the BattleLab, hosted on the Defence Ideas / Wazoku platform. It is the named industry-facing engagement channel for the BattleLab.
+
 ## Related
 
 - [[Intelligence/defence-landscape/Portals/D3IP|D3IP]] — co-located innovation community portal running the day-to-day events and member directory at the park
