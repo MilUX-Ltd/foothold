@@ -15,18 +15,18 @@ tags: [framework, defence-procurement, edp, aurora, qinetiq, mod, des]
 
 ## Summary
 
-The Engineering Delivery Partner is the default route for procurement of engineering services for Defence Equipment & Support (DE&S), available to other MOD departments and agencies as well. Delivered through the **Aurora Engineering Partnership** — a partnership between QinetiQ, AtkinsRéalis and BMT — supported by a network of specialist providers under the Aurora Provider Network.
+The Engineering Delivery Partner is the default route for procurement of engineering services for Defence Equipment & Support (DE&S), available to other MOD departments and agencies as well. Delivered through the **Aurora Engineering Partnership** — a partnership between QinetiQ, AtkinsRéalis and BMT — supported by a network of specialist providers under the [[Intelligence/defence-landscape/Frameworks/Aurora Provider Network|Aurora Provider Network]].
 
 ## Operating model
 
-Two supplier streams sit under the Aurora Provider Network:
+Two supplier streams sit under the [[Intelligence/defence-landscape/Frameworks/Aurora Provider Network|Aurora Provider Network]]:
 
 - **Provider Network — Evolve.** The refreshed EDP supplier cohort (refresh 2025–2026).
 - **Futures Lab Provider Network.** Futures Lab supplier stream supporting Front Line Commands and DE&S innovation.
 
-From 5 May 2026, all opportunities run through the Aurora Curtis Fitch portal (`aurora-evolve.esourcingportal.com`). The legacy portal moved to read-only at end May 2026. The Kahootz workspace (`edpaurora`) is the parallel communications platform.
+From 5 May 2026, all opportunities run through the Aurora Curtis Fitch portal (`aurora-evolve.esourcingportal.com`). The legacy portal moved to read-only at end May 2026.
 
-Provider voice into the partnership is via the Provider Network Advisory Group (PNAG) with Micro, Small, Medium, and Large supplier representatives.
+Provider voice into the partnership is via the Provider Network Advisory Group (PNAG) with Micro, Small, Medium, and Large supplier representatives. See the [[Intelligence/defence-landscape/Frameworks/Aurora Provider Network|Aurora Provider Network]] page for the supplier-side detail.
 
 ## Source material
 

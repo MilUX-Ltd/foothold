@@ -15,6 +15,7 @@ Commercial routes to market for defence technology companies. Each framework liv
 | Framework | Customer | Notes |
 |-----------|----------|-------|
 | [[Intelligence/defence-landscape/Frameworks/Engineering Delivery Partner (EDP)\|Engineering Delivery Partner (EDP)]] | DE&S | Aurora Engineering Partnership prime (QinetiQ, AtkinsRéalis, BMT) |
+| [[Intelligence/defence-landscape/Frameworks/Aurora Provider Network\|Aurora Provider Network]] | DE&S (via EDP) | Supplier framework under EDP; PN-Evolve and Futures Lab streams; QinetiQ-administered |
 | [[Intelligence/defence-landscape/Frameworks/Programme Delivery Partner (PDP-S)\|Programme Delivery Partner (PDP-S)]] | DE&S | Turner & Townsend lead; programme management |
 | [[Intelligence/defence-landscape/Frameworks/Commercial Delivery Partner (CDP)\|Commercial Delivery Partner (CDP)]] | MOD Commercial | Commercial sister to EDP |
 | [[Intelligence/defence-landscape/Frameworks/Next Generation Assurance Programme (NGAP)\|Next Generation Assurance Programme (NGAP)]] | MOD | Assurance capability |
