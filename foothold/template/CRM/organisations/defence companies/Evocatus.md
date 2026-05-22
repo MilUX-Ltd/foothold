@@ -27,7 +27,7 @@ created: 2026-05-22
 
 ## What Evocatus does
 
-Evocatus Consulting helps organisations think, communicate, and train through games and exercises. Founded by [[CRM/contacts/active contacts/Ant Sharman|Ant Sharman]], a former King's Royal Hussars officer who honed his exercise design skills at BATUS (British Army Training Unit Suffield) in Canada, the company applies military training and exercise techniques to civilian and defence contexts. The name "Evocatus" is Latin for *veteran*: in Ancient Rome, the Evocati were soldiers who had completed their service and chose to sign up again as truly professional soldiers.
+Evocatus Consulting helps organisations think, communicate, and train through games and exercises. Founded by [[Ant Sharman|Ant Sharman]], a former King's Royal Hussars officer who honed his exercise design skills at BATUS (British Army Training Unit Suffield) in Canada, the company applies military training and exercise techniques to civilian and defence contexts. The name "Evocatus" is Latin for *veteran*: in Ancient Rome, the Evocati were soldiers who had completed their service and chose to sign up again as truly professional soldiers.
 
 Evocatus operates across the full spectrum of exercise sophistication, from simple tabletop problem-solving games through to large-scale live scenario simulations with role players, bespoke film content, and specialist advisors. The company works with a network of associates to deliver services internationally. A sister company, **Evocatus Media** (founded Sep 2023), provides media training combining military precision with broadcast expertise.
 
@@ -51,11 +51,11 @@ Evocatus is active in the UK Modelling, Simulation and Training community, inclu
 
 | Name | Role | Email |
 |------|------|-------|
-| [[CRM/contacts/active contacts/Ant Sharman\|Ant Sharman]] | Director and Founder | ant.sharman@evocatus.co.uk |
+| [[Ant Sharman\|Ant Sharman]] | Director and Founder | ant.sharman@evocatus.co.uk |
 
 ## Related
 
-- [[CRM/contacts/active contacts/Ant Sharman|Ant Sharman]] — Director and Founder.
+- [[Ant Sharman|Ant Sharman]] — Director and Founder.
 - [[Intelligence/defence-landscape/Portals/D3IP|D3IP]] — co-located community.
 - [[Intelligence/events/DSET/About DSET|DSET]] — sector event Evocatus is active in.
 

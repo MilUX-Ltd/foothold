@@ -19,7 +19,7 @@ tags: [foothold-contributor, defence-innovation, communications]
 - **Size:** Micro SME
 - **Region:** South East
 - **Business type:** Management Consultancy Services
-- **Co-founders:** [[CRM/contacts/active contacts/James Pryor|James Pryor]] (Director), [[CRM/contacts/active contacts/Gabi Brooks|Gabrielle Brooks]] (Director)
+- **Co-founders:** [[James Pryor|James Pryor]] (Director), [[Gabi Brooks|Gabrielle Brooks]] (Director)
 
 ## What inink does
 
@@ -45,8 +45,8 @@ Their differentiator is SC-cleared support for BD, sales, and MarComms functions
 
 | Name | Role | Email |
 |------|------|-------|
-| [[CRM/contacts/active contacts/James Pryor\|James Pryor]] | Co-founder & Director | james@inink.io |
-| [[CRM/contacts/active contacts/Gabi Brooks\|Gabrielle Brooks]] | Co-founder & Director | gabi@inink.io |
+| [[James Pryor\|James Pryor]] | Co-founder & Director | james@inink.io |
+| [[Gabi Brooks\|Gabrielle Brooks]] | Co-founder & Director | gabi@inink.io |
 
 ## Foothold context
 
@@ -54,8 +54,8 @@ inink were early conversation partners during Foothold's design phase. Their fee
 
 ## Related
 
-- [[CRM/contacts/active contacts/James Pryor|James Pryor]]
-- [[CRM/contacts/active contacts/Gabi Brooks|Gabrielle Brooks]]
+- [[James Pryor|James Pryor]]
+- [[Gabi Brooks|Gabrielle Brooks]]
 
 ---
 
