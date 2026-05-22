@@ -24,10 +24,10 @@ Publicly named UK defence programmes. Programmes with substantive content shippe
 | MERCURY | Active |
 | AACP (Army Agile Command Post) | Active |
 | LACP | Active |
-| ACTS | Active (publicly named on inink Valley of Death canvas) |
-| ATILLA | Active (publicly named on inink Valley of Death canvas) |
-| GBAD (Ground-Based Air Defence) | Active (publicly named on inink Valley of Death canvas) |
-| DC4 | Active (publicly named on inink Valley of Death canvas) |
+| ACTS (Army Collective Training Service) | Active (Strategic Training Partner appointment under the Collective Training Transformation Programme; ~60,000 soldiers/year in collective training) |
+| ATILLA | Active (Dstl + Pearson Engineering; converting retired MCV-80 Warriors into autonomous mine-breaching UGVs; Phase 1 six vehicles; ~£12m contract, Jan 2026 to Mar 2028) |
+| GBAD (Land Ground Based Air Defence) | Active (10-year multi-project programme covering SHORAD, MRAD, C-SAT, C-SUAS; LSI market engagement 2025; £118m Land Ceptor purchase Aug 2025; Northrop Grumman + Marshall industrial partnership) |
+| DC4 | Publicly named on inink Valley of Death canvas; no substantive public footprint located |
 
 ## Land enabling infrastructure (TacSys)
 
@@ -56,8 +56,8 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | VANQUISH | Active |
 | Combat ISTAR | Active |
 | NIGHTFALL | Active |
-| GOSHAWK | Active (publicly named on inink Valley of Death canvas) |
-| METIS | Active (publicly named on inink Valley of Death canvas) |
+| GOSHAWK | Active (Royal Navy; tender notice 26 Jan 2026; competitive procurement for development + live trials of low-cost interceptor for drones, loitering munitions and missiles; 1-2 contracts ~12 months; follow-on production contracts intended) |
+| METIS (Modular Effects Tactical Interchangeable System) | Active (Royal Navy early market engagement Feb 2026; modular low-cost effectors against uncrewed threats; PODS broadly aligned to 20-foot ISO container format) |
 
 ## RAF
 
@@ -72,7 +72,7 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | Rapstone | Active |
 | BRAKESTOP | Active |
 | NYX | Active (see ACP for Project NYX — Apache loyal wingman, land domain) |
-| Pj BOYD | Active (publicly named on inink Valley of Death canvas; cross-Service tag uncertain) |
+| Pj BOYD | Active (RAF-led, delivered by the RAF Rapid Capabilities Office; AI-driven C2 planning to compress planning cycles; series of operational capability demonstrators) |
 
 ## Joint / cross-domain
 
@@ -90,9 +90,9 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | DARE | Active |
 | FASTER | Active |
 | Defence Cyber Marvel | Annual exercise |
-| BEEHIVE | Active (publicly named on inink Valley of Death canvas) |
-| OCSM | Active (publicly named on inink Valley of Death canvas) |
-| DIAG | Active (publicly named on inink Valley of Death canvas) |
+| BEEHIVE | Active (Joint Royal Navy / UK Defence Innovation; 20 uncrewed surface vessels for Surface Flotilla and Commando Force; Kraken Works contract £10.25m awarded 5 Mar 2026; initial TRL 4-5 with open architecture) |
+| OCSM | Publicly named on inink Valley of Death canvas; no substantive public footprint located |
+| DIAG (Defence Investors' Advisory Group) | **Reclassify** — DIAG is an advisory group, not a programme. Convenes UK banking, venture capital, and strategic finance leaders to advise on defence investment priorities. Expanded and put on permanent footing 23 April 2026 with a Defence Finance Zig-Zag secondment programme. |
 
 ## Home Office / Security
 
