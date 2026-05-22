@@ -24,6 +24,10 @@ Publicly named UK defence programmes. Programmes with substantive content shippe
 | MERCURY | Active |
 | AACP (Army Agile Command Post) | Active |
 | LACP | Active |
+| ACTS | Active (publicly named on inink Valley of Death canvas) |
+| ATILLA | Active (publicly named on inink Valley of Death canvas) |
+| GBAD (Ground-Based Air Defence) | Active (publicly named on inink Valley of Death canvas) |
+| DC4 | Active (publicly named on inink Valley of Death canvas) |
 
 ## Land enabling infrastructure (TacSys)
 
@@ -46,6 +50,8 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | VANQUISH | Active |
 | Combat ISTAR | Active |
 | NIGHTFALL | Active |
+| GOSHAWK | Active (publicly named on inink Valley of Death canvas) |
+| METIS | Active (publicly named on inink Valley of Death canvas) |
 
 ## RAF
 
@@ -57,6 +63,7 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | Rapstone | Active |
 | BRAKESTOP | Active |
 | NYX | Active |
+| Pj BOYD | Active (publicly named on inink Valley of Death canvas; cross-Service tag uncertain) |
 
 ## Joint / cross-domain
 
@@ -72,6 +79,9 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | DARE | Active |
 | FASTER | Active |
 | Defence Cyber Marvel | Annual exercise |
+| BEEHIVE | Active (publicly named on inink Valley of Death canvas) |
+| OCSM | Active (publicly named on inink Valley of Death canvas) |
+| DIAG | Active (publicly named on inink Valley of Death canvas) |
 
 ## Programme-to-SME engagement patterns
 

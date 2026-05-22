@@ -38,17 +38,37 @@ Organisations supporting the growth, funding, and scaling of defence technology 
 
 ## MOD strategic partners
 
-Large primes and system integrators that serve as strategic partners to MOD, often providing subcontracting routes for SMEs:
+Large primes and system integrators that serve as strategic partners to MOD, often providing subcontracting routes for SMEs. The MOD's published list runs to 18 named Strategic Partners (per the inink Hitchhiker's Guide to the Valley of Death). The most-cited names across inink and the wider defence-industry literature:
 
 - BAE Systems
-- Rolls-Royce
+- Lockheed Martin
+- Airbus
+- Boeing
+- KBR
+- Serco
+- Capita
+- General Dynamics
+- Leidos
 - Leonardo UK
 - MBDA
-- Thales UK
 - QinetiQ
 - Babcock International
-- Serco
-- Leidos
+- Raytheon
+- Rolls-Royce
+- Thales UK
+
+The exact 18-name list is not consistently published; defer to current gov.uk and MOD Acquisition Pipeline output for the formal designation.
+
+## Mid-tier suppliers
+
+Roughly **2,500 mid-tier suppliers** sit between the 18 named Strategic Partners (plus another 15-ish other prime contractors) and the SME base. They are defined by exclusion: not a Prime, not an SME by the headcount and turnover thresholds. Even MOD, ADS, and techUK have flagged that identifying who they are is hard, because no published list exists (per the inink Hitchhiker's Guide to the Valley of Death, October 2025).
+
+The tactical routes to find one to partner with:
+
+- Trawl Contracts Finder for active awards and the suppliers winning them.
+- Join a relevant trade association (ADS Group, techUK Defence and Security, sector-specific bodies).
+- Attend pre-market engagement and meet-the-buyer events. Many are free; some are trade-org-gated.
+- Engage the Defence Office for Small Business Growth inside NAD Group when it is open for SME engagement.
 
 ## Investors with a defence or security focus
 
