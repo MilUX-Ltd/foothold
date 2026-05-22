@@ -36,6 +36,7 @@ Provider voice into the partnership is via the Provider Network Advisory Group (
 
 ## Related
 
+- [[Intelligence/defence-landscape/Frameworks/Aurora Provider Network|Aurora Provider Network]] — supplier framework under EDP
 - [[Intelligence/defence-landscape/Frameworks/Frameworks Index|Frameworks Index]] — master index
 - [[Intelligence/defence-landscape/Frameworks/Commercial Delivery Partner (CDP)|Commercial Delivery Partner (CDP)]] — commercial sister
 - [[Intelligence/defence-landscape/Frameworks/Programme Delivery Partner (PDP-S)|Programme Delivery Partner (PDP-S)]] — programme-management sister
