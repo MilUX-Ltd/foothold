@@ -41,9 +41,10 @@ GOV.UK reference: [National Armaments Director (NAD) Group](https://www.gov.uk/g
 
 - **Defence Office for Small Business Growth (DOSBG).** MOD's dedicated SME engagement function.
 - **Defence Nuclear Organisation.** Nuclear deterrent programme. Includes AWE Nuclear Security Technologies and the Submarine Delivery Agency.
-- **Defence Futures.** Strategic futures and foresight function.
-- **Innovation and Research InSight Unit (IRIS).** Strategic advice on emerging science and technology.
+- [[CRM/organisations/mod/Defence Futures|Defence Futures]]. Strategic futures and foresight function.
+- [[CRM/organisations/mod/Innovation and Research InSight Unit|Innovation and Research InSight Unit (IRIS)]]. Strategic advice on emerging science and technology.
 - **Defence Electronics and Components Agency (Deca).** Defence electronics support.
+- [[CRM/organisations/mod/Defence Industrial Joint Council|Defence Industrial Joint Council (DIJC)]]. MOD's main strategic mechanism for defence-sector engagement under the Defence Industrial Strategy 2025. Replaces the former Defence Suppliers Forum.
 
 ## Service-specific innovation channels
 
