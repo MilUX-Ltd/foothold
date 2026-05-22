@@ -46,3 +46,7 @@ MilUX built Foothold to short-circuit the months that defence-sector founders ty
 ## Related
 
 - [[CRM/contacts/active contacts/Matt Odell|Matt Odell]] — Founder
+
+---
+
+*This organisation has given permission for MilUX to share their details in this template. 2026-05-20. Confirmed.*

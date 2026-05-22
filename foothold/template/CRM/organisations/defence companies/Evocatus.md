@@ -58,3 +58,7 @@ Evocatus is active in the UK Modelling, Simulation and Training community, inclu
 - [[CRM/contacts/active contacts/Ant Sharman|Ant Sharman]] — Director and Founder.
 - [[Intelligence/defence-landscape/Portals/D3IP|D3IP]] — co-located community.
 - [[Intelligence/events/DSET/About DSET|DSET]] — sector event Evocatus is active in.
+
+---
+
+*This organisation has given permission for MilUX to share their details in this template. 2026-05-22. Confirmed.*
