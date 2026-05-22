@@ -17,7 +17,9 @@ tags: [evocatus, wargaming, defence, army-reserve]
 - **Organisation:** [[CRM/organisations/defence companies/Evocatus|Evocatus Consulting Ltd]] — Director and Founder
 - **Email:** ant.sharman@evocatus.co.uk
 - **LinkedIn:** [antsharman](https://www.linkedin.com/in/antsharman/)
+- **Bluesky:** [zeroecho.uk](https://bsky.app/profile/zeroecho.uk)
 - **Website:** [evocatus.co.uk](https://www.evocatus.co.uk/)
+- **Personal site:** [Zero Echo](https://zeroecho.uk/) — Ant's personal journal of working notes.
 - **Location:** Dorchester, England
 
 ## Background
@@ -34,7 +36,9 @@ Wargaming, exercise design, military training, facilitation, engagement, red tea
 
 ## Publishing
 
-- *Wavell Room* — writing on diversity and the warrior ethos.
+- [*Wavell Room*](https://wavellroom.com/) — writing on diversity and the warrior ethos.
+- ["Wargaming: The Challenges of Preconceptions"](https://ludogogy.professorgame.com/article/wargaming-the-challenges-of-preconceptions/), *Ludogogy Magazine*, 5 Nov 2020. Coined **BOPSAT** (Bunch Of People Sat round A Table) and framed wargaming's value as "lifting people's gaze" from daily battles to the horizon.
+- [Zero Echo](https://zeroecho.uk/) — Ant's personal journal of working notes on strategy, scenarios, mission command, contingency, pedagogy, vocation and craft, simulation technology, AI and cognition, and reading notes. Companion [Bluesky account](https://bsky.app/profile/zeroecho.uk).
 
 ## Related
 
