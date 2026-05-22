@@ -31,6 +31,8 @@ The Marketplace sits inside the wider **T&E Transformation Programme**, started 
 - Give industry a place to promote their capabilities and skills.
 - Help the MOD find and make better use of the various testing ranges across the UK.
 
+The Marketplace is a Phase 2 project of the T&E Transformation Programme. The launch plan was confirmed publicly by **Caroline Kelly, MoD Assistant Head of Future Technology for the T&E Transformation Programme**, traceable to DSEI 2025 workshop coverage.
+
 ### Implementation timeline
 
 - **2022**: T&E Transformation Programme started.

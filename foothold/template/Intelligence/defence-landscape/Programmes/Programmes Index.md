@@ -92,7 +92,8 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | Defence Cyber Marvel | Annual exercise |
 | BEEHIVE | Active (Joint Royal Navy / UK Defence Innovation; 20 uncrewed surface vessels for Surface Flotilla and Commando Force; Kraken Works contract £10.25m awarded 5 Mar 2026; initial TRL 4-5 with open architecture) |
 | OCSM | Publicly named on inink Valley of Death canvas; no substantive public footprint located |
-| DIAG (Defence Investors' Advisory Group) | **Reclassify** — DIAG is an advisory group, not a programme. Convenes UK banking, venture capital, and strategic finance leaders to advise on defence investment priorities. Expanded and put on permanent footing 23 April 2026 with a Defence Finance Zig-Zag secondment programme. |
+
+DIAG is **not** a programme. The Defence Investors' Advisory Group is an MOD advisory body; tracked on its own CRM page at [[CRM/organisations/mod/Defence Investors Advisory Group|Defence Investors' Advisory Group]].
 
 ## Home Office / Security
 
