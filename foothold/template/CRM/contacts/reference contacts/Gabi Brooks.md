@@ -38,7 +38,7 @@ Gabi shaped Foothold's positioning thinking, particularly around value propositi
 ## Related
 
 - [[CRM/organisations/defence companies/inink|inink Ltd]] — Gabi's company
-- [[CRM/contacts/active contacts/James Pryor|James Pryor]] — Co-director at inink
+- [[James Pryor|James Pryor]] — Co-director at inink
 
 ---
 

@@ -41,7 +41,7 @@ James and Gabi spent time with Matt during Foothold's early design conversations
 ## Related
 
 - [[CRM/organisations/defence companies/inink|inink Ltd]] — James's company
-- [[CRM/contacts/active contacts/Gabi Brooks|Gabi Brooks]] — Co-director at inink
+- [[Gabi Brooks|Gabi Brooks]] — Co-director at inink
 
 ---
 
