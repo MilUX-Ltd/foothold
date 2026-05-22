@@ -20,6 +20,7 @@ Commercial routes to market for defence technology companies. Each framework liv
 | [[Intelligence/defence-landscape/Frameworks/Commercial Delivery Partner (CDP)\|Commercial Delivery Partner (CDP)]] | MOD Commercial | Commercial sister to EDP |
 | [[Intelligence/defence-landscape/Frameworks/Next Generation Assurance Programme (NGAP)\|Next Generation Assurance Programme (NGAP)]] | MOD | Assurance capability |
 | [[Intelligence/defence-landscape/Frameworks/ASTRID\|ASTRID]] | Dstl | Science and Technology research delivery |
+| [[Intelligence/defence-landscape/Frameworks/Serapis\|Serapis]] | Dstl | S&T R&D framework — six capability lots, SME-friendly intake; C4ISR, space, synthetic environments, ISTAR, C2, data analytics with AI/ML |
 | [[Intelligence/defence-landscape/Frameworks/Weapons Sector Research Framework\|Weapons Sector Research Framework]] | Dstl | Weapons R&D |
 | [[Intelligence/defence-landscape/Frameworks/HTCD\|HTCD]] | MOD | Advanced technology capability delivery |
 | [[Intelligence/defence-landscape/Frameworks/Storm\|Storm]] | MOD | Specialist defence technology |

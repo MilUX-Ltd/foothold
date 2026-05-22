@@ -61,11 +61,16 @@ Dstl runs the **Defence Science and Technology Portfolio**, a series of programm
 Key frameworks managed by or linked to Dstl:
 
 - [[Intelligence/defence-landscape/Frameworks/ASTRID|ASTRID]]: Analysis for Science and Technology Research in Defence.
+- [[Intelligence/defence-landscape/Frameworks/Serapis|Serapis]]: scientific and technical R&D framework, explicitly aimed at broadening Dstl's supplier base (six capability lots spanning C4ISR, space, synthetic environments, ISTAR, C2, and data analytics with AI/ML).
 - [[Intelligence/defence-landscape/Frameworks/Weapons Sector Research Framework|Weapons Sector Research Framework]].
 - [[Intelligence/defence-landscape/Frameworks/Defence Technology Exploitation Programme (DTEP)|Defence Technology Exploitation Programme (DTEP)]]: route for transitioning successful innovation into capability.
 - [[Intelligence/defence-landscape/Frameworks/Defence Supplier Capability Programme|Defence Supplier Capability Programme]].
 - [[Intelligence/defence-landscape/Frameworks/R-Cloud|R-Cloud]]: Dstl's S&T research dynamic agreement.
 - [[Intelligence/defence-landscape/Frameworks/PROGENY|PROGENY]]: maritime research framework.
+
+Key Dstl-led programmes:
+
+- [[Intelligence/defence-landscape/Programmes/DragonFire|DragonFire]]: Laser Directed Energy Weapon (LDEW) capability demonstrator, Dstl-led consortium with MBDA UK, Leonardo UK, and QinetiQ. Royal Navy fielding from 2027.
 
 ### Commercialisation
 
@@ -114,6 +119,7 @@ GOV.UK: [Defence and Security Accelerator](https://www.gov.uk/government/organis
 - An **Open Call for Innovation** accepting proposals year-round.
 - A network of **Innovation Partners** across the UK regions, brokering pre-submission conversations between would-be applicants and the relevant MOD customer commands.
 - Frameworks and routes including [[Intelligence/defence-landscape/Frameworks/PROGENY|PROGENY]] and [[Intelligence/defence-landscape/Frameworks/ASTRID|ASTRID]] alongside the Defence Technology Exploitation Programme.
+- **[[Intelligence/defence-landscape/Programmes/Defence Innovation Loans|Defence Innovation Loans]]**: joint DASA / Innovate UK Loans Ltd funding instrument for single SMEs with solutions to defence-themed problems. £100k to £1m at 7.4% APR, rolling cycles every 6 to 8 weeks. Applicants must engage DASA pre-application to confirm suitability.
 
 #### DASA publication streams worth monitoring
 
@@ -133,6 +139,14 @@ DASA publishes around 627 pages on GOV.UK including 17 detailed guides and colle
 ### FCI: Future Capability Innovation (within UKDI)
 
 DE&S-rooted function for novel, disruptive, complex, and cross-cutting technology risks and opportunities that touch multiple defence projects. Current named priority: advanced manufacturing (3D printing) for defence logistics, ensuring equipment parts are available for Front Line Commands deployed globally.
+
+#### Innovate UK adjacency (via UKDI / FCI / RIT)
+
+UKDI's regional and dual-use orientation places several Innovate UK-funded programmes squarely adjacent to the NA-Innov funnel. Worth tracking even though these sit outside NAD Group:
+
+- [[Intelligence/defence-landscape/Programmes/BridgeAI|BridgeAI]] (£100m Innovate UK programme to accelerate AI/ML adoption; consortium with Digital Catapult, Alan Turing Institute, STFC Hartree Centre, BSI).
+- [[Intelligence/defence-landscape/Programmes/Aerospace Technology Institute (ATI) Programme|ATI Programme]] (£2.3bn to 2035, joint DBT / Innovate UK / Aerospace Technology Institute; principal civil aerospace R&D funding route with SME-tailored stream).
+- [[Intelligence/defence-landscape/Programmes/Future Flight Challenge|Future Flight Challenge]] (UKRI / Innovate UK / DfT; AAM and drones dual-use trajectory).
 
 ### Rapid Innovation Team (within UKDI)
 
