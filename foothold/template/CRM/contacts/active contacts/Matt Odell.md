@@ -41,3 +41,7 @@ Matt designed and ships Foothold. He's the canonical example of an "active conta
 ## Related
 
 - [[CRM/organisations/defence companies/MilUX|MilUX]]
+
+---
+
+*This contact has given permission for MilUX to share their details in this template. 2026-05-20. Confirmed.*

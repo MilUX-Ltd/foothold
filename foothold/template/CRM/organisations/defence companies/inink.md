@@ -56,3 +56,7 @@ inink were early conversation partners during Foothold's design phase. Their fee
 
 - [[CRM/contacts/active contacts/James Pryor|James Pryor]]
 - [[CRM/contacts/active contacts/Gabi Brooks|Gabrielle Brooks]]
+
+---
+
+*This organisation has given permission for MilUX to share their details in this template. 2026-05-20. Confirmed.*

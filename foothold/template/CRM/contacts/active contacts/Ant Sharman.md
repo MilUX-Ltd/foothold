@@ -39,3 +39,7 @@ Wargaming, exercise design, military training, facilitation, engagement, red tea
 ## Related
 
 - [[CRM/organisations/defence companies/Evocatus|Evocatus Consulting Ltd]] — Director and Founder.
+
+---
+
+*This contact has given permission for MilUX to share their details in this template. 2026-05-22. Confirmed.*
