@@ -27,6 +27,7 @@ Useful resources, portals, networks, and guidance for defence technology start-u
 - [[Intelligence/defence-landscape/Portals/MOD Acquisition Pipeline|MOD Acquisition Pipeline]] — forward-look publication.
 - [[Intelligence/defence-landscape/Portals/Central Digital Platform|Central Digital Platform]] — Procurement Act 2023 platform.
 - [[Intelligence/defence-landscape/Portals/DefTechLink|DefTechLink]] — paid private aggregator across ~29 allied countries. Free trial; $35/month after.
+- [[Intelligence/defence-landscape/Portals/RAINCLOUD DEFENSE|RAINCLOUD DEFENSE]] — free invitation-only international defence-tech community and editorial platform. 6,600+ members in 100+ countries.
 
 ## Things to See
 
