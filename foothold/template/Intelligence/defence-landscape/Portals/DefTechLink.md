@@ -78,15 +78,15 @@ Honest framing for a founder weighing the spend after the free month:
 - If you want competitive-intelligence signal across allied markets (what categories of work are being posted where), the feed is one of the few single-stop options.
 - The explainer content is useful early, less useful once you've found your route. Read what you can during the trial.
 
-## Provenance
+## Sources
 
-Per [[CLAUDE|R-19]] this Foothold page is sourced from public material only:
+This page is sourced from public material only:
 
 - [DefTechLink website (gated landing page)](https://deftechlink.com) — confirmed access-denied screen, Choose a Plan CTA, 404 for unauthenticated routes (observed 2026-05-23).
 - [DefTechLink on LinkedIn](https://www.linkedin.com/company/deftechlink/) — public About blurb, follower count, company size, mutual-connection visibility.
 - Search-result excerpts of LinkedIn About copy and platform marketing copy — coverage of 29 countries, events count, DefTechLearn and DefTechPod naming, pricing detail.
 
-No internal MilUX engagement history is included on this page.
+No private engagement history or subscriber-only observations are included on this page.
 
 ## Related
 

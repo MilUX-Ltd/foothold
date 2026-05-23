@@ -22,9 +22,10 @@ Procurement and opportunity-discovery portals that defence-sector SMEs need to k
 
 - [[Intelligence/defence-landscape/Portals/D3IP|D3IP]]. Innovation-as-a-service community portal for Dorset Innovation Park, co-located with the Defence BattleLab.
 
-## Private aggregators (subscription)
+## Private community and aggregator platforms
 
 - [[Intelligence/defence-landscape/Portals/DefTechLink|DefTechLink]]. Paid platform aggregating defence and dual-use opportunities across ~29 allied countries, with explainer content. One-month free trial; $35/month after.
+- [[Intelligence/defence-landscape/Portals/RAINCLOUD DEFENSE|RAINCLOUD DEFENSE]]. Free invitation-only international community platform for the defence-tech sector. 6,600+ members in 100+ countries. Member directory, opportunities board, editorial news, Pavilions.
 
 ## Related
 
