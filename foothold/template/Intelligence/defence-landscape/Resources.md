@@ -26,6 +26,7 @@ Useful resources, portals, networks, and guidance for defence technology start-u
 - [[Intelligence/defence-landscape/Portals/Defence Sourcing Portal|Defence Sourcing Portal]] — MOD-specific supplier portal.
 - [[Intelligence/defence-landscape/Portals/MOD Acquisition Pipeline|MOD Acquisition Pipeline]] — forward-look publication.
 - [[Intelligence/defence-landscape/Portals/Central Digital Platform|Central Digital Platform]] — Procurement Act 2023 platform.
+- [[Intelligence/defence-landscape/Portals/DefTechLink|DefTechLink]] — paid private aggregator across ~29 allied countries. Free trial; $35/month after.
 
 ## Things to See
 
