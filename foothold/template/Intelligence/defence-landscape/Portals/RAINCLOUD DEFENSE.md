@@ -30,7 +30,7 @@ tags:
 
 RAINCLOUD DEFENSE is an invitation-only global digital ecosystem for the defence-technology sector, operated by RAINCLOUD GROUP (a Washington, D.C.-headquartered platform company founded in 2021). Membership is free but vetted. The platform combines a member directory, a virtual product catalogue, an opportunities board, a curated news feed, an events directory, and paid private workspaces ("Pavilions") for member organisations.
 
-Unlike the UK government portals on this index (Helios, Contracts Finder, Defence Sourcing Portal, MOD Acquisition Pipeline, Central Digital Platform) and unlike the paid opportunity aggregator [[Intelligence/defence-landscape/Portals/DefTechLink|DefTechLink]], RAINCLOUD DEFENSE is primarily a vetted **community** layer rather than an opportunity-feed or supplier-registration surface. Founders join because of who is on it, not because it indexes contracts.
+It functions primarily as a vetted international community and editorial layer for the defence-tech sector. Founders typically join for the network and the editorial feeds rather than to discover specific contracts.
 
 External: marketing site at [raindefense.ai](https://raindefense.ai/); platform at [raincloud.network](https://raincloud.network/); group at [raincloud.group](https://raincloud.group/). Invitation request at [raincloud.network/signup](https://raincloud.network/signup).
 
@@ -62,18 +62,17 @@ Public-source description from the [raindefense.ai homepage](https://raindefense
 - **Industry News.** Editorially curated defence and defence+AI news feed with extensive category taxonomy.
 - **RAINCLOUD DEFENSE Daily Drop and Weekly Forecast.** Proprietary industry intelligence outputs published by the RAINCLOUD team, surfaced through the platform and through founder communications.
 
-## How RAINCLOUD DEFENSE differs from the UK government portals and from DefTechLink
+## How RAINCLOUD DEFENSE differs from the UK government portals
 
-|  | RAINCLOUD DEFENSE | DefTechLink | UK gov portals |
-|---|---|---|---|
-| **Operator** | RAINCLOUD GROUP (private, US) | DefTechLink (private, US) | UK Government / MOD / Hellios |
-| **Cost** | Free, invitation-only | Paid (~$35/month) | Free |
-| **Geography** | 100+ countries | ~29 allied countries | UK only |
-| **Primary value** | Vetted community + editorial layer | Aggregated opportunity feed + explainer content | Direct UK procurement access |
-| **Eligibility** | Application, vetted | Open registration | UK SMEs / public-sector suppliers |
-| **Working language** | Defence and dual-use | Defence and dual-use | UK MOD and wider public sector |
+|  | RAINCLOUD DEFENSE | UK government portals (Helios, Contracts Finder, DSP, MOD Acq. Pipeline, CDP) |
+|---|---|---|
+| **Operator** | RAINCLOUD GROUP (private, US) | UK Government / MOD / Hellios |
+| **Cost** | Free, invitation-only | Free |
+| **Geography** | 100+ countries | UK only |
+| **Primary value** | Vetted international community and editorial layer | Direct UK procurement access |
+| **Eligibility** | Application, vetted | UK SMEs and public-sector suppliers |
 
-The three are largely complementary rather than substitutable. UK government portals are the source of truth for UK MOD procurement; DefTechLink layers opportunity discovery across allied markets; RAINCLOUD DEFENSE provides the international community and editorial layer.
+The two are complementary rather than substitutable. UK government portals are the source of truth for UK MOD procurement; RAINCLOUD DEFENSE provides the international community and editorial layer around the wider defence-tech sector.
 
 ## How to evaluate joining
 
