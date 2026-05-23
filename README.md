@@ -22,7 +22,7 @@ The operations still have to be run. Foothold is the position you run them from.
 
 ## Audience
 
-Founders running defence-sector businesses, in MilUX's network. Curated handoff, not a public download. v1 is beta; install access is by invitation.
+Founders running defence-sector businesses, in MilUX's network. Curated handoff, not a public download. v1.0 is released; install access is currently by invitation while we work through the MilUX network.
 
 ## Getting started
 
