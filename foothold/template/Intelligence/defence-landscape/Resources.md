@@ -29,6 +29,10 @@ Useful resources, portals, networks, and guidance for defence technology start-u
 - [[Intelligence/defence-landscape/Portals/DefTechLink|DefTechLink]] — paid private aggregator across ~29 allied countries. Free trial; $35/month after.
 - [[Intelligence/defence-landscape/Portals/RAINCLOUD DEFENSE|RAINCLOUD DEFENSE]] — free invitation-only international defence-tech community and editorial platform. 6,600+ members in 100+ countries.
 
+## Membership Communities
+
+- [[CRM/networks/Chief Disruptor/Chief Disruptor|Chief Disruptor]] — UK membership community for business and tech leaders (Nimbus Ninety Ltd, founded 2005) with a defence sub-brand. Application-based Associate and Full tiers. Hosts the Army Digital Transformation Conference, Defence Strategic Communications Conference, DAIC Connect, and the MOD Office for Small Business Growth EOI surface.
+
 ## Things to See
 
 - AWE: The Urban Series 2022-24.
