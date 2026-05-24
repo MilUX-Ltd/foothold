@@ -28,6 +28,7 @@ Publicly named UK defence programmes. Programmes with substantive content shippe
 | ATILLA | Active (Dstl + Pearson Engineering; converting retired MCV-80 Warriors into autonomous mine-breaching UGVs; Phase 1 six vehicles; ~£12m contract, Jan 2026 to Mar 2028) |
 | GBAD (Land Ground Based Air Defence) | Active (10-year multi-project programme covering SHORAD, MRAD, C-SAT, C-SUAS; LSI market engagement 2025; £118m Land Ceptor purchase Aug 2025; Northrop Grumman + Marshall industrial partnership) |
 | DC4 | Publicly named on inink Valley of Death canvas; no substantive public footprint located |
+| LE TacCIS Programme | Active (parent programme; sub-projects include BCIP 5.6, [[Intelligence/defence-landscape/Programmes/MORPHEUS Test & Reference Centre (MTRC)\|MORPHEUS]], [[Intelligence/defence-landscape/Programmes/TRINITY\|TRINITY]], JCRVT, DSA, [[Intelligence/defence-landscape/Programmes/Falcon\|Falcon]], NIOBE; delivered by Army HQ + Defence Digital TacSys Service Executive) |
 
 ## Land enabling infrastructure (TacSys)
 
@@ -58,6 +59,7 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | NIGHTFALL | Active |
 | GOSHAWK | Active (Royal Navy; tender notice 26 Jan 2026; competitive procurement for development + live trials of low-cost interceptor for drones, loitering munitions and missiles; 1-2 contracts ~12 months; follow-on production contracts intended) |
 | METIS (Modular Effects Tactical Interchangeable System) | Active (Royal Navy early market engagement Feb 2026; modular low-cost effectors against uncrewed threats; PODS broadly aligned to 20-foot ISO container format) |
+| Future Maritime Support Programme (FMSP) | Active (£5.2bn programme; 11 contracts; replaces Maritime Support Delivery Framework and SDMP; HMNB Clyde + Devonport; sustains 9,400+ UK jobs; Babcock secured 2-year extension Apr 2026) |
 
 ## RAF
 

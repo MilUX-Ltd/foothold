@@ -55,6 +55,12 @@ Commercial routes to market for defence technology companies. Each framework liv
 | [[Intelligence/defence-landscape/Frameworks/eSourcing Tool\|eSourcing Tool]] | MOD | Platform for MOD competitions |
 | [[Intelligence/defence-landscape/Frameworks/SME Searchlight\|SME Searchlight]] | MOD | SME-capability visibility programme |
 
+## Innovation funding routes
+
+| Route | Operator | Notes |
+|-------|----------|-------|
+| [[Intelligence/defence-landscape/Frameworks/Innovate UK Contracts for Innovation\|Innovate UK Contracts for Innovation]] | UKRI / Innovate UK | Pre-commercial procurement; formerly SBRI. Underlying mechanism for most DASA themed competitions. Fully-funded R&D contracts; 66%+ SME share by design. |
+
 ## Accreditations
 
 | Accreditation | Operator | Notes |

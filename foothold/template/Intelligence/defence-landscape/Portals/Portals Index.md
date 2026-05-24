@@ -17,6 +17,7 @@ Procurement and opportunity-discovery portals that defence-sector SMEs need to k
 - [[Intelligence/defence-landscape/Portals/Defence Sourcing Portal|Defence Sourcing Portal]]. MOD-specific supplier portal.
 - [[Intelligence/defence-landscape/Portals/MOD Acquisition Pipeline|MOD Acquisition Pipeline]]. Forward-look publication for upcoming MOD procurement activity.
 - [[Intelligence/defence-landscape/Portals/Central Digital Platform|Central Digital Platform]]. Procurement Act 2023 platform.
+- [[Intelligence/defence-landscape/Portals/Find a Tender Service|Find a Tender Service (FTS)]]. Central publication service for high-value (above-threshold) public procurement notices. Post-Brexit replacement for OJEU / TED; sits inside the Central Digital Platform.
 
 ## Community and innovation portals
 
