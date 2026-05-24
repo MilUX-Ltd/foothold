@@ -1,0 +1,15 @@
+{
+  "skill": "cyber-essentials-ready",
+  "version": "1.0.0",
+  "question_set": "Montpellier",
+  "last_reviewed": "2026-05-24",
+  "maintainer": "MilUX",
+  "maintainer_url": "https://milux.co.uk",
+  "license": "MIT",
+  "manifest_url": "https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/cyber-essentials-ready/manifest.json",
+  "release_notes_url": "https://github.com/MilUX-Ltd/foothold/blob/main/foothold/template/Skills/cyber-essentials-ready/CHANGELOG.md",
+  "scope": {
+    "in": ["macOS 14+", "Windows 10", "Windows 11"],
+    "out": ["mobile devices", "SaaS MFA"]
+  }
+}
