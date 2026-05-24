@@ -48,6 +48,10 @@ This page is a catalogue of skills the Foothold authors and users have built and
 - **/late-payment-reminder** — Drafts a UK-statutory late-payment chase email at three escalation levels (polite reminder, firm reminder, final notice). Calculates daily interest against the live Bank of England base rate. Ships with Foothold.
 - **/book-train-ticket** — Books a National Rail ticket via a computer-use agent. The pattern: agent reads your calendar for the upcoming meeting, suggests trains, asks for confirmation before purchase.
 
+## Security and compliance skills
+
+- **/cyber-essentials-ready**. Walks a non-IT user through configuring their personal Mac or Windows computer to meet the UK Cyber Essentials technical controls (Montpellier question set). Initial setup, monthly verify mode, append-only audit log, dated evidence packs, and a reviewer-facing README written to `Operations/Cyber-Essentials/`. Registers a monthly Cowork scheduled task to keep the posture current. Ships with Foothold.
+
 ## Setup and tooling skills
 
 - **/artifact-planner** — Walks a sketched artefact (a deck, a diagram, a document) into a step-by-step plan before you ask an agent to produce it.
