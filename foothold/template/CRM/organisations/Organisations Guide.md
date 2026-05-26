@@ -11,10 +11,14 @@ folder: CRM/organisations
 
 ## Subfolders
 
-- **`defence companies/`.** Commercial defence suppliers, primes, SMEs, dual-use tech firms.
+- **`defence companies/`.** Commercial defence suppliers, primes, SMEs, dual-use tech firms. Split into eight letter-based subfolders (`0-9`, `A-B`, `C-D`, `E-H`, `I-N`, `O-R`, `S-T`, `U-Z`) once the set grows past comfortable single-folder browsing.
 - **`mod/`.** Ministry of Defence entities, executive agencies, the National Armaments structure, child organisations under each.
 - **`non-defence companies/`.** Partners, customers, suppliers outside defence (technology providers, professional services firms, agencies).
-- **`academic and research/`.** Universities, research labs, think tanks, R&D centres.
+- **`academia/`.** Universities, research labs, think tanks, R&D centres.
+- **`trade bodies/`.** Industry associations, defence trade bodies, sector representative groups.
+- **`government/`.** UK government departments, agencies, and arm's-length bodies outside the MoD that touch defence and national security.
+- **`foreign government/`.** Non-UK government entities, allied national bodies, foreign defence ministries.
+- **`investors/`.** Venture capital firms, corporate VCs, fund vehicles, government-aligned strategic investors with defence-tech or dual-use exposure. Split into eight letter-based subfolders (`0-9`, `A-B`, `C-D`, `E-H`, `I-N`, `O-R`, `S-T`, `U-Z`).
 
 Adapt these subfolders to your sector. The default reflects a defence-sector founder lens; another sector might split into `customers/`, `suppliers/`, `partners/`.
 

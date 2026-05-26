@@ -1,7 +1,7 @@
 {
   "name": "foothold",
   "description": "Installable Obsidian vault pack for defence-sector founders. One command lays down a working second-brain: folder structure, page templates, skills, and pre-populated open-source defence reference content. Plugin-bundled lifecycle skill: /foothold-setup (install and conversational onboarding, runs once before the vault exists). Vault-bundled skills (shipped into the installed vault's Skills/ folder, available wherever the vault is open): /foothold-update (pulls latest content from GitHub on demand), add-contact, add-organisation, add-event, prompt-master, process-interviewer, newsletter-writer, meeting-prep, late-payment-reminder, cyber-essentials-ready. Plus a Skill Examples catalogue.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": {
     "name": "MilUX",
     "url": "https://milux.co.uk"

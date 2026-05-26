@@ -1,5 +1,19 @@
 # Foothold changelog
 
+## 1.2.0, 2026-05-26
+
+Adds the `investors/` bucket to `CRM/organisations/`, pre-populated with around 120 investor entries spanning UK and European VCs, corporate VCs, fund vehicles, and government-aligned strategic investors with defence-tech or dual-use exposure.
+
+Each entry carries the same shape: company details (HQ, founded date, fund size, stage focus, geography), an About paragraph on thesis and posture, a Key People table of named partners with verified LinkedIn URLs, a portfolio of notable defence and dual-use investments, and the framework and co-investor signals that travel with the firm. Where a partner could not be verified on LinkedIn, the entry says so rather than guessing; that honest signal is more useful in a raise than a polished gap.
+
+The structure mirrors `defence companies/`: eight letter-based subfolders (`0-9`, `A-B`, `C-D`, `E-H`, `I-N`, `O-R`, `S-T`, `U-Z`) under the bucket, with an `Investors Index.md` at the root listing every entry and pointing to the government-aligned investors that live in `government/` (NSSIF, UK Innovation and Science Seed Fund, UKRI).
+
+Why this matters for defence-sector founders: the investor map is the missing piece in most early-stage research workflows. Knowing which fund backs which kind of company, who the partner contact is, and which co-investors travel together is half the work of an effective raise. The bucket starts with European and UK depth because that is where most Foothold founders are raising; broadening to US and Asian funds is a later edit, not a Foothold-template task.
+
+The Organisations Guide is updated to list the `investors/` bucket alongside the rest, with the letter-subfolder convention noted.
+
+Thanks to inink for providing the thorough and detailed list of investors this bucket is built from.
+
 ## 1.1.0, 2026-05-24
 
 Adds `cyber-essentials-ready`, a guided walkthrough that takes a non-IT founder through configuring their personal Mac or Windows computer to meet the UK Cyber Essentials technical controls.
