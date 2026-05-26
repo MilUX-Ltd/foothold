@@ -38,4 +38,8 @@ No senior contacts listed in this file — no LinkedIn search performed.
 
 - Co-invests with Bpifrance and NATO Innovation Fund
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Expansion VC's recent activity is not surfaced in the defence-tech press indexed for this refresh. Worth rechecking when the news pipeline refreshes.
+
 ## Related

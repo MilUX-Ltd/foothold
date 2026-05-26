@@ -45,4 +45,14 @@ Expeditions writes seed and Series A cheques into founders building autonomy, AI
 - Anthony Mensier (Co-Founder, Investment Manager): https://www.linkedin.com/in/anthony-mensier/
 - Sophia Habsburg-Lothringen (Investment Associate): not surfaced via LinkedIn name-search
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Expeditions (Warsaw/London/Paris) closed €100M+ on Fund II (target €150M), backed by NATO Innovation Fund and Polish Development Fund. Thesis: cybersecurity, intelligence, autonomy, AI, quantum, comms, space.
+
+- **Orqa** — undisclosed, March 2026. Drone component production scale. [Source: TechFundingNews](https://techfundingnews.com/expeditions-fund-ii-raises-100m-europe-security-tech/)
+- **Gambit Cyber** — $3.4M seed, Dec 2025. Lead. Co-investors: Bitdefender, Voyager Ventures. [Source: Vestbee](https://www.vestbee.com/insights/articles/expeditions-raises-100-m-fund)
+- **Sky Spy** — $1.6M, Dec 2025. SIGINT capabilities. [Source: Vestbee](https://www.vestbee.com/insights/articles/expeditions-raises-100-m-fund)
+
+Fund I notable holdings include Alpine Eagle, Blackwall, Comand AI, Disruptive Industries, Labrys, Nu Quantum.
+
 ## Related

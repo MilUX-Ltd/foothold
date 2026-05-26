@@ -59,4 +59,12 @@ The portfolio spans space domain awareness, earth observation, satellite communi
 - Seraphim Space Accelerator (DARPA / UK Space Agency / ESA partner)
 - LSE-listed (Seraphim Space Investment Trust, SSIT)
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Approximately 70% of Seraphim's portfolio now has defence applications.
+
+- **ICEYE** — Series E, €150M, late 2025. Existing investor. Synthetic aperture radar (SAR) constellation; 39% of SSIT NAV. [Source: Proactive Investors, 2026](https://www.proactiveinvestors.co.uk/companies/news/1088385/seraphim-space-investment-trust-reports-20-nav-rise-as-defence-contracts-drive-portfolio-surge-1088385.html)
+- **HawkEye 360** — Series E, $150M plus $100M+ multi-year data agreement, late 2025. Existing investor. RF signals intelligence. [Source: Proactive Investors, 2026](https://www.proactiveinvestors.co.uk/companies/news/1088385/seraphim-space-investment-trust-reports-20-nav-rise-as-defence-contracts-drive-portfolio-surge-1088385.html)
+- **Seraphim early-stage SpaceTech fund close** — surpassed €84M target, February 2026. Backs 17 companies across US and Europe with AI plus SpaceTech thesis. [Source: EU-Startups, Feb 2026](https://www.eu-startups.com/2026/02/seraphim-space-surpasses-e84-million-target-with-latest-close-of-early-stage-spacetech-fund)
+
 ## Related

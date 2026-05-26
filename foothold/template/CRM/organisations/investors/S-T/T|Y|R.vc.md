@@ -40,4 +40,10 @@ No senior contacts listed in this file, no LinkedIn search performed.
 - Dual-use Baltic and Nordic regional positioning
 - Co-investor space with Polarion, ETNA, NATO Innovation Fund
 
+## Recent investments
+
+No specific portfolio company deals identified in the last 120 days (last refresh: 2026-05-27). T|Y|R.vc has limited public deal disclosure for a small Danish €30M fund. Sits in the Nordic-Baltic dual-use cluster alongside Final Frontier (Denmark's first aerospace and defence VC) and other regional investors. Danish institutional investors are increasingly active in defence-focused alternatives per InvestInDenmark. Worth rechecking T|Y|R.vc news page directly.
+
+[Source: tyr.vc](https://tyr.vc/) and [InvestInDenmark](https://investindk.com/insights/danish-institutional-investors-step-into-defence-focused-alternative-investments)
+
 ## Related

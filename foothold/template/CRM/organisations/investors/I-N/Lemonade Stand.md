@@ -41,4 +41,8 @@ The fund is sector-generalist across B2B, with portfolio touchpoints in fintech,
 
 - Mario Treufeldt (Founder and Partner): https://www.linkedin.com/in/mariotreufeldt/
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Lemonade Stand is a micro-VC focused on Baltic and Eastern European tech founders across SaaS, fintech, sustainability and environment tech. No defence-tech holdings surface; zero 2026 YTD investments per Tracxn. Worth rechecking when the news pipeline refreshes.
+
 ## Related

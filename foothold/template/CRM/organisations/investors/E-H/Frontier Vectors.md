@@ -30,4 +30,8 @@ Public team and portfolio information is limited at this stage.
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+No discrete Frontier Vectors deals publicly disclosed in the last 120 days (last refresh: 2026-05-27). Frontier Vectors is listed on the European Defense Investor Network as part of the defence-tech ecosystem but specific portfolio rounds in the window are not surfaced. Worth rechecking when the news pipeline refreshes.
+
 ## Related

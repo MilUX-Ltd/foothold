@@ -28,4 +28,8 @@ tags:
 
 Public information about the fund's portfolio and team is limited.
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). 6 Degrees Capital's stated thesis (fintech, enterprise SaaS, AI) does not include defence. Recent 2025 to 2026 deals include Aisy (cybersecurity, adjacent), Luca, Linda, Conveo. Worth rechecking when the news pipeline refreshes.
+
 ## Related

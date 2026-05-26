@@ -33,4 +33,8 @@ Buildit operates in the Baltic deep-tech and dual-use cluster and has supported 
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Buildit is the Latvian (originally Estonian) hardware and IoT accelerator; new €20M fund deploying from Q2 2025 with €250k pre-seed and €1.5M seed tickets focused on Baltics and Nordics. Hardware focus is dual-use-adjacent but no specific defence-tech deals are publicly disclosed in the recent window.
+
 ## Related

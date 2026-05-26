@@ -45,4 +45,11 @@ The portfolio spans AI, quantum, cyber, photonics, and dual-use deep-tech. IQ Ca
 - Kerry Baldwin (Founding Partner): https://www.linkedin.com/in/kerrybaldwin/
 - Ed Stacey (Founding Partner): https://www.linkedin.com/in/ed-stacey-iqcapital/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Isembard** — Series A, $50M, March 2026. Participant (new investor). Round led by Union Square Ventures, with Tamarack Global, Notion Capital and CIV. AI-powered distributed factories for aerospace and defence. [Source: IQ Capital news, Mar 2026](https://www.iqcapital.vc/news/isembard-raises-50m-series-a-to-open-25-ai-powered-factories-serving-aerospace-and-defence)
+- **Nu Quantum** — Series A, $60M, December 2025. Participant (existing). Round led by National Grid Partners with Gresham House Ventures, Morpheus, Amadeus, Ahren, Cambridge Enterprise, East Innovate, NSSIF and Sumitomo. Largest UK quantum Series A to date. [Source: IQ Capital news, Dec 2025](https://www.iqcapital.vc/news/nu-quantum-raises-60m-series-a-in-largest-financing-round-for-quantum-computer-networking)
+
 ## Related

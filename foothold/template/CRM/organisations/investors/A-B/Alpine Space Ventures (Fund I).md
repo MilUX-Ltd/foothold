@@ -42,4 +42,12 @@ The team was founded by former SpaceX operators including Bulent Altan, bringing
 - Bulent Altan (Co-Founder and Managing Partner): https://www.linkedin.com/in/bulent-altan/
 - Joram Voelklein (Co-Founder and Managing Partner): https://www.linkedin.com/in/joramvoelklein/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Alpine Space Ventures is a SpaceX-alumni-led European space fund with NATO Innovation Fund as a backer, deeply embedded in EDIN and NATO SPACENET.
+
+- **K2 Space** — round detail undisclosed, 2025-12-16. Co-investor. K2 Space builds high-power satellite platforms. [Source: Tracxn / CBInsights](https://www.cbinsights.com/investor/alpine-space-ventures)
+- **Reflex Aerospace** — existing portfolio company. Sovereign European satellite manufacturing. [Source: Tracxn](https://tracxn.com/d/venture-capital/alpinespace/__6zoltvoRFc0smbqHDgEeO8BQGVP9rMSjfJec7nUpJsY)
+- **Northwood Space** — existing portfolio company. Ground-station-as-a-service. [Source: Tracxn](https://tracxn.com/d/venture-capital/alpinespace/__6zoltvoRFc0smbqHDgEeO8BQGVP9rMSjfJec7nUpJsY)
+
 ## Related

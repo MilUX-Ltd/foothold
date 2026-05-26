@@ -40,4 +40,8 @@ ZAS is not a defence specialist. Its position on this list reflects broader Ukra
 
 - Andrew Zinchuk — https://www.linkedin.com/in/aszinchuk/
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). ZAS Ventures is a Ukrainian-American sector-agnostic early-stage fund (HealthTech, Enterprise, FinTech, Consumer); 4 investments in 2025, none defence-tech (Ranking Copilot, Every Health among latest). Defence relevance is low; despite Ukrainian roots the fund does not specifically target defence-tech.
+
 ## Related

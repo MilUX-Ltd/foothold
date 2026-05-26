@@ -42,4 +42,8 @@ Stages run from pre-seed through seed-plus and Series A. The portfolio is small 
 - David Rosskamp (Founder & Managing Partner): https://www.linkedin.com/in/davidrosskamp/
 - Mario Lebherz (Managing Partner): https://www.linkedin.com/in/mariolebherz/
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). The "Magnetic" investor entity does not surface in indexed defence-tech press for the recent window; entity identity may need verification against the original source for this file. Worth rechecking when the news pipeline refreshes.
+
 ## Related

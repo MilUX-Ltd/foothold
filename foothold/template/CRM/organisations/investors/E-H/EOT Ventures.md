@@ -33,4 +33,8 @@ Public information about the team and portfolio is limited.
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). The vault file describes EOT Ventures as a Luxembourg-based deep-tech, climate and dual-use fund. The eot.ventures domain currently serves a Web3 / Economy of Things VC (EOT Labs / Peaq Network) with a crypto-DePIN thesis and one disclosed pre-seed deal (SkyX, Nov 2024). Entity identity should be re-checked against the original source before treating either profile as canonical for MilUX purposes.
+
 ## Related

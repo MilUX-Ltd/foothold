@@ -40,4 +40,8 @@ LPs in prior vehicles include Tesi (Finnish Industrial Investment), KRR fund-of-
 
 - Sami Söderlund: not surfaced via LinkedIn name-search
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Two entities use the Sparkmind brand. Sparkmind.vc is the €55M Finnish EdTech fund (not defence-relevant; zero 2026 investments YTD). Sparkmind Capital separately operates a Security/Defence/Energy/Cyber/Advanced Materials/Military (SECAM) thesis but disclosed portfolio detail is sparse. Vault file should be re-checked to confirm which entity is the intended target.
+
 ## Related

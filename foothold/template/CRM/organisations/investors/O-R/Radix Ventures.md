@@ -50,4 +50,11 @@ Radix is a member of the DeepTech Capital Consortium, a joint initiative of Pola
 - European Investment Fund and PFR Ventures backed
 - DeepTech Capital Consortium member (Poland)
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Radix Ventures (founded 2024) backs European deep-tech with explicit dual-use thesis: energy, manufacturing, transport, space, next-gen computing.
+
+- **Fluence Technology** — undisclosed, 2025-08-20. Application-specific semiconductors. [Source: PitchBook](https://pitchbook.com/profiles/investor/530402-50)
+- **AI-driven human-robot collaboration portfolio** — companies accelerating decision-making across defence, crisis response and civilian security (specific names not detailed in public sources). [Source: Radix portfolio](https://www.radix-vc.com/portfolio-list)
+
 ## Related

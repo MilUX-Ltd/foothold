@@ -49,4 +49,12 @@ Presto Ventures was founded in 2016 by Premysl Rubes; CSG is led by Michal Strna
 - Joint venture between Presto Ventures and Czechoslovak Group (CSG)
 - NATO and allied-nation investment remit; CSG industrial route-to-market
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Presto Tech Horizons (Czech) is a €150M fund launched by Presto Ventures with Czechoslovak Group (CSG). €500k–€5M tickets, sweet spot ~€2M. Defence and dual-use thesis.
+
+- **Vidar Systems** — Ukrainian portable acoustic locators. [Source: Tech.eu](https://tech.eu/2024/10/25/presto-tech-horizons-fund-announces-investment-in-three-startups/)
+- **Bavovna.ai** — Ukrainian hybrid AI for autonomous drone navigation in GPS-denied environments. [Source: Tech.eu](https://tech.eu/2024/10/25/presto-tech-horizons-fund-announces-investment-in-three-startups/)
+- **BlueQubit, DiffuseDrive** — quantum simulations platform; physical AI for automotive/aerospace/defence/robotics. [Source: The Recursive](https://therecursive.com/presto-tech-horizons-announces-first-investments-in-ai-and-defense/)
+
 ## Related

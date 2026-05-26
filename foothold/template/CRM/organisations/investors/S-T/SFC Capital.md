@@ -49,4 +49,13 @@ The firm was selected by the British Business Bank as one of the delivery partne
 - British Business Bank Regional Angels Programme delivery partner
 - HMRC SEIS / EIS approved fund manager
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). SFC's recent activity is dominated by non-defence SEIS/EIS deals; no defence-tech-specific lead deals identified in this window. Notable wider-portfolio rounds:
+
+- **Meaningful Planet** — Seed, February 2026. Lead investor. UK business mobile market. [Source: UK Tech News, Feb 2026](https://www.uktechnews.info/2026/02/17/meaningful-planet-secures-seed-investment-led-by-sfc-capital/)
+- **iMaintain** — Pre-seed, £250k+, January 2026. Lead/backer. UK maintenance tech. [Source: UK Tech News, Jan 2026](https://www.uktechnews.info/2026/01/07/imaintain-secures-over-250k-pre-seed-investment-backed-by-sfc-capital/)
+
+Worth rechecking when defence-tech SEIS pipeline refreshes — SFC has Marble Aerospace as an existing dual-use position.
+
 ## Related

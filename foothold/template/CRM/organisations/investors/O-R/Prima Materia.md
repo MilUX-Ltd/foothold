@@ -46,4 +46,11 @@ The firm took a high-profile defence position as lead investor in Helsing's grow
 
 - Helsing (lead investor)
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Prima Materia is the Swiss VC of Spotify's Daniel Ek and Shakil Khan; concentrated bets on deep-tech with national-security relevance.
+
+- **Helsing Series D** — €600M, June 2025. Lead. Valued Helsing at €12bn, more than doubling its previous valuation. Daniel Ek also chairs Helsing. Total Prima Materia invested across rounds: ~€700M. [Source: CNBC, June 2025](https://www.cnbc.com/2025/06/17/spotifys-daniel-ek-leads-investment-in-defense-startup-helsing.html)
+- **Wider portfolio** — Northvolt, H2 Green Steel, Neko Health, Epiterna. Helsing remains the only direct defence holding. [Source: Sifted](https://sifted.eu/articles/helsing-fundraise-600m-daniel-ek)
+
 ## Related

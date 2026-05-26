@@ -34,4 +34,12 @@ Baryon writes seed and Series A cheques and positions itself as a thesis-driven 
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Baryon Investment Fund is a Central European defence-tech VC (Bratislava/Prague), advised by former Ukrainian Defence Minister Oleksii Reznikov.
+
+- **Airvolute** — undisclosed, 2026-01-13. Slovak defence-tech firm; first Ukrainian-roots company in the Baryon portfolio. [Source: AIN, Jan 2026](https://en.ain.ua/2026/01/13/baryon-investment-fund-invests-in-airvolute/)
+
+Baryon is one of 15 defence funds in the UCDI Investor Club launched Jan 2026 to connect institutional investors with Ukrainian defence companies.
+
 ## Related

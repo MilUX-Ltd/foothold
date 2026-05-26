@@ -34,4 +34,8 @@ As a recent vintage (2023) the public portfolio is small. Paralos sits alongside
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Paralos Partners (Berlin, founded 2023) is a small European defence and security early-stage fund; portfolio detail is not extensively published. Note: distinct from Paralos Asset Management (Guernsey maritime hedge fund). Worth rechecking when the news pipeline refreshes.
+
 ## Related

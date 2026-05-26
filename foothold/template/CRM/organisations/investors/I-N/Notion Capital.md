@@ -44,4 +44,12 @@ Defence is not the central thesis, but Notion has portfolio touchpoints in cyber
 - Stephen Chandler (Managing Partner): https://www.linkedin.com/in/stephenchandler/
 - Jos White (Partner): https://www.linkedin.com/in/joswhite/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Notion Capital Growth Opps III fund close** — $130M growth fund, September 2025. Backed by British Business Bank with €20M plus other LPs. Targets European companies in sovereignty, defence, supply chain and AI infrastructure. [Source: TechCrunch, Sep 2025](https://techcrunch.com/2025/09/29/notion-capital-raises-130m-growth-fund-to-tackle-europes-follow-on-gap/)
+- **Isembard** — Seed, £6.7M / £7M, April 2025. Lead investor. Co-invested with UK NSSIF and German Federal Government. Sovereign distributed manufacturing for defence, aerospace and critical industries. [Source: UK Tech News, Apr 2025](https://www.uktechnews.info/2025/04/24/isembard-secures-6-7-million-seed-investment-led-by-notion-capital/)
+- **Kraken Technologies** — Notion participated in 2025. Dual-use unmanned surface vessels. Kraken also has NIF and NSSIF backing. [Source: TechCrunch, Sep 2025](https://techcrunch.com/2025/09/29/notion-capital-raises-130m-growth-fund-to-tackle-europes-follow-on-gap/)
+
 ## Related

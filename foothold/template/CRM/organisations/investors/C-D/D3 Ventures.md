@@ -39,4 +39,12 @@ D3 writes pre-seed and seed cheques into Ukrainian defence-tech and is part of t
 
 - Eveline Buchatskiy (Founding Partner): https://www.linkedin.com/in/eveline-buchatskiy/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). D3 (Eric Schmidt-backed) is one of Europe's most active pure-defence funds, explicit "no dual-use distractions, no commercial pivots".
+
+- **UFORCE** — round detail undisclosed, 2026-03-05. D3's latest investment, aerospace and defence. [Source: PitchBook](https://pitchbook.com/profiles/investor/532870-21)
+- **EIFO commitment** — Denmark's EIFO committed $5M to D3 (July 2025) to back Ukrainian and European defence innovation. [Source: EIFO press, 2025](https://eifo.dk/en/knowledge/news/eifo-invests-in-the-venture-fund-d3-to-boost-ukrainian-and-european-innovation-in-defence/)
+- **Swarmer, Albacore, Frontline Robotics, FlightMind.AI** — earlier portfolio additions; 16 companies across 10 verticals in 5 countries. Plans 30+ total. [Source: The Defender, May 2025](https://thedefender.media/en/2025/05/d3-projects-out-of-shadows/)
+
 ## Related

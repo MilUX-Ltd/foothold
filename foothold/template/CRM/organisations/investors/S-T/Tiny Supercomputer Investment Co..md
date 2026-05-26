@@ -42,4 +42,8 @@ The legal vehicle is Tiny Supercomputer Management Company (UK) Ltd, an FCA-auth
 
 - Philipp Moehring: https://www.linkedin.com/in/moehring/
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Tiny Supercomputer Investment Company (TSIC, London/Berlin, founded 2017) deploys actively from Fund IV (15 investments in 2025, 3 YTD Feb 2026) but recent themes are AI/enterprise software, healthcare AI, robotics and clean energy. No defence-specific holdings identified. Notable recent rounds: Allonic ($7.2M pre-seed, Hungary), Trawa (€10M, renewable energy). Defence relevance is low.
+
 ## Related

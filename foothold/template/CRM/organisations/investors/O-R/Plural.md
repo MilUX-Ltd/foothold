@@ -58,4 +58,11 @@ Plural was an early backer of Helsing and other European defence-tech category l
 
 - Ian Hogarth chairs the UK AI Safety Institute
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Augur** — Seed, £11.3M ($15M), March 2026. Lead investor. Co-invested with First Kind, SNR, Flix and Tiny VC. UK sovereign AI platform for critical national infrastructure security. [Source: UK Tech News, Mar 2026](https://www.uktechnews.info/2026/03/09/augur-secures-11-3-million-seed-investment-led-by-plural/)
+- **Proxima Fusion** — Series A extension, contributing to €200M total, September 2025. Participant. Round co-led by Cherry Ventures and Balderton, alongside UVC, DTCF, Leitmotif, Lightspeed, Bayern Kapital, HTGF, Omnes, Elaia and redalpine. Stellarator fusion. [Source: Proxima Fusion press, Sep 2025](https://www.proximafusion.com/press-news/proxima-fusion-extends-series-a-to-200m-total-funding-as-it-accelerates-into-hardware-execution)
+
 ## Related

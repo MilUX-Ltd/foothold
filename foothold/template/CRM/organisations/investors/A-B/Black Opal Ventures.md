@@ -32,4 +32,8 @@ The fund's defence and dual-use exposure is limited but emerges through investme
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Black Opal Ventures is a New York healthtech-and-tech-intersection fund (AI/ML, digital twins, edge for medical applications). 2025-2026 deals (Ten63, Conceivable) are healthcare-focused. Defence relevance is incidental; low priority for refresh.
+
 ## Related

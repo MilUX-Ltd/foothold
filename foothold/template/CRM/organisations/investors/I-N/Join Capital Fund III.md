@@ -44,4 +44,13 @@ Join works closely with European industrial corporates and has a strong network 
 - Tobias Schirmer (Founding Partner): https://www.linkedin.com/in/tobiasschirmer/
 - Sebastian Reichelt (Founding Partner): https://www.linkedin.com/in/sebastianreichelt/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Join Capital Fund III is a €235M early-stage defence, dual-use, security and space fund. EIF committed €50M via the InvestEU Defence Equity Facility (March 2026, largest EIF defence investment to date). LPs include NATO Innovation Fund, Isomer, KfW, CDP.
+
+- **InSpacePropulsion Technologies** — Seed, undisclosed, 2026-02-27. Latest Join Capital investment. [Source: EIF press](https://www.eif.org/press/all/eif-commits-eur50-million-via-the-investeu-defence-equity-facility-to-join-capital-fund-iii-for-european-deeptech-and-dual-use)
+- **Fund III €50M EIF commitment** — March 2026. EIF's largest single defence commitment via InvestEU Defence Equity Facility. [Source: Tech.eu](https://tech.eu/2026/03/04/eif-makes-largest-defence-investment-yet-with-eur50m-backing-for-join-capital/)
+
+36 portfolio companies to date, 5 exits.
+
 ## Related

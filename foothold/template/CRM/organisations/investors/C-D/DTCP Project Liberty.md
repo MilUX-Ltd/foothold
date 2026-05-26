@@ -42,4 +42,13 @@ The fund sits within DTCP's broader platform of growth, infrastructure, and vent
 
 - Vicente Vento (CEO, DTCP): https://www.linkedin.com/in/vicentevento/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). DTCP launched Project Liberty in Jan 2026 — Europe's largest privately backed defence and security fund at €500M (€300M committed already), targeting 30 portfolio companies with ~€20M average tickets, Series A to C.
+
+- **Project Liberty fund launch** — €500M target, Jan 2026. Software, cyber defence, AI, autonomous systems. Geographic scope Europe plus selective NATO. [Source: EU-Startups, Jan 2026](https://www.eu-startups.com/2026/01/with-their-new-e500-million-fund-germanys-dtcp-raises-the-bar-for-european-defense-and-resilience-capital/)
+- **Existing portfolio** — Arctic Wolf, Axonius, Zenity, Anomali, Ox Security (cyber); Quantum Systems (German drones, dual-use). [Source: Global Venturing, Jan 2026](https://globalventuring.com/corporate/fundraising/dtcp-supercharge-european-defence-tech-580m-fund/)
+
+No individual Project Liberty rounds yet publicly disclosed (fund just launched). One of the most significant European defence-tech capital announcements of the cycle.
+
 ## Related

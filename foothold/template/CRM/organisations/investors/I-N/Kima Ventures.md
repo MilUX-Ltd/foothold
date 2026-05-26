@@ -40,4 +40,8 @@ The fund writes small first cheques (typically €150k) and follows on selective
 
 - Jean de La Rochebrochard (Managing Partner): https://www.linkedin.com/in/jdrochebrochard/
 
+## Recent investments
+
+No discrete defence-tech rounds publicly disclosed in the last 120 days (last refresh: 2026-05-27). Kima Ventures is a sector-agnostic, high-frequency angel investor (2 to 3 startups per week, standardised €150k cheques; 1,295 investments over 18 years; 9 YTD Apr 2026, 49 in 2025). Defence holdings include Command.ai but specific recent defence rounds are not surfaced in indexed press. Defence-tech relevance is incidental rather than thesis-driven.
+
 ## Related

@@ -34,4 +34,10 @@ Archangel writes seed and Series A cheques into Baltic, Nordic, and broader Euro
 
 - Operates in the NATO Innovation Fund co-investment cluster
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Archangel (singular, defence platform — not the Scottish Archangels angel syndicate) is Europe's first dedicated defence investment platform.
+
+- **Offset Labs** — Pre-Seed, undisclosed, 2025-09-04. Lead investor. Co-investors: Amadeus Capital Partners, Seven Capital. Software-and-defence-end-user combination. [Source: UK Tech News, Sept 2025](https://www.uktechnews.info/2025/09/04/offset-labs-secures-pre-seed-investment-led-by-archangel/)
+
 ## Related

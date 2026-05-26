@@ -41,4 +41,8 @@ The team draws from operating, engineering, and military backgrounds and writes 
 - Adrian Holt (Venture Director): https://www.linkedin.com/in/adrianholt/
 - Hannah Kidner (Operations Analyst): https://www.linkedin.com/in/hannahkidner/
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Form1 Partners has limited public coverage in defence-tech indexes; recent activity is not surfaced. Worth rechecking when the news pipeline refreshes.
+
 ## Related

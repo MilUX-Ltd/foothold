@@ -45,4 +45,12 @@ The fund's geographic focus is Europe, with selective allocations to the US and 
 
 - Backed by ESA and EIB programmes and the European Space Agency space-tech initiative
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). NewSpace Capital (Luxembourg, founded 2018) is a growth-stage space-focused PE firm (Series B/C); explicit defence and government space exposure.
+
+- **CesiumAstro** — undisclosed, 2026-02-02. Phased-array communications and integrated satellite platforms for commercial, government and defence missions. [Source: PitchBook](https://pitchbook.com/profiles/investor/343143-46)
+- **K2 Space** — $15M, Series B-II, 2025-09-15. Multi-orbit-capable satellites for commercial and defence missions. [Source: Payload Space](https://payloadspace.com/k2-space-nabs-15m-from-newspace-capital/)
+- **Cailabs** — existing portfolio. Photonics for satellite optical comms. [Source: Tracxn](https://tracxn.com/d/venture-capital/newspace-capital/__W87AbfyXQuzZxpYT74Migo-yaMZ0qxEYEnhrdXTXW1I)
+
 ## Related

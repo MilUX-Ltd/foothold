@@ -34,4 +34,14 @@ Hyperion writes seed and Series A cheques into European founders building in aut
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Hyperion Fund is Spain's first dedicated defence and aerospace VC; closed its first fund at ~€150M in Dec 2024 and is launching a second €500M vehicle in 2026.
+
+- **Antares Defence Systems** — undisclosed, 2026-02-11. Latest Hyperion investment. [Source: PitchBook](https://pitchbook.com/profiles/investor/553181-50)
+- **ATS Aviation, Brok-air** — existing portfolio. Aviation services. [Source: PitchBook](https://pitchbook.com/profiles/investor/553181-50)
+- **Hyperion II €500M launch** — planned 2026 to participate in the European strategic and industrial cohesion wave. [Source: Capital-Riesgo](https://capital-riesgo.es/en/articles/hyperion-fund-to-launch-500-million-second-vehicle-amid-europe-s-defense-boom/)
+
+Excludes lethal weapons and equipment per stated thesis.
+
 ## Related

@@ -37,4 +37,8 @@ The firm is not a fund manager; it acts as advisor to founders, owners, and corp
 
 - Tom Grant (Partner): https://www.linkedin.com/in/tom-grant-bishopsgate/
 
+## Recent investments
+
+No public defence-tech investment activity identified in the last 120 days (last refresh: 2026-05-27). Bishopsgate Corporate Finance is a UK boutique M&A advisor (not a defence-tech VC), with team-level expertise in aerospace and defence sectors but no direct fund investments to track. Treat as deal-advisory contact rather than capital source.
+
 ## Related

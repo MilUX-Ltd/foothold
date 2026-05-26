@@ -48,4 +48,13 @@ The firm manages the UK Innovation & Science Fund (UKI2S) on behalf of the UK go
 
 - Manager of UK Innovation & Science Fund (UKI2S) on behalf of UK government
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Mirror Security** — Pre-seed, December 2025. Participant. [Source: CB Insights profile](https://www.cbinsights.com/investor/atlantic-bridge-ventures)
+- **Wave Photonics** — £4.5M round, 2025. UKI2S (managed by Atlantic Bridge) co-led. Quantum photonics integrated chips, including defence-relevant applications. [Source: Cambridge Enterprise](https://www.enterprise.cam.ac.uk/news/wave-photonics-secures-4-5-million/)
+
+Limited specific defence-tech deal disclosure in the last 120 days. Atlantic Bridge's UK deep-tech growth thesis runs through UKI2S co-investments. Worth rechecking when the firm refreshes its 2026 portfolio announcements.
+
 ## Related

@@ -37,4 +37,8 @@ Public material is limited. Investor enquiries are routed via ir@merlynadvisors.
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+No public defence venture activity identified in the last 120 days (last refresh: 2026-05-27). Merlyn Advisors is a UK-registered hedge fund manager (special situations, spinoffs, M&A focus). Defence-tech relevance not surfaced in indexed press; the firm appears to be an advisory and M&A counterparty rather than a primary VC capital source. Worth rechecking via direct contact if the relationship warrants.
+
 ## Related

@@ -44,4 +44,8 @@ Defence and dual-use is not the primary thesis but Mosaic has invested in compan
 - Toby Coppel (Partner): https://www.linkedin.com/in/tobycoppel/
 - Simon Levene (Partner): https://www.linkedin.com/in/simonlevene/
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Mosaic Ventures (London, founded 2014) is a Seed/Series A AI-driven generalist. Most recent activity is Parloa Series D (Jan 2026); broader 2025-2026 deals span enterprise applications, fintech, vertical SaaS. No defence-tech holdings surface in the indexed press.
+
 ## Related

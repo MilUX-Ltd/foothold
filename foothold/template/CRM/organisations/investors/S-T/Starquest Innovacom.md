@@ -51,4 +51,8 @@ Innovacom is a separate French venture capital firm with which Starquest has co-
 
 - Co-investor with Bpifrance, Safran Corporate Ventures, Innovacom
 
+## Recent investments
+
+No discrete 2025-2026 defence-tech rounds publicly disclosed for Starquest in the last 120 days (last refresh: 2026-05-27). Most recent traceable defence-tech activity is the 2022 Cailabs Series C, where Starquest co-invested alongside Innovacom, Safran Corporate Ventures, Crédit Agricole IRE and Bpifrance Definvest. Worth rechecking when the news pipeline refreshes; Starquest's defence-tech cadence appears slow or opaque in indexed press.
+
 ## Related

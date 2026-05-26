@@ -51,4 +51,12 @@ Geographic allocation reserves around one third of the fund for the DACH region 
 - Industrial advisory board includes former Airbus and BAAINBw executives
 - 25 per cent allocation earmarked for Ukrainian defence companies
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Verne Capital (founded 2025 by Benjamin Krahmer and Michael Singer) is a debut €100M European defence, security and cybersecurity fund. €25M of the fund is earmarked specifically for Ukrainian defence-tech companies.
+
+- **Verne Capital €100M fund launch** — Oct 2025. Targets frontline-tested European defence-tech startups, dual-use technologies and critical infrastructure protection. Combines capital with hands-on support; evaluates startups on technical expertise, scalability and "defence IQ". [Source: Vestbee, Oct 2025](https://www.vestbee.com/insights/articles/verne-capital-launches-100-m-fund)
+
+Newly launched; no specific portfolio investments publicly disclosed yet. Worth rechecking once first deals are announced.
+
 ## Related

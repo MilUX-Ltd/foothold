@@ -41,4 +41,13 @@ The fund's thesis sits at the intersection of frontline defence innovation and d
 
 - Denis Gursky (Founding Partner): https://www.linkedin.com/in/denisgursky/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **The Fourth Law (TFL)** — Investment announced August 2025. Participant alongside DTI. Ukrainian AI defence-tech for target detection and classification, EW-resilient, supporting Ukrainian pilot accuracy. [Source: Scroll.media, Aug 2025](https://scroll.media/en/2025/08/19/investors-in-the-fourth-law-revealed/)
+- **Allied Adaptive Industries (A2i)** — Investment 2025. First defence-tech investment by 1991 Ventures. Founded by former Royal Marines officer John Williams. [Source: Scroll.media](https://scroll.media/en/2025/08/19/investors-in-the-fourth-law-revealed/)
+
+Ukrainian defence-tech startups attracted $20M+ foreign VC in H1 2025 per 1991 Ventures leadership; sector reached $105M total in 2025. 1991 partners in the UK-Ukraine TechBridge Investment Accelerator.
+
 ## Related

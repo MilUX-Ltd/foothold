@@ -47,4 +47,12 @@ ScaleWolf operates in collaboration with the Lithuanian Ministry of Economy and 
 - Aligned with NATO EDT priorities
 - Allied technology accelerator partner
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). ScaleWolf (Vilnius, founded 2023) is a €13.5M Lithuanian dual-use VC; energy, data, defence, AI thesis.
+
+- **WhiteBridge AI** — 2026. Only ScaleWolf 2026 investment to date. [Source: Tracxn](https://tracxn.com/d/venture-capital/scalewolf/__NUNxy6lnHpxbZ91vLEsXn59HO-Nhd1N_rLCIeCgdSag)
+- **Pulsetto** — €2M, Feb 2026. Vagus nerve stimulation for stress relief and mental resilience (dual-use mental performance angle). [Source: AIN, Feb 2026](https://en.ain.ua/2025/02/21/pulsetto-secures-eur2m/)
+- **Granta Autonomy, Blackswan Space, Broswarm, CBRX, Aktyvus Photonics** — existing defence-tech portfolio. [Source: Sigli / Vestbee](https://www.sigli.com/blog/defense-tech-startups-how-innovation-is-reshaping-security-in-lithuania)
+
 ## Related

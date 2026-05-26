@@ -39,4 +39,8 @@ Founder Andrew J Scott has positioned 7percent as a high-conviction pre-seed man
 
 - Andrew J Scott (Founding Partner): https://www.linkedin.com/in/andrewjscott/
 
+## Recent investments
+
+No discrete defence-tech rounds publicly disclosed in the last 120 days (last refresh: 2026-05-27). 7percent runs a Defense & Dual-Use thesis (quantum, aerospace, strategic tech, advised by Sir Grant Shapps), and Fund II reports four new investments in the last 12 months as of late 2025, but individual defence deal names from the recent window are not in the indexed press. Worth rechecking when the news pipeline refreshes.
+
 ## Related
