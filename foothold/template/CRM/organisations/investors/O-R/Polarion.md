@@ -50,4 +50,13 @@ Thomas Falck is the former Managing Partner of Verdane Private Equity and former
 - NATO DIANA and EUDIS network involvement (Peter Due)
 - Nordic sovereign and defence-tech network
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Polarion (Oslo, launched 2025 by Thomas Falck and Oslo Family Office) is a Nordic-only defence and dual-use fund.
+
+- **Polarion fund launch** — 2025. Backs Nordic defence-tech and dual-use companies strengthening NATO alliance integrity. [Source: Polarion site](https://polarion.capital/)
+- **Nordic Defence Tech Report 2025** — Polarion is mapped as one of the active Nordic defence-tech investors in a region with 150+ defence and dual-use startups (combined enterprise value $5.4B) and total Nordic defence and security spend of €50bn forecast for 2026. [Source: Danske Bank Nordic Defence Tech Report 2025](https://danskebank.dk/-/media/danske-bank-com/pdf/growth/nordic-defence-tech-report-2025.pdf)
+
+No discrete portfolio investments publicly disclosed yet; fund is in deployment year one.
+
 ## Related

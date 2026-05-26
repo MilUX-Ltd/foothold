@@ -48,4 +48,15 @@ Thesis emphasis remains dual-use deep tech and sovereign capability. Cheque size
 - Co-investor with NATO Innovation Fund and EIF on dual-use rounds
 - Central and Eastern European deep-tech focus
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Hydrosat** — Series B, $60M, January 2026. Follow-on participant. Co-invested with Luxembourg Future Fund, Blue Bear Capital, Statkraft Ventures, Cultivation Capital and Santa Barbara Venture Partners. Thermal satellite imagery for commercial, civil government and defence markets. [Source: SpaceWatch.GLOBAL, Jan 2026](https://spacewatch.global/2026/01/hydrosat-raises-60m-in-series-b-funding-to-accelerate-growth-in-thermal-imagery-markets/)
+- **Waiv (Owkin spin-out)** — $33M, March 2026. Co-lead with Alpha Intelligence Capital. AI-enabled precision diagnostics. [Source: HLTH](https://hlth.com/insights/news/owkin-spins-out-waiv-with-33m-financing-from-otb-ventures-and-alpha-intelligence-capital-2026-03-13)
+- **ICEYE** — Reached unicorn status 2025. OTB existing portfolio. 39% of SSIT NAV per Seraphim disclosures. Synthetic aperture radar. [Source: Vestbee](https://www.vestbee.com/insights/articles/polish-otb-ventures-closes-185-m-fund)
+
+5 new investments in 2026 so far per Tracxn.
+
+
 ## Related

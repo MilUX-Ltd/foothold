@@ -42,4 +42,11 @@ Tickets typically range from €500k to €3M at seed, with follow-on capacity. 
 - Thomas Wilke (Founding Partner): https://www.linkedin.com/in/thomas-wilke-42cap/
 - Alex Meyer (Founding Partner): https://www.linkedin.com/in/alexmeyer42cap/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Osavul** — Series A, $3M, 2025. Co-investor. Ukrainian defence-tech firm focused on information-warfare and content-integrity tooling. [Source: Tracxn / The Defender, 2025](https://thedefender.media/en/2025/04/defence-tech-investments-did/)
+- **ALP AI** — Pre-Seed, undisclosed, 2026-04-30. Co-investor. Latest 42CAP investment. [Source: PitchBook / Crunchbase, 2026](https://www.crunchbase.com/organization/42cap)
+
 ## Related

@@ -50,4 +50,13 @@ The fund is not a defence specialist but is one of the most active Ukrainian VC 
 - Osavul (information integrity and resilience)
 - Deus Robotics
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). SMRK VC Fund (Kyiv, founded 2013) is broad-based but ranked among the top five most active investors in Ukrainian defence-tech.
+
+- **OpenBabylon** — undisclosed, 2026-02-02. Latest SMRK investment, business/productivity software (dual-use AI). [Source: PitchBook](https://pitchbook.com/profiles/investor/97872-49)
+- **Deus Robotics, Superorder** — existing portfolio. Notable holdings. [Source: Tracxn](https://tracxn.com/d/venture-capital/smrk-vc-fund/__yuC-MSEz1uEG6OW8AaunoqcSr0prO1woV_II97Zuvrg)
+
+23 portfolio companies; 10 US, 7 Ukraine. Most are not pure defence-tech but SMRK is recognised as a top-five Ukrainian defence-tech investor.
+
 ## Related

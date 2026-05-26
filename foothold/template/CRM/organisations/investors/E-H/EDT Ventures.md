@@ -35,4 +35,8 @@ EDT writes growth-stage cheques larger than most early-stage European defence fu
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). EDT Ventures is a UK-based (Alton) 2025-founded Series A+ dual-use fund with thesis spanning quantum, AI, engineering biology, advanced manufacturing, commercial space, telecoms, semiconductors and computing. PitchBook reports zero investments completed to date. Worth rechecking once first deals are announced.
+
 ## Related

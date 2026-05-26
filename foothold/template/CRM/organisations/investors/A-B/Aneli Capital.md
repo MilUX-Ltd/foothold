@@ -34,4 +34,12 @@ Aneli is one of several Baltic and Eastern European defence funds writing seed a
 
 - Operates alongside Iron Wolf Capital, Coinvest Capital and other Baltic regional defence managers
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Aneli Capital fund launch** — €35M first fund launched Dec 2025, targeting Baltic and CEE deeptech. Thesis covers ICT, robotics, photonics, smart manufacturing, energy, space, and AI; defence-tech not explicitly listed but space and robotics are dual-use-adjacent. Plans eight investments in 2026. [Source: Vestbee, Dec 2025](https://www.vestbee.com/insights/articles/aneli-capital-launches-35-m)
+
+No discrete portfolio deals disclosed yet; fund is in deployment year one. Worth rechecking once first investments are announced.
+
 ## Related

@@ -51,4 +51,12 @@ The London office has grown over the past three years to cover European tech, wi
 - Rhombus Power
 - Castelion
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Lightspeed closed $9bn+ across six 2025 vehicles (Fund XV-A $980M, XV-B $1.2bn, Select VI $1.8bn, Opportunity III $3.3bn). Defence positioning via Anduril (since 2022 Series E) and Helsing.
+
+- **Anduril** — existing portfolio. $2.5bn at $30.5bn valuation (2025 round); Lightspeed is among the long-standing investors alongside General Catalyst, a16z, Valor, BlackRock. [Source: Crunchbase News](https://news.crunchbase.com/venture/defense-tech-unicorn-anduril-doubles-valuation/)
+- **Helsing** — €450M round led by General Catalyst, with Lightspeed and Accel participating. German defence AI. [Source: TechFundingNews](https://techfundingnews.com/shield-ai-locks-240m-and-hits-5-3b-the-second-highest-valuation-in-defence-tech-space-what-about-europe-competitors/)
+- **$9bn+ fund close** — Dec 2025 across six vehicles. Sustains defence as a growing line item via Anduril, Helsing and Select-stage capacity. [Source: BusinessWire, Dec 2025](https://www.businesswire.com/news/home/20251215319417/en/Lightspeed-Closes-Over-$9B-in-New-Funds-Aimed-at-Backing-Category-Definers-Worldwide)
+
 ## Related

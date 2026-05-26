@@ -32,4 +32,8 @@ Public information about the fund's team and portfolio is limited. The firm sits
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). CYBICA (Cyber Integrity Capital) plans to deploy €100M over 3–5 years across Cyber & Digital and Web3, with 15–20 minority investments of €1.5–€5M at Series A–B. Cyber resilience overlaps with defence but no specific defence-relevant rounds are publicly disclosed in the recent window.
+
 ## Related

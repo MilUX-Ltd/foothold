@@ -46,4 +46,15 @@ The fund positions itself as one of the few Spain-headquartered managers writing
 
 - Co-invests alongside NATO Innovation Fund and national defence-oriented European funds
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Delian Alliance Industries** — Series A, $14M, July 2025. Participant. Round co-led by Air Street Capital and Marathon Venture Capital, with HCVC, Entropy Industrial Capital and Nebular. Athens-based vertically integrated AI defence systems. [Source: Air Street Capital press](https://press.airstreet.com/p/delian-alliance-industries-defense-14-million-series-a)
+- **Polar Mist Technologies** — Sweden-based maritime autonomy with GPS-free, unjammable navigation. Co-investor with Air Street Capital. [Source: PitchBook](https://pitchbook.com/profiles/company/791664-40)
+- **Isembard** — Existing position. Distributed AI-powered manufacturing for aerospace and defence (Notion-led seed, USV-led Series A March 2026). [Source: 201 Ventures portfolio via TechCrunch](https://techcrunch.com/2025/05/12/this-american-vc-is-betting-on-european-defense-tech-thats-still-very-unusual/)
+- **Additional portfolio**: Ionlace (Sweden), Deep Earth (Germany), Zydro Marine Technologies, Hypersonica, Onodrim Industries.
+
+4 new investments in the last 12 months per Tracxn. Founder Eric Slesinger is an ex-CIA officer; NIF is an LP.
+
 ## Related

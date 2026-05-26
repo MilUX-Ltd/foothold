@@ -51,4 +51,16 @@ The firm is one of the most active European deep-tech investors with explicit de
 - Quantum Systems
 - ARX Robotics
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **AlphaLum** — Seed, January 2026. Participant. [Source: Tracxn investor profile](https://tracxn.com/d/venture-capital/vsquaredventures/__LilPW2tCD7fBnHrAPSY1Faiq1Z0wYGu9ESRVTZwcMxU)
+- **Hyperscale Power** — 2026 investment. [Source: Tracxn investor profile](https://tracxn.com/d/venture-capital/vsquaredventures/__LilPW2tCD7fBnHrAPSY1Faiq1Z0wYGu9ESRVTZwcMxU)
+- **constellr** — 2026 investment. Earth observation thermal data, defence-relevant. [Source: Tracxn investor profile](https://tracxn.com/d/venture-capital/vsquaredventures/__LilPW2tCD7fBnHrAPSY1Faiq1Z0wYGu9ESRVTZwcMxU)
+- **Black Semiconductor** — Existing portfolio. Graphene-based semiconductors for next-gen compute and sovereign chip resilience. [Source: Crunchbase](https://www.crunchbase.com/organization/vsquared-ventures)
+- **Vsquared Fund II close** — €214M, including LPs Novo Holdings and NATO Innovation Fund. [Source: Vestbee](https://www.vestbee.com/insights/articles/vsquared-closes-a-214-m)
+
+5 new investments in 2026 so far per Tracxn.
+
 ## Related

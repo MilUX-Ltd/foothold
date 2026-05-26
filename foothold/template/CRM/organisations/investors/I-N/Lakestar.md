@@ -49,4 +49,12 @@ Defence and deep tech sit within Lakestar's broader European tech focus. Recent 
 - Isar Aerospace (small launch)
 - ARX Robotics (uncrewed ground systems)
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Lakestar Defence & Sovereignty Fund launch** — €250–300M dedicated fund announced 2025, targeting dual-use deep tech with cheques €1–15M. Klaus Hommels personally committed €100M. Focus: AI, satellites, cybersecurity, drones, quantum. [Source: TechFundingNews, 2025](https://techfundingnews.com/lakestar-european-defence-fund/)
+- **Magura** — Drone manufacturer, $50M, March 2026. Participant. [Source: Tracxn investor profile, Mar 2026](https://tracxn.com/d/venture-capital/lakestar/__5IgcqKVvvtMtHX3bQT1jpPz0U-kDyeRFCjlrki0rDoI)
+- **TYTAN Technologies** — Series A, reported $3.5B, March 2026. Participant. [Source: Tracxn investor profile, Mar 2026](https://tracxn.com/d/venture-capital/lakestar/__5IgcqKVvvtMtHX3bQT1jpPz0U-kDyeRFCjlrki0rDoI)
+
 ## Related

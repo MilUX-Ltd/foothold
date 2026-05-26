@@ -35,4 +35,10 @@ Final Frontier writes pre-seed and seed cheques. Public team and portfolio infor
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Final Frontier is a Nordic space-and-defence VC backing founders building critical capability for an independent Europe.
+
+- **ISPTech** — undisclosed, 2026-02-26. Aerospace and defence. Final Frontier's most recent disclosed investment. [Source: PitchBook](https://pitchbook.com/profiles/investor/681060-07)
+
 ## Related

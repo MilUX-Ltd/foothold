@@ -53,4 +53,14 @@ Investments are Seed and Series A across industrial hardware and software. Portf
 - DyeMansion (additive manufacturing finishing)
 - Innatera (neuromorphic chips)
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Matterwave Ventures (Munich, founded 2021) backs industrial-tech hardware and software; €130M Fund II (Industrial Technologies II) targets 20–25 companies, €1–€4M initial, up to €10M follow-on. Explicit emphasis on sovereign dual-use capabilities.
+
+- **Firecell** — undisclosed, 2026-02-20. Latest Matterwave investment. Telecommunications infrastructure. [Source: PitchBook](https://pitchbook.com/profiles/investor/491846-05)
+- **Equal1** — quantum computing chip company. [Source: Tracxn](https://tracxn.com/d/venture-capital/matterwaveventures/__S1gqjdlDgMImqZPDnSJx1rkYijUoaPGqHT3uK0Q8v98)
+- **AVES Reality** — business/productivity software with simulation overlap. [Source: Tracxn](https://tracxn.com/d/venture-capital/matterwaveventures/__S1gqjdlDgMImqZPDnSJx1rkYijUoaPGqHT3uK0Q8v98)
+
+49 portfolio companies total, 8 new in trailing 12 months as of Jan 2026.
+
 ## Related

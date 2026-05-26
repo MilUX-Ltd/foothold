@@ -37,4 +37,13 @@ Cheque sizes target pre-seed, seed and early Series A, with team members in Czec
 - Featured in Czech Security and Defence Technologies Catalogue 2025-2026
 - European Defence Week 2025 participant
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Luminova Ventures (Prague, founded 2025) is a deep-tech, cyber and defence-tech fund explicit on dual-use.
+
+- **Czech Security & Defence Technologies Catalogue 2025–2026** — Luminova featured in the official Czech defence industry publication. Provides distribution into diplomatic missions worldwide. [Source: Luminova news](https://www.luminovaventures.com/insights/luminova-ventures-to-join-european-defence-week-2025-in-paris)
+- **European Defence Week 2025 / Czech "Our Security Cannot Be Taken for Granted" 13th edition** — March 2026, Luminova participating in national security conferences and ecosystem building. [Source: Luminova news](https://www.luminovaventures.com/insights/the-current-state-of-autonomous-technologies)
+
+No discrete portfolio investments publicly disclosed yet; fund is in deployment year one. Worth rechecking once first deals are announced.
+
 ## Related

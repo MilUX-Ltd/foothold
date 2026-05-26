@@ -47,4 +47,14 @@ The founding partners combine UK specialist military experience, accelerator lea
 - UK national-security and defence remit; relationships across MoD, DASA, Defence BattleLab
 - Companies House: MD ONE VENTURES LIMITED (13736446)
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). MD One is Europe's first dedicated defence and national security VC (founded 2021). 17 investments to date, 5 in 2025.
+
+- **Greenjets** — undisclosed, 2025-12-31. Aerospace and defence. Latest MD One investment. [Source: PitchBook](https://pitchbook.com/profiles/investor/493011-91)
+- **Pimloc** — Seed VC-III, undisclosed, 2025-07-07. Privacy-preserving computer vision. [Source: Tracxn](https://tracxn.com/d/venture-capital/mdoneventures/__wgtW6PcizNw6R1GRQ5sc06BYv50TUS5dB2SQPQ2jpXU)
+- **Milvus Advanced** — first-time investment, recent. [Source: Tracxn](https://tracxn.com/d/venture-capital/mdoneventures/__wgtW6PcizNw6R1GRQ5sc06BYv50TUS5dB2SQPQ2jpXU)
+
+Portfolio company XTEND announced a $1.5bn listing, creating a US leader in AI-driven autonomous defence robotics.
+
 ## Related

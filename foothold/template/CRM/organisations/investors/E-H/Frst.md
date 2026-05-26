@@ -43,4 +43,11 @@ Frst has supported a number of French defence-tech and dual-use founders and co-
 - Pierre Entremont (Founding Partner): https://www.linkedin.com/in/pierreentremont/
 - Bertille Soriano (Partner): https://www.linkedin.com/in/bertillesoriano/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Dark (Dark Space)** — Seed extension, $6M, April 2026. Participant. Co-invested with Long Journey Ventures and Eurazeo. Orbital defence; aiming for orbital defence demonstration by 2026. [Source: European Spaceflight, Apr 2026](https://europeanspaceflight.com/orbital-defence-startup-dark-secures-6m-in-additional-funding/)
+- **Command AI** — Seed, €3M, 2026. Participant. Co-invested with Kima Ventures, Tiny VC and French business angels. [Source: Nordic 9](https://nordic9.com/news/command-ai-in-a-3-million-seed-round-backed-by-frst-kima-ventures-tiny-vc-and-business-angels-from-france/)
+
 ## Related

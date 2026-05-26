@@ -51,4 +51,11 @@ Sectors of focus include spatial AI, quantum computing, robotics and frontier so
 - Allocator One LP support
 - Industrial Munich ecosystem network
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Vanagon Ventures (Munich, founded 2022/2023) is positioned as "purpose-built for the sovereign edge"; €20M Fund I final close Jan 2026. Thesis includes geospatial intelligence and advanced manufacturing, dual-use-adjacent.
+
+- **Fund I €20M final close** — Jan 2026. Plans concentrated portfolio of ~30 startups. [Source: Tech.eu, Jan 2026](https://tech.eu/2026/01/19/vanagon-ventures-closes-eur20m-fund-i-to-back-deeptech-startups/)
+- **Holy Technologies, ExoMatter, The Landbanking Group** — Fund I early portfolio: glass-based long-term archive storage, AI visual inspection for manufacturing QC, AI demand forecasting for chemicals/textiles. Defence-relevance is incidental rather than direct. [Source: Tech.eu](https://tech.eu/2026/01/19/vanagon-ventures-closes-eur20m-fund-i-to-back-deeptech-startups/)
+
 ## Related

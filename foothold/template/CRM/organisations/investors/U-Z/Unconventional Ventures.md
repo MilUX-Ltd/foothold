@@ -44,4 +44,8 @@ The fund is not a defence specialist. Its presence on this list reflects the wid
 - Thea Messel: https://www.linkedin.com/in/theamessel/
 - Nina Brisson Egekvist: not surfaced via LinkedIn name-search
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Unconventional Ventures is a Nordic impact-and-fintech-leaning angel/early-stage syndicate with no clear defence-tech focus in indexed press. Worth rechecking when the news pipeline refreshes; defence relevance appears low.
+
 ## Related

@@ -36,4 +36,8 @@ The fund is not a stated defence specialist but its frontier-tech mandate produc
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Unruly Capital (London, founded 2022) backs "too early/too weird" frontier ideas with $500k–$3M tickets. Recent themes are depopulation, decentralisation, peptide age, sustainability tech. 2026 deals to date are Tangible and Willo, neither defence-tech. Defence relevance is low.
+
 ## Related

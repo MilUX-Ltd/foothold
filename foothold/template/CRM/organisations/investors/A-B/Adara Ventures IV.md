@@ -44,4 +44,14 @@ The fund vehicle sits within Adara Capital, the parent firm. The team writes Ser
 - Alberto Gomez (Co-Founder and Managing Partner): https://www.linkedin.com/in/albertogomezadara/
 - Nicolas Goulet (Co-Founder and Managing Partner): https://www.linkedin.com/in/nicolasgoulet/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Adara Ventures IV (AV4) close** — 95% of €100M target, including up to €37.5M from CDTI Innvierte. Cyber, AI, digital infrastructure, dual-use. [Source: TFN](https://techfundingnews.com/raising-dragons-in-deep-tech-adara-ventures-closes-e100m-for-av4-targeting-cybersecurity-and-digital-infrastructure/)
+- **TandemTrace** — Seed (co-led). Spain-based AI agents for SOCs. [Source: Adara 2025 review](https://www.adara.vc/news/year-in-review-2025)
+- **TuringDream** — Seed, €6M (co-led). Spanish multi-agent enterprise applications. [Source: Adara 2025 review](https://www.adara.vc/news/year-in-review-2025)
+- **Wodan AI** — Pre-seed, €2M (co-led). Spanish-Belgian secure private AI with Fully Homomorphic Encryption. [Source: Adara news](https://www.adara.vc/news/announcing-our-investment-in-wodan)
+- **AppFactor** — Seed, $4M, February 2026. Participant. [Source: Adara 2025 review](https://www.adara.vc/news/year-in-review-2025)
+
 ## Related

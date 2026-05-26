@@ -34,4 +34,14 @@ BSV writes pre-seed and seed cheques and is part of the Baltic defence-tech inve
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). BSV Ventures is a Vilnius-based €15M pre-seed/seed dual-use and deep-tech fund backed by NATO Innovation Fund and Lithuania's ILTE Accelerator 2.
+
+- **Psylink** — first-time investment, recent (2025). Co-investor. [Source: Tracxn](https://tracxn.com/d/venture-capital/bsv-ventures/__LrpZzQBZQ4qdAlnC8xbLXhWZiiC3p6pZ1FSKx6ewH0g)
+- **Libera Global AI** — portfolio addition, recent (2025). [Source: Tracxn](https://tracxn.com/d/venture-capital/bsv-ventures/__LrpZzQBZQ4qdAlnC8xbLXhWZiiC3p6pZ1FSKx6ewH0g)
+- **Freya** — portfolio addition, recent (2025). [Source: Tracxn](https://tracxn.com/d/venture-capital/bsv-ventures/__LrpZzQBZQ4qdAlnC8xbLXhWZiiC3p6pZ1FSKx6ewH0g)
+
+BSV thesis spans biotech, AI, space, genomics, and resilient communications. Six new investments in the trailing 12 months as of July 2025.
+
 ## Related

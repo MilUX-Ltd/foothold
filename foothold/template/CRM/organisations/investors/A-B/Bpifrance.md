@@ -45,4 +45,13 @@ Within defence, Bpifrance operates several vehicles including Definvest (a dedic
 - French sovereign tech (Tibi)
 - Co-invests with NATO Innovation Fund
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Bpifrance Défense fund launch** — €450M target, October 2025. Public retail vehicle opening defence-tech investing to French individuals from €500. Co-invests via Definvest in BITD SMEs and mid-caps. [Source: Science|Business](https://sciencebusiness.net/news/r-d-funding/dual-use/france-invites-citizens-invest-defence-tech)
+- **U-Space** — Series A, €24M (~$27.8M), November 2025. Definvest co-lead with Blast and Expansion VC, alongside Primo Space. French satellite manufacturer for smallsat market. [Source: Yahoo Finance](https://finance.yahoo.com/news/french-startup-u-space-secures-183028813.html)
+
+Bpifrance channelled over €1B into defence in 2024 and holds stakes in around 70 dual-use companies. Specific 2026 portfolio announcements largely flow via Definvest co-investments with French and European defence-tech VCs.
+
 ## Related

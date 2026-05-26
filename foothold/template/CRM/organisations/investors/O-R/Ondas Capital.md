@@ -46,5 +46,14 @@ James Acuna leads the investment programme. Ondas Holdings is the listed parent 
 - Corporate vehicle of Ondas Holdings (NASDAQ: ONDS)
 - Active in Ukraine defence-tech investment alongside other US-aligned strategic investors
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Ondas Capital (Ondas Holdings, launched Sept 2025) is a $150M+ investment vehicle targeting unmanned/autonomous systems for Allied defence markets. EU HQ planned with presence in Estonia, Ukraine and the UK. James Acuna leads the investment programme.
+
+- **Ondas Capital launch** — $150M deployment plan over two years; investments expected to begin Q4 2025. Focus on UAS, UGV, advanced simulation and autonomy. [Source: Ondas press](https://www.ondas.com/post/ondas-holdings-launches-ondas-capital-expected-to-deploy-150-million-to-accelerate-global-defense-a)
+- **Parent company momentum** — Ondas Holdings Q4 2025 revenue $30.1M (+629% YoY); 2026 revenue guidance raised to $375M (sevenfold from $50.7M in 2025). [Source: Investing.com, Q4 2025](https://www.investing.com/news/company-news/ondas-q4-2025-slides-629-revenue-surge-375m-2026-target-unveiled-93CH-4580320)
+
+Specific portfolio investments not yet publicly disclosed. Worth rechecking once first investments are announced.
+
 ## Related
 </content>

@@ -47,4 +47,12 @@ Iron Wolf writes seed and Series A cheques and co-invests with NATO Innovation F
 - Co-invests with NATO Innovation Fund
 - Operates in the Baltic-Nordic defence-tech investor cluster
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Baltic Deep Tech & AI Fund close** — €100M, June 2025. Largest seed-stage deeptech fund in Baltic history. Targets 25 ventures in robotics, photonics, space, defence and resilience, cheques €500k–€2M. [Source: Sifted, Jun 2025](https://sifted.eu/articles/baltic-deeptech-vc-fund-100m)
+- **UFORCE** — Seed, $50M, March 2026. Participant. Round led by Lakestar and Shield Capital, with Ballistic Ventures. London-based defence-tech founded by Ukrainian entrepreneurs. [Source: Iron Wolf via Crunchbase, Mar 2026](https://www.cbinsights.com/investor/iron-wolf-capital)
+- **Copla** — Series A, €6M, February 2026. Lead investor. Lithuanian regtech for EU financial compliance; dual-use cyber-adjacent. [Source: Tech.eu, Feb 2026](https://tech.eu/2026/02/19/copla-raises-eur6m-series-a-to-support-eu-regulatory-compliance/)
+
 ## Related

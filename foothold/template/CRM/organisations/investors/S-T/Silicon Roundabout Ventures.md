@@ -41,4 +41,11 @@ Thesis areas include AI infrastructure, quantum, robotics, biotech, energy and d
 
 - Francesco Perticarari: https://www.linkedin.com/in/fperticarari/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Silicon Roundabout Ventures (London) is a micro deep-tech fund focused on Computing, Defence and Energy. 9 investments over 5 years; 8 portfolio companies now above $1M revenue.
+
+- **Origin Robotics** — funding and contracts for drone-launched precision weapon systems and man-portable UAVs (late 2024 to 2025). [Source: Silicon Roundabout portfolio](https://siliconroundabout.ventures/portfolio/)
+- **Sovereign Industrialisation thesis** — Feb 2026 bulletin: defence has moved from "bold gamble" to core thesis pillar for deep-tech, manufacturing and resilience tech in Europe. [Source: Silicon Roundabout blog, Feb 2026](https://blog.siliconroundabout.ventures/p/sovereign-industrialisation-silicon)
+
 ## Related

@@ -60,4 +60,8 @@ They differentiate through hands-on operational expertise, embedded government n
 - Castelion
 - HE360
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). IceNine Capital does not appear prominently in defence-tech press coverage for the recent window. Worth rechecking when the news pipeline refreshes.
+
 ## Related

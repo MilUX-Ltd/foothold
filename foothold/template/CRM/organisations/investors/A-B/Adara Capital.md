@@ -42,4 +42,11 @@ Adara Capital is the parent firm under which the Adara Ventures fund vehicles si
 - Alberto Gomez (Co-Founder and Managing Partner): https://www.linkedin.com/in/albertogomezadara/
 - Nicolas Goulet (Co-Founder and Managing Partner): https://www.linkedin.com/in/nicolasgoulet/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Adara Capital (Adara Ventures) is a long-running Madrid deep-tech fund; defence-relevant activity is part of a broader thesis.
+
+- **SatVu** — follow-on activity 2025-2026, undisclosed. Existing portfolio company secured $6M HotSat-2 pre-orders and won an ESA contract; joined NATO's Alliance Persistent Surveillance from Space; began supporting US NGA Luno programmes. [Source: Adara Year in Review 2025](https://www.adara.vc/news/year-in-review-2025)
+- **AV4 fund close** — Adara announced first close of AV4, reaching 95% of the €100M target. Provides fresh dry powder for deep-tech and dual-use deals. [Source: Adara news](https://www.adara.vc/news/year-in-review-2025)
+
 ## Related

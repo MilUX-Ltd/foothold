@@ -51,4 +51,11 @@ Defence and resilience exposure runs through energy resilience, sovereign supply
 - Climate Performance Potential (CPP) thesis framework
 - Founded by Ecosia (B Corp / not-for-profit search engine ownership)
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). World Fund is Europe's largest climate-tech VC, increasingly threading defence-relevant "resilience" into its thesis.
+
+- **Space Forge** — $30M Series A, May 2025. Co-investor. Round led by NATO Innovation Fund; supported by World Fund, NSSIF and British Business Investments. Largest Series A in UK space-tech history. Defence applications via semiconductors, quantum and clean energy. [Source: World Fund](https://www.worldfund.vc/articles/space-forge-follow-on)
+- **Climate Tech for European Resilience white paper** — links climate to European security; four pillars (energy, food/land, frontier tech, raw materials) framed as security infrastructure. [Source: World Fund](https://www.worldfund.vc/knowledge/white-paper-climate-tech-for-european-resilience)
+
 ## Related

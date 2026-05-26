@@ -35,4 +35,8 @@ Defence Invest writes seed and Series A cheques and positions itself as a dedica
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Defence Invest is an Irish-domiciled €50M defence and dual-use fund still in the raising phase. Public team and portfolio detail is sparse; no individual deal announcements surface in the indexed defence-tech press. Worth rechecking once first close is announced.
+
 ## Related

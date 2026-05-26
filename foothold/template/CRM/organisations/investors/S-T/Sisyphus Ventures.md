@@ -40,4 +40,11 @@ Sisyphus was founded by Louise Boucher, who began investing in defence in 2022. 
 
 - Louise Boucher: https://www.linkedin.com/in/louise-boucher-055a23106/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Sisyphus Ventures (launched by Louise Boucher) is a European defence and autonomous-tech fund focused on dual-use, scalable, cost-effective tech for European defence autonomy. 1 investment in 2026 YTD, 3 in 2025.
+
+- **€20M syndicated round** — late 2025/early 2026 (Scaling Europe LinkedIn coverage). Sisyphus participated in a €20M defence-tech round. [Source: Scaling Europe LinkedIn](https://www.linkedin.com/posts/scaling-europe_louise-boucher-founder-managing-partner-activity-7446089212459769856-LL0K)
+- **Stendr, ZeroPhase, Tiberius Aerospace** — existing portfolio. ZeroPhase also appears in BlueYard 2025 additions; Tiberius Aerospace is defence-relevant. [Source: PitchBook](https://pitchbook.com/profiles/company/494285-68)
+
 ## Related

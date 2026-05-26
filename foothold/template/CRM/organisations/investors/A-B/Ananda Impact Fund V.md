@@ -43,4 +43,8 @@ The fund's defence and dual-use exposure comes through the resilience and sustai
 - Johannes Weber (Founding Partner): https://www.linkedin.com/in/johannesweberananda/
 - Florian Erber (Founding Partner): https://www.linkedin.com/in/florianerber/
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Ananda Impact Ventures explicitly positions against defence investing, noting that other VC has followed "the geopolitical zeitgeist into isolationism, division, and defence" while Ananda remains focused on climate, healthcare, biodiversity, and social inclusion. Fund V first close (€73M) in Jan 2026 confirms continued impact-only mandate. Defence relevance is low; keep on the list only for awareness.
+
 ## Related

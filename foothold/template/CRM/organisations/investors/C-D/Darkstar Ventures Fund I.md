@@ -39,4 +39,13 @@ No senior contacts listed in this file — no LinkedIn search performed.
 
 - Operates in the NATO Innovation Fund co-investment cluster
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Darkstar is Estonia's defence-only VC; €15M first close, €25M target. Largest LP is Estonia's SmartCap Defence Fund (€10M).
+
+- **Deftak** — €600k, May 2025. Ammunition for new-generation drones; second Darkstar investment. [Source: Defence Finance Monitor](https://www.defencefinancemonitor.com/p/darkstar-vc-fund-backs-ukraine-rooted)
+- **Farsight Vision** — €600k, Sept 2024. Ukrainian-Estonian situational-awareness platform; first Darkstar investment. [Source: Defence Finance Monitor](https://www.defencefinancemonitor.com/p/darkstar-vc-fund-backs-ukraine-rooted)
+
+Plans portfolio of 15–20 companies, €1M tickets, pre-seed. Pure-military thesis (no dual-use requirement), explicitly rearming Europe with combat-proven solutions from Ukraine.
+
 ## Related

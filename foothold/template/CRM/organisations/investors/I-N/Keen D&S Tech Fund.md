@@ -47,4 +47,12 @@ The fund will continue Keen's European-Atlantic thesis, writing growth-stage che
 
 - Co-invests with NATO Innovation Fund
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Keen Venture Partners has Europe's largest dedicated DefenceTech VC fund. First close in Nov 2025 at €150M+. EIF and pension fund PME each committed €40M (Keen is the first European VC to receive EIF commitment under its new €175M Defence Investment Programme). Other LPs include TNO and ABN AMRO.
+
+- **Fund first close** — €150M+, Nov 2025. Plans 25+ companies seed to Series B, €1–€10M tickets. Focus: cybersecurity, autonomous systems, deterrence, space. [Source: EU-Startups](https://www.eu-startups.com/2025/11/as-modern-battlefield-needs-evolve-keen-venture-partners-raises-europes-largest-dedicated-defencetech-fund/)
+- **EclecticIQ** — existing portfolio. Cyber threat intelligence. [Source: Keen portfolio](https://www.keenventurepartners.com/defence)
+- **Intelic (formerly Avalor AI), Perciv AI** — existing portfolio defence-relevant AI. [Source: Vestbee](https://www.vestbee.com/insights/articles/keen-venture-partners-secures-150-m)
+
 ## Related

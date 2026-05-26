@@ -40,4 +40,12 @@ HCVC has supported a number of defence-relevant hardware companies in robotics, 
 
 - Alexis Houssou (Founding Partner): https://www.linkedin.com/in/alexishoussou/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). HCVC (Hardware Club) is a Paris-based hardtech VC, $75M Fund II, €250k–€2.5M tickets; defence is one of the stated thesis pillars alongside robotics, AI infrastructure, climate, techbio and space.
+
+- **Tytan Technologies** — HCVC continues to back the German air-to-air counter-defence system founders Jan and Timo with follow-on capital after leading their 2023 pre-seed. Specific 2025-2026 round detail not disclosed. [Source: HCVC site](https://www.hcvc.co/)
+
+No discrete new defence-tech round announcements in the 120-day window surface in the indexed press. Worth rechecking when the news pipeline refreshes.
+
 ## Related

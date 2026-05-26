@@ -46,4 +46,13 @@ Within the UK, IQT works closely with UK government partners and is part of the 
 - Founded by and partnered with the US CIA and intelligence community
 - UK and Five Eyes office presence
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). IN-Q-Tel (IQT) is the US intelligence community's strategic venture vehicle. IQT is pivoting toward fewer, larger bets in autonomy, contested logistics and critical infrastructure. 13 investments YTD May 2026; 25 in the trailing 12 months.
+
+- **Neros** — drone manufacturer, recent. [Source: Axios, May 2026](https://www.axios.com/2026/05/05/inqtel-cia-venture-investing-autonomy)
+- **Twenty** — cyber specialist. [Source: Axios](https://www.axios.com/2026/05/05/inqtel-cia-venture-investing-autonomy)
+- **ICEYE** — SAR satellite remote sensing. [Source: Axios](https://www.axios.com/2026/05/05/inqtel-cia-venture-investing-autonomy)
+- **Salient Motion, Lightsynq, RevEng.AI** — motion analytics, optical-quantum interconnect, foundational AI for software vulnerability detection. [Source: IQT portfolio](https://www.iqt.org/portfolio)
+
 ## Related

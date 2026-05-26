@@ -61,4 +61,11 @@ UK presence is strong. The London office is led by senior partners and the fund 
 - Multi-sovereign vehicle backed by 24 NATO members
 - Co-investor with NATO DIANA cohort companies
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Uplift360** — Seed, €7.4M, February 2026. Lead investor. Co-invested with Extantia, Promus Ventures and Fund F. First NIF investment in Luxembourg. Advanced materials recovery for aerospace and defence composites. [Source: NIF news, Feb 2026](https://www.nif.fund/news/nato-innovation-fund-invests-in-uplift360-marking-first-investment-in-luxembourg/)
+- **Kelluu** — Series A, €15M, 2026. Lead investor. Persistent aerial intelligence layer for NATO surveillance. [Source: Dealroom/NIF report, 2025](https://www.nif.fund/news/dealroom-and-nato-innovation-fund-european-defence-security-resilience-startups-smash-record-with-8-7b-raised-in-2025/)
+
 ## Related

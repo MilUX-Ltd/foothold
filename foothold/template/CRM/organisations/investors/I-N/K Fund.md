@@ -43,4 +43,12 @@ K Fund is one of Spain's most active venture managers and co-invests with Adara 
 - Jaime Novoa (Partner): https://www.linkedin.com/in/jaimenovoa/
 - Carina Szpilka (Partner): https://www.linkedin.com/in/carinaszpilka/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). K Fund is a Madrid-based Southern Europe and LatAm seed-to-Series B fund (86 portfolio companies, 15 in the trailing 12 months as of July 2025) actively positioning into defence and dual-use.
+
+- **XRF** — €2.3M, recent (2025). Co-investor in a defence-tech firm; K Fund's first significant defence-tech check. [Source: Vestbee](https://www.vestbee.com/insights/articles/vc-funds-investing-in-european-defence-tech)
+
+K Fund's positioning signals interest in dual-use as a category; broader portfolio is IT/SaaS-led.
+
 ## Related

@@ -44,4 +44,10 @@ MMC is not a pure defence investor, but holds positions across AI infrastructure
 - Bruce Macfarlane (Managing Partner): https://www.linkedin.com/in/brucemacfarlane/
 - Simon Menashy (Managing Partner): https://www.linkedin.com/in/simonmenashy/
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Stanhope AI** — Seed, $8M / €6.7M, February 2026. Participant. Round led by Frontline Ventures, with Paladin Capital Group, Auxxo Female Catalyst Fund and UCL Technology Fund. Brain-inspired adaptive AI for drones, robotics, defence and aerospace. [Source: EU-Startups, Feb 2026](https://www.eu-startups.com/2026/02/london-based-stanhope-ai-raises-e6-7-million-for-adaptive-ai-in-robotics-and-defence-applications/)
+
 ## Related

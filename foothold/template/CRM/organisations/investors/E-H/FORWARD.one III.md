@@ -42,4 +42,8 @@ The fund writes Series A and B cheques, often as lead investor, and works with f
 - Joost van der Kroft (Founding Partner): https://www.linkedin.com/in/joostvanderkroft/
 - Sake Bosch (Founding Partner): https://www.linkedin.com/in/sakebosch/
 
+## Recent investments
+
+No discrete FORWARD.one defence-tech rounds publicly disclosed in the last 120 days (last refresh: 2026-05-27). FORWARD.one's stated thesis includes industrial tech, robotics, semicon, quantum, dual-use and energy, with initial tickets up to €4M and follow-on up to €30M. No specific portfolio deal announcements in the window surface in indexed defence-tech press. Worth rechecking when the news pipeline refreshes.
+
 ## Related

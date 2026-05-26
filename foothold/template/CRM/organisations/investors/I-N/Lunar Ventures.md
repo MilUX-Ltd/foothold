@@ -54,4 +54,11 @@ Cheque sizes run from €750k to €1m into 25 to 30 startups. The fund plans ro
 - Molecule
 - Hathora
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Lunar Ventures (Berlin) launched €50M Fund II in May 2025; pre-seed deep-tech with defence among the stated sectors. Plans 25 to 30 investments at €750k–€1M tickets.
+
+- **Lodestar Space** — undisclosed, recent. London robotics team building autonomous systems for orbital infrastructure protection. Direct defence-tech relevance. [Source: EU-Startups](https://www.eu-startups.com/2025/05/berlin-based-vc-firm-lunar-ventures-launches-e50-million-fund-ii-for-pre-seed-deeptech-investments/)
+- **Bruin** — undisclosed, recent. Berlin data quality and governance. Adjacent / dual-use. [Source: EU-Startups](https://www.eu-startups.com/2025/05/berlin-based-vc-firm-lunar-ventures-launches-e50-million-fund-ii-for-pre-seed-deeptech-investments/)
+
 ## Related

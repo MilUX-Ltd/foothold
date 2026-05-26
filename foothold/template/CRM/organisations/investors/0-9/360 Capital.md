@@ -46,4 +46,13 @@ In recent years 360 Capital has built out a defence and dual-use line under part
 
 - Co-invests with NATO Innovation Fund, Bpifrance, Definvest
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27).
+
+- **Poli360 2 fund close** — €85M first close (target €100m), March 2026. New deeptech technology-transfer fund. LPs include EIF, CDP Venture Capital SGR, Brembo, MBDA (European defence prime) and Lucchini RS. ~80% capital to Italian deeptech university spinouts. [Source: Sifted, 2026](https://sifted.eu/articles/360-capital-85m-deeptech-fund) and [EU-Startups, Mar 2026](https://www.eu-startups.com/2026/03/french-vc-360-capital-launches-poli360-2-with-e85-million-to-back-european-deeptech-startups/)
+- **360 LIFE II climate-tech fund** — €140M close. Italian corporates A2A and De Nora as strategic backers. [Source: Sifted](https://sifted.eu/articles/360-capital-200m-climate-fund-news)
+
+No specific portfolio company defence-tech rounds with confirmed 360 Capital participation in the last 120 days surfaced via web search.
+
 ## Related

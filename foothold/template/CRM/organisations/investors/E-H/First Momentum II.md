@@ -42,4 +42,8 @@ The fund focuses on technical founders building from university research environ
 - Andreas Unseld (Founding Partner): https://www.linkedin.com/in/andreasunseld/
 - David Meiborg (Founding Partner): https://www.linkedin.com/in/davidmeiborg/
 
+## Recent investments
+
+No discrete First Momentum II defence-tech rounds publicly disclosed in the last 120 days (last refresh: 2026-05-27). First Momentum is a Karlsruhe-based pre-seed deep-tech investor with exposure across energy, robotics, AI and space; specific deal-flow in defence is not surfaced in the indexed press for this window. Worth rechecking when the news pipeline refreshes.
+
 ## Related

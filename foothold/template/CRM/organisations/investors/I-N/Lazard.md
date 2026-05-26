@@ -40,4 +40,8 @@ Its Aerospace, Defence and Government Services practice advises primes, mid-tier
 - Peter Orszag (CEO, Lazard): https://www.linkedin.com/in/peterorszag/
 - Cyrus Kapadia (CEO, Lazard UK): https://www.linkedin.com/in/cyrus-kapadia-26b6b04/
 
+## Recent investments
+
+No discrete Lazard defence-tech venture rounds publicly disclosed in the last 120 days (last refresh: 2026-05-27). Lazard is primarily a financial advisory and asset manager; its 2024 strategic partnership with Elaia Partners is its closest channel to European deep-tech VC, though defence specifically is not surfaced as a focus area. Treat as advisory/M&A counterparty rather than direct capital source.
+
 ## Related

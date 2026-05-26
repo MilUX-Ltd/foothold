@@ -41,4 +41,13 @@ Geography spans Europe, Canada and the US, with European deal flow concentrated 
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+Tracked from the last 120 days (last refresh: 2026-05-27). Offset Ventures (London) backs security and resilience tech for the Allied Defense Industrial Base across US and Europe; €100k–€200k tickets.
+
+- **Labrys** — existing portfolio, dual-use. [Source: Vestbee](https://www.vestbee.com/insights/articles/vc-funds-investing-in-european-defence-tech)
+- **Solideon** — existing portfolio. Defence/manufacturing-relevant. [Source: Vestbee](https://www.vestbee.com/insights/articles/vc-funds-investing-in-european-defence-tech)
+
+No discrete new rounds in the 120-day window surface in indexed press beyond the existing portfolio. Worth rechecking when the news pipeline refreshes.
+
 ## Related

@@ -47,4 +47,8 @@ CyLon works closely with UK government cyber stakeholders, including the Nationa
 - NCSC for Startups partner
 - Plexal-adjacent UK cyber innovation cluster
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). CyLon operates as an accelerator with small angel-sized cheques (~£15k per cohort company in exchange for equity), so individual deal announcements are uncommon. Aggregate portfolio of 83 companies valued at £400m+ with over £120m follow-on raised by alumni including Ripjar, Hazy, Tessian, Senseon and Immersive Labs. Worth rechecking when the next cohort announcement lands.
+
 ## Related

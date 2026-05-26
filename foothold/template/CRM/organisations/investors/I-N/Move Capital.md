@@ -40,4 +40,8 @@ The fund is not a pure-play defence vehicle. Cyber and industrial-digital positi
 
 No senior contacts listed in this file — no LinkedIn search performed.
 
+## Recent investments
+
+No public defence-tech deals identified in the last 120 days (last refresh: 2026-05-27). Move Capital does not surface in indexed defence-tech press for the recent window; entity identity may need verification against the original source for this file. Worth rechecking when the news pipeline refreshes.
+
 ## Related
