@@ -13,6 +13,10 @@ tags: [framework, defence-procurement, edp, aurora, qinetiq, mod, des, pn-evolve
 
 # Aurora Provider Network
 
+## Plain-language summary
+
+EDP (Engineering Delivery Partner) is the framework. The Aurora Engineering Partnership (QinetiQ, AtkinsRéalis, BMT) is the prime consortium delivering it to DE&S. The Aurora Provider Network is the wider supplier network underneath, with two streams: **Provider Network — Evolve (PN-Evolve)**, the refreshed EDP supplier cohort, and the **Futures Lab Provider Network (FLPN)** supporting the MOD Futures Lab innovation work. Both run through the same Curtis Fitch sourcing portal; the two streams are administered separately by QinetiQ but sit under one umbrella.
+
 ## Summary
 
 The Aurora Provider Network is the supplier framework that sits underneath the [[Intelligence/defence-landscape/Frameworks/Engineering Delivery Partner (EDP)|Engineering Delivery Partner (EDP)]] arrangement between the UK Ministry of Defence and the Aurora Engineering Partnership. The Partnership comprises QinetiQ (lead), AtkinsRéalis and BMT. EDP itself is a ten-year partnership; the Provider Network is the wider group of specialist companies that the three primes draw on to deliver engineering and support outcomes to DE&S, the wider Ministry of Defence and other UK government departments and agencies.
