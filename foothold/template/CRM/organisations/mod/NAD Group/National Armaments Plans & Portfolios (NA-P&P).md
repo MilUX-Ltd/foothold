@@ -4,13 +4,13 @@ name: National Armaments Plans & Portfolios
 acronym: NA-P&P
 former_name: Options & Commissioning (O&C)
 also_known_as_in_des: Gateway
-led_by: DG Plans & Portfolios
+led_by: DG Plans & Portfolios — Paul Marshall
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 status: active
 category: mod-component
 renamed: 2026-04-02
-portfolio_structure: 13 capabilities grouped under single 2* Portfolio Directors per cross-NAD portfolio approach
-last_updated: 2026-05-20
+portfolio_structure: 14 portfolios across the NAD Group, implemented in four tranches; Tranche 1 (Lethality, Space Systems, Special Projects)
+last_updated: 2026-05-28
 tags:
   - mod
   - nad-group
@@ -26,9 +26,9 @@ tags:
 
 ## Summary
 
-The portfolio-sequencing and demand pillar of NAD Group. Owns the entry point into the materiel pipeline: turning Front Line Command demand into a coherent, prioritised portfolio that flows through into [[CRM/organisations/mod/NAD Group/National Armaments Materiel (NA-M)|NA-M]] delivery via the [[CRM/organisations/mod/NAD Group/National Armaments Delivery Executive|National Armaments Delivery Executive]].
+UK Defence's single-entry point for new un-commissioned work. NA-P&P defines and commissions affordable, achievable, and attractive whole-life solutions for the warfighter, then commissions them into the right Portfolios or delivery route. The pillar is implementing 14 portfolios across the NAD Group in four tranches; **Lethality, Space Systems, and Special Projects** make up Tranche 1, with the Lethality portfolio the first to stand up in March 2026.
 
-Led by **DG Plans & Portfolios**.
+Led by **DG Plans & Portfolios — Paul Marshall**. The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 ## Role in the landscape
 
@@ -36,7 +36,9 @@ NA-P&P combines what used to be the "Options & Commissioning" function inside NA
 
 ### Portfolio approach
 
-A cross-NAD Group portfolio approach groups **13 capabilities into matching domains or technologies** under individual single **2-star Portfolio Directors**. The change shifts the MOD from project-by-project delivery to **connected systems** of capabilities. Examples of named portfolio domains: **space** and **lethality**.
+A cross-NAD Group portfolio approach groups capabilities into matching domains or technologies under individual single **2-star Portfolio Directors**. NAD Group is implementing **14 portfolios in four tranches**, including a Nuclear portfolio reflecting NAD's role in supporting the Defence Nuclear Enterprise. **Tranche 1** is Lethality, Space Systems and Special Projects, with the Lethality portfolio the first to stand up in March 2026.
+
+Each portfolio passes through a structured **breakthrough journey** built around four key milestones, led by the Portfolio Director with the capability sponsor, delivery leads and stakeholders. The NAD Portfolio Office leads implementation. Portfolio Directors are empowered to take decisions that optimise the value of their portfolio, within bounded flexibilities and clear escalation criteria.
 
 Rupert Pearce framed the change as a move "to manage capabilities as connected systems rather than standalone projects". See [UK Defence Journal: Defence shifts to 10-year plan and new procurement model](https://ukdefencejournal.org.uk/defence-shifts-to-10-year-plan-and-new-procurement-model/) and [British Progress: Fixing UK defence procurement](https://britishprogress.org/reports/fixing-uk-defence-procurement).
 

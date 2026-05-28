@@ -3,13 +3,13 @@ type: organisation
 name: National Armaments Innovation
 acronym: NA-Innov
 former_name: (new pillar created 2 April 2026)
-led_by: DG Innovation (to be appointed)
+led_by: DG Innovation (3* appointment pending); CE Dstl Dr Paul Hollinshead
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 renamed: 2026-04-02
 status: active
 category: mod-component
 constituent_bodies: Dstl; UK Defence Innovation (UKDI, including DASA, FCI, Rapid Innovation Team); Defence Investment Unit
-last_updated: 2026-05-20
+last_updated: 2026-05-28
 tags:
   - mod
   - innovation
@@ -30,13 +30,13 @@ tags:
 
 ## Summary
 
-The innovation pillar of NAD Group. Houses three named constituent bodies:
+Defence's innovation pillar. Houses three named constituent bodies:
 
-- **Defence Science and Technology Laboratory (Dstl)**, the MOD's executive-agency science and technology arm.
-- **UK Defence Innovation (UKDI)**, the consolidated central MOD innovation function announced under the 2025 Strategic Defence Review; itself houses **DASA (Defence and Security Accelerator)**, **FCI (Future Capability Innovation)**, the **Rapid Innovation Team**, and the **Command Innovation Hubs**.
-- **Defence Investment Unit**, the defence-tech investment arm working with venture capital, banking, and strategic-finance partners.
+- **Defence Science and Technology Laboratory (Dstl)**, the MOD's executive-agency science and technology arm. Chief Executive: **Dr Paul Hollinshead**.
+- **UK Defence Innovation (UKDI)**, the consolidated central MOD innovation function announced under the 2025 Strategic Defence Review; itself houses **DASA (Defence and Security Accelerator)**, **FCI (Future Capability Innovation)**, the **Rapid Innovation Team**, and the **Command Innovation Hubs**. UKDI has a ringfenced annual budget of at least £400 million.
+- **Defence Investment Unit**, the defence-tech investment arm working with venture capital, banking, and strategic-finance partners. Reports on a dotted line directly to the National Armaments Director.
 
-Led by **DG Innovation (to be appointed)**.
+Led by **DG Innovation** (3\* appointment pending). The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 ---
 

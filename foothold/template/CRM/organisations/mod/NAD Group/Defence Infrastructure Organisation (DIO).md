@@ -2,7 +2,7 @@
 type: organisation
 name: Defence Infrastructure Organisation
 acronym: DIO
-led_by: DG Infrastructure
+led_by: DG Infrastructure — Mike Green
 chief_executive: Mike Green
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 status: active
@@ -11,7 +11,8 @@ brand_status: retained through 2 April 2026 NAD reorganisation
 website: https://www.gov.uk/government/organisations/defence-infrastructure-organisation
 blog: https://insidedio.blog.gov.uk/
 office: St George's House, DMS Whittington, Lichfield, Staffordshire, WS14 9PY
-last_updated: 2026-05-20
+infrastructure_portfolio_tranche: 4 (NAD Group Delivery Portfolio — Infrastructure Portfolio Breakthrough pending)
+last_updated: 2026-05-28
 tags:
   - mod
   - nad-group
@@ -28,9 +29,11 @@ tags:
 
 ## Summary
 
-The MOD's estate expert. Plans, builds, maintains, and services the infrastructure that the armed forces depend on to operate. Manages around **1.8% of the UK's landmass**, **115,000 non-residential buildings**, and **50,000 houses**. Also responsible for the MOD's overseas estate in Belize, Cyprus, the Falkland Islands, Kenya, and other locations.
+The MOD's estate expert. Plans, builds, maintains, and services the infrastructure that the armed forces depend on to operate. Manages around **1.8% of the UK's landmass**, including **over 200 Military Establishments** (Naval Bases, Air Stations, and Barracks), nearly **260,000 hectares of Defence Training Estate**, over **5,000 office buildings**, over **15,000 warehouses and storage facilities**, nearly **50,000 Service Family Properties**, **130 schools**, and nearly **1,000 sports facilities**. Also responsible for the MOD's overseas estate in Belize, Cyprus, the Falkland Islands, Kenya, and other locations.
 
-Led by **DG Infrastructure**. Chief Executive: **[Mike Green](https://www.gov.uk/government/people/mike-green)**.
+Under the new NAD Group operating model, Defence Infrastructure runs as a dedicated **Infrastructure Function** plus a separate **Infrastructure Portfolio** (Tranche 4 NAD Group Delivery Portfolio — Infrastructure Portfolio Breakthrough pending). Work splits broadly into new capital projects (~1/3 of total Infrastructure budget) and maintenance and sustainment of the existing estate (~2/3).
+
+Led by **DG Infrastructure — Mike Green** (also Chief Executive: [Mike Green](https://www.gov.uk/government/people/mike-green)). The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 GOV.UK: [Defence Infrastructure Organisation](https://www.gov.uk/government/organisations/defence-infrastructure-organisation); [About DIO](https://www.gov.uk/government/organisations/defence-infrastructure-organisation/about). Blog: [Inside DIO](https://insidedio.blog.gov.uk/).
 

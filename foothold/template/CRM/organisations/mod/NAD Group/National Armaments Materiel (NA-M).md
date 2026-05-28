@@ -3,7 +3,7 @@ type: organisation
 name: National Armaments Materiel
 acronym: NA-M
 former_name: DE&S Core Delivery / Defence Equipment & Support (DE&S)
-led_by: DG Materiel
+led_by: DG Materiel — Lieutenant General Anna-Lee Reilly
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 status: active
 category: mod-component
@@ -13,7 +13,7 @@ annual_programme_value: c.£13 billion
 new_operating_model_live: 2025-03-28
 customer_of: UK MoD
 website: https://des.mod.uk/
-last_updated: 2026-05-20
+last_updated: 2026-05-28
 tags:
   - mod
   - procurement
@@ -30,7 +30,9 @@ tags:
 
 The materiel-acquisition arm of NAD Group: the former DE&S Core Delivery function, now operating under a Director General within the new structure. Around 11,000 staff inside core delivery, with the wider DE&S workforce cited at c.12,500 across the full operating model. Manages an annual programme of work worth approximately **£13 billion**, ensuring the UK Armed Forces have the equipment and support needed for their operations.
 
-Led by **DG Materiel**. Staff belong to the [[CRM/organisations/mod/NAD Group/National Armaments Delivery Executive|National Armaments Delivery Executive]], the executive agency that carries the freedoms and delegations transferred from DE&S at the brand-retirement step.
+NA-M procures, equips, and supports the Armed Forces across **Land, Maritime, Air Fixed Wing, Air Rotary and Uncrewed Air Systems, Lethality and Protect, and Sense, Decide, Communicate**. It also houses **NAD Group Engineering and Safety** — the MOD's Technical and Quality Assurance Authority, Responsible AI Senior Owner, Owner of Defence Standards, and Senior Accountable Officer for Airworthiness across the NAD Group (MAA RA 1012 Holder for Aviation).
+
+Led by **DG Materiel — Lieutenant General Anna-Lee Reilly**. Staff belong to the [[CRM/organisations/mod/NAD Group/National Armaments Delivery Executive|National Armaments Delivery Executive]], the executive agency that carries the freedoms and delegations transferred from DE&S at the brand-retirement step. The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 DE&S corporate site: [des.mod.uk](https://des.mod.uk/); [About DE&S](https://des.mod.uk/who-we-are/).
 
