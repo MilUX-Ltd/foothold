@@ -3,13 +3,13 @@ type: organisation
 name: National Armaments International
 acronym: NA-Intl
 former_name: International Collaboration & Exports (ICE)
-led_by: DG International
+led_by: DG International — Avril Jolliffe
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 status: active
 category: mod-component
 renamed: 2026-04-02
-constituent_bodies: UK Defence and Security Exports (UKDSE)
-last_updated: 2026-05-20
+constituent_bodies: UK Defence and Security Exports (UKDSE); MOD Saudi Armed Forces Projects (MODSAP)
+last_updated: 2026-05-28
 tags:
   - mod
   - nad-group
@@ -27,9 +27,11 @@ tags:
 
 ## Summary
 
-The international pillar of NAD Group. Covers UK Defence and Security Exports (UKDSE), now operating under the broader "International Collaboration and Exports" banner inside the MOD, and the wider international collaboration relationships across NAD.
+NA-Intl unifies Defence exports and international collaboration functions into a single organisation that strengthens UK defence capabilities and economic growth. It forges long-term international partnerships, drives defence exports and capability collaboration, and co-develops cutting-edge solutions with allies, partners, and industry. NA-Intl operates "Up and Out" (cross-government, international governments, industry, academia) and "Down and In" (across NAD Group and the Quad), so exportability and collaboration are central to decision-making.
 
-Led by **DG International**.
+It houses **UK Defence and Security Exports (UKDSE)**, now operating under the broader "International Collaboration and Exports" banner inside the MOD, and **MOD Saudi Armed Forces Projects (MODSAP)** — the long-standing UK–Saudi Arabia government-to-government programme — alongside the wider international collaboration relationships across NAD.
+
+Led by **DG International — Avril Jolliffe**. The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 ---
 

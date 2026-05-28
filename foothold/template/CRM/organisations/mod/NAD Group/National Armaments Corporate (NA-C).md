@@ -3,13 +3,14 @@ type: organisation
 name: National Armaments Corporate
 acronym: NA-C
 former_name: Corporate & Shared Services
-led_by: DG Corporate
+led_by: DG Corporate — Dr Nina Cope (also Senior Responsible Owner for NAD Group implementation)
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 renamed: 2026-04-02
 status: active
 category: mod-component
-constituent_bodies: UK Hydrographic Office (UKHO); The Oil and Pipelines Agency (OPA); Single Source Regulations Office (SSRO); cross-cutting corporate functions
-last_updated: 2026-05-20
+constituent_bodies: UK Hydrographic Office (UKHO); Single Source Regulations Office (SSRO); cross-cutting corporate functions
+note_opa_alignment: The Oil and Pipelines Agency (OPA) is aligned as a sponsored Public Body to NA-L&S
+last_updated: 2026-05-28
 tags:
   - mod
   - nad-group
@@ -17,7 +18,6 @@ tags:
   - corporate
   - shared-services
   - ukho
-  - opa
   - ssro
 ---
 
@@ -29,15 +29,18 @@ tags:
 
 ## Summary
 
-The corporate and shared services pillar of NAD Group. Houses the three executive bodies that are not core delivery, plus the cross-cutting corporate functions across NAD.
+The integrated and streamlined corporate services pillar for the NAD Group and the wider MOD. Bringing together expertise and services from across the NAD Group into a unified, leaner, and more efficient Corporate structure, with a shared purpose of improved war readiness: streamlining operations, strengthening collaboration, and aligning with Defence-wide best practices.
 
-The three executive bodies are:
+NA-C houses the **Strategic Centre** (NAD Group Strategy and Area Plan; Governance, Communications, Policy Secretariat), **Shared Services** (including the Corporate Services Modernisation programme), the **People Directorate**, **Security, Resilience & Estates**, **Corporate Operations**, and **Transformation**. The Corporate Portal now provides 36 services to NAD Group staff.
+
+Sponsored Public Bodies aligned to NA-C:
 
 - **UK Hydrographic Office (UKHO)**: trading fund, world-leading hydrographic and marine geospatial data provider.
-- **The Oil and Pipelines Agency (OPA)**: statutory public corporation managing MOD fuel infrastructure.
 - **Single Source Regulations Office (SSRO)**: executive non-departmental public body, independent regulator of single source defence contracts.
 
-Led by **DG Corporate**.
+(The Oil and Pipelines Agency, previously associated with Corporate, is aligned as a sponsored Public Body to [[CRM/organisations/mod/NAD Group/National Armaments Logistics & Support (NA-L&S)|NA-L&S]].)
+
+Led by **DG Corporate — Dr Nina Cope**, who also acts as the **Senior Responsible Owner for NAD Group implementation**. The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 ---
 

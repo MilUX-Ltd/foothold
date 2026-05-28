@@ -7,7 +7,7 @@ established: 2025-03
 restructured: 2026-04-02
 status: active
 category: mod-component
-last_updated: 2026-05-20
+last_updated: 2026-05-28
 tags:
   - government
   - defence
@@ -29,17 +29,22 @@ NAD Group is led by the **National Armaments Director (Rupert Pearce)**.
 
 Nine Director-General-led areas, plus the Defence Infrastructure Organisation (name retained). Brand and naming consolidation announced 2 April 2026 by the National Armaments Director.
 
+NAD Group's areas are grouped functionally across four bands: **Design** (NA-P&P), **Innovation** (NA-Innov), **Delivery** (NA-M, NA-L&S, DIO, NA-D&D), and **Enable** (NA-Intl, NA-C&I, NA-C, Finance).
+
 | Area | Acronym | DG | Former name | Child orgs |
 |------|---------|----|-------------|-----------|
-| [[CRM/organisations/mod/NAD Group/National Armaments International (NA-Intl)\|National Armaments International]] | NA-Intl | DG International | International Collaboration & Exports (ICE) | UKDSE |
-| [[CRM/organisations/mod/NAD Group/National Armaments Commercial & Industry (NA-C&I)\|National Armaments Commercial & Industry]] | NA-C&I | DG Commercial & Industry | Commercial & Industry | NSO (National Shipbuilding Office) |
-| [[CRM/organisations/mod/NAD Group/National Armaments Plans & Portfolios (NA-P&P)\|National Armaments Plans & Portfolios]] | NA-P&P | DG Plans & Portfolios | Options & Commissioning (O&C) | (portfolio-sequencing function — no standalone child orgs) |
-| [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)\|National Armaments Innovation]] | NA-Innov | DG Innovation (to be appointed) | (new pillar) | Dstl, UKDI (incl. DASA, FCI, Rapid Innovation Team), Defence Investment Unit |
-| [[CRM/organisations/mod/NAD Group/National Armaments Materiel (NA-M)\|National Armaments Materiel]] | NA-M | DG Materiel | DE&S Core Delivery | (former DE&S delivery functions absorbed) |
-| [[CRM/organisations/mod/NAD Group/National Armaments Corporate (NA-C)\|National Armaments Corporate]] | NA-C | DG Corporate | Corporate & Shared Services | UKHO, OPA, SSRO |
-| [[CRM/organisations/mod/NAD Group/National Armaments Logistics & Support (NA-L&S)\|National Armaments Logistics & Support]] | NA-L&S | DG Logistics & Support (also Chief Defence Logistics & Support) | Defence Support | (support and logistics functions) |
-| [[CRM/organisations/mod/NAD Group/National Armaments Digital & Data (NA-D&D)\|National Armaments Digital & Data]] | NA-D&D | DG Digital & Data (also CDIO for cross-MOD working) | Defence Digital | (former Defence Digital functions absorbed) |
-| [[CRM/organisations/mod/NAD Group/Defence Infrastructure Organisation (DIO)\|Defence Infrastructure Organisation]] | DIO | DG Infrastructure | (unchanged) | MOD estate, facilities, training areas. Name and brand retained. |
+| [[CRM/organisations/mod/NAD Group/National Armaments Plans & Portfolios (NA-P&P)\|National Armaments Plans & Portfolios]] | NA-P&P | Paul Marshall | Options & Commissioning (O&C) | (portfolio-sequencing function — no standalone child orgs) |
+| [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)\|National Armaments Innovation]] | NA-Innov | DG Innovation (3\* appointment pending) | (new pillar) | Dstl (CE: Dr Paul Hollinshead), UKDI (incl. DASA, FCI, Rapid Innovation Team), Defence Investment Unit |
+| [[CRM/organisations/mod/NAD Group/National Armaments Materiel (NA-M)\|National Armaments Materiel]] | NA-M | Lt Gen Anna-Lee Reilly | DE&S Core Delivery | (former DE&S delivery functions absorbed) |
+| [[CRM/organisations/mod/NAD Group/National Armaments Logistics & Support (NA-L&S)\|National Armaments Logistics & Support]] | NA-L&S | VAdm Andy Kyte (also Chief of Defence Logistics & Support, CDLS) | Defence Support | (support and logistics functions); Oil & Pipelines Agency aligned as sponsored Public Body |
+| [[CRM/organisations/mod/NAD Group/Defence Infrastructure Organisation (DIO)\|Defence Infrastructure Organisation]] | DIO | Mike Green | (unchanged) | MOD estate, facilities, training areas. Name and brand retained. |
+| [[CRM/organisations/mod/NAD Group/National Armaments Digital & Data (NA-D&D)\|National Armaments Digital & Data]] | NA-D&D | Charles Forte (also Defence CDIO) | Defence Digital | (former Defence Digital functions absorbed) |
+| [[CRM/organisations/mod/NAD Group/National Armaments International (NA-Intl)\|National Armaments International]] | NA-Intl | Avril Jolliffe | International Collaboration & Exports (ICE) | UKDSE; MODSAP (UK–Saudi Arabia G2G programme) |
+| [[CRM/organisations/mod/NAD Group/National Armaments Commercial & Industry (NA-C&I)\|National Armaments Commercial & Industry]] | NA-C&I | Jim Carter (also Functional and Professional Head of Commercial across Defence) | Commercial & Industry | National Shipbuilding Office; Octric Semiconductors and Ploughshare aligned as sponsored Public Bodies |
+| [[CRM/organisations/mod/NAD Group/National Armaments Corporate (NA-C)\|National Armaments Corporate]] | NA-C | Dr Nina Cope (also Senior Responsible Owner for NAD Group implementation) | Corporate & Shared Services | UKHO, SSRO |
+| [[CRM/organisations/mod/NAD Group/NAD Group Finance\|NAD Group Finance]] | Finance | David Johnson (Group Finance Director) | (cross-cutting function elevated under Defence Reform) | (Group A functional model; staff embedded across pillars) |
+
+The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 ### Executive agency
 
