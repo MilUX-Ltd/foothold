@@ -45,6 +45,7 @@ This page is a catalogue of skills the Foothold authors and users have built and
 
 ## Commercial skills
 
+- **/mobilise-engagement** — Bootstraps a Customer Engagement during scoping. Scaffolds the folder under `Customer Engagements/scoping/`, drops in the index page with Outcome, Information Architecture, Scope and Deliverables, Definition of Done, Change Control, Capacity, Engagement Health, plus a CRM-seeded stakeholder map, comms plan with reporting cadence, single combined RAID log, outcome one-pager with benefits measurement, and a mobilisation checklist running through to "contract signed". Promotion from scoping to active is a manual call, not an automatic checklist consequence. Ships with Foothold.
 - **/late-payment-reminder** — Drafts a UK-statutory late-payment chase email at three escalation levels (polite reminder, firm reminder, final notice). Calculates daily interest against the live Bank of England base rate. Ships with Foothold.
 - **/book-train-ticket** — Books a National Rail ticket via a computer-use agent. The pattern: agent reads your calendar for the upcoming meeting, suggests trains, asks for confirmation before purchase.
 

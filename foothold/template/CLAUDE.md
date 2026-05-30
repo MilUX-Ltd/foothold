@@ -98,15 +98,24 @@ When something agent-produced or externally-drafted needs to become canonical va
 
 Reversal exists: if a promoted item needs to come back out, archive or delete the vault note, flip the source back to draft, log it. Rare but defined.
 
-## Initiatives and projects
+## Initiatives, projects, and customer engagements
 
-Initiatives are knowledge artefacts with an operational layer. They live under `Initiatives/active/` and `Initiatives/completed/`. See `Initiatives/Initiatives Guide.md` for the folder layout.
+Your work splits into two top-level folders:
 
-- **Obsidian.** Canonical home for each initiative. Scope, goals, acceptance criteria, meeting notes, decisions, retrospectives.
-- **Work-tracking system (optional).** The cards underneath the initiative. Cycle time and WIP tracked there.
+- **`Initiatives/`**. Work you do for yourself. Internal services, your own products, marketing, thought leadership, operating-model change, internal tooling. See `Initiatives/Initiatives Guide.md`.
+- **`Customer Engagements/`**. Work you deliver for an external organisation that owns the outcome. Each engagement maps 1:1 to an organisation page in `CRM/organisations/`. See `Customer Engagements/Customer Engagements Guide.md`.
+
+The rule is binary: outcome ownership decides the folder. Outcome owned by your business -> Initiative. Outcome owned by an external organisation -> Customer Engagement. Paid, sponsored, or pro-bono doesn't decide it.
+
+Both folders share the same operational pattern:
+
+- **Obsidian.** Canonical home for each initiative or engagement. Scope, goals, acceptance criteria, meeting notes, decisions, retrospectives.
+- **Work-tracking system (optional).** The cards underneath. Cycle time and WIP tracked there.
 - **Outputs queue (optional).** Where derivative outputs land for review before promotion.
 
-If you don't have a work-tracking system yet, the initiative page in the vault carries the workload itself: a status section, a tasks section, a decisions log. Add the tracking system when scale justifies it.
+If you don't have a work-tracking system yet, the index page in the vault carries the workload itself: a status section, a tasks section, a decisions log. Add the tracking system when scale justifies it.
+
+Customer Engagements add a `scoping/` subfolder alongside `active/` and `completed/` for engagements being shaped but not yet a commitment to deliver. Initiatives just use `active/` and `completed/`.
 
 ## Operations and policy
 

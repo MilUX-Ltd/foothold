@@ -1,5 +1,17 @@
 # Foothold changelog
 
+## 1.3.0, 2026-05-30
+
+Adds the `Customer Engagements/` top-level folder, separating work you deliver for an external organisation from work you do for yourself.
+
+The split is binary and turns on outcome ownership: if your business owns the outcome (internal services, your own products, marketing, thought leadership, internal tooling), the work belongs in `Initiatives/`. If an external organisation owns the outcome, the work belongs in `Customer Engagements/`. Paid, sponsored, or pro-bono doesn't decide the folder; what decides it is whether there is a named external organisation on the receiving end of the delivery. Every engagement maps 1:1 to a page in `CRM/organisations/`.
+
+Customer engagements use a three-state lifecycle (`scoping/`, `active/`, `completed/`) rather than the two-state lifecycle initiatives use. The `scoping/` subfolder is the missing piece in most early-stage workflows: it gives a real home to the work of shaping a deliverable before there is a commitment to deliver, and it absorbs the engagements that go cold without losing the CRM signal that something was once in play.
+
+Why this matters for defence-sector founders: client work and internal product work read differently on the same dashboard. Mixing them makes "what is my current client load" harder to see than it should be, and makes case-study harvesting harder later. The split surfaces customer load cleanly, gives scoping work a defined home, and points each engagement back at the CRM organisation page that owns the relationship.
+
+The Initiatives Guide is updated with the binary rule and a cross-link to the new Guide. The architecture doc and the template `CLAUDE.md` and `Home.md` are updated to describe both folders side by side.
+
 ## 1.2.0, 2026-05-26
 
 Adds the `investors/` bucket to `CRM/organisations/`, pre-populated with around 120 investor entries spanning UK and European VCs, corporate VCs, fund vehicles, and government-aligned strategic investors with defence-tech or dual-use exposure.

@@ -23,6 +23,7 @@ Your Pack/
 ├── Capabilities and Services/
 ├── Context/
 ├── CRM/
+├── Customer Engagements/
 ├── Daily/
 ├── Ideas/
 ├── Initiatives/
@@ -48,7 +49,9 @@ The pack is a flat top-level. No nested namespaces. Wikilink paths stay short an
 
 **Ideas.** A capture-quickly, process-later inbox. Ships with a Guide that defines what belongs (early-stage ideas, sparks) and what doesn't (anything with a natural home elsewhere), so it doesn't drift into a junk drawer.
 
-**Initiatives.** Active and completed initiative pages following the Foothold pattern. Ships with `Initiatives Guide.md` carrying the canonical Guide pattern and one fully-worked example initiative as a scaffold.
+**Customer Engagements.** Work you deliver for someone else. Each engagement maps 1:1 to an organisation page in `CRM/organisations/`. Three-state lifecycle (`scoping/`, `active/`, `completed/`) reflecting how customer work actually moves: shaped, agreed, delivered. Ships with `Customer Engagements Guide.md` carrying the canonical Guide pattern and the binary rule that distinguishes engagements from initiatives.
+
+**Initiatives.** Work you do for yourself. Internal services, your own products, marketing, thought leadership, operating-model change, internal tooling. Two-state lifecycle (`active/`, `completed/`). Ships with `Initiatives Guide.md` carrying the canonical Guide pattern, the cross-link to Customer Engagements, and one fully-worked example initiative as a scaffold. The split rule is binary: outcome owned by your business -> Initiative, outcome owned by an external organisation -> Customer Engagement.
 
 **Intelligence.** External-facing scanning: market, defence-landscape (clusters, programmes, MOD bodies, frameworks, portals), competitor analysis, literature. The Guide codifies the "this is for external scanning, not internal artefacts" rule so the folder stays clean.
 
