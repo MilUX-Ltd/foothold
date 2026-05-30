@@ -20,6 +20,32 @@ This is the landing page for everything that follows. Use it as a daily entry po
 
 Open today's daily note: `Daily/{{install_date}}.md` (or whichever day you're on).
 
+## Customer engagements in scoping
+
+> *Dataview query suggestion. Once you have engagement pages in `Customer Engagements/scoping/`, this section can render a live list. Replace this paragraph with a Dataview block similar to:*
+>
+> ````markdown
+> ```dataview
+> table status, customer, owner
+> from "Customer Engagements/scoping"
+> where type = "customer-engagement"
+> sort created desc
+> ```
+> ````
+
+## Active customer engagements
+
+> *Dataview query suggestion. Once you have engagement pages in `Customer Engagements/active/`, this section can render a live list. Replace this paragraph with a Dataview block similar to:*
+>
+> ````markdown
+> ```dataview
+> table status, customer, owner
+> from "Customer Engagements/active"
+> where type = "customer-engagement"
+> sort created desc
+> ```
+> ````
+
 ## Open initiatives
 
 > *Dataview query suggestion. Once you have initiative pages, this section can render a live list. Replace this paragraph with a Dataview block similar to:*

@@ -7,7 +7,14 @@ folder: Initiatives
 
 ## Purpose
 
-`Initiatives/` is where work-in-flight and completed work lives. Each initiative is a coherent piece of work with goals, scope, decisions, meeting notes, and outputs. Distinct from `Ideas/` (early-stage thinking) and from `Capabilities and Services/` (your standing offers).
+`Initiatives/` is where work you do for yourself lives: internal services, your own products, marketing, thought leadership, operating-model change, internal tooling. Each initiative is a coherent piece of work with goals, scope, decisions, meeting notes, and outputs. Distinct from `Ideas/` (early-stage thinking) and from `Capabilities and Services/` (your standing offers).
+
+Work you deliver for someone else, where an external organisation owns the outcome, lives in [[Customer Engagements/Customer Engagements Guide|Customer Engagements]], not here. The line is binary: who owns the outcome.
+
+- Outcome owned by your business -> `Initiatives/`.
+- Outcome owned by an external organisation -> `Customer Engagements/`.
+
+The split exists because customer work has a different lifecycle, a different audit trail, and a different downstream artefact (a case study) than internal work.
 
 Initiatives are knowledge artefacts with an operational layer: the page here is the canonical record; if you have a work-tracking system (Linear, Asana, Trello, Businessmap), the cards underneath are cross-linked from here.
 
