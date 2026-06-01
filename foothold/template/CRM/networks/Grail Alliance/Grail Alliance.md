@@ -1,10 +1,11 @@
 ---
-type: organisation
+type: network
+flavour: formal
 website: https://www.graildefense.com
 parent-org: Tiberius Aerospace
 date: 2026-05-23
 status: reference
-tags: [defence, technology, coalition, alliance]
+tags: [defence, technology, coalition, alliance, network]
 ---
 
 # Grail Alliance
@@ -64,6 +65,10 @@ Per the site FAQ, joining requires a non-binding Letter of Intent submitted via 
 
 - [graildefense.com](https://www.graildefense.com/) — Alliance overview, six-module breakdown, FAQ, audience pages, members carousel (fetched 2026-05-23)
 - [agility.grail.tiberius.com/login](https://agility.grail.tiberius.com/login) — Agility platform login surface
+
+## Related
+
+- [[CRM/networks/Networks Guide|Networks Guide]] — parent
 
 ---
 
