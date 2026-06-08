@@ -1,6 +1,11 @@
 ---
 name: late-payment-reminder
 description: "Draft a late-payment reminder email for an overdue invoice under UK statutory rules. Triggers when the user says things like 'invoice <number> is overdue, value £X', 'draft a late payment chase for <invoice>', 'chase <client> for invoice <number>', 'this invoice is late', or 'send a reminder for <invoice>'. Produces three escalating drafts (first reminder, second reminder, final notice before recovery action), each with the statutory daily interest and the fixed debt recovery fee calculated against the live Bank of England base rate."
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: built
+maintainer: MilUX
 ---
 
 # Late Payment Reminder

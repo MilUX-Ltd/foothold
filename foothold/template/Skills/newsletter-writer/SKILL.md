@@ -1,6 +1,11 @@
 ---
 name: newsletter-writer
 description: "Draft a newsletter edition following the operator's brand voice and structure. Use when the user says 'write the next newsletter', 'draft an edition on [topic]', 'newsletter on [topic]', 'help me write a newsletter', or runs /newsletter-writer. Pulls from the operator's Content Pillars and Brand pages for voice and themes."
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: built
+maintainer: MilUX
 ---
 
 # Newsletter Writer

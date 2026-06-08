@@ -1,6 +1,11 @@
 ---
 name: foothold-setup
 description: Install Foothold — bootstrap the vault structure and run conversational onboarding. Fetches the latest template directly from the public Foothold GitHub repo, creates folders at the user's chosen path, substitutes placeholders, interviews the user via six sequential AskUserQuestion calls to personalise the canonical pages, and offers to schedule `/foothold-update` on a weekly or monthly cadence. Use when the user says "set up Foothold", "install Foothold", "onboard me", or runs /foothold-setup. Does NOT require terminal access.
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: built
+maintainer: MilUX
 ---
 
 # Foothold — Install and Onboarding (GitHub fetch)

@@ -125,6 +125,16 @@ If you don't have message-sending agents yet, these files just sit there. When y
 
 The AI autonomy kill-switch file (`Operations/agent-pause.md` by default) is a hard safety mechanism. Any agent sending a message on your behalf must check this file first; if it has been flipped, the agent stops and reports rather than sending. Your one-line override when you need to silence the stack quickly.
 
+## Skill safety
+
+A skill is instructions your agent follows, plus any files bundled with it. That makes an untrusted skill a way to run someone else's instructions or code with your agent's access to your files, your messages, and your accounts. Treat every skill you did not write as untrusted until you have checked it.
+
+Before you import, install, fork, or first run any skill, from a marketplace, a GitHub repo, a peer, or a file someone sends you, audit it with the `skill-safety-audit` skill in this pack's `Skills/` folder. It reads every file in the skill, flags hidden instructions, data exfiltration, risky scripts, and the like, and gives you a clear PASS, PASS WITH CAUTIONS, or FAIL with a recommended action.
+
+Act on the verdict. A FAIL is not installed: delete it, and note the source so you do not get caught by it again. A PASS WITH CAUTIONS runs only once you understand and accept the cautions. A clean PASS means nothing obvious was found, not that the skill is guaranteed safe, so keep sensible habits: give skills the least access they need, keep credentials out of reach, and re-audit a skill whenever it updates, because a clean version can be replaced by a malicious one. The responsibility for sourcing skills safely stays with you: prefer reputable, identifiable suppliers, and if in doubt, build your own with `skill-creator` rather than run an unknown one.
+
+Each skill in this pack records its check and its origin in frontmatter: `audited` (date), `audit_verdict`, and `audited_with`, alongside `origin` (built, forked, or shared), `source`, and `maintainer`. That is how you know what has been checked, when, and who made it.
+
 ## Frontmatter conventions
 
 Every page in the vault carries YAML frontmatter. Required fields depend on the page type; see the per-folder Guide for specifics. Common patterns:

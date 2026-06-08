@@ -1,6 +1,11 @@
 ---
 name: mobilise-engagement
 description: "Bootstrap a Customer Engagement during the scoping phase. Use when the user says 'mobilise <customer>', 'start scoping <customer>', 'set up the engagement with <customer>', 'onboard the <customer> engagement', 'begin mobilisation for <customer>', or asks to kick off a new piece of client work. Scaffolds the engagement folder in Customer Engagements/scoping/, creates the index page with the Outcome, Information Architecture, and delivery management sections, and drops in stakeholder map, comms plan, RAID log, outcome, and mobilisation checklist seeded from CRM. Idempotent: detects an existing scoping folder and retrofits rather than overwriting. Does not promote engagements to active — that is a deliberate manual call the user makes when the contract is signed or the start date lands."
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: built
+maintainer: MilUX
 ---
 
 # Mobilise Engagement

@@ -1,6 +1,11 @@
 ---
 name: add-contact
 description: Add a new contact to the CRM. Pulls public information about the person, drafts a contact page, asks the user to confirm before writing. Use when the user says "add a contact", "add <name> to my CRM", "capture <name>", "I met <name>", "log this person", or runs /add-contact. Distinct from add-organisation (which handles companies and MOD bodies) and add-event (which handles events and conferences).
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: built
+maintainer: MilUX
 ---
 
 # add-contact

@@ -1,6 +1,12 @@
 ---
 name: prompt-master
 description: "Generate a production-ready prompt for a specific AI tool. Use whenever the user needs to write, fix, improve, or adapt a prompt for any LLM, coding agent, browser agent, or research agent — including Claude, Claude Code, Cursor, Cline, Copilot, GPT models, reasoning models (o3/o4-mini/Qwen3-thinking/DeepSeek-R1), Gemini, computer-use agents (Atlas, Comet, Claude in Chrome), and research orchestrators (Perplexity, Manus). Triggers on phrases like 'write a prompt for…', 'improve this prompt', 'fix this prompt', 'turn this into a prompt for Cursor', 'prompt for Claude Code', 'help me prompt…', 'decompile this prompt', or when pasting an existing prompt to adapt for a different tool."
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: forked
+maintainer: MilUX
+source: "Ben AI"
 ---
 
 # Prompt Master

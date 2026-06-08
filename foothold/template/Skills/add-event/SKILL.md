@@ -1,6 +1,11 @@
 ---
 name: add-event
 description: Capture a new event into the vault. Logs attendance, attendees, organisations represented, and key threads. Applies the Chatham House Rule check at intake. Files the event into the right community folder. Use when the user says "add an event", "log an event", "capture an event", "I attended <event>", "we just ran <event>", or runs /add-event. Distinct from add-contact (people) and add-organisation (companies). For RDSC events specifically, this skill handles them naturally; if a future version of the pack ships a more specialised /add-cluster-event skill, fall back to it.
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: built
+maintainer: MilUX
 ---
 
 # add-event
