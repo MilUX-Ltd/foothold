@@ -1,6 +1,11 @@
 ---
 name: meeting-prep
 description: "Prepare a briefing for an upcoming meeting. Pulls relevant context from the vault and from any connected tools (calendar, CRM, email, chat). Use when the user says 'prep me for my meeting with [person/org]', 'brief me on [person] before our call', 'what do I need to know for my [event] meeting', or runs /meeting-prep."
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: built
+maintainer: MilUX
 ---
 
 # Meeting Prep

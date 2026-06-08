@@ -1,6 +1,11 @@
 ---
 name: foothold-update
 description: Pull the latest content from the public Foothold GitHub repo into the user's installed pack and reconcile it with anything they've edited locally. Self-upgrades first if a newer version of the skill itself is on GitHub, so future skill changes propagate automatically. Compares each shipping file three ways — what was last pulled, what's currently on GitHub, and what the user has locally — and uses that to categorise files as in-sync / new / upstream-only-changed / locally-edited-only / conflicted. New and upstream-only files are added or updated. Conflicts are surfaced to the user with take-theirs / keep-mine / merge options. Use when the user says "update Foothold", "/foothold-update", "pull the latest from Foothold", "check for changes", "is there anything new in Foothold", "refresh my pack", "see if there are any updates", or any similar phrasing. Does NOT require plugin reinstall, marketplace sync, or terminal access.
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: built
+maintainer: MilUX
 ---
 
 # Foothold — Update (three-way reconcile)

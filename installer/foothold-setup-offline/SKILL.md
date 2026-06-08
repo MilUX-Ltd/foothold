@@ -1,6 +1,11 @@
 ---
 name: foothold-setup-offline
 description: Install Foothold from this offline pack — bootstrap the vault structure and run conversational onboarding. Uses the template bundled inside this skill; no GitHub access or terminal needed. Creates folders at the user's chosen path, substitutes placeholders, then interviews the user to personalise the canonical pages. Use when the user says "set up Foothold", "install Foothold", "onboard me", or runs /foothold-setup-offline.
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: built
+maintainer: MilUX
 ---
 
 # Foothold — Offline Install and Onboarding

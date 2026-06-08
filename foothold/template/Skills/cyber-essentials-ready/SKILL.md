@@ -14,9 +14,13 @@ description: |
 version: 1.0.0
 question_set: Montpellier
 last_reviewed: 2026-05-24
-maintainer: MilUX (https://milux.co.uk)
+maintainer: MilUX
 manifest_url: https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/cyber-essentials-ready/manifest.json
 license: Foothold pack, MIT
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: built
 ---
 
 # Cyber Essentials Ready

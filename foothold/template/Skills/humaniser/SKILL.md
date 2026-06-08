@@ -1,6 +1,12 @@
 ---
 name: humaniser
 description: Remove signs of AI-generated writing from text so it sounds more human. Mandatory pass for any public-facing content before handover (LinkedIn posts, newsletter copy, web copy, press releases, external briefs, client proposals, case studies). Scans 24 patterns from Wikipedia's "Signs of AI writing" guide — AI vocabulary, em dashes, rule of three, inline-header bold lists, negative parallelisms, vague attributions, promotional language, hedging, copula avoidance, title-case headings, curly quotes, emojis, and more. Preserves meaning and tone, strips AI-cadence, adds voice. Use when asked to humanise text, clean AI-sounding copy, or before publishing anything under your organisation's brand.
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: forked
+maintainer: MilUX
+source: "@blader/humanizer"
 ---
 
 # Humaniser — remove AI-writing patterns from your public content

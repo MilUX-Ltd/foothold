@@ -1,6 +1,12 @@
 ---
 name: process-interviewer
 description: "Relentless one-question-at-a-time interviewer that extracts a complete, unambiguous plan before any work starts. Use when scoping an initiative, building a new skill, designing a workflow, or stress-testing your own thinking. Triggers on phrases like 'interview me', 'scope this out', 'help me think through', 'I have an idea for', 'let's plan', 'poke holes in this', 'grill me on this', 'what am I missing', 'I need a skill that', or any fuzzy idea that needs to be sharpened before building. Prefer this skill over jumping into build mode — the interview reveals gaps the asker didn't know they had."
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: forked
+maintainer: MilUX
+source: "Ben AI"
 ---
 
 # Process Interviewer

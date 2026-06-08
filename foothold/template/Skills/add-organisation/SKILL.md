@@ -1,6 +1,11 @@
 ---
 name: add-organisation
 description: Add a new organisation to the CRM. Pulls public information about the company, drafts an organisation page, asks the user to confirm before writing. Use when the user says "add an organisation", "add <company>", "capture <organisation>", "log this company", or runs /add-organisation. Handles defence companies, MOD bodies, non-defence companies, and academic institutions. Bakes in the rebrand pattern (former_name frontmatter for renamed orgs) and the parent-folder pattern (for MOD-body restructures).
+audited: 2026-06-08
+audit_verdict: pass
+audited_with: skill-safety-audit v3
+origin: built
+maintainer: MilUX
 ---
 
 # add-organisation
