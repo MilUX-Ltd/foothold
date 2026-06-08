@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/foothold-banner.png" alt="Foothold" width="720">
+</p>
+
 # Foothold
 
 A **foothold** is a secure initial position established in enemy or hostile territory. Troops use it as a base to land reinforcements, stockpile supplies, and launch further operations into the area.
