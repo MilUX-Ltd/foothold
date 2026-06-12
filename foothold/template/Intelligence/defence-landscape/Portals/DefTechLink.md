@@ -47,7 +47,7 @@ Public-source description from the LinkedIn company page and search-result excer
 
 - **Opportunity database.** Filterable by geography, capability area, and source. Coverage described publicly as around 29 countries.
 - **Events diary.** Listed as around 149 upcoming defence and dual-use events at signup (UK and international).
-- **DefTechLearn.** Article library covering procurement basics, RDT&E funding, contract types, transition pathways.
+- **DefTechLearn.** A structured learning library: an introductory course on the defence sector, plus short articles and videos covering procurement basics, funding, contract types, transition pathways, working with primes, teaming, and how to pitch to operators, programme managers, and buyers. The standout part of the platform for a brand-new entrant.
 - **DefTechPod.** Podcast and webinar series on how defence ecosystems work.
 - **Trial.** One-month free trial available on name and email only.
 
@@ -76,7 +76,7 @@ Honest framing for a founder weighing the spend after the free month:
 - If you sell consultancy or services through relationships and you're not bid-chasing, the cost is hard to justify on its own.
 - If you're scoping international expansion, the international feed becomes a real time-saver and the price is cheap.
 - If you want competitive-intelligence signal across allied markets (what categories of work are being posted where), the feed is one of the few single-stop options.
-- The explainer content is useful early, less useful once you've found your route. Read what you can during the trial.
+- The DefTechLearn library is the standout for a new entrant. A focused month on the free trial can cover the orientation (how the market works, funding versus procurement, primes, and pitching) on its own. It matters less once you have found your route.
 
 ## Sources
 
