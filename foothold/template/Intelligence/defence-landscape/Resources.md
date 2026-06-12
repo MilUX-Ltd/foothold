@@ -49,6 +49,19 @@ Useful resources, portals, networks, and guidance for defence technology start-u
 - NATO Rapid Adoption Action Plan (summary).
 - Defence Science & Technology Portfolio overview.
 
+## Getting Oriented (learning the defence market)
+
+New to defence? The biggest early risk is rarely the technology. It is misreading how the market works: who decides versus who talks, how funding differs from procurement, and why a single pitch fails across operators, programme managers, and buyers, who each judge you on different things. Start with the free routes:
+
+- The Hitchhiker's Guide to the Valley of Death (listed above), the SME procurement primer.
+- DASA explainer videos and engagement events.
+- The BattleLab Co-Collaboration Space and your [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|Regional Defence and Security Cluster]], where much of the orientation happens in person.
+- The MOD SME Action Plan, the Strategic Defence Review, and the Defence and Security Industrial Strategy for the policy backdrop.
+
+A paid option, worth a focused month on the free trial:
+
+- [[Intelligence/defence-landscape/Portals/DefTechLink|DefTechLink]]'s DefTechLearn library is the structured version of all this: an introductory course on the defence sector, plus short articles and videos on procurement, funding, primes, teaming, and pitching. It is a subscription with a free trial, so a concentrated month can cover the orientation without an ongoing cost. See the portal page for an honest read on whether the wider subscription is worth keeping.
+
 ## Things to Do
 
 1. Register on [[Intelligence/defence-landscape/Portals/Helios SME Portal|Helios SME Portal]] (JOSCAR).

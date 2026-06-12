@@ -15,6 +15,7 @@ The recurring UK and international defence events worth tracking. Each series wi
 |---|---|---|---|
 | [[Intelligence/events/DSEI/About DSEI\|DSEI]] | Biennial (odd years) | ExCeL London | The UK's largest defence and security trade show. End-user demonstrations, supplier exhibition, conference programme. |
 | [[Intelligence/events/Farnborough International Airshow/About Farnborough International Airshow\|Farnborough International Airshow]] | Biennial (even years) | Farnborough, Hampshire | Largest UK aerospace and defence airshow. Trade days plus public days; major defence procurement announcements typical. |
+| [[Intelligence/events/DVD/About DVD\|DVD (Defence Vehicle Dynamics)]] | Biennial (even years) | UTAC Millbrook, Bedfordshire | The UK's land-equipment exhibition. DE&S and Army-facing, with live vehicle demonstrations on the proving ground. The land-domain counterpart to DSEI. |
 | [[Intelligence/events/DPRTE/About DPRTE\|DPRTE]] | Annual | Cardiff (and online) | Defence Procurement, Research, Technology, Exportability. MOD-engaged conference focused on SMEs and supply-chain entry. |
 | [[Intelligence/events/Security and Policing/About Security and Policing\|Security and Policing]] | Annual | Farnborough, Hampshire | The Home Office's annual security-and-policing-only trade event. Closed door (Home Office vetting); the homeland-security counterpart to DSEI. |
 
