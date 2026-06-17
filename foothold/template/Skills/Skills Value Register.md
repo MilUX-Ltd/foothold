@@ -22,7 +22,7 @@ Re-review and update the row whenever a skill you adopted changes materially, or
 
 | Skill | For | Source | Safety | Decision | Date | Reasoning |
 |---|---|---|---|---|---|---|
-| _No reviews logged yet._ | | | | | | |
+| `pm-skills` (32 forked) | You (internal) | github.com/phuryn/pm-skills via MilUX (MIT) | PASS | Use as is (generic public cut) | 2026-06-16 | Forked from MilUX's adopted set; MilUX-internal references and the F4P method removed for public release. Attribution and MIT retained, see NOTICE.md. |
 
 ## Decisions, in brief
 

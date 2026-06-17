@@ -15,7 +15,7 @@ version: 1.0.0
 question_set: Montpellier
 last_reviewed: 2026-05-24
 maintainer: MilUX
-manifest_url: https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/cyber-essentials-ready/manifest.json
+manifest_url: https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/business-skills/cyber-essentials-ready/manifest.json
 license: Foothold pack, MIT
 audited: 2026-06-08
 audit_verdict: pass

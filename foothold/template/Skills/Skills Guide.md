@@ -13,16 +13,21 @@ Skills are different from policies. Policy lives in `Knowledge/` (rules agents f
 
 ## Structure
 
+Skills are sorted into **category folders**, one per broad area, with each skill a folder inside:
+
 ```
 Skills/
 ├── Skills Guide.md                 (this file)
-└── <skill-name>/
-    ├── SKILL.md                    (executable definition with YAML frontmatter)
-    └── references/                 (optional source material the skill reads)
-        └── <reference file>.md
+└── <category>-skills/              (e.g. pm-skills, content-skills, business-skills)
+    └── <skill-name>/
+        ├── SKILL.md                (executable definition with YAML frontmatter)
+        └── references/             (optional source material the skill reads)
+            └── <reference file>.md
 ```
 
-One folder per skill. The folder name is kebab-case (`add-contact/`, `weekly-review/`, `linkedin-writer/`).
+The categories are `pm-skills/` (product, strategy, discovery, go-to-market), `content-skills/` (writing and comms), `business-skills/` (ops, finance, legal, admin), `crm-skills/` (relationships and network), and `meta-skills/` (skill and vault management); add `delivery-skills/` or `maker-skills/` if you need them. Inside a category, one folder per skill, kebab-case (`add-contact/`, `meeting-prep/`, `pitch-prep/`). Put a new skill in its best-fit category.
+
+These are plain organisational folders, not Claude Code plugins: a skill is still just a folder with a `SKILL.md`. A plugin would add a `.claude-plugin/plugin.json` manifest and a `skills/` subfolder; we do not use that form here.
 
 Inside each skill folder:
 

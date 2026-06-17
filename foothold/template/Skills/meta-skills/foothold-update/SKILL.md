@@ -94,13 +94,13 @@ Confirm the user is in a Foothold pack:
 
 ## Self-update check (runs before everything else)
 
-The update skill propagates itself through the same mechanism it uses to propagate content: it's a tracked file at `Skills/foothold-update/SKILL.md`. If the skill itself has changed on GitHub since the user last ran it, the right thing to do is upgrade the skill first, then run the reconcile under the new behaviour.
+The update skill propagates itself through the same mechanism it uses to propagate content: it's a tracked file at `Skills/meta-skills/foothold-update/SKILL.md`. If the skill itself has changed on GitHub since the user last ran it, the right thing to do is upgrade the skill first, then run the reconcile under the new behaviour.
 
-This step runs **before** the main file-by-file reconcile, immediately after Pre-flight. It is single-purpose: ensure the user is on the latest version of `Skills/foothold-update/SKILL.md` before any other work happens.
+This step runs **before** the main file-by-file reconcile, immediately after Pre-flight. It is single-purpose: ensure the user is on the latest version of `Skills/meta-skills/foothold-update/SKILL.md` before any other work happens.
 
 ### Sub-step S.1 — Fetch only the skill file's SHA
 
-Make a small targeted call to the GitHub tree API and pull out the entry for `foothold/template/Skills/foothold-update/SKILL.md`. The full tree fetch will happen in Step 1; this just front-loads the one entry we need to decide whether to self-upgrade.
+Make a small targeted call to the GitHub tree API and pull out the entry for `foothold/template/Skills/meta-skills/foothold-update/SKILL.md`. The full tree fetch will happen in Step 1; this just front-loads the one entry we need to decide whether to self-upgrade.
 
 In practice the cheapest path is to call the same tree API endpoint Step 1 uses, but only consume the entry for the skill file from the response. Hold the rest of the tree in memory for Step 1.
 
@@ -108,19 +108,19 @@ In practice the cheapest path is to call the same tree API endpoint Step 1 uses,
 GET https://api.github.com/repos/MilUX-Ltd/foothold/git/trees/main?recursive=1
 ```
 
-From the response, find the entry where `path == "foothold/template/Skills/foothold-update/SKILL.md"`. Record its `sha` as `remote_skill_sha`.
+From the response, find the entry where `path == "foothold/template/Skills/meta-skills/foothold-update/SKILL.md"`. Record its `sha` as `remote_skill_sha`.
 
 ### Sub-step S.2 — Determine the local skill SHA
 
-The vault has the running copy at `Skills/foothold-update/SKILL.md`. Compute its git-blob SHA the same way Step 2 will compute every other file's SHA:
+The vault has the running copy at `Skills/meta-skills/foothold-update/SKILL.md`. Compute its git-blob SHA the same way Step 2 will compute every other file's SHA:
 
 ```
-git hash-object Skills/foothold-update/SKILL.md
+git hash-object Skills/meta-skills/foothold-update/SKILL.md
 ```
 
 Or the Python equivalent if git isn't available. Record this as `local_skill_sha`.
 
-Also look up `stored_skill_sha = last_known_shas["Skills/foothold-update/SKILL.md"]` from `.foothold/config.yml`. May be absent on legacy installs.
+Also look up `stored_skill_sha = last_known_shas["Skills/meta-skills/foothold-update/SKILL.md"]` from `.foothold/config.yml`. May be absent on legacy installs.
 
 ### Sub-step S.3 — Decide whether to upgrade the skill
 
@@ -151,14 +151,14 @@ If the user picks **Upgrade and continue**:
 1. Fetch the raw content of the new SKILL.md from GitHub:
 
    ```
-   GET https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/foothold-update/SKILL.md
+   GET https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/meta-skills/foothold-update/SKILL.md
    ```
 
 2. Apply placeholder substitution (the skill file shouldn't normally contain `{{...}}` tokens, but run the pass for consistency).
 
-3. Write it to `Skills/foothold-update/SKILL.md`, overwriting the existing file.
+3. Write it to `Skills/meta-skills/foothold-update/SKILL.md`, overwriting the existing file.
 
-4. Update `last_known_shas["Skills/foothold-update/SKILL.md"]` to `remote_skill_sha` in `.foothold/config.yml`. Write the config.
+4. Update `last_known_shas["Skills/meta-skills/foothold-update/SKILL.md"]` to `remote_skill_sha` in `.foothold/config.yml`. Write the config.
 
 5. Tell the user, in one line: "Update skill upgraded to the latest version. Re-invoking with the new behaviour now."
 

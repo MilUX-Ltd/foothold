@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PICKET — Demo Day pitch (worked example)</title>
+<!--
+  WORKED EXAMPLE pitch deck for founders building a pitch.
+  Aesthetic: Linear (getdesign.md/linear.app) — near-black canvas, single lavender accent,
+  dense type, surface-ladder cards, no second colour, no atmospheric gradients.
+  Built for a 3-minute Demo Day pitch + 2-minute Q&A. 8 pitch beats + 1 anatomy slide.
+  Swap the PICKET content for a real team's build; the structure is the point.
+  Navigate: arrow keys / space, mouse wheel, swipe. Press F for fullscreen.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ---- Linear design tokens (from getdesign.md/linear.app DESIGN.md) ---- */
+  :root{
+    --primary:#5e6ad2; --primary-hover:#828fff; --on-primary:#fff;
+    --ink:#f7f8f8; --ink-muted:#d0d6e0; --ink-subtle:#8a8f98; --ink-tertiary:#62666d;
+    --canvas:#010102; --s1:#0f1011; --s2:#141516; --s3:#18191a;
+    --hairline:#23252a; --hairline-strong:#34343a;
+    --success:#27a644;
+    --display:"Inter",-apple-system,system-ui,"Segoe UI",Roboto,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:var(--canvas); color:var(--ink); font-family:var(--display);
+    -webkit-font-smoothing:antialiased; overflow:hidden;
+  }
+  .deck{height:100vh;height:100dvh;overflow:hidden;position:relative}
+
+  /* ---- slide scaffold: each slide is exactly one viewport ---- */
+  .slide{
+    position:absolute; inset:0; height:100vh; height:100dvh; overflow:hidden;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:clamp(32px,6vw,110px);
+    opacity:0; visibility:hidden; transform:translateY(14px);
+    transition:opacity .5s ease, transform .5s ease, visibility .5s;
+  }
+  .slide.active{opacity:1; visibility:visible; transform:none}
+  .slide.active .r{animation:rise .6s cubic-bezier(.2,.7,.2,1) backwards}
+  .slide.active .r:nth-child(2){animation-delay:.07s}
+  .slide.active .r:nth-child(3){animation-delay:.14s}
+  .slide.active .r:nth-child(4){animation-delay:.21s}
+  .slide.active .r:nth-child(5){animation-delay:.28s}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+  .eyebrow{
+    font-family:var(--mono); font-size:clamp(11px,1.05vw,13px); font-weight:500;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-subtle);
+    margin-bottom:clamp(16px,2.2vh,28px); display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:9999px;background:var(--primary)}
+
+  h1{font-weight:600; letter-spacing:-.03em; line-height:1.04; font-size:clamp(40px,7.4vw,96px)}
+  h2{font-weight:600; letter-spacing:-.022em; line-height:1.08; font-size:clamp(30px,4.7vw,60px)}
+  .lede{font-size:clamp(17px,1.95vw,24px); line-height:1.5; color:var(--ink-muted); font-weight:400; max-width:60ch}
+  .lede strong{color:var(--ink);font-weight:600}
+  .accent{color:var(--primary)}
+  .max{max-width:1180px;width:100%;margin:0 auto}
+
+  /* title slide */
+  .title-wrap{display:flex;flex-direction:column;gap:clamp(20px,3vh,34px)}
+  .wordmark{display:flex;align-items:center;gap:14px}
+  .glyph{width:clamp(30px,3.4vw,42px);height:clamp(30px,3.4vw,42px);border-radius:9px;
+    background:linear-gradient(150deg,var(--primary),#3d47a8);display:grid;place-items:center;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+  .glyph span{font-family:var(--mono);font-weight:500;color:#fff;font-size:clamp(15px,1.7vw,20px)}
+  .badge{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-subtle);border:1px solid var(--hairline);border-radius:9999px;padding:5px 11px}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px 22px;color:var(--ink-subtle);
+    font-size:clamp(13px,1.2vw,15px);align-items:center}
+  .meta-row .sep{color:var(--hairline-strong)}
+
+  /* cards / grids */
+  .grid{display:grid;gap:clamp(12px,1.4vw,18px);margin-top:clamp(22px,3.4vh,40px)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:1.05fr .95fr;align-items:center}
+  .card{background:var(--s1);border:1px solid var(--hairline);border-radius:12px;
+    padding:clamp(18px,1.8vw,26px);position:relative}
+  .card .n{font-family:var(--mono);color:var(--primary);font-size:13px;font-weight:500;margin-bottom:12px}
+  .card h3{font-size:clamp(16px,1.5vw,20px);font-weight:600;letter-spacing:-.01em;margin-bottom:8px}
+  .card p{color:var(--ink-subtle);font-size:clamp(13px,1.15vw,15px);line-height:1.5}
+  .card.lift{background:var(--s2);border-color:var(--hairline-strong)}
+
+  .stat{font-weight:600;letter-spacing:-.03em;font-size:clamp(34px,4.4vw,58px);line-height:1}
+  .stat small{display:block;font-size:clamp(13px,1.15vw,15px);font-weight:400;color:var(--ink-subtle);
+    letter-spacing:0;margin-top:10px;line-height:1.45}
+
+  /* mock demo panel */
+  .screen{background:var(--s1);border:1px solid var(--hairline);border-radius:16px;overflow:hidden}
+  .screen-bar{height:38px;border-bottom:1px solid var(--hairline);display:flex;align-items:center;
+    gap:7px;padding:0 14px}
+  .screen-bar i{width:9px;height:9px;border-radius:9999px;background:var(--hairline-strong);display:block}
+  .screen-body{padding:clamp(18px,2vw,28px);font-family:var(--mono);font-size:clamp(12px,1.05vw,13.5px);
+    line-height:1.85;color:var(--ink-muted)}
+  .screen-body .k{color:var(--primary)} .screen-body .g{color:var(--success)} .screen-body .d{color:var(--ink-tertiary)}
+  .ping{display:inline-block;width:8px;height:8px;border-radius:9999px;background:var(--success);
+    margin-right:8px;box-shadow:0 0 0 0 rgba(39,166,68,.6);animation:ping 1.8s infinite}
+  @keyframes ping{0%{box-shadow:0 0 0 0 rgba(39,166,68,.5)}70%{box-shadow:0 0 0 9px rgba(39,166,68,0)}100%{box-shadow:0 0 0 0 rgba(39,166,68,0)}}
+
+  ul.clean{list-style:none;display:flex;flex-direction:column;gap:clamp(11px,1.5vh,16px);margin-top:clamp(20px,3vh,34px)}
+  ul.clean li{display:flex;gap:14px;align-items:flex-start;font-size:clamp(15px,1.55vw,20px);color:var(--ink-muted);line-height:1.4}
+  ul.clean li b{color:var(--ink);font-weight:600}
+  ul.clean .mk{font-family:var(--mono);color:var(--primary);font-size:13px;font-weight:500;
+    border:1px solid var(--hairline);border-radius:6px;padding:2px 8px;flex:0 0 auto;margin-top:3px}
+
+  .ask{display:flex;flex-direction:column;gap:14px;margin-top:clamp(22px,3.4vh,40px)}
+  .ask .row{display:flex;align-items:baseline;gap:18px;border-top:1px solid var(--hairline);padding-top:14px}
+  .ask .row .lab{font-family:var(--mono);color:var(--ink-subtle);font-size:13px;flex:0 0 clamp(120px,14vw,180px)}
+  .ask .row .val{font-size:clamp(16px,1.6vw,21px);font-weight:500}
+
+  /* anatomy slide */
+  .beats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.3vw,18px);margin-top:clamp(20px,3vh,34px)}
+  .beat{background:var(--s1);border:1px solid var(--hairline);border-radius:10px;padding:clamp(15px,1.5vw,22px)}
+  .beat .num{font-family:var(--mono);color:var(--primary);font-size:11px;letter-spacing:.06em;margin-bottom:9px}
+  .beat h4{font-size:clamp(14px,1.25vw,16px);font-weight:600;letter-spacing:-.01em;margin-bottom:5px}
+  .beat p{color:var(--ink-subtle);font-size:clamp(12px,1vw,13px);line-height:1.4}
+
+  /* chrome: progress + counter + hint */
+  nav.dots{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);display:flex;gap:9px;z-index:20}
+  nav.dots button{width:7px;height:7px;border-radius:9999px;border:0;background:var(--hairline-strong);
+    padding:0;cursor:pointer;transition:.3s}
+  nav.dots button.on{background:var(--primary);width:22px}
+  .counter{position:fixed;top:24px;right:30px;font-family:var(--mono);font-size:12px;color:var(--ink-subtle);z-index:20}
+  .counter b{color:var(--ink)}
+  .brandtag{position:fixed;top:24px;left:30px;font-family:var(--mono);font-size:12px;color:var(--ink-tertiary);z-index:20}
+  .hint{position:fixed;bottom:26px;right:30px;font-family:var(--mono);font-size:11px;color:var(--ink-tertiary);z-index:20}
+
+  @media (max-width:820px){
+    .g3{grid-template-columns:1fr;gap:10px}.g2{grid-template-columns:1fr}.beats{grid-template-columns:repeat(2,1fr)}
+    .ask .row{flex-direction:column;gap:4px}.hint{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .slide{transition:opacity .2s}.slide .r,.slide.active .r{animation:none!important}
+    .ping{animation:none}
+  }
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <!-- 1 — Title -->
+  <section class="slide active">
+    <div class="max title-wrap">
+      <div class="r wordmark">
+        <span class="glyph"><span>P</span></span>
+        <span class="badge">Worked example · swap in your build</span>
+      </div>
+      <h1 class="r">Picket</h1>
+      <p class="r lede" style="max-width:46ch">Turn every soldier's phone into a <strong>passive drone-detection sensor</strong>. No new hardware. A section hears the threat before anyone sees it.</p>
+      <div class="r meta-row">
+        <span>Team Picket</span><span class="sep">/</span>
+        <span>European Defence Tech Hackathon</span><span class="sep">/</span>
+        <span>London · Demo Day 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 — The gap -->
+  <section class="slide">
+    <div class="max">
+      <div class="r eyebrow"><span class="dot"></span>The gap</div>
+      <h2 class="r">A one-way attack drone arrives<br>before any sensor is set up.</h2>
+      <p class="r lede" style="margin-top:clamp(20px,3vh,34px)">The first warning is a soldier hearing the motor. Today that signal dies in one person's ears. There is no cheap, deployable way to turn it into a shared, located alert across a section.</p>
+      <div class="r grid g3">
+        <div class="card"><div class="stat">~2 min<small>From "I can hear it" to impact. No time to deploy a fixed counter-UAS mast.</small></div></div>
+        <div class="card"><div class="stat">£0<small>Spent on detection by a dismounted section that already carries phones and EUDs.</small></div></div>
+        <div class="card"><div class="stat">1 set of ears<small>The detection range of the current system: whoever happens to be listening.</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 — Who feels it (end user) -->
+  <section class="slide">
+    <div class="max">
+      <div class="r eyebrow"><span class="dot"></span>Who feels it</div>
+      <h2 class="r">We built this for the section,<br>not the headquarters.</h2>
+      <div class="r grid g2" style="margin-top:clamp(24px,3.4vh,42px)">
+        <div>
+          <p class="lede">Our user is <strong>a dismounted commander</strong> moving without overhead cover. They will not stop to configure a sensor, look at a laptop, or wait for a network. The tool has to work from the device already in their chest rig, in seconds, with gloves on.</p>
+        </div>
+        <div class="card lift">
+          <div class="n">END USER</div>
+          <h3>Section 2IC, light role infantry</h3>
+          <p>"I don't want another box to carry or charge. I want to know there's a drone, roughly where, and which way to move, before it's overhead. On the kit I already trust."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 — The idea / demo -->
+  <section class="slide">
+    <div class="max">
+      <div class="r eyebrow"><span class="dot"></span>The idea</div>
+      <div class="r grid g2">
+        <div>
+          <h2 style="font-size:clamp(28px,4vw,52px)">Every phone is already<br>a microphone and a clock.</h2>
+          <p class="lede" style="margin-top:22px">Mesh a handful across a section. Each one listens for the acoustic signature of an FPV motor. Compare the arrival times and you get <strong>detection, classification, and a bearing</strong>, with zero new hardware.</p>
+        </div>
+        <div class="r screen">
+          <div class="screen-bar"><i></i><i></i><i></i></div>
+          <div class="screen-body">
+<span class="d">// picket · section net</span><br>
+<span class="ping"></span><span class="g">THREAT DETECTED</span> &nbsp;<span class="d">conf 0.91</span><br>
+class &nbsp;= <span class="k">FPV / quad</span><br>
+bearing = <span class="k">047°</span> <span class="d">NE</span><br>
+range &nbsp;≈ <span class="k">380 m</span> <span class="d">closing</span><br>
+nodes &nbsp;= <span class="g">4 phones</span> <span class="d">in agreement</span><br>
+<span class="d">move:</span> <span class="k">break left, hard cover 210°</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 — How it works -->
+  <section class="slide">
+    <div class="max">
+      <div class="r eyebrow"><span class="dot"></span>How it works</div>
+      <h2 class="r">Three steps. All on the edge.</h2>
+      <div class="r grid g3">
+        <div class="card"><div class="n">01 · LISTEN</div><h3>On-device model</h3><p>A small acoustic classifier runs locally on each phone. No audio leaves the device; it only ever emits a timestamped detection event.</p></div>
+        <div class="card"><div class="n">02 · SHARE</div><h3>Low-bandwidth mesh</h3><p>Detections gossip across the section over the existing radio or BLE mesh. Bytes, not streams. Works with no signal and no cloud.</p></div>
+        <div class="card"><div class="n">03 · LOCATE</div><h3>Time-difference of arrival</h3><p>Four agreeing clocks turn four "I heard it" events into a bearing and a rough range, then a plain move-order on screen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 — Why now -->
+  <section class="slide">
+    <div class="max">
+      <div class="r eyebrow"><span class="dot"></span>Why now</div>
+      <h2 class="r">This was not buildable<br>three years ago.</h2>
+      <ul class="clean">
+        <li class="r"><span class="mk">THREAT</span><span><b>FPV and one-way attack drones are now the defining battlefield risk.</b> Cheap, numerous, and acoustically distinctive.</span></li>
+        <li class="r"><span class="mk">DEVICE</span><span><b>Ruggedised end-user devices are already issued.</b> ATAK-class phones are in the section. We add software, not weight.</span></li>
+        <li class="r"><span class="mk">MODEL</span><span><b>On-device ML is finally good and cheap enough</b> to classify a motor in real time without draining the battery or phoning home.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7 — Traction (hackathon-honest) -->
+  <section class="slide">
+    <div class="max">
+      <div class="r eyebrow"><span class="dot"></span>What we proved this weekend</div>
+      <h2 class="r">A working picket line,<br>built in 44 hours.</h2>
+      <div class="r grid g3">
+        <div class="card lift"><div class="stat">4<small>Phones meshed into one detection net, syncing detections with no internet.</small></div></div>
+        <div class="card lift"><div class="stat">310 m<small>Range at which we detected and bore-sighted a test quad in the car park.</small></div></div>
+        <div class="card lift"><div class="stat">1.4 s<small>From first node hearing the motor to a move-order on every screen.</small></div></div>
+      </div>
+      <p class="r lede" style="margin-top:clamp(18px,2.6vh,30px);font-size:clamp(14px,1.3vw,17px)">Trained on ~600 open FPV audio clips plus our own recordings. Not production. Enough to show the physics holds.</p>
+    </div>
+  </section>
+
+  <!-- 8 — The ask -->
+  <section class="slide">
+    <div class="max">
+      <div class="r eyebrow"><span class="dot"></span>The ask</div>
+      <h2 class="r">We know how to harden it.<br>We need three things.</h2>
+      <div class="ask">
+        <div class="r row"><div class="lab">PILOT</div><div class="val">Three sections to field-test for two weeks, with honest feedback.</div></div>
+        <div class="r row"><div class="lab">PARTNER</div><div class="val">An EUD or acoustic-sensor maker to validate against real signatures.</div></div>
+        <div class="r row"><div class="lab">FUNDING</div><div class="val">£150k to take the model from car park to field-grade over six months.</div></div>
+      </div>
+      <p class="r lede accent" style="margin-top:clamp(20px,3vh,36px);font-weight:600;font-size:clamp(17px,1.8vw,23px)">Picket — the section hears it first. Now they all do.</p>
+    </div>
+  </section>
+
+  <!-- 9 — Anatomy (teaching aid) -->
+  <section class="slide">
+    <div class="max">
+      <div class="r eyebrow"><span class="dot"></span>Mentor note · the three-act pitch (Maltsev)</div>
+      <h2 class="r" style="font-size:clamp(26px,3.6vw,46px)">Steal the arc. Swap the content.</h2>
+      <div class="r beats">
+        <div class="beat"><div class="num">ACT I · SET-UP &nbsp;·&nbsp; 0:00–1:00</div><h4 style="margin-bottom:9px">The hook</h4><p>Problem, sized. Who feels it. Solution. Why now.</p></div>
+        <div class="beat"><div class="num">ACT II · CONFRONTATION &nbsp;·&nbsp; 1:00–2:00</div><h4 style="margin-bottom:9px">The proof of value</h4><p>Product running. Value quantified. Market. Honest competition.</p></div>
+        <div class="beat"><div class="num">ACT III · RESOLUTION &nbsp;·&nbsp; 2:00–3:00</div><h4 style="margin-bottom:9px">The close</h4><p>Traction. Team. A specific ask. The one-line vision.</p></div>
+      </div>
+      <p class="r lede" style="margin-top:clamp(16px,2.4vh,28px);font-size:clamp(13px,1.2vw,15px);color:var(--ink-subtle)">Three minutes, ~150 words a minute, so about 450 words. The demo is the hero. Structure from Gleb Maltsev's pitch primer; aesthetic on loan from Linear via getdesign.md.</p>
+    </div>
+  </section>
+
+</div>
+
+<div class="brandtag">PICKET · demo</div>
+<div class="counter"><b id="cur">1</b> / 9</div>
+<nav class="dots" id="dots"></nav>
+<div class="hint">← → to move · F fullscreen</div>
+
+<script>
+  // Lightweight presentation controller: keyboard, wheel, touch, dots.
+  const slides=[...document.querySelectorAll('.slide')];
+  const dotsWrap=document.getElementById('dots');
+  const cur=document.getElementById('cur');
+  let i=0, lock=false;
+  slides.forEach((_,n)=>{const b=document.createElement('button');b.onclick=()=>go(n);dotsWrap.appendChild(b);});
+  const dots=[...dotsWrap.children];
+  function go(n){
+    n=Math.max(0,Math.min(slides.length-1,n));
+    slides[i].classList.remove('active');
+    i=n;
+    slides[i].classList.add('active');
+    dots.forEach((d,k)=>d.classList.toggle('on',k===i));
+    cur.textContent=i+1;
+  }
+  function next(){go(i+1)} function prev(){go(i-1)}
+  go(0);
+  addEventListener('keydown',e=>{
+    if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){e.preventDefault();next();}
+    else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();prev();}
+    else if(e.key==='Home')go(0); else if(e.key==='End')go(slides.length-1);
+    else if(e.key.toLowerCase()==='f'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();}
+  });
+  addEventListener('wheel',e=>{
+    if(lock)return; if(Math.abs(e.deltaY)<24)return;
+    lock=true; e.deltaY>0?next():prev(); setTimeout(()=>lock=false,650);
+  },{passive:true});
+  let sx=0,sy=0;
+  addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
+  addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy;
+    if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>45){dx<0?next():prev();}
+  },{passive:true});
+</script>
+</body>
+</html>
