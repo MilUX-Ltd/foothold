@@ -39,7 +39,7 @@ Then wait. When they upload or point to it, resume.
 **Once located:**
 
 1. Note the zip path. Unzip it to a fresh working directory outside the target vault (for example a temp dir, or a `.foothold-unpack/` folder you delete afterwards). Use the Bash tool's `unzip`, or read and expand it however is available.
-2. Find the template root inside the unpacked tree. The archive's top level is a single folder (for example `foothold-template/`) whose immediate children are the vault folders (`Context/`, `CRM/`, `Intelligence/`, `Resources/`, `Skills/`, `Home.md`, `CLAUDE.md`, `.obsidian/`, and so on). That folder is the **template root**. If the archive has the vault folders at its very top level instead, the archive itself is the template root.
+2. Find the template root inside the unpacked tree. The archive's top level is a single folder (for example `foothold-template/`) whose immediate children are the vault folders (`Context/`, `CRM/`, `Intelligence/`, `Resources/`, `Skills/`, `Home.md`, `CLAUDE.md`, and so on). That folder is the **template root**. If the archive has the vault folders at its very top level instead, the archive itself is the template root.
 3. Sanity-check: the template root must contain at least `Context/` and `CRM/`. If it does not, tell the user the zip does not look like a Foothold content pack and stop.
 
 Now proceed to Phase A.0.
@@ -87,11 +87,11 @@ If the target directory already contains a `CLAUDE.md` at its exact root, the va
 
 ### Step A.2: Copy and substitute
 
-For each file under the template root (enumerate with Glob or `find`; this is the complete shipping set, around 450 files, including the `.obsidian/` folder so the vault opens cleanly):
+For each file under the template root (enumerate with Glob or `find`; this is the complete shipping set, plain Markdown, around 480 files). The pack ships no `.obsidian/` folder: the user does not need Obsidian to use it (a Claude agent reads the Markdown directly), and if they do open it in Obsidian it creates its own `.obsidian/`:
 
 1. Compute the target path: strip the template-root prefix, keep the rest of the relative path.
 2. Apply install-time substitution (Phase A.0 table only) to the filename. The one templated filename is `Context/{{pack_owner}}.md`.
-3. Copy the file, apply install-time substitution to text content, create missing parent directories, write the file. Copy binary files (images, `.obsidian` assets) untouched.
+3. Copy the file, apply install-time substitution to text content, create missing parent directories, write the file. Copy binary files (images and other assets) untouched.
 
 A bulk copy of the template root into the target followed by an in-place substitution pass over text files is fine, provided only the Phase A.0 tokens are replaced and binaries are left alone.
 

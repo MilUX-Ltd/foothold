@@ -6,8 +6,8 @@
   "maintainer": "MilUX",
   "maintainer_url": "https://milux.co.uk",
   "license": "MIT",
-  "manifest_url": "https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/cyber-essentials-ready/manifest.json",
-  "release_notes_url": "https://github.com/MilUX-Ltd/foothold/blob/main/foothold/template/Skills/cyber-essentials-ready/CHANGELOG.md",
+  "manifest_url": "https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/business-skills/cyber-essentials-ready/manifest.json",
+  "release_notes_url": "https://github.com/MilUX-Ltd/foothold/blob/main/foothold/template/Skills/business-skills/cyber-essentials-ready/CHANGELOG.md",
   "scope": {
     "in": ["macOS 14+", "Windows 10", "Windows 11"],
     "out": ["mobile devices", "SaaS MFA"]

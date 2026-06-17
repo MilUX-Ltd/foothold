@@ -1,5 +1,14 @@
 # Foothold changelog
 
+## 1.4.0, 2026-06-16
+
+Adds the pitch module and reorganises Skills into category folders.
+
+- New `Skills/pm-skills/` set: `pitch-prep`, plus 32 product-management skills forked from phuryn/pm-skills (MIT), adapted for defence-sector founders with the proprietary method removed (see `Skills/pm-skills/NOTICE.md`).
+- New pitch materials: the three-act framework (`Resources/Frameworks`), two worked example decks (`Resources/Templates`), and a public-tools reference (`Resources/Reference`).
+- Skills reorganised from a flat layout into category folders (`pm-skills`, `content-skills`, `business-skills`, `crm-skills`, `meta-skills`); the Skills Guide documents the new convention.
+
+
 ## 1.3.0, 2026-05-30
 
 Adds the `Customer Engagements/` top-level folder, separating work you deliver for an external organisation from work you do for yourself.
