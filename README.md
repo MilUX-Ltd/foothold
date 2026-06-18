@@ -34,8 +34,8 @@ This is the install walkthrough. The whole thing takes about ten minutes once yo
 
 ### What you'll need
 
-- **Cowork.** Anthropic's desktop app for non-developers. Sign up at [claude.com](https://claude.com) and download Cowork from there.
-- **Obsidian.** Free knowledge management app. Download from [obsidian.md](https://obsidian.md).
+- **A paid Claude subscription, with Cowork.** Cowork is Anthropic's desktop app for non-developers, and it runs inside a paid Claude plan. Sign up and subscribe at [claude.com](https://claude.com), then download the Claude desktop app; Cowork is a tab inside it. There is a running cost here: budget for one Claude subscription per person who will run the vault.
+- **Obsidian.** Free knowledge management app. Download from [obsidian.md](https://obsidian.md). Obsidian Sync, used for keeping a vault in step across devices or people, is a paid add-on; a free alternative is covered under Scaling across a team below.
 
 ### Step 1 — Add the Foothold marketplace
 
@@ -120,6 +120,21 @@ In the first hour, focus on:
 1. **Open `Context/<your name>.md`.** Check the operator profile reads well. Revise anything that needs sharpening.
 2. **Read the per-folder Guides.** Every folder has a `<Folder Name> Guide.md` at its root. Knowledge Guide, Operations Guide, Context Guide, and CRM Guide are the load-bearing ones.
 3. **Connect Cowork to your vault.** Point Cowork at your new vault folder. Cowork and Obsidian now work against the same files; agents you run in Cowork write into the vault, and you see them in Obsidian.
+
+## Scaling across a team
+
+Foothold is built for a single operator. The setup interview asks who *you* are, the pages are *your* profile, and the update model assumes one person reconciling their vault against upstream. That is the right starting point for a founder. It is worth knowing what changes when a second or third person comes in, before you get there.
+
+The main considerations:
+
+- **One shared vault, or one per person.** A single shared vault keeps everyone on the same canonical knowledge, at the cost of coordinating edits. Separate per-person vaults stay simple individually but drift apart over time. Most small teams want a shared vault for reference content (frameworks, MOD bodies, CRM) and accept that personal working notes can live wherever suits.
+- **How the vault syncs between people.** Obsidian Sync is the paid, no-setup option. A private Git repository is the free alternative and gives you version history, at the cost of a little more setup. Pick one before two people are editing, not after.
+- **Who curates canonical knowledge.** Name one curator. Foothold's value is that its reference content is trustworthy; that holds only if changes go through someone. Without a curator, a shared vault fills with half-finished and contradictory pages.
+- **Write boundaries.** Decide who can write where, and keep agents on a tighter rein than people. A common pattern: everyone can read everything, drafts land in a staging area, and only the curator promotes a draft into the canonical folders.
+- **The update conflict model is per person.** `/foothold-update` reconciles one vault against upstream. If several people share a vault, agree that only one person runs updates, and avoid two people editing the same file in the same window, or the three-way reconcile has more to untangle.
+- **One Claude subscription each.** Everyone running the vault through Cowork needs their own paid Claude plan. Factor that into the cost as the team grows.
+
+None of this is needed on day one. Set the vault up as a single operator, get value from it, and come back to this section when a second person is ready to join.
 
 ## Share back
 

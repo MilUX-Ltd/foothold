@@ -1,0 +1,17 @@
+{
+  "skill": "design-system-setup",
+  "version": "1.0.0",
+  "category": "brand",
+  "last_reviewed": "2026-06-18",
+  "maintainer": "MilUX",
+  "maintainer_url": "https://milux.co.uk",
+  "license": "MIT",
+  "manifest_url": "https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/brand-skills/design-system-setup/manifest.json",
+  "release_notes_url": "https://github.com/MilUX-Ltd/foothold/blob/main/foothold/template/Skills/brand-skills/design-system-setup/CHANGELOG.md",
+  "runtime": "node",
+  "dependencies": "none",
+  "scope": {
+    "in": ["colour tokens", "type tokens", "spacing/radii tokens", "showcase page", "PDF/slide/letterhead starter templates", "written brand guidance"],
+    "out": ["logo design", "finished decks", "copywriting", "hosting/deployment"]
+  }
+}
