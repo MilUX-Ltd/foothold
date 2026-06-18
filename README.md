@@ -26,7 +26,7 @@ The operations still have to be run. Foothold is the position you run them from.
 
 ## Audience
 
-Founders running defence-sector businesses, in MilUX's network. Curated handoff, not a public download. v1.0 is released; install access is currently by invitation while we work through the MilUX network.
+Founders running defence-sector businesses. Free and available to all. Hands-on setup and ongoing support are available at a modest cost.
 
 ## Getting started
 
