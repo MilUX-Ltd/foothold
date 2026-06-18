@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "name": "Northgate",
+    "strapline": "Clarity under pressure."
+  },
+  "colors": {
+    "primary": "#1B2A4A",
+    "accent": "#C08A2D",
+    "neutral": "warm"
+  },
+  "fonts": {
+    "display": "Manrope",
+    "body": "Inter",
+    "mono": "Roboto Mono"
+  },
+  "style": {
+    "displayUppercase": true
+  },
+  "voice": {
+    "do": ["Plain language.", "Sentence case.", "Specific over abstract.", "British English."],
+    "dont": ["Jargon and hype.", "Exclamation marks.", "Filler and padding."]
+  }
+}
