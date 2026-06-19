@@ -1,5 +1,13 @@
 # Foothold changelog
 
+## 1.5.0, 2026-06-19
+
+Adds the `write-sow` business skill.
+
+- New `Skills/business-skills/write-sow/`: turns a transcript, job spec, statement of requirement, or bullet-point idea into an outcome-based Statement of Work. It shapes the contract to support an outside-IR35 position (control, substitution, mutuality, financial risk, part-and-parcel, equipment) and flags residual status risk rather than certifying status; builds a risk register scored by severity and likelihood, with a wording mitigation and a pricing response per risk; and recommends a pricing model (fixed-price per outcome, day-rate capped, or milestone-staged). Output is a branded PDF using the founder's own `Context/Brand.md` cues, plus a markdown working draft saved under `Customer Engagements/`.
+- UK-focused. The IR35 content is sourced to gov.uk and HMRC and carries a not-legal-or-tax-advice boundary. The skill drafts only; signature and sending are left to the founder's own e-signature and email tools.
+- Catalogued in `Skill Examples.md` (Commercial skills) and logged in the `Skills Value Register`.
+
 ## 1.4.0, 2026-06-16
 
 Adds the pitch module and reorganises Skills into category folders.

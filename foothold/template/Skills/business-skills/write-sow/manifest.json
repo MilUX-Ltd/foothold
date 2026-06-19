@@ -1,0 +1,14 @@
+{
+  "skill": "write-sow",
+  "version": "1.0.0",
+  "last_reviewed": "2026-06-19",
+  "maintainer": "MilUX",
+  "maintainer_url": "https://milux.co.uk",
+  "license": "MIT",
+  "manifest_url": "https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/business-skills/write-sow/manifest.json",
+  "release_notes_url": "https://github.com/MilUX-Ltd/foothold/blob/main/foothold/template/Skills/business-skills/write-sow/CHANGELOG.md",
+  "scope": {
+    "in": ["UK limited-company contractors", "outcome-based statements of work", "outside-IR35 contract shaping", "risk register and pricing recommendation"],
+    "out": ["legal or tax advice", "non-UK IR35 regimes", "contract execution or e-signature", "sending the document"]
+  }
+}
