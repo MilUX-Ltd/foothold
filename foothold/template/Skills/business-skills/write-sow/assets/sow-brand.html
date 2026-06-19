@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+  Branded SOW template for PDF rendering.
+  Fill the {{PLACEHOLDERS}} from the markdown SOW, then render to PDF
+  (WeasyPrint, or your environment's PDF tool).
+
+  BRAND: the :root palette below is a neutral professional default.
+  Before rendering, read the founder's Context/Brand.md "Visual identity"
+  section. If it names a primary colour and/or typeface, override
+  --brand-primary, --brand-accent and the font-family to match. If that
+  page is still placeholder hint text, leave the neutral defaults.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Statement of Work - {{CLIENT_LEGAL_NAME}}</title>
+<style>
+  :root{
+    --brand-primary:#1f2a37;   /* deep slate, neutral default; override from Context/Brand.md */
+    --brand-accent:#4b6584;    /* muted blue-grey accent */
+    --brand-soft:#f4f5f7;      /* soft background for table fills */
+    --brand-line:#cfd6de;      /* hairline borders */
+    --ink:#1c1c1a;
+  }
+  @page{
+    size:A4;
+    margin:22mm 18mm 20mm 18mm;
+    @bottom-center{
+      content:"{{pack_org}}  |  Statement of Work  |  {{SOW_REF}}  |  Page " counter(page) " of " counter(pages);
+      font-family:Georgia,'Times New Roman',serif;
+      font-size:8pt;color:var(--brand-accent);
+    }
+  }
+  body{
+    font-family:Georgia,'Times New Roman',serif;
+    color:var(--ink);font-size:10.5pt;line-height:1.5;margin:0;
+  }
+  .cover{
+    background:var(--brand-primary);color:#fff;
+    padding:34px 30px;border-radius:4px;margin-bottom:26px;
+  }
+  .cover .brand{
+    font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;
+    letter-spacing:2px;font-size:13pt;color:#fff;text-transform:uppercase;opacity:.85;
+  }
+  .cover h1{
+    font-family:'Helvetica Neue',Arial,sans-serif;font-size:24pt;margin:14px 0 6px;color:#fff;
+  }
+  .cover .sub{color:#dfe5ec;font-size:11pt;margin:0;}
+  .cover .strap{margin-top:18px;font-style:italic;color:#c7d0da;font-size:10pt;}
+  .meta{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:9.5pt;}
+  .meta td{padding:5px 8px;border:1px solid var(--brand-line);}
+  .meta td:first-child{
+    background:var(--brand-soft);font-family:'Helvetica Neue',Arial,sans-serif;
+    font-weight:600;color:var(--brand-primary);width:30%;
+  }
+  h2{
+    font-family:'Helvetica Neue',Arial,sans-serif;color:var(--brand-primary);
+    font-size:13pt;border-bottom:2px solid var(--brand-accent);
+    padding-bottom:4px;margin:22px 0 10px;
+  }
+  h3{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--brand-accent);font-size:11pt;margin:14px 0 6px;}
+  table.data{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:9.5pt;}
+  table.data th{
+    background:var(--brand-primary);color:#fff;text-align:left;
+    font-family:'Helvetica Neue',Arial,sans-serif;font-weight:600;padding:7px 8px;
+  }
+  table.data td{padding:6px 8px;border:1px solid var(--brand-line);vertical-align:top;}
+  table.data tr:nth-child(even) td{background:var(--brand-soft);}
+  ul{margin:6px 0 12px 18px;}
+  li{margin:3px 0;}
+  .rag-red{color:#8a1c1c;font-weight:700;}
+  .rag-amber{color:#9a5b00;font-weight:700;}
+  .rag-green{color:#1f6b2e;font-weight:700;}
+  .disclaimer{
+    background:var(--brand-soft);border-left:4px solid var(--brand-accent);
+    padding:12px 14px;font-size:9pt;color:var(--brand-accent);margin:14px 0;
+  }
+  .sigblock{margin-top:18px;font-size:10pt;}
+  .sigline{display:inline-block;border-bottom:1px solid var(--ink);width:240px;margin:0 8px;}
+</style>
+</head>
+<body>
+
+  <div class="cover">
+    <div class="brand">{{pack_org}}</div>
+    <h1>Statement of Work</h1>
+    <p class="sub">{{CLIENT_LEGAL_NAME}}: {{SHORT_TITLE}}</p>
+    <p class="strap">{{STRAPLINE_OPTIONAL}}</p>
+  </div>
+
+  <table class="meta">
+    <tr><td>SOW reference</td><td>{{SOW_REF}}</td></tr>
+    <tr><td>Version / date</td><td>{{VERSION}} &nbsp;|&nbsp; {{DATE}}</td></tr>
+    <tr><td>Parties</td><td>{{pack_org}} and {{CLIENT_LEGAL_NAME}}</td></tr>
+    <tr><td>Framework</td><td>{{MSA_OR_STANDALONE}}</td></tr>
+    <tr><td>Pricing model</td><td>{{PRICING_MODEL}}</td></tr>
+  </table>
+
+  <!--
+    BODY: render sections 1-15 of sow-template.md here.
+    Use <h2> for sections, <table class="data"> for deliverables / dependencies /
+    milestones, and the .rag-* classes inside the risk annex.
+  -->
+
+  {{SOW_BODY}}
+
+  <div class="disclaimer">
+    This Statement of Work reflects an outcome-based supplier engagement consistent with an
+    outside-IR35 position. It is not a determination of employment status for tax. Where the
+    Client is a medium or large organisation, the Client determines status under the off-payroll
+    working rules and issues a Status Determination Statement. Status is ultimately a question of
+    fact about the working relationship.
+  </div>
+
+  <h2>Signatures</h2>
+  <div class="sigblock">
+    <p>For {{pack_org}}: {{pack_owner}} <span class="sigline"></span> Date <span class="sigline" style="width:120px"></span></p>
+    <p>For {{CLIENT_LEGAL_NAME}}: {{CLIENT_SIGNATORY}} <span class="sigline"></span> Date <span class="sigline" style="width:120px"></span></p>
+  </div>
+
+</body>
+</html>

@@ -23,6 +23,7 @@ Re-review and update the row whenever a skill you adopted changes materially, or
 | Skill | For | Source | Safety | Decision | Date | Reasoning |
 |---|---|---|---|---|---|---|
 | `pm-skills` (32 forked) | You (internal) | github.com/phuryn/pm-skills via MilUX (MIT) | PASS | Use as is (generic public cut) | 2026-06-16 | Forked from MilUX's adopted set; MilUX-internal references and the F4P method removed for public release. Attribution and MIT retained, see NOTICE.md. |
+| `write-sow` | You (internal) | Built by MilUX (MIT) | PASS | Use as is | 2026-06-19 | Built for the pack: outcome-based, outside-IR35-shaped SOW drafting with a risk-to-price register. IR35 content sourced to gov.uk and HMRC. Reads documents only, no network sends; signature and sending left to the founder's own tools. |
 
 ## Decisions, in brief
 
