@@ -104,7 +104,7 @@ Roughly 80 specialist VC/PE funds are tracked across the European resilience and
 - **Air Street Capital, Decisive Point, GALLOS Technologies, Expeditions Fund, Alpine Space Ventures.** Frontier-tech, AI, and space specialists with defence-tech exposure.
 - **CyLon.** Cybersecurity accelerator and seed investor (also under accelerators above).
 - **SFC Capital, SMRK, Cavalry Ventures.** Earlier-stage UK and European seed funds.
-- **Bpifrance, Tikehau Capital, Omnes Capital, High-Tech Gründ, Starquest Innovacom.** French and German national-flavoured PE and VC vehicles, relevant for any UK SME planning a continental raise.
+- **Bpifrance, Tikehau Capital, Omnes Capital, High-Tech Gründerfonds, Starquest Innovacom.** French and German national-flavoured PE and VC vehicles, relevant for any UK SME planning a continental raise.
 
 ### Practical notes
 

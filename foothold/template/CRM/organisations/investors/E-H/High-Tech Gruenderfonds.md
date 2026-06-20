@@ -1,6 +1,6 @@
 ---
 type: organisation
-name: High-Tech Gründ
+name: High-Tech Gründerfonds
 website: https://www.htgf.de/
 date: 2026-05-26
 status: active
@@ -12,7 +12,7 @@ tags:
   - european
 ---
 
-# High-Tech Gründ
+# High-Tech Gründerfonds
 
 ## Fund Details
 
