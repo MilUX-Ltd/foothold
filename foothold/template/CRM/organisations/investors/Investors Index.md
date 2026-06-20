@@ -67,7 +67,7 @@ Index of investor organisations tracked in this CRM. Covers UK and European VCs,
 | [[GALLOS Technologies]] | Venture builder | UK defence-tech |
 | [[Green Flag Ventures]] | VC | US defence and dual-use |
 | [[HCVC]] | VC | Hardware deep-tech |
-| [[High-Tech Gründ]] | Government investor | Germany public-private seed |
+| [[High-Tech Gruenderfonds\|High-Tech Gründerfonds]] | Government investor | Germany public-private seed |
 | [[Hyperion Fund]] | VC | Spain defence and deep-tech |
 | [[IN-Q-Tel]] | Government investor | US national security |
 | [[IQ Capital]] | VC | UK deep-tech, AI, quantum |
