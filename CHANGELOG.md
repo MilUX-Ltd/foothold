@@ -1,5 +1,15 @@
 # Foothold changelog
 
+## Tools: Vault Viewer 1.0.0, 2026-06-23
+
+Adds a standalone `tools/` area at the repository root, shipping Vault Viewer v1.0.0. The installed pack and template are unchanged and stay at 1.5.0. This is a repo-side tool rather than a template addition, so running `foothold-update` brings nothing new into an existing vault.
+
+Vault Viewer is a single HTML file that reads a Foothold vault, or any folder of Markdown notes, like a website. It needs no Obsidian and installs nothing. It removes the Obsidian dependency for the read case: hand a vault to someone who does not run Obsidian, or read your own on a machine that does not have it. It resolves wikilinks, embeds and backlinks, has full-text search and a collapsible file tree, light and dark themes, resizable columns, and an opt-in edit mode that writes back to the files. It runs fully offline and makes no network requests; the brand fonts are embedded so nothing needs downloading. The file carries no vault data, so sharing it shares the tool and none of your notes.
+
+- New: `tools/vault-viewer/vault-viewer.html` plus a tool `README.md`.
+- The root README gains a Tools section pointing to it.
+- Fonts embedded under their open licences: Manrope and Bai Jamjuree (SIL OFL 1.1), Roboto Mono (Apache 2.0).
+
 ## 1.5.0, 2026-06-19
 
 Adds the `write-sow` business skill.

@@ -136,6 +136,12 @@ The main considerations:
 
 None of this is needed on day one. Set the vault up as a single operator, get value from it, and come back to this section when a second person is ready to join.
 
+## Tools
+
+Standalone tools that ship with Foothold but install nothing live in [`tools/`](tools/).
+
+- **[Vault Viewer](tools/vault-viewer/)** (v1.0.0). A single HTML file that reads a Foothold vault, or any folder of Markdown notes, like a website. No install, no cloud, no Obsidian. Wikilinks, search and backlinks all work, and it runs fully offline with no network requests. Use it to hand a vault to someone who does not have Obsidian, or to read your own on a machine that does not. Download `tools/vault-viewer/vault-viewer.html`, open it in Chrome, Edge or Brave, and point it at a folder. See the [tool README](tools/vault-viewer/README.md) for detail.
+
 ## Share back
 
 Foothold gets better the more it knows about the landscape. If you come across something useful that isn't in here — a new MOD body, a framework or programme nobody else has documented well, a portal that's just launched, a sharper definition for an acronym, a piece of doctrine worth surfacing in the Reading List — send it to Matt. A line of LinkedIn, an email, or a screenshot of the page will do. He'll integrate it into the next update so everyone else on the network gets the benefit.
