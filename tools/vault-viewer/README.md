@@ -1,6 +1,6 @@
 # Vault Viewer
 
-**v1.0.0**
+**v1.1.0**
 
 A single HTML file that reads a folder of Markdown notes like a website. No install, no cloud, no account. Point it at a folder and read it, with wikilinks, search and backlinks all working. It understands Obsidian-style links and embeds, but Obsidian is not required and nor is anything else.
 
@@ -24,6 +24,7 @@ That is the whole setup. The folder picker is the browser's File System Access A
 - Light and dark themes, following the system by default with a manual toggle that is remembered.
 - Resizable side columns: drag the inner edge of either panel, double-click to reset. Widths are remembered.
 - An opt-in edit mode. The viewer is read-only until you click Edit, at which point the browser asks once for write permission. Saving writes back to the real file. There is an unsaved-changes indicator and a prompt before you navigate away or close with unsaved edits.
+- A graph view (the Graph button, or Cmd/Ctrl-G). A force-directed map of the vault, with pan, zoom, and hover. Click a node to isolate it with its near connections and preview the note without leaving the graph. Drag a node to pin it, shift-click to toggle a pin. A Display panel adjusts text fade, node and link size, the layout forces, and an optional directional-arrows toggle for mapping networks.
 
 ## Privacy
 
@@ -49,6 +50,10 @@ Works in Chrome, Edge, Brave and other Chromium browsers. Safari and Firefox do 
 The embedded fonts are open-source and redistributable: Manrope and Bai Jamjuree under the SIL Open Font License 1.1, and Roboto Mono under Apache License 2.0.
 
 ## Version history
+
+### 1.1.0, 2026-06-23
+
+Adds an Obsidian-style graph view, drawn on a canvas in plain JavaScript so it stays offline. Nodes are notes sized by link count, edges are the links. Click a node to isolate it with its 1st and 2nd-degree links and preview the note without leaving the graph; labels are zoom-gated and overlap-aware; nodes can be pinned by dragging or shift-clicking; an optional toggle shows directional arrows for mapping networks. A Display panel carries the Obsidian controls (text fade, node size, link thickness) and force controls (centre, repel, link force, link distance). The layout uses a Barnes-Hut quadtree so it holds up on large vaults. The link index now reads both `[[wikilinks]]` and Markdown links, which also corrects backlinks in Markdown-link vaults.
 
 ### 1.0.0, 2026-06-23
 

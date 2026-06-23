@@ -1,5 +1,20 @@
 # Foothold changelog
 
+## Tools: Vault Viewer 1.1.0, 2026-06-23
+
+Adds a graph view to Vault Viewer. The installed pack and template are unchanged and stay at 1.5.0; this is a repo-side tool, so `foothold-update` brings nothing new into an existing vault.
+
+The graph is a force-directed map of the vault, drawn on a canvas in plain JavaScript so it stays offline. Nodes are notes sized by link count, edges are the links, with pan, zoom and hover. Built from feedback that new users spend their early time in the graph as they build folders from scratch.
+
+- Click a node to isolate it with its 1st and 2nd-degree links, fading the rest, and preview the note's contents without leaving the graph.
+- Labels are zoom-gated and overlap-aware, so they stay out of the way until there is room.
+- Pin nodes by dragging them or shift-clicking. An optional toggle shows directional arrows for mapping networks and organisations.
+- A Display panel carries the Obsidian controls (text fade, node size, link thickness) and force controls (centre, repel, link force, link distance), all remembered between sessions.
+- The layout uses a Barnes-Hut quadtree, so it holds up on large vaults.
+- The link index now reads both `[[wikilinks]]` and Markdown links, which also corrects backlinks in vaults that use Markdown links.
+
+Still a single offline HTML file with the brand fonts embedded and no network requests.
+
 ## Tools: Vault Viewer 1.0.0, 2026-06-23
 
 Adds a standalone `tools/` area at the repository root, shipping Vault Viewer v1.0.0. The installed pack and template are unchanged and stay at 1.5.0. This is a repo-side tool rather than a template addition, so running `foothold-update` brings nothing new into an existing vault.
