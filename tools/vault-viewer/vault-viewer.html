@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Vault Viewer v1.0.0
+  Vault Viewer v1.1.0
   A single-file, fully offline reader for Obsidian / Markdown vaults.
   Part of Foothold by MilUX  -  https://github.com/MilUX-Ltd/foothold
   Privacy: makes zero network requests; nothing leaves the machine.
@@ -11,8 +11,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="version" content="1.0.0">
-<meta name="generator" content="Vault Viewer 1.0.0 (Foothold / MilUX)">
+<meta name="version" content="1.1.0">
+<meta name="generator" content="Vault Viewer 1.1.0 (Foothold / MilUX)">
 <title>Vault Viewer</title>
 <style>
   /* ---- Embedded brand fonts (woff2, base64). Fully offline, no network. ---- */
@@ -95,6 +95,36 @@
   .dirty{color:var(--unresolved);font-size:12px;white-space:nowrap}
   #editor{display:block;width:100%;max-width:780px;min-height:68vh;border:1px solid var(--border);border-radius:8px;background:var(--bg-alt);color:var(--text);font-family:var(--mono);font-size:13.5px;line-height:1.65;padding:18px 20px;resize:vertical;outline:none;tab-size:4}
   #editor:focus{border-color:var(--accent)}
+
+  /* Graph view */
+  #main.graph-mode{padding:0;position:relative;overflow:hidden}
+  .graphwrap{position:absolute;inset:0;overflow:hidden}
+  #graphCanvas{display:block;width:100%;height:100%;cursor:grab;touch-action:none}
+  .graphhint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);font-size:12px;color:var(--text-dim);background:var(--bg-alt);border:1px solid var(--border);border-radius:6px;padding:5px 12px;pointer-events:none;opacity:.92;white-space:nowrap}
+  .graphpanel{position:absolute;top:12px;right:12px;width:208px;background:var(--bg-alt);border:1px solid var(--border);border-radius:10px;padding:12px 14px;box-shadow:0 6px 24px var(--shadow);user-select:none}
+  .graphpanel .gp-head{display:flex;align-items:center;justify-content:space-between;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-dim);cursor:pointer;margin-bottom:12px}
+  .graphpanel .gp-caret{transition:transform .12s}
+  .graphpanel.collapsed .gp-caret{transform:rotate(-90deg)}
+  .graphpanel.collapsed .gp-body{display:none}
+  .graphpanel .gp-row{margin:0 0 13px}
+  .graphpanel .gp-row:last-child{margin-bottom:2px}
+  .graphpanel label{display:block;font-size:12px;color:var(--text);margin:0 0 7px}
+  .graphpanel .gp-group{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim);margin:14px 0 9px;padding-top:11px;border-top:1px solid var(--border)}
+  .graphpanel .gp-group:first-child{margin-top:0;padding-top:0;border-top:0}
+  .graphpanel input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:3px;background:var(--border);outline:none;margin:0;cursor:pointer}
+  .graphpanel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:26px;height:15px;border-radius:8px;background:var(--accent);cursor:pointer;border:none}
+  .graphpanel input[type=range]::-moz-range-thumb{width:26px;height:15px;border-radius:8px;background:var(--accent);cursor:pointer;border:0}
+  .graphpanel .gp-check label{display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--text);font-size:12px}
+  .graphpanel .gp-check input{width:auto;height:auto;margin:0;accent-color:var(--accent)}
+  .graphpreview{position:absolute;top:0;left:0;bottom:0;width:360px;max-width:46%;background:var(--bg);border-right:1px solid var(--border);box-shadow:6px 0 22px var(--shadow);display:none;flex-direction:column;z-index:3}
+  .graphpreview.open{display:flex}
+  .graphpreview .gpv-head{display:flex;align-items:center;gap:8px;padding:9px 10px 9px 14px;border-bottom:1px solid var(--border);background:var(--bg-alt)}
+  .graphpreview .gpv-title{flex:1;font-family:var(--display);font-weight:700;font-size:13px;color:var(--accent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .graphpreview .gpv-head .btn{padding:4px 9px;font-size:12px}
+  .graphpreview .gpv-body{flex:1;overflow:auto;padding:14px 18px 40px}
+  .graphpreview .gpv-body .md{max-width:none}
+  .graphpreview .gpv-body .md h1{font-size:1.5em;margin-top:0}
+  .btn.active{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
 
   #search{flex:0 0 320px;display:flex;align-items:center;gap:6px;background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:4px 10px}
   #search input{border:0;outline:0;background:transparent;color:var(--text);width:100%;font-size:13px}
@@ -204,6 +234,7 @@
     </div>
     <span class="spacer"></span>
     <button class="btn icon" id="themeBtn" title="Toggle light/dark">☾</button>
+    <button class="btn hidden" id="graphBtn" title="Graph view (Ctrl/Cmd-G)">Graph</button>
     <button class="btn hidden" id="editBtn" title="Edit this note (Ctrl/Cmd-E)">Edit</button>
     <button class="btn primary" id="openBtn">Open folder…</button>
   </div>
@@ -217,7 +248,7 @@
         <polygon points="273.24 83.72 273.28 92.36 205.61 92.35 205.6 26.36 214.24 26.36 214.25 83.71 273.24 83.72" fill="#B5B171"/>
         <rect x="174.88" y="26.36" width="8.88" height="66" fill="#B5B171"/>
       </svg>
-      <p class="eyebrow">Vault Viewer · v1.0.0</p>
+      <p class="eyebrow">Vault Viewer · v1.1.0</p>
       <h1>Read a folder of Markdown notes like a website</h1>
       <p class="lede">A single-file reader for any folder of Markdown files. No install, no cloud, nothing leaves your machine. Browse it with wikilinks, search and backlinks all working. It understands Obsidian-style links and embeds, but Obsidian isn't required.</p>
       <button class="cta" id="openBtn2">Open a vault folder →</button>
@@ -653,21 +684,30 @@ async function resolveDynamic(container, depth){
 }
 function missing(label){ const s=el("span","embed-missing"); s.textContent="⚠ Missing "+label; return s; }
 
-/* ---------- Backlinks ---------- */
-const LINK_RE = /!?\[\[([^\]]+)\]\]/g;
+/* ---------- Links / Backlinks ---------- */
+function linkTargets(txt){
+  if(!txt) return [];
+  const out = new Set();
+  let m;
+  const wiki = /!?\[\[([^\]]+)\]\]/g;
+  while((m = wiki.exec(txt))){ const t = resolveNote(m[1]); if(t) out.add(t); }
+  const md = /\[[^\]]*\]\(([^)]+)\)/g;
+  while((m = md.exec(txt))){
+    let u = m[1].trim();
+    if(/^(https?:|mailto:|tel:|data:|#)/i.test(u)) continue;
+    u = stripTitle(u).replace(/#.*$/,"");
+    try{ u = decodeURIComponent(u); }catch(e){}
+    const t = resolveNote(u); if(t) out.add(t);
+  }
+  return [...out];
+}
 function buildBacklinks(){
   state.backlinks = new Map();
   for(const src of state.mdPaths){
-    const txt = state.content.get(src) || "";
-    let m; LINK_RE.lastIndex=0;
-    const seen = new Set();
-    while((m = LINK_RE.exec(txt))){
-      const tgt = resolveNote(m[1]);
-      if(tgt && tgt!==src && !seen.has(tgt)){
-        seen.add(tgt);
-        if(!state.backlinks.has(tgt)) state.backlinks.set(tgt, new Set());
-        state.backlinks.get(tgt).add(src);
-      }
+    for(const tgt of linkTargets(state.content.get(src) || "")){
+      if(tgt===src) continue;
+      if(!state.backlinks.has(tgt)) state.backlinks.set(tgt, new Set());
+      state.backlinks.get(tgt).add(src);
     }
   }
 }
@@ -676,6 +716,9 @@ function buildBacklinks(){
 async function openNote(path, reveal){
   if(state.editing && !maybeLeaveEdit()) return;
   if(!state.content.has(path)) return;
+  if(graph.active){ graph.active=false; cancelAnimationFrame(graph.raf); graph.raf=0; }
+  const _gb=document.getElementById("graphBtn"); if(_gb) _gb.classList.remove("active");
+  document.getElementById("main").classList.remove("graph-mode");
   state.current = path;
   const main = $("#main");
   const html = parseMarkdown(state.content.get(path));
@@ -699,9 +742,7 @@ function renderRight(path){
   } else { h += `<div class="empty">No backlinks.</div>`; }
   h += `</div>`;
   // outgoing links
-  const txt = state.content.get(path)||"";
-  const out = new Set(); let m; LINK_RE.lastIndex=0;
-  while((m=LINK_RE.exec(txt))){ const t=resolveNote(m[1]); if(t&&t!==path) out.add(t); }
+  const out = new Set(linkTargets(state.content.get(path)||"").filter(t=>t!==path));
   h += `<div class="blsection"><h4>Links from this note</h4>`;
   if(out.size){
     [...out].sort((a,b)=>baseName(a).localeCompare(baseName(b))).forEach(t=>{
@@ -961,6 +1002,339 @@ function initResizers(){
   makeResizer("resizeR","R");
 }
 
+/* ---------- Graph view ---------- */
+const graph = { active:false, nodes:[], edges:[], byPath:null, raf:0, alpha:0,
+  view:{x:0,y:0,k:1}, hover:null, drag:null, focus:null, focusSet:null, previewPath:null,
+  canvas:null, ctx:null, dpr:1,
+  opts:{fade:0.4, node:1, link:1, dist:1, center:1, repel:1, linkForce:1, arrows:false} };
+function loadGraphOpts(){
+  const o={fade:0.4, node:1, link:1, dist:1, center:1, repel:1, linkForce:1, arrows:false};
+  try{ const v=localStorage.getItem("vv-graph-opts"); if(v) Object.assign(o, JSON.parse(v)); }catch(e){}
+  o.fade = Math.max(0, Math.min(1, +o.fade));
+  o.node=+o.node||1; o.link=+o.link||1; o.dist=+o.dist||1;
+  o.center=(o.center==null?1:+o.center); o.repel=(o.repel==null?1:+o.repel); o.linkForce=(o.linkForce==null?1:+o.linkForce);
+  o.arrows=!!o.arrows;
+  return o;
+}
+function saveGraphOpts(){ try{ localStorage.setItem("vv-graph-opts", JSON.stringify(graph.opts)); }catch(e){} }
+
+function buildGraphData(){
+  const nodes = state.mdPaths.map(p=>({path:p, name:baseName(p), x:0, y:0, fx:0, fy:0, deg:0, nbrs:new Set(), pinned:false}));
+  const byPath = new Map(nodes.map(n=>[n.path,n]));
+  const N = nodes.length, R0 = Math.min(800, 60 + N*1.4);
+  nodes.forEach((n,i)=>{ const a=(i/Math.max(1,N))*Math.PI*2; n.x=Math.cos(a)*R0+(Math.random()-0.5)*60; n.y=Math.sin(a)*R0+(Math.random()-0.5)*60; });
+  const edges=[]; const dirSeen=new Set(); const undSeen=new Set();
+  for(const n of nodes){
+    for(const t of linkTargets(state.content.get(n.path) || "")){
+      if(t===n.path) continue;
+      const b=byPath.get(t); if(!b) continue;
+      const dkey=n.path+""+t;
+      if(dirSeen.has(dkey)) continue; dirSeen.add(dkey);
+      const ukey = n.path<t ? n.path+""+t : t+""+n.path;
+      const drawLine = !undSeen.has(ukey); undSeen.add(ukey);
+      const a=byPath.get(n.path);
+      edges.push({a:a, b:b, drawLine:drawLine});
+      a.nbrs.add(b); b.nbrs.add(a);
+      if(drawLine){ a.deg++; b.deg++; }
+    }
+  }
+  graph.nodes=nodes; graph.edges=edges; graph.byPath=byPath;
+}
+
+function bhRepulsion(nodes, repelK, theta){
+  const n=nodes.length;
+  if(n===0) return;
+  if(n<=64){
+    for(let i=0;i<n;i++){ const a=nodes[i];
+      for(let j=i+1;j<n;j++){ const b=nodes[j];
+        let dx=a.x-b.x, dy=a.y-b.y, d2=dx*dx+dy*dy;
+        if(d2<0.01){ d2=0.01; dx=Math.random()-0.5; dy=Math.random()-0.5; }
+        const d=Math.sqrt(d2), f=repelK/d2, ux=dx/d, uy=dy/d;
+        a.fx+=f*ux; a.fy+=f*uy; b.fx-=f*ux; b.fy-=f*uy;
+      }
+    }
+    return;
+  }
+  let minx=Infinity,miny=Infinity,maxx=-Infinity,maxy=-Infinity;
+  for(const nd of nodes){ if(nd.x<minx)minx=nd.x; if(nd.y<miny)miny=nd.y; if(nd.x>maxx)maxx=nd.x; if(nd.y>maxy)maxy=nd.y; }
+  const size=Math.max(maxx-minx, maxy-miny, 1)+1;
+  const cell=(x,y,sz)=>({x,y,size:sz,mass:0,cx:0,cy:0,quad:null,body:null});
+  const root=cell(minx,miny,size);
+  function childInsert(c, b, depth){
+    const half=c.size/2;
+    const ri = b.x >= c.x+half ?1:0, bi = b.y >= c.y+half ?1:0, idx=bi*2+ri;
+    if(!c.quad) c.quad=[null,null,null,null];
+    if(!c.quad[idx]) c.quad[idx]=cell(c.x+ri*half, c.y+bi*half, half);
+    insert(c.quad[idx], b, depth+1);
+  }
+  function insert(c, b, depth){
+    c.cx+=b.x; c.cy+=b.y; c.mass++;
+    if(c.mass===1){ c.body=b; return; }
+    if(c.body!==null){ const old=c.body; c.body=null; childInsert(c, old, depth); }
+    if(depth<48) childInsert(c, b, depth);
+  }
+  for(const b of nodes) insert(root, b, 0);
+  (function finalize(c){ if(!c||c.mass===0) return; c.cx/=c.mass; c.cy/=c.mass; if(c.quad) for(const q of c.quad) finalize(q); })(root);
+  function applyForce(b, c){
+    if(!c || c.mass===0 || (c.body===b && c.mass===1)) return;
+    let dx=b.x-c.cx, dy=b.y-c.cy, d2=dx*dx+dy*dy;
+    if(d2<0.01){ d2=0.01; dx=Math.random()-0.5; dy=Math.random()-0.5; }
+    const d=Math.sqrt(d2);
+    if(c.quad===null || (c.size/d < theta)){
+      const f=repelK*c.mass/d2, ux=dx/d, uy=dy/d;
+      b.fx+=f*ux; b.fy+=f*uy;
+    } else {
+      for(const q of c.quad) if(q) applyForce(b, q);
+    }
+  }
+  for(const b of nodes) applyForce(b, root);
+}
+
+function simTick(){
+  const nodes=graph.nodes, edges=graph.edges, n=nodes.length;
+  const dist=graph.opts.dist||1, cen=(graph.opts.center==null?1:graph.opts.center), rep=(graph.opts.repel==null?1:graph.opts.repel), lf=(graph.opts.linkForce==null?1:graph.opts.linkForce);
+  const repelK=2400*rep, spring=0.05*lf, rest=58*dist, gravity=0.022*cen, a=graph.alpha;
+  for(let i=0;i<n;i++){ nodes[i].fx=0; nodes[i].fy=0; }
+  bhRepulsion(nodes, repelK, 0.85);
+  for(const e of edges){
+    if(!e.drawLine) continue;
+    const u=e.a, v=e.b;
+    let dx=v.x-u.x, dy=v.y-u.y, d=Math.sqrt(dx*dx+dy*dy)||0.01;
+    const f=spring*(d-rest), ux=dx/d, uy=dy/d;
+    u.fx+=f*ux; u.fy+=f*uy; v.fx-=f*ux; v.fy-=f*uy;
+  }
+  for(const nd of nodes){
+    if(nd===graph.drag || nd.pinned) continue;
+    nd.fx-=nd.x*gravity; nd.fy-=nd.y*gravity;
+    nd.x += Math.max(-30,Math.min(30, nd.fx))*a;
+    nd.y += Math.max(-30,Math.min(30, nd.fy))*a;
+  }
+  graph.alpha *= 0.982;
+}
+
+function computeFocusSet(node){
+  if(!node) return null;
+  const s=new Set([node]);
+  for(const n1 of node.nbrs){ s.add(n1); for(const n2 of n1.nbrs) s.add(n2); }
+  return s;
+}
+function focusNode(node){ graph.focus=node; graph.focusSet=computeFocusSet(node); }
+function closePreview(){ const pv=document.getElementById("graphPreview"); if(pv) pv.classList.remove("open"); graph.previewPath=null; }
+function clearFocus(){ graph.focus=null; graph.focusSet=null; closePreview(); }
+function previewNote(path){
+  const pv=document.getElementById("graphPreview"); if(!pv || !state.content.has(path)) return;
+  graph.previewPath=path;
+  pv.querySelector(".gpv-title").textContent=baseName(path);
+  const body=pv.querySelector(".gpv-body");
+  body.innerHTML='<div class="md">'+parseMarkdown(state.content.get(path)||"")+'</div>';
+  body.scrollTop=0;
+  resolveDynamic(body.querySelector(".md"), 0);
+  pv.classList.add("open");
+}
+
+function drawArrow(c, u, w, rT, color, alpha, lw){
+  let dx=w.x-u.x, dy=w.y-u.y, d=Math.sqrt(dx*dx+dy*dy)||0.01, ux=dx/d, uy=dy/d;
+  const ex=w.x-ux*rT, ey=w.y-uy*rT;
+  c.globalAlpha=alpha; c.strokeStyle=color; c.lineWidth=lw;
+  c.beginPath(); c.moveTo(u.x,u.y); c.lineTo(ex,ey); c.stroke();
+  const ah=Math.max(4, 6*graph.opts.link)/graph.view.k, ang=Math.atan2(uy,ux);
+  c.beginPath(); c.moveTo(ex,ey);
+  c.lineTo(ex-Math.cos(ang-0.42)*ah, ey-Math.sin(ang-0.42)*ah);
+  c.lineTo(ex-Math.cos(ang+0.42)*ah, ey-Math.sin(ang+0.42)*ah);
+  c.closePath(); c.fillStyle=color; c.fill();
+}
+
+function drawGraph(){
+  const c=graph.ctx, cv=graph.canvas, v=graph.view, dpr=graph.dpr;
+  c.setTransform(1,0,0,1,0,0);
+  c.clearRect(0,0,cv.width,cv.height);
+  const st=getComputedStyle(document.documentElement);
+  const col=n=>st.getPropertyValue(n).trim();
+  const cText=col('--text')||'#888', cAccent=col('--accent')||'#88f', cBorder=col('--border')||'#ccc', cBg=col('--bg')||'#fff';
+  c.setTransform(v.k*dpr,0,0,v.k*dpr, v.x*dpr, v.y*dpr);
+  const hov=graph.hover, fs=graph.focusSet, arrows=graph.opts.arrows;
+  c.lineWidth=graph.opts.link/v.k;
+  for(const e of graph.edges){
+    const u=e.a, w=e.b;
+    if(!arrows && !e.drawLine) continue;
+    let alpha, color=cBorder;
+    if(fs){ const vis=fs.has(u)&&fs.has(w); alpha=vis?0.6:0.04; if(vis && (u===graph.focus||w===graph.focus)){ color=cAccent; alpha=0.85; } }
+    else { const hot=hov&&(u===hov||w===hov); color=hot?cAccent:cBorder; alpha=hov?(hot?0.95:0.16):0.5; }
+    if(arrows){ const rT=(3+Math.sqrt(w.deg)*1.7)*graph.opts.node; drawArrow(c,u,w,rT,color,alpha, graph.opts.link/v.k); }
+    else { c.strokeStyle=color; c.globalAlpha=alpha; c.beginPath(); c.moveTo(u.x,u.y); c.lineTo(w.x,w.y); c.stroke(); }
+  }
+  c.globalAlpha=1;
+  for(const nd of graph.nodes){
+    const r=(3+Math.sqrt(nd.deg)*1.7)*graph.opts.node, isHov=nd===hov, isFocus=nd===graph.focus;
+    let alpha=1;
+    if(fs){ alpha=fs.has(nd)?1:0.1; }
+    else if(hov){ alpha=(isHov||hov.nbrs.has(nd))?1:0.22; }
+    c.globalAlpha=alpha;
+    c.beginPath(); c.arc(nd.x,nd.y,r,0,Math.PI*2);
+    c.fillStyle=(isFocus||nd.path===state.current||isHov)?cAccent:cText;
+    c.fill();
+    if(isHov||isFocus){ c.lineWidth=2/v.k; c.strokeStyle=cBg; c.stroke(); }
+    if(nd.pinned){ c.lineWidth=1.5/v.k; c.strokeStyle=cAccent; c.beginPath(); c.arc(nd.x,nd.y,r+3.5/v.k,0,Math.PI*2); c.stroke(); }
+  }
+  c.globalAlpha=1;
+  // labels: screen space, zoom-gated and overlap-aware
+  const kShow = 2.4 - graph.opts.fade*2.2, band=0.5;
+  const baseA = Math.max(0, Math.min(1, (v.k - (kShow - band)) / band));
+  c.setTransform(dpr,0,0,dpr,0,0);
+  c.font="12px "+(col('--sans')||"sans-serif"); c.textBaseline="middle";
+  const cssW=cv.width/dpr, cssH=cv.height/dpr, placed=[];
+  let cands=graph.nodes.filter(nd=>{ if(nd===hov||nd===graph.focus) return true; if(fs) return fs.has(nd); return baseA>0.02; });
+  cands.sort((p,q)=>{ const pp=(p===hov?100:0)+(p===graph.focus?80:0)+p.deg; const qq=(q===hov?100:0)+(q===graph.focus?80:0)+q.deg; return qq-pp; });
+  for(const nd of cands){
+    const isHov=nd===hov, isFocus=nd===graph.focus;
+    let a;
+    if(fs){ a=fs.has(nd)?1:0; }
+    else if(hov){ a=(isHov||hov.nbrs.has(nd))?Math.max(baseA,isHov?1:0.7):0; }
+    else { a=baseA*0.9; }
+    if(a<=0.02) continue;
+    const sx=nd.x*v.k+v.x, sy=nd.y*v.k+v.y;
+    if(sx<-80||sx>cssW+40||sy<-30||sy>cssH+30) continue;
+    const r=(3+Math.sqrt(nd.deg)*1.7)*graph.opts.node*v.k;
+    const tx=sx+r+4, ty=sy, w=c.measureText(nd.name).width;
+    const rect={x:tx, y:ty-7, w:w, h:14}, force=isHov||isFocus;
+    if(!force){ let clash=false; for(const pr of placed){ if(rect.x<pr.x+pr.w && rect.x+rect.w>pr.x && rect.y<pr.y+pr.h && rect.y+rect.h>pr.y){ clash=true; break; } } if(clash) continue; }
+    placed.push(rect);
+    c.globalAlpha=a; c.fillStyle=cText; c.fillText(nd.name, tx, ty);
+  }
+  c.globalAlpha=1;
+}
+
+function graphLoop(){
+  if(!graph.active) return;
+  if(graph.alpha>0.02 || graph.drag) simTick();
+  drawGraph();
+  graph.raf=requestAnimationFrame(graphLoop);
+}
+
+function sizeGraphCanvas(center){
+  const cv=graph.canvas; if(!cv) return;
+  const wrap=cv.parentElement, w=wrap.clientWidth||800, h=wrap.clientHeight||600;
+  graph.dpr=window.devicePixelRatio||1;
+  cv.width=Math.max(1,Math.round(w*graph.dpr)); cv.height=Math.max(1,Math.round(h*graph.dpr));
+  cv.style.width=w+"px"; cv.style.height=h+"px";
+  if(center){ graph.view.k=0.85; graph.view.x=w/2; graph.view.y=h/2; }
+}
+
+function graphXY(e){ const r=graph.canvas.getBoundingClientRect(); return {x:e.clientX-r.left, y:e.clientY-r.top}; }
+function nodeAt(cx,cy){
+  const v=graph.view, gx=(cx-v.x)/v.k, gy=(cy-v.y)/v.k;
+  let best=null, bd=Infinity;
+  for(const nd of graph.nodes){
+    const r=(3+Math.sqrt(nd.deg)*1.7)*graph.opts.node+5, dx=nd.x-gx, dy=nd.y-gy, d=dx*dx+dy*dy;
+    if(d<=r*r && d<bd){ bd=d; best=nd; }
+  }
+  return best;
+}
+
+function bindGraphEvents(){
+  const cv=graph.canvas;
+  let panning=false, last=null, down=null;
+  cv.addEventListener("pointerdown", e=>{
+    cv.setPointerCapture && cv.setPointerCapture(e.pointerId);
+    const p=graphXY(e); down=p;
+    const nd=nodeAt(p.x,p.y);
+    if(nd){ graph.drag=nd; } else { panning=true; last=p; }
+  });
+  cv.addEventListener("pointermove", e=>{
+    const p=graphXY(e), v=graph.view;
+    if(graph.drag){ graph.drag.x=(p.x-v.x)/v.k; graph.drag.y=(p.y-v.y)/v.k; if(graph.alpha<0.25) graph.alpha=0.25; }
+    else if(panning){ v.x+=p.x-last.x; v.y+=p.y-last.y; last=p; }
+    else { graph.hover=nodeAt(p.x,p.y); cv.style.cursor=graph.hover?"pointer":"grab"; }
+  });
+  cv.addEventListener("pointerup", e=>{
+    const p=graphXY(e), dist = down? Math.hypot(p.x-down.x, p.y-down.y) : 99;
+    const dragged=graph.drag; graph.drag=null; panning=false;
+    if(dragged && dist>=5){ dragged.pinned=true; return; }      // drag to place and pin
+    if(dist<5){
+      const nd=nodeAt(p.x,p.y);
+      if(nd){
+        if(e.shiftKey){ nd.pinned=!nd.pinned; if(graph.alpha<0.3) graph.alpha=0.3; }
+        else { focusNode(nd); previewNote(nd.path); }
+      } else if(graph.focus || graph.previewPath){ clearFocus(); }
+    }
+  });
+  cv.addEventListener("pointerleave", ()=>{ graph.hover=null; });
+  cv.addEventListener("wheel", e=>{
+    e.preventDefault();
+    const p=graphXY(e), v=graph.view, f=Math.exp(-e.deltaY*0.0015);
+    const gx=(p.x-v.x)/v.k, gy=(p.y-v.y)/v.k;
+    v.k=Math.max(0.1, Math.min(6, v.k*f));
+    v.x=p.x-gx*v.k; v.y=p.y-gy*v.k;
+  }, {passive:false});
+  cv.addEventListener("dblclick", e=>{ const p=graphXY(e); if(!nodeAt(p.x,p.y)) sizeGraphCanvas(true); });
+}
+
+function showGraph(){
+  if(!state.mdPaths.length) return;
+  graph.active=true;
+  const gb=$("#graphBtn"); if(gb) gb.classList.add("active");
+  const main=$("#main"); main.classList.add("graph-mode");
+  main.innerHTML=
+    '<div class="graphwrap">'+
+      '<canvas id="graphCanvas"></canvas>'+
+      '<div class="graphpreview" id="graphPreview">'+
+        '<div class="gpv-head"><span class="gpv-title"></span>'+
+          '<button class="btn" id="gpvOpen" title="Open full">Open</button>'+
+          '<button class="btn" id="gpvClose" title="Close preview">✕</button>'+
+        '</div>'+
+        '<div class="gpv-body"></div>'+
+      '</div>'+
+      '<div class="graphpanel" id="graphPanel">'+
+        '<div class="gp-head" id="gpHead">Graph<span class="gp-caret">▾</span></div>'+
+        '<div class="gp-body">'+
+          '<div class="gp-group">Display</div>'+
+          '<div class="gp-row"><label>Text fade threshold</label><input type="range" id="gpFade" min="0" max="1" step="0.02"></div>'+
+          '<div class="gp-row"><label>Node size</label><input type="range" id="gpNode" min="0.3" max="3" step="0.05"></div>'+
+          '<div class="gp-row"><label>Link thickness</label><input type="range" id="gpLink" min="0.3" max="4" step="0.05"></div>'+
+          '<div class="gp-row gp-check"><label><input type="checkbox" id="gpArrows"> Directional arrows</label></div>'+
+          '<div class="gp-group">Forces</div>'+
+          '<div class="gp-row"><label>Centre force</label><input type="range" id="gpCenter" min="0" max="3" step="0.05"></div>'+
+          '<div class="gp-row"><label>Repel force</label><input type="range" id="gpRepel" min="0" max="3" step="0.05"></div>'+
+          '<div class="gp-row"><label>Link force</label><input type="range" id="gpLinkF" min="0" max="3" step="0.05"></div>'+
+          '<div class="gp-row"><label>Link distance</label><input type="range" id="gpDist" min="0.3" max="3" step="0.05"></div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="graphhint">Click a node to isolate and preview it. Drag to pin in place. Shift-click to pin or unpin. Scroll to zoom. Click the background to reset.</div>'+
+    '</div>';
+  graph.canvas=$("#graphCanvas"); graph.ctx=graph.canvas.getContext("2d");
+  graph.opts = loadGraphOpts();
+  const _reheat = ()=>{ graph.alpha = Math.max(graph.alpha, 0.6); };
+  const _bind = (id, key, reheat)=>{
+    const el=$("#"+id); if(!el) return;
+    el.value = graph.opts[key];
+    el.addEventListener("input", e=>{ graph.opts[key]=+e.target.value; saveGraphOpts(); if(reheat) _reheat(); });
+  };
+  _bind("gpFade","fade",false); _bind("gpNode","node",false); _bind("gpLink","link",false);
+  _bind("gpCenter","center",true); _bind("gpRepel","repel",true); _bind("gpLinkF","linkForce",true); _bind("gpDist","dist",true);
+  const _arr=$("#gpArrows"); if(_arr){ _arr.checked=!!graph.opts.arrows; _arr.addEventListener("change", e=>{ graph.opts.arrows=e.target.checked; saveGraphOpts(); }); }
+  $("#gpHead").addEventListener("click", ()=> $("#graphPanel").classList.toggle("collapsed"));
+  // preview wiring
+  const pv=$("#graphPreview");
+  $("#gpvClose").addEventListener("click", closePreview);
+  $("#gpvOpen").addEventListener("click", ()=>{ if(graph.previewPath) openNote(graph.previewPath); });
+  pv.addEventListener("click", e=>{
+    const a=e.target.closest("a.wikilink[data-path]");
+    if(a){ e.preventDefault(); e.stopPropagation(); const path=a.getAttribute("data-path"); const nd=graph.byPath&&graph.byPath.get(path); if(nd) focusNode(nd); previewNote(path); }
+  });
+  graph.focus=null; graph.focusSet=null; graph.previewPath=null;
+  buildGraphData();
+  sizeGraphCanvas(true);
+  graph.alpha=1; graph.hover=null; graph.drag=null;
+  bindGraphEvents();
+  cancelAnimationFrame(graph.raf); graph.raf=requestAnimationFrame(graphLoop);
+}
+function hideGraph(){
+  graph.active=false; cancelAnimationFrame(graph.raf); graph.raf=0;
+  graph.focus=null; graph.focusSet=null; graph.previewPath=null;
+  const gb=$("#graphBtn"); if(gb) gb.classList.remove("active");
+  $("#main").classList.remove("graph-mode");
+}
+
 /* ---------- UI wiring ---------- */
 function enterVault(name){
   $("#welcome").classList.add("hidden");
@@ -971,6 +1345,7 @@ function enterVault(name){
   $("#resizeR").classList.remove("hidden");
   $("#search").classList.remove("hidden");
   $("#editBtn").classList.remove("hidden");
+  $("#graphBtn").classList.remove("hidden");
   $("#vaultTitle").textContent = name;
   $("#openBtn").textContent = "Switch folder…";
   renderTree();
@@ -996,6 +1371,8 @@ $("#openBtn").addEventListener("click", openVault);
 $("#openBtn2").addEventListener("click", openVault);
 $("#themeBtn").addEventListener("click", toggleTheme);
 $("#editBtn").addEventListener("click", enterEdit);
+$("#graphBtn").addEventListener("click", ()=>{ if(graph.active){ if(state.current) openNote(state.current); else hideGraph(); } else { showGraph(); } });
+window.addEventListener("resize", ()=>{ if(graph.active) sizeGraphCanvas(false); });
 $("#searchInput").addEventListener("input", e=> onSearch(e.target.value));
 $("#searchInput").addEventListener("keydown", e=>{
   if(e.key==="Escape"){ e.target.value=""; closeSearch(); }
@@ -1004,6 +1381,8 @@ $("#searchInput").addEventListener("keydown", e=>{
 document.addEventListener("keydown",(e)=>{
   if((e.metaKey||e.ctrlKey) && e.key==="k"){ e.preventDefault(); $("#searchInput").focus(); }
   if((e.metaKey||e.ctrlKey) && e.key.toLowerCase()==="e" && state.current && !state.editing){ e.preventDefault(); enterEdit(); }
+  if((e.metaKey||e.ctrlKey) && e.key.toLowerCase()==="g" && state.mdPaths.length){ e.preventDefault(); graph.active ? (state.current?openNote(state.current):hideGraph()) : showGraph(); }
+  if(e.key==="Escape" && graph.active && (graph.focus||graph.previewPath)){ clearFocus(); }
 });
 window.addEventListener("beforeunload",(e)=>{ if(state.dirty){ e.preventDefault(); e.returnValue=""; } });
 
