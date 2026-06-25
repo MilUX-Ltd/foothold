@@ -1,0 +1,14 @@
+{
+  "skill": "red-team-investor",
+  "version": "1.0.0",
+  "last_reviewed": "2026-06-25",
+  "maintainer": "MilUX",
+  "maintainer_url": "https://milux.co.uk",
+  "license": "MIT",
+  "manifest_url": "https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/business-skills/red-team-investor/manifest.json",
+  "release_notes_url": "https://github.com/MilUX-Ltd/foothold/blob/main/foothold/template/Skills/business-skills/red-team-investor/CHANGELOG.md",
+  "scope": {
+    "in": ["pitch decks", "one-pagers and teasers", "executive summaries", "business plans", "financial models", "investor emails and memos", "data rooms", "pre-seed to Series A"],
+    "out": ["writing or improving the pitch", "contacting investors", "legal or financial advice", "inventing benchmarks or facts"]
+  }
+}
