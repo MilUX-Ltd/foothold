@@ -9,7 +9,7 @@
       "name": "foothold",
       "source": "./foothold",
       "description": "The defence-sector founder's second-brain pack. Plugin-bundled lifecycle skill (install) plus vault-bundled content and update skills.",
-      "version": "1.2.1"
+      "version": "1.2.2"
     }
   ]
 }
