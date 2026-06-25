@@ -1,5 +1,12 @@
 # Foothold changelog
 
+## 1.5.1, 2026-06-25
+
+Adds the `red-team-investor` business skill. Template moves to 1.5.1.
+
+- New `Skills/business-skills/red-team-investor/`: critiques any investor-facing content (pitch deck, one-pager, business plan, financial model, cold email, investment memo, teaser, data room) from a sceptical investor's point of view, calibrated to stage and content type. Organised around the market / product / execution risk triad, with a red-flag sweep, sector lenses (deep tech and TRL, regulated, marketplace, SaaS, consumer), and the hard diligence questions the content is least ready for.
+- Reviews only; it does not write or improve the pitch, and contacts no one. Benchmarks cite public investor and accelerator sources (Sequoia, a16z, CRV, Y Combinator and Paul Graham, UKBAA, British Business Bank, SeedLegals) and are dated 2024 to 2026 as bands.
+
 ## Tools: Vault Viewer 1.1.0, 2026-06-23
 
 Adds a graph view to Vault Viewer. The installed pack and template are unchanged and stay at 1.5.0; this is a repo-side tool, so `foothold-update` brings nothing new into an existing vault.
