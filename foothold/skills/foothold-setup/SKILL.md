@@ -6,6 +6,7 @@ audit_verdict: pass
 audited_with: skill-safety-audit v3
 origin: built
 maintainer: MilUX
+license: MIT
 ---
 
 # Foothold — Install and Onboarding (GitHub fetch)

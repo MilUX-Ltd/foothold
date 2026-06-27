@@ -3,6 +3,7 @@ name: skill-value-review
 description: Review a third-party agent skill, or a GitHub repo of skills, for value and fit, then recommend whether to use it as is, fork and adapt it, find an alternative, or build your own. Runs skill-safety-audit first and gates on the verdict, then scores the skill on a fixed value rubric and writes up strengths, weaknesses, alternatives, and improvements. Use this whenever someone points you at a skill or a skills repo and asks "is this any good", "should we use this", "review this skill", "is it worth adopting", "vet this for value", "what would you change", or "should I install this" — and use it before adopting, forking, or recommending any skill you did not write. Handles two modes: a review for you (an adoption decision against your own vault and conventions) and a review for someone else (advice delivered to a third party as a branded artefact).
 origin: built
 maintainer: MilUX
+license: MIT
 source: MilUX
 audited: 2026-06-08
 audit_verdict: pass
