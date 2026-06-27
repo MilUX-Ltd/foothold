@@ -1,0 +1,15 @@
+{
+  "skill": "build-dpia",
+  "version": "1.0.0",
+  "framework": "ICO DPIA template (UK GDPR Article 35)",
+  "last_reviewed": "2026-06-27",
+  "maintainer": "MilUX",
+  "maintainer_url": "https://milux.co.uk",
+  "license": "MIT",
+  "manifest_url": "https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/business-skills/build-dpia/manifest.json",
+  "release_notes_url": "https://github.com/MilUX-Ltd/foothold/blob/main/CHANGELOG.md",
+  "scope": {
+    "in": ["whole-business DPIA from the founder's vault", "lawful basis", "tools and data types", "quarterly review", "PDF export"],
+    "out": ["legal advice", "the certification or ICO submission itself"]
+  }
+}
