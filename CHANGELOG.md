@@ -1,5 +1,15 @@
 # Foothold changelog
 
+## Unreleased
+
+Adds a lawful basis to the CRM so every contact records the UK GDPR Article 6 basis on which their data is processed. Good data-protection practice for founders, and the groundwork for a data protection impact assessment.
+
+- New `lawful_basis:` frontmatter property on contacts (legitimate-interests, consent, contract, or legal-obligation), mirrored by an `lb-*` tag. Documented in `Knowledge/tagging-policy.md`, the CRM Guide and the Contacts Guide.
+- The `add-contact` skill now asks which basis applies and proposes the most likely one, then writes the property and tag.
+- The four shipped example contacts carry the new field.
+
+Version note: the two version files (`plugin.json`, `marketplace.json`) currently read 1.2.2 while this changelog runs to 1.5.1. Reconcile that before the next tagged release and set the version for this change then (a minor bump, per R-22).
+
 ## 1.5.1, 2026-06-25
 
 Adds the `red-team-investor` business skill. Template moves to 1.5.1.

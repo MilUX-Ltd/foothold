@@ -44,6 +44,17 @@ Sector-specific. Adapt to your domain. Defence-sector starter set:
 - `#sme` — SME-relevant content (capability programmes, accreditations).
 - `#procurement` — procurement and commercial-route content.
 
+### Data protection tags
+
+Every contact in `CRM/contacts/` carries the UK GDPR Article 6 lawful basis on which you process their personal data. A contact has exactly one basis, recorded two ways: a canonical `lawful_basis:` frontmatter property (the source of truth) and a mirrored `lb-*` tag for filtering. Keeping the lawful basis on every contact is good practice and supports a data protection impact assessment if you need one.
+
+- `#lb-legitimate-interests` (`lawful_basis: legitimate-interests`) — the default for B2B relationship-holding: prospects, network contacts, partners. Most contacts sit here.
+- `#lb-consent` (`lawful_basis: consent`) — the person actively opted in to a specific use, e.g. a newsletter sign-up. Must be withdrawable.
+- `#lb-contract` (`lawful_basis: contract`) — processing is necessary for a contract with the person, or steps before one: clients, associates, contractors.
+- `#lb-legal-obligation` (`lawful_basis: legal-obligation`) — processing required by law, e.g. accounting and tax records.
+
+The `/add-contact` skill asks which basis applies and proposes the most likely one. Update both the property and the tag if the basis changes (a prospect becomes a client, a contact subscribes).
+
 ## Conventions
 
 - Tags are lower-case with hyphens, no spaces (`#chatham-house-rule`, not `#Chatham House Rule`).
