@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+  Foothold DPIA PDF template. Neutral, clean, A4 portrait. Render with WeasyPrint.
+  The build-dpia skill fills the cover fields and injects the DPIA body into <main>.
+  If the founder has a brand (colours, logo, fonts) in their vault, override the
+  :root variables and drop their logo into the cover. Otherwise this neutral style
+  is fine to ship as-is. No external assets, no web fonts, so it renders offline.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{
+    --ink:#1c1c1c; --ink-2:#444; --ink-3:#777;
+    --accent:#2f4a3c;          /* founder brand colour goes here */
+    --accent-deep:#1d2f26;
+    --rule:#e0e0d8; --rule-strong:#c7c7bd; --panel:#f4f4f0; --paper:#ffffff;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  @page{
+    size:A4; margin:20mm 18mm 18mm 18mm;
+    @bottom-left{ content:"{ controller }  ·  Confidential"; font-family:var(--mono); font-size:7.5pt; color:#999; }
+    @bottom-right{ content:counter(page) " / " counter(pages); font-family:var(--mono); font-size:7.5pt; color:#999; }
+  }
+  @page:first{ margin:0; @bottom-left{content:"";} @bottom-right{content:"";} }
+  html{ font-family:var(--sans); color:var(--ink); font-size:10pt; line-height:1.5; }
+  body{ margin:0; }
+
+  .cover{ background:var(--accent-deep); color:#fff; height:297mm; box-sizing:border-box; padding:34mm 24mm 24mm; }
+  .cover .eyebrow{ font-size:9pt; letter-spacing:0.18em; text-transform:uppercase; color:#cfe0d6; }
+  .cover .eyebrow::after{ content:""; display:block; width:46px; height:1px; background:#cfe0d6; margin-top:7px; }
+  .cover h1{ font-size:32pt; line-height:1.07; font-weight:700; margin:12mm 0 6mm; max-width:150mm; }
+  .cover .strap{ font-size:12.5pt; color:#d9e4dd; max-width:140mm; margin-bottom:32mm; }
+  .cover .meta{ border-top:1px solid rgba(255,255,255,0.4); padding-top:6mm; font-size:9.5pt; color:#e4ebe6; }
+  .cover .meta div{ margin-bottom:2mm; } .cover .meta b{ color:#fff; font-weight:600; }
+
+  main{ padding-top:2mm; }
+  h1,h2,h3{ color:var(--accent-deep); margin:0 0 3mm; }
+  h1{ font-size:19pt; line-height:1.12; }
+  h2{ font-size:14pt; margin-top:9mm; padding-top:3.5mm; border-top:2px solid var(--accent); break-after:avoid; break-inside:avoid; }
+  h3{ font-size:11.5pt; margin-top:6mm; break-after:avoid; }
+  h4{ font-size:10.5pt; color:var(--accent-deep); margin:5mm 0 2mm; break-after:avoid; }
+  p{ margin:0 0 3mm; max-width:170mm; }
+  ul,ol{ margin:0 0 3mm; padding-left:6mm; } li{ margin-bottom:1.5mm; }
+  code{ font-family:var(--mono); font-size:8.5pt; }
+  hr{ border:0; border-top:1px solid var(--rule); margin:6mm 0; }
+  table{ width:100%; border-collapse:collapse; margin:4mm 0; font-size:8.6pt; }
+  thead{ display:table-header-group; } tr{ break-inside:avoid; }
+  th{ background:var(--accent); color:#fff; text-align:left; font-size:7.8pt; text-transform:uppercase; letter-spacing:0.04em; padding:2.2mm 2.6mm; vertical-align:top; }
+  td{ padding:2mm 2.6mm; border-bottom:1px solid var(--rule); vertical-align:top; }
+  tr:nth-child(even) td{ background:var(--panel); }
+  blockquote{ margin:3mm 0; padding:2mm 0 2mm 6mm; border-left:2px solid var(--accent); color:var(--ink-2); }
+</style>
+</head>
+<body>
+<section class="cover">
+  <!-- { founder logo here if available } -->
+  <div class="eyebrow">Compliance · Data Protection</div>
+  <h1>Data Protection Impact Assessment</h1>
+  <div class="strap">{ one-line subtitle, e.g. A whole-business assessment of how { business } processes personal data. }</div>
+  <div class="meta">
+    <div><b>Controller</b>&nbsp;&nbsp;{ legal entity }</div>
+    <div><b>Author</b>&nbsp;&nbsp;{ founder name }</div>
+    <div><b>Date</b>&nbsp;&nbsp;{ date }</div>
+    <div><b>Review due</b>&nbsp;&nbsp;{ review date }</div>
+  </div>
+</section>
+<main>
+  <!-- { DPIA body HTML injected here } -->
+</main>
+</body>
+</html>

@@ -1,11 +1,15 @@
 # Foothold changelog
 
-## Unreleased
+## 1.6.0, 2026-06-27
+
+A data-protection release: founders can now produce a DPIA and record a lawful basis for every contact, plus a new validation skill. Template moves to 1.6.0. (Version note: the plugin and marketplace version files had drifted to 1.2.2 while the changelog ran to 1.5.1; they are reconciled to the changelog lineage at 1.6.0 with this release.)
 
 Adds the `design-cheapest-test` pm-skill. It helps a founder turn a riskiest assumption into the cheapest test that could prove it wrong, with the change-my-mind result set before the test runs. The keystone of build, measure, learn, and a gap in the pm-skills set until now.
 
 - New `Skills/pm-skills/design-cheapest-test/`: designs a small, fast, falsifiable experiment, names the metric and sample, and pre-registers the decision each result triggers (proceed, pivot, or kill). It coaches rather than authors; the founder designs the test. MIT licensed, MilUX original.
 - Authored for the MilUX hackathon package and shared into Foothold, since founders validating a product need the same discipline.
+
+Adds the `build-dpia` business skill: produces a Data Protection Impact Assessment for the founder's business from their vault. It reads existing vault context, walks the founder through any unknowns, asks about the tools they use and the types of personal data they hold, and writes a DPIA in the ICO seven-part structure to `Operations/`. It then offers to set up the quarterly lawful-basis review and to produce a PDF version. References bundle the ICO screening and lawful-basis guidance, the DPIA template, and a neutral PDF template founders can rebrand. Skill is `audited: pending`; run `skill-safety-audit` before the next tagged release (R-28).
 
 Adds a lawful basis to the CRM so every contact records the UK GDPR Article 6 basis on which their data is processed. Good data-protection practice for founders, and the groundwork for a data protection impact assessment.
 
