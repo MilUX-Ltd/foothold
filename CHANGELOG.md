@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+Adds the `design-cheapest-test` pm-skill. It helps a founder turn a riskiest assumption into the cheapest test that could prove it wrong, with the change-my-mind result set before the test runs. The keystone of build, measure, learn, and a gap in the pm-skills set until now.
+
+- New `Skills/pm-skills/design-cheapest-test/`: designs a small, fast, falsifiable experiment, names the metric and sample, and pre-registers the decision each result triggers (proceed, pivot, or kill). It coaches rather than authors; the founder designs the test. MIT licensed, MilUX original.
+- Authored for the MilUX hackathon package and shared into Foothold, since founders validating a product need the same discipline.
+
 Adds a lawful basis to the CRM so every contact records the UK GDPR Article 6 basis on which their data is processed. Good data-protection practice for founders, and the groundwork for a data protection impact assessment.
 
 - New `lawful_basis:` frontmatter property on contacts (legitimate-interests, consent, contract, or legal-obligation), mirrored by an `lb-*` tag. Documented in `Knowledge/tagging-policy.md`, the CRM Guide and the Contacts Guide.

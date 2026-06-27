@@ -7,6 +7,7 @@ audit_verdict: pass
 audited_with: skill-safety-audit
 origin: built
 maintainer: MilUX
+license: MIT
 ---
 
 # Red-Team Investor
