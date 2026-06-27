@@ -7,7 +7,8 @@ email: ant.sharman@evocatus.co.uk
 linkedin: https://www.linkedin.com/in/antsharman/
 website: https://www.evocatus.co.uk
 status: active
-tags: [evocatus, wargaming, defence, army-reserve]
+lawful_basis: legitimate-interests
+tags: [evocatus, wargaming, defence, army-reserve, lb-legitimate-interests]
 ---
 
 # Ant Sharman

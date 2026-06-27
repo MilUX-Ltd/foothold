@@ -6,7 +6,8 @@ role: Co-founder & Director
 email: gabi@inink.io
 linkedin: https://www.linkedin.com/in/gabrielle-brooks-72297181
 status: active
-tags: [foothold-contributor, inink, defence-innovation]
+lawful_basis: legitimate-interests
+tags: [foothold-contributor, inink, defence-innovation, lb-legitimate-interests]
 last-contact: 2026-05-15
 ---
 

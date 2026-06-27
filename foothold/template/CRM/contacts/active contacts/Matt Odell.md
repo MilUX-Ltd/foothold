@@ -6,7 +6,8 @@ role: Founder
 email: matt@milux.co.uk
 linkedin: https://www.linkedin.com/in/mattodell/
 status: active
-tags: [foothold-maintainer, milux, network]
+lawful_basis: legitimate-interests
+tags: [foothold-maintainer, milux, network, lb-legitimate-interests]
 last-contact: 2026-05-20
 ---
 

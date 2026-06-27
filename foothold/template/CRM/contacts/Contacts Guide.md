@@ -23,7 +23,7 @@ folder: CRM/contacts
 
 ## Frontmatter
 
-Follows the parent CRM Guide. Status field reflects the subfolder: `active` for `active contacts/`, `reference` for `reference contacts/`, `archived` for `archive/`.
+Follows the parent CRM Guide. Status field reflects the subfolder: `active` for `active contacts/`, `reference` for `reference contacts/`, `archived` for `archive/`. Every contact also carries a `lawful_basis:` property (and matching `lb-*` tag) recording the UK GDPR Article 6 basis for processing their data; the `/add-contact` skill sets this when it captures the contact.
 
 ## Related
 

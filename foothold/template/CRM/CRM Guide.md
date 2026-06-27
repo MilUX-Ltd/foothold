@@ -74,9 +74,12 @@ role: "<their current role>"
 linkedin: https://...
 email: ...
 phone: ...
-tags: [...]
+lawful_basis: legitimate-interests | consent | contract | legal-obligation
+tags: [...]   # include the matching lb-* tag, e.g. lb-legitimate-interests
 ---
 ```
+
+`lawful_basis:` records the UK GDPR Article 6 basis on which you process the contact's personal data. Every contact has exactly one; mirror it with an `lb-*` tag. See `Knowledge/tagging-policy.md` for the four bases and when each applies.
 
 ### organisations
 

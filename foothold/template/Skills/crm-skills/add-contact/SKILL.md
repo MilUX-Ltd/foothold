@@ -62,6 +62,24 @@ Ask if not obvious from context:
 
 Default to active if the user has just said "I met them" or otherwise indicated direct contact.
 
+## Phase C2 — Lawful basis
+
+Every contact records the UK GDPR Article 6 lawful basis on which their personal data is processed. Ask the user which applies, using the AskUserQuestion tool, and **present the most likely basis first as the recommended option**. Infer the recommendation from what you already know:
+
+- The person is a **client contact, an associate, a contractor, or someone you have or are about to have a contract with** → recommend **contract**.
+- The person has **actively opted in to a specific use** (newsletter, marketing list) → recommend **consent**.
+- The contact exists for an **accounting or tax record** you must keep by law → recommend **legal-obligation**.
+- **Otherwise** (prospects, network contacts, partners, most additions) → recommend **legitimate-interests**. This is the default for B2B relationship-holding.
+
+Offer the four bases as options, recommended one first:
+
+1. `legitimate-interests` — B2B relationship-holding; the usual default.
+2. `consent` — they actively opted in; withdrawable.
+3. `contract` — necessary for a contract with them, or steps before one.
+4. `legal-obligation` — required by law, e.g. accounting records.
+
+Carry the chosen value into the frontmatter as `lawful_basis:` and the matching `lb-*` tag in Phase D. See `Knowledge/tagging-policy.md` for the full definitions.
+
 ## Phase D — Draft
 
 Draft the contact page in memory before writing. Use this shape:
@@ -78,7 +96,8 @@ phone: <phone if known>
 status: active | reference
 created: <today, ISO>
 last-contact: <today, ISO, if user has just met them>
-tags: [<any contextual tags>]
+lawful_basis: <basis chosen in Phase C2>
+tags: [<any contextual tags>, lb-<basis chosen in Phase C2>]
 ---
 
 # <Full Name>
