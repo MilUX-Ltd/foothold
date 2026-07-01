@@ -1,5 +1,16 @@
 # Foothold changelog
 
+## 1.6.0, 2026-07-01
+
+Removes the marketplace install step from the getting-started flow.
+
+The previous flow required users to add the Foothold GitHub repo as a Cowork marketplace, install the plugin, and then run `/foothold-setup`. The marketplace step caused friction — particularly on Windows — and added no value that the skill itself does not provide. The setup skill fetches directly from GitHub, so the plugin was only ever a delivery wrapper for a URL.
+
+The new flow is a single step: paste one line into a Cowork chat and the skill runs. No marketplace, no plugin install, no slash command required.
+
+- README rewritten: Steps 1 and 2 (Add marketplace, Install plugin) replaced with a single prompt-based step.
+- Troubleshooting entry for marketplace errors removed.
+
 ## 1.6.0, 2026-06-27
 
 A data-protection release: founders can now produce a DPIA and record a lawful basis for every contact, plus a new validation skill. Template moves to 1.6.0. (Version note: the plugin and marketplace version files had drifted to 1.2.2 while the changelog ran to 1.5.1; they are reconciled to the changelog lineage at 1.6.0 with this release.)
