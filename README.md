@@ -18,7 +18,7 @@ The operations still have to be run. Foothold is the position you run them from.
 
 ## What you get
 
-- A Claude plugin that installs the whole pack with one command.
+- A one-line setup prompt that installs the whole pack with no marketplace or plugin required.
 - A re-runnable `rename` step that whitelabels the pack to your name.
 - A manual `update` command for pulling new content as Foothold evolves.
 - Skills for the high-frequency adds: events, contacts, organisations.
@@ -37,25 +37,12 @@ This is the install walkthrough. The whole thing takes about ten minutes once yo
 - **A paid Claude subscription, with Cowork.** Cowork is Anthropic's desktop app for non-developers, and it runs inside a paid Claude plan. Sign up and subscribe at [claude.com](https://claude.com), then download the Claude desktop app; Cowork is a tab inside it. There is a running cost here: budget for one Claude subscription per person who will run the vault.
 - **Obsidian.** Free knowledge management app. Download from [obsidian.md](https://obsidian.md). Obsidian Sync, used for keeping a vault in step across devices or people, is a paid add-on; a free alternative is covered under Scaling across a team below.
 
-### Step 1 — Add the Foothold marketplace
+### Step 1 — Run the setup
 
-1. Open the Claude desktop app and switch to the **Cowork** tab.
-2. Click **Customize** in the left sidebar. This is where Cowork keeps your plugins, skills, and connectors.
-3. Click the **+** button.
-4. Select **Add marketplace from GitHub**.
-5. Enter the repository URL: `https://github.com/MilUX-Ltd/foothold`
-6. Confirm.
-
-### Step 2 — Install the Foothold plugin
-
-Once the marketplace is added, Cowork lists the plugins available in it. Find **Foothold** in the list and click **Install**. The plugin activates automatically; its skills become available in any Cowork chat.
-
-### Step 3 — Run the setup skill
-
-In a new Cowork chat, type:
+Open a new Cowork chat and paste the following:
 
 ```
-/foothold-setup
+Fetch https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/skills/foothold-setup/SKILL.md and follow the instructions in it exactly.
 ```
 
 The skill takes over from here. It will:
@@ -68,7 +55,7 @@ The skill takes over from here. It will:
 
 When the skill finishes, it tells you where the vault was created and which schedule (if any) is now in place.
 
-### Step 4 — Open your vault in Obsidian
+### Step 2 — Open your vault in Obsidian
 
 1. Launch Obsidian.
 2. Click "Open folder as vault".
@@ -149,8 +136,6 @@ Foothold gets better the more it knows about the landscape. If you come across s
 Email: matt@milux.co.uk. LinkedIn: [Matt Odell](https://www.linkedin.com/in/mattodell/).
 
 ## Troubleshooting
-
-**"Could not find marketplace MilUX-Ltd/foothold"** — Cowork couldn't fetch the marketplace metadata. Try `/plugin marketplace add MilUX-Ltd/foothold` again. If it still fails, email Matt.
 
 **The install skill leaves `{{placeholder}}` text in some files** — That's a bug. Tell Matt which files and which placeholder, and we'll fix it.
 
