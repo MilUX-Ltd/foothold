@@ -31,7 +31,7 @@ Work from the vault as it is, not from questions to the user. When run interacti
 3. **`Initiatives/`** with `status: active`: same treatment.
 4. **`Intelligence/events/`**: anything in the next four weeks worth preparation, and anything this week worth attending.
 5. **`CRM/contacts/active contacts/`**: relationships going quiet, where `last-contact` is drifting past the kind of interval the engagement implies. At most two nudges a day; a brief that nags is a brief that gets ignored.
-6. **If a calendar connector is available in Cowork**, today's meetings, each with a one-line "who and why it matters" from the CRM. If no connector, skip without comment; do not ask the user to dictate their diary.
+6. **Calendar: probe, don't ask.** Inspect the session's tools for a calendar-shaped connector and, if found, run one read-only probe for today's events. On success, include today's meetings, each with a one-line "who and why it matters" from the CRM. If no connector exists, skip without comment; do not ask the user to dictate their diary. If a connector exists but the probe fails, add one line under Worth knowing naming the error, and only if yesterday's brief did not already carry the same line; a brief that repeats a nag trains the user to stop reading it.
 
 ## What to write
 
