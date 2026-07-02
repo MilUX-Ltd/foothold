@@ -1,5 +1,14 @@
 # Foothold changelog
 
+## 2.0.2, 2026-07-02
+
+Answers the questions the ICP review surfaced, in Matt's words.
+
+- New README section, Support from MilUX: the first hour of setup consulting is complimentary, then the pack runs without us; AI enablement beyond the pack; trusted-partner referrals for Cyber Essentials and business setup; scaling support; and the UK-wide Claude associate network. The audience line and cost table updated to match.
+- Provenance now says the associates in MilUX's Claude Partner Network run the pack too.
+- The ChatGPT objection section notes the pack sits alongside existing AI use, adding the agentic side with policies, integration and orchestration worked out.
+- `bid-response` gains "Can AI-drafted content go in a submission?": yes, with the human final pass non-negotiable and honesty if a buyer asks.
+
 ## 2.0.1, 2026-07-02
 
 - README gains "Prefer a different stack?": a short note that the pack is plain Markdown and can be configured for open-source tools such as OpenCowork, self-hosted or already-owned models, and other sync arrangements, as bespoke work through MilUX.

@@ -69,6 +69,10 @@ When the draft is whole, switch roles and mark it as the assessor would, criteri
 
 Everything lives in the engagement folder in `Customer Engagements/`: the compliance matrix, the drafts, the red-team scores, and after submission a one-page record of what was bid, at what price, and when the decision is due. Win or lose, the debrief goes in the same folder; MOD debriefs are a right worth exercising and the cheapest bid training available.
 
+## Can AI-drafted content go in a submission?
+
+Yes, and it increasingly does across the industry. Two things follow, and say them to the user once, plainly. First, the human final pass is not optional: the user owns every word submitted, so they review it, verify every piece of evidence in it, and approve it before anything leaves. A submission is their name on their capability, whoever or whatever drafted the sentences. Second, if a buyer asks whether AI was used in preparing the response, the answer is honest. Drafting assistance is nothing to hide; unreviewed drafting would be, which is why it never happens here.
+
 ## What this skill does not do
 
 - It does not qualify the opportunity; that is `/eligibility-check`.
