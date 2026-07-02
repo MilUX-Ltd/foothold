@@ -46,7 +46,9 @@ Pick the option that matches your reality:
 - Read [[How to Use This Vault]]. Ten minutes on the four habits that decide whether this system compounds or plateaus.
 - Got a live opportunity? Run `/eligibility-check` before you commit a week to it, and `/bid-response` after a GO.
 - Start one initiative in `Initiatives/`, not three. The Initiatives Guide shows the shape.
+- Run `/process-map` on the workflow that eats most of your week. The map feeds everything else: SOPs via `/sop-capture`, automation candidates, and an honest answer to where AI fits (`/ai-readiness`).
 - Decide your [[Resources/Ways of Working/Sync and Backup|sync and backup]] approach before the vault becomes irreplaceable.
+- Once a month, `/curator` sweeps the vault for broken links and untidy frontmatter and leaves a short report. If you didn't schedule it at setup, run it whenever things feel scruffy.
 - If someone sends you a skill, audit it with `/skill-safety-audit` before running it. Always.
 
 ## When something feels missing

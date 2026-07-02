@@ -16,17 +16,35 @@ The structure is built to slot into Anthropic's Cowork. A Foothold vault opened 
 
 The operations still have to be run. Foothold is the position you run them from.
 
+> *"It does seem like a no brainer."*
+> — an early Foothold user, by email, the day the pack was shared with them
+
+## What changes in your first 30 days
+
+**Day 1.** The vault is installed and knows who you are: your offer, your positioning, your voice, your priorities, all captured in an hour's guided brain dump. The defence landscape is already in it: which MOD body owns what after the reorganisation, where the frameworks and portals live, which route into procurement fits your maturity. Questions that used to cost an afternoon on gov.uk now cost a search.
+
+**Day 15.** Your daily note writes itself each morning: what needs attention, what's rolled over, what's coming. Before every external meeting, one command briefs you from your own relationship history. A live opportunity gets a go/no-go gate before you spend a week on it, checking the cyber floor, the clearance floor, and the export position you didn't know you had to check.
+
+**Day 30.** Drafts start sounding like you, because the vault holds your actual voice, not a description of it. Your CRM knows who's gone quiet. The sector reference pages have refreshed themselves. And the corrections you made in week one have stopped being needed, because everything you teach it stays taught.
+
+The pattern underneath: every hour you give the vault compounds, because nothing you tell it is ever asked for twice.
+
+**Want to look before you leap?** The [Vault Viewer](tools/vault-viewer/) reads any Foothold vault in your browser: no install, no account, no Obsidian.
+
 ## What you get
 
-- A one-line setup prompt that installs the whole pack with no marketplace or plugin required.
-- A re-runnable `rename` step that whitelabels the pack to your name.
-- A manual `update` command for pulling new content as Foothold evolves.
-- Skills for the high-frequency adds: events, contacts, organisations.
-- Open-source defence reference content: regional cluster pages, public framework writeups, MOD body reference pages.
+- **A landscape you don't have to research.** Pre-populated, source-cited reference content: the post-SDR MOD structure, frameworks, portals, programmes, regional clusters, plus a procurement playbook that tells you which route fits your situation, funding routes compared, and plain-English orientations on security clearance and export controls.
+- **A working method, not just folders.** Guided onboarding builds your canonical pages from a brain dump; a first-week guide turns install-day enthusiasm into habit; every folder ships with a Guide explaining what goes there and why.
+- **Skills that do real work.** A daily brief written for you, meeting prep from your own CRM, a pre-bid eligibility gate, a bid-response drafter built on published evaluation criteria, CRM import from wherever your contacts live now, process mapping and SOP capture, and a monthly curation sweep that keeps the vault honest.
+- **A pack that stays current.** One update command pulls new content from this repo and never overwrites your own work without an explicit yes.
+
+## Why not just ChatGPT and a folder of notes?
+
+Because a chat forgets and a folder doesn't think. The AI you already use sees one conversation at a time; every session starts from zero, and the burden of re-explaining your business never goes away. Foothold inverts that: your context lives in the vault, permanently, and every conversation starts already briefed: your strategy, your customers, your voice, the state of every engagement. The system gets more useful every week you use it, which is precisely what a chat window never does. And unlike a bespoke setup you build yourself, it arrives with the defence landscape already researched and a maintained update path behind it.
 
 ## Audience
 
-Founders running defence-sector businesses. Free and available to all. Hands-on setup and ongoing support are available at a modest cost.
+Founders running defence-sector businesses, including founders who are new to AI; the pack assumes no prior Obsidian or Claude experience. Free and available to all. Hands-on onboarding and ongoing support are available from MilUX as a paid service; email for current pricing.
 
 ## Getting started
 
@@ -36,6 +54,19 @@ This is the install walkthrough. The whole thing takes about ten minutes once yo
 
 - **A paid Claude subscription, with Cowork.** Cowork is Anthropic's desktop app for non-developers, and it runs inside a paid Claude plan. Sign up and subscribe at [claude.com](https://claude.com), then download the Claude desktop app; Cowork is a tab inside it. There is a running cost here: budget for one Claude subscription per person who will run the vault.
 - **Obsidian.** Free knowledge management app. Download from [obsidian.md](https://obsidian.md). Obsidian Sync, used for keeping a vault in step across devices or people, is a paid add-on; a free alternative is covered under Scaling across a team below.
+
+### What it costs, honestly
+
+| Item | Cost | Ongoing effort |
+|------|------|----------------|
+| Foothold itself | Free, MIT licensed | — |
+| Claude subscription (with Cowork) | Your Claude plan, per person ([claude.com](https://claude.com) has current pricing) | — |
+| Obsidian | Free | — |
+| Obsidian Sync (optional, for multi-device) | Paid add-on; free git alternative documented in the pack | — |
+| Keeping the vault honest | — | Plan for about half an hour a week of review and correction, less as it learns |
+| Hands-on onboarding from MilUX (optional) | Paid; email matt@milux.co.uk for current pricing | — |
+
+The half-hour a week is the real cost, and it is also the mechanism: the corrections you make are how the vault learns your business. Skip it and the vault plateaus; do it and it compounds.
 
 ### Step 1 — Run the setup
 
@@ -48,10 +79,10 @@ Fetch https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/skills/
 The skill takes over from here. It will:
 
 1. **Lay down your vault.** Create a folder structure at `~/Obsidian/Foothold/` (or a custom path if you specify one). Silent step, takes a few seconds.
-2. **Ask six quick questions.** One at a time. Each has quick-pick options plus an "Other" option for free text. Skip any you want. The questions cover who you are, what you sell into defence, your positioning, your voice, your current priorities, and your tool stack.
+2. **Run a guided brain dump.** Two short forms covering six areas: who you are, what you sell into defence, your positioning, your voice, your current priorities, and your tool stack. Type, paste links, or upload documents against any of them; the single best input is a dictation transcript, rambled and untidied. Skip anything you like. Give it the hour it deserves; everything the vault does afterwards is built from this.
 3. **Offer a context drop.** One final question inviting you to paste links, upload files, or point at a local folder of source material. The more you give it, the more personalised your vault will be.
 4. **Build your canonical pages.** Silently. The skill drafts your operator profile, organisation page, brand and strategy pages, email signature, and voice notes from the answers and corpus.
-5. **Offer to schedule updates.** Final question asking whether you want `/foothold-update` to run automatically on a weekly or monthly cadence. Pick a cadence and the skill sets up the scheduled task for you; pick manual and you trigger updates yourself.
+5. **Offer the running rhythm.** Whether to schedule `/foothold-update` (weekly or monthly), a daily brief for weekday mornings, a monthly curation sweep, and a one-week check-in that asks what feels wrong and fixes it. All optional; all cancellable later.
 
 When the skill finishes, it tells you where the vault was created and which schedule (if any) is now in place.
 
@@ -99,6 +130,10 @@ That tells it which of these situations each file is in:
 - **Conflict.** You've edited the file AND upstream has new changes. You're asked per file: take theirs (overwrite local), keep mine (skip), or merge (the skill proposes a combined version that integrates upstream's changes into your edited file and asks you to confirm before writing).
 
 Your personalised content is never overwritten without an explicit yes from you.
+
+## Yours, forever
+
+Worth stating plainly, because everyone has been burned by a tool that died: **your vault does not depend on us.** It is a folder of plain Markdown files on your own machine, MIT licensed. Updates arrive over a plain HTTPS request to this public repository, with no MilUX server, account, or subscription in the loop. If Foothold stopped being maintained tomorrow, your vault would keep working exactly as it does today: static, complete, and readable by Obsidian, the Vault Viewer, or any text editor on earth. You could fork this repository and maintain your own line. There is no lock-in because there is nothing to be locked into.
 
 ## What's next
 
@@ -151,4 +186,4 @@ Email: matt@milux.co.uk. LinkedIn: [Matt Odell](https://www.linkedin.com/in/matt
 
 ## Provenance
 
-Foothold is built by [MilUX](https://milux.co.uk). Its structure, conventions, and skills come from MilUX's own working vault. It improves with every contribution from the network — if you find something useful that isn't in here, see [Share back](#share-back).
+Foothold is built by [Matt Odell](https://www.linkedin.com/in/mattodell/), founder of [MilUX](https://milux.co.uk), a defence-focused user-centred design consultancy, and a serving Army Reserve officer. Its structure, conventions, and skills are not a product designed at a whiteboard: they come from MilUX's own working vault, the system the company actually runs its business on, exported and made installable. When something in Foothold improves, it is usually because it broke or fell short in real use first. It improves with every contribution from the network too — if you find something useful that isn't in here, see [Share back](#share-back).
