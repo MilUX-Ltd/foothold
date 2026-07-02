@@ -21,26 +21,24 @@ The operations still have to be run. Foothold is the position you run them from.
 
 ## What changes in your first 30 days
 
-**Day 1.** The vault is installed and knows who you are: your offer, your positioning, your voice, your priorities, all captured in an hour's guided brain dump. The defence landscape is already in it: which MOD body owns what after the reorganisation, where the frameworks and portals live, which route into procurement fits your maturity. Questions that used to cost an afternoon on gov.uk now cost a search.
+**Day 1.** The vault is installed and knows who you are: your offer, your positioning, your voice, your priorities. Getting that in takes about an hour of guided brain dump. The defence landscape is already there: which MOD body owns what after the reorganisation, where the frameworks and portals live, which procurement route fits your stage. A question that used to cost an afternoon on gov.uk now costs a search.
 
-**Day 15.** Your daily note writes itself each morning: what needs attention, what's rolled over, what's coming. Before every external meeting, one command briefs you from your own relationship history. A live opportunity gets a go/no-go gate before you spend a week on it, checking the cyber floor, the clearance floor, and the export position you didn't know you had to check.
+**Day 15.** Your daily note is written for you each morning: what needs attention, what has rolled over, what is coming. Before an external meeting, one command briefs you from your own relationship history. When a live opportunity lands, an eligibility check tells you whether you can actually win it before you spend a week writing.
 
-**Day 30.** Drafts start sounding like you, because the vault holds your actual voice, not a description of it. Your CRM knows who's gone quiet. The sector reference pages have refreshed themselves. And the corrections you made in week one have stopped being needed, because everything you teach it stays taught.
+**Day 30.** Drafts are starting to sound like you, because the vault holds real samples of your writing rather than a description of your style. The CRM flags who has gone quiet. You are correcting the vault less than you did in week one, because it keeps what you teach it.
 
-The pattern underneath: every hour you give the vault compounds, because nothing you tell it is ever asked for twice.
-
-**Want to look before you leap?** The [Vault Viewer](tools/vault-viewer/) reads any Foothold vault in your browser: no install, no account, no Obsidian.
+If you want to see a vault before installing anything, the [Vault Viewer](tools/vault-viewer/) reads one in your browser. No install, no account.
 
 ## What you get
 
-- **A landscape you don't have to research.** Pre-populated, source-cited reference content: the post-SDR MOD structure, frameworks, portals, programmes, regional clusters, plus a procurement playbook that tells you which route fits your situation, funding routes compared, and plain-English orientations on security clearance and export controls.
-- **A working method, not just folders.** Guided onboarding builds your canonical pages from a brain dump; a first-week guide turns install-day enthusiasm into habit; every folder ships with a Guide explaining what goes there and why.
-- **Skills that do real work.** A daily brief written for you, meeting prep from your own CRM, a pre-bid eligibility gate, a bid-response drafter built on published evaluation criteria, CRM import from wherever your contacts live now, process mapping and SOP capture, and a monthly curation sweep that keeps the vault honest.
-- **A pack that stays current.** One update command pulls new content from this repo and never overwrites your own work without an explicit yes.
+- Pre-populated defence reference content, all from public sources and cited: the post-SDR MOD structure, frameworks, portals, programmes, regional clusters, a procurement playbook that says which route fits your situation, funding routes compared, and plain-English orientations on security clearance and export controls.
+- Guided onboarding that builds your canonical pages from a brain dump, a first-week guide, and a Guide file in every folder explaining what goes there.
+- Skills that do real work: a daily brief written for you, meeting prep from your own CRM, a pre-bid eligibility gate, a bid-response drafter built on published evaluation criteria, CRM import, process mapping, SOP capture, and a monthly curation sweep.
+- One update command that pulls new content from this repo without overwriting your own work.
 
 ## Why not just ChatGPT and a folder of notes?
 
-Because a chat forgets and a folder doesn't think. The AI you already use sees one conversation at a time; every session starts from zero, and the burden of re-explaining your business never goes away. Foothold inverts that: your context lives in the vault, permanently, and every conversation starts already briefed: your strategy, your customers, your voice, the state of every engagement. The system gets more useful every week you use it, which is precisely what a chat window never does. And unlike a bespoke setup you build yourself, it arrives with the defence landscape already researched and a maintained update path behind it.
+The AI you already use starts every conversation from zero. You carry the context to it each time, and nothing you explain today is remembered next week. Foothold keeps the context in the vault: your strategy, your customers, your engagements, your voice. Every conversation starts from there, and the vault gets more useful the longer you run it. You could build the same thing yourself from scratch; people do. What you would not have is the defence landscape already researched, or a maintained update path behind it.
 
 ## Audience
 
@@ -66,7 +64,7 @@ This is the install walkthrough. The whole thing takes about ten minutes once yo
 | Keeping the vault honest | — | Plan for about half an hour a week of review and correction, less as it learns |
 | Hands-on onboarding from MilUX (optional) | Paid; email matt@milux.co.uk for current pricing | — |
 
-The half-hour a week is the real cost, and it is also the mechanism: the corrections you make are how the vault learns your business. Skip it and the vault plateaus; do it and it compounds.
+The half-hour a week is the real cost. It is also how the vault learns your business: the corrections you make are the teaching.
 
 ### Step 1 — Run the setup
 
@@ -82,7 +80,7 @@ The skill takes over from here. It will:
 2. **Run a guided brain dump.** Two short forms covering six areas: who you are, what you sell into defence, your positioning, your voice, your current priorities, and your tool stack. Type, paste links, or upload documents against any of them; the single best input is a dictation transcript, rambled and untidied. Skip anything you like. Give it the hour it deserves; everything the vault does afterwards is built from this.
 3. **Offer a context drop.** One final question inviting you to paste links, upload files, or point at a local folder of source material. The more you give it, the more personalised your vault will be.
 4. **Build your canonical pages.** Silently. The skill drafts your operator profile, organisation page, brand and strategy pages, email signature, and voice notes from the answers and corpus.
-5. **Offer the running rhythm.** Whether to schedule `/foothold-update` (weekly or monthly), a daily brief for weekday mornings, a monthly curation sweep, and a one-week check-in that asks what feels wrong and fixes it. All optional; all cancellable later.
+5. **Offer the running rhythm.** Whether to schedule `/foothold-update` (weekly or monthly), a daily brief on weekday mornings, a monthly curation sweep, and a one-week check-in. Everything is optional and can be cancelled later.
 
 When the skill finishes, it tells you where the vault was created and which schedule (if any) is now in place.
 
@@ -133,7 +131,7 @@ Your personalised content is never overwritten without an explicit yes from you.
 
 ## Yours, forever
 
-Worth stating plainly, because everyone has been burned by a tool that died: **your vault does not depend on us.** It is a folder of plain Markdown files on your own machine, MIT licensed. Updates arrive over a plain HTTPS request to this public repository, with no MilUX server, account, or subscription in the loop. If Foothold stopped being maintained tomorrow, your vault would keep working exactly as it does today: static, complete, and readable by Obsidian, the Vault Viewer, or any text editor on earth. You could fork this repository and maintain your own line. There is no lock-in because there is nothing to be locked into.
+Worth stating plainly, because everyone has been burned by a tool that died: your vault does not depend on us. It is a folder of plain Markdown files on your own machine, MIT licensed. Updates arrive over a plain HTTPS request to this public repository; there is no MilUX server or account in the loop. If Foothold stopped being maintained tomorrow, your vault would keep working exactly as it does today, and any text editor could still read it. You could fork this repository and maintain your own line.
 
 ## What's next
 
@@ -186,4 +184,4 @@ Email: matt@milux.co.uk. LinkedIn: [Matt Odell](https://www.linkedin.com/in/matt
 
 ## Provenance
 
-Foothold is built by [Matt Odell](https://www.linkedin.com/in/mattodell/), founder of [MilUX](https://milux.co.uk), a defence-focused user-centred design consultancy, and a serving Army Reserve officer. Its structure, conventions, and skills are not a product designed at a whiteboard: they come from MilUX's own working vault, the system the company actually runs its business on, exported and made installable. When something in Foothold improves, it is usually because it broke or fell short in real use first. It improves with every contribution from the network too — if you find something useful that isn't in here, see [Share back](#share-back).
+Foothold is built by [Matt Odell](https://www.linkedin.com/in/mattodell/), founder of [MilUX](https://milux.co.uk), a defence-focused user-centred design consultancy, and a serving Army Reserve officer. The structure, conventions, and skills come from MilUX's own working vault: the system the company runs its business on, exported and made installable. When something in Foothold improves, it is usually because it broke or fell short in real use first. It also improves with contributions from the network; if you find something useful that isn't in here, see [Share back](#share-back).
