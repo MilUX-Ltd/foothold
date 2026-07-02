@@ -1,5 +1,9 @@
 # Foothold changelog
 
+## 2.0.1, 2026-07-02
+
+- README gains "Prefer a different stack?": a short note that the pack is plain Markdown and can be configured for open-source tools such as OpenCowork, self-hosted or already-owned models, and other sync arrangements, as bespoke work through MilUX.
+
 ## 2.0.0, 2026-07-02
 
 The onboarding release, and a major version because it changes what installing Foothold feels like. Informed by a competitive benchmark of a comparable vault-pack product; the patterns were rebuilt, not copied, and in each case improved: their form-based onboarding is Cowork-only, ours degrades to plain questions anywhere; their operator concept writes externally unattended, our adaptations stay review-gated and vault-only.

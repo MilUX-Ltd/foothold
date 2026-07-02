@@ -53,6 +53,10 @@ This is the install walkthrough. The whole thing takes about ten minutes once yo
 - **A paid Claude subscription, with Cowork.** Cowork is Anthropic's desktop app for non-developers, and it runs inside a paid Claude plan. Sign up and subscribe at [claude.com](https://claude.com), then download the Claude desktop app; Cowork is a tab inside it. There is a running cost here: budget for one Claude subscription per person who will run the vault.
 - **Obsidian.** Free knowledge management app. Download from [obsidian.md](https://obsidian.md). Obsidian Sync, used for keeping a vault in step across devices or people, is a paid add-on; a free alternative is covered under Scaling across a team below.
 
+### Prefer a different stack?
+
+Claude and Obsidian are the pairing we build for, and the one this walkthrough assumes. The pack itself is plain Markdown, though, so it can be configured differently: open-source tools such as OpenCowork in place of Cowork, models you already run (including self-hosted ones), and whichever sync arrangement your setup needs. That is bespoke work rather than a walkthrough, and MilUX does it as a service. If you want the pack set up your way, email matt@milux.co.uk.
+
 ### What it costs, honestly
 
 | Item | Cost | Ongoing effort |
