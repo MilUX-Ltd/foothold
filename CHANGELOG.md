@@ -1,5 +1,16 @@
 # Foothold changelog
 
+## 1.7.0, 2026-07-02
+
+The procurement navigation release: the landscape pages told you what exists, this release tells you which route fits your situation and whether you can clear the walls before you bid.
+
+- New `Intelligence/defence-landscape/Founder's Procurement Playbook.md`: the decision layer over the Frameworks, Portals and Programmes catalogues. Routes by maturity (funded R&D at TRL 1 to 4, proof and access at 5 to 7, the three procurement doors at 8 plus, and a separate services path), by timeline, then route-independent hygiene and the common failure modes. Written against the 2026 landscape: NAD Group fully established April 2026, UKDI inside NA-Innov, the DASA Open Call closed pending reopening around UKDI FOC, DOSBG as the SME front door.
+- New `Intelligence/defence-landscape/Security Clearance Primer.md`: clearance levels (BPSS through eDV), personnel versus Facility Security Clearance, realistic 2026 timescales, and the founder traps (no self-sponsorship, clearance in bid qualification). Published UKSV and MOD positions only; no folklore.
+- New `Intelligence/defence-landscape/Export Controls Orientation.md`: the UK regime in one page (control lists, ECJU, SPIRE, licence types, the Dual-Use OGEL in force 25 June 2026), the transfer-counts-as-export trap including US-origin ITAR/EAR contamination, and a five-question screening checklist. Orientation, not legal advice, and it says so.
+- New `Skills/business-skills/eligibility-check/`: a pre-bid go/no-go gate. Four walls in kill order (cyber floor per Def Stan 05-138 Issue 4, clearance floor, export position, commercial basics), verdict page written to the engagement folder, and a mandate to say no. MIT licensed, MilUX original.
+- Fixed: `MOD Structure.md` dated the NAD Group's establishment to April 2026; it was established March 2025 and declared fully established April 2026. The Defence Landscape Index and MOD Structure now agree.
+- `Defence Landscape Index.md` topical maps list now leads with the playbook.
+
 ## 1.6.0, 2026-07-01
 
 Removes the marketplace install step from the getting-started flow.

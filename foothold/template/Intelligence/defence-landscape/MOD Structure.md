@@ -16,7 +16,7 @@ The Ministry of Defence internal organisation, focused on bodies relevant to def
 
 ## National Armaments Director Group (NAD Group)
 
-Established April 2026, the NAD Group is the senior-level organisation within UK Defence responsible for delivering warfighting capability. It brings together a set of enabling organisations and named functional areas under the National Armaments Director. The structure is still settling as of mid-2026.
+Established in March 2025 and declared fully established in April 2026, the NAD Group is the senior-level organisation within UK Defence responsible for delivering warfighting capability. It brings together a set of enabling organisations and named functional areas under the National Armaments Director. The structure is still settling as of mid-2026.
 
 GOV.UK reference: [National Armaments Director (NAD) Group](https://www.gov.uk/government/groups/national-armaments-director-nad-group)
 
