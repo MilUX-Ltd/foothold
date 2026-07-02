@@ -1,5 +1,31 @@
 # Foothold changelog
 
+## 1.10.0, 2026-07-02
+
+- New `How to Use This Vault.md` at the vault root: the four working habits that make the system compound. Brief Claude like an intern in its first week (it never forgets a good briefing, because the briefing lives in the vault); describe your processes, because a process you can describe is a process you can automate; watch for repeatable patterns worth turning into a skill or a schedule, and tell Claude to watch too; and review both the work (self-review against the brief before anything is called done) and the working (regular retrospectives whose output is always a permanent change: a rule, an amended skill, a corrected Context page). Home.md and the first-week guide both link to it.
+
+## 1.9.0, 2026-07-02
+
+Kills the write-three-lines daily-note ritual shipped earlier today in 1.8.0. Asking the user to report what happened yesterday is a scrum anti-pattern; the vault already knows.
+
+- New `Skills/meta-skills/daily-brief/`: writes the day's note as a brief FOR the user, generated from engagements, initiatives, items rolled forward from previous notes, upcoming events, and (where a calendar connector exists) today's meetings. Owns a `## Daily Brief` section per the Daily Guide convention and never touches the user's own writing. Hard cap of seven needs-attention items; a quiet day gets a short brief, honestly. MIT licensed, MilUX original.
+- `foothold-setup` Phase C now offers to schedule `/daily-brief` for weekday mornings at 08:00.
+- `Getting Started - Your First Week.md` Day 3 rewritten: run the brief, schedule it if it earns its place. The standup ritual is gone.
+- `Daily Guide.md` updated: the note can be created by the brief each morning; the user writes everywhere else.
+
+## 1.8.0, 2026-07-02
+
+The first-week release: the pack now walks a new user from install day into a working habit, and the vault they land in has a live front door.
+
+- New `Getting Started - Your First Week.md` at the vault root: one small win a day (foundations, CRM import or seeding, the daily-note habit, design system, landscape orientation), then week two onwards. Home.md now leads with it.
+- `foothold-setup` Phase C now offers a one-off check-in scheduled seven days after install, revisiting the first-week list with the user.
+- `Home.md` rewritten: the Dataview query suggestions are now live query blocks (engagements in scoping and active, open initiatives, recent contacts, latest published), with a one-line pointer to installing the free Dataview plugin. Panels fill themselves as the vault grows.
+- New `Intelligence/defence-landscape/Funding Routes.md`: DASA/UKDI competitions, Defence Innovation Loans, Innovate UK/SBRI, DTEP, NSSIF, ARIA and venture capital compared on size, time to money and equity cost, with the three questions that choose between them and a warning about grant-chaining.
+- New `Resources/Reading List.md`: policy and reports first (SDR 2025, Defence Industrial Strategy 2025, Defence Investment Plan, NAD Group pages), then practitioner guides (the Hitchhiker's Guide to the Valley of Death, DASA proposal guidance), then a deliberately short book shelf. Deliberately not filed under Books, because the most important reading here is not books.
+- New `Resources/Ways of Working/Sync and Backup.md`: Obsidian Sync, git, iCloud, OneDrive/Dropbox/Google Drive and Syncthing compared honestly, including the iOS limitation on generic cloud drives, plus the sync-is-not-backup discipline and a warning against stacking sync systems.
+- New `Skills/business-skills/bid-response/`: structures and drafts a tender or competition response around the opportunity's own published evaluation criteria, compliance matrix first, evidence-only claims, social value as a scored section, and an assessor-lens red-team before submission. Doctrine sourced from published gov.uk guidance (DASA assessment criteria, MOD Commercial toolkit, Selling to government, the Procurement Act 2023 MAT basis, the Social Value Model) and the APMP body of knowledge. MIT licensed, MilUX original.
+- New `Skills/crm-skills/import-relationships/`: back-ported from Footing 1.2.0. Seeds the CRM from a live CRM connector, a CSV export, or a guided interview, with triage before import and a preview gate before any batch write. Adapted to Foothold's organisation buckets and its pre-populated MOD pages (link, don't duplicate).
+
 ## 1.7.0, 2026-07-02
 
 The procurement navigation release: the landscape pages told you what exists, this release tells you which route fits your situation and whether you can clear the walls before you bid.

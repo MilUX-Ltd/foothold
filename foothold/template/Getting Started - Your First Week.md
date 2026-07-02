@@ -24,9 +24,10 @@ Pick the option that matches your reality:
 - **You want to keep your current CRM.** Fine; the vault CRM then holds relationship knowledge (what was said, what matters to them) rather than pipeline. Add people as you meet them with `/add-contact`.
 - **You are starting from scratch.** After every real conversation this week, run `/add-contact`. Five contacts entered well beats fifty entered badly.
 
-## Day 3: the daily habit and your first meeting
+## Day 3: your daily brief and your first meeting
 
-- [ ] Open today's note in `Daily/` and write three lines: what happened yesterday, what matters today, what is blocked. That is the whole habit.
+- [ ] Run `/daily-brief`. It reads everything you are working on (engagements, initiatives, items rolled from previous days, upcoming events) and writes today's note in `Daily/` for you. You read it; you do not fill in a form.
+- [ ] If it earns its place, put it on a schedule: "run /daily-brief every weekday at 08:00". The brief is then waiting before you are. Setup may already have offered this.
 - [ ] Before your next external meeting, run `/meeting-prep`. It reads your CRM and briefs you. This is the moment the vault starts paying you back.
 
 ## Day 4: look the part
@@ -42,6 +43,7 @@ Pick the option that matches your reality:
 
 ## Week 2 and on
 
+- Read [[How to Use This Vault]]. Ten minutes on the four habits that decide whether this system compounds or plateaus.
 - Got a live opportunity? Run `/eligibility-check` before you commit a week to it, and `/bid-response` after a GO.
 - Start one initiative in `Initiatives/`, not three. The Initiatives Guide shows the shape.
 - Decide your [[Resources/Ways of Working/Sync and Backup|sync and backup]] approach before the vault becomes irreplaceable.
