@@ -95,7 +95,7 @@ Your vault is live. The top-level folders appear in the sidebar.
 
 ## Keeping your pack up to date
 
-Foothold evolves. New content gets added, existing pages get sharpened, new skills land. After your initial install, all updates happen through a skill that lives inside your vault — no marketplace refreshing, no plugin reinstalling, no Cowork restarting.
+Foothold evolves. New content gets added, existing pages get sharpened, new skills land. After your initial install, all updates happen through a skill that lives inside your vault: no marketplace refreshing, no plugin reinstalling, no Cowork restarting.
 
 ### How to trigger an update
 
@@ -113,7 +113,7 @@ Foothold evolves. New content gets added, existing pages get sharpened, new skil
 
 ### Why this works without any setup
 
-The `/foothold-update` skill lives at `Skills/foothold-update/SKILL.md` inside your vault. It was placed there by the initial `/foothold-setup` run. Cowork sees it the moment your vault is open. The skill makes a plain HTTPS request to the public Foothold GitHub URLs — no GitHub account, no auth, no Terminal, no Git on your machine.
+The `/foothold-update` skill lives at `Skills/foothold-update/SKILL.md` inside your vault. It was placed there by the initial `/foothold-setup` run. Cowork sees it the moment your vault is open. The skill makes a plain HTTPS request to the public Foothold GitHub URLs: no GitHub account, no auth, no Terminal, no Git on your machine.
 
 ### How conflicts are handled
 
@@ -121,13 +121,19 @@ The update skill is a three-way reconcile. It tracks the SHA (the GitHub blob id
 
 That tells it which of these situations each file is in:
 
-- **Untouched both sides.** Skip — nothing to do.
+- **Untouched both sides.** Skip; nothing to do.
 - **Upstream-only change.** You haven't edited the file; upstream has. Safe to apply, applied by default with a chance to veto.
-- **Local edit only.** You've edited; upstream hasn't changed. Skip — there's nothing new to bring in.
+- **Local edit only.** You've edited; upstream hasn't changed. Skip; there's nothing new to bring in.
 - **New on GitHub.** Add it.
 - **Conflict.** You've edited the file AND upstream has new changes. You're asked per file: take theirs (overwrite local), keep mine (skip), or merge (the skill proposes a combined version that integrates upstream's changes into your edited file and asks you to confirm before writing).
 
 Your personalised content is never overwritten without an explicit yes from you.
+
+## Where your data lives
+
+Your vault will hold bid thinking, customer relationships and commercial detail, so this deserves a straight answer. The vault is a folder of files on your own machine, and nothing in the pack sends it anywhere: every skill is plain text you can read, none of them transmits data externally, and there is no MilUX server involved. When you work with the vault through Cowork, the content you use in a session is processed by Claude under the terms of your Anthropic plan; read those terms and your plan's data settings before deciding what the vault should hold, the same diligence you would apply to any processor.
+
+Some things should never go in, whatever your plan says: anything carrying a classification marking, anything subject to export control, and client material under handling caveats. The installed vault carries a fuller page on all of this, including how the setup sits inside a Cyber Essentials posture and what to say when a prime's supply-chain security questionnaire asks.
 
 ## Yours, forever
 
@@ -141,20 +147,25 @@ In the first hour, focus on:
 2. **Read the per-folder Guides.** Every folder has a `<Folder Name> Guide.md` at its root. Knowledge Guide, Operations Guide, Context Guide, and CRM Guide are the load-bearing ones.
 3. **Connect Cowork to your vault.** Point Cowork at your new vault folder. Cowork and Obsidian now work against the same files; agents you run in Cowork write into the vault, and you see them in Obsidian.
 
-## Scaling across a team
+## Running Foothold in a small firm
 
-Foothold is built for a single operator. The setup interview asks who *you* are, the pages are *your* profile, and the update model assumes one person reconciling their vault against upstream. That is the right starting point for a founder. It is worth knowing what changes when a second or third person comes in, before you get there.
+Foothold is built for a single operator first, and that is still the right way in. But most defence SMEs are not one person, so here is the pattern that works for a firm of five to ten people. It is how MilUX itself runs.
 
-The main considerations:
+**Month one: one person.** Usually the MD, or whoever owns business development, because the landscape content, the eligibility gate and the bid drafter serve that seat first. One Claude subscription. Prove the vault earns its keep before involving anyone else.
 
-- **One shared vault, or one per person.** A single shared vault keeps everyone on the same canonical knowledge, at the cost of coordinating edits. Separate per-person vaults stay simple individually but drift apart over time. Most small teams want a shared vault for reference content (frameworks, MOD bodies, CRM) and accept that personal working notes can live wherever suits.
-- **How the vault syncs between people.** Obsidian Sync is the paid, no-setup option. A private Git repository is the free alternative and gives you version history, at the cost of a little more setup. Pick one before two people are editing, not after.
-- **Who curates canonical knowledge.** Name one curator. Foothold's value is that its reference content is trustworthy; that holds only if changes go through someone. Without a curator, a shared vault fills with half-finished and contradictory pages.
-- **Write boundaries.** Decide who can write where, and keep agents on a tighter rein than people. A common pattern: everyone can read everything, drafts land in a staging area, and only the curator promotes a draft into the canonical folders.
-- **The update conflict model is per person.** `/foothold-update` reconciles one vault against upstream. If several people share a vault, agree that only one person runs updates, and avoid two people editing the same file in the same window, or the three-way reconcile has more to untangle.
-- **One Claude subscription each.** Everyone running the vault through Cowork needs their own paid Claude plan. Factor that into the cost as the team grows.
+**Month two: a second seat and a named curator.** The curator decides what becomes canonical. Foothold's value rests on its content being trustworthy, and that holds only if changes go through someone. In a small firm the curator is usually the ops manager, not the MD, and the weekly half-hour of review belongs to them. Everyone else's drafts land in a staging folder; the curator promotes what deserves to be permanent.
 
-None of this is needed on day one. Set the vault up as a single operator, get value from it, and come back to this section when a second person is ready to join.
+**Who actually needs to pay.** Only people driving the vault through Cowork need a Claude subscription. Colleagues who just need to read it need neither a subscription nor Obsidian: the free [Vault Viewer](tools/vault-viewer/) reads the whole vault in a browser. A realistic pattern for a seven-person firm is two or three subscriptions and the viewer for everyone else.
+
+**What to bring in, and what to leave where it is.** Do not migrate your SharePoint. The vault is the working layer: strategy, relationships, engagements, the landscape. Documents stay in the systems that already hold them, `/import-relationships` brings your living contacts across, and everything else earns its place one page at a time.
+
+The mechanics once two or more people share a vault:
+
+- **Sync.** Obsidian Sync is the paid, no-setup option. A private Git repository is free and gives you version history, at the cost of a little setup. Pick one before two people are editing, not after; the pack's Sync and Backup page compares them.
+- **Write boundaries.** Everyone can read everything; drafts land in staging; only the curator writes to the canonical folders. Keep agents on a tighter rein than people.
+- **Updates.** `/foothold-update` reconciles one vault against this repository. Agree that only the curator runs it, and avoid two people editing the same file in the same window.
+
+None of this is needed on day one. Set the vault up as a single operator, get value from it, and come back to this section when the second person is ready.
 
 ## Tools
 
@@ -164,7 +175,7 @@ Standalone tools that ship with Foothold but install nothing live in [`tools/`](
 
 ## Share back
 
-Foothold gets better the more it knows about the landscape. If you come across something useful that isn't in here — a new MOD body, a framework or programme nobody else has documented well, a portal that's just launched, a sharper definition for an acronym, a piece of doctrine worth surfacing in the Reading List — send it to Matt. A line of LinkedIn, an email, or a screenshot of the page will do. He'll integrate it into the next update so everyone else on the network gets the benefit.
+Foothold gets better the more it knows about the landscape. If you come across something useful that isn't in here (a new MOD body, a framework or programme nobody else has documented well, a portal that's just launched, a sharper definition for an acronym, a piece of doctrine worth surfacing in the Reading List), send it to Matt. A line of LinkedIn, an email, or a screenshot of the page will do. He'll integrate it into the next update so everyone else on the network gets the benefit.
 
 Email: matt@milux.co.uk. LinkedIn: [Matt Odell](https://www.linkedin.com/in/mattodell/).
 
