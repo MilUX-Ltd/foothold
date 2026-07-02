@@ -41,7 +41,7 @@ Optional fields:
 
 ## Add discipline
 
-**One file per working day.** Create it at the start of the day, add to it through the day, close out at the end with what's still open.
+**One file per working day.** The `/daily-brief` skill can create it for you each morning, with the day's brief already written from what you are working on; you then add to it through the day. If you prefer to start it by hand, that works too. Either way, close out at the end with what's still open.
 
 **Sections that work well.** Most operators converge on something like:
 - Top of the file: today's focus, in one or two lines.
