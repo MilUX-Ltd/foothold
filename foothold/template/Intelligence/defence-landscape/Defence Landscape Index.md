@@ -24,6 +24,7 @@ The original framing of this landscape as the "Valley of Death" came from inink 
 
 Each map covers one functional view over the landscape. Entities are wikilinked to canonical CRM pages.
 
+- [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]]. Which route fits your situation; the decision layer over everything below.
 - [[Intelligence/defence-landscape/Government Departments|Government Departments]]. HMG departments with defence and security roles.
 - [[Intelligence/defence-landscape/MOD Structure|MOD Structure]]. MOD internal organisation, including the NAD Group.
 - [[Intelligence/defence-landscape/Innovation Organisations|Innovation Organisations]]. UKDI, DASA, BattleLab, jHub, Dstl, and innovation units.
