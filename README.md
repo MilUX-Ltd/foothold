@@ -38,11 +38,11 @@ If you want to see a vault before installing anything, the [Vault Viewer](tools/
 
 ## Why not just ChatGPT and a folder of notes?
 
-The AI you already use starts every conversation from zero. You carry the context to it each time, and nothing you explain today is remembered next week. Foothold keeps the context in the vault: your strategy, your customers, your engagements, your voice. Every conversation starts from there, and the vault gets more useful the longer you run it. You could build the same thing yourself from scratch; people do. What you would not have is the defence landscape already researched, or a maintained update path behind it.
+The AI you already use starts every conversation from zero. You carry the context to it each time, and nothing you explain today is remembered next week. Foothold keeps the context in the vault: your strategy, your customers, your engagements, your voice. Every conversation starts from there, and the vault gets more useful the longer you run it. You could build the same thing yourself from scratch; people do. What you would not have is the defence landscape already researched, or a maintained update path behind it. And it sits alongside whatever you already run: you are probably using AI somewhere today, and what this adds is the agentic side, with the policies, integration and orchestration already worked out.
 
 ## Audience
 
-Founders running defence-sector businesses, including founders who are new to AI; the pack assumes no prior Obsidian or Claude experience. Free and available to all. Hands-on onboarding and ongoing support are available from MilUX as a paid service; email for current pricing.
+Founders running defence-sector businesses, including founders who are new to AI; the pack assumes no prior Obsidian or Claude experience. Free and available to all, and your first hour of setup help is on us; see Support from MilUX below.
 
 ## Getting started
 
@@ -66,7 +66,7 @@ Claude and Obsidian are the pairing we build for, and the one this walkthrough a
 | Obsidian | Free | — |
 | Obsidian Sync (optional, for multi-device) | Paid add-on; free git alternative documented in the pack | — |
 | Keeping the vault honest | — | Plan for about half an hour a week of review and correction, less as it learns |
-| Hands-on onboarding from MilUX (optional) | Paid; email matt@milux.co.uk for current pricing | — |
+| Setup help from MilUX | First hour complimentary; further support by arrangement | — |
 
 The half-hour a week is the real cost. It is also how the vault learns your business: the corrections you make are the teaching.
 
@@ -191,6 +191,17 @@ Email: matt@milux.co.uk. LinkedIn: [Matt Odell](https://www.linkedin.com/in/matt
 
 **Anything else** — Email Matt at matt@milux.co.uk or open an issue at https://github.com/MilUX-Ltd/foothold/issues.
 
+## Support from MilUX
+
+**Your first hour is on us.** An hour of complimentary consulting to help you set up, configure, and ask anything. After that you should be able to crack on without us; the pack is built to run that way. Email matt@milux.co.uk to book it.
+
+Beyond the pack, a few things people ask for:
+
+- **AI enablement.** If you want support taking AI further than the pack (integration with your other systems, orchestration, working policies for agents), MilUX does that work. The offering is still taking shape, so the conversation is free and honest.
+- **Cyber Essentials and business setup.** We don't do certification ourselves, but we have trusted partners who do, and we'll happily refer you.
+- **Scaling.** When you outgrow the single-operator setup, we can help you scale the tools you've adopted or move to ones more appropriate to your size.
+- **Someone nearby.** MilUX has a network of Claude associates dotted around the United Kingdom.
+
 ## Help
 
 - Email: matt@milux.co.uk
@@ -199,4 +210,4 @@ Email: matt@milux.co.uk. LinkedIn: [Matt Odell](https://www.linkedin.com/in/matt
 
 ## Provenance
 
-Foothold is built by [Matt Odell](https://www.linkedin.com/in/mattodell/), founder of [MilUX](https://milux.co.uk), a defence-focused user-centred design consultancy, and a serving Army Reserve officer. The structure, conventions, and skills come from MilUX's own working vault: the system the company runs its business on, exported and made installable. When something in Foothold improves, it is usually because it broke or fell short in real use first. It also improves with contributions from the network; if you find something useful that isn't in here, see [Share back](#share-back).
+Foothold is built by [Matt Odell](https://www.linkedin.com/in/mattodell/), founder of [MilUX](https://milux.co.uk), a defence-focused user-centred design consultancy, and a serving Army Reserve officer. The structure, conventions, and skills come from MilUX's own working vault: the system the company runs its business on, exported and made installable. Many of the associates in MilUX's Claude Partner Network run it too. When something in Foothold improves, it is usually because it broke or fell short in real use first. It also improves with contributions from the network; if you find something useful that isn't in here, see [Share back](#share-back).
