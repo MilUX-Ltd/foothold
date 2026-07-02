@@ -10,7 +10,7 @@ For defence-sector founders, the hostile territory is the landscape itself. The 
 
 Foothold gives you that secure initial position in an evening.
 
-It is an installable Obsidian vault pack for defence-sector founders. One command lays down a working second-brain: folder structure, page templates, skills, and pre-populated open-source defence reference content. Walk into Monday with a knowledge system that already knows where the public frameworks live, which MOD body owns what, and how the pieces fit together after the post-SDR reorganisation.
+It is an integrated AI operating model and second brain for defence businesses, delivered as an installable Obsidian vault pack. One command lays down the whole thing: folder structure, page templates, skills, and pre-populated open-source defence reference content. Walk into Monday with a knowledge system that already knows where the public frameworks live, which MOD body owns what, and how the pieces fit together after the post-SDR reorganisation.
 
 The structure is built to slot into Anthropic's Cowork. A Foothold vault opened in Obsidian, with Cowork running alongside, gives a small defence-sector business something that, until recently, needed a dedicated team to put together.
 
