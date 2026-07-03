@@ -21,11 +21,11 @@ The operations still have to be run. Foothold is the position you run them from.
 
 ## What changes in your first 30 days
 
-**Day 1.** The vault is installed and knows who you are: your offer, your positioning, your voice, your priorities. Getting that in takes about an hour of guided brain dump. The defence landscape is already there: which MOD body owns what after the reorganisation, where the frameworks and portals live, which procurement route fits your stage. A question that used to cost an afternoon on gov.uk now costs a search.
+**Day 1.** The vault is installed and knows who you are: your offer, your positioning, your voice, your priorities, and it has helped build your brand along the way. The defence landscape is already there: which MOD body owns what after the reorganisation, where the frameworks and portals live, which procurement route fits your stage. A question that used to cost an afternoon on gov.uk now costs a search.
 
-**Day 15.** Your daily note is written for you each morning: what needs attention, what has rolled over, what is coming. Before an external meeting, one command briefs you from your own relationship history. When a live opportunity lands, an eligibility check tells you whether you can actually win it before you spend a week writing.
+**Day 15.** Your morning brief is written before you sit down: what needs attention, what has rolled over, what is coming. Every meeting starts prepped from your own history, slide decks and documents are produced in minutes, and when a live opportunity lands, an eligibility check gives you a clear go or no-go before you spend a week writing a bid you cannot win.
 
-**Day 30.** Drafts are starting to sound like you, because the vault holds real samples of your writing rather than a description of your style. The CRM flags who has gone quiet. You are correcting the vault less than you did in week one, because it keeps what you teach it.
+**Day 30.** Drafts sound like you, because the vault holds real samples of your writing rather than a description of your style. The CRM flags who has gone quiet, the routine work is running on schedules instead of your attention, and the feedback loops keep making it better. You have stopped prompting and started collaborating.
 
 If you want to see a vault before installing anything, the [Vault Viewer](tools/vault-viewer/) reads one in your browser. No install, no account.
 
