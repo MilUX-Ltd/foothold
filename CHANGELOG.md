@@ -5,6 +5,7 @@
 Answers the questions the ICP review surfaced, in Matt's words.
 
 - The one-line description is now "an integrated AI operating model and second brain for defence businesses", matching the launch graphic. It says what the pack became at 2.0.0; "a folder structure with reference content" undersold it.
+- `docs/architecture.md` rewritten to match the pack as it is: the stale bash-CLI commands section replaced with the real skill-based setup and update flow, the agent-stack section reframed honestly as "one operator, agents with boundaries", the four-skill v1 list replaced with the current seven-category set, the placeholder table completed, and the content-layer summary updated with the playbook, funding routes and compliance orientations.
 - Retired the offline zip installer (`installer/`). The zips had drifted seven releases behind the template, no documentation pointed at the path, and the one-line GitHub fetch has been the sole documented install since 1.6.0. Anyone needing an offline install can clone the repo; the template is all in it.
 
 - New README section, Support from MilUX: the first hour of setup consulting is complimentary, then the pack runs without us; AI enablement beyond the pack; trusted-partner referrals for Cyber Essentials and business setup; scaling support; and the UK-wide Claude associate network. The audience line and cost table updated to match.

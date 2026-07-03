@@ -1,16 +1,16 @@
 # Foothold — Structure and How It Works
 
-This document explains what's inside a Foothold pack, how it's organised, and how to use the install, rename, and update commands. Read it once at install time so you know what you're working with.
+This document explains what's inside a Foothold pack, how it's organised, and how setup and updates work. Read it once at install time so you know what you're working with.
 
 ## What you get
 
-A Foothold pack is a working Obsidian vault. Open it in Obsidian and the structure is already in place: folders for your operator profile, your contacts and organisations, your initiatives, your reference library, and an external-scanning intelligence layer pre-populated with defence-sector reference content. You don't start from a blank vault. You start from one that already knows where the public frameworks live and which MOD body owns what.
+A Foothold pack is a working Obsidian vault. Open it in Obsidian and the structure is already in place: folders for your operator profile, your contacts and organisations, your initiatives, your reference library, and an external-scanning intelligence layer pre-populated with defence-sector reference content. You don't start from a blank vault. You start from one that already knows where the public frameworks live, which MOD body owns what, and which procurement route fits which stage of maturity.
 
 The pack ships in three layers.
 
-**Structure.** Folder layout, page templates, frontmatter conventions, and skills. The load-bearing part. It changes slowly and you inherit it as opinionated default.
+**Structure.** Folder layout, page templates, frontmatter conventions, and skills. The load-bearing part. It changes slowly and you inherit it as an opinionated default.
 
-**Open-source content.** Pre-populated reference material you don't have to research from scratch: regional defence and security cluster pages with their public links, public framework writeups, MOD body reference pages.
+**Open-source content.** Pre-populated reference material you don't have to research from scratch: the post-SDR MOD structure, frameworks, portals, programmes, regional cluster pages, a procurement playbook, funding routes compared, and plain-English orientations on security clearance and export controls.
 
 **Stubs and rules.** Empty page templates plus a documented rule, per folder, for how you grow your own knowledge base.
 
@@ -20,6 +20,8 @@ The pack ships in three layers.
 Your Pack/
 ├── CLAUDE.md
 ├── Home.md
+├── Getting Started - Your First Week.md
+├── How to Use This Vault.md
 ├── Capabilities and Services/
 ├── Context/
 ├── CRM/
@@ -35,7 +37,7 @@ Your Pack/
 └── Skills/
 ```
 
-The pack is a flat top-level. No nested namespaces. Wikilink paths stay short and the mental model stays simple.
+The pack is a flat top-level. No nested namespaces. Wikilink paths stay short and the mental model stays simple. Home.md is the live dashboard (its panels need the free Dataview plugin); the two root guides carry the first week and the working habits.
 
 ### Per-folder intent
 
@@ -43,27 +45,27 @@ The pack is a flat top-level. No nested namespaces. Wikilink paths stay short an
 
 **Context.** Your own profile, your organisation, brand, strategy, team, stakeholders. The root files are templated stubs populated with your details at install time. Each ships with a worked example so you see what a well-formed page looks like.
 
-**CRM.** Contacts, organisations, networks, programmes, portals, frameworks. The MOD-body subfolder pattern (parent organisation as folder, child organisations inside with `parent:` frontmatter and `former_name:` for rebrands) ships as the canonical pattern for absorbing MOD reorganisations without breaking your search.
+**CRM.** Contacts, organisations, networks. The MOD-body subfolder pattern (parent organisation as folder, child organisations inside with `parent:` frontmatter and `former_name:` for rebrands) ships as the canonical pattern for absorbing MOD reorganisations without breaking your search. Ships pre-populated with the MOD structure, the regional clusters, the defence networks, and an investor reference set.
 
-**Daily.** Standard Obsidian daily-notes pattern. Ships with a daily-note template and a Guide explaining how to use it. Wire up daily briefings or signal scans as you add agent integrations of your own.
+**Daily.** Standard Obsidian daily-notes pattern. The `/daily-brief` skill can write each day's note for you as a generated brief; a Guide explains the conventions, including the agent-owned-section rule.
 
 **Ideas.** A capture-quickly, process-later inbox. Ships with a Guide that defines what belongs (early-stage ideas, sparks) and what doesn't (anything with a natural home elsewhere), so it doesn't drift into a junk drawer.
 
 **Customer Engagements.** Work you deliver for someone else. Each engagement maps 1:1 to an organisation page in `CRM/organisations/`. Three-state lifecycle (`scoping/`, `active/`, `completed/`) reflecting how customer work actually moves: shaped, agreed, delivered. Ships with `Customer Engagements Guide.md` carrying the canonical Guide pattern and the binary rule that distinguishes engagements from initiatives.
 
-**Initiatives.** Work you do for yourself. Internal services, your own products, marketing, thought leadership, operating-model change, internal tooling. Two-state lifecycle (`active/`, `completed/`). Ships with `Initiatives Guide.md` carrying the canonical Guide pattern, the cross-link to Customer Engagements, and one fully-worked example initiative as a scaffold. The split rule is binary: outcome owned by your business -> Initiative, outcome owned by an external organisation -> Customer Engagement.
+**Initiatives.** Work you do for yourself. Internal services, your own products, marketing, thought leadership, operating-model change, internal tooling. Two-state lifecycle (`active/`, `completed/`). The split rule is binary: outcome owned by your business → Initiative, outcome owned by an external organisation → Customer Engagement.
 
-**Intelligence.** External-facing scanning: market, defence-landscape (clusters, programmes, MOD bodies, frameworks, portals), competitor analysis, literature. The Guide codifies the "this is for external scanning, not internal artefacts" rule so the folder stays clean.
+**Intelligence.** External-facing scanning: the defence landscape (MOD structure, frameworks, portals, programmes, the procurement playbook, funding routes, the clearance and export-control orientations), events, market, competitors. The Guide codifies the "this is for external scanning, not internal artefacts" rule so the folder stays clean.
 
-**Knowledge.** Agent operating rules: the rules file, frontmatter conventions, hypotheses, tagging policy, domain notes. Distinct from Resources, which is your practitioner reference library. Knowledge files are policy documents your agents read at runtime.
+**Knowledge.** Operating rules: the rules file, frontmatter conventions, hypotheses, tagging policy. Distinct from Resources, which is your practitioner reference library. Knowledge files are policy documents your agents read at runtime.
 
-**Marketing.** Marketing Outputs (published artefacts and active drafts) and Newsletter content. Foothold's three-layer marketing pattern keeps strategy in `Capabilities and Services/Internal Services/Content Pillars.md`, workflow in `Capabilities and Services/Internal Services/Content Creation Workflow.md`, and outputs here in Marketing. Marketing is a function you run.
+**Marketing.** Marketing Outputs (published artefacts and active drafts) and Newsletter content. Strategy lives in `Capabilities and Services/Internal Services/Content Pillars.md`, workflow in `Content Creation Workflow.md`, and outputs here. Marketing is a function you run.
 
-**Operations.** Load-bearing for the agent stack. Ships pre-populated with your email-signature stub and runtime policy files your agents read at message-send time. The Guide spells out the in-scope test ("would removing it break a live agent flow?") and lists what doesn't belong here.
+**Operations.** Runtime policy your agents read as they work: your email-signature stub, the agent-pause kill switch, messaging policy. The Guide spells out the in-scope test ("would removing it break a live agent flow?") and lists what doesn't belong here.
 
-**Resources.** Your practitioner reference library. Ships with a six-subfolder structure: `Methods/`, `Ways of Working/`, `Books/`, `Business/`, `Frameworks/`, `Reference/`, `Templates/`. Each subfolder has its own Guide explaining what belongs.
+**Resources.** Your practitioner reference library: `Methods/`, `Ways of Working/` (including Sync and Backup and Where Your Data Lives), `Books/`, `Business/`, `Frameworks/`, `Reference/`, `Templates/`, plus the Reading List. Each subfolder has its own Guide.
 
-**Skills.** The agent skills that ship with the pack. Skills are executable. The content they draw on lives elsewhere in the vault.
+**Skills.** The agent skills that ship with the pack, organised into `meta-skills/`, `crm-skills/`, `business-skills/`, `pm-skills/`, `ops-skills/`, `brand-skills/`, and `content-skills/`. Skills are executable. The content they draw on lives elsewhere in the vault.
 
 ## The Guide pattern
 
@@ -81,7 +83,7 @@ When you're not sure where something goes, read the relevant Guide. When you can
 
 ## Templating
 
-Foothold uses placeholders for everything specific to you. The installer fills them in at install time. You can re-substitute at any point via `foothold rename`.
+Foothold uses placeholders for everything specific to you. The `foothold-setup` skill fills them in during install, from your answers to the onboarding brain dump.
 
 | Placeholder | Meaning |
 |-------------|---------|
@@ -90,61 +92,55 @@ Foothold uses placeholders for everything specific to you. The installer fills t
 | `{{pack_owner}}` | Your full name |
 | `{{pack_owner_first}}` | Your first name |
 | `{{pack_owner_email}}` | Your primary email |
+| `{{pack_owner_linkedin}}` | Your LinkedIn URL (optional) |
+| `{{pack_owner_phone}}` | Your phone number (optional) |
 | `{{pack_org}}` | Your organisation |
 | `{{pack_org_slug}}` | Slugified organisation name |
+| `{{pack_org_website}}` | Your organisation's website |
+| `{{install_date}}` | The install date |
 
-A small `.foothold/config.yml` in the pack root tracks the current substitution values. `foothold rename` reads from it before writing new values, so renaming is safe from any state.
+A small `.foothold/config.yml` in the pack root tracks the current substitution values, your schedule choices, and the SHA of every file as last pulled from GitHub, used by `/foothold-update`'s three-way reconcile.
 
-## The three commands
+## How setup and updates work
 
-### `foothold install`
+There is no bash installer and no separate plugin. Both setup and update are Cowork skills that fetch plain files over HTTPS from the public GitHub repo. See the README for the full walkthrough; in outline:
 
-One bash command. Lays down the pack, runs the templating pass, writes `.foothold/config.yml` to track your substitution values, optionally initialises a git repo in the pack folder. Prints next-step instructions.
+**`foothold-setup`** (run once, via the one-line prompt in the README). Lays down the folder structure, runs a guided brain dump across six categories (two rich forms, or plain questions where forms aren't available), offers a context drop for files and links, builds your canonical pages from everything you gave it, and offers the running rhythm: scheduled updates, a weekday daily brief, a monthly curation sweep, and a one-week check-in. Re-running it later is discovery-first: it reads what the vault already knows and asks only what has changed.
 
-### `foothold rename <new-name>`
+**`/foothold-update`** (run any time, manually or on a schedule). Compares your vault against the current state of the GitHub repo using the SHA history in `.foothold/config.yml`, and reconciles file by file: applies upstream-only changes automatically, leaves your own edits alone, adds anything new, and asks you to resolve genuine conflicts. Your personalised content is never overwritten without an explicit yes.
 
-Re-runnable. Replaces every templated value, renames any folder containing a placeholder in its name, refuses to run if you have uncommitted changes so you can roll back if anything looks wrong. This is how you take your pack from "Foothold" to your own brand name cleanly.
+## One operator, agents with boundaries
 
-### `foothold update`
+Foothold is built for a single operator working with Cowork, and that is how it should be run first. What ships alongside that is a set of conventions that keep agent work disciplined as you add more of it: operating rules in `Knowledge/` that agents read at runtime, policy and signature assets in `Operations/`, agent-owned sections in daily notes, and a drafts-then-promotion pattern for anything that becomes canonical. When a second person or a second agent arrives, the same conventions carry the write boundaries; the README's small-firm section describes that path. The conventions work directly with Cowork and can be adapted to other AI tools without changing the structure; how you wire your agents in is your choice. Foothold is opinionated about the boundaries, and the implementation underneath is yours.
 
-Pulls the latest open-source content updates, new skills, and structural improvements. Prints a summary before applying. Per-group confirmation, so you can accept some changes and skip others. Manual command in v1. A scheduled-task version arrives in v1.1.
+## The skill set
 
-## The agent stack
+Around sixty skills ship with the pack, in seven categories. The high points:
 
-Foothold ships with a multi-agent stack pattern. The structure carries clear write boundaries between research, curation, and execution, with explicit handoffs between them. You bring your own agents and plug them into the structure.
+- **meta-skills.** The pack's own lifecycle and hygiene: `foothold-setup`, `foothold-update`, `daily-brief` (writes your morning brief), `curator` (a budgeted monthly hygiene sweep), `skill-safety-audit` (run on any skill from outside before it runs, no exceptions), `skill-value-review`, `prompt-master`, `process-interviewer`.
+- **crm-skills.** The high-frequency adds and their payoff: `add-contact`, `add-organisation` (carries the MOD-rebrand pattern), `add-event` (with a Chatham House Rule check at intake), `meeting-prep`, `mobilise-engagement`, and `import-relationships` for bringing your existing CRM across, connector-first, with triage.
+- **business-skills.** The defence-commercial spine: `eligibility-check` (a pre-bid go/no-go gate), `bid-response` (drafting against published evaluation criteria), `write-sow`, `cyber-essentials-ready`, `build-dpia`, `red-team-investor`, `late-payment-reminder`.
+- **pm-skills.** Twenty-six business-method reference skills: positioning, market sizing, pricing, personas, pre-mortems, and the rest of the standard toolkit.
+- **ops-skills.** The operations wing: `process-map`, `sop-capture`, `service-blueprint`, `ai-readiness`.
+- **brand-skills.** `design-system-setup`, which builds your design system from your onboarding answers.
+- **content-skills.** `newsletter-writer` and `humaniser`.
 
-The pattern works directly with Anthropic's Cowork, which is where Foothold is most at home. It can be adapted to other AI tools without changing the structural conventions.
-
-The pack ships the supporting pieces:
-
-- Agent operating rules in `Knowledge/`.
-- Runtime policy and signature assets in `Operations/`.
-- A structured outputs pattern for upstream-to-downstream handoffs.
-
-How you wire your agents into the structure is your choice. Foothold is opinionated about the boundaries. The implementation underneath is yours.
-
-## Skills that ship in v1
-
-- **add-contact.** Pulls public information about a contact you've met, drafts a contact page, asks you to confirm before writing.
-- **add-organisation.** Same, for an organisation. Carries the MOD-body rebrand pattern (one page per current identity with `former_name:` frontmatter, parent linkage) so MOD restructures don't break your CRM.
-- **add-event.** For cluster events, conferences, talks. Captures the event flow including a Chatham House Rule check at intake.
-- **add-cluster-event.** Specialisation for RDSC events.
+Every skill carries audit frontmatter (`audited`, `audit_verdict`, `origin`, `maintainer`), and the audit discipline applies to anything you add from elsewhere.
 
 ## What ships in the open-source content layer
 
 Pre-populated reference content sourced from publicly available material only.
 
-- **Regional Defence and Security Clusters.** All nine UK RDSC pages with their public links and member-club lists where public.
-- **Public frameworks.** UK gov frameworks (DOS, G-Cloud, EDP, NGAP), MOD acquisition portals, defence-relevant procurement instruments.
-- **MOD body reference pages.** The current National Armaments structure (NA-Intl, NA-C&I, NA-P&P, NA-Innov, NA-M, NA-C, NA-L&S, NA-D&D, DIO, plus the National Armaments Delivery Executive) and the visible child organisations with parent linkage.
-- **MOD-facing portals.** Five of the most useful, with public-facing entry points.
-- **Visible defence programmes.** TEMPEST/GCAP, SKYNET, ZODIAC, MORPHEUS Test & Reference Centre, and others.
+- **The decision layer.** The Founder's Procurement Playbook (which route fits your maturity, timeline and offer) and Funding Routes (DASA/UKDI competitions, loans, SBRI, DTEP, NSSIF, ARIA and venture capital compared).
+- **The compliance orientations.** Security Clearance Primer and Export Controls Orientation, published positions only, no folklore.
+- **The landscape.** The current National Armaments structure and its visible child organisations with parent linkage, regional defence and security cluster pages, public framework writeups (DOS, G-Cloud, EDP, NGAP, DTEP and more), MOD-facing portals, and visible defence programmes (TEMPEST/GCAP, SKYNET, ZODIAC and others).
+- **The reading list.** Policy and reports first (SDR 2025, the Defence Industrial Strategy, the Defence Investment Plan), then practitioner guides.
 
 The content audit rule is binary: if the source lives in a publicly searchable place (gov.uk, MOD website, company website, LinkedIn public profile), it ships. If it would have to come from a relationship, it doesn't.
 
 ## Growing your pack
 
-The discipline is simple. Per-folder Guides are the contract. Skills cover the high-frequency adds (contacts, organisations, events). The long tail follows the conventions documented in each Guide.
+The discipline is simple. Per-folder Guides are the contract. Skills cover the high-frequency adds. The long tail follows the conventions documented in each Guide, and `How to Use This Vault.md` carries the four working habits that make the whole system improve with use.
 
 When in doubt:
 
