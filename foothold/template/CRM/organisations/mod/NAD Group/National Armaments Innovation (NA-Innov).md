@@ -2,10 +2,10 @@
 type: organisation
 name: National Armaments Innovation
 acronym: NA-Innov
-former_name: (new pillar created 2 April 2026)
-led_by: DG Innovation (3* appointment pending); CE Dstl Dr Paul Hollinshead
+former_name: (new pillar created 13 April 2026)
+led_by: DG Innovation (3* appointment pending)
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
-renamed: 2026-04-02
+renamed: 2026-04-13
 status: active
 category: mod-component
 constituent_bodies: Dstl; UK Defence Innovation (UKDI, including DASA, FCI, Rapid Innovation Team); Defence Investment Unit
@@ -24,7 +24,7 @@ tags:
 
 # National Armaments Innovation (NA-Innov)
 
-> **New pillar created 2 April 2026** as part of the NAD Group reorganisation. Brings the MOD's principal innovation organisations under a single Director General.
+> **New pillar created 13 April 2026** as part of the NAD Group reorganisation. Brings the MOD's principal innovation organisations under a single Director General.
 >
 > **This page is the canonical home** for content previously held on separate pages for Dstl, UK Defence Innovation (UKDI), DASA, and the Defence Investment Unit.
 
@@ -32,9 +32,9 @@ tags:
 
 Defence's innovation pillar. Houses three named constituent bodies:
 
-- **Defence Science and Technology Laboratory (Dstl)**, the MOD's executive-agency science and technology arm. Chief Executive: **Dr Paul Hollinshead**.
+- **Defence Science and Technology Laboratory (Dstl)**, the MOD's executive-agency science and technology arm.
 - **UK Defence Innovation (UKDI)**, the consolidated central MOD innovation function announced under the 2025 Strategic Defence Review; itself houses **DASA (Defence and Security Accelerator)**, **FCI (Future Capability Innovation)**, the **Rapid Innovation Team**, and the **Command Innovation Hubs**. UKDI has a ringfenced annual budget of at least £400 million.
-- **Defence Investment Unit**, the defence-tech investment arm working with venture capital, banking, and strategic-finance partners. Reports on a dotted line directly to the National Armaments Director.
+- **Defence Investment Unit**, the defence-tech investment arm working with venture capital, banking, and strategic-finance partners.
 
 Led by **DG Innovation** (3\* appointment pending). The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
@@ -103,7 +103,7 @@ Full operating capability target: July 2026 (12-month transition).
 
 GOV.UK: [Launch of new body to harness innovative tech for the UK's Armed Forces](https://www.gov.uk/government/news/launch-of-new-body-to-harness-innovative-tech-for-the-uks-armed-forces) (1 July 2025); [A new era for Defence Innovation: DASA, DIU and DE&S FCI unite under UK Defence Innovation (UKDI)](https://www.gov.uk/guidance/a-new-era-for-defence-innovation-dasa-diu-and-des-fci-unite-under-uk-defence-innovation-ukdi).
 
-The UKDI launch was paired with the announcement that UK Strategic Command would be renamed **Cyber & Specialist Operations Command (CSOC)** from 1 September 2025; the two reforms together form the core of the post-SDR MOD restructure. UKDI now sits inside NA-Innov (per the 2 April 2026 NAD reorganisation), having originally been housed under Options and Commissioning.
+The UKDI launch was paired with the announcement that UK Strategic Command would be renamed **Cyber & Specialist Operations Command (CSOC)** from 1 September 2025; the two reforms together form the core of the post-SDR MOD restructure. UKDI now sits inside NA-Innov (per the 13 April 2026 NAD reorganisation), having originally been housed under Options and Commissioning.
 
 ### DASA: Defence and Security Accelerator (within UKDI)
 

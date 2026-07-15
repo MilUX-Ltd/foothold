@@ -3,11 +3,11 @@ type: organisation
 name: National Armaments Digital & Data
 acronym: NA-D&D
 former_name: Defence Digital
-led_by: DG Digital & Data — Charles Forte (also Defence Chief Digital and Information Officer, DG CDIO)
+led_by: DG Digital & Data (also Defence Chief Digital and Information Officer, DG CDIO)
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 status: active
 website: https://www.gov.uk/government/groups/defence-digital
-renamed: 2026-04-02
+renamed: 2026-04-13
 sites: MOD Corsham (primary); MoD Main Building, Whitehall
 customer_share: c.62% of total UK Defence SITS spend (TechMarketView estimate, 2025)
 last_updated: 2026-05-28
@@ -21,15 +21,15 @@ tags:
 
 # National Armaments Digital & Data (NA-D&D)
 
-> **Renamed 2 April 2026** from *Defence Digital*. Old name retained for search continuity.
+> **Renamed 13 April 2026** from *Defence Digital*. Old name retained for search continuity.
 
 ## Summary
 
-The MOD's central capability for digital, data, technology and ICT services. Now sits within NAD Group as the Digital & Data pillar, operating as a **single, unified function across Defence**: integrating digital and data activity, setting standards, delivering common services and platforms, developing the digital cadre. Built on three layers: **Functional Digital Leadership**, **Common Platforms and Services**, and **Military and Business Outcomes**. The DG also holds the cross-MOD Chief Digital and Information Officer role.
+The MOD's central capability for digital, data, technology and ICT services. Now sits within NAD Group as the Digital & Data pillar, operating as a **single, unified function across Defence**: integrating digital and data activity, setting standards, delivering common services and platforms, developing the digital cadre. The DG also holds the cross-MOD Chief Digital and Information Officer role.
 
 Headquartered at MOD Corsham with a Whitehall presence at MoD Main Building. Per TechMarketView's *UK Defence SITS Suppliers, Trends and Forecasts 2025*, NA-D&D (as Defence Digital) accounts for an estimated **c.62% of total UK Defence SITS spend**, making it the single largest customer in the UK Defence systems-integration market.
 
-Led by **DG Digital & Data — Charles Forte** (also the Defence Chief Digital and Information Officer, DG CDIO). The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
+Led by **DG Digital & Data** (also the Defence Chief Digital and Information Officer, DG CDIO). The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 ## What NA-D&D Does
 

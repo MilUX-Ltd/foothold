@@ -4,12 +4,11 @@ name: National Armaments Plans & Portfolios
 acronym: NA-P&P
 former_name: Options & Commissioning (O&C)
 also_known_as_in_des: Gateway
-led_by: DG Plans & Portfolios — Paul Marshall
+led_by: DG Plans & Portfolios
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 status: active
 category: mod-component
-renamed: 2026-04-02
-portfolio_structure: 14 portfolios across the NAD Group, implemented in four tranches; Tranche 1 (Lethality, Space Systems, Special Projects)
+renamed: 2026-04-13
 last_updated: 2026-05-28
 tags:
   - mod
@@ -22,13 +21,13 @@ tags:
 
 # National Armaments Plans & Portfolios (NA-P&P)
 
-> **Renamed 2 April 2026** from *Options & Commissioning (O&C)*. Inside DE&S the function operated as the "Gateway". Old names retained for search continuity.
+> **Renamed 13 April 2026** from *Options & Commissioning (O&C)*. Inside DE&S the function operated as the "Gateway". Old names retained for search continuity.
 
 ## Summary
 
-UK Defence's single-entry point for new un-commissioned work. NA-P&P defines and commissions affordable, achievable, and attractive whole-life solutions for the warfighter, then commissions them into the right Portfolios or delivery route. The pillar is implementing 14 portfolios across the NAD Group in four tranches; **Lethality, Space Systems, and Special Projects** make up Tranche 1, with the Lethality portfolio the first to stand up in March 2026.
+UK Defence's single-entry point for new un-commissioned work. NA-P&P defines and commissions affordable, achievable, and attractive whole-life solutions for the warfighter, then commissions them into the right Portfolios or delivery route. Programmes are grouped into portfolios by domain or technology, for example space and lethality.
 
-Led by **DG Plans & Portfolios — Paul Marshall**. The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
+Led by **DG Plans & Portfolios**. The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 ## Role in the landscape
 
@@ -36,15 +35,13 @@ NA-P&P combines what used to be the "Options & Commissioning" function inside NA
 
 ### Portfolio approach
 
-A cross-NAD Group portfolio approach groups capabilities into matching domains or technologies under individual single **2-star Portfolio Directors**. NAD Group is implementing **14 portfolios in four tranches**, including a Nuclear portfolio reflecting NAD's role in supporting the Defence Nuclear Enterprise. **Tranche 1** is Lethality, Space Systems and Special Projects, with the Lethality portfolio the first to stand up in March 2026.
+Under the new model, programmes are grouped into portfolios by domain or technology, for example space and lethality, so that capabilities are managed as connected systems rather than standalone projects.
 
-Each portfolio passes through a structured **breakthrough journey** built around four key milestones, led by the Portfolio Director with the capability sponsor, delivery leads and stakeholders. The NAD Portfolio Office leads implementation. Portfolio Directors are empowered to take decisions that optimise the value of their portfolio, within bounded flexibilities and clear escalation criteria.
-
-Rupert Pearce framed the change as a move "to manage capabilities as connected systems rather than standalone projects". See [UK Defence Journal: Defence shifts to 10-year plan and new procurement model](https://ukdefencejournal.org.uk/defence-shifts-to-10-year-plan-and-new-procurement-model/) and [British Progress: Fixing UK defence procurement](https://britishprogress.org/reports/fixing-uk-defence-procurement).
+The National Armaments Director framed the change as a move "to manage capabilities as connected systems rather than standalone projects". See [UK Defence Journal: Defence shifts to 10-year plan and new procurement model](https://ukdefencejournal.org.uk/defence-shifts-to-10-year-plan-and-new-procurement-model/) and [British Progress: Fixing UK defence procurement](https://britishprogress.org/reports/fixing-uk-defence-procurement).
 
 ### Note on UKDI
 
-Prior to 2 April 2026, the Options & Commissioning area was the structural home of UK Defence Innovation (UKDI). Post-reorganisation, UKDI has moved into [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|NA-Innov]]. NA-P&P now focuses purely on portfolio sequencing and the procurement plan rather than housing the innovation function.
+Prior to 13 April 2026, the Options & Commissioning area was the structural home of UK Defence Innovation (UKDI). Post-reorganisation, UKDI has moved into [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|NA-Innov]]. NA-P&P now focuses purely on portfolio sequencing and the procurement plan rather than housing the innovation function.
 
 ### Relationship to the Integrated Procurement Model
 

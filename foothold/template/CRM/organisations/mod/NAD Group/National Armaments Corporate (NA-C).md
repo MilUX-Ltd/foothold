@@ -3,9 +3,9 @@ type: organisation
 name: National Armaments Corporate
 acronym: NA-C
 former_name: Corporate & Shared Services
-led_by: DG Corporate — Dr Nina Cope (also Senior Responsible Owner for NAD Group implementation)
+led_by: DG Corporate (also Senior Responsible Owner for NAD Group implementation)
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
-renamed: 2026-04-02
+renamed: 2026-04-13
 status: active
 category: mod-component
 constituent_bodies: UK Hydrographic Office (UKHO); Single Source Regulations Office (SSRO); cross-cutting corporate functions
@@ -23,15 +23,13 @@ tags:
 
 # National Armaments Corporate (NA-C)
 
-> **Renamed 2 April 2026** from *Corporate & Shared Services*. Old name retained for search continuity.
+> **Renamed 13 April 2026** from *Corporate & Shared Services*. Old name retained for search continuity.
 >
 > **This page is the canonical home** for content previously held on separate pages for the UK Hydrographic Office, the Oil and Pipelines Agency, and the Single Source Regulations Office.
 
 ## Summary
 
 The integrated and streamlined corporate services pillar for the NAD Group and the wider MOD. Bringing together expertise and services from across the NAD Group into a unified, leaner, and more efficient Corporate structure, with a shared purpose of improved war readiness: streamlining operations, strengthening collaboration, and aligning with Defence-wide best practices.
-
-NA-C houses the **Strategic Centre** (NAD Group Strategy and Area Plan; Governance, Communications, Policy Secretariat), **Shared Services** (including the Corporate Services Modernisation programme), the **People Directorate**, **Security, Resilience & Estates**, **Corporate Operations**, and **Transformation**. The Corporate Portal now provides 36 services to NAD Group staff.
 
 Sponsored Public Bodies aligned to NA-C:
 
@@ -40,7 +38,7 @@ Sponsored Public Bodies aligned to NA-C:
 
 (The Oil and Pipelines Agency, previously associated with Corporate, is aligned as a sponsored Public Body to [[CRM/organisations/mod/NAD Group/National Armaments Logistics & Support (NA-L&S)|NA-L&S]].)
 
-Led by **DG Corporate — Dr Nina Cope**, who also acts as the **Senior Responsible Owner for NAD Group implementation**. The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
+Led by **DG Corporate**, who also acts as the **Senior Responsible Owner for NAD Group implementation**. The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 ---
 
