@@ -3,14 +3,13 @@ type: organisation
 name: National Armaments Commercial & Industry
 acronym: NA-C&I
 former_name: Commercial & Industry
-led_by: DG Commercial & Industry — Jim Carter (also Functional and Professional Head of Commercial across Defence)
+led_by: DG Commercial & Industry (also Functional and Professional Head of Commercial across Defence)
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 status: active
 category: mod-component
-renamed: 2026-04-02
+renamed: 2026-04-13
 constituent_bodies: National Shipbuilding Office (NSO); Defence Intellectual Property Rights Group; broader defence-industry commercial relationships
 sponsored_public_bodies: Octric Semiconductors; Ploughshare
-workforce: c.2,500 commercial and non-commercial professionals across 14 areas
 last_updated: 2026-05-28
 tags:
   - mod
@@ -24,7 +23,7 @@ tags:
 
 # National Armaments Commercial & Industry (NA-C&I)
 
-> **Renamed 2 April 2026** from *Commercial & Industry*. Old name retained for search continuity.
+> **Renamed 13 April 2026** from *Commercial & Industry*. Old name retained for search continuity.
 >
 > **This page is the canonical home** for content previously held on separate pages for the National Shipbuilding Office.
 
@@ -32,9 +31,9 @@ tags:
 
 NA-C&I is Defence's strategic interface with industry: the function responsible for how Defence engages with industry and how public funds are committed through commercial activity, translating Defence strategy into legally binding agreements that deliver military capability. It owns and oversees delivery of the **Defence Industrial Strategy (DIS)**, embeds industrial considerations (resilience, capacity, innovation) in Defence decision-making, and is the only function authorised to contract on behalf of the MOD.
 
-Workforce of approximately **2,500 commercial and non-commercial professionals across 14 areas**, predominantly across the NAD Group but also the Defence Nuclear Enterprise and Military Strategic Headquarters. NA-C&I implements key frameworks including the **Procurement Act 2023**, **Single Source Contract Regulations (SSCRs)**, **DEFCONs**, **Intellectual Property Rights policy**, and **pan-Defence Category Management**. It houses the **National Shipbuilding Office** and the **Defence Intellectual Property Rights Group**. Sponsored Public Bodies aligned to NA-C&I: **Octric Semiconductors** and **Ploughshare**.
+A commercial workforce spanning the NAD Group and the wider Defence enterprise, including the Defence Nuclear Enterprise and Military Strategic Headquarters. NA-C&I implements key frameworks including the **Procurement Act 2023**, **Single Source Contract Regulations (SSCRs)**, **DEFCONs**, **Intellectual Property Rights policy**, and **pan-Defence Category Management**. It houses the **National Shipbuilding Office** and the **Defence Intellectual Property Rights Group**. Sponsored Public Bodies aligned to NA-C&I: **Octric Semiconductors** and **Ploughshare**.
 
-Led by **DG Commercial & Industry — Jim Carter** (also Functional and Professional Head of Commercial across Defence). The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
+Led by **DG Commercial & Industry** (also Functional and Professional Head of Commercial across Defence). The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 ---
 
@@ -46,7 +45,7 @@ GOV.UK: [National Shipbuilding Office](https://www.gov.uk/government/groups/nati
 
 ### Leadership
 
-Chief Executive: **Rear Admiral Rex Cox** (appointed at launch in 2021).
+Led by a Chief Executive (a Rear Admiral), a post established at the NSO's launch in 2021.
 
 ### Operating model
 

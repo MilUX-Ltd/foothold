@@ -7,9 +7,8 @@ led_by: DG Logistics & Support (also Chief Defence Logistics & Support, CDLS, fo
 parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 status: active
 category: mod-component
-renamed: 2026-04-02
+renamed: 2026-04-13
 cdls_established: 2020-04-01 (originally under UK Strategic Command)
-current_cdls: Vice Admiral Andy Kyte
 strategy_document: Defence Support Strategy (Edition 2, April 2022)
 last_updated: 2026-05-28
 tags:
@@ -23,7 +22,7 @@ tags:
 
 # National Armaments Logistics & Support (NA-L&S)
 
-> **Renamed 2 April 2026** from *Defence Support*. Old name retained for search continuity.
+> **Renamed 13 April 2026** from *Defence Support*. Old name retained for search continuity.
 
 ## Summary
 
@@ -31,15 +30,14 @@ NA-L&S enables, sustains, and modernises the warfighting readiness of the UK Arm
 
 A unified Logistics & Support pillar gives the Group clearer authority and accountability, stronger levers to improve availability and sustainment, and a single Support voice focused on enabling warfighting readiness. **The Oil & Pipelines Agency (OPA)** is a sponsored Public Body aligned to NA-L&S.
 
-Led by **DG Logistics & Support — Vice Admiral Andy Kyte**, who also holds the cross-MOD post of **Chief of Defence Logistics & Support (CDLS)** as the MOD's 3-star Functional Owner for Support. The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
+Led by **DG Logistics & Support**, who also holds the cross-MOD post of **Chief of Defence Logistics & Support (CDLS)** as the MOD's 3-star Functional Owner for Support. The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 ## Role in the landscape
 
-NA-L&S is the new name for what was previously called the **Defence Support** function, established on 1 April 2020 originally under UK Strategic Command (now CSOC). The 2 April 2026 NAD Group reorganisation moved the function under NAD Group leadership while retaining the cross-MOD CDLS post for joint working.
+NA-L&S is the new name for what was previously called the **Defence Support** function, established on 1 April 2020 originally under UK Strategic Command (now CSOC). The 13 April 2026 NAD Group reorganisation moved the function under NAD Group leadership while retaining the cross-MOD CDLS post for joint working.
 
 ### Leadership
 
-- **Current Chief Defence Logistics & Support (CDLS):** Vice Admiral **Andy Kyte**.
 - Per techUK reporting, CDLS is the MOD's 3* Functional Owner for Support (FOfS) and Head of the Defence Support organisation.
 
 ### Mission
