@@ -1,5 +1,17 @@
 # Foothold changelog
 
+## 2.1.0, 2026-07-15
+
+Fixes a setup skill that could not enumerate its own files. `foothold-setup` Step A.2 called the GitHub `git/trees` API to list the template, but that endpoint returns JSON, which the Cowork WebFetch tool cannot read, so the file list came back empty and the install stalled before writing anything. The individual raw-file fetches worked, which hid the real cause.
+
+- **Setup now installs from the template bundled in the plugin, not over the network.** Phase A locates the plugin's own `template/` directory (a sibling of `skills/`), enumerates it with Glob, and reads each file with the file tools. No GitHub API at install, and no separate manifest to keep in step. The plugin is the versioned artifact; whatever version was installed is what gets laid down, and `/foothold-update` reconciles to the latest published content as before.
+- **The `last_known_shas` baseline is preserved.** Each entry is now the source file's blob SHA computed locally with `git hash-object`, which is identical to the SHA a GitHub tree fetch recorded, so `/foothold-update`'s three-way reconcile is unaffected.
+- The header, intro, Phase A and Guidelines are reworded to match: setup is an offline, deterministic step; `/foothold-update` is the one path that talks to GitHub.
+- The same fix is applied to `footing-setup` in the Footing repo.
+- Plugin manifest bumped to 2.1.0. It had drifted at 2.0.0 while the changelog ran to 2.0.2.
+
+Note: the skill's `skill-safety-audit` frontmatter still reads the 2026-07-02 pass. This change alters skill behaviour, so a re-audit is due before the next release per R-28.
+
 ## 2.0.2, 2026-07-02
 
 Answers the questions the ICP review surfaced, in Matt's words.
