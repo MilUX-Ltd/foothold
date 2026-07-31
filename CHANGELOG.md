@@ -1,5 +1,9 @@
 # Foothold changelog
 
+## Unreleased
+
+- Two new programme pages under `Intelligence/defence-landscape/Programmes/`, from the Dstl case study "Developing drone technology for future warfare" (GOV.UK, 27 July 2026): **Project VANAHEIM** (UK-US counter-drone initiative led by the RAPSTONE Task Force; soldier-judged trials in Germany, Poland and, from summer 2026, Lithuania under US Project FLYTRAP) and **Project ANVIL** (first soldier-led development of computer vision models; FIGS ground control station within Initial Experimentation Systems; AUKUS RAAIT lineage; foundation for UK swarming UAS). Both added to the Programmes Index Army table, with a pointer added to the name-only Rapstone entry.
+
 ## 2.1.0, 2026-07-15
 
 Fixes a setup skill that could not enumerate its own files. `foothold-setup` Step A.2 called the GitHub `git/trees` API to list the template, but that endpoint returns JSON, which the Cowork WebFetch tool cannot read, so the file list came back empty and the install stalled before writing anything. The individual raw-file fetches worked, which hid the real cause.

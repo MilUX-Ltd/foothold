@@ -29,6 +29,8 @@ Publicly named UK defence programmes. Programmes with substantive content shippe
 | GBAD (Land Ground Based Air Defence) | Active (10-year multi-project programme covering SHORAD, MRAD, C-SAT, C-SUAS; LSI market engagement 2025; £118m Land Ceptor purchase Aug 2025; Northrop Grumman + Marshall industrial partnership) |
 | DC4 | Publicly named on inink Valley of Death canvas; no substantive public footprint located |
 | LE TacCIS Programme | Active (parent programme; sub-projects include BCIP 5.6, [[Intelligence/defence-landscape/Programmes/MORPHEUS Test & Reference Centre (MTRC)\|MORPHEUS]], [[Intelligence/defence-landscape/Programmes/TRINITY\|TRINITY]], JCRVT, DSA, [[Intelligence/defence-landscape/Programmes/Falcon\|Falcon]], NIOBE; delivered by Army HQ + Defence Digital TacSys Service Executive) |
+| [[Intelligence/defence-landscape/Programmes/Project VANAHEIM\|Project VANAHEIM]] | Active (UK-US counter-drone initiative led by RAPSTONE Task Force; Germany + Poland trials summer 2025; Lithuania summer 2026 under US Project FLYTRAP; 13 industry suppliers; TRL 6-9 entry, judged by generalist soldiers) |
+| [[Intelligence/defence-landscape/Programmes/Project ANVIL\|Project ANVIL]] | Active (Dstl; first soldier-led development of computer vision models; FIGS ground control station within Initial Experimentation Systems, deployed with three Army units; AUKUS RAAIT lineage; foundation for UK swarming UAS) |
 
 ## Land enabling infrastructure (TacSys)
 
@@ -71,7 +73,7 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | [[Intelligence/defence-landscape/Programmes/Autonomous Collaborative Platforms (ACP)\|Autonomous Collaborative Platforms (ACP)]] | Active (RAF Strategy Mar 2024; StormShroud Mk1 in service May 2025; Project NYX bidders Anduril UK, BAE, Tekever, Thales UK awarded May 2026) |
 | ASTRA | Active |
 | ARIEL | Active |
-| Rapstone | Active |
+| Rapstone | Active (note: the RAPSTONE Task Force leads the Army's C-UAS effort — see [[Intelligence/defence-landscape/Programmes/Project VANAHEIM\|Project VANAHEIM]]) |
 | BRAKESTOP | Active |
 | NYX | Active (see ACP for Project NYX — Apache loyal wingman, land domain) |
 | Pj BOYD | Active (RAF-led, delivered by the RAF Rapid Capabilities Office; AI-driven C2 planning to compress planning cycles; series of operational capability demonstrators) |
