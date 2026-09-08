@@ -74,7 +74,7 @@ To check edition: `winver` (run from Start menu), or Settings, System, About, Wi
 
 **Maps to:** Security update management.
 
-**Why it matters:** Cyber Essentials requires security updates installed within 14 days of release.
+**Why it matters:** Cyber Essentials requires high-risk or critical security updates and vulnerability fixes installed within 14 days of vendor release. Under Danzell this is an auto-fail question, A6.4 for the operating system and router or firewall firmware, A6.5 for applications, so getting it wrong fails the whole assessment on its own.
 
 **Where to find it:** Settings, Windows Update.
 
@@ -97,6 +97,10 @@ To check edition: `winver` (run from Start menu), or Settings, System, About, Wi
 **Revert:** turn the specific advanced-options toggle off.
 
 **Say:** "Windows needs to install security updates promptly. We'll let it check now, install anything pending, and confirm it's set to keep doing that automatically. Active hours just tell Windows when not to reboot you mid-workday."
+
+**Note on applications and browser extensions:** Windows Update covers Windows and Microsoft products only. Question A6.5 covers every application on the machine, and Requirements v3.3 defines software to include extensions. Ask the user which applications they rely on for work, confirm each is set to update itself or is checked manually inside 14 days, and ask them to open the extensions page in every browser they use for work (Edge, edge://extensions; Chrome, chrome://extensions; Firefox, about:addons) and remove anything they do not use or do not recognise. Record what was removed in the evidence pack.
+
+**Note on unsupported Windows:** the "point in time" for Cyber Essentials is the date the certificate is issued. A Windows version past Microsoft's end of support on that date fails the assessment, and no configuration on top of it will help.
 
 ---
 
@@ -206,7 +210,9 @@ To check edition: `winver` (run from Start menu), or Settings, System, About, Wi
 
 **Maps to:** User access control.
 
-**Why it matters:** Cyber Essentials Montpellier requires either 12+ character minimum, or 8+ with throttling and a common-password blocklist, or MFA on the device login. On a personal Windows machine, the simplest evidenceable path is to set the minimum length policy to 12 and tell the user to pick a strong passphrase.
+**Why it matters:** Requirements v3.3 requires one of three things for password quality: MFA on the login, a minimum length of at least 12 characters, or a minimum of at least 8 characters with automatic blocking of common passwords. Brute-force protection is separate and also required: no more than 10 guesses in 5 minutes, or a lock after no more than 10 failed attempts. On a personal Windows machine, the simplest evidenceable path is to set the minimum length policy to 12, the lockout threshold to 10, and tell the user to pick a strong passphrase.
+
+Requirements v3.3 also says not to enforce regular password expiry and not to enforce complexity rules, so leave "Maximum password age" at 0 and leave the complexity requirement off. Do not suggest either as a hardening measure.
 
 **Where to find it:**
 - Pro and Enterprise: Run, `secpol.msc`, Local Policies, Account Policies, Password Policy.
@@ -241,7 +247,9 @@ To check edition: `winver` (run from Start menu), or Settings, System, About, Wi
 
 **Say:** "Cyber Essentials wants passwords at least 12 characters, and accounts to lock out after 10 wrong attempts. We'll set both, and you'll need to pick a passphrase that's at least 12 characters and not used anywhere else."
 
-**Caveat:** Microsoft accounts (sign in with your @outlook.com or @hotmail.com) bypass local policy because the password is managed by Microsoft. For Microsoft accounts, the user's job is to make sure the account password is strong (12+ chars) and that 2-step verification is on at https://account.microsoft.com/security. Record this as a manual check in the evidence pack.
+**Caveat:** Microsoft accounts (sign in with your @outlook.com or @hotmail.com) bypass local policy because the password is managed by Microsoft. For Microsoft accounts, the user's job is to make sure the account password is strong (12+ characters) and that 2-step verification is on at https://account.microsoft.com/security. Record this as a manual check in the evidence pack. If the machine signs in with a Microsoft 365 work account, that account is a cloud service under Requirements v3.3, and MFA on it is an auto-fail item rather than a nice-to-have.
+
+**Passwordless option:** Requirements v3.3 recognises passkeys, FIDO2 security keys and biometrics as passwordless authentication, and treats a FIDO2 authenticator as MFA in its own right. Windows Hello sits on top of the account password rather than replacing it, so the password policy above still applies. Where the user has the choice on their online accounts, a passkey is the stronger answer. Mention it, do not set it up in this skill.
 
 ---
 
@@ -377,6 +385,7 @@ These are written for organisations using Microsoft Intune, but the per-setting 
 Before generating the evidence pack, confirm with the user:
 
 - All applicable controls above have a status recorded (Applied, Already compliant, Skipped, Hardware blocker).
+- The auto-fail items from Step 6b are answered and recorded: MFA on every cloud service that offers it, other in-scope devices and routers patched inside 14 days, browser extensions reviewed.
 - BitLocker recovery key is saved somewhere the user controls and is NOT only stored in the Microsoft cloud.
 - Second admin account credentials are stored in the user's password manager.
 - A System Restore Point is in place for today.

@@ -6,6 +6,8 @@ This is the owner's own record. It is not an IASME-issued Cyber Essentials certi
 
 ## For anyone reviewing this folder
 
+These files record the technical controls on one computer. They are not a Cyber Essentials submission, and they do not cover the whole scope. In particular, multi-factor authentication on cloud services sits outside this skill, and under the Danzell question set that is an automatic fail question. Look for the "Auto-fail items" section of the latest evidence file to see where the owner says they stand on it.
+
 If you are an IASME assessor, a Cyber Advisor, a defence-customer security team reviewing this supplier, or any reviewer who has opened this folder to understand the device posture:
 
 1. Start with **compliance-status.md**. That is the latest snapshot. It shows green, amber or red per control with the date last verified.

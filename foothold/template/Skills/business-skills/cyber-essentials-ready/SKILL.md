@@ -2,24 +2,29 @@
 name: cyber-essentials-ready
 description: |
   Walk a non-IT person through configuring their personal Mac or Windows computer
-  to meet the technical controls expected for UK Cyber Essentials (Montpellier
-  question set). Scope is the user's primary work computer. Mobile devices and
-  SaaS multi-factor authentication are explicitly out of scope and the skill
-  will say so. Trigger on any of: "cyber-essentials-ready", "make my computer
+  to meet the technical controls expected for UK Cyber Essentials (Danzell
+  question set, Requirements for IT Infrastructure v3.3). Scope is the user's
+  primary work computer. Mobile devices and multi-factor authentication on cloud
+  services are explicitly out of scope and the skill will say so, including the
+  fact that missing MFA on an available cloud service is now an automatic fail. Trigger on any of: "cyber-essentials-ready", "make my computer
   Cyber Essentials ready", "get my Mac ready for CE", "get my Windows machine
   ready for CE", "Cyber Essentials setup", "set up my computer for Cyber
   Essentials", "CE checklist for my laptop", "harden my computer for Cyber
   Essentials". Also fire when the user says they want to get certified and
   asks about the technical controls on their device.
-version: 1.0.0
-question_set: Montpellier
-last_reviewed: 2026-05-24
+version: 1.1.0
+question_set: Danzell
+requirements_doc: Cyber Essentials Requirements for IT Infrastructure v3.3
+question_set_effective: 2026-04-26
+last_reviewed: 2026-09-08
 maintainer: MilUX
 manifest_url: https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/business-skills/cyber-essentials-ready/manifest.json
 license: Foothold pack, MIT
-audited: 2026-06-08
+audited: 2026-09-08
 audit_verdict: pass
 audited_with: skill-safety-audit v3
+audit_report: MilUX vault, Skills/Skill Safety Audit - cyber-essentials-ready 1.1.0 2026-09-08.md
+previous_audit: 2026-06-08
 origin: built
 ---
 
@@ -33,7 +38,9 @@ You are not the certifying body. You do not award certificates. You prepare the 
 
 In scope: the user's primary work computer, running a current and supported version of macOS or Windows 10 / 11, that they use for the business activity they want certified.
 
-Out of scope and stated up front to the user: mobile devices (iOS, iPadOS, Android), and multi-factor authentication on cloud services (Microsoft 365, Google Workspace, Slack, etc.). Tell them these are real Cyber Essentials requirements but they are handled separately and this skill does not cover them.
+Out of scope and stated up front to the user: mobile devices (iOS, iPadOS, Android), and multi-factor authentication on cloud services (Microsoft 365, Google Workspace, Slack, and the rest). Tell them these are real Cyber Essentials requirements but they are handled separately and this skill does not cover them.
+
+Say the cloud MFA part plainly, because Danzell changed the consequence. Under the marking criteria that apply to assessment accounts created after 26 April 2026, failing to implement MFA on a cloud service where it is available is an automatic fail of the whole assessment, however good the rest of the answers are. Requirements v3.3 also states that cloud services cannot be excluded from scope, so a user cannot narrow their way around it. Someone who finishes this skill with a well-configured laptop and no MFA on their Microsoft 365 account will still fail. Tell them that at the start of the run, not at the end.
 
 ## Canonical references
 
@@ -43,6 +50,9 @@ Read these and link to them. Do not paraphrase to the point of inventing detail.
 - NCSC Device Security Guidance, Platform Guides, https://www.ncsc.gov.uk/collection/device-security-guidance/platform-guides
 - NCSC Small Business Guide, https://www.ncsc.gov.uk/collection/small-business-guide
 - NCSC Device Security Guidance Configuration Packs (Crown Copyright, Apache 2.0), https://github.com/ukncsc/Device-Security-Guidance-Configuration-Packs (Apple/macOS and Microsoft/Windows folders are the relevant ones)
+- NCSC Cyber Essentials Requirements for IT Infrastructure v3.3, April 2026, Crown Copyright, https://www.ncsc.gov.uk/files/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+- IASME, changes to Cyber Essentials for April 2026, the announcement of the Danzell question set and the auto-fail marking criteria, https://iasme.co.uk/articles/important-update-changes-to-cyber-essentials-for-april-2026/
+- UK Government Software Security Code of Practice, referenced by the software development section of v3.3, https://www.gov.uk/government/publications/software-security-code-of-practice/software-security-code-of-practice
 - IASME free Question Set download, https://iasme.co.uk/cyber-essentials/free-download-of-self-assessment-questions/
 - IASME Readiness Tool, https://getreadyforcyberessentials.iasme.co.uk/
 - IASME Knowledge Hub, https://ce-knowledge-hub.iasme.co.uk/
@@ -62,6 +72,7 @@ Run every step. None of these are optional.
 5. **No big black-box scripts in v1.** Do not run an unattended end-to-end script on the user's computer. NCSC's macOS provisioning script is a reference document for what good looks like, not something to fire at a personal Mac without review.
 6. **Evidence as you go.** Every check, every change, every skip is captured in the evidence pack in the user's Foothold vault. See Step 7.
 7. **British English throughout.** No em dashes. No AI vocabulary words. Plain prose.
+8. **Name the auto-fails early.** Danzell introduced the scheme's first automatic failure conditions. Two of them concern security updates and this skill helps with them directly. One concerns MFA on cloud services and this skill does not cover it. State all three in the opening briefing and record the user's position on each. See Step 6b.
 
 ## The procedure
 
@@ -98,6 +109,7 @@ If the user has been triggered into this skill by a Cowork scheduled task (look 
 - What Cyber Essentials is, in one sentence, and link the NCSC overview.
 - That this skill will walk them through the technical controls on this one computer.
 - That mobile devices and cloud service MFA are out of scope today, but they are real CE requirements.
+- That Danzell introduced automatic fails, and what they are. Missing MFA on a cloud service where it is available. High-risk or critical security updates and vulnerability fixes for operating systems and router or firewall firmware not installed within 14 days of release, question A6.4. The same for applications, including their associated files and extensions, question A6.5. Failing any one of these fails the whole assessment on its own.
 - That at the end, the skill produces three files in their vault under `Operations/Cyber-Essentials/`: an evidence pack for this run, a `compliance-status.md` snapshot of where the machine stands, and an `audit-log.md` history of every run. A README is also written explaining the folder to any reviewer who opens it.
 - That you will offer to register a monthly scheduled task at the end to re-check the machine automatically.
 - That nothing changes on their computer without them saying yes.
@@ -142,7 +154,7 @@ Record each precondition in the evidence pack with a timestamp.
 
 ### Step 6. Run the controls
 
-The five Cyber Essentials technical controls are: firewalls, secure configuration, security update management, user access control, malware protection. Source, NCSC overview.
+The five Cyber Essentials technical controls are: firewalls, secure configuration, security update management, user access control, malware protection. Source, NCSC overview. The five are unchanged in Requirements v3.3. What Danzell changed is the marking and the wording, not the controls.
 
 For each control, the per-platform reference file lists the sub-steps. For each sub-step, walk through this pattern:
 
@@ -163,6 +175,20 @@ The detailed per-control content for both platforms lives in:
 
 Plain-English definitions of every term used live in `references/glossary.md`. If the user asks "what does that mean", check the glossary first before improvising.
 
+### Step 6b. The auto-fail items this skill does not cover
+
+Before you write the evidence pack, walk the user through the three automatic failure conditions and record where they stand on each. You are not configuring cloud services here. You are making sure the user knows what will sink their assessment, and giving them somewhere to go next.
+
+Ask, and record the answers in the evidence pack under a heading "Auto-fail items":
+
+1. **Cloud service MFA.** "List the cloud services this business uses that hold or process its data. Microsoft 365, Google Workspace, Xero, Dropbox, your CRM, anything with a login. For each one, is multi-factor authentication turned on for every account?" Record the list and a yes or no per service. If any answer is no, tell the user plainly that this is an automatic fail, and point them at the IASME Knowledge Hub at https://ce-knowledge-hub.iasme.co.uk/. Requirements v3.3 states that cloud services cannot be excluded from scope, so this cannot be scoped away.
+2. **Operating system, router and firewall firmware updates, question A6.4.** Checked on this machine in Control 3. Ask whether any other device, router or firewall sits inside the business scope, and record the answer. Anything in scope and unpatched fails the assessment even though this laptop is clean.
+3. **Application updates including files and extensions, question A6.5.** Ask about browser extensions by name. Requirements v3.3 defines software to include extensions, so an abandoned browser extension is in scope like any other application. Ask the user to open their browser's extensions page and remove anything they do not use or do not recognise.
+
+**What to write down, and what not to.** Record the service name and a yes or no, nothing more. Never record account names, email addresses, usernames, licence keys or anything resembling a credential. A list of the services that do not yet have MFA is a target list, so tell the user plainly: this section of the evidence pack is the most sensitive thing the skill writes, it stays in their own vault, and they should close out the "no" answers before handing the folder to a reviewer, a customer or an assessor. If the user would rather not have the list written down at all, record only the count and the date and say so in the file. Their vault, their call.
+
+If any answer is no or unknown, the overall status for the run is amber at best, whatever the device controls say. Say so to the user and record it.
+
 ### Step 7. Write the evidence pack, audit log, and status snapshot
 
 At the end of the run, produce four pieces of output in the user's Foothold vault under `Operations/Cyber-Essentials/` (a vault-relative path; resolve against the founder's vault root, do not assume `~/Obsidian/Foothold/`). Templates for each live in `references/`.
@@ -175,6 +201,8 @@ At the end of the run, produce four pieces of output in the user's Foothold vaul
 - The state after.
 - The reversal command or path, in case the user needs to revert.
 - Whether the user skipped the control, and why.
+
+It also records the auto-fail answers captured in Step 6b, under their own heading, with the date.
 
 Frontmatter on the evidence file MUST include `mode: <initial | verify | remediation>` and `date_run` for downstream consumers.
 
@@ -251,8 +279,8 @@ Link, https://github.com/ukncsc/Device-Security-Guidance-Configuration-Packs/tre
 
 This skill is maintained by MilUX as part of the Foothold pack. It does not phone home, does not send telemetry, and does not collect any data about the user or their machine. Every change is made locally with the user's explicit consent.
 
-All artefacts produced (evidence packs, the audit log, the compliance status snapshot, the reviewer README) are written to the user's own Foothold vault under `Operations/Cyber-Essentials/`. They are the user's own files. The skill never modifies user files outside that folder, and never reads anything from the user's vault other than what it has just written.
+All artefacts produced (evidence packs, the audit log, the compliance status snapshot, the reviewer README) are written to the user's own Foothold vault under `Operations/Cyber-Essentials/`. They are the user's own files. The skill never modifies user files outside that folder, and never reads anything from the user's vault other than what it has just written. One exception is worth stating rather than glossing: on Windows Pro and Enterprise, the optional password-policy check stages a `secedit /export` command that writes a local security policy file to `C:\temp`. That file is created on the user's own machine by a command the user runs and consents to, it is never read back into the vault or sent anywhere, and the user can delete it as soon as the check is done. Tell them to.
 
 The artefacts are designed to be reviewer-friendly. An IASME assessor, a defence-customer security team, a Cyber Advisor, or any third party the user invites to look, can open the folder and read the four files in order (README, compliance-status, audit-log, evidence/) without further explanation. That is deliberate. Cyber Essentials assurance is partly about being able to show your working, and these files are the working.
 
-Last reviewed against the Montpellier question set on 2026-05-24. Check the NCSC overview page and the IASME Knowledge Hub for any change in current requirements before running this skill on a new machine.
+Last reviewed against the Danzell question set and Requirements for IT Infrastructure v3.3 on 2026-09-08. Danzell applies to all assessment accounts created after 26 April 2026. An organisation whose assessment account was opened before that date has six months from that date to certify against the previous requirements, so a user may still be working to the older question set. Ask when their account was created if it matters. Check the NCSC overview page and the IASME Knowledge Hub for any change in current requirements before running this skill on a new machine.
