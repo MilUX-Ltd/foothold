@@ -1,8 +1,10 @@
 {
   "skill": "cyber-essentials-ready",
-  "version": "1.0.0",
-  "question_set": "Montpellier",
-  "last_reviewed": "2026-05-24",
+  "version": "1.1.0",
+  "question_set": "Danzell",
+  "requirements_doc": "Cyber Essentials Requirements for IT Infrastructure v3.3",
+  "question_set_effective": "2026-04-26",
+  "last_reviewed": "2026-09-08",
   "maintainer": "MilUX",
   "maintainer_url": "https://milux.co.uk",
   "license": "MIT",
@@ -10,6 +12,6 @@
   "release_notes_url": "https://github.com/MilUX-Ltd/foothold/blob/main/foothold/template/Skills/business-skills/cyber-essentials-ready/CHANGELOG.md",
   "scope": {
     "in": ["macOS 14+", "Windows 10", "Windows 11"],
-    "out": ["mobile devices", "SaaS MFA"]
+    "out": ["mobile devices", "cloud service MFA (auto-fail under Danzell, handled separately)", "network boundary"]
   }
 }

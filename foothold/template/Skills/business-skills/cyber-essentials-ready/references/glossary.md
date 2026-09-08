@@ -17,6 +17,18 @@ The UK Government's minimum cyber-security standard for organisations of all siz
 ## Cyber Essentials Plus
 The same five controls as Cyber Essentials, plus a hands-on test of your machines by an external assessor. This skill prepares you for Cyber Essentials. If you go on to Plus, the same configuration is the starting point.
 
+## Auto-fail
+A question where a wrong answer fails the whole assessment on its own, regardless of how well everything else scores. Danzell introduced the first of these: MFA on cloud services where it is available, and questions A6.4 and A6.5 on installing high-risk or critical updates within 14 days.
+
+## Cloud service
+Requirements v3.3 defines it as an on-demand, scalable service, hosted on shared infrastructure and reached over the internet, that you access through an account and that stores or processes your organisation's data. Microsoft 365, Google Workspace, Dropbox and your accounting software all count. Cloud services cannot be excluded from your Cyber Essentials scope.
+
+## CVSS
+The Common Vulnerability Scoring System, the industry scale for how serious a security flaw is. Cyber Essentials treats a CVSS v3 base score of 7 or above as high risk or critical, which puts the fix inside the 14-day window.
+
+## Danzell
+The name of the current version of the Cyber Essentials question set, in use for assessment accounts created after 26 April 2026. The question set is renamed roughly once a year, after a lighthouse (Beacon, Evendine, Montpellier, Willow, Danzell). The five technical controls stay the same; the phrasing of the questions and the marking evolve. Danzell pairs with the NCSC's Requirements for IT Infrastructure v3.3.
+
 ## Defender (Microsoft Defender)
 Windows's built-in antivirus and security suite. Comes with every modern Windows install. Cyber Essentials accepts it as malware protection.
 
@@ -33,16 +45,22 @@ A Mac feature that checks apps are from a trusted source before letting you open
 The NCSC's delivery partner for Cyber Essentials. They publish the question set, license the certification bodies, and host the certificate search. See https://iasme.co.uk.
 
 ## MFA (multi-factor authentication)
-Logging in with something you know (a password) plus something else (a code from your phone, a hardware key, a fingerprint). Cyber Essentials requires MFA on cloud services. This skill does not cover that, you'll do it for each service separately.
-
-## Montpellier
-The name of one version of the Cyber Essentials question set. The question set is renamed roughly once a year (Beacon, Montpellier, Willow, etc.). The technical controls stay similar; details and exact phrasing of the questions evolve.
+Logging in with something you know (a password) plus something else (a code from your phone, a hardware key, a fingerprint). Cyber Essentials requires MFA on cloud services wherever it is available. Under the Danzell question set, not having it is an automatic fail of the whole assessment. This skill does not cover it, you'll do it for each service separately.
 
 ## NCSC
 The UK's National Cyber Security Centre, part of GCHQ. Publishes the Cyber Essentials standard, the small business guide, and device platform guides. See https://www.ncsc.gov.uk.
 
+## Passkey
+A login that replaces the password with a key pair held by your device or a security key, unlocked by your fingerprint, face or PIN. Requirements v3.3 recognises passkeys, and treats a FIDO2 authenticator as multi-factor authentication in its own right.
+
+## Passwordless authentication
+Proving who you are with something other than a remembered secret. Passkeys, FIDO2 authenticators, biometrics, security keys or tokens, one-time codes, QR codes and push notifications all count. Requirements v3.3 gives this its own section and encourages it.
+
 ## Question set
-The list of questions IASME asks you to confirm compliance with the five technical controls. Free download at https://iasme.co.uk/cyber-essentials/free-download-of-self-assessment-questions/.
+The list of questions IASME asks you to confirm compliance with the five technical controls. The current set is Danzell. Free download at https://iasme.co.uk/cyber-essentials/free-download-of-self-assessment-questions/.
+
+## Requirements for IT Infrastructure
+The NCSC document that states what Cyber Essentials actually requires. The current version is v3.3, published April 2026. The question set asks you about what this document requires.
 
 ## Recovery key
 A long string of letters and numbers that unlocks an encrypted drive if you lose your normal password. FileVault and BitLocker both give you one when you turn encryption on. You must store it somewhere outside the computer, your password manager is ideal.

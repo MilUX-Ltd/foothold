@@ -3,7 +3,8 @@ type: cyber-essentials-compliance-status
 machine_name: <FILL_ON_FIRST_RUN>
 machine_owner: <FILL_ON_FIRST_RUN>
 machine_os: <FILL_ON_FIRST_RUN>
-question_set: Montpellier
+question_set: Danzell
+requirements_doc: Cyber Essentials Requirements for IT Infrastructure v3.3
 last_run_date: <YYYY-MM-DD>
 last_run_mode: <initial | verify | remediation>
 last_run_evidence: <relative link to evidence file>
@@ -52,7 +53,9 @@ Windows-only additions, included when the machine is Windows:
 
 These cannot be auto-verified by the skill. The user is responsible for re-confirming at each verify cycle.
 
-- [ ] All business-critical third-party applications are still on supported versions and set to auto-update.
+- [ ] All business-critical third-party applications are still on supported versions and set to auto-update, and any high-risk or critical update released in the last 14 days is installed (auto-fail question A6.5).
+- [ ] Browser extensions reviewed; nothing installed that is unused, unrecognised or no longer maintained by its developer.
+- [ ] MFA is still on for every cloud service the business uses (auto-fail; this is not covered by the skill and cannot be excluded from scope).
 - [ ] Microsoft account / Apple ID password is still strong, unique, and protected by 2-step verification (if applicable).
 - [ ] No unsupported software added since the last check.
 - [ ] BitLocker / FileVault recovery key is still accessible (test by retrieving from password manager).
@@ -63,14 +66,14 @@ These cannot be auto-verified by the skill. The user is responsible for re-confi
 The following Cyber Essentials requirements are not covered by this skill and the user handles them separately:
 
 - Mobile devices (iOS, iPadOS, Android phones and tablets used for business).
-- Multi-factor authentication on cloud services (Microsoft 365, Google Workspace, etc.).
-- Network boundary controls (home / office router or firewall).
+- Multi-factor authentication on cloud services (Microsoft 365, Google Workspace, and the rest). **Missing MFA where it is available is an automatic fail under the Danzell question set, and cloud services cannot be excluded from scope.**
+- Network boundary controls (home or office router or firewall). The 14-day update rule applies to router and firewall firmware too, and that question is also an automatic fail.
 
 Record where evidence for those items lives, so a reviewer reading this status page can find them:
 
 - Mobile devices: <link or note>
-- SaaS MFA: <link or note>
-- Network boundary: <link or note>
+- Cloud service MFA, per service, with the date last confirmed: <link or note>
+- Network boundary, including router and firewall firmware currency: <link or note>
 
 ## Rewrite rules for the skill
 

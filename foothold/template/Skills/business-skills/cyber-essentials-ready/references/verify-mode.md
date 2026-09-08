@@ -21,6 +21,7 @@ If there is no prior evidence pack in `Operations/Cyber-Essentials/evidence/`, v
 - Step 4 (mode picker) is not asked. Verify mode is the mode.
 - Step 5 (preconditions) skips the backup precondition because no changes will be made. The "separate admin account still exists" check IS still run; loss of the second admin is itself a compliance drift.
 - Step 6 (run the controls) is verify-only: per control, only the check-state and verify parts run; the apply path is not offered.
+- Step 6b (auto-fail items) IS still run, in question form. Re-ask the cloud MFA list, whether any new cloud service has been added since the last run, whether other in-scope devices and routers are patched, and whether any new browser extension has appeared. These are the questions that fail an assessment outright, so they are asked every time.
 - Step 7 (evidence pack) still writes a new dated evidence file, but the file is tagged `mode: verify` in its frontmatter.
 - Step 8 (rollback) is not surfaced; nothing has been changed.
 - Step 9 (schedule registration) runs only on initial setup, not on verify runs.
@@ -30,7 +31,8 @@ If there is no prior evidence pack in `Operations/Cyber-Essentials/evidence/`, v
 For each control, compare current state against the most recent evidence pack:
 
 - **Match.** Current state matches the last recorded state. Status: green. Log "no drift".
-- **Drift, looser.** Current state is less strict than the recorded baseline (e.g. firewall now off, FileVault now off, daily account now admin again, lock screen timeout extended past 15 minutes). Status: red. Surface to user immediately at the end of the run as a finding requiring action.
+- **Drift, looser.** Current state is less strict than the recorded baseline (for example firewall now off, FileVault now off, daily account now admin again, lock screen timeout extended past 15 minutes). Status: red. Surface to user immediately at the end of the run as a finding requiring action.
+- **Auto-fail drift.** Any of the following is red on its own, whatever else the run finds: pending high-risk or critical updates older than 14 days, automatic updates turned off, an operating system version the vendor no longer supports, a new cloud service without MFA, a browser extension the vendor has abandoned. Say the words "this would fail your assessment" when reporting it, so the user understands the difference between drift and a fail.
 - **Drift, stricter.** Current state is more strict than the recorded baseline (rare; happens if the user manually tightened something). Status: green. Update the baseline going forward.
 - **Indeterminate.** Cannot read the current state (permissions error, command unavailable, OS upgraded and the check no longer applies). Status: amber. Log the reason.
 
@@ -61,3 +63,5 @@ If red drift was found and the user agreed to remediate, the standard apply flow
 ## Frequency
 
 The scheduled task runs verify mode monthly by default. The user can also run verify mode any time they want: ahead of a customer security review, after a major OS update, before submitting an IASME self-assessment. There is no harm in running it more often.
+
+Monthly is a deliberate cadence rather than a convenience. From April 2026 the declaration a director signs as part of the verified self-assessment includes an acknowledgement that the organisation stays compliant with the controls for the whole certification period, not only on the day of the assessment. A monthly verify run and its audit log are how a sole trader shows they meant it.

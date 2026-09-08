@@ -70,7 +70,7 @@ System Settings paths are written for macOS 14 (Sonoma) and 15 (Sequoia). On old
 
 **Maps to:** Security update management.
 
-**Why it matters:** Cyber Essentials requires security updates to be installed within 14 days of release. Auto-updates are the practical way to meet that on a single machine.
+**Why it matters:** Cyber Essentials requires high-risk or critical security updates and vulnerability fixes to be installed within 14 days of vendor release. Under Danzell this is an auto-fail question, A6.4 for the operating system and A6.5 for applications, so getting it wrong fails the whole assessment on its own. Auto-updates are the practical way to meet it on a single machine.
 
 **Where to find it:** Apple menu, System Settings, General, Software Update. Click the small "i" button next to "Automatic updates".
 
@@ -95,7 +95,11 @@ System Settings paths are written for macOS 14 (Sonoma) and 15 (Sequoia). On old
 
 **Say:** "Cyber Essentials needs security updates installed within 14 days. The simplest way to be confident about that on one laptop is to let the Mac handle it automatically. We turn all four toggles on, and the App Store one for your apps."
 
-**Note on third-party apps:** Apps not from the Mac App Store update through their own mechanism (Sparkle, vendor auto-update, etc.). The user needs to confirm, separately, that any business-critical third-party apps are set to auto-update or are checked manually within 14 days of a release. Capture this in the evidence pack as a manual check item.
+**Note on third-party apps:** Apps not from the Mac App Store update through their own mechanism (Sparkle, vendor auto-update, and so on). The user needs to confirm, separately, that any business-critical third-party apps are set to auto-update or are checked manually within 14 days of a release. Capture this in the evidence pack as a manual check item.
+
+**Note on browser extensions:** Requirements v3.3 defines software to include extensions, so question A6.5 covers them. Ask the user to open the extensions page in every browser they use for work (Safari, Settings, Extensions; Chrome, chrome://extensions; Firefox, about:addons) and remove anything they do not use or do not recognise. An abandoned extension that the developer no longer updates is unsupported software, which is a fail in the same way an unsupported application would be. Record what was removed in the evidence pack.
+
+**Note on unsupported macOS:** the "point in time" for Cyber Essentials is the date the certificate is issued. If the Mac is running a macOS version Apple has stopped issuing security updates for on that date, the assessment fails. Check the version against the two most recent major releases, and flag it if the machine is older.
 
 ---
 
@@ -169,7 +173,9 @@ System Settings paths are written for macOS 14 (Sonoma) and 15 (Sequoia). On old
 
 **Maps to:** User access control.
 
-**Why it matters:** Cyber Essentials requires either a 12+ character password, or 8+ with a blocklist and throttling, or MFA on the device login. On macOS the practical path is "use a strong passphrase the user actually remembers".
+**Why it matters:** Requirements v3.3 requires one of three things for password quality: MFA on the login, a minimum length of at least 12 characters, or a minimum of at least 8 characters with automatic blocking of common passwords. Brute-force protection is separate and also required: no more than 10 guesses in 5 minutes, or a lock after no more than 10 failed attempts. On macOS the practical path is "use a strong passphrase the user actually remembers", with Touch ID on top.
+
+Two things worth telling the user. Requirements v3.3 says not to enforce regular password expiry and not to enforce complexity rules, so do not suggest either. And where a credential is only used to unlock the device, the minimum is 6 characters; the full password rules apply when the same credential also authenticates the user, which on a personal Mac it does.
 
 **Check current state**
 - The user knows whether their password is strong. There is no way to read the current password length. Ask honestly: "How long is the password you use to log in to this Mac, and is it the same password you use anywhere else?"
@@ -183,7 +189,9 @@ System Settings paths are written for macOS 14 (Sonoma) and 15 (Sequoia). On old
 
 **Revert:** change it back through the same UI.
 
-**Say:** "Your Mac password is the front door. Cyber Essentials wants it to be at least 12 characters and not reused anywhere else. A passphrase like four random words and a number is both stronger and easier to remember than something with random symbols."
+**Say:** "Your Mac password is the front door. Cyber Essentials wants it to be at least 12 characters and not reused anywhere else. A passphrase like four random words and a number is both stronger and easier to remember than something with random symbols. You won't be asked to change it on a schedule; Cyber Essentials specifically says not to do that."
+
+**Passwordless option:** Requirements v3.3 recognises passkeys, FIDO2 security keys and biometrics as passwordless authentication, and treats a FIDO2 authenticator as MFA in its own right. Touch ID on the Mac sits on top of the account password rather than replacing it, so the password requirement still applies here. Where the user has the choice on their online accounts, a passkey is the stronger answer. Mention it, do not set it up in this skill.
 
 **Caveat for the audit:** for the evidence pack, record the date the password was last changed and whether it has been confirmed unique to this device. Do not record the password itself.
 
@@ -295,6 +303,7 @@ These are written for enterprise IT teams, not solo users, but the per-setting r
 Before generating the evidence pack, confirm with the user:
 
 - All ten controls above have a status recorded (Applied, Already compliant, Skipped).
+- The auto-fail items from Step 6b are answered and recorded: MFA on every cloud service that offers it, other in-scope devices and routers patched inside 14 days, browser extensions reviewed.
 - Recovery key for FileVault is stored somewhere outside the computer.
 - Second admin account credentials are stored in the user's password manager.
 - A Time Machine backup ran or is running.
