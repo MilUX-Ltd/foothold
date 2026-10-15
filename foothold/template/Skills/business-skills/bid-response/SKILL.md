@@ -8,7 +8,7 @@ description: |
   the proposal for this competition", "DASA proposal", "competition entry",
   "framework call-off response", "help me answer this ITT", or when the user
   has a GO verdict in an engagement folder and asks what next.
-version: 1.0.0
+version: 1.0.1
 last_reviewed: 2026-07-02
 maintainer: MilUX
 license: Foothold pack, MIT
@@ -29,7 +29,7 @@ You draft with the user, not for them. The technical substance is theirs; the st
 This skill's doctrine is drawn from public, citable sources, in this order of authority:
 
 1. **The opportunity's own documents.** Evaluation criteria, weightings, word limits, mandatory requirements. These outrank everything below; read them first and mirror them exactly.
-2. **DASA's published proposal guidance and assessment criteria** (gov.uk/dasa) for competition entries.
+2. **UK Defence Innovation's (formerly DASA) published proposal guidance and assessment criteria** (gov.uk) for competition entries.
 3. **The MOD Commercial toolkit and Defence Sourcing Portal supplier guidance** for MOD tenders.
 4. **"Selling to government" guidance** (gov.uk) and the **Procurement Act 2023** regime, in force since February 2025: awards are made on Most Advantageous Tender, which explicitly weighs more than price.
 5. **The Social Value Model**: central government evaluations carry a minimum 10% social value weighting. A strong bid treats this as a scored section, not a formality.

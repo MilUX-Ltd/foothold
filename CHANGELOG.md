@@ -1,8 +1,33 @@
 # Foothold changelog
 
-## Unreleased
+## 2.2.0, 2026-10-15
 
+A full refresh of the defence landscape, checked against public sources from May to October 2026, and the vault brought up to how a small firm actually keeps one going. Run `/foothold-update` to bring it in; nothing you have written is overwritten without your say. A dated summary of what changed is in the new page `Intelligence/defence-landscape/Defence Landscape Updates.md` ("What's New in the Defence Landscape").
+
+**Landscape**
+
+- **Government changes.** DSIT broken up: science and innovation moved to the renamed Department for Business, Innovation, Science and Trade (BIST), with UKRI, ARIA, the UK Space Agency and the Export Control Joint Unit; digital to the Department for Digital, Culture, Media and Sport; AI to the Cabinet Office. New BIST page; the DSIT and Department for Business and Trade pages now point to where the work went. The Investment Security Unit (National Security and Investment Act) now sits in BIST.
+- **Renamed bodies.** DASA is now UK Defence Innovation (UKDI); Crown Commercial Service is now the Government Commercial Agency; Strategic Command is now Cyber & Specialist Operations Command. Old names are kept once per page so searches still find them.
+- **Defence Investment Plan 2026.** New page reading the June 2026 plan as a demand signal: £298bn over four years, the main lines and what it cancelled. Plan figures added to programme pages.
+- **Programmes.** New pages: Taskforce RAID, Hybrid Navy, Project CORVUS, Project NYX, Counter-drone (PRESAGIUM and PANOPTES), Digital Targeting Web. Multi-Role Strike Ship marked cancelled; Type 83 and Type 32 replaced by the Hybrid Navy; SKYNET 6 narrowband not proceeding; NavyX merged into DCTO; GCAP and AUKUS Pillar 2 updated. Programmes Index broken links fixed.
+- **Money and routes.** New pages: UKDI: How to Engage; Commercial X and Defence Unicorns; Single-Source Contract Rules. Funding Routes adds UK Export Finance's Defence Export Fund, the National Wealth Fund, the Sovereign AI Fund, Innovate UK's defence package and NATO DIANA 2027. The Defence Open Call has not reopened and Defence Innovation Loans are paused; the Security Open Call is open. Founder's Procurement Playbook rewritten for 2026, including the MOD SME Action Plan.
+- **Frameworks.** G-Cloud 15, DOS7, Technology Services 4 and the Government Commercial Agency; NVFi corrected to an MOD framework; end dates from the MOD routes-to-market page.
+- **Export controls and clearance.** F680 on LITE, the new low-value open licence, the paused classification service; notes on the vetting review and UK Security Vetting's planned move.
+- **Events.** DPRTE has moved to Farnborough; DSEI UK runs 7 to 10 September 2027; next-edition dates in the calendar.
+- **Consistency.** MOD Structure brought into line with the gov.uk NAD Group page and the NAD Group pages; contradictions between pages resolved; named office-holders removed so pages do not go stale at a reshuffle; review dates set to 2026-10-15 on reviewed pages.
 - Two new programme pages under `Intelligence/defence-landscape/Programmes/`, from the Dstl case study "Developing drone technology for future warfare" (GOV.UK, 27 July 2026): **Project VANAHEIM** (UK-US counter-drone initiative led by the RAPSTONE Task Force; soldier-judged trials in Germany, Poland and, from summer 2026, Lithuania under US Project FLYTRAP) and **Project ANVIL** (first soldier-led development of computer vision models; FIGS ground control station within Initial Experimentation Systems; AUKUS RAAIT lineage; foundation for UK swarming UAS). Both added to the Programmes Index Army table, with a pointer added to the name-only Rapstone entry.
+
+**Vault**
+
+- **Note templates.** A new `Templates/` folder with templates for contacts, organisations, customer engagements, initiatives, ideas, daily notes, weekly reviews, meetings, marketing pieces and services. Title and date fields are left blank for you to fill in.
+- **A one-minute Obsidian set-up**, in the Templates Guide. The pack does not change your Obsidian settings for you, so your own theme and plugins are never touched by an update.
+- **New `Inbox/` and `Attachments/` folders**, each with a short Guide.
+- **Every folder Guide follows one shape:** Purpose, Structure, Writing a note, Lifecycle, Frontmatter, Canonical example, Related. The Knowledge and Intelligence Guides now say plainly which folders ship and which are optional.
+- **One frontmatter convention**, rule R-07 in `Knowledge/rules.md`. Existing field names are not renamed. Rule R-03 now says notes still in `Inbox/` need no frontmatter until they are filed.
+- **Removed: `process-interviewer` and `prompt-master`**, because their licences do not allow us to redistribute them. The update does not delete files, so if you already have them they stay in your vault; `/process-map` covers getting a process out of your head.
+- **Skills.** The curator leaves `Inbox/` and `Templates/` alone (1.0.1); `process-map` and `bid-response` have wording-only changes (1.0.1); the Cyber Essentials audit note no longer points at a private location.
+
+`CLAUDE.md` and `Home.md` are never changed by an update, so existing vaults keep their own copies; new installs get the versions that mention the new folders and the What's New page.
 
 ## 2.1.0, 2026-07-15
 

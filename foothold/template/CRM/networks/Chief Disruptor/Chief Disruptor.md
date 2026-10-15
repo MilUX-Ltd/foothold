@@ -71,7 +71,7 @@ Publishing surface includes the Chief Disruptor Insights newsletter, a podcast, 
 
 ## Defence credentials
 
-Chief Disruptor is an [Armed Forces Covenant ERS Gold](https://www.armedforcescovenant.gov.uk/) employer (2022). The Members' Advisory Board, publicly listed on the About page, includes serving senior military leadership — notably **Lt Gen Sir Tom Copinger-Symes KCB CBE, Deputy Commander UK Strategic Command** — alongside C-suite from RS Group, NatWest, PepsiCo, Avon Cosmetics, Pier Health Group, Flo Health, Shift, and The Portfolio Collective. The mix is overwhelmingly senior civilian + one serving Lieutenant General. That mix is the network's calling card.
+Chief Disruptor is an [Armed Forces Covenant ERS Gold](https://www.armedforcescovenant.gov.uk/) employer (2022). The Members' Advisory Board, publicly listed on the About page, includes serving senior military leadership — notably a senior officer from UK Strategic Command (now Cyber & Specialist Operations Command), alongside C-suite from RS Group, NatWest, PepsiCo, Avon Cosmetics, Pier Health Group, Flo Health, Shift, and The Portfolio Collective. The mix is overwhelmingly senior civilian + one serving Lieutenant General. That mix is the network's calling card.
 
 Recent and forthcoming defence-relevant activity visible on the public site:
 

@@ -24,8 +24,11 @@ The original framing of this landscape as the "Valley of Death" came from inink 
 
 Each map covers one functional view over the landscape. Entities are wikilinked to canonical CRM pages.
 
+- [[Intelligence/defence-landscape/Defence Landscape Updates|What's New in the Defence Landscape]]. What changed in this pack and when, newest first.
 - [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]]. Which route fits your situation; the decision layer over everything below.
 - [[Intelligence/defence-landscape/Defence Investment Plan 2026|Defence Investment Plan 2026]]. The four-year money (£298bn), what it buys and what it cancelled, read as a demand signal for SMEs.
+- [[Intelligence/defence-landscape/UKDI - How to Engage|UKDI: How to Engage]]. What UK Defence Innovation has open, paused and coming, and how to reach an Innovation Partner.
+- [[Intelligence/defence-landscape/Single-Source Contract Rules|Single-Source Contract Rules]]. The 2026 profit-incentive change and what is still to come.
 - [[Intelligence/defence-landscape/Government Departments|Government Departments]]. HMG departments with defence and security roles.
 - [[Intelligence/defence-landscape/MOD Structure|MOD Structure]]. MOD internal organisation, including the NAD Group.
 - [[Intelligence/defence-landscape/Innovation Organisations|Innovation Organisations]]. UKDI (formerly DASA), BattleLab, jHub, Dstl, and innovation units.
@@ -57,9 +60,10 @@ The canonical programmes index is [[Intelligence/defence-landscape/Programmes/Pr
 ### By service
 
 - **Army digital and data.** [[Intelligence/defence-landscape/Programmes/THEIA|THEIA]], [[Intelligence/defence-landscape/Programmes/Land ISTAR|Land ISTAR]], [[Intelligence/defence-landscape/Programmes/ZODIAC|ZODIAC]], [[Intelligence/defence-landscape/Programmes/ASGARD|ASGARD]], WAVELL, CORVUS, MERCURY, AACP, LACP.
-- **Navy.** [[Intelligence/defence-landscape/Programmes/Strike Net|Strike Net]], NEXUS, RAVEN, NELSON, VANQUISH, Combat ISTAR, NIGHTFALL.
-- **RAF.** [[Intelligence/defence-landscape/Programmes/TEMPEST (GCAP)|TEMPEST (GCAP)]], ASTRA, ARIEL, Rapstone, BRAKESTOP, NYX.
-- **Joint / cross-domain.** [[Intelligence/defence-landscape/Programmes/SKYNET|SKYNET]], Digital Targeting Web, [[Intelligence/defence-landscape/Programmes/Picasso|Picasso]], [[Intelligence/defence-landscape/Programmes/TRINITY|TRINITY]], CABOT, NCGI, DARE, FASTER.
+- **Army uncrewed.** [[Intelligence/defence-landscape/Programmes/Project CORVUS|Project CORVUS]], [[Intelligence/defence-landscape/Programmes/Project NYX|Project NYX]].
+- **Navy.** [[Intelligence/defence-landscape/Programmes/Hybrid Navy|Hybrid Navy]], [[Intelligence/defence-landscape/Programmes/Strike Net|Strike Net]], NEXUS, RAVEN, NELSON, VANQUISH, Combat ISTAR, NIGHTFALL.
+- **RAF.** [[Intelligence/defence-landscape/Programmes/TEMPEST (GCAP)|TEMPEST (GCAP)]], ASTRA, ARIEL, Rapstone, BRAKESTOP.
+- **Joint / cross-domain.** [[Intelligence/defence-landscape/Programmes/SKYNET|SKYNET]], [[Intelligence/defence-landscape/Programmes/Digital Targeting Web|Digital Targeting Web]], [[Intelligence/defence-landscape/Programmes/Taskforce RAID|Taskforce RAID]], [[Intelligence/defence-landscape/Programmes/Counter-drone - PRESAGIUM and PANOPTES|Counter-drone (PRESAGIUM, PANOPTES)]], [[Intelligence/defence-landscape/Programmes/Picasso|Picasso]], [[Intelligence/defence-landscape/Programmes/TRINITY|TRINITY]], CABOT, NCGI, DARE, FASTER.
 
 ### Programme-to-SME engagement
 
@@ -72,7 +76,7 @@ SMEs engage with named programmes through:
 
 ## Key Entry Points for SMEs
 
-1. **UKDI (formerly DASA)**. Themed competitions and open calls; check the [live funding opportunities](https://www.gov.uk/government/collections/live-funding-opportunities) page for what is open.
+1. **UKDI (formerly DASA)**. Themed competitions and open calls; see [[Intelligence/defence-landscape/UKDI - How to Engage|UKDI: How to Engage]], and check the [live funding opportunities](https://www.gov.uk/government/collections/live-funding-opportunities) page for what is open.
 2. [[CRM/organisations/mod/Defence BattleLab|Defence BattleLab]]. Rapid experimentation.
 3. **NATO DIANA**. International innovation challenges.
 4. **jHub Defence**. Defence accelerator.
