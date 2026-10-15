@@ -1,9 +1,11 @@
 # Foothold: working conventions
 
 Foothold is an installable Obsidian vault pack for defence-sector founders: a folder structure,
-page templates, skills and public defence reference content, set up by a Claude plugin skill and
-kept current by an update skill that reads this repository. It is public and free; the README
-says MIT licensed, but there is no `LICENSE` file yet (risk R3 in `docs/security/risk-register.md`).
+page templates, skills and public defence reference content. A user installs it with one prompt
+in Cowork that fetches the setup skill from this repository, and keeps it current with an update
+skill that reads this repository. There is no plugin and no marketplace step (since 1.6.0). It
+is public and free; the README says MIT licensed, but there is no `LICENSE` file yet (risk R3 in
+`docs/security/risk-register.md`).
 
 Read this, then `LESSONS-INDEX.md`, then `CONTEXT.md`. For recent movement run
 `git log --oneline -20`; read `CHANGELOG.md` by section, never whole. `docs/architecture.md`
@@ -14,9 +16,9 @@ explains the pack's structure and how setup and update work.
 | Path | What it is |
 |---|---|
 | `foothold/template/` | The vault itself. Everything here is what a user's vault receives. |
-| `foothold/skills/foothold-setup/` | The plugin-bundled setup skill: installs the vault from the bundled template, offline. |
-| `foothold/.claude-plugin/plugin.json` | The plugin manifest. |
-| `.claude-plugin/marketplace.json` | The marketplace entry that offers the plugin. |
+| `foothold/skills/foothold-setup/SKILL.md` | The setup skill. A user's one prompt fetches it from `main` and follows it. |
+| `foothold/.claude-plugin/plugin.json` | Left from the pre-1.6.0 plugin install. The update skill still reads its `version`. |
+| `.claude-plugin/marketplace.json` | Left from the pre-1.6.0 marketplace install; nothing in the current flow uses it. |
 | `foothold/template/Skills/meta-skills/foothold-update/` | The update skill, shipped into the vault. It reads `main` on GitHub. |
 | `tools/vault-viewer/` | A browser viewer for a vault, for people who want to look before installing. |
 | `tools/check.py` | The repository's gate. CI runs it on every pull request. |
@@ -24,17 +26,22 @@ explains the pack's structure and how setup and update work.
 
 ## How changes reach users
 
-- **`main` is the release channel.** A user's `/foothold-update` fetches the file tree of `main`
-  and pulls every changed file under `foothold/template/`. Merging a change to the template
-  publishes it to every user who next runs an update (ADR 002). There is no staging copy.
+- **`main` is the release channel.** New users fetch the setup skill from `main`
+  (`raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/skills/foothold-setup/SKILL.md`),
+  and a user's `/foothold-update` pulls every changed file under `foothold/template/` from `main`.
+  Merging publishes (ADR 002). There is no staging copy.
+- **Install is one prompt, by design** (`docs/architecture.md`, changelog 1.6.0): setup and update
+  fetch plain files over HTTPS. Never reintroduce a plugin or marketplace step. The 2.1.0 setup
+  skill departs from this by looking for a template under `~/.claude/plugins/` (risk R5).
 - Every change traces to a card on the Agentic Engineering board (board 51). Post a progress
   comment (HTML) after each unit of work.
 - Work on a branch, merge by pull request only. `main` is protected: the `checks` job must pass.
   Never push to `main`, never merge with `--admin`.
 - GitHub is the only source (ADR 001). There is no vault copy and no sync job. Work in a clone of
   this repository; never edit a copy in a synoia vault and push it.
-- A release bumps the version in `CHANGELOG.md`, `foothold/.claude-plugin/plugin.json` and
-  `.claude-plugin/marketplace.json` together. `tools/check.py` fails when they disagree.
+- A release bumps the version in `CHANGELOG.md` and `foothold/.claude-plugin/plugin.json` (and
+  `.claude-plugin/marketplace.json` while it exists) together. `tools/check.py` fails when they
+  disagree.
 - A change to a skill's behaviour needs a fresh `skill-safety-audit` before the release that
   carries it (R-28); record the audit in the skill's frontmatter.
 - A template file that contains `{{pack_owner}}` must be added to the hard-coded list in the

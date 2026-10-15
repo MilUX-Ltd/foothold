@@ -24,8 +24,11 @@ the rule that came out of it. `LESSONS-INDEX.md` lists them one line each; regen
    `foothold-setup` listed the template through the GitHub `git/trees` API, which returns JSON
    that the Cowork WebFetch tool cannot read. The file list came back empty and the install
    stalled before writing anything, while single raw-file fetches worked and hid the cause.
-   Rule: setup installs from the template bundled in the plugin, offline; only the update skill
-   talks to GitHub. The documented install has not been proven against this since (risk R5).
+   The 2.1.0 fix made setup read a template bundled in an installed plugin, but 1.6.0 had
+   already removed the plugin install in favour of one prompt, so the fix swapped one broken
+   route for another (risk R5). Rule: setup and update fetch plain files by raw URL, never JSON
+   through WebFetch; check any change to setup against the one-prompt design in
+   `docs/architecture.md` before it ships.
 
 4. **The plugin version drifted from the changelog** (Foothold 2.1.0)
    The plugin manifest sat at 2.0.0 while the changelog ran to 2.0.2, and the marketplace entry
