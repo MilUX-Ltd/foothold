@@ -1,9 +1,8 @@
 # Foothold: working conventions
 
 Foothold is an installable Obsidian vault pack for defence-sector founders: a folder structure,
-page templates, skills and public defence reference content. A user installs it with one prompt
-in Cowork that runs the setup skill, which lays the vault down from the template in the Foothold
-plugin, and keeps it current with an update skill that reads this repository. It is public and
+page templates, skills and public defence reference content. The README says how to install it;
+an update skill in the installed vault keeps it current from this repository. It is public and
 free; the README says MIT licensed, but there is no `LICENSE` file yet (risk R2 in
 `docs/security/risk-register.md`).
 
@@ -16,9 +15,9 @@ explains the pack's structure and how setup and update work.
 | Path | What it is |
 |---|---|
 | `foothold/template/` | The vault itself. Everything here is what a user's vault receives. |
-| `foothold/skills/foothold-setup/SKILL.md` | The setup skill. It installs from the template in the plugin (`<plugin>/template/`), offline. |
+| `foothold/skills/foothold-setup/SKILL.md` | The setup skill: lays the vault down and runs onboarding. The README says how a user starts it. |
 | `foothold/template/Skills/meta-skills/foothold-update/` | The update skill, shipped into the vault. It reads `main` on GitHub. |
-| `foothold/.claude-plugin/plugin.json` | The plugin manifest. Setup reads the template from the installed plugin; the update skill reads its `version`. |
+| `foothold/.claude-plugin/plugin.json` | The plugin manifest. The update skill reads its `version`. |
 | `.claude-plugin/marketplace.json` | The marketplace entry for the plugin. |
 | `tools/vault-viewer/` | A browser viewer for a vault, for people who want to look before installing. |
 | `tools/check.py` | The repository's gate. CI runs it on every pull request. |

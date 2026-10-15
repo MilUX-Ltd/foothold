@@ -20,8 +20,8 @@ same commit; `tools/check.py` fails when the two are out of step.
    `foothold-setup` listed the template through the GitHub `git/trees` API, which returns JSON
    that the Cowork WebFetch tool cannot read. The file list came back empty and the install
    stalled before writing anything, while single raw-file fetches worked and hid the cause.
-   Rule: setup installs from the template bundled in the plugin, offline; only the update skill
-   talks to GitHub.
+   Rule: setup never lists the template through the GitHub tree API, and an install route is
+   walked end to end before a release that changes it ships.
 
 4. **The plugin version drifted from the changelog** (Foothold 2.1.0)
    The plugin manifest sat at 2.0.0 while the changelog ran to 2.0.2, and the marketplace entry
