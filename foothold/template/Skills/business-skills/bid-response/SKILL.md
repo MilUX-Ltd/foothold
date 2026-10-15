@@ -9,7 +9,7 @@ description: |
   "framework call-off response", "help me answer this ITT", or when the user
   has a GO verdict in an engagement folder and asks what next.
 version: 1.0.1
-last_reviewed: 2026-07-02
+last_reviewed: 2026-10-15
 maintainer: MilUX
 license: Foothold pack, MIT
 audited: 2026-10-15
