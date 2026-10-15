@@ -18,3 +18,8 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+
+# A sync tool's local index of the folder; never published (LESSONS 2)
+.context/
+__pycache__/
