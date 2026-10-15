@@ -25,7 +25,7 @@ So take the time to explore what you are actually trying to achieve and how you 
 
 ## 3. Watch for patterns worth capturing
 
-Some automation is planned; most is noticed. The habit that finds it: when you catch yourself asking for the same shape of thing a second or third time, stop and ask whether it should be a skill or a schedule. Ask Claude directly: "we've done this three times now, should this be a skill?" The `/process-interviewer` skill exists for exactly this moment: it extracts the complete process from your head before anything gets built. And anything that arrives from outside goes through `/skill-safety-audit` first, no exceptions.
+Some automation is planned; most is noticed. The habit that finds it: when you catch yourself asking for the same shape of thing a second or third time, stop and ask whether it should be a skill or a schedule. Ask Claude directly: "we've done this three times now, should this be a skill?" The `/process-map` skill exists for exactly this moment: it gets the process out of your head and onto a page before anything gets built. And anything that arrives from outside goes through `/skill-safety-audit` first, no exceptions.
 
 The same watchfulness works in reverse: tell Claude to flag repetition to you. An assistant that says "this is the third Tuesday running you've asked for this, want it scheduled?" is doing its job.
 
@@ -35,7 +35,7 @@ Two review habits, one small and constant, one weekly.
 
 **Self-review before completion.** Before any piece of work is finished, ask Claude to review it against what you actually asked for and offer improvements: "before we call this done, check it against the brief and tell me what you'd improve." It routinely catches what the first pass missed, and it costs one sentence. For anything going to a customer or the public, you are the final gate; nothing external should ship without your eyes on it.
 
-**Retrospectives.** Once a week or so, look back with Claude: what went well, what did not, and what one improvement follows. The output is never just a feeling; it is a change somewhere permanent: a new rule in `Knowledge/rules.md`, an amended skill, a schedule adjusted, a Context page corrected. An improvement that is neither made nor written down is lost, and the next retrospective finds the same problem waiting.
+**Retrospectives.** Once a week or so, look back with Claude: what went well, what did not, and what one improvement follows. The output is never just a feeling; it is a change somewhere permanent: a new rule in `Knowledge/rules.md`, an amended skill, a schedule adjusted, a Context page corrected. The Weekly Review template in `Templates/` gives the review a shape. An improvement that is neither made nor written down is lost, and the next retrospective finds the same problem waiting.
 
 ## Where this ends up
 
@@ -46,3 +46,4 @@ Follow these four habits and the trajectory is predictable. In week one the vaul
 - [[Getting Started - Your First Week]] for week one, day by day.
 - `CLAUDE.md` at the vault root for the working conventions the agents follow.
 - The per-folder Guides for where everything lives and why.
+- `Inbox/` for quick capture, filed weekly, and `Templates/` for the note templates that keep each kind of page the same shape.

@@ -137,12 +137,17 @@ Each skill in this pack records its check and its origin in frontmatter: `audite
 
 ## Frontmatter conventions
 
-Every page in the vault carries YAML frontmatter. Required fields depend on the page type; see the per-folder Guide for specifics. Common patterns:
+Every page in the vault carries YAML frontmatter, and every page follows one convention (rule R-07 in `Knowledge/rules.md`). Required fields depend on the page type; the per-folder Guide says which, and the templates in `Templates/` start a new note with them.
 
-- `type:` — the page type (contact, organisation, initiative, meeting, framework, etc.).
-- `status:` — the page's current state (active, completed, archived, draft).
-- `created:` — ISO date the page was first written.
-- `tags:` — vault-wide taxonomy. See `Knowledge/tagging-policy.md`.
+- **Common fields.** `type:` (the page type: contact, organisation, initiative, meeting-note, framework and so on), `status:`, `created:` (ISO date the page was first written), `updated:` (ISO date it last changed meaningfully) and `tags:` (vault-wide taxonomy, see `Knowledge/tagging-policy.md`). Use the ones the page type needs.
+- **Links in frontmatter** are quoted wikilinks: `customer: "[[CRM/organisations/Acme|Acme]]"`.
+- **Lists** are always YAML lists (`tags: [a, b]` or one item per line), never a comma-separated string.
+- **Status values** are lower-case and come from a small fixed set for each page type. The sets are listed in R-07.
+- **Existing field names are kept as they are.** Fields such as `last-contact`, `last_reviewed` and `published_url` are not renamed, in existing pages or when you add new ones of the same kind, because dashboards and skills look them up by name.
+
+## Inbox, attachments and templates
+
+New notes go in `Inbox/` until they are filed, and files pasted into a note in `Attachments/` (the Templates Guide shows the one-minute Obsidian set-up that makes this automatic); keep large or sensitive files out of the vault and link them. The note templates for each kind of page are in `Templates/`. Title and date fields are left blank in the templates, to be filled in when the note is created. See the Guide in each folder.
 
 ## Naming conventions
 
@@ -153,13 +158,15 @@ Every page in the vault carries YAML frontmatter. Required fields depend on the 
 
 ## Per-folder Guides
 
-Every top-level folder ships with a `<Folder Name> Guide.md` at its root. The Guide is the contract for what belongs in the folder. Five sections:
+Every top-level folder ships with a `<Folder Name> Guide.md` at its root. The Guide is the contract for what belongs in the folder. Every Guide has the same seven sections, in this order:
 
 1. **Purpose.** What this folder is for.
 2. **Structure.** What each subfolder means.
-3. **Frontmatter.** Required and optional fields per page type.
-4. **Add discipline.** How to add new content. Points at the relevant skill if one exists.
-5. **Canonical example.** A worked reference page so you can see what good looks like.
+3. **Writing a note.** How to add new content, named for the note type (for example "Writing a contact"). Points at the relevant skill and template if there is one.
+4. **Lifecycle.** The statuses a note can take and what moves it between them, or a line saying statuses are optional.
+5. **Frontmatter.** Required and optional fields per page type.
+6. **Canonical example.** A worked reference page or template so you can see what good looks like.
+7. **Related.** Neighbouring Guides.
 
 When you're not sure where something goes, read the relevant Guide.
 
