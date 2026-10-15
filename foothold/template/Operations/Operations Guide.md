@@ -29,6 +29,27 @@ The filename is conventional. If you want to scope the kill-switch to a specific
 
 **agent-messaging-policy.md.** Optional. If you have multiple messaging channels (LinkedIn, WhatsApp, Gmail, Slack) with different rules per channel, this file documents what each agent may and may not do on each. Approval-tier matrices, audit posture, send vs draft default. Only worth maintaining if you have meaningful per-channel divergence.
 
+## Writing an operations file
+
+**In-scope test.** Before adding a file to `Operations/`, ask: would removing this file break a live agent flow? If yes, it belongs here. If no, it doesn't.
+
+**Out of scope.** These do not belong in `Operations/`, even though they're "operational" in a loose sense.
+
+- **Scheduled-task outputs.** Daily briefings, Aurora scans, signal scrapes. These belong in the outputs queue or get-and-discard with the summary surfaced at run time. They are not policy files.
+- **Strategy and planning.** Business strategy, content strategy, marketing planning. Lives in `Capabilities and Services/Internal Services/` or `Marketing/`.
+- **Agent infrastructure docs.** Deploy keys, server runbooks, agent stack architecture. Lives in your code repository or a private runbook, not the vault.
+- **Initiative pages.** Initiative-level work lives in `Initiatives/`.
+
+If you're not sure whether something belongs, default to "no". Operations is meant to be small.
+
+**Changes are load-bearing.** Editing `email-signature.md` changes how every outbound message looks. Edit deliberately, commit with a clear message, and check the affected messaging skills still load it correctly.
+
+**Kill-switch hygiene.** Flip `agent-pause.md` to a paused state when investigating any issue with agent behaviour. The cost of an unnecessary pause is zero; the cost of an unpaused stack misbehaving in public is not.
+
+## Lifecycle
+
+`agent-pause.md` is the one file here with a live state: `go` (or empty) when the stack is live, a stop message when paused. The policy files (`email-signature.md`, `agent-messaging-policy.md`) carry `status: active` and move to `archived` if you retire them. Statuses are otherwise optional.
+
 ## Frontmatter
 
 Required fields per file type.
@@ -64,23 +85,11 @@ review_cycle: quarterly
 ---
 ```
 
-## Add discipline
-
-**In-scope test.** Before adding a file to `Operations/`, ask: would removing this file break a live agent flow? If yes, it belongs here. If no, it doesn't.
-
-**Out of scope.** These do not belong in `Operations/`, even though they're "operational" in a loose sense.
-
-- **Scheduled-task outputs.** Daily briefings, Aurora scans, signal scrapes. These belong in the outputs queue or get-and-discard with the summary surfaced at run time. They are not policy files.
-- **Strategy and planning.** Business strategy, content strategy, marketing planning. Lives in `Capabilities and Services/Internal Services/` or `Marketing/`.
-- **Agent infrastructure docs.** Deploy keys, server runbooks, agent stack architecture. Lives in your code repository or a private runbook, not the vault.
-- **Initiative pages.** Initiative-level work lives in `Initiatives/`.
-
-If you're not sure whether something belongs, default to "no". Operations is meant to be small.
-
-**Changes are load-bearing.** Editing `email-signature.md` changes how every outbound message looks. Edit deliberately, commit with a clear message, and check the affected messaging skills still load it correctly.
-
-**Kill-switch hygiene.** Flip `agent-pause.md` to a paused state when investigating any issue with agent behaviour. The cost of an unnecessary pause is zero; the cost of an unpaused stack misbehaving in public is not.
-
 ## Canonical example
 
 See `email-signature.md` for the canonical pattern. The file contains a single signature block, plus any required legal disclaimer, in the exact form the messaging skill should append. No prose around it, no instructions — the file body is the payload.
+
+## Related
+
+- [[Knowledge/Knowledge Guide|Knowledge Guide]]: the rules your agents read alongside these files
+- [[Skills/Skills Guide|Skills Guide]]: the messaging skills that load them

@@ -9,8 +9,8 @@ description: |
   "map how we do X", "document this process", "how does X actually work
   around here", "walk through our process for X", or when the user describes
   a repetitive workflow and wants it captured properly.
-version: 1.0.0
-last_reviewed: 2026-07-02
+version: 1.0.1
+last_reviewed: 2026-10-15
 maintainer: MilUX
 license: Foothold pack, MIT
 audited: 2026-07-02
@@ -24,7 +24,7 @@ replicated_from: Footing v2.0.0
 
 A process that lives only in someone's head cannot be improved, handed over, or automated. Your job is to get one process out of the owner's head and onto a page accurate enough that all three become possible. One process per run; a process map that tries to cover everything covers nothing.
 
-The pack's thesis applies here with full force: a process you can describe is a process you can automate. This skill is the describing, made systematic. The `process-interviewer` meta-skill carries the interviewing craft; use its posture (relentless about specifics, comfortable with silence, never accepting "it depends" as a final answer) without re-reading it ceremonially.
+The pack's thesis applies here with full force: a process you can describe is a process you can automate. This skill is the describing, made systematic. Interview with this posture: relentless about specifics, comfortable with silence, never accepting "it depends" as a final answer.
 
 ## Before you start
 
