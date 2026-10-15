@@ -9,7 +9,7 @@ folder: CRM/organisations
 
 `organisations/` holds organisations you have or might have a working relationship with. Split by sector so the structure scales as the set grows.
 
-## Subfolders
+## Structure
 
 - **`defence companies/`.** Commercial defence suppliers, primes, SMEs, dual-use tech firms. Split into eight letter-based subfolders (`0-9`, `A-B`, `C-D`, `E-H`, `I-N`, `O-R`, `S-T`, `U-Z`) once the set grows past comfortable single-folder browsing.
 - **`mod/`.** Ministry of Defence entities, executive agencies, the National Armaments structure, child organisations under each.
@@ -22,19 +22,45 @@ folder: CRM/organisations
 
 Adapt these subfolders to your sector. The default reflects a defence-sector founder lens; another sector might split into `customers/`, `suppliers/`, `partners/`.
 
-## Add discipline
+## Writing an organisation
 
-- Add via the `/add-organisation` skill where available; it pulls public info, drafts the page, asks you to confirm before writing.
+- Add via the `/add-organisation` skill where available; it pulls public info, drafts the page, asks you to confirm before writing. To write one by hand, insert the [[Templates/Organisation|Organisation template]].
 - For organisations with parent-child structures (a holding company with subsidiaries, a department with executive agencies), use the parent-folder pattern: a folder named after the parent organisation, with each child page inside carrying `parent:` in frontmatter pointing at the parent page.
 - When an organisation rebrands, write the renamed page with `former_name:` in frontmatter and a one-line rename note under the title. Do not keep parallel pages for old and new identities.
 - Engagement history (meetings, decisions, what they're working on) belongs on active organisation pages. The page is more than a directory entry.
 
+## Lifecycle
+
+An organisation's `status:` is one of `active`, `target`, `alumni` or `dormant`. A `target` becomes `active` when you start working with them. An `active` organisation becomes `alumni` when the relationship has finished and `dormant` when it has gone quiet. The status does not decide the folder; the sector does.
+
 ## Frontmatter
 
-Follows the parent CRM Guide. `sector:` should match the subfolder (`defence`, `mod`, `non-defence`, `academic`). `parent:` and `former_name:` used as needed.
+Follows the parent CRM Guide:
+
+```yaml
+---
+type: organisation
+name: <canonical name>
+status: active | target | alumni | dormant
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+website: https://...
+sector: defence | non-defence | mod | academic
+parent: "[[CRM/organisations/.../<parent>|<parent>]]"   # for child orgs
+former_name: "<old name>"                                # for rebrands
+tags: []
+---
+```
+
+`sector:` should match the subfolder (`defence`, `mod`, `non-defence`, `academic`). `parent:` and `former_name:` used as needed.
+
+## Canonical example
+
+Start from the [[Templates/Organisation|Organisation template]]. A finished page carries the frontmatter above, a short description, a key contacts table (with escaped pipes in wikilinks, per `Knowledge/rules.md`), engagement history and public links.
 
 ## Related
 
 - [[CRM/CRM Guide|CRM Guide]] — parent
 - [[CRM/contacts/Contacts Guide|Contacts Guide]] — sibling
 - [[CRM/networks/Networks Guide|Networks Guide]] — sibling
+- [[Templates/Templates Guide|Templates Guide]]: the note templates
