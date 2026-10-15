@@ -42,7 +42,7 @@ Organisations within the UK defence ecosystem that drive innovation, experimenta
 - **London Tech Bridge.** US Navy / Royal Navy collaboration in the London tech ecosystem.
 - **Ploughshare Innovations.** Commercialises Dstl intellectual property. Operates the Ploughshare Accelerator Fund.
 - **Defence Tech Scaler.** Scaling support for defence technology companies.
-- **UKDI Innovation Partners.** Civil servants who advise on UKDI services and competitions. Ask through your UKDI submission service account; a partner contacts you within 15 working days. UKDI also administers the [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|Regional Defence and Security Clusters]].
+- **UKDI Innovation Partners.** Civil servants who advise on UKDI services and competitions. Ask through your UKDI submission service account; a partner contacts you within 15 working days. UKDI also works with the [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|Regional Defence and Security Clusters]].
 
 ## How to engage
 
