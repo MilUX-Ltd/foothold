@@ -45,7 +45,7 @@ type: <page type>
 ---
 ```
 
-The `type` field is non-negotiable. It lets agents and queries operate on the page reliably. Other fields are page-type-specific; see the per-folder Guide for what each page type carries.
+The `type` field is non-negotiable. It lets agents and queries operate on the page reliably. Other fields are page-type-specific; see the per-folder Guide for what each page type carries. Notes still in `Inbox/` are exempt until they are filed.
 
 ---
 
@@ -75,8 +75,42 @@ See `CLAUDE.md` § Promotion Pattern for the three mechanical steps.
 
 ---
 
+## R-07 — One frontmatter convention
+
+Every note uses the same frontmatter conventions: the common fields, links as quoted wikilinks, lists as YAML lists, and a small fixed set of lower-case status values for each note type.
+
+**Common fields.** `type` (required, see R-03), `status`, `created` (the date the note was first written), `updated` (the date it last changed meaningfully) and `tags`. Use the ones a note type needs; a daily note has no use for a status. The Guide for each note type says which it carries, and the templates in `Templates/` start each note with them.
+
+**Links in frontmatter** are wikilinks inside quotes: `customer: "[[CRM/organisations/Acme|Acme]]"`. Unquoted, YAML reads the double square brackets as nested lists.
+
+**Lists** are always YAML lists, either one item per line or in square brackets (`tags: [draft, review]`). Never a comma-separated string.
+
+**Status values** are lower-case and come from a small fixed set for each note type:
+
+| Note type | Status values |
+|---|---|
+| contact | `active`, `reference`, `archived` |
+| organisation | `active`, `target`, `alumni`, `dormant` |
+| network | `active`, `dormant` |
+| customer-engagement | `scoping`, `active`, `paused`, `completed`, `archived` |
+| initiative | `active`, `paused`, `completed` |
+| idea | `raw`, `incubating`, `promoted`, `discarded` |
+| service | `active`, `paused`, `retired` |
+| linkedin-post, news-article | `draft`, `scheduled`, `published` |
+| case-study | `draft`, `published` |
+| newsletter-edition | `draft`, `scheduled`, `sent` |
+| event | `upcoming`, `scoping`, `attended` |
+| book-note | `queued`, `in-progress`, `read`, `abandoned` |
+| any other type | `active`, `archived` |
+
+Daily notes, meeting notes and reviews carry no status. Notes still in `Inbox/` have not been filed and may have no frontmatter yet.
+
+**Existing field names are kept as they are.** Fields such as `last-contact`, `last_reviewed`, `published_url`, `lawful_basis` and `last_health_check` stay exactly as they are written, even where the spelling differs from the others. Dashboards and skills look fields up by name, so renaming one in existing pages breaks them. This rule governs new notes and new fields; it is not a reason to rewrite old pages.
+
+---
+
 ## Adding new rules
 
-When you add a new rule, take the next R-NN number. Write the rule statement in one line, followed by a paragraph of context explaining why. If the rule emerged from a hypothesis (see `hypotheses.md`), reference the hypothesis that justified promotion.
+When you add a new rule, take the next R-NN number. Write the rule statement in one line, followed by a paragraph of context explaining why. If the rule emerged from a hypothesis (if you keep a `hypotheses.md`, see the Knowledge Guide), reference the hypothesis that justified promotion.
 
 If a rule is later superseded, mark it deprecated rather than deleting. Numbers are not reused.
