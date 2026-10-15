@@ -10,7 +10,7 @@ description: |
   "tidy the vault", "check the vault for broken links", "curation sweep",
   or when a scheduled task invokes it.
 version: 1.0.1
-last_reviewed: 2026-07-02
+last_reviewed: 2026-10-15
 maintainer: MilUX
 license: Foothold pack, MIT
 audited: 2026-07-02
