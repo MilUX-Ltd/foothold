@@ -6,7 +6,7 @@ service: Air
 status: active
 category: rotary-wing
 created: 2026-05-22
-last_reviewed: 2026-05-22
+last_reviewed: 2026-10-15
 tags: [programme, raf, rotary, nmh, leonardo, aw149]
 ---
 
@@ -30,8 +30,13 @@ The New Medium Helicopter (NMH) programme procures 23 medium-lift support helico
 
 The aircraft are built at Leonardo's **Yeovil facility in Somerset**, the UK's only end-to-end military helicopter manufacturing site. The contract sustains 3,300 jobs at Yeovil and a further 12,000 jobs across a UK supply chain of around 70 companies. Leonardo has committed to moving its AW149 export production line from Vergiate in Italy to Yeovil, expanding UK workshare above 40 percent and positioning the site to service both British and international orders.
 
+## Funding (Defence Investment Plan 2026)
+
+The [[Intelligence/defence-landscape/Defence Investment Plan 2026|Defence Investment Plan 2026]] allocates **£680m** over the next four years (FY26/27 to FY29/30) to start building the 23 aircraft, supporting 3,300 jobs in Yeovil.
+
 ## Sources
 
+- [GOV.UK: The Defence Investment Plan (30 June 2026)](https://www.gov.uk/government/publications/the-defence-investment-plan), paragraph 62 and Table 6.
 - [Wikipedia: New Medium Helicopter](https://en.wikipedia.org/wiki/New_Medium_Helicopter)
 - [Calibre Defence: UK awards £1 billion NMH contract to Leonardo](https://www.calibredefence.co.uk/uk-awards-1-billion-new-medium-helicopter-contract-to-leonardo/)
 - [The Aviationist: Updated — UK Government Confirms Leonardo AW149 Order](https://theaviationist.com/2026/02/27/nmh-contract-awarded/)
