@@ -29,7 +29,7 @@ The Defence Investment Plan (DIP) is the four-year spending plan that turns the 
 Where the plan puts new money, new buyers follow. Four things stand out for small firms.
 
 1. **Uncrewed systems and drones are the biggest new market.** Over £5bn on autonomous systems by 2030, spread across many programmes rather than one prime contract.
-2. **AI and software have named budgets and front doors.** Taskforce RAID, Project FRONTIER, the Digital Targeting Web and UK Defence Innovation all have ring-fenced money, and several take ideas directly from industry.
+2. **AI and software have named budgets and front doors.** Taskforce RAID, Project FRONTIER, the Digital Targeting Web and UK Defence Innovation all have named budgets, and several take ideas directly from industry. The plan ring-fences Taskforce RAID's and UKDI's budgets; Project FRONTIER sits within a protected AI Investment Fund.
 3. **Innovation money is protected.** UKDI's £400m a year is ring-fenced, and the novel-technology floor of 10% of the Equipment Programme is a commitment, not an aspiration.
 4. **SME spend has a target.** The MOD will spend an additional £2.5bn with SMEs by 2028, a 50% increase in direct SME spend, led by the [[CRM/organisations/government/Defence Office for Small Business Growth|Defence Office for Small Business Growth]].
 

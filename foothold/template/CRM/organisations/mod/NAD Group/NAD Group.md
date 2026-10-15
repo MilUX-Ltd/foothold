@@ -19,7 +19,7 @@ tags:
 
 ## Overview
 
-The National Armaments Director Group (NAD Group) is a senior-level organisation within UK Defence responsible for delivering warfighting capability. Established March 2025; restructured 13 April 2026 with new identity, branding, and consolidated leadership under nine Director-General-led areas plus the Defence Infrastructure Organisation. NAD Group oversees the acquisition, integration, fielding, and in-service support of military capability across multiple value streams and mission threads.
+The National Armaments Director Group (NAD Group) is a senior-level organisation within UK Defence responsible for delivering warfighting capability. Established March 2025; restructured 13 April 2026 with new identity, branding, and consolidated leadership under nine areas, one of which is National Armaments Infrastructure (the Defence Infrastructure Organisation). NAD Group oversees the acquisition, integration, fielding, and in-service support of military capability across multiple value streams and mission threads.
 
 NAD Group is led by the **National Armaments Director**.
 
@@ -29,20 +29,23 @@ NAD Group is led by the **National Armaments Director**.
 
 ## NAD Group Structure (post-13 April 2026)
 
-Nine Director-General-led areas, plus the Defence Infrastructure Organisation (name retained). Brand and naming consolidation announced 13 April 2026 by the National Armaments Director.
+Nine areas, as gov.uk lists them; National Armaments Infrastructure is the Defence Infrastructure Organisation (name retained). Brand and naming consolidation announced 13 April 2026 by the National Armaments Director.
 
 | Area | Acronym | DG | Former name | Child orgs |
 |------|---------|----|-------------|-----------|
 | [[CRM/organisations/mod/NAD Group/National Armaments Plans & Portfolios (NA-P&P)\|National Armaments Plans & Portfolios]] | NA-P&P | DG Plans & Portfolios | Options & Commissioning (O&C) | (portfolio-sequencing function — no standalone child orgs) |
-| [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)\|National Armaments Innovation]] | NA-Innov | DG Innovation (3\* appointment pending) | (new pillar) | Dstl, UKDI (absorbed DASA in February 2026; includes FCI and the Rapid Innovation Team), Defence Investment Unit |
+| [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)\|National Armaments Innovation]] | NA-Innov | DG Innovation (3\* appointment pending) | (new pillar) | Dstl, UKDI (absorbed DASA in February 2026; includes FCI and the Rapid Innovation Team) |
 | [[CRM/organisations/mod/NAD Group/National Armaments Materiel (NA-M)\|National Armaments Materiel]] | NA-M | DG Materiel | DE&S Core Delivery | (former DE&S delivery functions absorbed) |
 | [[CRM/organisations/mod/NAD Group/National Armaments Logistics & Support (NA-L&S)\|National Armaments Logistics & Support]] | NA-L&S | DG Logistics & Support (also CDLS) | Defence Support | (support and logistics functions); Oil & Pipelines Agency aligned as sponsored Public Body |
-| [[CRM/organisations/mod/NAD Group/Defence Infrastructure Organisation (DIO)\|Defence Infrastructure Organisation]] | DIO | DG Infrastructure | (unchanged) | MOD estate, facilities, training areas. Name and brand retained. |
+| [[CRM/organisations/mod/NAD Group/Defence Infrastructure Organisation (DIO)\|National Armaments Infrastructure (Defence Infrastructure Organisation)]] | DIO | DG Infrastructure | (unchanged) | MOD estate, facilities, training areas. Name and brand retained. |
 | [[CRM/organisations/mod/NAD Group/National Armaments Digital & Data (NA-D&D)\|National Armaments Digital & Data]] | NA-D&D | DG Digital & Data (also Defence CDIO) | Defence Digital | (former Defence Digital functions absorbed) |
-| [[CRM/organisations/mod/NAD Group/National Armaments International (NA-Intl)\|National Armaments International]] | NA-Intl | DG International | International Collaboration & Exports (ICE) | UKDSE; MODSAP (UK–Saudi Arabia G2G programme) |
+| [[CRM/organisations/mod/NAD Group/National Armaments International (NA-Intl)\|National Armaments International]] | NA-Intl | DG International | International Collaboration & Exports (ICE) | UKDSE (the Defence Investment Plan places it here; gov.uk's UKDSE page still says it is part of BIST); MODSAP (UK–Saudi Arabia G2G programme) |
 | [[CRM/organisations/mod/NAD Group/National Armaments Commercial & Industry (NA-C&I)\|National Armaments Commercial & Industry]] | NA-C&I | DG Commercial & Industry (also Functional and Professional Head of Commercial across Defence) | Commercial & Industry | National Shipbuilding Office; Octric Semiconductors and Ploughshare aligned as sponsored Public Bodies |
 | [[CRM/organisations/mod/NAD Group/National Armaments Corporate (NA-C)\|National Armaments Corporate]] | NA-C | DG Corporate (also Senior Responsible Owner for NAD Group implementation) | Corporate & Shared Services | UKHO, SSRO |
-| [[CRM/organisations/mod/NAD Group/NAD Group Finance\|NAD Group Finance]] | Finance | Group Finance Director | (cross-cutting function elevated under Defence Reform) | (Group A functional model; staff embedded across pillars) |
+
+[[CRM/organisations/mod/NAD Group/NAD Group Finance|NAD Group Finance]] is the Group's finance function, led by a Group Finance Director. gov.uk does not list Finance as an area, so it is a corporate function, not a tenth area.
+
+The Defence Investment Plan (30 June 2026, paragraph 20) places a **Defence Investment Unit** within the NAD Group as the MOD's centre of expertise for finance and investment. It does not say which area it sits in.
 
 The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 

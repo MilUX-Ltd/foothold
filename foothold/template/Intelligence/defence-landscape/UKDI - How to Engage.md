@@ -43,7 +43,7 @@ tags: [defence-landscape, uk-defence, ukdi, dasa, innovation, funding, playbook]
 
 1. **Register on the UKDI submission service** and sign in to your supplier dashboard.
 2. **Ask for an Innovation Partner.** Choose "Contact UKDI Innovation Partner" under guidance. Innovation Partners are civil servants who discuss competitions, signpost opportunities and guide you through a submission. **One will contact you within 15 working days**, and UKDI says your intellectual property is protected when you speak to one.
-3. **Join your Regional Defence and Security Cluster.** UKDI runs 13 regional clusters that help companies into supply chains and give them a voice in shaping UKDI work. See [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|Regional Defence and Security Clusters]].
+3. **Join your Regional Defence and Security Cluster.** UKDI works with the regional defence and security clusters (gov.uk lists 13), which help companies into supply chains and give them a voice in shaping UKDI work. See [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|Regional Defence and Security Clusters]].
 4. **Sign up to the UKDI mailing list** for competitions, events and news.
 
 Help centre: accelerator@dstl.gov.uk, or 01980 950000 (option 3, 9am to midday, Monday to Friday), as published on gov.uk on 6 October 2026.
@@ -53,7 +53,7 @@ Help centre: accelerator@dstl.gov.uk, or 01980 950000 (option 3, 9am to midday, 
 ## Other doors worth knowing
 
 - [[Intelligence/defence-landscape/Programmes/Taskforce RAID|Taskforce RAID]] for AI with fast operational effect.
-- [[Intelligence/defence-landscape/Frameworks/Commercial X and Defence Unicorns|Commercial X and Defence Unicorns]] for contracts up to £50m for firms new to the MOD.
+- [[Intelligence/defence-landscape/Frameworks/Commercial X and Defence Unicorns|Commercial X and Defence Unicorns]] for contracts up to £50m and under two years; Defence Unicorns is aimed at firms new to the MOD.
 - The [[CRM/organisations/government/Defence Office for Small Business Growth|Defence Office for Small Business Growth]] for SME help with bidding and contracting.
 - The [[Intelligence/defence-landscape/Programmes/Digital Targeting Web|Digital Targeting Web Challenge Book]], published with UKDI.
 

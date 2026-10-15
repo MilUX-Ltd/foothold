@@ -3,7 +3,7 @@ type: event-series
 name: DPRTE
 full_name: Defence Procurement, Research, Technology and Exportability
 cadence: annual
-venue: Farnborough (moved from Cardiff), plus regional summits
+venue: Farnborough, plus regional summits
 next_edition: DPRTE Expo 2027, 23 to 24 March 2027, Farnborough
 status: active
 operator: BiP Solutions
@@ -20,7 +20,7 @@ tags:
 
 # DPRTE — Defence Procurement, Research, Technology and Exportability
 
-DPRTE is the UK's principal **MOD-engaged annual procurement conference**, focused on opening up MOD supply-chain opportunities to SMEs. It has **moved from Cardiff to Farnborough**, and runs regional summits through the year.
+DPRTE is the UK's principal **MOD-engaged annual procurement conference**, focused on opening up MOD supply-chain opportunities to SMEs. The main expo is at **Farnborough**, and regional summits run through the year.
 
 ## Dates (checked 15 October 2026 on dprte.co.uk)
 

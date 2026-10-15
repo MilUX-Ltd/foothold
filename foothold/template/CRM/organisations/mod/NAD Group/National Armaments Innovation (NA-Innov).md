@@ -8,7 +8,7 @@ parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 renamed: 2026-04-13
 status: active
 category: mod-component
-constituent_bodies: Dstl; UK Defence Innovation (UKDI, formerly DASA, including FCI and the Rapid Innovation Team); Defence Investment Unit
+constituent_bodies: Dstl; UK Defence Innovation (UKDI, formerly DASA, including FCI and the Rapid Innovation Team)
 last_updated: 2026-10-15
 tags:
   - mod
@@ -30,11 +30,11 @@ tags:
 
 ## Summary
 
-Defence's innovation pillar. Houses three named constituent bodies:
+Defence's innovation pillar. Houses two named constituent bodies:
 
 - **Defence Science and Technology Laboratory (Dstl)**, the MOD's executive-agency science and technology arm.
 - **UK Defence Innovation (UKDI)**, the consolidated central MOD innovation function announced under the 2025 Strategic Defence Review; DASA (the Defence and Security Accelerator) became part of UKDI in February 2026; UKDI also takes in **FCI (Future Capability Innovation)**, the **Rapid Innovation Team**, and the **Command Innovation Hubs**. UKDI has a ringfenced annual budget of at least £400 million.
-- **Defence Investment Unit**, the defence-tech investment arm working with venture capital, banking, and strategic-finance partners.
+The **Defence Investment Unit** is covered below, but published sources place it only within the NAD Group, not in NA-Innov (see the Defence Investment Unit section).
 
 Led by **DG Innovation** (3\* appointment pending). The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
@@ -152,7 +152,7 @@ UKDI established Regional Engagement Teams across the UK to identify and support
 
 ## Defence Investment Unit
 
-The MOD's defence-tech investment arm. Sits inside NA-Innov alongside Dstl and UKDI. **Acronym caution: "DIU" is also used for the Defence Innovation Unit inside UKDI.** The Defence Investment Unit (this entity) is the investment-facing function working with venture capital, banking, and strategic-finance partners. The Defence Innovation Unit (UKDI sub-component) is the consolidated innovation delivery function. Different bodies, same acronym.
+The MOD's defence-tech investment arm. The Defence Investment Plan (30 June 2026, paragraph 20) places it within the NAD Group as the MOD's centre of expertise for finance and investment, without naming an area; its notes are kept on this page so older links still resolve. **Acronym caution: "DIU" is also used for the Defence Innovation Unit inside UKDI.** The Defence Investment Unit (this entity) is the investment-facing function working with venture capital, banking, and strategic-finance partners. The Defence Innovation Unit (UKDI sub-component) is the consolidated innovation delivery function. Different bodies, same acronym.
 
 ### Recent activity
 

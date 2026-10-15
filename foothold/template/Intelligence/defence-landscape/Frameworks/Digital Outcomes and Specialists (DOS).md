@@ -18,7 +18,7 @@ tags: [framework, gca, ccs, dos, digital, public-sector]
 
 **Digital Outcomes and Specialists (DOS).** The government framework for buying digital outcomes (for example a beta service), individual digital specialists (for example a developer or user researcher) and user research services. Run by the **Government Commercial Agency (GCA)**, which replaced Crown Commercial Service on 1 April 2026. The default route for service-design and digital-delivery work in the UK public sector.
 
-**Current iteration: DOS7 (RM1043.9)**, an **open framework** under the Procurement Act 2023. It started on 30 January 2026. GCA says it will run for six years and reopen to new suppliers every 18 months; the MOD's routes-to-market page gives the end date as **29 January 2032**. The current scheme's lots expire on 29 July 2027, and GCA expects the second scheme (RM1043.9.2) to start in 2027: that reopening is the next chance to join. DOS6 (RM1043.8) ended on 27 March 2026.
+**Current iteration: DOS7 (RM1043.9)**, an **open framework** under the Procurement Act 2023. It started on 30 January 2026. GCA says it will run for six years and reopen to new suppliers every 18 months; the MOD's routes-to-market page gives the end date as **29 January 2032**. The current scheme's lots expire on 29 July 2027, and GCA expects the second scheme (RM1043.9.2) to start in 2027: that reopening is the next chance to join. DOS6 (RM1043.8) ended on 27 June 2026.
 
 ## Operating model
 

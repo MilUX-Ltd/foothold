@@ -35,7 +35,7 @@ International defence-innovation and procurement organisations relevant to UK de
 UK defence SMEs can access international markets through several established routes:
 
 1. **NATO DIANA challenges.** Direct alliance-level engagement.
-2. **UK Defence and Security Exports (UKDSE).** UK government support for defence exports. Part of NA-Intl in the NAD Group since defence exports moved to the MOD in 2025. SMEs can start with the MOD's [SME Defence Export Faculty](https://www.gov.uk/guidance/sme-defence-export-faculty).
+2. **UK Defence and Security Exports (UKDSE).** UK government support for defence exports. Defence export promotion moved to the MOD in July 2025, and the Defence Investment Plan (30 June 2026) describes UKDSE as now inside NA-Intl in the NAD Group; gov.uk's UKDSE page still says it is part of BIST, so check gov.uk if in doubt. SMEs can start with the MOD's [SME Defence Export Faculty](https://www.gov.uk/guidance/sme-defence-export-faculty).
 3. **London Tech Bridge.** US Navy / Royal Navy collaboration in the London tech ecosystem; one model for bilateral innovation engagement.
 4. **Five Eyes partnerships.** Intelligence and technology sharing across the US, UK, Canada, Australia, and New Zealand.
 5. **GCAP / TEMPEST.** Trilateral combat air programme with Italy and Japan. See [[Intelligence/defence-landscape/Programmes/TEMPEST (GCAP)|TEMPEST (GCAP)]].

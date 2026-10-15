@@ -32,7 +32,7 @@ tags:
 
 The Government Commercial Agency's (GCA, which replaced Crown Commercial Service on 1 April 2026) **dynamic-market framework** for procuring space-related technologies, developed in collaboration with the **Ministry of Defence** and other organisations. Covers **upstream and downstream space technology**, available to all UK public sector buyers including defence and security. **Six-year agreement** with an option to extend for a further two years. Compliant with the Procurement Act 2023; uses a **Dynamic Market** buying approach with a list of pre-approved suppliers.
 
-Reference: **RM6370**. GCA's agreement page gives a start date of 1 July 2025 and an end date of **30 July 2031**, with an optional two-year extension, and lists 133 suppliers.
+Reference: **RM6370**. GCA's agreement page gives a start date of 1 July 2025 and an end date of **30 July 2031**, with an optional two-year extension, and lists 134 suppliers (checked 15 October 2026).
 
 GCA: [RM6370 Space Technology Solutions agreement](https://www.gca.gov.uk/agreements/RM6370); [New space technology agreement launched](https://www.crowncommercial.gov.uk/news/new-space-technology-agreement-launched). Coverage: [UKAuthority: CCS sets up Space Technology Solutions procurement framework](https://www.ukauthority.com/articles/ccs-sets-up-space-technology-solutions-procurement-framework); [Open Access Government: UK public sector now has better access to space innovation](https://www.openaccessgovernment.org/the-uk-public-sector-now-has-better-access-to-space-innovation-through-ccs-agreement/196368/). Bidder guide: [Thornton and Lowe: Tendering for Space Technology Solutions (CCS)](https://thorntonandlowe.com/tendering-for-space-technology-solutions-ccs/).
 
