@@ -34,6 +34,23 @@ Inside each skill folder:
 - **`SKILL.md`** is the executable definition. It carries YAML frontmatter with `name` and `description`, followed by Markdown instructions the agent reads when the skill runs.
 - **`references/`** holds any source material the skill needs to read at runtime (templates, examples, lookup data). The skill resolves paths relative to its own `SKILL.md` to find these.
 
+## Writing a skill
+
+**Skills are executable. Reference is not.** If the page is a thing your agent does (a procedure with steps), it's a skill. If the page is reference material your agent reads (a framework, a methodology, a contact list), it belongs in `Resources/`, `Knowledge/`, or the relevant content folder.
+
+**One job per skill.** A skill should do one identifiable thing well. Multi-purpose skills are hard for the agent runtime to match against; users describe what they want in plain English, and a skill with a focused job gets picked up reliably.
+
+**Trigger phrases in the description.** Include the phrases an agent might match the skill against ("Use when the user says 'add a contact', 'capture a new contact', 'log this person'..."). The agent's selection of which skill to run depends on this matching, so it's worth being explicit.
+
+**Templates and source material in `references/`.** When a skill needs a template (e.g. a structured brief format, a frontmatter pattern), put the template in `references/` next to the SKILL.md and have the skill read it at runtime rather than embedding the content in the SKILL.md body. Easier to maintain.
+
+**Don't write skills for things you only do once.** Skills earn their keep when they automate a recurring task. One-off work doesn't justify the codification.
+
+
+## Lifecycle
+
+A skill you write starts as a draft in its own folder. Before you rely on it, or share it, run `/skill-safety-audit` on it and record the verdict and date in its frontmatter. Give it a `version:` and bump it when it changes: wording is a patch, a new step is a minor change, removed or reversed behaviour is a major change. Any change to what a skill does needs a fresh audit. Retire a skill by deleting its folder and its line in the Skills Value Register.
+
 ## Frontmatter
 
 The `SKILL.md` frontmatter is the skill's interface to the agent runtime:
@@ -47,18 +64,11 @@ description: One or two sentences describing when this skill should be used. Inc
 
 The description is the most important field. Agents read it to decide whether to run the skill. Be specific about when the skill should fire and when it should not.
 
-## Add discipline
-
-**Skills are executable. Reference is not.** If the page is a thing your agent does (a procedure with steps), it's a skill. If the page is reference material your agent reads (a framework, a methodology, a contact list), it belongs in `Resources/`, `Knowledge/`, or the relevant content folder.
-
-**One job per skill.** A skill should do one identifiable thing well. Multi-purpose skills are hard for the agent runtime to match against; users describe what they want in plain English, and a skill with a focused job gets picked up reliably.
-
-**Trigger phrases in the description.** Include the phrases an agent might match the skill against ("Use when the user says 'add a contact', 'capture a new contact', 'log this person'..."). The agent's selection of which skill to run depends on this matching, so it's worth being explicit.
-
-**Templates and source material in `references/`.** When a skill needs a template (e.g. a structured brief format, a frontmatter pattern), put the template in `references/` next to the SKILL.md and have the skill read it at runtime rather than embedding the content in the SKILL.md body. Easier to maintain.
-
-**Don't write skills for things you only do once.** Skills earn their keep when they automate a recurring task. One-off work doesn't justify the codification.
-
 ## Canonical example
 
 The shipped Foothold defaults include `foothold-setup` (the install-and-onboarding skill that lays your pack down) and `foothold-update` (the additive content-update skill). Both follow the same shape: YAML frontmatter declaring the skill name and description, then phased Markdown instructions the agent reads at runtime. Use them as patterns when you write your own.
+
+## Related
+- [[Skills/Skill Examples|Skill Examples]]: what each shipped skill does
+- [[Skills/Skills Value Register|Skills Value Register]]: which skills earn their keep
+- [[Knowledge/rules|Rules]]: the vault's working rules, including R-07 on frontmatter
