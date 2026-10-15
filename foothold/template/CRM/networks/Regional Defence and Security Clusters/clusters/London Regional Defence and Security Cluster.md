@@ -23,7 +23,7 @@ tags: [defence, cluster, RDSC, london]
 
 ## Description
 
-The London Regional Defence and Security Cluster (LRDSC) forms a collaboration between industry, academia, and the public sector, supported by government and its ministerial departments including the MoD and the Defence and Security Accelerator (DASA).
+The London Regional Defence and Security Cluster (LRDSC) forms a collaboration between industry, academia, and the public sector, supported by government and its ministerial departments including the MoD and UK Defence Innovation (UKDI, formerly DASA).
 
 The cluster seeks to aggregate and raise the profile of regional defence and security capability to stimulate greater sector knowledge, business, economic growth, and productivity across the greater London region. Its stated mission is to provide a collaborative defence and security environment to drive opportunity and prosperity for London and the UK. Its vision is to make defence and security sectors more accessible to generate transformative ideas, innovation, technology, commercialisation, and national resilience.
 

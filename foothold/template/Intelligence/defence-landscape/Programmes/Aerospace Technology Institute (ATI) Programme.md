@@ -1,7 +1,7 @@
 ---
 type: programme
 name: Aerospace Technology Institute (ATI) Programme
-customer: UK civil aerospace sector (via DBT and Innovate UK)
+customer: UK civil aerospace sector (via BIST and Innovate UK)
 service: Civil aerospace
 status: active
 category: civil-aerospace-rd
@@ -16,7 +16,7 @@ tags: [programme, civil-aerospace, ati, rd-funding, clean-growth, sme]
 
 The Aerospace Technology Institute (ATI) Programme co-funds civil aerospace research and technology development in the UK. Funding is aligned to the UK aerospace technology strategy and aims to maintain and grow the UK's competitive position in civil aerospace, including the clean-growth transition (sustainable propulsion, lightweight structures, advanced systems).
 
-The Programme is delivered in partnership by three organisations: the **Aerospace Technology Institute** (industry-led not-for-profit), the **Department for Business and Trade (DBT)**, and **Innovate UK**.
+The Programme is delivered in partnership by three organisations: the **Aerospace Technology Institute** (industry-led not-for-profit), the **Department for Business, Innovation, Science and Trade (BIST, formerly the Department for Business and Trade)**, and **Innovate UK**.
 
 ## Funding and impact
 

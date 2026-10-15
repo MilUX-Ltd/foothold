@@ -33,7 +33,7 @@ Capability priorities span space, AI, cyber, quantum, uncrewed systems, energy s
 
 ## Publicly visible founding partners
 
-Harwell Campus (founding partner), STFC-UKRI, MOD DASA. Technology growth hubs at Harwell, Culham and Westcott. Signatory to the Women in Defence Charter.
+Harwell Campus (founding partner), STFC-UKRI, MOD (UK Defence Innovation, formerly DASA). Technology growth hubs at Harwell, Culham and Westcott. Signatory to the Women in Defence Charter.
 
 ## Related
 

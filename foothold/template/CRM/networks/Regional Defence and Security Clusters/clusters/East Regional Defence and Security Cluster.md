@@ -21,7 +21,7 @@ tags: [defence, cluster, RDSC, east]
 
 ## Description
 
-The East Regional Defence and Security Cluster (ERDSC) connects innovators, SMEs, and government to drive defence and security innovation across the East of England. It is a collaboration between DASA, industry participants, academic institutions, local authorities, and SMEs.
+The East Regional Defence and Security Cluster (ERDSC) connects innovators, SMEs, and government to drive defence and security innovation across the East of England. It is a collaboration between UK Defence Innovation (UKDI, formerly DASA), industry participants, academic institutions, local authorities, and SMEs.
 
 The cluster aims to drive innovation, support collaboration, and stimulate economic growth within the defence and security sectors across the eastern regions of the UK.
 
