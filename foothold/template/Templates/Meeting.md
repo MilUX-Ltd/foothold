@@ -1,12 +1,12 @@
 ---
 type: meeting-note
-created: {{date:YYYY-MM-DD}}
+created:
 tags: []
 ---
 
-# {{title}}
+# Title
 
-- **Date:** {{date:YYYY-MM-DD}}
+- **Date:** 
 - **Attendees:**
 - **Purpose:**
 

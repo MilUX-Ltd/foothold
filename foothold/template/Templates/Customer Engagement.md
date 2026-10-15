@@ -2,15 +2,15 @@
 type: customer-engagement
 status: scoping
 health: green
-last_health_check: {{date:YYYY-MM-DD}}
+last_health_check:
 customer: ""
-created: {{date:YYYY-MM-DD}}
-updated: {{date:YYYY-MM-DD}}
+created:
+updated:
 owner:
 tags: []
 ---
 
-# {{title}}
+# Title
 
 ## Overview
 

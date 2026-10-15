@@ -1,10 +1,10 @@
 ---
 type: daily-note
-date: {{date:YYYY-MM-DD}}
+date:
 tags: []
 ---
 
-# {{date:YYYY-MM-DD}}
+# 
 
 ## Focus
 

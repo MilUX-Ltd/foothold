@@ -1,12 +1,12 @@
 ---
 type: review
 review_cycle: weekly
-period: "{{date:GGGG-[W]WW}}"
-created: {{date:YYYY-MM-DD}}
+period: ""
+created:
 tags: []
 ---
 
-# Weekly review {{date:GGGG-[W]WW}}
+# Weekly review 
 
 ## What got done
 

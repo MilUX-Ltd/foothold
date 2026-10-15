@@ -1,15 +1,15 @@
 ---
 type: organisation
-name: "{{title}}"
+name: ""
 status: active
-created: {{date:YYYY-MM-DD}}
-updated: {{date:YYYY-MM-DD}}
+created:
+updated:
 website:
 sector: defence
 tags: []
 ---
 
-# {{title}}
+# Title
 
 ## Company details
 

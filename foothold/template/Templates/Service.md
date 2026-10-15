@@ -1,14 +1,14 @@
 ---
 type: service
 status: active
-created: {{date:YYYY-MM-DD}}
-updated: {{date:YYYY-MM-DD}}
+created:
+updated:
 customer-facing: true
-last_reviewed: {{date:YYYY-MM-DD}}
+last_reviewed:
 tags: []
 ---
 
-# {{title}}
+# Title
 
 ## Value proposition
 

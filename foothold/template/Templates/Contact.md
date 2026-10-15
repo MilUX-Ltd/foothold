@@ -1,21 +1,21 @@
 ---
 type: contact
-name: "{{title}}"
+name: ""
 organisation: ""
 role: ""
 email:
 linkedin:
 phone:
 status: active
-created: {{date:YYYY-MM-DD}}
-updated: {{date:YYYY-MM-DD}}
-last-contact: {{date:YYYY-MM-DD}}
+created:
+updated:
+last-contact:
 lawful_basis: legitimate-interests
 tags:
   - lb-legitimate-interests
 ---
 
-# {{title}}
+# Title
 
 ## Contact details
 

@@ -1,13 +1,13 @@
 ---
 type: initiative
 status: active
-created: {{date:YYYY-MM-DD}}
-updated: {{date:YYYY-MM-DD}}
+created:
+updated:
 owner:
 tags: []
 ---
 
-# {{title}}
+# Title
 
 ## Overview
 
