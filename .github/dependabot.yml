@@ -1,0 +1,8 @@
+# The only dependencies here are the GitHub Actions in .github/workflows, pinned by commit SHA.
+# Dependabot proposes updates to those pins as pull requests.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
