@@ -5,7 +5,7 @@ acronym: NATO StratCom COE
 status: active
 category: nato-coe
 location: Riga, Latvia
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - nato
   - stratcom

@@ -6,7 +6,7 @@ parent: "[[CRM/organisations/mod/Cyber and Specialist Operations Command|Cyber a
 former_parent: UK Strategic Command (UKStratCom)
 status: active
 website: https://www.gov.uk/government/organisations/jhub-defence-innovation
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - defence
   - mod
@@ -41,7 +41,7 @@ Deliver competitive advantage against the UK's adversaries by unlocking novel an
 
 **Mature solutions focus.** jHub targets solutions that can deliver impact at pace, with a particular interest in repurposing **high Technology Readiness Level (TRL)** products and services from areas that do not traditionally have a Defence focus — software, hardware, or solving a process or people issue.
 
-This is the key distinction from DASA: DASA focuses on mid-TRL technology, jHub on high-TRL repurposing. The two work closely together to horizon-scan across the TRL spectrum.
+This is the key distinction from UKDI's competition routes (formerly DASA): those focus on mid-TRL technology, jHub on high-TRL repurposing. The two work closely together to horizon-scan across the TRL spectrum.
 
 ## How jHub does business
 
@@ -53,13 +53,13 @@ A portfolio approach across three project types:
 | **Thematic priority-led** | The organisation is trying to change in a particular direction, or grapple with an anticipated future need. | Selective |
 | **Technology opportunity-led** | Find a capability from industry that could be highly impactful if repurposed for Defence — then seek user traction to exploit. | Scout-driven |
 
-**Routes to market:** existing frameworks (Crown Commercial Services), Open/Restricted Competition via Find a Tender Service, or single source where there is a robust justification. Bespoke route per project; ensures procurement compliance and value for money.
+**Routes to market:** existing frameworks (Government Commercial Agency, formerly Crown Commercial Service), Open/Restricted Competition via Find a Tender Service, or single source where there is a robust justification. Bespoke route per project; ensures procurement compliance and value for money.
 
-**No "front door" for industry.** jHub is **not resourced or mandated** to triage industry approaches at scale. They rely on DASA for that horizon-scanning role — DASA is the mid-TRL front door; jHub picks up at high-TRL repurposing.
+**No "front door" for industry.** jHub is **not resourced or mandated** to triage industry approaches at scale. They rely on UKDI (formerly DASA) for that horizon-scanning role: UKDI is the front door; jHub picks up at high-TRL repurposing.
 
 ## Related
 
 - [[CRM/organisations/mod/Cyber and Specialist Operations Command|Cyber and Specialist Operations Command (CSOC)]] — parent command (formerly Strategic Command).
-- [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|DASA]] — close partner; DASA mid-TRL front door, jHub high-TRL repurposing.
+- [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|UKDI (formerly DASA)]]: close partner; UKDI is the front door, jHub does high-TRL repurposing.
 - [[Intelligence/defence-landscape/Innovation Organisations|Innovation Organisations]] — Wider UK defence innovation landscape.
 - [[Intelligence/defence-landscape/MOD Structure|MOD Structure]] — Where CSOC sits.

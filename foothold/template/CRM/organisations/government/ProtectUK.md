@@ -6,7 +6,7 @@ delivery_partnership: Counter Terrorism Alliance (NaCTSO + Home Office + Pool Re
 parent_ecosystem: Home Office / Counter Terrorism Policing
 status: active
 website: https://www.protectuk.police.uk/
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - government
   - home-office

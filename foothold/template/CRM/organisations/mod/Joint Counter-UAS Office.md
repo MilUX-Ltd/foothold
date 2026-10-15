@@ -5,7 +5,7 @@ parent: "[[CRM/organisations/mod/Cyber and Specialist Operations Command|Cyber a
 status: active
 category: mod-component
 caveat: dedicated gov.uk page not found at time of capture; substantive UK counter-UAS activity is visible through Project Synergia (RAF) and ORCUS, plus the 2025 US-UK joint declaration on counter-UAS standards
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - counter-uas

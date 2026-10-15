@@ -10,7 +10,7 @@ regional_association_count: 13 (reduced from 14 in 2000)
 central_coordination: Council of RFCAs (CRFCA)
 estate_responsibility: c.460 tri-service Reserve Forces' sites; c.2,300 cadet centres
 website: https://www.gov.uk/government/organisations/reserve-forces-and-cadets-associations
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - reserve-forces

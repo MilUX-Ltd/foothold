@@ -10,7 +10,7 @@ parent: UK Ministry of Defence (within Military Strategic Headquarters, MSHQ)
 website: https://www.gov.uk/government/groups/defence-futures-and-force-design-ffd
 former_website: https://www.gov.uk/government/groups/development-concepts-and-doctrine-centre
 contact: MSHQ-FFD-Digital@mod.gov.uk
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - strategy

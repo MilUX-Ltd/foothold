@@ -10,7 +10,7 @@ status: active
 category: mod-component
 focus_trl: low to medium TRL
 website: https://www.army.mod.uk/learn-and-explore/army-of-the-future/modernisation/army-warfighting-experiment/
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - army

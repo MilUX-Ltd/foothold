@@ -6,7 +6,7 @@ status: active
 category: mod-component
 delivery_unit: 4 Capability and Innovation Squadron (4 CIS)
 website: https://www.raf.mod.uk/
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - raf
@@ -62,4 +62,4 @@ The [Royal Air Force Autonomous Collaborative Platform Strategy](https://assets.
 - RAF.mod.uk: [RAF to trial revolutionary augmented reality technology](https://www.raf.mod.uk/news/articles/raf-to-trial-revolutionary-augmented-reality-technology/).
 - RAF.mod.uk: [Software Research Accelerates Future Combat Aircraft Air Power Capability](https://www.raf.mod.uk/news/articles/software-research-accelerates-future-combat-aircraft-air-power-capability/).
 - GOV.UK: [Royal Air Force Autonomous Collaborative Platform Strategy](https://assets.publishing.service.gov.uk/media/66019fa8f1d3a0666832acfc/RAF_Autonomous_Collaborative_Platform_Strategy.pdf).
-- DASA Ideas Marketplace: [Royal Air Force Innovation Hub](https://community.dasa.service.mod.uk/ideasmarketplace/IdeasHubLanding?id=a2p3z000001zIFQAA2).
+- UKDI Ideas Marketplace (formerly DASA): [Royal Air Force Innovation Hub](https://community.dasa.service.mod.uk/ideasmarketplace/IdeasHubLanding?id=a2p3z000001zIFQAA2).

@@ -10,7 +10,7 @@ category: mod-component
 renamed: 2026-04-13
 cdls_established: 2020-04-01 (originally under UK Strategic Command)
 strategy_document: Defence Support Strategy (Edition 2, April 2022)
-last_updated: 2026-05-28
+last_updated: 2026-10-15
 tags:
   - mod
   - nad-group

@@ -13,7 +13,7 @@ annual_programme_value: c.£13 billion
 new_operating_model_live: 2025-03-28
 customer_of: UK MoD
 website: https://des.mod.uk/
-last_updated: 2026-05-28
+last_updated: 2026-10-15
 tags:
   - mod
   - procurement

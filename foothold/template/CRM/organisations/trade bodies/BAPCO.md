@@ -4,7 +4,7 @@ name: BAPCO
 full_name: British APCO
 status: active
 category: trade-association
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - trade-association
   - public-safety

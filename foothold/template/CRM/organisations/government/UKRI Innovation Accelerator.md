@@ -4,7 +4,7 @@ name: UKRI Innovation Accelerator
 status: active
 category: hmg-programme
 parent: "[[CRM/organisations/government/UKRI|UKRI]]"
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - hmg
   - innovation

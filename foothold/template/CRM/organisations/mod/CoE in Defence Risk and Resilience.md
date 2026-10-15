@@ -6,7 +6,7 @@ host: University of Portsmouth
 status: active
 category: centre-of-excellence
 website: https://www.port.ac.uk/research/research-centres-and-institutes/centre-of-excellence-in-defence-risk-and-resilience-cedrr
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - centre-of-excellence

@@ -11,7 +11,7 @@ locations: The Quorum, Cambridge CB5 8RE; Home Office, London SW1W 9EX
 website: https://www.jsarc.org.uk/
 gov_uk: https://www.gov.uk/government/groups/joint-security-and-resilience-centre-jsarc
 contact: Jsarc@homeoffice.gov.uk
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - government
   - home-office

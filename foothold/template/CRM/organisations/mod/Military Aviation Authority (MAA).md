@@ -5,12 +5,12 @@ acronym: MAA
 parent: "[[CRM/organisations/mod/Defence Safety Authority (DSA)|Defence Safety Authority (DSA)]]"
 status: active
 category: mod-regulator
-established: 2010 (following the 2009 Nimrod Review by Mr Justice Haddon-Cave KC)
+established: 2010 (following the 2009 Nimrod Review)
 location: MOD Abbey Wood (North), Bristol
 led_by: 2* Director (D MAA)
 policy_document: MAA01 (Issue 11, current at time of capture)
 website: https://www.gov.uk/government/organisations/military-aviation-authority
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - regulator
@@ -28,7 +28,7 @@ tags:
 
 The Military Aviation Authority (MAA) is the single, independent regulator responsible for the **regulation, assurance and enforcement of air safety** across UK Defence. Sits within the [[CRM/organisations/mod/Defence Safety Authority (DSA)|Defence Safety Authority (DSA)]] alongside the other defence safety regulators (nuclear, maritime, land, ordnance, explosives, fire).
 
-The MAA was **established in 2010** in response to the recommendations of Mr Justice Haddon-Cave KC's **Nimrod Review** (2009), which called for a radical overhaul of military airworthiness regulation following the loss of XV230 over Afghanistan in 2006. Located at **MOD Abbey Wood (North), Bristol** and led by a **2-star Director (D MAA)**.
+The MAA was **established in 2010** in response to the recommendations of the **Nimrod Review** (2009), which called for a radical overhaul of military airworthiness regulation following the loss of XV230 over Afghanistan in 2006. Located at **MOD Abbey Wood (North), Bristol** and led by a **2-star Director (D MAA)**.
 
 GOV.UK: [Military Aviation Authority](https://www.gov.uk/government/organisations/military-aviation-authority); [About us](https://www.gov.uk/government/organisations/military-aviation-authority/about). Policy: [MAA01: Military Aviation Authority (PDF, Issue 11)](https://assets.publishing.service.gov.uk/media/662b5ef6ae7fb5d93ebf9306/MAA01_Issue_11.pdf).
 

@@ -9,7 +9,7 @@ defence_role: core academic partner with the National Cyber Force (NCF, Samlesbu
 cyber_facility: Cyber Solutions Centre; Preston Cyber Zone
 ncf_anchor_partners: UCLan; Lancaster University; BAE Systems; Lancashire County Council; Lancashire Enterprise Partnership
 ncf_investment_to_region: £5 billion
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - defence
   - academia
