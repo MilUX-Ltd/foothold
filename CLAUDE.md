@@ -2,9 +2,9 @@
 
 Foothold is an installable Obsidian vault pack for defence-sector founders: a folder structure,
 page templates, skills and public defence reference content. A user installs it with one prompt
-in Cowork that fetches the setup skill from this repository, and keeps it current with an update
-skill that reads this repository. There is no plugin and no marketplace step (since 1.6.0). It
-is public and free; the README says MIT licensed, but there is no `LICENSE` file yet (risk R3 in
+in Cowork that runs the setup skill, which lays the vault down from the template in the Foothold
+plugin, and keeps it current with an update skill that reads this repository. It is public and
+free; the README says MIT licensed, but there is no `LICENSE` file yet (risk R2 in
 `docs/security/risk-register.md`).
 
 Read this, then `LESSONS-INDEX.md`, then `CONTEXT.md`. For recent movement run
@@ -16,23 +16,19 @@ explains the pack's structure and how setup and update work.
 | Path | What it is |
 |---|---|
 | `foothold/template/` | The vault itself. Everything here is what a user's vault receives. |
-| `foothold/skills/foothold-setup/SKILL.md` | The setup skill. A user's one prompt fetches it from `main` and follows it. |
+| `foothold/skills/foothold-setup/SKILL.md` | The setup skill. It installs from the template in the plugin (`<plugin>/template/`), offline. |
 | `foothold/template/Skills/meta-skills/foothold-update/` | The update skill, shipped into the vault. It reads `main` on GitHub. |
-| `foothold/.claude-plugin/plugin.json` | Left from the pre-1.6.0 plugin install. The update skill still reads its `version`. |
-| `.claude-plugin/marketplace.json` | Left from the pre-1.6.0 marketplace install; nothing in the current flow uses it. |
+| `foothold/.claude-plugin/plugin.json` | The plugin manifest. Setup reads the template from the installed plugin; the update skill reads its `version`. |
+| `.claude-plugin/marketplace.json` | The marketplace entry for the plugin. |
 | `tools/vault-viewer/` | A browser viewer for a vault, for people who want to look before installing. |
 | `tools/check.py` | The repository's gate. CI runs it on every pull request. |
 | `docs/adr/`, `docs/security/` | Decisions, the threat model and the risk register. |
 
 ## How changes reach users
 
-- **`main` is the release channel.** New users fetch the setup skill from `main`
-  (`raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/skills/foothold-setup/SKILL.md`),
-  and a user's `/foothold-update` pulls every changed file under `foothold/template/` from `main`.
-  Merging publishes (ADR 002). There is no staging copy.
-- **Install is one prompt, by design** (`docs/architecture.md`, changelog 1.6.0): setup and update
-  fetch plain files over HTTPS. Never reintroduce a plugin or marketplace step. The 2.1.0 setup
-  skill departs from this by looking for a template under `~/.claude/plugins/` (risk R5).
+- **`main` is the release channel for updates.** A user's `/foothold-update` pulls every
+  changed file under `foothold/template/` from `main`, so merging publishes (ADR 002). There is
+  no staging copy.
 - Work on a branch and merge by pull request only. `main` is protected: the `checks` job must
   pass. Never push to `main`.
 - This repository is the only source of the pack (ADR 001). Change it in a clone, by pull request.
