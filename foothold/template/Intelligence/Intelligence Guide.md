@@ -26,15 +26,17 @@ Intelligence/
 │       └── <Portal name>.md
 ├── events/
 │   └── <events you attend, see Events Guide>
-├── market/
+├── market/  (optional, create when needed)
 │   └── <Market topic>.md
-├── competitors/
+├── competitors/  (optional, create when needed)
 │   └── <Competitor name>.md
-├── literature/
+├── literature/  (optional, create when needed)
 │   └── <Paper, report, article>.md
-└── decisions/
+└── decisions/  (optional, create when needed)
     └── <External decision relevant to your market>.md
 ```
+
+Folders marked optional do not ship; create them when you first need one.
 
 MOD bodies and other public organisations live as organisation pages under `CRM/organisations/` (for example `CRM/organisations/mod/`); the regional defence and security clusters live under `CRM/networks/Regional Defence and Security Clusters/`.
 

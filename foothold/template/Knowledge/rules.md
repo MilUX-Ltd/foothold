@@ -101,6 +101,8 @@ Every note uses the same frontmatter conventions: the common fields, links as qu
 | newsletter-edition | `draft`, `scheduled`, `sent` |
 | event | `upcoming`, `scoping`, `attended` |
 | book-note | `queued`, `in-progress`, `read`, `abandoned` |
+| programme, framework, portal | `active`, `retired` |
+| market, literature, daily note, meeting note, review | no status |
 | any other type | `active`, `archived` |
 
 Daily notes, meeting notes and reviews carry no status. Notes still in `Inbox/` have not been filed and may have no frontmatter yet.
