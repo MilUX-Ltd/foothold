@@ -41,7 +41,7 @@ Many defence-relevant programmes are joint between MOD and another department. C
 - **MOD + BIST.** Research and innovation funding (UKRI and Innovate UK, ARIA), export licensing through ECJU, and investment screening. The MOD's own innovation route is UK Defence Innovation (UKDI, formerly DASA).
 - **MOD + Home Office.** Border, counter-terror, and resilience-adjacent technology.
 - **MOD + Cabinet Office.** National-security strategy, resilience, integrated security planning, vetting, and government AI.
-- **MOD exports.** Defence export promotion sits in the MOD's NAD Group (NA-Intl) since 2025.
+- **MOD exports.** Defence export promotion moved from DBT to the MOD in July 2025. The Defence Investment Plan (30 June 2026) describes UK Defence and Security Exports (UKDSE) as now inside the NAD Group, in NA-Intl; gov.uk's UKDSE page still says it is part of BIST, so check gov.uk if in doubt.
 
 ## Related
 

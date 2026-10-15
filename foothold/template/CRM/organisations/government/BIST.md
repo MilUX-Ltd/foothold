@@ -56,5 +56,5 @@ Defence export promotion moved from DBT to the MOD in July 2025. The Defence Inv
 ## Related
 
 - [[CRM/organisations/government/Department for Business and Trade|Department for Business and Trade]]: former name; that page now points here.
-- [[CRM/organisations/government/DSIT|DSIT]]: dissolved department whose science and innovation work came here.
+- [[CRM/organisations/government/DSIT|DSIT]]: department being dissolved, whose science and innovation work came here.
 - [[Intelligence/defence-landscape/Government Departments|Government Departments overview]].

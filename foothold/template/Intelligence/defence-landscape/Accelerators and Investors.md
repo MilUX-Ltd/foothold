@@ -17,7 +17,7 @@ Organisations supporting the growth, funding, and scaling of defence technology 
 ## Government-backed accelerators and funds
 
 - **UK Defence Innovation (UKDI), formerly DASA.** The MOD's innovation funder and single front door; DASA became part of UKDI in February 2026. At least £400m a year. Runs the Open Call for Innovation (the Security Open Call is open; the Defence Open Call has not reopened), themed competitions and the Ideas Marketplace; Defence Innovation Loans are paused. See [[Intelligence/defence-landscape/UKDI - How to Engage|UKDI: How to Engage]] and [[Intelligence/defence-landscape/Innovation Organisations|Innovation Organisations]].
-- **Commercial X and Defence Unicorns.** MOD contracts up to £50m for firms new to defence; up to £100m over four years for Defence Unicorns. See [[Intelligence/defence-landscape/Frameworks/Commercial X and Defence Unicorns|Commercial X and Defence Unicorns]].
+- **Commercial X and Defence Unicorns.** MOD contracts up to £50m and under two years; Defence Unicorns, up to £100m over four years, is aimed at firms with limited or no MOD business. See [[Intelligence/defence-landscape/Frameworks/Commercial X and Defence Unicorns|Commercial X and Defence Unicorns]].
 - **Uncrewed Systems Centre (DroneTEX, Swindon).** Defence's central authority for uncrewed systems, opened June 2026. See [[Intelligence/defence-landscape/Centres of Excellence|Centres of Excellence]].
 - **ARIA — Advanced Research and Invention Agency.** High-risk, high-reward R&D funding for breakthrough technologies. Independent of MOD; UK-government-funded.
 - **NSSIF — National Security Strategic Investment Fund.** Government investment fund for national-security-relevant technology. Part of the British Business Bank.

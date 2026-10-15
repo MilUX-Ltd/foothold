@@ -27,7 +27,7 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 |---------|-----------|------------|
 | NA-Intl | National Armaments International | NAD pillar; international collaboration and exports (incl. UKDSE). Formerly ICE |
 | NA-M | National Armaments Materiel | NAD pillar; delivery arm. Former DE&S core |
-| NA-Innov | National Armaments Innovation | NAD pillar; houses Dstl, UKDI, Defence Investment Unit |
+| NA-Innov | National Armaments Innovation | NAD pillar; houses Dstl and UKDI |
 | NA-D&D | National Armaments Digital & Data | NAD pillar; former Defence Digital |
 | NA-C&I | National Armaments Commercial & Industry | NAD pillar; commercial and industry, includes NSO |
 | NA-C | National Armaments Corporate | NAD pillar; corporate functions, including Corporate Services Modernisation and Defence Business Services |
@@ -63,7 +63,7 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 | TF RAID | Taskforce RAID (Rapid AI Delivery) | MOD AI taskforce set up June 2026, reporting to CDS; £100m; industry front door |
 | USC | Uncrewed Systems Centre | Defence's central authority for uncrewed systems standards and assurance; includes DroneTEX, Swindon |
 | DIU | Defence Innovation Unit | Innovation delivery unit inside UKDI. **Acronym collision** with Defence Investment Unit |
-| DIU | Defence Investment Unit | Defence-tech investment arm inside NA-Innov. **Acronym collision** with Defence Innovation Unit |
+| DIU | Defence Investment Unit | Defence-tech investment arm within the NAD Group. **Acronym collision** with Defence Innovation Unit |
 | DIAG | Defence Investors' Advisory Group | Senior banking, VC, and strategic finance group advising on defence investment |
 | FCI | Future Capability Innovation | DE&S-rooted innovation function, now inside UKDI |
 | RIT | Rapid Innovation Team | Wartime-pace function inside UKDI |
@@ -427,7 +427,7 @@ If an acronym refers to a specific MOD body, framework, programme, or portal tha
 A few acronyms collide in UK defence. The ones worth knowing:
 
 - **AWE** — could mean **Atomic Weapons Establishment** (the warhead body, now AWE Nuclear Security Technologies) or **Army Warfighting Experiment** (the BA experimentation programme). Context will tell you which.
-- **DIU** — could mean **Defence Innovation Unit** (a constituent of UKDI) or **Defence Investment Unit** (the defence-tech investment arm inside NA-Innov). Different bodies, same acronym.
+- **DIU** — could mean **Defence Innovation Unit** (a constituent of UKDI) or **Defence Investment Unit** (the defence-tech investment arm within the NAD Group). Different bodies, same acronym.
 - **CDP** — could mean **Central Digital Platform** (the PA23 procurement platform) or **Commercial Delivery Partner** (the MOD framework). Always check which acronym the surrounding context is using.
 - **DSA** — UK is **Defence Safety Authority** (the regulator). Australian defence airworthiness uses **Defence Aviation Safety Authority**, same acronym.
 - **DASA**: in the UK, the former **Defence and Security Accelerator**, now part of UKDI. Australia's **Defence Aviation Safety Authority** shares the acronym in airworthiness contexts.

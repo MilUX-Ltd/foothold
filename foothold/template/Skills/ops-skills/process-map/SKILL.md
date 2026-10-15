@@ -13,9 +13,10 @@ version: 1.0.1
 last_reviewed: 2026-10-15
 maintainer: MilUX
 license: Foothold pack, MIT
-audited: 2026-07-02
+audited: 2026-10-15
 audit_verdict: pass
 audited_with: skill-safety-audit v3
+previous_audit: 2026-07-02
 origin: built
 replicated_from: Footing v2.0.0
 ---

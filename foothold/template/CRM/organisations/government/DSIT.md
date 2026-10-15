@@ -3,7 +3,8 @@ type: organisation
 name: DSIT
 full_name: Department for Science, Innovation and Technology
 category: hmg-department
-status: dissolved
+status: active
+status_note: being dissolved; functions are moving to BIST, DCMS and the Cabinet Office (July 2026 machinery of government changes)
 created: 2026-05-20
 last_reviewed: 2026-10-15
 successor: "[[CRM/organisations/government/BIST|BIST]]"

@@ -73,7 +73,7 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 
 | Programme | Status |
 |-----------|--------|
-| [[Intelligence/defence-landscape/Programmes/TEMPEST (GCAP)\|TEMPEST (GCAP)]] | Active (£4.6bn Edgewing contract Jul 2026; in service target 2035; 600+ UK supply-chain organisations; DIP £8.6bn) |
+| [[Intelligence/defence-landscape/Programmes/TEMPEST (GCAP)\|TEMPEST (GCAP)]] | Active (£4.6bn Edgewing contract Jul 2026; in service target 2035; about 600 supply-chain organisations; DIP £8.6bn) |
 | [[Intelligence/defence-landscape/Programmes/Eurofighter Typhoon\|Eurofighter Typhoon]] | Active (£453.5m ECRS Mk2 radar contract Jan 2026; APKWS deployed May 2026 with 9 Sqn; DIP a further £1.1bn) |
 | [[Intelligence/defence-landscape/Programmes/New Medium Helicopter (NMH)\|New Medium Helicopter (NMH)]] | Active (£1bn Leonardo AW149 contract Mar 2026; 23 aircraft; replaces Puma HC2; DIP £680m) |
 | Collaborative Combat Aircraft (CCA) and Autonomous Collaborative Platforms (ACP) | Active (RAF Strategy Mar 2024; DIP £300m to start a UK autonomous jets programme, demonstrator flying by at least 2030; StormShroud uncrewed electronic warfare drone. For the Army's Apache loyal wingman see [[Intelligence/defence-landscape/Programmes/Project NYX\|Project NYX]]) |
@@ -94,7 +94,7 @@ Test, integration and gateway capabilities sitting under TacSys Delivery Team. F
 | [[Intelligence/defence-landscape/Programmes/TRINITY\|TRINITY]] | Demonstration & Manufacture |
 | [[Intelligence/defence-landscape/Programmes/Programme Cortisone\|Programme Cortisone]] | Delivery (DMS digital healthcare) |
 | [[Intelligence/defence-landscape/Programmes/AUKUS Pillar 2\|AUKUS Pillar 2]] | Active (UK / US / Australia trilateral; DARC, AURAS named initiatives; first signature project May 2026: payloads for uncrewed undersea vehicles, first capabilities 2027) |
-| [[Intelligence/defence-landscape/Programmes/Digital Targeting Web\|Digital Targeting Web]] | Active (DIP £1.8bn; Challenge Book open to new entrants to March 2027) |
+| [[Intelligence/defence-landscape/Programmes/Digital Targeting Web\|Digital Targeting Web]] | Active (DIP £1.8bn; Challenge Book open to new entrants, the basis of engagement for 12 months from 20 March 2026) |
 | [[Intelligence/defence-landscape/Programmes/Taskforce RAID\|Taskforce RAID]] | Active (Rapid AI Delivery Taskforce; £100m; Avengers AI swarming competition closes 22 Oct 2026) |
 | CABOT | Active |
 | NCGI | Active |

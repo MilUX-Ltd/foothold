@@ -9,7 +9,7 @@ category: gca
 operator: Government Commercial Agency (GCA), formerly Crown Commercial Service
 customer: UK public sector (central government, local authorities, NHS, devolved administrations, wider public sector)
 agreement_type: framework; four-year term, reopens to new suppliers after 18 and 36 months
-service_categories: 5 lots: 1a IaaS and PaaS; 1b IaaS and PaaS above OFFICIAL; 2a Infrastructure Software; 2b Other SaaS; 3 Cloud support
+service_categories: "5 lots: 1a IaaS and PaaS; 1b IaaS and PaaS above OFFICIAL; 2a Infrastructure Software; 2b Other SaaS; 3 Cloud support"
 website: https://www.gca.gov.uk/agreements/RM1557.15
 last_updated: 2026-10-15
 tags:
@@ -51,7 +51,7 @@ Agreement: [GCA: G-Cloud 15 (RM1557.15)](https://www.gca.gov.uk/agreements/RM155
 
 ## Source Material
 
-- [GOV.UK: G-Cloud relaunches with biggest upgrade in its history (10 August 2026)](https://www.gov.uk/government/news/g-cloud-relaunches-with-biggest-upgrade-in-its-history)
+- [GOV.UK: G-Cloud relaunches with biggest upgrade in its history (10 August 2026)](https://www.gov.uk/government/news/g-cloud-relaunches-with-biggest-upgrade-in-its-history): call-off contracts up to 60 months.
 - [GCA: G-Cloud 15 agreement (RM1557.15)](https://www.gca.gov.uk/agreements/RM1557.15)
 - [GOV.UK: Find contracts in technology and R&D with the MOD (updated 18 September 2026)](https://www.gov.uk/guidance/find-contracts-in-technology-and-research-and-development-with-the-ministry-of-defence): G-Cloud 14 ends 28 October 2026.
 - [GCA: Crown Commercial Service (CCS)](https://www.gca.gov.uk/about-gca/crown-commercial-service-ccs): CCS replaced by GCA on 1 April 2026.
