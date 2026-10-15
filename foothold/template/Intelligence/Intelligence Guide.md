@@ -28,6 +28,8 @@ Intelligence/
 │   │   └── <Framework name>.md
 │   └── Portals/
 │       └── <Portal name>.md
+├── events/
+│   └── <events you attend, see Events Guide>
 ├── market/
 │   └── <Market topic>.md
 ├── competitors/
@@ -47,6 +49,22 @@ Intelligence/
 **`literature/`** holds notes on public-domain papers, reports, articles you've read. Source material that informed your thinking.
 
 **`decisions/`** holds external decisions (procurement announcements, policy changes, regulatory shifts) that affect your market. Different from internal decisions, which live with the initiative they belong to.
+
+**`events/`** holds the events you attend, run, or track. See the [[Intelligence/events/Events Guide|Events Guide]].
+
+## Writing an intelligence note
+
+**Public information only.** Intelligence pages should be sourceable from public material: gov.uk, MOD website, company website, LinkedIn public profile, published reports. Anything you learned through a private relationship belongs in CRM, not here.
+
+**Maps versus entities.** Index pages and landscape diagrams are maps, not entity homes. If a page has more than one entity's information, it's a map. If it has one entity's information, it's that entity's home. Maps live in `Intelligence/defence-landscape/`; entity homes live in the relevant CRM folder.
+
+**Defence-landscape rebrands.** When a MOD body restructures (which happens every few years), use the parent-folder pattern: a folder named after the parent organisation, with renamed children inside carrying both new acronymic title and `former_name:` frontmatter. Keep search continuity.
+
+**Don't mirror CRM.** If you have a working relationship with a defence-landscape entity, that organisation lives in `CRM/organisations/`. The Intelligence page references the CRM page; it doesn't duplicate it.
+
+## Lifecycle
+
+Landscape entities carry `status: active` or `retired`; mark a page `retired` when the body, programme or framework it describes has been closed or replaced, and keep the page. Set `last_reviewed:` whenever you check that a page still matches the public source. Market and literature pages carry no status.
 
 ## Frontmatter
 
@@ -75,16 +93,12 @@ tags: [...]
 ---
 ```
 
-## Add discipline
-
-**Public information only.** Intelligence pages should be sourceable from public material: gov.uk, MOD website, company website, LinkedIn public profile, published reports. Anything you learned through a private relationship belongs in CRM, not here.
-
-**Maps versus entities.** Index pages and landscape diagrams are maps, not entity homes. If a page has more than one entity's information, it's a map. If it has one entity's information, it's that entity's home. Maps live in `Intelligence/defence-landscape/`; entity homes live in the relevant CRM folder.
-
-**Defence-landscape rebrands.** When a MOD body restructures (which happens every few years), use the parent-folder pattern: a folder named after the parent organisation, with renamed children inside carrying both new acronymic title and `former_name:` frontmatter. Keep search continuity.
-
-**Don't mirror CRM.** If you have a working relationship with a defence-landscape entity, that organisation lives in `CRM/organisations/`. The Intelligence page references the CRM page; it doesn't duplicate it.
-
 ## Canonical example
 
 The shipped Foothold defaults include `defence-landscape/Defence Landscape Index.md` as the canonical map page. For entity pages, see the public-info shape used in the open-source content layer: short company-style page with public mission, leadership where named publicly, website, and (where relevant) parent/child relationships via frontmatter.
+
+## Related
+
+- [[Intelligence/events/Events Guide|Events Guide]]: events you attend, run or track
+- [[CRM/CRM Guide|CRM Guide]]: where the entities live
+- [[Resources/Resources Guide|Resources Guide]]: the reference library, distinct from external scanning

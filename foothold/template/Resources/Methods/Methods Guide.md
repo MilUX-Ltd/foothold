@@ -11,11 +11,19 @@ folder: Resources/Methods
 
 Distinct from `Resources/Ways of Working/`, which is your own internal practice on top of methodology, and from `Resources/Frameworks/`, which is sense-making frameworks (Cynefin, Wardley, etc.).
 
-## Add discipline
+## Structure
 
-- One file per methodology, or a subfolder if the methodology has multiple pages (`Kanban/Kanban Method.md`, `Kanban/Cost of Delay.md`, etc.).
+A flat folder, with a subfolder for any methodology that has several pages (`Kanban/Kanban Method.md`, `Kanban/Cost of Delay.md`, etc.).
+
+## Writing a method note
+
+- One file per methodology, or a subfolder if the methodology has multiple pages.
 - Keep theory neutral: how the method works in general, not your particular interpretation of it. Your interpretation goes in `Ways of Working/`.
-- Cross-reference into `Knowledge/hypotheses.md` if reading a method sparked an operating idea you want to test.
+- If reading a method sparked an operating idea you want to test, note it in your hypotheses page, if you keep one (see the [[Knowledge/Knowledge Guide|Knowledge Guide]]).
+
+## Lifecycle
+
+Statuses are optional here. A method note is `status: active` and changes by being edited; set it to `archived` if you stop using the method, and keep the page.
 
 ## Frontmatter
 
@@ -28,6 +36,10 @@ source: <citation or URL>
 tags: [...]
 ---
 ```
+
+## Canonical example
+
+No example ships. Your first note, with the frontmatter above and a short account of what the method is and when it applies, sets the pattern.
 
 ## Related
 

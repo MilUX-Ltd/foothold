@@ -18,19 +18,9 @@ The line is binary: who owns the outcome.
 
 Paid, sponsored, or pro-bono doesn't decide the folder. What decides it is whether there is a named external organisation on the receiving end of the delivery. If there is, and that organisation has a page in `CRM/organisations/`, the work belongs here.
 
-## Why split them
+### Why split them
 
 Customer work and internal work have different rhythms, different audit trails, and different downstream artefacts. Customer engagements typically produce a case study at the end; internal initiatives typically produce a new service, product, or capability. Mixing the two makes "what is my current client load" harder to read than it should be, and makes case-study harvesting harder later.
-
-## Lifecycle
-
-Engagements move through three states, each with its own subfolder:
-
-1. **`scoping/`**. Conversations underway, deliverable being shaped, no commitment to deliver yet. Sales pipeline territory. A scoping engagement may end in a proposal accepted (hand-off to `active/`), in a quiet "no", or in a hand-off that never lands.
-2. **`active/`**. Scope agreed, by verbal commitment, purchase order, or signed proposal. You are delivering.
-3. **`completed/`**. Delivery finished. Kept for reference, case studies, and historical context.
-
-Engagements that go cold during scoping and don't recover stay in `scoping/` with `status: archived` rather than being deleted. Useful CRM signal for future conversations with the same organisation.
 
 ## Structure
 
@@ -60,7 +50,7 @@ Customer Engagements/
 
 Subfolders inside an engagement are added when content justifies them, not as empty scaffolding.
 
-## Subfolders
+### Subfolders
 
 Create only when content justifies. Don't pre-scaffold empty folders.
 
@@ -74,7 +64,7 @@ Create only when content justifies. Don't pre-scaffold empty folders.
 
 The rule that matters: `type: meeting-note` lives in `meetings/`. Vault Dataview queries and any meeting-prep flow you wire up rely on this.
 
-## File naming convention
+### File naming convention
 
 Folder, index, and sibling artefact files all use **title case** with a plain hyphen separator and surrounding spaces (` - `). No em dashes.
 
@@ -91,9 +81,11 @@ The customer prefix matters because the same customer can have multiple engageme
 
 Use the customer's name as it appears in their CRM organisation page; whatever capitalisation or separator the CRM page uses, mirror it here. The engagement title is short and distinctive (`Discovery`, `Product Support`, `Mobilisation Sprint`).
 
-## Delivery management sections
+## Writing a customer engagement
 
-Every engagement carries a set of sections beyond Overview / Customer / Status to make delivery management explicit:
+**Adding a new engagement.** Create the folder under `scoping/` with a kebab-case slug. Drop in the index page using the [[Templates/Customer Engagement|Customer Engagement template]]. Wikilink the `customer:` field to the matching `CRM/organisations/` page (create the org page first if it doesn't exist). The `/mobilise-engagement` skill builds the full set of sibling pages for you.
+
+**Delivery management sections.** Every engagement carries a set of sections beyond Overview / Customer / Status to make delivery management explicit:
 
 - **Outcome and Benefits Measurement.** What success looks like and how the customer will know it has landed.
 - **Scope and Deliverables.** A table per deliverable: deliverable, acceptance criteria, sign-off owner, due date.
@@ -107,7 +99,33 @@ Every engagement carries a set of sections beyond Overview / Customer / Status t
 
 Each of these turns into a gate on the mobilisation checklist when scoping is complete.
 
-## Frontmatter (the index page)
+**Meeting notes.** Write each one with the [[Templates/Meeting|Meeting template]] and file it in the engagement's `meetings/` folder.
+
+**Closing out.** When an engagement wraps, move the folder from `active/` to `completed/`. Update the index `status:`. Write a short retrospective at the bottom of the index page: what worked, what didn't, what to carry forward. A case study in `Capabilities and Services/` typically follows.
+
+**Don't conflate engagements with services.** Engagements are time-bounded. Services are standing offers. An engagement might result in a refined service description in `Capabilities and Services/`; the engagement itself stays in `Customer Engagements/`.
+
+## Lifecycle
+
+Engagements move through three states, each with its own subfolder:
+
+1. **`scoping/`**. Conversations underway, deliverable being shaped, no commitment to deliver yet. Sales pipeline territory. A scoping engagement may end in a proposal accepted (hand-off to `active/`), in a quiet "no", or in a hand-off that never lands.
+2. **`active/`**. Scope agreed, by verbal commitment, purchase order, or signed proposal. You are delivering.
+3. **`completed/`**. Delivery finished. Kept for reference, case studies, and historical context.
+
+Engagements that go cold during scoping and don't recover stay in `scoping/` with `status: archived` rather than being deleted. Useful CRM signal for future conversations with the same organisation.
+
+The index page's `status:` is one of `scoping`, `active`, `paused`, `completed` or `archived`. When the engagement moves between states, move its folder to the matching subfolder and update the index `status:`.
+
+- `scoping/` -> `active/` when scope is agreed (verbal, PO, or signed proposal).
+- `active/` -> `completed/` when delivery is finished.
+- `scoping/` engagements that go cold stay in `scoping/` with `status: archived`.
+
+Wikilinks elsewhere in the vault need updating to reflect the new path.
+
+## Frontmatter
+
+The index page:
 
 ```yaml
 ---
@@ -117,16 +135,20 @@ health: green | amber | red
 last_health_check: YYYY-MM-DD
 customer: "[[CRM/organisations/<Org>|<Org>]]"
 created: YYYY-MM-DD
+updated: YYYY-MM-DD
 owner: <name>
 tracking_card: <URL to work-tracking card if you use one>
+tags: []
 ---
 ```
 
 The `customer:` field is a wikilink to the matching organisation page in `CRM/organisations/`. Every engagement should map 1:1 to an organisation page. If the organisation doesn't have a page yet, create one before the engagement page.
 
+Meeting notes carry `type: meeting-note`, `created:` and `tags:`. They take no status.
+
 ## Canonical example
 
-The canonical engagement index page carries these sections in order:
+Start from the [[Templates/Customer Engagement|Customer Engagement template]]. The canonical engagement index page carries these sections in order:
 
 ```markdown
 ---
@@ -166,23 +188,8 @@ What needs to happen next.
 
 Sections with no content can be omitted until they have something to carry.
 
-## Add discipline
-
-**Adding a new engagement.** Create the folder under `scoping/` with a kebab-case slug. Drop in the index page using the canonical template. Wikilink the `customer:` field to the matching `CRM/organisations/` page (create the org page first if it doesn't exist).
-
-**Moving between states.** When the engagement moves between states, move its folder to the matching subfolder and update the index `status:`.
-
-- `scoping/` -> `active/` when scope is agreed (verbal, PO, or signed proposal).
-- `active/` -> `completed/` when delivery is finished.
-- `scoping/` engagements that go cold stay in `scoping/` with `status: archived`.
-
-Wikilinks elsewhere in the vault need updating to reflect the new path.
-
-**Closing out.** When an engagement wraps, move the folder from `active/` to `completed/`. Update the index `status:`. Write a short retrospective at the bottom of the index page: what worked, what didn't, what to carry forward. A case study in `Capabilities and Services/` typically follows.
-
-**Don't conflate engagements with services.** Engagements are time-bounded. Services are standing offers. An engagement might result in a refined service description in `Capabilities and Services/`; the engagement itself stays in `Customer Engagements/`.
-
 ## Related
 
 - [[Initiatives/Initiatives Guide|Initiatives Guide]]. Sister Guide. Internal work, not customer-led.
 - [[CRM/CRM Guide|CRM Guide]]. Customer organisations and contacts. Each engagement links 1:1 to an organisation here.
+- [[Templates/Templates Guide|Templates Guide]]. The Customer Engagement and Meeting templates.
