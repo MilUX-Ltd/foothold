@@ -3,7 +3,7 @@ type: guide
 category: defence-landscape
 status: active
 created: 2026-07-02
-last_reviewed: 2026-07-02
+last_reviewed: 2026-10-15
 parent: "[[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]]"
 source: UKSV national security vetting guidance and MOD FSC policy, gov.uk
 source-url: https://www.gov.uk/government/publications/united-kingdom-security-vetting-clearance-levels/national-security-vetting-clearance-levels
@@ -45,6 +45,15 @@ The practical consequence: a cleared hire starts in weeks, an uncleared one wait
 2. **Clearance follows the person, sponsorship follows the role.** A lapsed or unsponsored clearance can sometimes be reactivated quickly, but do not assume; verify status through the sponsor.
 3. **Nationality and residency rules bite early.** UKSV checks typically need a UK footprint (residency history) to complete; long overseas periods slow or complicate vetting. Factor this into hiring for cleared roles.
 4. **Put clearance in your bid qualification.** If delivery needs SC bodies on site in month one and you have none, that tender is not winnable this cycle. The `eligibility-check` skill in this pack asks this question for you.
+
+## Watch: changes under way (October 2026)
+
+Two changes could affect how vetting works and how long it takes. Neither has changed the process yet.
+
+- **A government review of national security vetting.** Announced to Parliament on 20 April 2026, with terms of reference published by the Cabinet Office on 1 June 2026. It is a short review of the lessons for the national security vetting system. No findings have been published. Source: gov.uk [Vetting Review Terms of Reference](https://www.gov.uk/government/publications/vetting-review-terms-of-reference).
+- **UKSV's home is moving.** The July 2026 machinery of government changes set up a new **OneGov Delivery Agency** in the Cabinet Office family to run operational services, including Security Vetting. For now UKSV is still listed as part of the Cabinet Office, and no move date has been given. Sources: gov.uk [Machinery of government changes fact sheet](https://www.gov.uk/government/news/machinery-of-government-changes-fact-sheet); [United Kingdom Security Vetting](https://www.gov.uk/government/organisations/united-kingdom-security-vetting).
+
+Re-check timescales and contact routes with your sponsor before relying on anything above.
 
 ## What fails vetting
 

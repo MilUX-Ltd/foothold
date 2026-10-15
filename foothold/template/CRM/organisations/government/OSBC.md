@@ -4,7 +4,7 @@ name: Office of the Small Business Commissioner
 acronym: OSBC
 website: https://www.smallbusinesscommissioner.gov.uk
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - government
   - sme-support
@@ -18,7 +18,7 @@ tags:
 - **Website:** [smallbusinesscommissioner.gov.uk](https://www.smallbusinesscommissioner.gov.uk).
 - **Sector:** Government — small business support, late payment regulation.
 - **Established:** 2016 under the Enterprise Act 2016.
-- **Type:** Independent public body sponsored by the Department for Business and Trade.
+- **Type:** Independent public body sponsored by the Department for Business, Innovation, Science and Trade (BIST, formerly the Department for Business and Trade, renamed July 2026).
 - **LinkedIn:** [Office of the Small Business Commissioner](https://uk.linkedin.com/company/office-of-the-small-business-commissioner).
 
 ## What it does
@@ -49,5 +49,5 @@ The OSBC is gaining new legislative powers to levy financial penalties against l
 
 ## Related
 
-- [[CRM/organisations/government/Department for Business and Trade|Department for Business and Trade]] — sponsoring department.
+- [[CRM/organisations/government/BIST|BIST]]: sponsoring department (formerly the Department for Business and Trade).
 - [[Intelligence/defence-landscape/Government Departments|Government Departments overview]].
