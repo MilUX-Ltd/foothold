@@ -50,7 +50,7 @@ This page is a catalogue of skills the Foothold authors and users have built and
 
 ## Security and compliance skills
 
-- **/cyber-essentials-ready**. Walks a non-IT user through configuring their personal Mac or Windows computer to meet the UK Cyber Essentials technical controls (Montpellier question set). Initial setup, monthly verify mode, append-only audit log, dated evidence packs, and a reviewer-facing README written to `Operations/Cyber-Essentials/`. Registers a monthly Cowork scheduled task to keep the posture current. Ships with Foothold.
+- **/cyber-essentials-ready**. Walks a non-IT user through configuring their personal Mac or Windows computer to meet the UK Cyber Essentials technical controls (Danzell question set). Initial setup, monthly verify mode, append-only audit log, dated evidence packs, and a reviewer-facing README written to `Operations/Cyber-Essentials/`. Registers a monthly Cowork scheduled task to keep the posture current. Ships with Foothold.
 
 ## Setup and tooling skills
 

@@ -18,12 +18,8 @@ Intelligence/
 ├── Intelligence Guide.md           (this file)
 ├── defence-landscape/
 │   ├── Defence Landscape Index.md
-│   ├── Clusters/
-│   │   └── <RDSC name>.md
 │   ├── Programmes/
 │   │   └── <Programme name>.md
-│   ├── MOD Bodies/
-│   │   └── <Body name>.md
 │   ├── Frameworks/
 │   │   └── <Framework name>.md
 │   └── Portals/
@@ -39,6 +35,8 @@ Intelligence/
 └── decisions/
     └── <External decision relevant to your market>.md
 ```
+
+MOD bodies and other public organisations live as organisation pages under `CRM/organisations/` (for example `CRM/organisations/mod/`); the regional defence and security clusters live under `CRM/networks/Regional Defence and Security Clusters/`.
 
 **`defence-landscape/`** holds the public reference pages: clusters, programmes, MOD bodies, frameworks, portals. The `Defence Landscape Index.md` at the root is a map page, not an entity home. Entities live in CRM (`CRM/organisations/`); the landscape pages map their relationships.
 
