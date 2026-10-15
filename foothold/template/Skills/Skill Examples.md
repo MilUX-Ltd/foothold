@@ -13,8 +13,6 @@ This page is a catalogue of skills the Foothold authors and users have built and
 
 ## Operator system skills
 
-- **/prompt-master** — Generates a production-ready prompt for a specific AI tool (Claude, Cursor, GPT-5, reasoning models, computer-use agents, research orchestrators). Routes per-tool, applies the right structural conventions, removes fabrication-prone patterns. Ships with Foothold.
-- **/process-interviewer** — Relentless one-question-at-a-time interviewer that extracts a complete, unambiguous plan before any work starts. Useful for scoping initiatives, designing new skills, stress-testing your own thinking. Ships with Foothold.
 - **/update-claude-context** — Refreshes the working-memory context that Claude sees about your vault. Useful when your strategy or brand has moved on and you want the agent to catch up without you re-explaining.
 - **/triage-downloads** — Walks your Downloads folder, classifies each file, suggests filing into the right place in your reference library or vault.
 
@@ -66,6 +64,6 @@ This is inspiration, not instruction. Each skill above solves a specific recurri
 1. Notice the third time you're doing the same thing.
 2. Write the skill before the fourth time.
 3. Keep it focused. One job per skill. Skills with too many jobs are hard for the agent to match against your trigger phrases.
-4. Use `/process-interviewer` to scope a new skill before writing it. The interview surfaces gaps you wouldn't see otherwise.
+4. Use `/process-map` to write the process down before you write the skill. The gaps you would not otherwise see show up on the page.
 
 See `Skills/Skills Guide.md` for the canonical skill-authoring shape (SKILL.md frontmatter, structure, conventions).

@@ -117,7 +117,7 @@ Foothold is built for a single operator working with Cowork, and that is how it 
 
 Around sixty skills ship with the pack, in seven categories. The high points:
 
-- **meta-skills.** The pack's own lifecycle and hygiene: `foothold-setup`, `foothold-update`, `daily-brief` (writes your morning brief), `curator` (a budgeted monthly hygiene sweep), `skill-safety-audit` (run on any skill from outside before it runs, no exceptions), `skill-value-review`, `prompt-master`, `process-interviewer`.
+- **meta-skills.** The pack's own lifecycle and hygiene: `foothold-setup`, `foothold-update`, `daily-brief` (writes your morning brief), `curator` (a budgeted monthly hygiene sweep), `skill-safety-audit` (run on any skill from outside before it runs, no exceptions), `skill-value-review`.
 - **crm-skills.** The high-frequency adds and their payoff: `add-contact`, `add-organisation` (carries the MOD-rebrand pattern), `add-event` (with a Chatham House Rule check at intake), `meeting-prep`, `mobilise-engagement`, and `import-relationships` for bringing your existing CRM across, connector-first, with triage.
 - **business-skills.** The defence-commercial spine: `eligibility-check` (a pre-bid go/no-go gate), `bid-response` (drafting against published evaluation criteria), `write-sow`, `cyber-essentials-ready`, `build-dpia`, `red-team-investor`, `late-payment-reminder`.
 - **pm-skills.** Twenty-six business-method reference skills: positioning, market sizing, pricing, personas, pre-mortems, and the rest of the standard toolkit.
