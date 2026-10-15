@@ -9,13 +9,14 @@ description: |
   "curator", "run the curator", "sweep the vault", "vault hygiene",
   "tidy the vault", "check the vault for broken links", "curation sweep",
   or when a scheduled task invokes it.
-version: 1.0.0
-last_reviewed: 2026-07-02
+version: 1.0.1
+last_reviewed: 2026-10-15
 maintainer: MilUX
 license: Foothold pack, MIT
-audited: 2026-07-02
+audited: 2026-10-15
 audit_verdict: pass
 audited_with: skill-safety-audit v3
+previous_audit: 2026-07-02
 origin: built
 ---
 
@@ -68,3 +69,4 @@ When run interactively, show the report before saving and offer to walk through 
 - No renames, even obviously wrong ones; recommend only.
 - No touching `.foothold/`, `.obsidian/`, or any file the daily-brief or other agent-owned sections claim, beyond reading.
 - No judgement calls executed, however confident. The confidence is the warning sign.
+- No sweeping of `Inbox/` or `Templates/`: notes in the Inbox are unfiled by design and template frontmatter is deliberately unfinished, so nothing in either folder is fixed or reported.

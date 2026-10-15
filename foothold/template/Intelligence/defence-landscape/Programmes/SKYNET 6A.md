@@ -7,7 +7,7 @@ service: Joint
 status: active
 category: satcomms
 created: 2026-05-22
-last_reviewed: 2026-05-22
+last_reviewed: 2026-10-15
 tags: [programme, joint, satcomms, space, skynet, skynet-6a, airbus]
 ---
 
@@ -15,7 +15,7 @@ tags: [programme, joint, satcomms, space, skynet, skynet-6a, airbus]
 
 ## Summary
 
-SKYNET 6A is the next-generation, fully-hardened UK military satellite communications satellite, contracted in July 2020 to **Airbus Defence and Space UK**. It is the first satellite in the wider SKYNET 6 generation and is intended to enhance and replace the SKYNET 5 constellation. Once on orbit, SKYNET 6A will offer **3.5 times the capacity of the current Skynet 5 constellation**, with broader frequency coverage and more versatility, providing global military satellite communications to UK Armed Forces and allies.
+SKYNET 6A is the next-generation, fully-hardened UK military satellite communications satellite, contracted in July 2020 to **Airbus Defence and Space UK**. It was planned as the first satellite in the wider SKYNET 6 generation, to enhance and replace the SKYNET 5 constellation. The [[Intelligence/defence-landscape/Defence Investment Plan 2026|Defence Investment Plan 2026]] confirms SKYNET 6A still launches in 2027, but the SKYNET 6 Narrowband Satellite System is not proceeding and SKYNET 5's life is being extended instead (see [[Intelligence/defence-landscape/Programmes/SKYNET|SKYNET]]). Once on orbit, SKYNET 6A will offer **3.5 times the capacity of the current Skynet 5 constellation**, with broader frequency coverage and more versatility, providing global military satellite communications to UK Armed Forces and allies.
 
 ## Manufacturing and launch
 
@@ -27,6 +27,7 @@ SKYNET 6A is the next-generation, fully-hardened UK military satellite communica
 
 ## Sources
 
+- [GOV.UK: The Defence Investment Plan (30 June 2026)](https://www.gov.uk/government/publications/the-defence-investment-plan), paragraphs 81 and 83.
 - [GOV.UK: SKYNET 6](https://www.gov.uk/guidance/skynet-6)
 - [GOV.UK: Military Satellite SKYNET 6A passes initial phase of testing](https://www.gov.uk/government/news/military-satellite-skynet-6a-passes-initial-phase-of-testing)
 - [Airbus: Next-generation Skynet satellite reaches major milestone (May 2025)](https://www.airbus.com/en/newsroom/press-releases/2025-05-airbus-next-generation-skynet-satellite-reaches-major-milestone)

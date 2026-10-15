@@ -5,7 +5,7 @@ acronym: EDF
 status: active
 category: eu-fund
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [eu, defence-funding, collaboration]
 ---
 

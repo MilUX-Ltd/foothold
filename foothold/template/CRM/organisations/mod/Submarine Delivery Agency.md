@@ -8,7 +8,7 @@ category: mod-executive-agency
 established: 2018-04
 location: Abbey Wood (Bristol; shared with DE&S), plus embedded teams at BAE Systems Barrow-in-Furness
 website: https://www.gov.uk/government/organisations/submarine-delivery-agency
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - naval

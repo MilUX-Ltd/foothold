@@ -4,7 +4,7 @@ name: NATO Support and Procurement Agency
 acronym: NSPA
 status: active
 category: nato-agency
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - nato
   - procurement
@@ -16,7 +16,7 @@ tags:
 
 NATO's executive body for multinational logistics, life-cycle management, and procurement of common Allied capabilities. Headquartered in Luxembourg.
 
-NSPA delivers integrated multinational solutions for its 31 NATO nations and partners, ranging from large-scale procurement programmes (notably for fuel, ammunition, and complex equipment) through to in-service support and disposal across the alliance. It is the principal route through which NATO purchases on behalf of member nations under the **NATO Common Funded Capabilities** model.
+NSPA is the executive body of the NATO Support and Procurement Organisation (NSPO), to which all NATO nations belong. It delivers integrated multinational solutions for those nations and partners, ranging from large-scale procurement programmes (notably for fuel, ammunition, and complex equipment) through to in-service support and disposal across the alliance. It is the principal route through which NATO purchases on behalf of member nations under the **NATO Common Funded Capabilities** model.
 
 For UK defence-tech SMEs, NSPA is the multinational procurement route into NATO-funded capability. Routes in typically run via the NATO Industrial Advisory Group (NIAG) and via supplier registration on the [NSPA portal](https://www.nspa.nato.int/).
 

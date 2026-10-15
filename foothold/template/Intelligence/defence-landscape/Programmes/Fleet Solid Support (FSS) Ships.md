@@ -6,7 +6,7 @@ service: Navy
 status: active
 category: support-ship
 created: 2026-05-22
-last_reviewed: 2026-05-22
+last_reviewed: 2026-10-15
 tags: [programme, navy, rfa, fss, team-resolute]
 ---
 
@@ -27,8 +27,13 @@ DE&S awarded a £1.6 billion contract in January 2023 to **Team Resolute**, comp
 
 The programme is expected to generate 1,200 jobs in UK shipyards and a further 800 across the UK supply chain.
 
+## Funding (Defence Investment Plan 2026)
+
+The [[Intelligence/defence-landscape/Defence Investment Plan 2026|Defence Investment Plan 2026]] allocates **£1.5bn** to the Future Fleet Solid Support ships over FY26/27 to FY29/30, and lists Fleet Solid Support among the shipbuilding it will keep delivering.
+
 ## Sources
 
+- [GOV.UK: The Defence Investment Plan (30 June 2026)](https://www.gov.uk/government/publications/the-defence-investment-plan), Table 5.
 - [DE&S: Fleet Solid Support (overview)](https://des.mod.uk/what-we-do/navy-procurement-support/fleet-solid-support/)
 - [DE&S: Team Resolute Fleet Solid Support contract signed](https://des.mod.uk/fleet-solid-support-contract-signed/)
 - [Navantia UK: FSS Programme](https://navantia.co.uk/fss-programme/)

@@ -6,7 +6,7 @@ status: active
 category: mod-component
 likely_location: RAF Wyton
 caveat: limited public documentation; no dedicated gov.uk page at time of capture
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - intelligence
@@ -26,7 +26,7 @@ The Centre is the named home for intelligence-domain innovation inside CSOC: the
 
 ### Demonstrated activity
 
-The Centre has partnered with industry through DASA to mature intelligence-relevant innovation. A documented example: in DASA's first competition, Montvieux (an independent research-technology company) was awarded funding to develop a "predictive cognitive control system". In **Phase 2**, the system has been tested on the operational network at **RAF Wyton** and demonstrated to Defence Intelligence analysts on a daily basis.
+The Centre has partnered with industry through DASA (now part of UKDI) to mature intelligence-relevant innovation. A documented example: in DASA's first competition, Montvieux (an independent research-technology company) was awarded funding to develop a "predictive cognitive control system". In **Phase 2**, the system has been tested on the operational network at **RAF Wyton** and demonstrated to Defence Intelligence analysts on a daily basis.
 
 Wider context: the **UK Defence Innovation and Cyber & Specialist Operations Command** Hansard debate ([Commons, 1 July 2025](https://hansard.parliament.uk/commons/2025-07-01/debates/25070145000013/UKDefenceInnovationAndCyberAndSpecialistOperationsCommand)) frames the structural connection between the post-SDR CSOC rename and the consolidation of innovation routes that the Centre for Intelligence Innovation sits inside.
 
@@ -47,7 +47,7 @@ Wider context: the **UK Defence Innovation and Cyber & Specialist Operations Com
 
 ### Wider context
 
-- [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|National Armaments Innovation (NA-Innov)]]: home of DASA, the competition route into the Centre.
+- [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|National Armaments Innovation (NA-Innov)]]: home of UKDI (formerly DASA), the competition route into the Centre.
 - [[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]]: parent.
 
 ### External

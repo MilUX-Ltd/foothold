@@ -11,7 +11,7 @@ current_classification: Expert Committee
 composition: chairman, vice chairman, 8 independent council members
 remit: independent advice on non-nuclear science, technology, engineering, analysis, and mathematics to ministers and senior MOD officials
 website: https://www.gov.uk/government/organisations/defence-scientific-advisory-council
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - advisory-body

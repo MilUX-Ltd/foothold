@@ -4,12 +4,11 @@ name: Policy Exchange
 status: active
 category: think-tank
 founded: 2002
-director: Dean Godson (since 2013)
 political_lean: right-of-centre
 hq: London
 website: https://policyexchange.org.uk/
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [think-tank, uk, policy-exchange, defence-policy]
 ---
 
@@ -21,8 +20,7 @@ tags: [think-tank, uk, policy-exchange, defence-policy]
 - **LinkedIn:** [Policy Exchange](https://uk.linkedin.com/company/policy-exchange).
 - **Sector:** UK policy think tank; educational charity.
 - **HQ:** London.
-- **Founded:** 2002, by Conservative MPs Francis Maude and Archie Norman, with Nick Boles.
-- **Director:** Dean Godson (since 2013).
+- **Founded:** 2002.
 - **Political lean:** Right-of-centre.
 
 ## What Policy Exchange does

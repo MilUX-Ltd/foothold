@@ -5,12 +5,10 @@ acronym: RUSI
 status: active
 category: think-tank
 founded: 1831
-director_general: Rachel Ellehuus (from January 2025)
-chair: the ninth Duke of Wellington
 hq: Whitehall, London
 website: https://www.rusi.org/
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [think-tank, defence-policy, uk, rusi, whitehall]
 ---
 
@@ -22,10 +20,8 @@ tags: [think-tank, defence-policy, uk, rusi, whitehall]
 - **LinkedIn:** [Royal United Services Institute](https://uk.linkedin.com/company/royal-united-services-institute).
 - **Sector:** Defence and security think tank.
 - **HQ:** Whitehall, London. Headquarters location at the heart of Whitehall is a defining feature.
-- **Founded:** 1831, at the initiative of the first Duke of Wellington.
+- **Founded:** 1831.
 - **Status:** The world's oldest defence and security think tank.
-- **Chair:** The ninth Duke of Wellington.
-- **Director-General:** Rachel Ellehuus (from January 2025).
 
 ## What RUSI does
 

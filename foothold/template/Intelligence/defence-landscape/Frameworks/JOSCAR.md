@@ -7,7 +7,7 @@ category: accreditation
 operator: Hellios Information Limited
 customer: UK Defence, Security, Aerospace and Space buyer community
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [framework, accreditation, joscar, hellios, defence, aerospace, security]
 ---
 
@@ -26,7 +26,7 @@ Two-stage registration:
 1. **Stage 1.** General supplier information collected, validated, and monitored by Hellios on the buyer community's behalf.
 2. **Stage 2.** Deeper questions on compliance, governance, and risk management; required by certain buyers for higher-tier supplier categories.
 
-JOSCAR appears as a near-universal pre-qualification line item in defence framework PQQs. The JOSCAR Governance Group worked with MOD on the Helios SME Portal in response to the MOD's SME Action Plan.
+JOSCAR appears as a near-universal pre-qualification line item in defence framework PQQs. The JOSCAR Governance Group worked with MOD on the Helios SME Portal in response to the MOD's earlier SME Action Plan. The current [MOD SME Action Plan (21 July 2026)](https://www.gov.uk/government/publications/mod-small-and-medium-sized-enterprise-sme-action-plan) commits to reducing repeated inputs across platforms and portals and to considering consolidation or cross-platform sign-on.
 
 ## Source material
 

@@ -7,7 +7,7 @@ venue: UK (varies year to year; check current edition)
 status: active
 operator: Ruddy Nice
 website: https://dset.co.uk
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - events
   - dset
@@ -21,7 +21,7 @@ tags:
 
 DSET is the UK's leading annual conference for military simulation, education and training. Organised and delivered by **Ruddy Nice**, the event sits at the centre of the UK Modelling, Simulation and Training (MS&T) community and is the principal meeting point for military training users, simulation and training suppliers, academia, and policy figures across the synthetic-training stack.
 
-The 2026 edition is scheduled for **23 to 25 June 2026**. DSET runs in a hybrid format with a physical conference and exhibition plus a virtual hub providing year-round access to recordings, downloads, and DSET virtual events for attendees, who become DSET members on registration.
+The 2026 edition was **held on 23 to 25 June 2026**. The organiser is taking exhibitor bookings for 2027, but had not published 2027 dates or a venue by October 2026. DSET runs in a hybrid format with a physical conference and exhibition plus a virtual hub providing year-round access to recordings, downloads, and DSET virtual events for attendees, who become DSET members on registration.
 
 Website: [dset.co.uk](https://dset.co.uk).
 

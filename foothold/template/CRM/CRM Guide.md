@@ -37,7 +37,7 @@ People you interact with. Three subfolders:
 
 - **`active contacts/`** — people you have current or recent contact with. The page captures what you know about them: role, organisation, how you met, what they care about, conversations to date, things outstanding.
 - **`reference contacts/`** — people you may not know personally but who matter to your domain: industry figures, named subject-matter experts, public officials whose moves affect your space. No relationship intelligence; these are pointer pages.
-- **`archive/`** — people you no longer interact with. Pages preserved for search but flagged inactive.
+- **`archive/`** — people you no longer interact with. Pages preserved for search, with `status: archived`.
 
 ### organisations/
 
@@ -60,60 +60,11 @@ Networks of people you belong to or engage with. Three flavours, each documented
 
 Each network has its own subfolder with an index page listing the network's purpose, members or member-clubs where public, the coordinator if there is one, and any standing engagements.
 
-## Frontmatter
-
-### contacts
-
-```yaml
----
-type: contact
-status: active | reference | inactive | archived
-created: YYYY-MM-DD
-organisation: "[[CRM/organisations/<category>/<org>|<org>]]"
-role: "<their current role>"
-linkedin: https://...
-email: ...
-phone: ...
-lawful_basis: legitimate-interests | consent | contract | legal-obligation
-tags: [...]   # include the matching lb-* tag, e.g. lb-legitimate-interests
----
-```
-
-`lawful_basis:` records the UK GDPR Article 6 basis on which you process the contact's personal data. Every contact has exactly one; mirror it with an `lb-*` tag. See `Knowledge/tagging-policy.md` for the four bases and when each applies.
-
-### organisations
-
-```yaml
----
-type: organisation
-status: active | target | alumni | dormant
-created: YYYY-MM-DD
-website: https://...
-sector: defence | non-defence | mod | academic
-parent: "[[CRM/organisations/.../<parent>|<parent>]]"   # for child orgs
-former_name: "<old name>"                                # for rebrands
-tags: [...]
----
-```
-
-### networks
-
-```yaml
----
-type: network
-flavour: formal | peer | identity
-status: active | dormant
-created: YYYY-MM-DD
-coordinator: "[[CRM/contacts/active contacts/<name>|<name>]]"
-platform: "<where the network meets>"
----
-```
-
-## Add discipline
+## Writing a CRM page
 
 ### Contacts
 
-The `add-contact` skill is the primary way to add a contact. It pulls public information, drafts the page, and asks you to confirm before writing. Long-tail additions follow the same shape manually.
+The `add-contact` skill is the primary way to add a contact. It pulls public information, drafts the page, and asks you to confirm before writing. Long-tail additions follow the same shape manually: insert the [[Templates/Contact|Contact template]].
 
 **Active vs reference.** If you have a working relationship or a recent conversation, the contact is active. If you just need a pointer page for someone you don't directly engage with, it's reference. Don't fudge the line: active pages carry relationship intelligence that reference pages should not.
 
@@ -121,7 +72,7 @@ The `add-contact` skill is the primary way to add a contact. It pulls public inf
 
 ### Organisations
 
-The `add-organisation` skill handles standard adds. Three patterns earn special attention:
+The `add-organisation` skill handles standard adds; by hand, insert the [[Templates/Organisation|Organisation template]]. Three patterns earn special attention:
 
 **MOD-body rebrands.** When a public body is renamed or restructured, the right pattern is one page per current identity, not parallel pages for old and new. Each renamed page carries:
 
@@ -148,8 +99,81 @@ Children carry `parent:` in frontmatter pointing at the parent page. This absorb
 
 Add networks deliberately. A network page exists when there's a coordinator, a list of members, a platform where the network communicates, and a reason to track engagement across all of those at once. A loose Slack channel of acquaintances is not yet a network; promote it to one when patterns become persistent.
 
+## Lifecycle
+
+Each kind of CRM page has a small set of lower-case `status:` values:
+
+- **Contacts:** `active`, `reference`, `archived`. The status follows the subfolder. See the [[CRM/contacts/Contacts Guide|Contacts Guide]].
+- **Organisations:** `active`, `target`, `alumni`, `dormant`. See the [[CRM/organisations/Organisations Guide|Organisations Guide]].
+- **Networks:** `active`, `dormant`. See the [[CRM/networks/Networks Guide|Networks Guide]].
+
+Move a page, or change its status, when the relationship changes. Don't delete; the history is the value.
+
+## Frontmatter
+
+### contacts
+
+```yaml
+---
+type: contact
+name: <full name>
+status: active | reference | archived
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+last-contact: YYYY-MM-DD
+organisation: "[[CRM/organisations/<category>/<org>|<org>]]"
+role: "<their current role>"
+linkedin: https://...
+email: ...
+phone: ...
+lawful_basis: legitimate-interests | consent | contract | legal-obligation
+tags: [...]   # include the matching lb-* tag, e.g. lb-legitimate-interests
+---
+```
+
+`lawful_basis:` records the UK GDPR Article 6 basis on which you process the contact's personal data. Every contact has exactly one; mirror it with an `lb-*` tag. See `Knowledge/tagging-policy.md` for the four bases and when each applies.
+
+### organisations
+
+```yaml
+---
+type: organisation
+name: <canonical name>
+status: active | target | alumni | dormant
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+website: https://...
+sector: defence | non-defence | mod | academic
+parent: "[[CRM/organisations/.../<parent>|<parent>]]"   # for child orgs
+former_name: "<old name>"                                # for rebrands
+tags: [...]
+---
+```
+
+### networks
+
+```yaml
+---
+type: network
+flavour: formal | peer | identity
+status: active | dormant
+created: YYYY-MM-DD
+coordinator: "[[CRM/contacts/active contacts/<name>|<name>]]"
+platform: "<where the network meets>"
+---
+```
+
 ## Canonical example
 
-See `CRM/organisations/<your sector>/<canonical example>.md` for the canonical organisation page shape: frontmatter, executive summary, products or services, key contacts table (using escaped pipes in wikilinks per `Knowledge/rules.md`), recent engagement, outstanding items, public links.
+Start from the [[Templates/Contact|Contact template]] for a contact and the [[Templates/Organisation|Organisation template]] for an organisation. The templates match the frontmatter above.
 
-For contacts, see `CRM/contacts/active contacts/<canonical example>.md`: one-paragraph biography, role and organisation, how you met, conversation history, outstanding items, public links.
+For a finished organisation page, see `CRM/organisations/<your sector>/<canonical example>.md`: frontmatter, executive summary, products or services, key contacts table (using escaped pipes in wikilinks per `Knowledge/rules.md`), recent engagement, outstanding items, public links.
+
+For a finished contact, see [[CRM/contacts/active contacts/Matt Odell|Matt Odell]]: one-paragraph biography, role and organisation, how you met, conversation history, outstanding items, public links.
+
+## Related
+
+- [[CRM/contacts/Contacts Guide|Contacts Guide]]: contacts
+- [[CRM/organisations/Organisations Guide|Organisations Guide]]: organisations
+- [[CRM/networks/Networks Guide|Networks Guide]]: networks
+- [[Templates/Templates Guide|Templates Guide]]: the note templates

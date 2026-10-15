@@ -8,7 +8,7 @@ status: active
 category: mod-component
 website: https://www.gov.uk/government/news/the-launch-of-the-integration-design-authority
 contact: UKStratCom-Integration@mod.gov.uk
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - integration
@@ -32,7 +32,7 @@ IDA was launched at **DSEI 2023** and became operational on **1 July 2024**. Its
 
 IDA exists to enable integration for Defence, across government, with allies, and international partners. Three named functions:
 
-- **Lead Strategic Command's industry engagement**: helping develop cutting-edge integrated capabilities for Defence.
+- **Lead CSOC's (formerly Strategic Command's) industry engagement**: helping develop cutting-edge integrated capabilities for Defence.
 - **Provide "Integration as a Service"**: developing a high-level view in support of the Defence Force Development Board's role as the Defence Force Design Authority, advising and assuring project-level requirements to deliver integrated effects.
 - **Drive Multi-Domain Integration (MDI)** across the Services and beyond.
 
@@ -53,7 +53,7 @@ The IDA launch on 1 July 2024 was paired with the evolution of DCDC into Defence
 
 For enquiries about the IDA: **UKStratCom-Integration@mod.gov.uk**.
 
-techUK ran an [UK Strategic Command Multi Domain Integration (MDI) Integrated Design Authority Briefing](https://www.techuk.org/what-we-deliver/events/uk-strategic-command-multi-domain-integration-mdi-integrated-design-authority-briefing.html) for industry, which is the named industry-facing engagement format.
+techUK ran a UK Strategic Command Multi Domain Integration (MDI) Integrated Design Authority Briefing (event page no longer online) for industry, which is the named industry-facing engagement format.
 
 ## Related
 
@@ -72,6 +72,5 @@ techUK ran an [UK Strategic Command Multi Domain Integration (MDI) Integrated De
 - GOV.UK: [The launch of the Integration Design Authority](https://www.gov.uk/government/news/the-launch-of-the-integration-design-authority).
 - GOV.UK: [Driving Integration (Multi-Domain Integration guidance)](https://www.gov.uk/guidance/multi-domain-integration).
 - GOV.UK: [Defence Procurement Minister oral statement on the Integrated Procurement Model (28 February 2024)](https://www.gov.uk/government/speeches/defence-procurement-minister-oral-statement-on-the-integrated-procurement-model-28-february-2024).
-- techUK: [UK Strategic Command MDI Integrated Design Authority Briefing](https://www.techuk.org/what-we-deliver/events/uk-strategic-command-multi-domain-integration-mdi-integrated-design-authority-briefing.html).
 - StratCom blog: [Strategic Command Conference 2024](https://stratcommand.blog.gov.uk/strategic-command-conference/).
 - techUK: [MOD refreshed Defence Command Paper 2023](https://www.techuk.org/resource/mod-refreshed-defence-command-paper-2023.html).

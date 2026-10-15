@@ -6,7 +6,7 @@ category: centre-of-excellence
 delivery_partner: QinetiQ (under the Long Term Partnering Agreement, LTPA)
 website: https://www.t3e.uk/en/services/test-and-evaluation-innovation-gateway
 sme_contact: SMETandE@QinetiQ.com
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - centre-of-excellence

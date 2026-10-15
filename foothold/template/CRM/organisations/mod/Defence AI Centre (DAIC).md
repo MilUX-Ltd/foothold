@@ -8,7 +8,7 @@ customer_of: UK MoD
 parent: "[[CRM/organisations/mod/Cyber and Specialist Operations Command|Cyber and Specialist Operations Command]] (under CSOC Innovation)"
 website: https://www.gov.uk/government/groups/defence-artificial-intelligence-centre
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - ai

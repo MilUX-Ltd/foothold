@@ -3,7 +3,7 @@ type: organisation
 name: Home Office
 category: hmg-department
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - hmg
   - security

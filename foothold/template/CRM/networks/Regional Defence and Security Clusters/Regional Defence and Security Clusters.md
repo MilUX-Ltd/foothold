@@ -11,7 +11,7 @@ tags: [defence, cluster, RDSC, network]
 
 The Regional Defence and Security Clusters (RDSCs) are industry-led networks across the UK that bring together defence and security companies, SMEs, academia, research institutions, and government to enable innovation, collaboration, and economic growth in the defence and security sectors.
 
-Each cluster is supported by the Ministry of Defence through the Defence and Security Accelerator (DASA) and UK Defence Innovation (UKDI), and applies a "Team UK" approach to enable joined-up working between industry, academia, and government.
+Each cluster is supported by the Ministry of Defence through UK Defence Innovation (UKDI, which absorbed DASA in 2026), and applies a "Team UK" approach to enable joined-up working between industry, academia, and government.
 
 For a defence-sector founder, the cluster in your region is often the most useful single entry point. Membership is typically open and free, events are regular, and the people in the room are the ones building, buying, and shaping the sector locally.
 
@@ -56,7 +56,7 @@ For a defence-sector founder, the cluster in your region is often the most usefu
 
 All RDSCs share a common model:
 
-- **Led by industry,** with support from DASA, UKDI and the MoD.
+- **Led by industry,** with support from UKDI and the MoD.
 - **Open membership** for businesses, academia, and research institutions.
 - **Regular events** for networking, knowledge sharing, and collaboration.
 - **Focus areas** include innovation, skills, funding access, and routes to market.

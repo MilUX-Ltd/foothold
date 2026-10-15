@@ -11,7 +11,7 @@ locations: The Quorum, Cambridge CB5 8RE; Home Office, London SW1W 9EX
 website: https://www.jsarc.org.uk/
 gov_uk: https://www.gov.uk/government/groups/joint-security-and-resilience-centre-jsarc
 contact: Jsarc@homeoffice.gov.uk
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - government
   - home-office
@@ -27,7 +27,7 @@ tags:
 
 The Home Office's industry-engagement hub for security and resilience technology. Founded 2016. Sits within the Homeland Security Group and is **jointly funded by the UK security industry and the Home Office** to act as the interface between the security sector (industry and academia) and the complex security machinery of government.
 
-JSaRC website: [jsarc.org.uk](https://www.jsarc.org.uk/); [About JSaRC](https://www.jsarc.org.uk/about); [Contact JSaRC](https://www.jsarc.org.uk/contact). GOV.UK: [JSaRC group page](https://www.gov.uk/government/groups/joint-security-and-resilience-centre-jsarc).
+JSaRC website: [jsarc.org.uk](https://www.jsarc.org.uk/); [Contact JSaRC](https://www.jsarc.org.uk/contact). GOV.UK: [JSaRC group page](https://www.gov.uk/government/groups/joint-security-and-resilience-centre-jsarc).
 
 ## Role in the landscape
 

@@ -9,7 +9,7 @@ status: active
 reports_to: Home Secretary and Minister of State for Security
 annual_budget: c.£1.5bn (2022-23)
 website: https://www.gov.uk/government/organisations/home-office
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - government
   - home-office

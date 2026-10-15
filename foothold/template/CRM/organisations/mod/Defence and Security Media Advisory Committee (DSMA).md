@@ -10,7 +10,7 @@ composition: independent committee of senior civil servants and editors from nat
 notice_authority: voluntary; no legal authority; final responsibility for publication rests with the editor or publisher
 website: https://www.gov.uk/government/organisations/defence-and-security-media-advisory-committee
 external_committee_site: https://www.dsma.uk/
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - dsma

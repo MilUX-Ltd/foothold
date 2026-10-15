@@ -29,7 +29,7 @@ tags:
 
 Twin Track Ventures is a UK early-stage defence and resilience venture capital fund founded by Nicola Sinclair. The fund is reported at €12m in raise/target status, focused on early-stage UK and European founders building defence, security and dual-use technology.
 
-Twin Track operates a partner-led model and is part of the recent wave of specialist UK defence-focused emerging managers spinning up post-2022. It co-invests alongside MD One, NATO Innovation Fund, and DASA-backed companies on UK defence-tech rounds.
+Twin Track operates a partner-led model and is part of the recent wave of specialist UK defence-focused emerging managers spinning up post-2022. It co-invests alongside MD One, NATO Innovation Fund, and companies backed by DASA (now UK Defence Innovation) on UK defence-tech rounds.
 
 ## Key People
 
