@@ -30,7 +30,7 @@ tags:
 
 MMC Ventures is one of the UK's longest-established London-headquartered VCs, focused on AI-enabled software companies. Stages typically run Series A and B, with growth-stage extensions. Sectors include fintech, data and infrastructure, enterprise SaaS, marketplaces and increasingly AI-applied verticals.
 
-MMC is not a pure defence investor, but holds positions across AI infrastructure and dual-use-adjacent capability that brings it into defence-tech conversations. The firm publishes an annual State of AI in the UK report that is frequently cited in DSIT and Cabinet Office discussions.
+MMC is not a pure defence investor, but holds positions across AI infrastructure and dual-use-adjacent capability that brings it into defence-tech conversations. The firm publishes an annual State of AI in the UK report that is frequently cited in UK government AI policy discussions.
 
 ## Key People
 
