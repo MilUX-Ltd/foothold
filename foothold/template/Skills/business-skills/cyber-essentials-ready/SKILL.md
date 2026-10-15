@@ -23,7 +23,7 @@ license: Foothold pack, MIT
 audited: 2026-09-08
 audit_verdict: pass
 audited_with: skill-safety-audit v3
-audit_report: MilUX vault, Skills/Skill Safety Audit - cyber-essentials-ready 1.1.0 2026-09-08.md
+audit_report: held by the maintainer
 previous_audit: 2026-06-08
 origin: built
 ---

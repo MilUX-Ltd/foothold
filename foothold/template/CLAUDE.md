@@ -147,7 +147,7 @@ Every page in the vault carries YAML frontmatter, and every page follows one con
 
 ## Inbox, attachments and templates
 
-New notes land in `Inbox/` until they are filed. Files pasted into a note are saved in `Attachments/`; keep large or sensitive files out of the vault and link them. The note templates for each kind of page are in `Templates/`. Title and date fields are left blank in the templates, to be filled in when the note is created. See the Guide in each folder.
+New notes go in `Inbox/` until they are filed, and files pasted into a note in `Attachments/` (the Templates Guide shows the one-minute Obsidian set-up that makes this automatic); keep large or sensitive files out of the vault and link them. The note templates for each kind of page are in `Templates/`. Title and date fields are left blank in the templates, to be filled in when the note is created. See the Guide in each folder.
 
 ## Naming conventions
 

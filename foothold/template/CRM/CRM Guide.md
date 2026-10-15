@@ -37,7 +37,7 @@ People you interact with. Three subfolders:
 
 - **`active contacts/`** — people you have current or recent contact with. The page captures what you know about them: role, organisation, how you met, what they care about, conversations to date, things outstanding.
 - **`reference contacts/`** — people you may not know personally but who matter to your domain: industry figures, named subject-matter experts, public officials whose moves affect your space. No relationship intelligence; these are pointer pages.
-- **`archive/`** — people you no longer interact with. Pages preserved for search but flagged inactive.
+- **`archive/`** — people you no longer interact with. Pages preserved for search, with `status: archived`.
 
 ### organisations/
 

@@ -43,13 +43,23 @@ Templates/
 
 ## Writing a note from a template
 
+**Set Obsidian up once (about a minute).** In Obsidian, open Settings:
+- **Core plugins:** turn on Templates and Daily notes.
+- **Templates:** set "Template folder location" to `Templates`.
+- **Daily notes:** set "New file location" to `Daily`, "Template file location" to `Templates/Daily Note`, and "Date format" to `YYYY-MM-DD`.
+- **Files and links:** set "Default location for new notes" to `Inbox` and "Default location for new attachments" to `Attachments`.
+
+The pack does not change your Obsidian settings for you, so your own theme and plugins are never overwritten by an update.
+
 1. Create the note where it belongs, using the table above, and name it as the Guide says. If you just want to capture something quickly, let it land in `Inbox/` and file it later.
 2. Open the command palette and run **Templates: Insert template**, then pick the template.
 3. Fill in the title, today's date in `created` and `updated` (YYYY-MM-DD), and what else you know. Delete a section that has nothing to say yet; an empty heading is clutter.
 
-Daily notes are the exception: the Daily notes plugin is set to use the Daily Note template, so opening today's daily note creates it from the template.
+Daily notes are the exception: once the Daily notes plugin points at the Daily Note template, opening today's daily note creates it from the template. Its `date:` field and heading start blank, like every template; fill them in, or ask your assistant to.
 
 A few templates stand in for a family of notes. Change `type:` on the Marketing Output template to `case-study` or `news-article` when that is what you are writing. Set `customer-facing: false` on the Service template for an internal service. Put a meeting note in the `meetings/` folder of the engagement or initiative it belongs to, named `YYYY-MM-DD <title>.md`.
+
+This Guide sits in the same folder, so it appears in the Insert template list too; just skip it.
 
 **Dates and titles are blank on purpose.** The templates leave the title and date fields empty for you (or your assistant) to fill in when you create the note, so nothing is stamped with the wrong date.
 
