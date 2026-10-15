@@ -44,14 +44,14 @@ Templates/
 ## Writing a note from a template
 
 1. Create the note where it belongs, using the table above, and name it as the Guide says. If you just want to capture something quickly, let it land in `Inbox/` and file it later.
-2. Open the command palette and run **Templates: Insert template**, then pick the template. Obsidian fills in the title and today's date.
-3. Fill in what you know. Delete a section that has nothing to say yet; an empty heading is clutter.
+2. Open the command palette and run **Templates: Insert template**, then pick the template.
+3. Fill in the title, today's date in `created` and `updated` (YYYY-MM-DD), and what else you know. Delete a section that has nothing to say yet; an empty heading is clutter.
 
 Daily notes are the exception: the Daily notes plugin is set to use the Daily Note template, so opening today's daily note creates it from the template.
 
 A few templates stand in for a family of notes. Change `type:` on the Marketing Output template to `case-study` or `news-article` when that is what you are writing. Set `customer-facing: false` on the Service template for an internal service. Put a meeting note in the `meetings/` folder of the engagement or initiative it belongs to, named `YYYY-MM-DD <title>.md`.
 
-**Leave the tokens alone.** Open any template and you will see tokens in double curly braces for the note's title, today's date and the time. Obsidian fills these in at the moment you insert a template. They are not placeholders for you or an assistant to replace with values. If you edit a template, keep them as they are.
+**Dates and titles are blank on purpose.** The templates leave the title and date fields empty for you (or your assistant) to fill in when you create the note, so nothing is stamped with the wrong date.
 
 ## Lifecycle
 

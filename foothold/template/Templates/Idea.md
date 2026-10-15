@@ -1,10 +1,10 @@
 ---
 type: idea
 status: raw
-created: {{date:YYYY-MM-DD}}
+created:
 tags: []
 ---
 
-# {{title}}
+# Title
 
 Two or three sentences. What is the idea, and what triggered it?
