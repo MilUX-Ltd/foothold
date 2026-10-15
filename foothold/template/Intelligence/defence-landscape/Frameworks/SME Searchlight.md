@@ -4,7 +4,7 @@ name: SME Searchlight
 status: active
 category: mod-research
 customer: UK MoD; Dstl is the operating customer
-operator: Defence Science and Technology Laboratory (Dstl), now inside NA-Innov
+operator: Defence Science and Technology Laboratory (Dstl)
 launched: 2018-2019 (initial 12-month programme; ongoing follow-on)
 strategic_aim: attract non-traditional Defence suppliers and SMEs to deliver projected £40m to £45m increase in Dstl research spending with external companies
 target: 33% government external spend with SMEs (government's stated target)
@@ -12,7 +12,7 @@ event_target: 60% of attendees at SME Searchlight events to have never worked wi
 initial_focus_areas: radio frequency engineering; artificial intelligence; synthetic biology; wargaming
 partners: ADS, Federation of Small Businesses (FSB), Team Defence Information (TDI), techUK
 website: https://www.gov.uk/government/news/defence-science-and-technology-laboratory-launches-sme-searchlight-to-harness-innovation
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - framework
   - mod-research
@@ -41,7 +41,7 @@ GOV.UK launch: [Defence Science and Technology Laboratory launches SME Searchlig
 - **Onward routes.** Engaged SMEs are routed into Dstl's supply chain via three mechanisms:
   1. Direct supplier engagement with Dstl.
   2. Membership of Dstl framework contracts (including [[Intelligence/defence-landscape/Frameworks/R-Cloud|R-Cloud]], [[Intelligence/defence-landscape/Frameworks/ASTRID|ASTRID]], [[Intelligence/defence-landscape/Frameworks/PROGENY|PROGENY]]).
-  3. Through the Defence and Security Accelerator (DASA) competition route.
+  3. Through UK Defence Innovation (UKDI, formerly DASA) competitions. See [[Intelligence/defence-landscape/UKDI - How to Engage|UKDI: How to Engage]].
 
 ### Initial focus research areas
 
@@ -75,7 +75,8 @@ Both are worth registering for. They are complementary rather than substitutable
 - GOV.UK: [Defence Science and Technology Laboratory launches SME Searchlight to harness innovation](https://www.gov.uk/government/news/defence-science-and-technology-laboratory-launches-sme-searchlight-to-harness-innovation).
 - Open Access Government: [Dstl signals bright future for SME research in defence and security](https://www.openaccessgovernment.org/sme-research/99176/).
 - Defence Online: [SME Searchlight tag archive](https://www.defenceonline.co.uk/tag/sme-searchlight/).
-- MOD: [SME Action Plan 2019 to 2022 (PDF)](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/793101/20190405_SME_Action_Plan_2019.pdf), the wider policy context.
+- MOD: [SME Action Plan (21 July 2026)](https://www.gov.uk/government/publications/mod-small-and-medium-sized-enterprise-sme-action-plan), the current SME policy.
+- MOD: [SME Action Plan 2019 to 2022 (PDF)](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/793101/20190405_SME_Action_Plan_2019.pdf), the policy context when SME Searchlight began.
 - Digital MOD: [Find an opportunity](https://www.digital.mod.uk/sme-dosbg/find-an-opportunity).
 
 ## Related

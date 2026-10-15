@@ -5,14 +5,14 @@ full_name: Research Cloud
 status: active
 category: defence-research
 customer: UK MoD; Dstl is the operating customer
-operator: Defence Science and Technology Laboratory (Dstl), now inside NA-Innov
+operator: Defence Science and Technology Laboratory (Dstl)
 nature: Dynamic Purchasing System (DPS) / dynamic agreement; join at any time
 ip_ownership: retained by suppliers
 website: https://rcloud.dstl.gov.uk/
 about_page: https://rcloud.dstl.gov.uk/about
 v4_page: https://rcloud-v4.dstl.gov.uk/
 contracts_finder_renewal: https://www.contractsfinder.service.gov.uk/Notice/4f9c98a5-5485-430f-ac35-c78842bec83c
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - framework
   - defence-procurement
@@ -27,6 +27,8 @@ tags:
 # R-Cloud (Research Cloud)
 
 > **Naming note.** R-Cloud is sometimes mistaken for a Defence Digital cloud-hosting framework. It is in fact **Dstl's Research Cloud**, a Dynamic Purchasing System for science and technology research, not a hosting service.
+
+**Current position (MOD routes-to-market page, 18 September 2026):** open to new entrants; R&D across **22 categories**, from robotics to advanced materials; about **70% of suppliers are smaller businesses**, and retention of intellectual property is supported. No end date is given.
 
 ## Summary
 
@@ -63,6 +65,7 @@ Open to academic and industry suppliers of S&T research. Suppliers apply directl
 
 ## Source Material
 
+- [GOV.UK: Find contracts in technology and R&D with the MOD (updated 18 September 2026)](https://www.gov.uk/guidance/find-contracts-in-technology-and-research-and-development-with-the-ministry-of-defence)
 - R-Cloud: [About](https://rcloud.dstl.gov.uk/about); [v4](https://rcloud-v4.dstl.gov.uk/); [Security](https://rcloud-v4.dstl.gov.uk/security).
 - Contracts Finder: [R-Cloud Framework Renewal](https://www.contractsfinder.service.gov.uk/Notice/4f9c98a5-5485-430f-ac35-c78842bec83c).
 - GovWire: [Guidance: R-Cloud for suppliers](https://www.govwire.co.uk/news/defence-science-technology-laboratory/guidance-r-cloud-for-suppliers-61611).
@@ -77,4 +80,4 @@ Open to academic and industry suppliers of S&T research. Suppliers apply directl
 - [[Intelligence/defence-landscape/Frameworks/PROGENY|PROGENY]]: sibling Dstl maritime framework.
 - [[Intelligence/defence-landscape/Frameworks/Weapons Sector Research Framework|Weapons Sector Research Framework]]: sibling Dstl framework.
 - [[Intelligence/defence-landscape/Frameworks/Defence Technology Exploitation Programme (DTEP)|DTEP]]: Dstl-adjacent transition funding.
-- [[Intelligence/defence-landscape/Frameworks/G-Cloud|G-Cloud]]: distinct CCS cloud framework (public sector).
+- [[Intelligence/defence-landscape/Frameworks/G-Cloud|G-Cloud]]: distinct GCA (formerly Crown Commercial Service) cloud framework (public sector).
