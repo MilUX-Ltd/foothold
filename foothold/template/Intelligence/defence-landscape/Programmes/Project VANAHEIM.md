@@ -34,4 +34,5 @@ Rather than a conventional procurement competition, VANAHEIM runs experiments th
 
 - [[Intelligence/defence-landscape/Programmes/Programmes Index|Programmes Index]]
 - [[Intelligence/defence-landscape/Programmes/Project ANVIL|Project ANVIL]] — sister project in the same Dstl case study
-- [[Intelligence/defence-landscape/Programmes/Autonomous Collaborative Platforms (ACP)|Autonomous Collaborative Platforms (ACP)]] — uncrewed systems overlap
+- [[Intelligence/defence-landscape/Programmes/Counter-drone - PRESAGIUM and PANOPTES|Counter-drone (PRESAGIUM and PANOPTES)]]: the wider UK counter-drone lines
+- [[Intelligence/defence-landscape/Programmes/Project NYX|Project NYX]]: uncrewed systems overlap
