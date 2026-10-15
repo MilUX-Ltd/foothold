@@ -25,7 +25,7 @@ So take the time to explore what you are actually trying to achieve and how you 
 
 ## 3. Watch for patterns worth capturing
 
-Some automation is planned; most is noticed. The habit that finds it: when you catch yourself asking for the same shape of thing a second or third time, stop and ask whether it should be a skill or a schedule. Ask Claude directly: "we've done this three times now, should this be a skill?" The `/process-interviewer` skill exists for exactly this moment: it extracts the complete process from your head before anything gets built. And anything that arrives from outside goes through `/skill-safety-audit` first, no exceptions.
+Some automation is planned; most is noticed. The habit that finds it: when you catch yourself asking for the same shape of thing a second or third time, stop and ask whether it should be a skill or a schedule. Ask Claude directly: "we've done this three times now, should this be a skill?" The `/process-map` skill exists for exactly this moment: it gets the process out of your head and onto a page before anything gets built. And anything that arrives from outside goes through `/skill-safety-audit` first, no exceptions.
 
 The same watchfulness works in reverse: tell Claude to flag repetition to you. An assistant that says "this is the third Tuesday running you've asked for this, want it scheduled?" is doing its job.
 
