@@ -7,7 +7,7 @@ service: Navy (initial)
 status: active
 category: directed-energy
 created: 2026-05-22
-last_reviewed: 2026-05-22
+last_reviewed: 2026-10-15
 tags: [programme, laser, ldew, dragonfire, dstl]
 ---
 
@@ -27,8 +27,13 @@ The **UK DragonFire** consortium consists of Dstl (lead), MBDA UK, Leonardo UK, 
 - **2024**: Royal Navy fielding plan announced for 2027.
 - **12 April 2026**: Accelerated rollout plan announced. First installation planned on a Type 45 destroyer, with at least two Type 45s expected to receive the system in the initial phase.
 
+## Funding (Defence Investment Plan 2026)
+
+The [[Intelligence/defence-landscape/Defence Investment Plan 2026|Defence Investment Plan 2026]] invests **£490m** in Directed Energy Weapons over FY26/27 to FY29/30, including delivering DragonFire on Royal Navy Type 45 destroyers from 2027.
+
 ## Sources
 
+- [GOV.UK: The Defence Investment Plan (30 June 2026)](https://www.gov.uk/government/publications/the-defence-investment-plan), Integrated Air and Missile Defence investments.
 - [Wikipedia: DragonFire (weapon)](https://en.wikipedia.org/wiki/DragonFire_(weapon))
 - [Leonardo UK: DragonFire — Laser Directed Energy Weapon](https://uk.leonardo.com/en/innovation/dragonfire)
 - [Naval News: Royal Navy plans to field DragonFire laser weapon from 2027](https://www.navalnews.com/naval-news/2024/04/royal-navy-plans-to-field-dragonfire-laser-weapon-from-2027/)

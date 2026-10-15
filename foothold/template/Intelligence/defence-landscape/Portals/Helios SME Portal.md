@@ -9,7 +9,7 @@ cost_to_sme: free
 eligibility: UK SMEs only
 website: https://hellios.com/sme-portal
 sign_in: https://sme-portal.hellios.com/
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - portal
   - sme
@@ -25,7 +25,7 @@ tags:
 
 ## Summary
 
-A **free** SME-facing portal created by **Hellios Information Limited** in collaboration with the **JOSCAR Governance Group**, launched in response to the MOD's SME Action Plan. Allows UK SMEs to register their capabilities so that the MOD and Prime contractors (notably BAE Systems) can discover them as potential suppliers in the defence, aerospace, and security sectors.
+A **free** SME-facing portal created by **Hellios Information Limited** in collaboration with the **JOSCAR Governance Group**, launched in response to the MOD's earlier SME Action Plan. The current [MOD SME Action Plan (21 July 2026)](https://www.gov.uk/government/publications/mod-small-and-medium-sized-enterprise-sme-action-plan) promises a simple public guide to MOD entry points, portals and marketplaces and will consider consolidating portals, so check whether Helios remains a recommended route when that guide appears. Allows UK SMEs to register their capabilities so that the MOD and Prime contractors (notably BAE Systems) can discover them as potential suppliers in the defence, aerospace, and security sectors.
 
 External: [SME Portal](https://hellios.com/sme-portal); sign-in at [sme-portal.hellios.com](https://sme-portal.hellios.com/). Launch via [BAE Systems story: Hellios, the Ministry of Defence and BAE Systems launch a free SME portal](https://www.baesystems.com/en-uk/story/hellios-the-ministry-of-defence-and-bae-systems-launch-a-free-sme-portal); [aerospace variant: Hellios Launches New Portal for SMEs in Aerospace Sector](https://memuknews.com/inmotion/aerospace/hellios-launches-new-portal-for-smes-in-aerospace-sector/).
 

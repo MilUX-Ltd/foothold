@@ -7,7 +7,7 @@ customer: UK MoD; NA-D&D (formerly Defence Digital)
 nature: umbrella term for the commercial-routes portfolio inside Defence Digital, not a single framework
 notable_constituents: DDAD; R-Cloud; TacCIS; Defence Tech Scaler; Foundry; D2S (Defence Digital Service)
 operator: NA-D&D Commercial
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - framework
   - defence-procurement
@@ -43,8 +43,8 @@ The Defence Digital Commercial portfolio includes (non-exhaustive):
 ## Operating Model
 
 - **NA-D&D Commercial** acts as the contracting authority across the constituent frameworks.
-- **Crown Commercial Service frameworks** ([[Intelligence/defence-landscape/Frameworks/G-Cloud|G-Cloud]], [[Intelligence/defence-landscape/Frameworks/Digital Outcomes and Specialists (DOS)|DOS]], [[Intelligence/defence-landscape/Frameworks/Technology Services (TCS)|TCS]]) are used in parallel where the requirement is generic enough to suit them.
-- **Defence Digital-specific frameworks** ([[Intelligence/defence-landscape/Frameworks/DDAD|DDAD]], TacCIS, the [[Intelligence/defence-landscape/Frameworks/Digital and IT Professional Services (DIPS)|TCS3 DIPS sub-lot]]) carry the bulk of Defence-specific spend.
+- **Government Commercial Agency frameworks** (GCA, formerly Crown Commercial Service: [[Intelligence/defence-landscape/Frameworks/G-Cloud|G-Cloud]], [[Intelligence/defence-landscape/Frameworks/Digital Outcomes and Specialists (DOS)|DOS]], [[Intelligence/defence-landscape/Frameworks/Technology Services (TCS)|TCS]]) are used in parallel where the requirement is generic enough to suit them.
+- **Defence Digital-specific frameworks** ([[Intelligence/defence-landscape/Frameworks/DDAD|DDAD]], TacCIS, the MOD-only [[Intelligence/defence-landscape/Frameworks/Digital and IT Professional Services (DIPS)|DIPS]] framework, to November 2027) carry the bulk of Defence-specific spend.
 
 ## Strategic context
 
@@ -66,5 +66,5 @@ The post-March-2025 DE&S Operating Model transition and the post-April-2026 NAD 
 - [[Intelligence/defence-landscape/Frameworks/Frameworks Index|Frameworks Index]]: master index.
 - [[Intelligence/defence-landscape/Frameworks/DDAD|DDAD]]: principal current Defence Digital procurement vehicle (£180m, ASGARD).
 - [[Intelligence/defence-landscape/Frameworks/R-Cloud|R-Cloud]]: distinct Dstl S&T marketplace (named here for context).
-- [[Intelligence/defence-landscape/Frameworks/Digital and IT Professional Services (DIPS)|DIPS]]: TCS3 sub-lot for Defence Digital (£1.2bn).
-- [[Intelligence/defence-landscape/Frameworks/G-Cloud|G-Cloud]]: CCS framework Defence Digital uses for generic cloud.
+- [[Intelligence/defence-landscape/Frameworks/Digital and IT Professional Services (DIPS)|DIPS]]: MOD-only GCA framework (about £1.2bn; ends 16 November 2027).
+- [[Intelligence/defence-landscape/Frameworks/G-Cloud|G-Cloud]]: GCA framework Defence Digital uses for generic cloud (G-Cloud 15 from August 2026).

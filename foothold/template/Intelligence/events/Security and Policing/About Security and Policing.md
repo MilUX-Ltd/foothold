@@ -7,7 +7,8 @@ status: active
 operator: Home Office
 access: closed (vetted attendance)
 website: https://www.securityandpolicing.co.uk
-last_updated: 2026-05-20
+last_updated: 2026-10-15
+next_edition: 16 to 18 March 2027, Farnborough (ADS listing)
 tags:
   - events
   - security
@@ -20,6 +21,8 @@ tags:
 # Security and Policing
 
 The official **Home Office event** showcasing the very best of British policing, security, and law enforcement. Held annually at **Farnborough, Hampshire**, Security and Policing is a **closed event**: attendance is vetted by the Home Office, with access restricted to the law enforcement, security, and government community plus their suppliers.
+
+**Next edition: 16 to 18 March 2027**, Farnborough International Exhibition and Conference Centre, hosted by the Home Office's Joint Security and Resilience Centre (JSaRC). Attendance is restricted to visitors approved against Home Office criteria, and all exhibitors need Home Office approval. Source: [ADS Group event listing](https://www.adsgroup.org.uk/events/security-and-policing-2027/) (*press*: a trade-body listing, not the Home Office's own page).
 
 Operated by the **Home Office** with delivery support from ADS Group.
 

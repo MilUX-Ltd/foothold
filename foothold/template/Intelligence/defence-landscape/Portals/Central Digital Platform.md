@@ -10,7 +10,7 @@ legislative_basis: Procurement Act 2023; Procurement Regulations 2024
 launch_date: 24 February 2025
 website: https://www.gov.uk/find-a-tender
 sister_services: Find a Tender Service; Contracts Finder
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - portal
   - central-digital-platform
@@ -44,6 +44,8 @@ These three together make up "the Central Digital Platform".
 ### Practical implications for suppliers
 
 - Suppliers create one CDP profile, populate the supplier information once, and reuse it across covered procurements rather than re-submitting at every PQQ.
+- **Below-threshold contracts too.** Registration is not only for large, covered procurements. The government's CDP guidance (paragraph 74, updated 17 August 2026) says contracting authorities must ensure that every supplier awarded a **notifiable below-threshold contract** is registered on the CDP, has submitted the specified supplier information (regulation 36A) and has given the authority its unique identifier. If you bid for smaller public contracts, register now rather than at award.
+- The [[Intelligence/defence-landscape/Frameworks/Commercial X Dynamic Market (DMP)|Commercial X Dynamic Market]] also uses your CDP profile in its membership application.
 - The Act's **exclusion grounds** information is captured at the CDP layer.
 - Accessible at [gov.uk/find-a-tender](https://www.gov.uk/find-a-tender).
 

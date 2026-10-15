@@ -33,7 +33,7 @@ The NATO Innovation Fund is the world's first multi-sovereign venture capital fu
 
 Thesis areas are tightly aligned with NATO's emerging and disruptive technology priorities: artificial intelligence, autonomy, quantum, biotechnology, space, hypersonics, advanced materials, novel manufacturing, energy and propulsion. The fund typically backs seed and Series A rounds, often alongside national defence-tech investors. It runs alongside NATO DIANA (Defence Innovation Accelerator for the North Atlantic) and uses the DIANA cohort as one route to deal flow.
 
-UK presence is strong. The London office is led by senior partners and the fund is an active co-investor with UK funds and DASA-backed companies.
+UK presence is strong. The London office is led by senior partners and the fund is an active co-investor with UK funds and companies backed by DASA (now UK Defence Innovation).
 
 ## Key People
 
