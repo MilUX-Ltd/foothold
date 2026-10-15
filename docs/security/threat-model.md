@@ -5,7 +5,7 @@ server, no data of its own.
 
 ## What is worth protecting
 
-1. **The integrity of `main`.** Every install and update reads it, and skills are instructions
+1. **The integrity of `main`.** Every update reads it, and skills are instructions
    that Claude follows inside the user's vault, which holds their bids, customers and commercial
    detail. A malicious or careless change to a skill is the one route by which this repository
    could harm a user.
