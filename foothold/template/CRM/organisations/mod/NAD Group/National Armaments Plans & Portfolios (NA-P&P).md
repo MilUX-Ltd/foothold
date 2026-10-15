@@ -72,5 +72,5 @@ Inside DE&S the same function operated as "Gateway", which has been a key elemen
 - UK Defence Journal: [MOD outlines £4.7m for National Armaments Director Group](https://ukdefencejournal.org.uk/mod-outlines-4-7m-for-national-armaments-director-group/).
 - British Progress: [Fixing UK defence procurement](https://britishprogress.org/reports/fixing-uk-defence-procurement).
 - ADS Group: [Fixing Defence Procurement](https://www.adsgroup.org.uk/knowledge/fixing-defence-procurement/).
-- DE&S: [announcement of the new UK National Armaments Director](https://des.mod.uk/rupert-pearce-uk-national-armaments-director/) (2025).
+- GOV.UK: [National Armaments Director to drive forward defence reform and bolster national arsenal](https://www.gov.uk/government/news/national-armaments-director-to-drive-forward-defence-reform-and-bolster-national-arsenal) (2025).
 - techUK: [2025: the year in defence](https://www.techuk.org/resource/2025-the-year-in-defence.html).
