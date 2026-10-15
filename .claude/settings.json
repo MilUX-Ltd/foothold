@@ -1,0 +1,78 @@
+{
+  "$comment": "MilUX agent hooks 0.1.3 (card 6494; deployed here under card 7020, 15 October 2026). The scripts live in .claude/hooks/ (master: Workspace/agent-config/hooks). Deny rules are the second layer under the PreToolUse guard; the guard names the permitted route, these only refuse.",
+  "model": "sonnet",
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
+  },
+  "permissions": {
+    "deny": [
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push origin main:*)",
+      "Bash(git push origin master:*)",
+      "Bash(git push origin HEAD:main:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(gh pr review:*)",
+      "Bash(gh release:*)",
+      "Bash(gh auth login:*)",
+      "Bash(gh auth logout:*)",
+      "Bash(gh auth token:*)",
+      "Bash(gh auth refresh:*)",
+      "Bash(wrangler deploy:*)",
+      "Bash(wrangler versions deploy:*)",
+      "Bash(fly deploy:*)",
+      "Bash(flyctl deploy:*)",
+      "Bash(fly secrets:*)",
+      "Bash(flyctl secrets:*)",
+      "Bash(apksigner sign:*)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/session_start.py\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.py\" pre-bash",
+            "timeout": 20
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.py\" pre-edit",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/post_edit.py\"",
+            "timeout": 90
+          }
+        ]
+      }
+    ]
+  }
+}

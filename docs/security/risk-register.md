@@ -1,0 +1,11 @@
+# Risk register
+
+Opened 15 October 2026 (card 7020). Review at each release.
+
+| ID | Risk | Likelihood | Impact | Treatment | Owner | State |
+|---|---|---|---|---|---|---|
+| R1 | A harmful or broken change to `foothold/template/` reaches every user on their next update, because `main` is the release channel (ADR 002) | Low | High | Protected `main` with required checks; template changes reviewed as releases; skill-safety-audit before a behaviour change ships | Matt Odell | Open, treated |
+| R2 | Agent work in the repository and its review share one model family, so a blind spot passes both (the standing correlated-review risk) | Medium | Medium | Matt reviews template and skill changes himself; the reviewer is never a weaker model than the builder | Matt Odell | Open, accepted |
+| R3 | The README says the pack is MIT licensed, but the repository has no `LICENSE` file, so the grant a user relies on is not stated where they would look for it | High (true today) | Medium | Add a `LICENSE` file once Matt confirms the terms and the third-party skills' licences agree | Matt Odell | Open, decision with Matt |
+| R4 | synoia's local index (`.context/index.sqlite`, with sync identifiers) was published by the old sync job and stays in the public Git history | Certain (has happened) | Low (the notes are the public pack) | Untracked and refused from 15 October 2026; history left alone, as a rewrite would break every clone and the update skill's SHAs | Matt Odell | Closed, accepted |
+| R5 | New installs probably stop at setup Step A.2 since 2.1.0 (15 July 2026). The README tells users to fetch the setup skill as one raw file from `main`, but the skill now installs only from a template bundled in an installed Claude plugin and stops if it finds none; Foothold has a plugin and marketplace entry, but the README never tells users to install it. The update skill also reads the GitHub tree API that failed for setup (LESSONS 3) | High (found by reading, 15 October 2026; not yet run) | High | Run a fresh install and an update in Cowork to confirm; then either document a plugin install or restore a route that works from a raw fetch. Install steps are public words, so the fix goes to Matt as a proposal | Matt Odell | Open |

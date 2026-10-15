@@ -1,0 +1,19 @@
+# Ruff settings for the MilUX agent hook set (card 6494), deployed with it.
+#
+# Ruff configuration is hierarchical: for each file it uses the closest ruff.toml or
+# pyproject.toml above that file, so a repository's own settings govern its code and this
+# file governs the hooks. Without it, a repository that lints its whole tree (ruff check .,
+# ruff format --check .) judged the hook set by rules written for its application code and
+# went red on the pull request that introduced the hooks (southcentralrdsc #22).
+#
+# The hooks run on Python 3.9 on the Mac Mini, so the target stays py39 and upgrade rules
+# that need a newer interpreter do not fire. Line length 100 for code, formatted by ruff
+# format; E501 is off because the long lines are refusal messages and the rules-of-the-road
+# header, which the reader is meant to see whole and the tests assert on verbatim. A change
+# here is a change to the hook set: bump VERSION.
+line-length = 100
+target-version = "py39"
+
+[lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]

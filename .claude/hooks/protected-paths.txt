@@ -1,0 +1,12 @@
+# Paths an agent may read but not change without a card and an UNLOCK (guard.py, card 6494).
+# One glob per line; ** crosses directories. The defaults below are built into guard.py and
+# listed here so a reader sees the whole set. Add this repository's own lines beneath them,
+# for example the directory that holds the committed acceptance tests.
+.github/workflows/**
+.github/CODEOWNERS
+CODEOWNERS
+docs/CODEOWNERS
+CLAUDE.md
+.claude/**
+.githooks/**
+tests/acceptance/**

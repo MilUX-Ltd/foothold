@@ -18,3 +18,12 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# synoia's local index of a folder it syncs; never published (LESSONS 2)
+.context/
+
+# Claude Code hook log and the per-session unlock (.claude/hooks/.gitignore covers both too)
+.claude/hooks/guard.log
+.claude/hooks/UNLOCK
+.claude/settings.local.json
+__pycache__/
