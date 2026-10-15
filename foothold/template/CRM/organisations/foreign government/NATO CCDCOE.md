@@ -6,7 +6,7 @@ status: active
 category: nato-coe
 location: Tallinn, Estonia
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [nato, cyber, centre-of-excellence, tallinn]
 ---
 

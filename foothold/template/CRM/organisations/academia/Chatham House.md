@@ -5,11 +5,10 @@ also_known_as: Chatham House
 status: active
 category: think-tank
 founded: 1920
-director: Bronwen Maddox (Director and CEO)
 hq: London
 website: https://www.chathamhouse.org/
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [think-tank, international, uk, chatham-house, riia, chatham-house-rule]
 ---
 
@@ -20,8 +19,7 @@ tags: [think-tank, international, uk, chatham-house, riia, chatham-house-rule]
 - **Website:** [chathamhouse.org](https://www.chathamhouse.org/); [About us](https://www.chathamhouse.org/about-us).
 - **Sector:** International affairs think tank.
 - **HQ:** London.
-- **Founded:** Originating at a meeting between American and British delegates to the Paris Peace Conference on 30 May 1919. Royal Charter granted by King George V in 1926.
-- **Director and CEO:** Bronwen Maddox.
+- **Founded:** Originating at a meeting between American and British delegates to the Paris Peace Conference on 30 May 1919. Royal Charter granted in 1926.
 - **Stated mission:** "Help governments and societies build a sustainably secure, prosperous, and just world."
 
 ## What Chatham House does

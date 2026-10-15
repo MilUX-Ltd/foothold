@@ -9,7 +9,7 @@ renamed_to_strategic_command: 2019
 renamed_to_csoc: 2025-09-01
 current_equivalent: "[[CRM/organisations/mod/Cyber and Specialist Operations Command|Cyber and Specialist Operations Command (CSOC)]]"
 former_website: https://www.gov.uk/government/organisations/joint-forces-command
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - legacy

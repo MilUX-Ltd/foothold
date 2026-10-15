@@ -4,7 +4,7 @@ name: FCDO
 full_name: Foreign, Commonwealth and Development Office
 category: hmg-department
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - hmg
   - foreign-policy

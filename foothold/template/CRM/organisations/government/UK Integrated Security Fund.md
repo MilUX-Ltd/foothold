@@ -11,7 +11,7 @@ status: active
 operating_scope: over 90 countries and territories; UK and international
 funding_sources: blend of Official Development Assistance (ODA) and non-ODA
 website: https://www.gov.uk/government/organisations/uk-integrated-security-fund
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - government
   - cabinet-office
@@ -44,7 +44,7 @@ The fund deliberately spans the soft-power / hard-security spectrum: conflict pr
 
 ### Why it matters to defence-tech founders
 
-UKISF is not a direct SME funding route in the way DASA or DTEP are. It is, however, the largest cross-government national-security funding pot and the upstream commissioner for a meaningful chunk of programmes that defence-tech and security-tech SMEs ultimately deliver under. Worth tracking via DevTracker for upcoming priority areas.
+UKISF is not a direct SME funding route in the way UKDI (formerly DASA) competitions or DTEP are. It is, however, the largest cross-government national-security funding pot and the upstream commissioner for a meaningful chunk of programmes that defence-tech and security-tech SMEs ultimately deliver under. Worth tracking via DevTracker for upcoming priority areas.
 
 ### Scale
 

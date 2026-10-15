@@ -7,7 +7,7 @@ parent: "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
 status: active
 category: mod-component
 established_as_group_function: 2026-04-13 (NAD Group reorganisation)
-last_updated: 2026-05-28
+last_updated: 2026-10-15
 tags:
   - mod
   - nad-group

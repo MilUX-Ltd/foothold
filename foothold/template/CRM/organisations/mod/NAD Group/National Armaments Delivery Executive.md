@@ -9,7 +9,7 @@ status: active
 category: mod-executive-agency
 staff_origin: former DE&S staff (c.12,500 across the wider DE&S); DE&S core delivery now NA-M
 terms_and_conditions: unchanged from DE&S
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - nad-group

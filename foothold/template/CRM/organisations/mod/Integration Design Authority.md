@@ -8,7 +8,7 @@ status: active
 category: mod-component
 website: https://www.gov.uk/government/news/the-launch-of-the-integration-design-authority
 contact: UKStratCom-Integration@mod.gov.uk
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - integration
@@ -32,7 +32,7 @@ IDA was launched at **DSEI 2023** and became operational on **1 July 2024**. Its
 
 IDA exists to enable integration for Defence, across government, with allies, and international partners. Three named functions:
 
-- **Lead Strategic Command's industry engagement**: helping develop cutting-edge integrated capabilities for Defence.
+- **Lead CSOC's (formerly Strategic Command's) industry engagement**: helping develop cutting-edge integrated capabilities for Defence.
 - **Provide "Integration as a Service"**: developing a high-level view in support of the Defence Force Development Board's role as the Defence Force Design Authority, advising and assuring project-level requirements to deliver integrated effects.
 - **Drive Multi-Domain Integration (MDI)** across the Services and beyond.
 

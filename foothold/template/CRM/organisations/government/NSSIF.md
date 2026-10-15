@@ -4,7 +4,7 @@ name: NSSIF
 full_name: National Security Strategic Investment Fund
 category: hmg-investment-fund
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - hmg
   - investment

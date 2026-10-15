@@ -6,7 +6,7 @@ parent_service: Royal Navy
 status: active
 category: mod-component
 houses: Disruptive Capabilities and Technologies Office (DCTO), Fleet Experimental Squadron, historic NavyX
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - navy

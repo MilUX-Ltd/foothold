@@ -5,7 +5,7 @@ website: https://www.techuk.org
 status: active
 category: trade-association
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [trade-association, technology, defence, cyber-security, national-security]
 ---
 

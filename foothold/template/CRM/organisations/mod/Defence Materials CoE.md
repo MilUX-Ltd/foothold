@@ -10,7 +10,7 @@ funding: £42.5 million Dstl research partnership
 lead_partner: Henry Royce Institute (University of Manchester)
 partner_count: 23 partners across academia, industry, research organisations (including the Catapult Network)
 website: https://www.gov.uk/government/news/new-advanced-materials-centre-of-excellence
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - centre-of-excellence

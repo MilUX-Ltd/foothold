@@ -5,11 +5,11 @@ acronym: DI
 parent: "[[CRM/organisations/mod/Cyber and Specialist Operations Command|Cyber and Specialist Operations Command]]"
 status: active
 category: mod-component
-chief: Adrian Bird (Chief of Defence Intelligence)
+chief: Chief of Defence Intelligence (CDI)
 headcount: c.4,500 personnel (approximately two-thirds armed forces, one-third civilian)
 locations: London, Bedfordshire, Cambridgeshire, Lincolnshire
 website: https://www.gov.uk/government/groups/defence-intelligence
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - intelligence
@@ -32,7 +32,7 @@ DI differs from the UK's intelligence agencies (MI6, GCHQ, MI5) in that it is an
 
 ### Leadership and staffing
 
-- **Chief of Defence Intelligence:** Adrian Bird.
+- **Led by:** the Chief of Defence Intelligence.
 - **Headcount:** approximately 4,500 personnel; two-thirds armed forces, one-third civilians.
 - **Locations:** primarily London, Bedfordshire, Cambridgeshire, and Lincolnshire (with RAF Wyton being a key intelligence site).
 

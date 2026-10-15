@@ -10,7 +10,7 @@ announced: 2020-11 (Integrated Review)
 permanent_location: Samlesbury, Lancashire (North-West)
 target_headcount: 3,000+ by 2023
 website: https://www.gov.uk/government/organisations/national-cyber-force
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - cyber

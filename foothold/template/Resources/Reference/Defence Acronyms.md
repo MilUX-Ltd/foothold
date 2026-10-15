@@ -1,7 +1,7 @@
 ---
 type: reference
 status: active
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [reference, glossary, defence, acronyms]
 ---
 
@@ -18,7 +18,7 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 | MSHQ | Military Strategic Headquarters | Strategic-level military HQ within MOD |
 | FLC | Front Line Command | The operational commands (RN, BA, RAF, plus CSOC) |
 | NAD | National Armaments Director | Lead of the NAD Group |
-| NAD Group | National Armaments Director Group | Post-April-2026 reorganisation consolidating former DE&S and adjacent functions under nine DG-led pillars plus DIO |
+| NAD Group | National Armaments Director Group | Established March 2025. Brings former DE&S and adjacent functions together; gov.uk lists nine areas, including DIO as National Armaments Infrastructure |
 | DG | Director General | The senior-rank lead running each NAD pillar |
 
 ## NAD Group pillars
@@ -30,10 +30,10 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 | NA-Innov | National Armaments Innovation | NAD pillar; houses Dstl, UKDI, Defence Investment Unit |
 | NA-D&D | National Armaments Digital & Data | NAD pillar; former Defence Digital |
 | NA-C&I | National Armaments Commercial & Industry | NAD pillar; commercial and industry, includes NSO |
-| NA-C | National Armaments Corporate | NAD pillar; corporate and shared services (UKHO, OPA, SSRO) |
+| NA-C | National Armaments Corporate | NAD pillar; corporate functions, including Corporate Services Modernisation and Defence Business Services |
 | NA-L&S | National Armaments Logistics & Support | NAD pillar; former Defence Support |
 | NA-P&P | National Armaments Plans & Portfolios | NAD pillar; portfolio sequencing. Former O&C / DE&S Gateway |
-| DIO | Defence Infrastructure Organisation | NAD pillar; defence estate, training areas, accommodation. Brand retained |
+| DIO | Defence Infrastructure Organisation | NAD pillar (gov.uk: National Armaments Infrastructure); defence estate, training areas, accommodation. Brand retained |
 | NA Delivery Executive | National Armaments Delivery Executive | Executive agency carrying the freedoms and delegations transferred from the retired DE&S |
 | DE&S | Defence Equipment & Support | **Retired April 2026.** Functions absorbed into NA-M and the NA Delivery Executive |
 
@@ -58,8 +58,10 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 | Acronym | Full name | What it is |
 |---------|-----------|------------|
 | Dstl | Defence Science and Technology Laboratory | MOD's executive-agency science and technology arm; inside NA-Innov |
-| DASA | Defence and Security Accelerator | Innovation funding arm, inside UKDI |
-| UKDI | UK Defence Innovation | Consolidated central MOD innovation function (DASA + DIU + FCI + Command Innovation Hubs). Launched 1 July 2025 |
+| DASA | Defence and Security Accelerator | Former MOD innovation funder. Became part of UKDI in February 2026; the name is no longer used, though some web addresses keep it |
+| UKDI | UK Defence Innovation | The MOD's single innovation front door, in NA-Innov (absorbed DASA, DIU, FCI and the Command Innovation Hubs). Launched 1 July 2025; at least £400m a year |
+| TF RAID | Taskforce RAID (Rapid AI Delivery) | MOD AI taskforce set up June 2026, reporting to CDS; £100m; industry front door |
+| USC | Uncrewed Systems Centre | Defence's central authority for uncrewed systems standards and assurance; includes DroneTEX, Swindon |
 | DIU | Defence Innovation Unit | Innovation delivery unit inside UKDI. **Acronym collision** with Defence Investment Unit |
 | DIU | Defence Investment Unit | Defence-tech investment arm inside NA-Innov. **Acronym collision** with Defence Innovation Unit |
 | DIAG | Defence Investors' Advisory Group | Senior banking, VC, and strategic finance group advising on defence investment |
@@ -235,7 +237,8 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 
 | Acronym | Full name | What it is |
 |---------|-----------|------------|
-| CCS | Crown Commercial Service | Cross-government procurement function |
+| GCA | Government Commercial Agency | Cross-government procurement agency; formed 1 April 2026 from CCS and Cabinet Office commercial teams |
+| CCS | Crown Commercial Service | Former name of the GCA (to March 2026) |
 | FTS | Find a Tender Service | Current UK procurement notice platform |
 | CDP | Central Digital Platform | Procurement Act 2023 central supplier platform |
 | DSP | Defence Sourcing Portal | MOD-specific e-sourcing portal |
@@ -270,11 +273,11 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 | R-Cloud | Research Cloud | Dstl S&T DPS |
 | PROGENY | Progeny Maritime Research Framework | Dstl maritime R&D framework |
 | NGAP | Next Generation Assurance Programme | MOD assurance framework |
-| DIPS | Digital and IT Professional Services | CCS TCS3 sub-lot, defence-digital-led |
-| TCS | Technology Services | CCS technology framework |
-| DOS | Digital Outcomes and Specialists | CCS framework for digital outcomes / user research / specialists |
-| G-Cloud | G-Cloud | CCS cloud-services framework |
-| STS | Space Technology Solutions | CCS RM6370 space framework |
+| DIPS | Digital and IT Professional Services | GCA (ex-CCS) technology services sub-lot, defence-digital-led |
+| TCS | Technology Services | GCA (ex-CCS) technology framework |
+| DOS | Digital Outcomes and Specialists | GCA (ex-CCS) framework for digital outcomes / user research / specialists |
+| G-Cloud | G-Cloud | GCA (ex-CCS) cloud-services framework |
+| STS | Space Technology Solutions | GCA (ex-CCS) RM6370 space framework |
 | JOSCAR | Joint Supply Chain Accreditation Register | Hellios-run defence supply-chain accreditation |
 
 ## Capability maturity and acquisition lifecycle
@@ -318,12 +321,17 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 | STANAG | Standardization Agreement | NATO standard |
 | ITAR | International Traffic in Arms Regulations | US export-control regime |
 | EAR | Export Administration Regulations | US export-control regime for dual-use |
+| SPIRE | SPIRE | ECJU online export licensing system |
+| LITE | LITE | ECJU's newer licensing system; F680 applications moved to it in July 2026 |
+| F680 | F680 | MOD approval to release classified equipment or information to overseas customers |
+| OGEL | Open General Export Licence | Pre-published licence any exporter can register for if they meet its conditions |
 | BPSS | Baseline Personnel Security Standard | Lowest UK personnel clearance |
 | CTC | Counter-Terrorist Check | Second-tier UK personnel clearance |
 | SC | Security Check | Third-tier UK personnel clearance |
 | eSC | Enhanced Security Check | Above SC |
 | DV | Developed Vetting | Highest UK personnel clearance |
-| List X | List X | Site security accreditation for handling protectively-marked material |
+| FSC | Facility Security Clearance | Company-level clearance to hold classified material on your own premises; replaced the List X name |
+| List X | List X | Former name for Facility Security Clearance |
 
 ## Classification and information control
 
@@ -354,8 +362,10 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 | CRFCA | Council of RFCAs | Central coordination body |
 | DSF Forum | Defence and Security SME Forum | techUK sub-group for SME representation |
 | TIN | Technology Innovation Network | Multi-disciplinary defence innovation network |
-| SDR | Strategic Defence Review | Periodic UK defence policy review |
-| DSIS | Defence and Security Industrial Strategy | UK government strategy for the defence industrial base |
+| SDR | Strategic Defence Review | Periodic UK defence policy review; latest 2025 |
+| DIS | Defence Industrial Strategy | Current UK strategy for the defence industrial base (September 2025) |
+| DIP | Defence Investment Plan | MOD and HM Treasury four-year spending plan, 30 June 2026 (£298bn). See [[Intelligence/defence-landscape/Defence Investment Plan 2026\|Defence Investment Plan 2026]] |
+| DSIS | Defence and Security Industrial Strategy | The 2021 strategy, superseded by the DIS 2025 |
 | Fair Payment Code | Fair Payment Code | OSBC voluntary code on prompt payment to SMEs |
 
 ## International and NATO
@@ -372,7 +382,7 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 | ENSEC COE | Energy Security Centre of Excellence | NATO Vilnius energy CoE |
 | StratCom COE | Strategic Communications Centre of Excellence | NATO Riga StratCom CoE |
 | DIANA | Defence Innovation Accelerator for the North Atlantic | NATO innovation accelerator |
-| UKDSE | UK Defence and Security Exports | UK defence-export promotion. Moved from DBT to MOD (NA-Intl) in July 2025 |
+| UKDSE | UK Defence and Security Exports | UK defence-export promotion. Moved from DBT to MOD (NA-Intl) in July 2025; gov.uk still lists a UKDSE group under BIST |
 | DG DEFIS | Directorate-General for Defence Industry and Space | EU Commission DG running the European Defence Fund |
 | EDF | European Defence Fund | EU defence R&D and capability fund |
 | AFC | Army Futures Command (US) | US Army modernisation command in Austin, Texas |
@@ -386,11 +396,17 @@ UK defence runs on acronyms. This glossary is the most useful ones for a defence
 | Acronym | Full name | What it is |
 |---------|-----------|------------|
 | FCDO | Foreign, Commonwealth and Development Office | UK foreign policy and development |
-| DBT | Department for Business and Trade | UK trade and business support |
-| DSIT | Department for Science, Innovation and Technology | UK S&T policy and funding |
-| UKRI | UK Research and Innovation | UK research-funding umbrella inside DSIT |
-| ARIA | Advanced Research and Innovation Agency | High-risk R&D funding agency |
-| UKSA | UK Space Agency | Civilian space ecosystem |
+| BIST | Department for Business, Innovation, Science and Trade | Trade, business support, science and innovation. Renamed from DBT in July 2026 |
+| DBT | Department for Business and Trade | Former name of BIST (to July 2026) |
+| DSIT | Department for Science, Innovation and Technology | Being dissolved (July 2026); functions moved to BIST, DCMS and the Cabinet Office |
+| DCMS | Department for Digital, Culture, Media and Sport | Expanded July 2026 to take digital, including GDS and online safety |
+| UKRI | UK Research and Innovation | UK research-funding umbrella, sponsored by BIST |
+| ARIA | Advanced Research and Invention Agency | High-risk R&D funding agency, sponsored by BIST |
+| UKSA | UK Space Agency | Civilian space; part of BIST |
+| ECJU | Export Control Joint Unit | UK export licensing for military and dual-use items; part of BIST |
+| ISU | Investment Security Unit | Runs National Security and Investment Act screening; moving from the Cabinet Office to BIST |
+| NSI Act | National Security and Investment Act 2021 | Mandatory notification of acquisitions in 17 sensitive areas, including defence |
+| UKSV | United Kingdom Security Vetting | National security vetting; part of the Cabinet Office |
 | NSSIF | National Security Strategic Investment Fund | National-security-relevant tech investment |
 
 ## Frameworks and platforms (linked to their pages)
@@ -414,4 +430,4 @@ A few acronyms collide in UK defence. The ones worth knowing:
 - **DIU** — could mean **Defence Innovation Unit** (a constituent of UKDI) or **Defence Investment Unit** (the defence-tech investment arm inside NA-Innov). Different bodies, same acronym.
 - **CDP** — could mean **Central Digital Platform** (the PA23 procurement platform) or **Commercial Delivery Partner** (the MOD framework). Always check which acronym the surrounding context is using.
 - **DSA** — UK is **Defence Safety Authority** (the regulator). Australian defence airworthiness uses **Defence Aviation Safety Authority**, same acronym.
-- **DASA** — UK is **Defence and Security Accelerator**. Australian counterpart shares the acronym in airworthiness contexts.
+- **DASA**: in the UK, the former **Defence and Security Accelerator**, now part of UKDI. Australia's **Defence Aviation Safety Authority** shares the acronym in airworthiness contexts.

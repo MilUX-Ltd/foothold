@@ -12,7 +12,7 @@ classification_level: OFFICIAL (lowest)
 website: https://www.gov.uk/government/organisations/hm-government-communications-centre
 co_creation_url: https://www.hmgcc.gov.uk/co-creation
 challenge_portal: https://co-creation.hmgcc.gov.uk/
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - hmgcc

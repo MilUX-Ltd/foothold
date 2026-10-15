@@ -1,7 +1,7 @@
 ---
 type: reference
 status: active
-last_reviewed: 2026-05-22
+last_reviewed: 2026-10-15
 tags: [reference, reading-list, defence, strategy, doctrine, sme]
 ---
 
@@ -15,12 +15,13 @@ The publications that orient a new defence-sector founder fastest. Curated for f
 |---|---|
 | [Strategic Defence Review 2025: Making Britain Safer Secure at Home, Strong Abroad](https://www.gov.uk/government/publications/the-strategic-defence-review-2025-making-britain-safer-secure-at-home-strong-abroad) | The post-2025 strategic baseline. Shapes the structural reforms (UKDI, CSOC, NAD Group). |
 | [Defence Industrial Strategy 2025 (PDF)](https://assets.publishing.service.gov.uk/media/68bea3fc223d92d088f01d69/Defence_Industrial_Strategy_2025_-_Making_Defence_an_Engine_for_Growth.pdf) | "Making Defence an Engine for Growth." Defence-tech industry direction post-SDR. |
-| [Defence Investment Plan 2025](https://www.gov.uk/government/publications/defence-investment-plan-2025) | The 10-year financial frame underneath the SDR. Sets the funding envelope for the industrial strategy. |
+| [The Defence Investment Plan (MOD and HM Treasury, 30 June 2026)](https://www.gov.uk/government/publications/the-defence-investment-plan) | £298bn over four years (FY26/27 to FY29/30): the budget lines that put the SDR into effect, plus the cancellations. Read as a demand signal in [[Intelligence/defence-landscape/Defence Investment Plan 2026\|Defence Investment Plan 2026]]. |
+| [UK Space Strategy (8 September 2026)](https://www.gov.uk/government/publications/uk-space-strategy) | UK Space Agency, BIST and MOD strategy: £7.8bn of investment to 2030 across civil and defence space. |
 | [UK National Security Strategy 2025: Security for the British People in a Dangerous World](https://www.gov.uk/government/publications/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world/national-security-strategy-2025-security-for-the-british-people-in-a-dangerous-world-html) | Cross-government National Security Strategy refresh; the upstream document the SDR sits inside. |
 | [Spending Review 2025](https://www.gov.uk/government/publications/spending-review-2025-document/spending-review-2025-html) | HMT's three-year departmental settlement, including the Defence settlement that funds the SDR programme. |
 | [The UK's Modern Industrial Strategy 2025 (PDF)](https://assets.publishing.service.gov.uk/media/68595e56db8e139f95652dc6/industrial_strategy_policy_paper.pdf) | Cross-government industrial strategy. Defence is one of eight growth sectors; this is the parent of the Defence Industrial Strategy 2025. |
 | [UK Government Resilience Framework (PDF)](https://assets.publishing.service.gov.uk/media/63cff056e90e071ba7b41d54/UKG_Resilience_Framework_FINAL_v2.pdf) | The Cabinet Office framework that underpins national resilience policy. Sits adjacent to NSS 2025. |
-| [Defence and Security Industrial Strategy 2021 (DSIS)](https://www.gov.uk/government/publications/defence-and-security-industrial-strategy) | Predecessor strategy. Frames the DSCDP, DTEP, and the wider SME stance. |
+| [Defence and Security Industrial Strategy 2021 (DSIS)](https://www.gov.uk/government/publications/defence-and-security-industrial-strategy) | Superseded by the Defence Industrial Strategy 2025; read only for history. It framed the DSCDP and DTEP. |
 | [Integrated Review: Global Britain in a Competitive Age (2021)](https://www.gov.uk/government/publications/global-britain-in-a-competitive-age-the-integrated-review-of-security-defence-development-and-foreign-policy) | Cross-domain UK security policy. National Cyber Force was announced here. |
 | [Integrated Review Refresh (2023)](https://www.gov.uk/government/publications/integrated-review-refresh-2023-responding-to-a-more-contested-and-volatile-world) | Sharper response to Russia / Ukraine and the wider 2020s threat environment. |
 | [Defence Command Paper 2023 Refresh](https://www.gov.uk/government/publications/defence-command-paper-2023-defences-response-to-a-more-contested-and-volatile-world) | Operationalises the Integrated Review for Defence. |
@@ -40,10 +41,11 @@ The publications that orient a new defence-sector founder fastest. Curated for f
 | [Procurement at MOD](https://www.gov.uk/government/organisations/ministry-of-defence/about/procurement) | The MOD's headline procurement explainer page. Useful as a top-of-funnel jumping-off point for SMEs. |
 | [Information and guidance for suppliers (gov.uk collection)](https://www.gov.uk/government/collections/information-and-guidance-for-suppliers) | The official supplier-guidance collection. The catch-all index for "how do I sell?" |
 | [SMEs: A guide to working with government (PDF)](https://assets.publishing.service.gov.uk/media/619fabe8e90e070448c51fb6/SME-Selling-to-Government-Guide.pdf) | Cabinet Office SME selling guide. Cross-government but the same buying authority concepts apply to Defence. |
-| [How to buy through Crown Commercial Service](https://www.crowncommercial.gov.uk/information-for-buyers-and-suppliers/start-supplying) | CCS's own onboarding for suppliers; useful for understanding the wider HMG framework estate that Defence buys from. |
-| [What is a framework — procurement essentials](https://www.crowncommercial.gov.uk/news/what-is-a-framework-procurement-essentials) | The plain-English explanation of framework agreements. |
+| [How to supply through the Government Commercial Agency](https://www.gca.gov.uk/how-to-supply) | Onboarding for suppliers from the Government Commercial Agency (formerly Crown Commercial Service); useful for understanding the wider HMG framework estate that Defence buys from. |
+| [What is a framework: procurement essentials (GCA)](https://www.gca.gov.uk/news/what-is-a-framework-procurement-essentials) | The plain-English explanation of framework agreements. |
 | [DSP Supplier Registration Guide (PDF)](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/956927/Defence_Sourcing_Portal_-_Supplier_Registration_Guide.pdf) | How to register on the MOD's e-sourcing portal. |
-| [MOD SME Action Plan 2019-2022 (PDF)](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/793101/20190405_SME_Action_Plan_2019.pdf) | Older but still the framing document for MOD's SME engagement. |
+| [MOD SME Action Plan (21 July 2026)](https://www.gov.uk/government/publications/mod-small-and-medium-sized-enterprise-sme-action-plan) | The current plan, led by the Defence Office for Small Business Growth: how the MOD will reduce barriers for SMEs. Replaces the 2019 plan. |
+| [MOD SME Action Plan 2019-2022 (PDF)](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/793101/20190405_SME_Action_Plan_2019.pdf) | Superseded by the 2026 plan; useful only for history. |
 | [DTEP Guidance Document](https://www.gov.uk/government/publications/the-defence-technology-exploitation-programme/guidance-document-the-defence-technology-exploitation-programme-dtep) | The DTEP grant scheme rules. |
 | [DSCDP guidance](https://www.gov.uk/guidance/defence-supplier-capability-development-programme) | The Grant-Thornton-run business-development support programme for defence SMEs. |
 | [How to sell to or work with Dstl](https://www.gov.uk/guidance/how-to-sell-to-dstl-industry-academia-and-other-research-organisations) | Dstl's published supplier-engagement guidance. |
@@ -54,17 +56,19 @@ The publications that orient a new defence-sector founder fastest. Curated for f
 
 | Publication | Why it matters |
 |---|---|
-| [A new era for Defence Innovation: DASA, DIU and DE&S FCI unite under UK Defence Innovation (UKDI)](https://www.gov.uk/guidance/a-new-era-for-defence-innovation-dasa-diu-and-des-fci-unite-under-uk-defence-innovation-ukdi) | The 1 July 2025 UKDI launch guidance. |
+| [How to work with UK Defence Innovation (UKDI)](https://www.gov.uk/guidance/how-to-work-with-uk-defence-innovation-ukdi) | Current guidance (22 July 2026, updated 6 October 2026): routes, Innovation Partners, the submission service. UKDI is the former DASA. |
+| [UKDI live funding opportunities](https://www.gov.uk/government/collections/live-funding-opportunities) | What is open now. Check here rather than old competition lists. |
+| [A new era for Defence Innovation: DASA, DIU and DE&S FCI unite under UK Defence Innovation (UKDI)](https://www.gov.uk/guidance/a-new-era-for-defence-innovation-dasa-diu-and-des-fci-unite-under-uk-defence-innovation-ukdi) | The 1 July 2025 UKDI launch guidance; history of the merger. |
 | [Defence AI Playbook (PDF, January 2024)](https://assets.publishing.service.gov.uk/media/65bb75fa21f73f0014e0ba51/Defence_AI_Playbook.pdf) | DAIC's published guidance on how Defence approaches AI. |
 | [Defence AI Strategy (PDF, June 2022)](https://assets.publishing.service.gov.uk/media/62a7543ee90e070396c9f7d2/Defence_Artificial_Intelligence_Strategy.pdf) | Underpinning strategy document. |
 | [Defence Space Strategy](https://www.gov.uk/government/publications/defence-space-strategy) | Sister policy for the space domain. |
 | [Cloud Strategic Roadmap (techUK summary)](https://www.techuk.org/resource/ministry-of-defence-publishes-cloud-strategic-roadmap.html) | NA-D&D's published cloud direction. |
 | [Defence Innovation Initiative speech (2016)](https://www.gov.uk/government/speeches/defence-innovation-initiative) | The original policy speech that established IRIS, DASA, and the wider innovation cluster. |
-| [Advantage Through Innovation: The Defence Innovation Initiative (PDF)](https://assets.publishing.service.gov.uk/media/5a7f6cad40f0b6230268f6b9/MOD_SB_Innovation_Initiative_Brochure_v21_web.pdf) | The accompanying brochure to the 2016 speech. Still cited as the founding statement of the DASA route. |
+| [Advantage Through Innovation: The Defence Innovation Initiative (PDF)](https://assets.publishing.service.gov.uk/media/5a7f6cad40f0b6230268f6b9/MOD_SB_Innovation_Initiative_Brochure_v21_web.pdf) | The accompanying brochure to the 2016 speech; the founding statement of the DASA route that UKDI now runs. |
 | [British Army's Approach to Artificial Intelligence (2023, PDF)](https://www.army.mod.uk/media/24745/20231001-british_army_approach_to_artificial_intelligence.pdf) | Service-side AI doctrine. |
-| [British Army Challenge Set 2025 (PDF)](https://assets.publishing.service.gov.uk/media/686e433aa08d3a3ca3b67925/British_Army_Challenge_Set_-_2025.pdf) | The British Army's published priority challenges that DASA, UKDI, and other innovation routes work against. |
+| [British Army Challenge Set 2025 (PDF)](https://assets.publishing.service.gov.uk/media/686e433aa08d3a3ca3b67925/British_Army_Challenge_Set_-_2025.pdf) | The British Army's published priority challenges that UKDI and other innovation routes work against. |
 | [RAF Autonomous Collaborative Platform Strategy](https://assets.publishing.service.gov.uk/media/66019fa8f1d3a0666832acfc/RAF_Autonomous_Collaborative_Platform_Strategy.pdf) | RAF strategy for autonomous and collaborative platforms. |
-| [Technology Adoption Review 2025 (DSIT, PDF)](https://assets.publishing.service.gov.uk/media/6857e0995225e4ed0bf3ceb5/dsit_technology_adoption_review_web.pdf) | DSIT's review of how government adopts emerging tech. Cross-cuts the Defence AI Centre and UKDI remits. |
+| [Technology Adoption Review 2025 (DSIT, PDF)](https://assets.publishing.service.gov.uk/media/6857e0995225e4ed0bf3ceb5/dsit_technology_adoption_review_web.pdf) | DSIT's review of how government adopts emerging tech (DSIT has since been dissolved). Cross-cuts the Defence AI Centre and UKDI remits. |
 | [MOD Enduring Capability Challenges (Defence Capability Framework, Jul 2022 PDF)](https://assets.publishing.service.gov.uk/media/62d7d1668fa8f50c0a8a4029/MOD_Defence_Capability_Framework_Accessible_Jul22.pdf) | MOD's published cross-cutting capability challenges that any innovation pitch needs to align to. |
 | [MOD Science & Technology Portfolio](https://www.gov.uk/government/publications/defence-science-and-technology-programmes-and-projects/ministry-of-defences-science-and-technology-portfolio) | The current S&T programmes and projects view across the MOD. |
 | [MOD Science & Technology Strategy 2020 (PDF)](https://assets.publishing.service.gov.uk/media/5f8dc7ece90e0727ca313eb6/20201019-MOD_ST_Strategy_2020_v1-23.pdf) | The 2020 S&T strategy. Older but still the underpinning doctrinal frame for Dstl and NA-Innov. |
@@ -125,7 +129,7 @@ Dstl's "biscuit books" are accessible, defence-relevant primers — useful for a
 |---|---|
 | [NATO Strategic Concept](https://www.nato.int/cps/en/natohq/topics_56626.htm) | The alliance's strategic baseline. |
 | [NATO AI Strategy (2024 official text)](https://www.nato.int/cps/en/natohq/official_texts_227237.htm) | The alliance's published AI strategy; companion to the UK Defence AI Strategy. |
-| [NATO Rapid Adoption Action Plan (summary)](https://www.nato.int/) | NATO's procurement-acceleration framework. |
+| [Summary of NATO's Rapid Adoption Action Plan (June 2025)](https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/2025/06/25/summary-of-natos-rapid-adoption-action-plan) | NATO's procurement-acceleration framework. |
 | [UK Defence Export Statistics](https://www.gov.uk/government/statistics/uk-defence-export-statistics-2024/uk-defence-export-statistics-2024) | Annual UKDSE-published defence export data. |
 | [European Defence Fund (DG DEFIS)](https://defence-industry-space.ec.europa.eu/eu-defence-industry/european-defence-fund-edf_en) | EU defence-industrial funding context. |
 
@@ -142,9 +146,9 @@ Dstl's "biscuit books" are accessible, defence-relevant primers — useful for a
 
 This is a reference index, not a curriculum. The faster route in:
 
-1. **One strategic anchor**: read the SDR 2025 plus the Defence Industrial Strategy 2025.
+1. **One strategic anchor**: read the SDR 2025, the Defence Industrial Strategy 2025 and the Defence Investment Plan (2026).
 2. **One acquisition primer**: skim the Procurement Act 2023 short guide and the MOD Acquisition Pipeline.
-3. **One innovation anchor**: read the UKDI launch guidance.
+3. **One innovation anchor**: read How to work with UKDI.
 4. **One doctrinal touch**: skim Global Strategic Trends.
 5. **One industry analyst**: subscribe to RUSI commentary and ADS / techUK bulletins.
 

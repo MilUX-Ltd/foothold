@@ -6,12 +6,12 @@ former_name: UK Strategic Command (UKStratCom)
 renamed_on: 2025-09-01
 status: active
 category: mod-component
-commander: General Sir Jim Hockenhull
+commander: Commander CSOC
 headquarters: Northwood, North-West London
 headcount: ~26,000 specialist personnel across 130 global sites
 website: https://www.gov.uk/government/organisations/cyber-and-specialist-operations-command
 blog: https://cyberandspecialistoperationscommand.blog.gov.uk/
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - cyber
@@ -22,13 +22,15 @@ tags:
 
 # Cyber and Specialist Operations Command (CSOC)
 
+gov.uk writes the name as **Cyber & Specialist Operations Command**. Formerly Strategic Command.
+
 The UK's fourth Military Command, alongside the Royal Navy, the British Army, and the Royal Air Force. Established 1 September 2025 by renaming UK Strategic Command (UKStratCom), with an expanded leadership remit for the cyber domain following the [Strategic Defence Review](https://www.gov.uk/government/publications/the-strategic-defence-review-2025-making-britain-safer-secure-at-home-strong-abroad). Generates and operates the specialist capabilities that defence relies on across all domains.
 
 ## Role in the landscape
 
 CSOC unifies the cyber, intelligence, medical, special operations, defence education, and overseas attaché capabilities under a single military command. It frames itself as "always on": across every UK operation, delivering the capabilities the other Services either do not see or cannot see. The Command sits inside the UK Ministry of Defence structure and reports to the Defence Secretary as a peer of the three Service Commands.
 
-The CSOC name follows the SDR's call for greater leadership of the cyber domain across defence and government, and the MOD's stated need to defend UK military networks against more than 90,000 "sub-threshold" cyber attacks in the two years to mid-2025 ([MOD press release, 1 July 2025](https://www.gov.uk/government/news/launch-of-new-body-to-harness-innovative-tech-for-the-uks-armed-forces)). Hockenhull described the change as "far more than a change in name, it is a clear statement of purpose."
+The CSOC name follows the SDR's call for greater leadership of the cyber domain across defence and government, and the MOD's stated need to defend UK military networks against more than 90,000 "sub-threshold" cyber attacks in the two years to mid-2025 ([MOD press release, 1 July 2025](https://www.gov.uk/government/news/launch-of-new-body-to-harness-innovative-tech-for-the-uks-armed-forces)). The Command described the change as a statement of purpose rather than only a new name. Source: gov.uk [Cyber & Specialist Operations Command established](https://www.gov.uk/government/news/cyber-specialist-operations-command-established-to-tackle-the-threats-of-today-and-tomorrow).
 
 ### Five stated responsibilities
 
