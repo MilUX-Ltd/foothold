@@ -28,7 +28,7 @@ tags:
 
 MD One Ventures is a London-based venture capital firm founded in 2021, positioning itself as a European national-security VC. It backs early-stage defence, dual-use and national-security technology serving the UK and allied governments.
 
-The founding partners combine UK specialist military experience, accelerator leadership (Defence BattleLab) and institutional VC backgrounds (BlackRock, Palantir, Investbridge Capital). The fund has built relationships across MoD, DASA and the wider UK defence-tech ecosystem.
+The founding partners combine UK specialist military experience, accelerator leadership (Defence BattleLab) and institutional VC backgrounds (BlackRock, Palantir, Investbridge Capital). The fund has built relationships across MoD, DASA (now UK Defence Innovation) and the wider UK defence-tech community.
 
 ## Key People
 
@@ -44,7 +44,7 @@ The founding partners combine UK specialist military experience, accelerator lea
 
 ## Frameworks and Co-investors
 
-- UK national-security and defence remit; relationships across MoD, DASA, Defence BattleLab
+- UK national-security and defence remit; relationships across MoD, UK Defence Innovation (formerly DASA), Defence BattleLab
 - Companies House: MD ONE VENTURES LIMITED (13736446)
 
 ## Recent investments

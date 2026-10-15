@@ -6,7 +6,8 @@ cadence: biennial (odd years)
 venue: ExCeL London
 status: active
 website: https://www.dsei.co.uk
-last_updated: 2026-05-20
+last_updated: 2026-10-15
+next_edition: DSEI UK 2027, 7 to 10 September 2027, ExCeL London
 tags:
   - events
   - dsei
@@ -20,6 +21,8 @@ tags:
 DSEI is the UK's largest defence and security trade event. Held **biennially in odd years** at **ExCeL London**, it brings together international defence ministries, supply-chain primes, SMEs, military end-users, and policy figures over four trade days.
 
 DSEI is the event the UK MOD uses as its principal industry-engagement platform: senior MOD speakers, named programme announcements, demonstration zones across land/air/sea/joint domains, and an active SME presence under trade-association banners (ADS, techUK).
+
+**Next edition: DSEI UK 2027, 7 to 10 September 2027, ExCeL London.** The MOD has set its theme as "Delivering the Integrated Force", with a focus on speed, innovation and readiness ([GOV.UK, 14 October 2026](https://www.gov.uk/government/news/dsei-uk-27-mod-leaders-focus-on-speed-innovation-and-readiness)). The DSEI family also includes DSEI Japan and DSEI Germany (Hannover, 9 to 12 March 2027, *press*); see the [[Intelligence/events/Defence Events Calendar|Defence Events Calendar]].
 
 Website: [dsei.co.uk](https://www.dsei.co.uk).
 
