@@ -9,7 +9,7 @@ replaces: Dynamic Purchasing Systems (DPS) and qualification systems under the p
 effective_date: 24 February 2025 (Procurement Act 2023 came into force)
 key_feature: suppliers can join at any time; no fixed application window; no membership fees on standard Dynamic Markets
 applicable_to: any procurement type, including bespoke or complex requirements (broader than the previous DPS)
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - framework
   - mod-commercial
@@ -69,4 +69,4 @@ Under the Procurement Act 2023, supplier core information sits in the [[Intellig
 - [[Intelligence/defence-landscape/Portals/Defence Sourcing Portal|Defence Sourcing Portal]]: MOD supplier-facing front door.
 - [[Intelligence/defence-landscape/Portals/Central Digital Platform|Central Digital Platform]]: supplier core information feeds Dynamic Market applications.
 - [[Intelligence/defence-landscape/Portals/Contracts Finder|Contracts Finder]]: wider HMG opportunity index.
-- [[Intelligence/defence-landscape/Frameworks/Space Technology Solutions|Space Technology Solutions]]: a CCS-operated Dynamic Market.
+- [[Intelligence/defence-landscape/Frameworks/Space Technology Solutions|Space Technology Solutions]]: a dynamic market run by the Government Commercial Agency (GCA, formerly Crown Commercial Service).

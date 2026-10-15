@@ -5,7 +5,7 @@ acronym: WSRF
 status: active
 category: defence-research
 customer: UK MoD; Dstl is the operating customer; also used by Front Line Commands, Weapons Evaluation and Capability Assurance (WECA), and DE&S
-operator: Defence Science and Technology Laboratory (Dstl), now inside NA-Innov
+operator: Defence Science and Technology Laboratory (Dstl)
 prime_contractor: QinetiQ
 key_partners: MBDA, Thales
 contract_value: £300 million
@@ -15,7 +15,7 @@ predecessor: Weapons Science and Technology Centre (WSTC) contract
 replacing_what: WSTC offered narrower scope; WSRF adds directed-energy weapons and broader research activities
 strategic_context: Future Kinetic Effects and Weapons (FKEW) programme
 website: https://www.gov.uk/government/publications/dstl-science-and-technology-procurement-frameworks/weapons-sector-research-framework-wsrf
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - framework
   - defence-procurement
@@ -38,11 +38,11 @@ The MOD's principal R&D framework for **weapons science and technology**, design
 
 WSRF replaces the previous **Weapons Science and Technology Centre (WSTC)** contract with a broader scope including **directed energy weapons** alongside complex, conventional, and novel weapons technologies.
 
-GOV.UK: [Weapons sector research framework (WSRF)](https://www.gov.uk/government/publications/dstl-science-and-technology-procurement-frameworks/weapons-sector-research-framework-wsrf); [Weapons: defence science and technology capability](https://www.gov.uk/guidance/weapons-defence-science-and-technology-capability). QinetiQ: [Dstl Awards £300m WSRF Contract to QinetiQ](https://www.qinetiq.com/en/news/dstl-awards-300m-weapons-sector-research-framework-wsrf-contract-to-qinetiq); [WSRF capabilities page](https://www.qinetiq.com/en/what-we-do/services-and-products/wsrf); [Directed Energy: WSRF](https://www.qinetiq.com/en/capabilities/directed-energy-and-other-novel-weapon-technology-and-effects/wsrf). Coverage: [Defense Brief: UK awards contract for weapons sector research framework](https://defbrief.com/2020/07/30/uk-awards-contract-for-weapons-sector-research-framework/); [Army Technology: Dstl awards QinetiQ £300m WSRF contract](https://www.army-technology.com/news/dstl-awards-qinetiq-300m-weapons-sector-research-framework-contract/).
+GOV.UK: [GOV.UK: Find contracts in technology and R&D with the MOD (updated 18 September 2026)](https://www.gov.uk/guidance/find-contracts-in-technology-and-research-and-development-with-the-ministry-of-defence); [Weapons sector research framework (WSRF)](https://www.gov.uk/government/publications/dstl-science-and-technology-procurement-frameworks/weapons-sector-research-framework-wsrf); [Weapons: defence science and technology capability](https://www.gov.uk/guidance/weapons-defence-science-and-technology-capability). QinetiQ: [Dstl Awards £300m WSRF Contract to QinetiQ](https://www.qinetiq.com/en/news/dstl-awards-300m-weapons-sector-research-framework-wsrf-contract-to-qinetiq); [WSRF capabilities page](https://www.qinetiq.com/en/what-we-do/services-and-products/wsrf); [Directed Energy: WSRF](https://www.qinetiq.com/en/capabilities/directed-energy-and-other-novel-weapon-technology-and-effects/wsrf). Coverage: [Defense Brief: UK awards contract for weapons sector research framework](https://defbrief.com/2020/07/30/uk-awards-contract-for-weapons-sector-research-framework/); [Army Technology: Dstl awards QinetiQ £300m WSRF contract](https://www.army-technology.com/news/dstl-awards-qinetiq-300m-weapons-sector-research-framework-contract/).
 
 ## Operating Model
 
-- **5-year framework.** Awarded 2020. Total value £300 million.
+- **Framework term.** Awarded 2020 as a 5-year framework worth £300 million. The MOD's routes-to-market page (18 September 2026) lists it as open, **ending 31 March 2027**.
 - **Prime contractor.** QinetiQ. Key partners MBDA and Thales.
 - **Wider community.** Over **150 partners** across academia, SMEs, and the broader weapons industry.
 - **Owned by Dstl.** Can also be used by other parts of MOD: Front Line Commands, **Weapons Evaluation and Capability Assurance (WECA)**, and DE&S (now NA-M).

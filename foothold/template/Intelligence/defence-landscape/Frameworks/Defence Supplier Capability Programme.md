@@ -12,7 +12,7 @@ diagnostic_basis: initial diagnostic assessment to tailor the support
 delivery_form: bespoke business-development support (not cash funding)
 strategic_aim: more productive and competitive UK defence sector
 website: https://www.gov.uk/guidance/defence-supplier-capability-development-programme
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - framework
   - defence-procurement
@@ -66,11 +66,11 @@ Both are MOD-funded SME-facing programmes, but the mechanism is different:
 |---|---|---|
 | **Type** | Business-development support (in-kind, advisory) | Grant funding for collaborative R&D projects |
 | **Maximum per supplier** | £200,000 of support over 12 months | £500,000 grant (50% of £1m projects) |
-| **Delivery partner** | Grant Thornton UK LLP | DASA-managed process, ADS Group panel review from August 2024 |
+| **Delivery partner** | Grant Thornton UK LLP | DASA-managed process (DASA is now part of UK Defence Innovation), ADS Group panel review from August 2024 |
 | **Best for** | Strengthening the supplier's business, not a specific tech project | Maturing a specific innovation toward MOD acquisition |
 | **Eligibility** | UK SMEs and mid-tier suppliers | UK-registered Lower Tier Suppliers (typically SMEs) with Higher Tier collaboration |
 
-Both programmes sit inside the wider MOD SME Action Plan stack alongside [[Intelligence/defence-landscape/Frameworks/SME Searchlight|SME Searchlight]] (Dstl research visibility) and the [[Intelligence/defence-landscape/Portals/Helios SME Portal|Helios SME Portal]] (capability discovery).
+Both programmes sit inside the wider MOD SME support stack, now led by the Defence Office for Small Business Growth under the [MOD SME Action Plan (21 July 2026)](https://www.gov.uk/government/publications/mod-small-and-medium-sized-enterprise-sme-action-plan), alongside [[Intelligence/defence-landscape/Frameworks/SME Searchlight|SME Searchlight]] (Dstl research visibility) and the [[Intelligence/defence-landscape/Portals/Helios SME Portal|Helios SME Portal]] (capability discovery).
 
 ## Source Material
 
