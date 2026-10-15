@@ -7,7 +7,7 @@ parent_cluster: Navy Innovation
 status: active
 category: mod-component
 served_customer: Royal Marines (notably Future Commando Force)
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - navy

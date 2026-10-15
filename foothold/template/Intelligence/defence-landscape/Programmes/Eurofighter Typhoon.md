@@ -6,7 +6,7 @@ service: Air
 status: active
 category: combat-air
 created: 2026-05-22
-last_reviewed: 2026-05-22
+last_reviewed: 2026-10-15
 tags: [programme, raf, combat-air, typhoon, eurofighter, ecrs-mk2]
 ---
 
@@ -23,8 +23,13 @@ The Eurofighter Typhoon is the multi-role combat aircraft jointly developed and 
 - **APKWS** (Advanced Precision Kill Weapon System) integration, announced 17 May 2026, developed by BAE Systems and QinetiQ. Already deployed operationally with 9 Squadron RAF Typhoons in the Middle East as a low-cost counter-drone capability.
 - **Phase 4 Enhancement (P4E)**: four-nation upgrade (UK, Germany, Italy, Spain) in System Definition de-risking phase.
 
+## Funding (Defence Investment Plan 2026)
+
+The [[Intelligence/defence-landscape/Defence Investment Plan 2026|Defence Investment Plan 2026]] provides **a further £1.1bn** to upgrade and sustain the Typhoon force into the 2040s, including through the Long Term Evolution programme. Total Typhoon spending in the plan is **£5.4bn** over FY26/27 to FY29/30. The plan also funds the Stratus missile to arm Typhoon and the new frigates.
+
 ## Sources
 
+- [GOV.UK: The Defence Investment Plan (30 June 2026)](https://www.gov.uk/government/publications/the-defence-investment-plan), paragraph 73 and Table 7.
 - [Wikipedia: Eurofighter Typhoon](https://en.wikipedia.org/wiki/Eurofighter_Typhoon)
 - [GOV.UK: Half a billion investment to upgrade RAF Typhoons](https://www.gov.uk/government/news/half-a-a-billion-investment-to-upgrade-raf-typhoons-and-secure-1500-british-jobs)
 - [The Aviationist: New RAF Typhoon ECRS Mk2 AESA Radar Upgrade Contract Awarded](https://theaviationist.com/2026/01/22/raf-typhoon-radar-contract-awarded/)

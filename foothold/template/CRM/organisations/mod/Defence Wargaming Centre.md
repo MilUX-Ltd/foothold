@@ -7,7 +7,7 @@ status: active
 category: centre-of-excellence
 location: Dstl Portsdown West
 website: https://www.gov.uk/guidance/defence-wargaming-centre
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - wargaming

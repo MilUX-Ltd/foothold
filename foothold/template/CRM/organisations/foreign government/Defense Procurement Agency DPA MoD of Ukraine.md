@@ -3,7 +3,7 @@ type: organisation
 name: Defense Procurement Agency DPA MoD of Ukraine
 website: https://dpa.gov.ua
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - defence
   - ukraine

@@ -1,76 +1,66 @@
 ---
 type: framework
 name: G-Cloud
-current_iteration: G-Cloud 14
-g_cloud_14_supplier_count: c.5,500 suppliers (90%+ SMEs)
-g_cloud_14_lot_value: tens of billions across the framework lifetime
+current_iteration: G-Cloud 15
+reference: RM1557.15
+g_cloud_15_value: about £14bn over a four-year term
 status: active
-category: ccs
-operator: Crown Commercial Service (CCS)
+category: gca
+operator: Government Commercial Agency (GCA), formerly Crown Commercial Service
 customer: UK public sector (central government, local authorities, NHS, devolved administrations, wider public sector)
-agreement_type: framework; iterative refresh (every 9-12 months)
-service_categories: 3: Cloud Hosting (Lot 1), Cloud Software (Lot 2), Cloud Support (Lot 3)
-buying_route: Digital Marketplace, direct award after shortlisting
-website: https://www.crowncommercial.gov.uk/agreements/RM1557.14
-digital_marketplace: https://www.digitalmarketplace.service.gov.uk/g-cloud/search
-last_updated: 2026-05-20
+agreement_type: framework; four-year term, reopens to new suppliers after 18 and 36 months
+service_categories: "5 lots: 1a IaaS and PaaS; 1b IaaS and PaaS above OFFICIAL; 2a Infrastructure Software; 2b Other SaaS; 3 Cloud support"
+website: https://www.gca.gov.uk/agreements/RM1557.15
+last_updated: 2026-10-15
 tags:
   - framework
+  - gca
   - ccs
   - g-cloud
   - cloud
   - public-sector
-  - digital-marketplace
   - sme
 ---
 
-# G-Cloud (G-Cloud 14)
+# G-Cloud (G-Cloud 15)
 
 ## Summary
 
-**G-Cloud** is the Crown Commercial Service's framework for procuring cloud-based services across the UK public sector. The framework is structured around three service lots (Hosting, Software, Support) and is purchased through the **Digital Marketplace**: buyers shortlist suppliers based on standardised service descriptions and award contracts under a short, structured competition. Iterates on a regular cadence (typically every 9 to 12 months), most recently **G-Cloud 14**.
+**G-Cloud** is the government framework for buying cloud hosting, software and support across the UK public sector, run by the **Government Commercial Agency (GCA)**, which replaced Crown Commercial Service on 1 April 2026.
 
-CCS: [G-Cloud 14 agreement](https://www.crowncommercial.gov.uk/agreements/RM1557.14). Marketplace: [Digital Marketplace G-Cloud search](https://www.digitalmarketplace.service.gov.uk/g-cloud/search). Wider context: [GOV.UK: Digital Marketplace](https://www.gov.uk/digital-marketplace).
+**G-Cloud 15** launched on **10 August 2026** (agreement start 6 August 2026). GCA values it at about **£14bn over a four-year term**, with around 90% of suppliers SMEs. It absorbs **Cloud Compute 2** and lots 1 to 3 and 4 of G-Cloud 14. **G-Cloud 14 expires on 28 October 2026** and is closed to new suppliers.
 
-## Operating Model
+**If you are not on G-Cloud 15:** new and growing businesses can join during the re-opening windows. GCA's agreement page says it reopens to new suppliers after 18 months and again after 36 months.
 
-- **Three service lots.** Cloud Hosting (Lot 1, IaaS/PaaS); Cloud Software (Lot 2, SaaS); Cloud Support (Lot 3, professional services tied to cloud implementation).
-- **Standardised service descriptions.** Suppliers publish a fixed, comparable service description for each service they offer, including pricing, SLAs, security, and key features. This drives transparency and comparability across suppliers.
-- **Call-off via Digital Marketplace.** Buyers search and shortlist; they then run a short, structured competition against the shortlisted suppliers under standard framework terms.
-- **Open framework.** Iterative refreshes (G-Cloud 12, 13, 14, etc.) re-open the supplier list on each new version, so the framework supports continuous supplier entry.
-- **SME-friendly.** Over **90% of G-Cloud suppliers are SMEs** historically. The framework is the principal route for UK SMEs to sell cloud services into the public sector without needing a prime relationship.
+Agreement: [GCA: G-Cloud 15 (RM1557.15)](https://www.gca.gov.uk/agreements/RM1557.15).
 
-### G-Cloud 14 specifics
+## Operating model
 
-The most recent iteration (G-Cloud 14) has approximately **5,500 suppliers** across the three lots, the vast majority of them SMEs. Public sector buyers continue to spend at tens of billions over the framework's lifetime, with cumulative public-sector G-Cloud spend tracked publicly via the Digital Marketplace data.
-
-### Buying process
-
-1. Buyer publishes (or maintains) a clear set of cloud requirements.
-2. Buyer searches Digital Marketplace by service type, keywords, SLA, location, security level.
-3. Buyer shortlists suppliers (typically top three by relevance and value).
-4. Buyer runs a short, structured competition under G-Cloud framework terms.
-5. Award; contract under standard G-Cloud T&Cs.
+- **Five lots.** Lot 1a: IaaS and PaaS. Lot 1b: IaaS and PaaS above OFFICIAL. Lot 2a: Infrastructure Software (I-SaaS). Lot 2b: Other SaaS. Lot 3: Cloud support services.
+- **Standardised service descriptions.** Suppliers publish a fixed, comparable description of each service, including pricing, service levels, security and features.
+- **Two ways to buy.** Award without competition for straightforward, low-value needs an existing catalogue entry meets; competitive selection (two-stage or multi-stage) for complex or high-value needs. Buyers shortlist on GCA's digital platform.
+- **Call-off contracts** can run up to 60 months.
+- **SME-friendly.** The principal route for UK SMEs to sell cloud services into the public sector without a prime relationship.
 
 ## How G-Cloud sits alongside other digital frameworks
 
-- [[Intelligence/defence-landscape/Frameworks/Digital Outcomes and Specialists (DOS)|DOS (Digital Outcomes and Specialists)]]: CCS sister framework for digital outcomes, specialists, and user research; not cloud-services-specific.
-- [[Intelligence/defence-landscape/Frameworks/Technology Services (TCS)|Technology Services (TCS)]]: CCS framework covering wider technology services, including [[Intelligence/defence-landscape/Frameworks/Digital and IT Professional Services (DIPS)|DIPS]] as a Defence Digital-specific sub-lot.
+- [[Intelligence/defence-landscape/Frameworks/Digital Outcomes and Specialists (DOS)|DOS (Digital Outcomes and Specialists)]]: GCA sister framework for digital outcomes, specialists and user research; not cloud-specific.
+- [[Intelligence/defence-landscape/Frameworks/Technology Services (TCS)|Technology Services]]: GCA's wider technology services frameworks.
 - [[Intelligence/defence-landscape/Frameworks/R-Cloud|R-Cloud]]: a different thing entirely; Dstl's S&T research marketplace, not a cloud-hosting framework. The naming overlap is unfortunate.
-- **MODCloud** (operated by Defence Digital): the MOD's public cloud platform built on Azure (ACE) and AWS (ICE) up to OFFICIAL. Sits inside the MOD; G-Cloud is the framework MOD typically uses to procure the underlying cloud services that MODCloud then makes available to MOD applications.
+- **MODCloud** (operated by Defence Digital): the MOD's public cloud platform built on Azure (ACE) and AWS (ICE) up to OFFICIAL. G-Cloud is a framework MOD can use to buy the underlying cloud services.
 
 ## Source Material
 
-- CCS: [G-Cloud 14 agreement](https://www.crowncommercial.gov.uk/agreements/RM1557.14).
-- Digital Marketplace: [G-Cloud search](https://www.digitalmarketplace.service.gov.uk/g-cloud/search).
-- GOV.UK: [Digital Marketplace](https://www.gov.uk/digital-marketplace).
-- techUK: [G-Cloud and DOS Frameworks 2025 update](https://www.techuk.org/) (general industry coverage).
+- [GOV.UK: G-Cloud relaunches with biggest upgrade in its history (10 August 2026)](https://www.gov.uk/government/news/g-cloud-relaunches-with-biggest-upgrade-in-its-history): call-off contracts up to 60 months.
+- [GCA: G-Cloud 15 agreement (RM1557.15)](https://www.gca.gov.uk/agreements/RM1557.15)
+- [GOV.UK: Find contracts in technology and R&D with the MOD (updated 18 September 2026)](https://www.gov.uk/guidance/find-contracts-in-technology-and-research-and-development-with-the-ministry-of-defence): G-Cloud 14 ends 28 October 2026.
+- [GCA: Crown Commercial Service (CCS)](https://www.gca.gov.uk/about-gca/crown-commercial-service-ccs): CCS replaced by GCA on 1 April 2026.
 
 ## Related
 
 - [[Intelligence/defence-landscape/Frameworks/Frameworks Index|Frameworks Index]]: master index.
-- [[Intelligence/defence-landscape/Frameworks/Digital Outcomes and Specialists (DOS)|Digital Outcomes and Specialists (DOS)]]: sibling CCS framework (outcomes, specialists, user research).
-- [[Intelligence/defence-landscape/Frameworks/Technology Services (TCS)|Technology Services (TCS)]]: sibling CCS framework.
-- [[Intelligence/defence-landscape/Frameworks/Digital and IT Professional Services (DIPS)|Digital and IT Professional Services (DIPS)]]: TCS3 sub-lot for Defence Digital.
+- [[Intelligence/defence-landscape/Frameworks/Digital Outcomes and Specialists (DOS)|Digital Outcomes and Specialists (DOS)]]: sibling GCA framework (outcomes, specialists, user research).
+- [[Intelligence/defence-landscape/Frameworks/Technology Services (TCS)|Technology Services (TCS)]]: sibling GCA frameworks.
+- [[Intelligence/defence-landscape/Frameworks/Digital and IT Professional Services (DIPS)|Digital and IT Professional Services (DIPS)]]: MOD-only GCA framework.
 - [[Intelligence/defence-landscape/Frameworks/R-Cloud|R-Cloud]]: distinct Dstl research marketplace (despite name overlap).
 - [[Intelligence/defence-landscape/Frameworks/DDAD|DDAD]]: Defence Digital framework for AI / decision tools (different scope).

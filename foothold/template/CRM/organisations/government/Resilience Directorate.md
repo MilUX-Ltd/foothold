@@ -7,7 +7,7 @@ status: active
 owns: UK Government Resilience Framework (December 2022)
 sister_unit: Cabinet Office Briefing Rooms (COBR) Unit
 website: https://www.gov.uk/government/publications/the-uk-government-resilience-framework
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - government
   - cabinet-office

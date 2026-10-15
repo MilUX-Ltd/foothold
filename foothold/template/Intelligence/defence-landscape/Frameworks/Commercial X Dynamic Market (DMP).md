@@ -16,7 +16,7 @@ tags: [framework, defence-procurement, dynamic-market, commercial-x, innovation,
 
 ## Summary
 
-The **Commercial X Dynamic Market Place** is a Procurement Act 2023 dynamic market run by **Commercial X**, a Ministry of Defence commercial unit set up to get innovation into defence faster. Commercial X holds its own approval freedoms for contracts up to £50m and two years, and drives fast-paced acquisition of innovative and digital capability across the MOD.
+The **Commercial X Dynamic Market Place** is a Procurement Act 2023 dynamic market run by **Commercial X**, a Ministry of Defence commercial unit set up to get innovation into defence faster. Commercial X holds its own approval freedoms for contracts up to £50m and under two years, and drives fast-paced acquisition of innovative and digital capability across the MOD.
 
 Unlike a traditional framework, the Dynamic Market is not divided into lots or categories. It is an open, MOD-wide ecosystem of suppliers, organised by maturity rather than by service type. Suppliers join once and can then bid on competitions as they are published. It is built for above-threshold values, with call-offs run through the Competitive Flexible Procedure. There is no fee or levy, membership does not constitute a contract, and it carries no end date. It is deliberately SME-rich and open to consortia.
 

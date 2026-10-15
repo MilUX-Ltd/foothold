@@ -3,7 +3,7 @@ type: organisation
 name: UK Ministry of Defence
 website: https://www.gov.uk/government/organisations/ministry-of-defence
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - defence
   - government
@@ -29,7 +29,7 @@ The United Kingdom Ministry of Defence is the government department responsible 
 
 The MOD's principal civilian and joint components relevant to the defence-SME and industry ecosystem include:
 
-- **[[CRM/organisations/mod/NAD Group/NAD Group|National Armaments Director Group (NAD Group)]]** — established March 2025, restructured April 2026. Houses nine Director-General-led pillars plus the Defence Infrastructure Organisation. Includes NA-M (former DE&S), NA-D&D (former Defence Digital), NA-Innov (Dstl, UKDI, DASA, FCI, Defence Investment Unit), NA-Intl (UKDSE), NA-C&I (NSO), NA-P&P (former O&C / Gateway), NA-C (UKHO/OPA/SSRO), NA-L&S (former Defence Support), and DIO.
+- **[[CRM/organisations/mod/NAD Group/NAD Group|National Armaments Director Group (NAD Group)]]**: established March 2025. gov.uk lists nine areas: NA-M (formerly part of DE&S), NA-D&D (former Defence Digital), NA-Innov (Dstl and UKDI, which absorbed DASA), NA-Intl (UKDSE), NA-C&I (NSO), NA-P&P, NA-C (corporate functions), NA-L&S (former Defence Support), and National Armaments Infrastructure (DIO). See [[Intelligence/defence-landscape/MOD Structure|MOD Structure]].
 - **[[CRM/organisations/mod/Cyber and Specialist Operations Command|Cyber and Specialist Operations Command (CSOC)]]** — renamed from UK Strategic Command on 1 September 2025. Hosts jHub, DAIC, the Centre for Intelligence Innovation, the Defence Modelling and Simulation Office, the Integration Design Authority, the National Cyber Force, Defence Intelligence, the Military Intelligence Services, and the Defence Academy.
 - **[[CRM/organisations/mod/Defence Nuclear Organisation|Defence Nuclear Organisation (DNO)]]** — one of the seven top-level budget holders in MOD. Oversees the UK's nuclear deterrent enterprise through AWE and the Submarine Delivery Agency.
 - **British Army, Royal Navy ([[CRM/organisations/mod/Royal Navy/Royal Navy|RN]]), and Royal Air Force** — the three single Services.
@@ -39,7 +39,7 @@ The MOD's principal civilian and joint components relevant to the defence-SME an
 
 The most accessible MOD entry routes are:
 
-1. [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|UKDI / DASA]] — themed innovation competitions and open call.
+1. [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|UKDI (formerly DASA)]]: themed innovation competitions and open calls; check the [live funding opportunities](https://www.gov.uk/government/collections/live-funding-opportunities).
 2. [[CRM/organisations/mod/Defence BattleLab|Defence BattleLab]] — rapid experimentation.
 3. [[CRM/organisations/mod/jHub|jHub Defence Innovation]] — high-TRL dual-use repurposing.
 4. [[CRM/organisations/government/Defence Office for Small Business Growth|Defence Office for Small Business Growth (DOSBG)]] — MOD-side SME engagement function.

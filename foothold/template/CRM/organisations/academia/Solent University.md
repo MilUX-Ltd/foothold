@@ -3,7 +3,7 @@ type: organisation
 name: Solent University
 website: https://www.solent.ac.uk
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - higher-education
   - solent

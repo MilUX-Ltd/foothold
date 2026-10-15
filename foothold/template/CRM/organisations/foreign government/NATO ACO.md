@@ -5,7 +5,7 @@ acronym: ACO
 status: active
 category: nato-command
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [nato, operations, allied-command]
 ---
 

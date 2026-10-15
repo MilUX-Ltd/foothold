@@ -4,7 +4,7 @@ name: T&E Marketplace
 parent_programme: T&E Transformation Programme (MOD)
 status: in delivery, full launch planned end of 2026 with pilot earlier in the year
 category: centre-of-excellence
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - centre-of-excellence
@@ -31,7 +31,7 @@ The Marketplace sits inside the wider **T&E Transformation Programme**, started 
 - Give industry a place to promote their capabilities and skills.
 - Help the MOD find and make better use of the various testing ranges across the UK.
 
-The Marketplace is a Phase 2 project of the T&E Transformation Programme. The launch plan was confirmed publicly by **Caroline Kelly, MoD Assistant Head of Future Technology for the T&E Transformation Programme**, traceable to DSEI 2025 workshop coverage.
+The Marketplace is a Phase 2 project of the T&E Transformation Programme. The launch plan was confirmed publicly by the MOD's T&E Transformation Programme team, traceable to DSEI 2025 workshop coverage. The Defence Investment Plan (30 June 2026) repeats the commitment to launch an online T&E marketplace in 2026.
 
 ### Implementation timeline
 

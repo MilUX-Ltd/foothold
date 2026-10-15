@@ -8,7 +8,7 @@ status: active
 category: mod-component
 parent: UK Ministry of Defence (under Defence Science and Technology group, MOD Head Office)
 website: https://www.gov.uk/government/groups/defence-science-and-technology
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - innovation

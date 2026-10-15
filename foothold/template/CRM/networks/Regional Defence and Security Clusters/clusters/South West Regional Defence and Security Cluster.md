@@ -21,7 +21,7 @@ tags: [defence, cluster, RDSC, south-west]
 
 ## Description
 
-The SWRDSC is the first pan-Defence and Security cluster in the UK. It is a collaboration led by industry and academia, supported by government and its ministerial departments including the MoD and the Defence and Security Accelerator (DASA).
+The SWRDSC is the first pan-Defence and Security cluster in the UK. It is a collaboration led by industry and academia, supported by government and its ministerial departments including the MoD and UK Defence Innovation (UKDI, formerly DASA).
 
 The cluster seeks to aggregate and raise the profile of regional defence and security capability to stimulate greater sector knowledge, business, economic growth, and productivity across the South West region. It attracts businesses of all scales with an interest in defence and security to deliver new sector and cross-sector capability, applying a "Team UK" approach to enable more joined-up working between industry, academia, and government.
 

@@ -6,7 +6,7 @@ venue: Farnborough, Hampshire
 status: active
 operator: Farnborough International Limited (FIL); wholly-owned subsidiary of ADS Group
 website: https://www.farnboroughairshow.com
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - events
   - airshow
@@ -20,6 +20,8 @@ tags:
 The Farnborough International Airshow is one of the world's two flagship aerospace and defence trade shows (alongside the Paris Air Show). Held **biennially in even years** at **Farnborough, Hampshire**, the airshow combines a major industry trade exhibition, a flying display, a procurement-and-investment programme, and a public weekend.
 
 Run by **Farnborough International Limited (FIL)**, a wholly-owned subsidiary of [[CRM/organisations/trade bodies/ADS Group|ADS Group]].
+
+The **2026 edition ran from 20 to 24 July 2026** at the Farnborough International Exhibition and Conference Centre ([GOV.UK: FIA 2026 invitees](https://www.gov.uk/government/publications/farnborough-international-airshow-fia-2026-invitees/farnborough-international-airshow-fia-2026-invitees)). The organiser is now selling exhibition space for **FIA 2028**; check [farnboroughairshow.com](https://www.farnboroughairshow.com) for dates.
 
 Website: [farnboroughairshow.com](https://www.farnboroughairshow.com).
 

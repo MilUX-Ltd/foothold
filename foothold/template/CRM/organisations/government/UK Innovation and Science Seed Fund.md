@@ -3,7 +3,7 @@ type: organisation
 name: UK Innovation and Science Seed Fund
 status: active
 category: hmg-fund
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - hmg
   - investment

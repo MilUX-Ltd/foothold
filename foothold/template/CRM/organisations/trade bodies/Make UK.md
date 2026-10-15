@@ -5,7 +5,7 @@ status: active
 category: trade-association
 website: https://www.makeuk.org
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [trade-association, manufacturing, defence]
 ---
 

@@ -7,7 +7,7 @@ category: trade-association
 founded: 2009
 hq: Salamanca Square, London SE1 7SP
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [ads, trade-association, aerospace, defence, security, space]
 ---
 

@@ -7,7 +7,7 @@ established_as_trading_fund: 2008
 trading_fund_dissolved: 2014-12 (sold to Babcock International); residual functions continued under the DSG brand and were progressively absorbed into MOD and DE&S
 current_equivalent_for_substantive_residual: NA-M; some sustainment functions sit alongside NA-L&S
 former_website: https://www.gov.uk/government/organisations/defence-support-group
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - legacy
@@ -37,7 +37,7 @@ tags:
 | 1 April 2015 | DSG's **air division** spun off to form the **Defence Electronics and Components Agency (Deca)**, an MOD executive agency |
 | April 2023 | Deca **merged into DE&S** |
 | 1 April 2024 | Deca **full operating capability** achieved as DE&S Deca |
-| 2 April 2026 | DE&S brand retired; DE&S Core Delivery (including Deca operating centre) became [[CRM/organisations/mod/NAD Group/National Armaments Materiel (NA-M)|NA-M]]; broader support policy now in [[CRM/organisations/mod/NAD Group/National Armaments Logistics & Support (NA-L&S)|NA-L&S]] |
+| April 2026 | DE&S brand retired; DE&S Core Delivery (including Deca operating centre) became [[CRM/organisations/mod/NAD Group/National Armaments Materiel (NA-M)|NA-M]]; broader support policy now in [[CRM/organisations/mod/NAD Group/National Armaments Logistics & Support (NA-L&S)|NA-L&S]] |
 
 ## Why this page exists
 

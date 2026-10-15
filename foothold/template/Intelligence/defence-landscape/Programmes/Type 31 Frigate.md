@@ -7,7 +7,7 @@ service: Navy
 status: active
 category: surface-ship
 created: 2026-05-22
-last_reviewed: 2026-05-22
+last_reviewed: 2026-10-15
 tags: [programme, navy, type-31, inspiration-class, babcock]
 ---
 
@@ -27,10 +27,17 @@ The Type 31 Inspiration-class is a programme to build five general-purpose friga
 
 The programme sustains 2,500 highly skilled jobs (1,250 direct at Babcock Rosyth, 1,250 across the UK supply chain).
 
+## Funding (Defence Investment Plan 2026)
+
+The [[Intelligence/defence-landscape/Defence Investment Plan 2026|Defence Investment Plan 2026]] continues investment of **£1.6bn** over FY26/27 to FY29/30 to bring Type 31 into service, with lethality enhanced by Mk 41 launchers and Norwegian Naval Strike Missiles. It also funds new gun ammunition for the class.
+
+## Cost position
+
 Babcock has taken a £140 million charge against the programme in Q1 2026 owing to design changes and rework affecting the first two ships, bringing cumulative losses on the order to over £300 million.
 
 ## Sources
 
+- [GOV.UK: The Defence Investment Plan (30 June 2026)](https://www.gov.uk/government/publications/the-defence-investment-plan), paragraph 46 and Table 5.
 - [Babcock International: Type 31 programme milestones](https://www.babcockinternational.com/news/babcocks-back-to-back-milestones-signal-sustained-pace-in-type-31-programme/)
 - [Naval News: UK Type 31 Programme Rolls On with Roll-Out of Ship Two (Feb 2026)](https://www.navalnews.com/naval-news/2026/02/uk-type-31-programme-rolls-on-with-roll-out-of-ship-two/)
 - [Naval News: Babcock Launches Second Type 31 Frigate — HMS Active (Mar 2026)](https://www.navalnews.com/naval-news/2026/03/babcock-launches-second-type-31-frigate-hms-active/)

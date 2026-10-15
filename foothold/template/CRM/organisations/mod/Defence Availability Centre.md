@@ -4,7 +4,7 @@ name: Defence Availability Centre
 status: active
 category: centre-of-excellence
 caveat: limited public documentation; no dedicated gov.uk page at time of capture
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - centre-of-excellence

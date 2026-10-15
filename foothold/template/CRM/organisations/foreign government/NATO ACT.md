@@ -7,7 +7,7 @@ location: Norfolk, Virginia, USA
 status: active
 counterpart: NATO Allied Command Operations (ACO)
 website: https://www.act.nato.int/
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - nato
   - act

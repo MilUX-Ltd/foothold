@@ -6,7 +6,7 @@ venue: UTAC Millbrook, Bedfordshire
 status: active
 operator: Delivered for the National Armaments Director Group and Army Headquarters; DE&S-facing
 website: https://www.theevent.co.uk
-last_updated: 2026-06-12
+last_updated: 2026-10-15
 tags:
   - events
   - dvd
@@ -20,7 +20,7 @@ tags:
 
 DVD is the UK's biennial land-equipment exhibition, held in even years at the UTAC Millbrook proving ground in Bedfordshire. It is the land domain's counterpart to the all-domain DSEI: DE&S and British Army-facing, focused on military vehicles, mobility, and land systems. The proving-ground setting is the point of difference, with equipment demonstrated live on the test tracks rather than shown only on static stands.
 
-Sponsored by the National Armaments Director Group and Army Headquarters. The 2026 edition runs on **16 and 17 September 2026** under the theme "Connected for Combat: Aligning people, systems and decisions".
+Sponsored by the National Armaments Director Group and Army Headquarters. The 2026 edition was **held on 16 and 17 September 2026** under the theme "Connected for Combat: Aligning people, systems and decisions". On the biennial pattern the next edition is in 2028; no date had been published by October 2026.
 
 Website: [theevent.co.uk](https://www.theevent.co.uk).
 

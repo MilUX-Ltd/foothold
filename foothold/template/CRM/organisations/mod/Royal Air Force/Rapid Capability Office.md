@@ -6,7 +6,7 @@ parent_service: Royal Air Force
 status: active
 category: mod-component
 location: Cody Technology Park, Farnborough
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - raf
   - defence

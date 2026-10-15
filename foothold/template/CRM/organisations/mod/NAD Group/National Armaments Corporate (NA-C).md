@@ -10,7 +10,7 @@ status: active
 category: mod-component
 constituent_bodies: UK Hydrographic Office (UKHO); Single Source Regulations Office (SSRO); cross-cutting corporate functions
 note_opa_alignment: The Oil and Pipelines Agency (OPA) is aligned as a sponsored Public Body to NA-L&S
-last_updated: 2026-05-28
+last_updated: 2026-10-15
 tags:
   - mod
   - nad-group
@@ -61,7 +61,7 @@ Key outputs include **Admiralty charts** (SOLAS-compliant), publications, and di
 
 ### History
 
-The Admiralty's first Hydrographer was **Alexander Dalrymple**, appointed in 1795 on the order of King George III. UKHO traces its lineage to that appointment.
+UKHO traces its lineage to the appointment of the Admiralty's first Hydrographer in 1795.
 
 ---
 

@@ -67,11 +67,11 @@ Useful starting points:
 
 ## Defence-Innovation guidance
 
-- [Defence and Security Accelerator (DASA) guidance](https://www.gov.uk/government/organisations/defence-and-security-accelerator) — all DASA publication streams.
+- [UK Defence Innovation (formerly DASA) guidance](https://www.gov.uk/government/organisations/defence-and-security-accelerator) — all DASA publication streams.
 - [UKDI Standard Terms and Conditions](https://www.gov.uk/guidance/defence-and-security-accelerator-terms-and-conditions-and-contract-guidance) — post-1-July-2025 UKDI contracting terms.
-- [DASA assessment process and criteria](https://www.gov.uk/guidance/assessment-process-and-criteria).
-- [DASA ethical, legal and regulatory guidance](https://www.gov.uk/guidance/defence-and-security-accelerator-ethical-legal-and-regulatory-guidance).
-- [DASA Innovation Focus Areas](https://www.gov.uk/government/collections/defence-and-security-accelerator-dasa-innovation-focus-areas).
+- [UKDI (formerly DASA) assessment process and criteria](https://www.gov.uk/guidance/assessment-process-and-criteria).
+- [UKDI (formerly DASA) ethical, legal and regulatory guidance](https://www.gov.uk/guidance/defence-and-security-accelerator-ethical-legal-and-regulatory-guidance).
+- [UKDI (formerly DASA) Innovation Focus Areas](https://www.gov.uk/government/collections/defence-and-security-accelerator-dasa-innovation-focus-areas).
 - [Market Exploration collection](https://www.gov.uk/government/collections/market-exploration).
 
 ## Capability and acquisition

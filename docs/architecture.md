@@ -22,19 +22,22 @@ Your Pack/
 ├── Home.md
 ├── Getting Started - Your First Week.md
 ├── How to Use This Vault.md
+├── Attachments/
 ├── Capabilities and Services/
 ├── Context/
 ├── CRM/
 ├── Customer Engagements/
 ├── Daily/
 ├── Ideas/
+├── Inbox/
 ├── Initiatives/
 ├── Intelligence/
 ├── Knowledge/
 ├── Marketing/
 ├── Operations/
 ├── Resources/
-└── Skills/
+├── Skills/
+└── Templates/
 ```
 
 The pack is a flat top-level. No nested namespaces. Wikilink paths stay short and the mental model stays simple. Home.md is the live dashboard (its panels need the free Dataview plugin); the two root guides carry the first week and the working habits.
@@ -57,7 +60,7 @@ The pack is a flat top-level. No nested namespaces. Wikilink paths stay short an
 
 **Intelligence.** External-facing scanning: the defence landscape (MOD structure, frameworks, portals, programmes, the procurement playbook, funding routes, the clearance and export-control orientations), events, market, competitors. The Guide codifies the "this is for external scanning, not internal artefacts" rule so the folder stays clean.
 
-**Knowledge.** Operating rules: the rules file, frontmatter conventions, hypotheses, tagging policy. Distinct from Resources, which is your practitioner reference library. Knowledge files are policy documents your agents read at runtime.
+**Knowledge.** Operating rules: the rules file (which holds the frontmatter convention) and the tagging policy, with optional pages for hypotheses, domain notes and reviews when you need them. Distinct from Resources, which is your practitioner reference library. Knowledge files are policy documents your agents read at runtime.
 
 **Marketing.** Marketing Outputs (published artefacts and active drafts) and Newsletter content. Strategy lives in `Capabilities and Services/Internal Services/Content Pillars.md`, workflow in `Content Creation Workflow.md`, and outputs here. Marketing is a function you run.
 
@@ -67,17 +70,25 @@ The pack is a flat top-level. No nested namespaces. Wikilink paths stay short an
 
 **Skills.** The agent skills that ship with the pack, organised into `meta-skills/`, `crm-skills/`, `business-skills/`, `pm-skills/`, `ops-skills/`, `brand-skills/`, and `content-skills/`. Skills are executable. The content they draw on lives elsewhere in the vault.
 
+**Inbox.** Where new notes land before you file them. Capture first, file weekly; nothing lives here for good. Obsidian is set to create new notes here.
+
+**Attachments.** Where Obsidian saves files you paste or drop into a note. Kept small: large or sensitive files stay out of the synced vault and are linked instead.
+
+**Templates.** Note templates for the Obsidian Templates plugin, one per note type the Guides define (contact, organisation, customer engagement, initiative, idea, daily note, weekly review, meeting, marketing output, service). Not to be confused with `Resources/Templates/`, which holds document templates such as a pitch deck. The pack's `.obsidian/` settings point new notes at `Inbox/`, attachments at `Attachments/`, daily notes at `Daily/` and the template folder at `Templates/`.
+
 ## The Guide pattern
 
 Every major folder ships with a `<Folder Name> Guide.md` at its root. The Guide is the contract for what belongs in the folder.
 
-Every Guide carries five sections:
+Every Guide carries the same seven sections, in the same order:
 
 1. **Purpose.** One paragraph. What this folder is for.
 2. **Structure.** What each subfolder means.
-3. **Frontmatter.** Required and optional fields per page type.
-4. **Add discipline.** How to add new content. Points at the relevant skill if one exists.
-5. **Canonical example.** A worked reference page so you can see what good looks like.
+3. **Writing a note.** How to add new content, named for the note type (for example "Writing a contact"). Points at the relevant skill and template if one exists.
+4. **Lifecycle.** The statuses a note can take and what moves it between them, or a line saying statuses are optional.
+5. **Frontmatter.** Required and optional fields per page type, following the vault's frontmatter convention (rule R-07 in `Knowledge/rules.md`).
+6. **Canonical example.** A worked reference page or template so you can see what good looks like.
+7. **Related.** Neighbouring Guides.
 
 When you're not sure where something goes, read the relevant Guide. When you can't decide between two folders, the Guide tells you.
 
@@ -117,7 +128,7 @@ Foothold is built for a single operator working with Cowork, and that is how it 
 
 Around sixty skills ship with the pack, in seven categories. The high points:
 
-- **meta-skills.** The pack's own lifecycle and hygiene: `foothold-setup`, `foothold-update`, `daily-brief` (writes your morning brief), `curator` (a budgeted monthly hygiene sweep), `skill-safety-audit` (run on any skill from outside before it runs, no exceptions), `skill-value-review`, `prompt-master`, `process-interviewer`.
+- **meta-skills.** The pack's own lifecycle and hygiene: `foothold-setup`, `foothold-update`, `daily-brief` (writes your morning brief), `curator` (a budgeted monthly hygiene sweep), `skill-safety-audit` (run on any skill from outside before it runs, no exceptions), `skill-value-review`.
 - **crm-skills.** The high-frequency adds and their payoff: `add-contact`, `add-organisation` (carries the MOD-rebrand pattern), `add-event` (with a Chatham House Rule check at intake), `meeting-prep`, `mobilise-engagement`, and `import-relationships` for bringing your existing CRM across, connector-first, with triage.
 - **business-skills.** The defence-commercial spine: `eligibility-check` (a pre-bid go/no-go gate), `bid-response` (drafting against published evaluation criteria), `write-sow`, `cyber-essentials-ready`, `build-dpia`, `red-team-investor`, `late-payment-reminder`.
 - **pm-skills.** Twenty-six business-method reference skills: positioning, market sizing, pricing, personas, pre-mortems, and the rest of the standard toolkit.

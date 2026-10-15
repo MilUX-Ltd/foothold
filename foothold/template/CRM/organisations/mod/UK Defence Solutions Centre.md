@@ -4,11 +4,10 @@ name: UK Defence Solutions Centre
 acronym: UKDSC
 parent_partnership: Defence Growth Partnership (HMG + UK defence primes + ADS)
 status: active
-ceo: Samira Braund
 location: Farnborough, England
 staff: 14 permanent + 23 secondees from DGP companies
 website: https://www.ukdsc.org/
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - defence-industry
   - ukdsc
@@ -36,18 +35,18 @@ UKDSC exists as the **delivery vehicle for the Defence Growth Partnership**: the
 
 ### DGP membership
 
-UKDSC's 23 secondees are drawn from the 17 DGP member companies: Airbus, Atkins Global, Babcock International Group, BAE Systems, Boeing, Fujitsu, General Dynamics, GKN Aerospace, Leonardo, MBDA, Parker Meggitt, QinetiQ, Raytheon, Rolls-Royce, Spirit AeroSystems, Thales, Ultra Electronics Group, plus the Department for Business and Trade and ADS.
+UKDSC's 23 secondees are drawn from the 17 DGP member companies: Airbus, Atkins Global, Babcock International Group, BAE Systems, Boeing, Fujitsu, General Dynamics, GKN Aerospace, Leonardo, MBDA, Parker Meggitt, QinetiQ, Raytheon, Rolls-Royce, Spirit AeroSystems, Thales, Ultra Electronics Group, plus the Department for Business and Trade (now BIST) and ADS. This is the list as captured in May 2026; ukdsc.org could not be reached to re-check it in October 2026, and several of these companies have since changed name or owner.
 
 ### Where it sits
 
 - **Industrial-strategy peer of [[CRM/organisations/mod/Defence Industrial Joint Council|DIJC]].** DIJC (launched 2025) is the newer, wider-membership coordination forum that supersedes the legacy Defence Suppliers Forum.
-- **Adjacent to [[CRM/organisations/government/Department for Business and Trade|DBT]]** as the lead government department on the DGP arrangement.
+- **Adjacent to [[CRM/organisations/government/BIST|BIST (formerly DBT)]]** as the lead government department on the DGP arrangement.
 
 ## Related
 
 - [[CRM/organisations/mod/Defence Growth Partnership|Defence Growth Partnership (DGP)]]: parent partnership.
 - [[CRM/organisations/mod/Defence Industrial Joint Council|DIJC]]: newer MOD-industry coordination forum.
-- [[CRM/organisations/government/Department for Business and Trade|DBT]]: lead government department.
+- [[CRM/organisations/government/BIST|BIST (formerly DBT)]]: lead government department.
 
 ### External
 

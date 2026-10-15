@@ -15,7 +15,7 @@ tags: [defence, cluster, RDSC, scotland]
 - **Abbreviation:** Not yet established
 - **Region:** Scotland
 - **Website:** None
-- **LinkedIn:** None for the cluster. Adjacent: **DASA Scotland** showcase page at [linkedin.com/showcase/dasa-scotland](https://uk.linkedin.com/showcase/dasa-scotland/)
+- **LinkedIn:** None for the cluster. Adjacent: **DASA Scotland** showcase page (DASA is now part of UK Defence Innovation) at [linkedin.com/showcase/dasa-scotland](https://uk.linkedin.com/showcase/dasa-scotland/)
 - **Status:** Under consideration — early-stage discussions with potential partners, continuing into 2026 (per UK Parliament written evidence "Securing Scotland's Future: Defence Skills and Jobs")
 
 ## Description
