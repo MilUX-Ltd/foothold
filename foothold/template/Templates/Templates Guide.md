@@ -69,7 +69,7 @@ Some values are left empty for you to fill in. Links go in quotes, as wikilinks 
 
 ## Canonical example
 
-The Contact template, after Obsidian has filled it in for a new note called `Jane Smith`:
+The Contact template, filled in for a new note called `Jane Smith`:
 
 ```yaml
 ---

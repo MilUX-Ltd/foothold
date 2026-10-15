@@ -10,7 +10,7 @@ description: |
   around here", "walk through our process for X", or when the user describes
   a repetitive workflow and wants it captured properly.
 version: 1.0.1
-last_reviewed: 2026-07-02
+last_reviewed: 2026-10-15
 maintainer: MilUX
 license: Foothold pack, MIT
 audited: 2026-07-02
