@@ -76,6 +76,5 @@ Cranfield University hosts a separate but adjacent [Centre of Excellence in Ener
 - Henry Royce Institute: [Dstl launch £42.5M advanced materials Centre of Excellence](https://www.royce.ac.uk/news/dstl-centre-of-excellence/).
 - KCMC: [Dstl launch £42.5M advanced materials Centre of Excellence](https://www.materialschemistry.org.uk/news/2024/dstl-launch-42-5m-advanced-materials-centre-of-excellence).
 - University of Sheffield: [Sheffield to partner in new £42.5m Dstl Materials Centre of Excellence](https://www.sheffield.ac.uk/engineering/news/sheffield-partner-new-ps425m-dstl-materials-centre-excellence).
-- ADS Advance: [Dstl establishes advanced materials centre of excellence](https://www.adsadvance.co.uk/dstl-establishes-advanced-materials-centre-of-excellence.html).
 - Airforce Technology: [UK establishes 'DMEx', a £42.5m ADMs research partnership](https://www.airforce-technology.com/news/uk-establishes-dmex-a-42-5m-adms-research-partnership/).
 - Defence Online: [New advanced materials centre of excellence](https://www.defenceonline.co.uk/2024/02/05/new-advanced-materials-centre-of-excellence/).

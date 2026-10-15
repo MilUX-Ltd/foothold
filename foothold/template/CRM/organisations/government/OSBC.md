@@ -35,7 +35,7 @@ The OSBC is gaining new legislative powers to levy financial penalties against l
 
 ## Key initiatives
 
-- **Fair Payment Code** — Voluntary code for businesses committing to fair payment practices. 550+ awardees. [More info](https://www.smallbusinesscommissioner.gov.uk/fair-payment-code/).
+- **Fair Payment Code**: voluntary code for businesses committing to fair payment practices. 550+ awardees. See [smallbusinesscommissioner.gov.uk](https://www.smallbusinesscommissioner.gov.uk/).
 - **Get the Money Moving** — Webinar series launched March 2026.
 - **SME Safari** — Commissioner visits small businesses across the UK to hear directly about challenges.
 - **FUEL Roadshow** — National finance and funding roadshow for business leaders, delivered by UMi. [Register](https://www.fuelroadshow.co.uk/).

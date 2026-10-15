@@ -8,7 +8,7 @@ joined_ukdi: 2025-07-01
 status: active
 category: mod-component
 parent: "[[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|UK Defence Innovation (UKDI)]]"
-website: https://des.mod.uk/what-we-do/army-procurement-support/future-capability-innovation/
+website: https://www.gov.uk/guidance/how-to-work-with-uk-defence-innovation-ukdi
 last_updated: 2026-10-15
 tags:
   - mod
@@ -30,7 +30,7 @@ FCI's positioning is distinct from UKDI's competition routes (formerly DASA) and
 
 ### Stated focus areas
 
-Per [des.mod.uk: Future Capability Innovation](https://des.mod.uk/what-we-do/army-procurement-support/future-capability-innovation/) and the [gov.uk UKDI guidance](https://www.gov.uk/guidance/a-new-era-for-defence-innovation-dasa-diu-and-des-fci-unite-under-uk-defence-innovation-ukdi):
+Per the former des.mod.uk FCI page (no longer online) and the [gov.uk UKDI guidance](https://www.gov.uk/guidance/a-new-era-for-defence-innovation-dasa-diu-and-des-fci-unite-under-uk-defence-innovation-ukdi):
 
 - Novel, disruptive, complex, and cross-cutting technology risks and opportunities.
 - Data insights and capability advantage to Front Line Commands.
@@ -61,7 +61,6 @@ This consolidation is the headline structural change in UK defence innovation si
 ### External
 
 - GOV.UK: [A new era for Defence Innovation: DASA, DIU and DE&S FCI unite under UK Defence Innovation (UKDI)](https://www.gov.uk/guidance/a-new-era-for-defence-innovation-dasa-diu-and-des-fci-unite-under-uk-defence-innovation-ukdi), 1 July 2025.
-- DE&S: [Future Capability Innovation](https://des.mod.uk/what-we-do/army-procurement-support/future-capability-innovation/).
 - GOV.UK press release: [Launch of new body to harness innovative tech for the UK's Armed Forces](https://www.gov.uk/government/news/launch-of-new-body-to-harness-innovative-tech-for-the-uks-armed-forces), 1 July 2025.
 - RUSI commentary: [Same, Same but Different? Launching UK Defence Innovation](https://www.rusi.org/explore-our-research/publications/commentary/same-same-different-launching-uk-defence-innovation).
 - Taylor Wessing: [Boosting defence innovation: UK government consolidates efforts under UKDI](https://www.taylorwessing.com/en/insights-and-events/insights/2025/07/boosting-defence-innovation).

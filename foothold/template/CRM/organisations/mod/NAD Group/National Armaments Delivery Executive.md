@@ -50,7 +50,6 @@ DE&S transitioned to its new Operating Model on 28 March 2025. NADEx carries tha
 
 - Prospect: [Prospect launches new MoD branch amid defence reform changes](https://prospect.org.uk/news/prospect-launches-new-mod-branch-amid-defence-reform-changes) (confirms DE&S renamed to NADEx, April 2026).
 - DE&S: [About DE&S](https://des.mod.uk/who-we-are/), corporate site retained for operating-model documentation.
-- DE&S: [Operating model](https://des.mod.uk/tag/operating-model/).
 - DE&S: [DE&S transition milestone puts operational excellence at its core](https://des.mod.uk/des-transition-milestone-puts-operational-excellence-at-its-core/).
 - DE&S: [Standing up the Gateway](https://des.mod.uk/standing-up-the-gateway/).
 - GOV.UK: [Defence Equipment and Support Framework Document v1.0 (May 2014, PDF)](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/311029/20140513-des-framework-document-v1-May-2014.pdf).
