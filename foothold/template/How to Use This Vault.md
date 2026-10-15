@@ -35,7 +35,7 @@ Two review habits, one small and constant, one weekly.
 
 **Self-review before completion.** Before any piece of work is finished, ask Claude to review it against what you actually asked for and offer improvements: "before we call this done, check it against the brief and tell me what you'd improve." It routinely catches what the first pass missed, and it costs one sentence. For anything going to a customer or the public, you are the final gate; nothing external should ship without your eyes on it.
 
-**Retrospectives.** Once a week or so, look back with Claude: what went well, what did not, and what one improvement follows. The output is never just a feeling; it is a change somewhere permanent: a new rule in `Knowledge/rules.md`, an amended skill, a schedule adjusted, a Context page corrected. An improvement that is neither made nor written down is lost, and the next retrospective finds the same problem waiting.
+**Retrospectives.** Once a week or so, look back with Claude: what went well, what did not, and what one improvement follows. The output is never just a feeling; it is a change somewhere permanent: a new rule in `Knowledge/rules.md`, an amended skill, a schedule adjusted, a Context page corrected. The Weekly Review template in `Templates/` gives the review a shape. An improvement that is neither made nor written down is lost, and the next retrospective finds the same problem waiting.
 
 ## Where this ends up
 
@@ -46,3 +46,4 @@ Follow these four habits and the trajectory is predictable. In week one the vaul
 - [[Getting Started - Your First Week]] for week one, day by day.
 - `CLAUDE.md` at the vault root for the working conventions the agents follow.
 - The per-folder Guides for where everything lives and why.
+- `Inbox/` for quick capture, filed weekly, and `Templates/` for the note templates that keep each kind of page the same shape.

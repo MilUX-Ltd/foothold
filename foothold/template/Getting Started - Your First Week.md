@@ -15,6 +15,7 @@ If you asked setup to schedule a check-in, Cowork will nudge you in a week. If y
 
 - [ ] Read `Context/{{pack_owner}}.md` and `Context/{{pack_org}}.md`. Onboarding wrote these from your answers; fix anything it got wrong. Everything agents do for you starts from these pages, so accuracy here pays compound interest.
 - [ ] Skim the four load-bearing Guides: Knowledge, Operations, Context, CRM. Ten minutes total; you now know where everything lives.
+- [ ] Note two habits. Quick captures land in `Inbox/`, and you file them once a week. New pages start from a template: run "Insert template" from the command palette and pick one from `Templates/`.
 
 ## Day 2: bring your relationships in
 
