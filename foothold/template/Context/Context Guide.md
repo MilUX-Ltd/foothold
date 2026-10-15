@@ -30,7 +30,7 @@ Context/
 
 **Brand.md.** Brand positioning. What the brand stands for, who it's for, the value proposition, the strapline, any verbal-identity rules (preferred words, banned words, tone notes). Brand voice deviations or evolving conventions that agents need to internalise belong in `Knowledge/domains/brand.md` (an optional page; see the [[Knowledge/Knowledge Guide|Knowledge Guide]]) rather than here; this page is the public-facing positioning.
 
-**Strategy.md.** Current strategic posture. Where the organisation is going, what bets it's making, the BHAG if you have one. Updated quarterly at most. Agents read this when they need to align a piece of work to current direction.
+**Strategy.md.** Current strategic posture. Where the organisation is going, what bets it's making, the BHAG if you have one. Revisited at least quarterly. Agents read this when they need to align a piece of work to current direction.
 
 **Team.md.** Who works in the organisation, in what role. Roles and responsibilities. The page is small because the organisation is small; if it grows past a handful of people, consider splitting team biographies into `Context/team/` as a subfolder.
 

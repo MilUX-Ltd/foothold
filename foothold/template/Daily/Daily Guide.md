@@ -25,7 +25,7 @@ Daily/
 
 Flat folder. One file per day, named `YYYY-MM-DD.md`. ISO date format only. The flatness matters: Dataview and similar plugins query daily notes much more easily when they share a single folder.
 
-Weekly or monthly reviews can go in `Daily/Reviews/`, one file per period, named `YYYY-Www.md` (`2026-W21.md`), if the cadence justifies it. Keep daily notes themselves at the root.
+Weekly reviews can go in `Daily/Reviews/`, one file per week, named `YYYY-Www.md` (`2026-W21.md`), if the cadence justifies it. Keep daily notes themselves at the root.
 
 ## Writing a daily note
 

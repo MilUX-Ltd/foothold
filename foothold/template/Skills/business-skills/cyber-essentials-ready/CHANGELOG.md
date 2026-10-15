@@ -22,7 +22,7 @@ Changed:
 - Verify mode re-asks the auto-fail questions on every run, and treats an auto-fail condition as red on its own. The monthly cadence is now tied to the April 2026 change to the signed director's declaration, which acknowledges staying compliant across the whole certification period.
 - `manifest.json` carries `requirements_doc` and `question_set_effective` alongside the question set name, and the out-of-scope list names cloud service MFA as an auto-fail item.
 
-Re-audited with `skill-safety-audit` v3 on 8 September 2026 under R-28, both pack copies, verdict **PASS**. Report in the MilUX vault at `Skills/Skill Safety Audit - cyber-essentials-ready 1.1.0 2026-09-08.md`.
+Re-audited with `skill-safety-audit` v3 on 8 September 2026 across both pack copies, verdict **PASS**. Audit report held by the maintainer.1.0 2026-09-08.md`.
 
 Two findings were raised and fixed during that audit, before this version was issued:
 

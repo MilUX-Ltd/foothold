@@ -27,7 +27,7 @@ Add more subfolders if you produce other artefact types regularly (white papers,
 
 ## Lifecycle
 
-`status:` runs `draft` -> `scheduled` -> `published`. A piece moves on when you decide to schedule or publish it; set `published:` and `published_url:` at the same time. The "Latest published" panel on `Home.md` lists pages with `status: published`.
+`status:` runs `draft` -> `scheduled` -> `published` (case studies skip `scheduled`: `draft` -> `published`). A piece moves on when you decide to schedule or publish it; set `published:` and `published_url:` at the same time. The "Latest published" panel on `Home.md` lists pages with `status: published`.
 
 ## Frontmatter
 
