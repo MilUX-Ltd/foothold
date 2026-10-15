@@ -4,13 +4,13 @@ name: Defence Safety Authority
 acronym: DSA
 status: active
 category: mod-regulator
-established: 2015-04-01 (following Lord Levene's 2011 Defence Reform recommendation)
+established: 2015-04-01 (following the 2011 Defence Reform report)
 charter_signatory: Secretary of State for Defence
 led_by: Director General DSA (DG DSA), personally appointed by the Secretary of State for Defence
 independence_basis: operational independence from MOD activity holders; charter-based remit; right of direct access to SofS
 current_charter: DSA Charter 2023
 website: https://www.gov.uk/government/organisations/defence-safety-authority
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - regulator
@@ -60,7 +60,7 @@ The DSA Charter sets out the independence model:
 
 ## Notable historical context
 
-The DSA's creation was driven by the **Lord Levene 2011 report** on Defence Reform, which followed the **Haddon-Cave Nimrod Review** (2009) for aviation. The cross-domain pattern that emerged was: bring the named safety regulators under one independent organisation, with charter-backed independence and a personal Secretary of State link for the DG.
+The DSA's creation was driven by the **2011 Defence Reform report**, which followed the **Nimrod Review** (2009) for aviation. The cross-domain pattern that emerged was: bring the named safety regulators under one independent organisation, with charter-backed independence and a personal Secretary of State link for the DG.
 
 The Commons Defence Committee report *Beyond endurance? Military exercises and the duty of care* references the DSA structure in the context of training-accident investigation.
 

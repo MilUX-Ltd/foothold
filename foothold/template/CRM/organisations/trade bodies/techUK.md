@@ -5,7 +5,7 @@ website: https://www.techuk.org
 status: active
 category: trade-association
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [trade-association, technology, defence, cyber-security, national-security]
 ---
 
@@ -51,7 +51,6 @@ Sub-group representing SME members to wider industry and government, including m
 - [National Security programme](https://www.techuk.org/developing-markets/national-security.html)
 - [techUK SDR submission](https://www.techuk.org/resource/techuk-strategic-defence-review-submission-published.html)
 - [Membership benefits](https://www.techuk.org/who-we-are/become-a-member.html)
-- [Member directory](https://www.techuk.org/who-we-are/member-company-directory.html)
 
 ## Related
 

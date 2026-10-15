@@ -4,7 +4,7 @@ name: University of Manchester
 website: https://www.manchester.ac.uk
 status: active
 russell_group: yes
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - academia
   - russell-group

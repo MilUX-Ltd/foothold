@@ -5,10 +5,10 @@ acronym: DIJC
 predecessor: Defence Suppliers Forum
 established: First meeting June 2025
 parent: UK Ministry of Defence
-co_chairs: Luke Pollard MP (Minister for Defence Readiness and Industry) and Dr Charles Woodburn (CEO BAE Systems)
+co_chairs: a Defence minister and an industry chief executive
 status: active
 website: https://www.gov.uk/government/groups/defence-industrial-joint-council
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - mod
   - dijc
@@ -19,7 +19,7 @@ tags:
 
 # Defence Industrial Joint Council (DIJC)
 
-The MOD's main strategic mechanism for defence-sector engagement under the **Defence Industrial Strategy 2025**. Replaces the former **Defence Suppliers Forum** with a deliberately wider membership: SMEs, investors, academia, technologists, trade unions, and trade associations alongside the primes. Co-chaired by the **Minister for Defence Readiness and Industry** (Luke Pollard MP) and the **CEO of BAE Systems** (Dr Charles Woodburn).
+The MOD's main strategic mechanism for defence-sector engagement under the **Defence Industrial Strategy 2025**. Replaces the former **Defence Suppliers Forum** with a deliberately wider membership: SMEs, investors, academia, technologists, trade unions, and trade associations alongside the primes. Co-chaired by a Defence minister and an industry chief executive. The Defence Investment Plan (30 June 2026) describes the DIJC as the body dedicated to delivering the DIS at pace with industry, academia, primes, SMEs, investors and trade unions.
 
 GOV.UK: [Defence Industrial Joint Council](https://www.gov.uk/government/groups/defence-industrial-joint-council); [First meeting news, 23 June 2025](https://www.gov.uk/government/news/first-meeting-of-defence-industry-body-to-forge-new-partnership-and-industry-mobilisation).
 

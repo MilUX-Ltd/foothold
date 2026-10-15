@@ -4,7 +4,7 @@ name: Farnborough Aerospace Consortium
 short-name: FAC
 website: https://www.fac.org.uk
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - aerospace
   - defence

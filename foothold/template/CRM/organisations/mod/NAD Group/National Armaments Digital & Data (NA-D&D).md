@@ -10,7 +10,7 @@ website: https://www.gov.uk/government/groups/defence-digital
 renamed: 2026-04-13
 sites: MOD Corsham (primary); MoD Main Building, Whitehall
 customer_share: c.62% of total UK Defence SITS spend (TechMarketView estimate, 2025)
-last_updated: 2026-05-28
+last_updated: 2026-10-15
 tags:
   - mod
   - data

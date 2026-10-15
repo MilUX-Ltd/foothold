@@ -10,7 +10,7 @@ category: mod-component
 renamed: 2026-04-13
 constituent_bodies: National Shipbuilding Office (NSO); Defence Intellectual Property Rights Group; broader defence-industry commercial relationships
 sponsored_public_bodies: Octric Semiconductors; Ploughshare
-last_updated: 2026-05-28
+last_updated: 2026-10-15
 tags:
   - mod
   - nad-group
@@ -54,11 +54,11 @@ The NSO is hosted by the MOD with an outward-facing remit across other governmen
 - HM Treasury.
 - Home Office.
 - Cabinet Office.
-- BEIS (now part of DSIT and DBT).
+- BEIS (its business and science functions now sit in the Department for Business, Innovation, Science and Trade, BIST).
 - DEFRA.
 - FCDO.
 - Department for Transport.
-- Department for International Trade (now DBT).
+- Department for International Trade (became DBT in 2023; renamed BIST in July 2026).
 - Department for Education.
 - The Devolved Administrations.
 

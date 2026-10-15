@@ -8,7 +8,7 @@ status: active
 technical_authority: one of three UK National Technical Authorities (with NCSC and NPSA)
 website: https://www.fcdoservices.gov.uk/uk-nace/
 gov_uk: https://www.gov.uk/government/organisations/uk-national-authority-for-counter-eavesdropping
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - government
   - fcdo

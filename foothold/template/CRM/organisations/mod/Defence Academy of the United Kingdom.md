@@ -7,6 +7,7 @@ parent: Ministry of Defence
 website: https://www.da.mod.uk
 status: active
 created: 2026-05-20
+last_reviewed: 2026-10-15
 tags:
   - defence
   - government

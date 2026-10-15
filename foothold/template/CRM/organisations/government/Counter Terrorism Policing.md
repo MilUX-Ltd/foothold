@@ -7,7 +7,7 @@ status: active
 operating_model: national network of regional Counter Terrorism Units (CTUs) coordinated by CTP HQ
 also_owns: NaCTSO (running ProtectUK)
 website: https://www.counterterrorism.police.uk/
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - government
   - home-office

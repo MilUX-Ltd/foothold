@@ -9,7 +9,7 @@ policy_framework: Joint Service Publication (JSP) 920
 extant_standards: c.900 Defence Standards (Def Stans), four-year review cycle
 website: https://www.gov.uk/guidance/uk-defence-standardization
 external_portal: https://www.dstan.mod.uk/
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - standardisation

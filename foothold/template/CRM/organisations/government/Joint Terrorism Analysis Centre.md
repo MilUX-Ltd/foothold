@@ -4,7 +4,7 @@ name: Joint Terrorism Analysis Centre
 acronym: JTAC
 status: active
 category: hmg-body
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - hmg
   - intelligence

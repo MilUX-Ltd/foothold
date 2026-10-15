@@ -9,7 +9,7 @@ category: mod-component
 mod_ownership_from: 2021-07
 locations: AWE Aldermaston (Berkshire, c.750 acres); AWE Burghfield
 website: https://www.gov.uk/government/organisations/atomic-weapons-establishment
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - nuclear

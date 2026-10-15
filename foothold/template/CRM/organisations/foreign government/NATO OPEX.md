@@ -7,7 +7,7 @@ location: Norfolk, Virginia, USA (HQ SACT)
 status: active
 focus: controlled experimentation to test concepts before committing significant resources
 website: https://www.act.nato.int/activities/allied-command-transformations-innovation/experimentation-and-demonstration
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - nato
   - act

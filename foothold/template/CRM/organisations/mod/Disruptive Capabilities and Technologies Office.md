@@ -8,7 +8,7 @@ parent_cluster: Navy Innovation
 status: active
 category: mod-component
 website: https://www.royalnavy.mod.uk/news/2025/april/29/20250430-creation-of-dcto
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - navy

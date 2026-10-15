@@ -7,7 +7,7 @@ status: active
 category: mod-component
 policy_framework: JSP 939
 website: https://www.gov.uk/government/collections/defence-modelling-and-simulation-coherence
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - modelling

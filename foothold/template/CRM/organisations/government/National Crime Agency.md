@@ -7,7 +7,7 @@ status: active
 established: 7 October 2013 (under the Crime and Courts Act 2013)
 website: https://www.nationalcrimeagency.gov.uk/
 gov_uk: https://www.gov.uk/government/organisations/national-crime-agency
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - government
   - home-office

@@ -4,6 +4,7 @@ category: defence-landscape
 parent: "[[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]]"
 status: active
 created: 2026-05-20
+last_reviewed: 2026-10-15
 tags:
   - defence-procurement
   - security
@@ -36,7 +37,7 @@ UK security and intelligence organisations relevant to defence technology and in
 - [[CRM/organisations/government/National Security Secretariat|National Security Secretariat (NSS)]] — Cabinet Office secretariat supporting the National Security Council and National Security Adviser.
 - [[CRM/organisations/government/Resilience Directorate|Resilience Directorate]] — Cabinet Office; owns the UK Government Resilience Framework.
 - [[CRM/organisations/government/UK Integrated Security Fund|UK Integrated Security Fund (UKISF)]] — Cabinet Office cross-government security funding pot; CSSF successor.
-- [[CRM/organisations/government/National Security Online Information Team|National Security Online Information Team (NSOIT)]] — DSIT-housed lead on mis- and disinformation that touches national security.
+- [[CRM/organisations/government/National Security Online Information Team|National Security Online Information Team (NSOIT)]] — lead on online mis- and disinformation that touches national security. Previously in DSIT; parent under review following the July 2026 machinery of government changes.
 
 ## Counter-terrorism delivery
 
@@ -54,9 +55,10 @@ UK security and intelligence organisations relevant to defence technology and in
 
 For SMEs working in the security space:
 
-- **Security Clearance (SC)** — required for OFFICIAL-SENSITIVE and above.
-- **Developed Vetting (DV)** — required for SECRET and above.
-- **List X** — facility vetting for handling classified information on company premises.
+- **Security Check (SC)**: regular, uncontrolled access to SECRET assets. The level most supplier roles mean by "clearance".
+- **Developed Vetting (DV)**: frequent, uncontrolled access to TOP SECRET.
+- Detail, timescales and current changes to vetting: [[Intelligence/defence-landscape/Security Clearance Primer|Security Clearance Primer]]. Source: gov.uk [national security vetting clearance levels](https://www.gov.uk/government/publications/united-kingdom-security-vetting-clearance-levels/national-security-vetting-clearance-levels).
+- **Facility Security Clearance (FSC, formerly List X)**: company-level clearance for holding classified information on your own premises.
 - **Cyber Essentials / Cyber Essentials Plus** — baseline cyber security certification.
 - [[Intelligence/defence-landscape/Frameworks/JOSCAR|JOSCAR]] — Joint Supply Chain Accreditation Register.
 
