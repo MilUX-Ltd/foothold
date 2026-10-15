@@ -5,13 +5,11 @@ acronym: IISS
 status: active
 category: think-tank
 founded: 1958
-director_general_and_ceo: Bastian Giegerich
-executive_chairman: Sir John Chipman
 hq: Arundel House, London
 flagship_publication: The Military Balance (annual since 1959)
 website: https://www.iiss.org/
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-10-15
 tags: [think-tank, strategy, london, iiss, military-balance]
 ---
 
@@ -23,8 +21,6 @@ tags: [think-tank, strategy, london, iiss, military-balance]
 - **Sector:** Strategic studies think tank.
 - **HQ:** Arundel House, London (since 1997).
 - **Founded:** 1958, as the Institute for Strategic Studies (ISS). Renamed IISS in 1971.
-- **Director-General and CEO:** Bastian Giegerich.
-- **Executive Chairman:** Sir John Chipman.
 - **Self-described:** "The world's leading authority on political-military conflict."
 
 ## What IISS does

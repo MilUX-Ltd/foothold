@@ -13,7 +13,7 @@ annual_programme_value: c.£13 billion
 new_operating_model_live: 2025-03-28
 customer_of: UK MoD
 website: https://des.mod.uk/
-last_updated: 2026-05-28
+last_updated: 2026-10-15
 tags:
   - mod
   - procurement
@@ -76,7 +76,6 @@ NA-M is also the operating customer for the [[Intelligence/defence-landscape/Fra
 
 - DE&S corporate: [des.mod.uk](https://des.mod.uk/).
 - DE&S: [About DE&S](https://des.mod.uk/who-we-are/).
-- DE&S: [Operating model](https://des.mod.uk/tag/operating-model/).
 - DE&S: [Annual Report and Accounts 2024 to 2025 (PDF)](https://assets.publishing.service.gov.uk/media/687e4dfe8adf4250705c96ca/Defence_Equipment___Support_annual_report_and_accounts_2024_to_2025__print_ready_.pdf).
 - GOV.UK: [Defence Equipment and Support Framework Document v1.0 (May 2014, PDF)](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/311029/20140513-des-framework-document-v1-May-2014.pdf).
 - Wikipedia: [DE&S](https://en.wikipedia.org/wiki/DE&S).

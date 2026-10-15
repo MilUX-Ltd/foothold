@@ -4,6 +4,7 @@ name: Defence BattleLab
 location: Dorset Innovation Park, Winfrith
 status: active
 created: 2026-05-20
+last_reviewed: 2026-10-15
 tags:
   - mod
   - defence

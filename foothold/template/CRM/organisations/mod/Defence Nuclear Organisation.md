@@ -5,12 +5,12 @@ acronym: DNO
 status: active
 category: mod-component
 established: 2016
-led_by: Madelaine McTernan CB (Chief of Defence Nuclear)
+led_by: Chief of Defence Nuclear
 headcount: 750+
 locations: MOD Main Building London (HQ); Bristol; Reading; Scotland
 budget_status: one of seven top-level budget holders within UK MOD
 website: https://www.gov.uk/government/organisations/defence-nuclear-organisation
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - nuclear
@@ -36,7 +36,7 @@ DNO oversees the MOD's Defence Nuclear Enterprise (DNE), responsible for:
 
 ### Leadership
 
-Led by the **Chief of Defence Nuclear, Madelaine McTernan CB**.
+Led by the **Chief of Defence Nuclear**.
 
 ### Headcount and locations
 

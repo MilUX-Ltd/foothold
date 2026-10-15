@@ -10,7 +10,7 @@ brand_status: retained through 13 April 2026 NAD reorganisation
 website: https://www.gov.uk/government/organisations/defence-infrastructure-organisation
 blog: https://insidedio.blog.gov.uk/
 office: St George's House, DMS Whittington, Lichfield, Staffordshire, WS14 9PY
-last_updated: 2026-05-28
+last_updated: 2026-10-15
 tags:
   - mod
   - nad-group
@@ -31,7 +31,7 @@ The MOD's estate expert. Plans, builds, maintains, and services the infrastructu
 
 Under the new NAD Group operating model, Defence Infrastructure runs as a dedicated **Infrastructure Function**. Work splits between new capital projects and maintenance and sustainment of the existing estate.
 
-Led by the **DG Infrastructure**, who is also the DIO Chief Executive (see [GOV.UK profile](https://www.gov.uk/government/people/mike-green)). The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
+Led by the **DG Infrastructure**, who is also the DIO Chief Executive. The mix of role titles below DG level ('Deputy Director', 'Head of', 'Lead') reflects current local nuances across the Group and will be standardised as the new operating conditions are confirmed.
 
 GOV.UK: [Defence Infrastructure Organisation](https://www.gov.uk/government/organisations/defence-infrastructure-organisation); [About DIO](https://www.gov.uk/government/organisations/defence-infrastructure-organisation/about). Blog: [Inside DIO](https://insidedio.blog.gov.uk/).
 

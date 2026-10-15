@@ -7,7 +7,7 @@ category: mod-component
 current_programme: Future Commando Force (FCF)
 fcf_investment: £200m+ across the next decade
 website: https://www.royalnavy.mod.uk/organisation/royal-marines
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - navy

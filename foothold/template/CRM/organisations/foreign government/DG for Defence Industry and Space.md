@@ -4,7 +4,7 @@ name: DG for Defence Industry and Space
 acronym: DG DEFIS
 status: active
 category: eu-body
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - eu
   - european-commission

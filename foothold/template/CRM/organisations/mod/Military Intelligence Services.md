@@ -6,10 +6,10 @@ parent: "[[CRM/organisations/mod/Cyber and Specialist Operations Command|Cyber a
 status: active
 category: mod-component
 launched: 2025-12-16
-led_by: Chief of Defence Intelligence (Adrian Bird)
+led_by: Chief of Defence Intelligence
 underpinned_by: Defence Intelligence Charter
 website: https://www.gov.uk/government/groups/military-intelligence-services
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - intelligence
@@ -41,7 +41,7 @@ MIS brings together the previously-separate intelligence units from:
 
 ### Leadership
 
-Led by the **Chief of Defence Intelligence (Adrian Bird)**, underpinned by the **Defence Intelligence Charter**.
+Led by the **Chief of Defence Intelligence**, underpinned by the **Defence Intelligence Charter**.
 
 ### Disciplines covered
 

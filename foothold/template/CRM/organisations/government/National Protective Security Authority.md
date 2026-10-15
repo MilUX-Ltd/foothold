@@ -5,7 +5,7 @@ acronym: NPSA
 status: active
 category: hmg-body
 website: https://www.gov.uk/government/organisations/national-protective-security-authority
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - hmg
   - protective-security

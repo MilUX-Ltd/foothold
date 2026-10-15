@@ -12,7 +12,7 @@ full_operating_capability_post_merger: 2024-04-01
 primary_site: MOD Sealand (Deeside, Flintshire); also MOD Stafford
 global_role: F-35 Lightning II global repair hub
 website: https://www.gov.uk/government/organisations/defence-electronics-and-components-agency
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - mod
   - electronics

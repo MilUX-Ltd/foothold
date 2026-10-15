@@ -7,7 +7,7 @@ supports: National Security Adviser and National Security Council
 established: 2010 (alongside the NSC)
 status: active
 website: https://www.gov.uk/government/groups/national-security-council
-last_updated: 2026-05-22
+last_updated: 2026-10-15
 tags:
   - government
   - cabinet-office
@@ -25,7 +25,7 @@ GOV.UK: [National Security Council](https://www.gov.uk/government/groups/nationa
 
 ## Role in the landscape
 
-The NSS supports the apex of the UK's national-security machinery: the NSC chaired by the Prime Minister and the National Security Adviser who advises the PM and Cabinet. The NSC was established by Prime Minister David Cameron on **12 May 2010** and formalised national-security decision-making that had previously sat in informal official-level groups.
+The NSS supports the apex of the UK's national-security machinery: the NSC chaired by the Prime Minister and the National Security Adviser who advises the PM and Cabinet. The NSC was established on **12 May 2010** and formalised national-security decision-making that had previously sat in informal official-level groups.
 
 ### What the NSC and NSA do
 

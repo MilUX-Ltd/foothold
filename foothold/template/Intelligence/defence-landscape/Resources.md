@@ -4,6 +4,7 @@ category: defence-landscape
 parent: "[[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]]"
 status: active
 created: 2026-05-20
+last_reviewed: 2026-10-15
 tags:
   - defence-procurement
   - resources
@@ -37,15 +38,16 @@ Useful resources, portals, networks, and guidance for defence technology start-u
 
 - AWE: The Urban Series 2022-24.
 - AWE: Sustain and Protect (video).
-- DASA explainer videos.
+- UKDI (formerly DASA) explainer videos and guidance: start with [How to work with UKDI](https://www.gov.uk/guidance/how-to-work-with-uk-defence-innovation-ukdi).
 - Defence Innovation Priority documents.
 
 ## Things to Read
 
 - The Hitchhiker's Guide to the Valley of Death (defence-SME procurement primer).
-- MOD SME Action Plan.
+- [MOD SME Action Plan](https://www.gov.uk/government/publications/mod-small-and-medium-sized-enterprise-sme-action-plan) (21 July 2026).
 - Strategic Defence Review (SDR) outcomes.
-- Defence and Security Industrial Strategy (DSIS).
+- Defence Industrial Strategy 2025 (it replaced the 2021 Defence and Security Industrial Strategy, DSIS).
+- [The Defence Investment Plan](https://www.gov.uk/government/publications/the-defence-investment-plan) (30 June 2026); see [[Intelligence/defence-landscape/Defence Investment Plan 2026|Defence Investment Plan 2026]].
 - NATO Rapid Adoption Action Plan (summary).
 - Defence Science & Technology Portfolio overview.
 
@@ -54,9 +56,9 @@ Useful resources, portals, networks, and guidance for defence technology start-u
 New to defence? The biggest early risk is rarely the technology. It is misreading how the market works: who decides versus who talks, how funding differs from procurement, and why a single pitch fails across operators, programme managers, and buyers, who each judge you on different things. Start with the free routes:
 
 - The Hitchhiker's Guide to the Valley of Death (listed above), the SME procurement primer.
-- DASA explainer videos and engagement events.
+- UKDI (formerly DASA) guidance and engagement events.
 - The BattleLab Co-Collaboration Space and your [[CRM/networks/Regional Defence and Security Clusters/Regional Defence and Security Clusters|Regional Defence and Security Cluster]], where much of the orientation happens in person.
-- The MOD SME Action Plan, the Strategic Defence Review, and the Defence and Security Industrial Strategy for the policy backdrop.
+- The MOD SME Action Plan (2026), the Strategic Defence Review, the Defence Industrial Strategy 2025 and the Defence Investment Plan for the policy backdrop.
 
 A paid option, worth a focused month on the free trial:
 
@@ -66,18 +68,18 @@ A paid option, worth a focused month on the free trial:
 
 1. Register on [[Intelligence/defence-landscape/Portals/Helios SME Portal|Helios SME Portal]] (JOSCAR).
 2. Set up alerts on [[Intelligence/defence-landscape/Portals/Contracts Finder|Contracts Finder]].
-3. Attend DASA engagement events.
+3. Attend UKDI engagement events, or ask a UKDI Innovation Partner for advice.
 4. Join BattleLab Co-Collaboration Space.
 5. Apply to NATO DIANA challenges.
-6. Connect with Regional Innovation Partners.
+6. Connect with your Regional Defence and Security Cluster.
 7. Attend DSEI and other defence exhibitions.
 
 ## Things to Monitor
 
-- DASA competition launches.
+- UKDI [live funding opportunities](https://www.gov.uk/government/collections/live-funding-opportunities).
 - MOD Acquisition Pipeline updates.
 - Defence Committee reports.
-- SDR implementation announcements.
+- SDR implementation announcements and the Defence Investment Plan's annual delivery update (the first is due by July 2027).
 - NATO DIANA challenge cycles.
 
 ## Trade Associations
@@ -103,7 +105,7 @@ Defence and security policy research organisations providing analysis, reports, 
 ## Clearances, Regulations and Compliance
 
 - **Security Clearance (SC / DV)** — personnel vetting.
-- **List X** — facility vetting for classified work.
+- **Facility Security Clearance (FSC, formerly List X)**: company-level clearance for classified work on your premises.
 - **Cyber Essentials / CE+** — baseline cyber security.
 - [[Intelligence/defence-landscape/Frameworks/JOSCAR|JOSCAR]] — supply-chain accreditation.
 - **ITAR** — US International Traffic in Arms Regulations.

@@ -2,7 +2,7 @@
 type: reference
 status: active
 created: 2026-07-02
-last_reviewed: 2026-07-02
+last_reviewed: 2026-10-15
 tags: [reading-list, uk-defence, reference]
 ---
 
@@ -14,13 +14,14 @@ What to read to get up to speed on the UK defence landscape, sorted by type rath
 
 - **Strategic Defence Review 2025** (gov.uk). The document reshaping everything else on this list. Read the summary at minimum; the landscape pages in this vault describe the world it created.
 - **Defence Industrial Strategy 2025** (gov.uk). How the government intends to treat industry, including SMEs; the source of the SME targets and the DIJC.
-- **Defence Investment Plan** (gov.uk). Where the money is actually going. Read alongside the [[Intelligence/defence-landscape/Portals/MOD Acquisition Pipeline|MOD Acquisition Pipeline]] to see spend turning into tenders.
+- **[The Defence Investment Plan](https://www.gov.uk/government/publications/the-defence-investment-plan)** (MOD and HM Treasury, 30 June 2026). £298bn over four years: where the money is actually going, and what was cancelled. This vault's reading of it is [[Intelligence/defence-landscape/Defence Investment Plan 2026|Defence Investment Plan 2026]]. Read alongside the [[Intelligence/defence-landscape/Portals/MOD Acquisition Pipeline|MOD Acquisition Pipeline]] to see spend turning into tenders.
+- **[MOD SME Action Plan](https://www.gov.uk/government/publications/mod-small-and-medium-sized-enterprise-sme-action-plan)** (21 July 2026). How the MOD intends to make it easier for SMEs to win work, led by the Defence Office for Small Business Growth.
 - **National Armaments Director Group pages** (gov.uk). The org chart behind [[Intelligence/defence-landscape/MOD Structure|MOD Structure]]; check here when a body seems to have changed its name, because it probably has.
 
 ## Guides and practitioner material
 
 - **The Hitchhiker's Guide to the Valley of Death** (inink; James Pryor and Gabrielle Brooks). The best single orientation to why defence innovation stalls between demonstration and procurement. The framing behind this vault's [[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]].
-- **DASA proposal guidance and assessment criteria** (gov.uk/dasa). Read before your first competition entry, not after your first rejection.
+- **[How to work with UK Defence Innovation (UKDI)](https://www.gov.uk/guidance/how-to-work-with-uk-defence-innovation-ukdi)** (gov.uk). UKDI is the former DASA. Read it, and the competition document's assessment criteria, before your first entry, not after your first rejection.
 - **Selling to government** guidance (gov.uk). The generic machinery underneath the defence-specific routes.
 - **EGAD guidance** (egad.org.uk). Practical export-control material from the industry body; pairs with [[Intelligence/defence-landscape/Export Controls Orientation|Export Controls Orientation]].
 

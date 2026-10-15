@@ -8,7 +8,7 @@ established: 2017
 network_size: "260+ organisations and experts"
 website: https://www.gov.uk/government/groups/accelerated-capability-environment-ace
 status: active
-last_updated: 2026-05-20
+last_updated: 2026-10-15
 tags:
   - ace
   - innovation
@@ -51,6 +51,6 @@ ACE is the Home Office equivalent of the MOD-side defence innovation accelerator
 ## Related
 
 - [[CRM/organisations/mod/jHub|jHub]] — MOD-side analogue (defence innovation accelerator under CSOC).
-- [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|DASA]] — MOD-side analogue (mid-TRL defence accelerator within NA-Innov).
+- [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|UKDI (formerly DASA)]]: MOD-side analogue (the MOD's innovation front door, within NA-Innov).
 - [[Intelligence/defence-landscape/Security and Intelligence|Security and Intelligence overview]].
 - [[Intelligence/defence-landscape/Innovation Organisations|Innovation Organisations overview]].
