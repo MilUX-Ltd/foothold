@@ -2,7 +2,7 @@
 type: reference
 status: active
 created: 2026-05-20
-last_reviewed: 2026-05-20
+last_reviewed: 2026-11-24
 ---
 
 # Real-life examples of skills you can create
@@ -51,6 +51,13 @@ This page is a catalogue of skills the Foothold authors and users have built and
 ## Security and compliance skills
 
 - **/cyber-essentials-ready**. Walks a non-IT user through configuring their personal Mac or Windows computer to meet the UK Cyber Essentials technical controls (Danzell question set). Initial setup, monthly verify mode, append-only audit log, dated evidence packs, and a reviewer-facing README written to `Operations/Cyber-Essentials/`. Registers a monthly Cowork scheduled task to keep the posture current. Ships with Foothold.
+
+## Thinking and checking skills
+
+- **/process-interviewer**. Asks you one question at a time, each with a suggested answer, until a fuzzy idea or process is clear enough to build, then drafts the plan, skill, SOP or hand-off brief it needs. Drafts only; a new skill gets a safety audit before you use it. Ships with Foothold.
+- **/prompt-builder**. Turns a rough request into a clear prompt for Claude, ChatGPT, Gemini or Copilot by asking about the gaps, then shows you the finished prompt to use. Replaces the retired `prompt-master`. Ships with Foothold.
+- **/decision-check**. Helps you make one real decision well: sizes the effort to the stakes, lists the options (including doing nothing), checks for common thinking traps, runs a quick pre-mortem, and writes a short decision note. Raises UK points to check (VAT, IR35, employment, data protection) without giving legal or tax advice. Ships with Foothold.
+- **/fact-check**. Checks the factual claims in a draft before you publish or send it, against UK primary sources first, and flags marketing claims that UK advertising rules would require you to prove. Writes a report beside the draft and changes nothing without your yes. Ships with Foothold.
 
 ## Setup and tooling skills
 

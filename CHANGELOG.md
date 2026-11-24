@@ -1,5 +1,26 @@
 # Foothold changelog
 
+## 2.3.0, 2026-11-24
+
+Four skills for thinking things through and checking your work before it goes out, all written by MilUX and released under the MIT licence like the rest of the pack. Run `/foothold-update` to bring them in.
+
+**New skills**
+
+- **`process-interviewer`** (`Skills/meta-skills/`). Asks you one question at a time, each with a suggested answer, until an idea or process is clear enough to build, then drafts the plan, skill, SOP or hand-off brief it needs. It only drafts: a new skill gets a safety audit before you use it, and this skill never installs one. If you kept the earlier `process-interviewer` from before 2.2.0, the update offers this version in its place.
+- **`prompt-builder`** (`Skills/meta-skills/`). Turns a rough request into a clear prompt for Claude, ChatGPT, Gemini or Copilot by asking about the gaps first.
+- **`decision-check`** (`Skills/business-skills/`). Helps you make one real decision well and record it: effort sized to the stakes, options including doing nothing, common thinking traps, a short pre-mortem and a decision note. Raises UK points to check (VAT, IR35, employment, data protection) and says when you need an accountant, solicitor or HR adviser. Not legal or tax advice.
+- **`fact-check`** (`Skills/content-skills/`). Checks the factual claims in a draft against UK primary sources first, and flags marketing claims that the CAP Code, the CMA Green Claims Code or price rules would require you to prove. Writes a report beside the draft and changes nothing without your yes.
+
+**Retired**
+
+- **`prompt-master`** is replaced by `prompt-builder`. If you kept the earlier copy, the update offers a short note in its place that points to `prompt-builder`; you can then delete the folder. The update never deletes files itself.
+
+**Skills catalogue**
+
+- `Skills/Skill Examples.md` has a new section, "Thinking and checking skills", listing all four.
+
+Each new skill had an independent safety audit before release, recorded in its frontmatter.
+
 ## 2.2.0, 2026-10-15
 
 A full refresh of the defence landscape, checked against public sources from May to October 2026, and the vault brought up to how a small firm actually keeps one going. Run `/foothold-update` to bring it in; nothing you have written is overwritten without your say. A dated summary of what changed is in the new page `Intelligence/defence-landscape/Defence Landscape Updates.md` ("What's New in the Defence Landscape").
