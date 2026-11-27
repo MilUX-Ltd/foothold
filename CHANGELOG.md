@@ -8,6 +8,17 @@ The vault now says how its pages fit together. Run `/foothold-update` to bring i
 
 - **`Knowledge/schema.md`.** One page that sets out the page types, six named connections between pages (`parent`, `customer`, `operator`, `service`, `member_of`, `listed_on`) and two fields each skill uses to say which folders it reads and writes. Your AI reads it to find its way around the vault.
 
+- **Five organisation pages the pack was missing:** the British Army, the Royal Air Force, the Defence Science and Technology Laboratory (Dstl), UK Defence Innovation (UKDI) and Innovate UK. Each says what the body is, how it is organised, and how a small supplier engages with it, from public sources.
+
+**Changed**
+
+- **Connections are now links.** On programme, framework, portal, event and organisation pages, the `customer`, `operator`, `service` and `parent` fields now link to the page for the organisation they name, where the pack has one. "UK MOD", "UK MoD" and eleven other wordings all become one link to the UK Ministry of Defence page. Where the old text said more than a name, it is kept beside the link in a note field, such as `customer_note`.
+- **`service` on a programme** is a link to the service, or one of three words where no single service owns it: `Joint`, `Civil` or `Industry`.
+- **`audience` is new.** Twelve pages described who something is for in the `customer` field ("defence supplier community"). That text has moved to `audience`, so `customer` always names an organisation.
+- Three older field names (`parent_programme`, `parent-org`, `operated_by`) are folded into `parent` and `operator`.
+
+If you have edited any of these pages, `/foothold-update` will show you the change and ask before touching them.
+
 **Fixed**
 
 - One link in the Investors Index that pointed at nothing.
