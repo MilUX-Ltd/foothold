@@ -1,6 +1,6 @@
 # Vault Viewer
 
-**v1.1.0**
+**v1.1.1**
 
 A single HTML file that reads a folder of Markdown notes like a website. No install, no cloud, no account. Point it at a folder and read it, with wikilinks, search and backlinks all working. It understands Obsidian-style links and embeds, but Obsidian is not required and nor is anything else.
 
@@ -33,7 +33,8 @@ The file makes no network requests. It was audited for `fetch`, `XMLHttpRequest`
 Two things depend on the content of the notes themselves, not on the viewer:
 
 - A link in a note to a website opens that site when you click it. That is a deliberate action.
-- A note that embeds an image by remote URL (`![](https://...)`) causes the browser to load that image when the note is rendered. Local images stay offline. Most vaults only use local images.
+- A note that embeds an image by remote URL (`![](https://...)`) does not load it. The viewer shows a link in its place, which opens in your browser if you click it. Local images stay offline.
+- A content security policy in the file blocks every outbound request and any script other than the viewer's own, so a note cannot run code or send anything out.
 
 The file contains no vault data. You are sharing the viewer, not any notes.
 
@@ -50,6 +51,16 @@ Works in Chrome, Edge, Brave and other Chromium browsers. Safari and Firefox do 
 The embedded fonts are open-source and redistributable: Manrope and Bai Jamjuree under the SIL Open Font License 1.1, and Roboto Mono under Apache License 2.0.
 
 ## Version history
+
+### 1.1.1, 2026-11-27
+
+A security fix. A crafted line in a note could run script in the viewer as soon as the note was shown. Found by a safety audit of the pack.
+
+- Text from a note is now escaped in full, quotes included, and the HTML the viewer builds is never read back as markdown.
+- Only web, mail and same-page links are made clickable. Any other kind of link stays as plain text.
+- Remote images are no longer loaded; a link is shown in their place.
+- A content security policy blocks outbound requests, inline event handlers and any script other than the viewer's own.
+- Links whose text contains an ampersand or an apostrophe now resolve and display correctly.
 
 ### 1.1.0, 2026-06-23
 
