@@ -82,11 +82,11 @@ writes:
   - Customer Engagements
 ```
 
-- Each value is a folder in this vault.
-- A skill that works only in the conversation and saves nothing has `writes: []`.
+- Each value is a folder in this vault. A single full stop, `.`, means the whole vault, for the few skills that sweep or update everything.
+- A skill that works only in the conversation has `reads: []` and `writes: []`. Most of the thinking tools are like this: they work from what you tell them.
 - When you write or change a skill, set these fields to what it really does. They are how you, and your AI, can see what a skill will touch before it runs.
 
-Not every shipped skill carries these fields yet.
+Every shipped skill carries these fields.
 
 ## Related
 

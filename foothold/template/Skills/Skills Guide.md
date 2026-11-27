@@ -59,10 +59,16 @@ The `SKILL.md` frontmatter is the skill's interface to the agent runtime:
 ---
 name: skill-name
 description: One or two sentences describing when this skill should be used. Include trigger phrases the agent can match against ("Use when the user says ..."). The description is what the agent uses to decide whether to invoke this skill.
+reads:
+  - Context
+writes:
+  - Customer Engagements
 ---
 ```
 
 The description is the most important field. Agents read it to decide whether to run the skill. Be specific about when the skill should fire and when it should not.
+
+`reads` and `writes` list the vault folders the skill reads from and writes to, so you and your agent can see what it will touch before it runs. A skill that works only in the conversation has `reads: []` and `writes: []`. See [[Knowledge/schema|Schema]].
 
 ## Canonical example
 

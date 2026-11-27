@@ -26,6 +26,10 @@ audited_with: skill-safety-audit v3
 audit_report: held by the maintainer
 previous_audit: 2026-06-08
 origin: built
+reads:
+  - Operations
+writes:
+  - Operations
 ---
 
 # Cyber Essentials Ready

@@ -17,6 +17,12 @@ audit_verdict: pass
 audited_with: skill-safety-audit v3
 previous_audit: 2026-07-02
 origin: built
+reads:
+  - Context
+  - Capabilities and Services
+  - Customer Engagements
+writes:
+  - Customer Engagements
 ---
 
 # Bid Response

@@ -5,6 +5,8 @@ version: 3.0.0
 status: retired
 maintainer: MilUX
 license: MIT
+reads: []
+writes: []
 ---
 
 # Prompt master (retired)

@@ -19,6 +19,11 @@ audited_with: skill-safety-audit v3
 previous_audit: 2026-07-02
 origin: built
 replicated_from: Footing v2.0.0
+reads:
+  - Context
+  - Resources/Ways of Working
+writes:
+  - Resources/Ways of Working
 ---
 
 # Process Map

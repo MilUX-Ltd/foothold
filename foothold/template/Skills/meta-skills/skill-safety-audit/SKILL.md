@@ -7,6 +7,9 @@ audited_with: skill-safety-audit v3
 origin: built
 maintainer: MilUX
 license: MIT
+reads:
+  - Skills
+writes: []
 ---
 
 # Skill Safety Audit

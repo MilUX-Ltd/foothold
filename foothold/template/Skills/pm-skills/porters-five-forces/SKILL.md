@@ -10,6 +10,8 @@ source: "phuryn/pm-skills v2.0.0 (pm-product-strategy/porters-five-forces), MIT.
 modified_by: "MilUX Ltd, 2026"
 changes: "Adapted for defence-sector founders; MilUX proprietary framing and internal references removed for public release."
 category: strategy
+reads: []
+writes: []
 ---
 
 # Porter's Five Forces

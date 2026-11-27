@@ -10,6 +10,8 @@ license: MIT
 source: "MilUX original, authored for the Cowork-Enabled Hackathon package."
 distribution: "Public Foothold release, MIT licensed. The MilUX internal copy is all rights reserved. Confirm with Matt before any other external distribution."
 category: discovery
+reads: []
+writes: []
 ---
 
 # Design the cheapest test: prove yourself wrong before you build

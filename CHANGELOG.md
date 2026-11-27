@@ -17,6 +17,8 @@ The vault now says how its pages fit together. Run `/foothold-update` to bring i
 - **`audience` is new.** Twelve pages described who something is for in the `customer` field ("defence supplier community"). That text has moved to `audience`, so `customer` always names an organisation.
 - Three older field names (`parent_programme`, `parent-org`, `operated_by`) are folded into `parent` and `operator`.
 
+- **Every skill now says what it touches.** Each `SKILL.md` carries two new fields, `reads` and `writes`, listing the vault folders it reads from and writes to. 23 skills work on your vault; the other 41, mostly the thinking tools, work only in the conversation and say so. No skill behaves differently: the fields describe what each one already did.
+
 If you have edited any of these pages, `/foothold-update` will show you the change and ask before touching them.
 
 **Fixed**

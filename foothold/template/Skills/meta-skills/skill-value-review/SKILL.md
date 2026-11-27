@@ -8,6 +8,12 @@ source: MilUX
 audited: 2026-06-08
 audit_verdict: pass
 audited_with: skill-safety-audit v3
+reads:
+  - Skills
+  - Context
+  - Knowledge
+writes:
+  - Skills
 ---
 
 # Skill Value Review

@@ -12,6 +12,11 @@ maintainer_url: https://milux.co.uk
 license: MIT
 last_reviewed: 2026-06-19
 category: comms-crm-ops
+reads:
+  - Context
+  - CRM/organisations
+writes:
+  - Customer Engagements
 ---
 
 # Write SOW

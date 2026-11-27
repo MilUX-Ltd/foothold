@@ -16,6 +16,14 @@ audited: 2026-07-02
 audit_verdict: pass
 audited_with: skill-safety-audit v3
 origin: built
+reads:
+  - Daily
+  - Customer Engagements
+  - Initiatives
+  - Intelligence/events
+  - CRM/contacts/active contacts
+writes:
+  - Daily
 ---
 
 # Daily Brief

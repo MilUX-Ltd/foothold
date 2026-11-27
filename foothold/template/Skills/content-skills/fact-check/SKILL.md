@@ -5,6 +5,8 @@ version: 0.1.1
 audited: 2026-11-24
 audit_verdict: pass
 license: MIT
+reads: []
+writes: []
 ---
 
 # Fact check

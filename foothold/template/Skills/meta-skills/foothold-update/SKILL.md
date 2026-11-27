@@ -7,6 +7,10 @@ audited_with: skill-safety-audit v3
 origin: built
 maintainer: MilUX
 license: MIT
+reads:
+  - .
+writes:
+  - .
 ---
 
 # Foothold — Update (three-way reconcile)
