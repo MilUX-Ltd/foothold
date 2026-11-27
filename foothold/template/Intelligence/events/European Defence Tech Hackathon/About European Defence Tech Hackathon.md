@@ -90,6 +90,7 @@ This page is sourced from public material only.
 - [EDTH event calendar on Luma](https://lu.ma/eurodefensetech) — full event listing, venues, and registration links.
 - [Benjamin Wolba LinkedIn](https://www.linkedin.com/in/benjaminwolba/) — public post-event write-ups for Stockholm, Vilnius, Kyiv, Karlskrona, Athens, and the Sep 2025 / Feb 2026 London editions.
 - [European Defense Tech LinkedIn company page](https://www.linkedin.com/company/european-defense-tech/) — organisation post stream.
+- [The New Defense Post newsletter](https://www.new-defense.com) — weekly news brief.
 
 ## Related
 
