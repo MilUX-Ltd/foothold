@@ -56,18 +56,9 @@ The cadence is too dense to list exhaustively. Indicative editions across 2025�
 
 A planned **New Defense Summit** sits alongside the hackathons as EDTH's annual flagship.
 
-## Key personalities
+## Public face
 
-Public-facing leadership and operating team across the hackathon series. Roles below are working descriptions drawn from public posts; titles inside the organisation may differ.
-
-| Person | Role | Public profile |
-|--------|------|----------------|
-| Dr Benjamin Wolba | Co-Founder, EDTH. Public face of the hackathon series; chairs Demo Day juries and post-event narrative. Berlin-based. PhD from Technische Universität Dresden. | [LinkedIn](https://www.linkedin.com/in/benjaminwolba/). |
-| Jonatan Luther-Bergquist | Co-organiser. Operational lead on the London editions and mentor onboarding. | LinkedIn profile public via EDTH posts. |
-| Mariia Onufriievych | Community / operations across European editions. | [LinkedIn](https://www.linkedin.com/in/maria-onufrievich/). |
-| Nadiia Savchenko | Community / Project Manager. Kyiv-based. Owns the invitation comms for London and Vilnius editions, the Karlskrona Naval post-event narrative, and the Kyiv Defence Tech Week comms. | [LinkedIn](https://www.linkedin.com/in/savchenkonadiia/). |
-
-Wider operational team referenced in EDTH's own post-event credits: **Uwe Michaelis**, **Akim Karpach**, **Connor Rehn**, **Anna-Sophie Weinstein**, **Mykyta Puz**.
+Dr Benjamin Wolba, Co-Founder of EDTH, is the public face of the hackathon series: [LinkedIn](https://www.linkedin.com/in/benjaminwolba/). Other team members are not listed here.
 
 Hackathon weekends also bring in a recurring jury and mentor circuit drawn from defence-tech founders, primes, and operators. Repeat names from London editions include people from Orqa FPV, airqit, Point Zenith, Quantum Systems, SKD Systems, Sky, Snake Island Institute, and DroneTector. Mentor and jury seats are invitation-only.
 
@@ -99,7 +90,6 @@ This page is sourced from public material only.
 - [EDTH event calendar on Luma](https://lu.ma/eurodefensetech) — full event listing, venues, and registration links.
 - [Benjamin Wolba LinkedIn](https://www.linkedin.com/in/benjaminwolba/) — public post-event write-ups for Stockholm, Vilnius, Kyiv, Karlskrona, Athens, and the Sep 2025 / Feb 2026 London editions.
 - [European Defense Tech LinkedIn company page](https://www.linkedin.com/company/european-defense-tech/) — organisation post stream.
-- [Nadiia Savchenko LinkedIn](https://www.linkedin.com/in/savchenkonadiia/) — repost stream covering Naval, Kyiv, and London editions.
 - [The New Defense Post newsletter](https://www.new-defense.com) — weekly news brief co-authored by Benjamin Wolba and Paolo Trecate.
 
 ## Related

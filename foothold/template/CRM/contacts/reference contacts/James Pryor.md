@@ -21,7 +21,6 @@ last-contact: 2026-05-15
 - **Email:** james@inink.io
 - **LinkedIn:** [j-pryor](https://www.linkedin.com/in/j-pryor/)
 - **Location:** London, UK
-- **Clearance:** SC
 
 ## About
 
