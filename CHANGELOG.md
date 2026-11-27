@@ -1,5 +1,21 @@
 # Foothold changelog
 
+## 2.4.0, 2026-11-27
+
+The vault now says how its pages fit together. Run `/foothold-update` to bring it in.
+
+**New**
+
+- **`Knowledge/schema.md`.** One page that sets out the page types, six named connections between pages (`parent`, `customer`, `operator`, `service`, `member_of`, `listed_on`) and two fields each skill uses to say which folders it reads and writes. Your AI reads it to find its way around the vault.
+
+**Fixed**
+
+- One link in the Investors Index that pointed at nothing.
+
+**For maintainers**
+
+- `tools/check.py` now checks the template against the schema: a connection written as a link must point at a page that exists, each field sits only on the page types the schema allows, and the counts of unfinished work (text values not yet turned into links, skills without declarations) cannot rise.
+
 ## 2.3.1, 2026-11-27
 
 Privacy corrections found by a safety audit of the pack. Run `/foothold-update` to bring them in.

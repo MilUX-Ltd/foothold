@@ -15,6 +15,9 @@ What it checks, and why (the reasons are in LESSONS.md and docs/adr/):
 4. The versions agree: the newest released heading in CHANGELOG.md, the plugin manifest and
    the marketplace entry, where the repository has them.
 5. LESSONS-INDEX.md is in step with LESSONS.md.
+6. The vault template agrees with its schema (Knowledge/schema.md): relationship links
+   resolve, fields sit on the right page types, and the counts of unfinished work do not
+   rise (tools/schema_check.py, tools/schema-baseline.json).
 """
 
 import json
@@ -24,6 +27,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from schema_check import check_schema  # noqa: E402
 
 FORBIDDEN = [
     (re.compile(r"(^|/)\.context/"), "a sync tool's local index (LESSONS 2)"),
@@ -125,6 +130,7 @@ def main():
     check_home_paths(files)
     check_versions(files)
     check_lessons_index()
+    check_schema(ROOT, fail)
     if failures:
         print(f"check.py: {len(failures)} problem(s)")
         for message in failures:

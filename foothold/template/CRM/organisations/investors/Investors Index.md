@@ -123,7 +123,7 @@ Index of investor organisations tracked in this CRM. Covers UK and European VCs,
 | [[Tikehau Capital]] | PE | French aerospace and defence |
 | [[Tiny Supercomputer Investment Co.]] | VC | London pre-seed generalist |
 | [[Twin Track Ventures]] | VC | UK defence and security |
-| [[T\|Y\|R.vc]] | VC | Danish Nordic/Baltic dual-use |
+| [[TYR.vc]] | VC | Danish Nordic/Baltic dual-use |
 | [[Unconventional Ventures]] | VC | Nordic underrepresented founders |
 | [[Unruly Capital]] | VC | UK frontier-tech |
 | [[VSquared Ventures]] | VC | Munich deep-tech, defence |
