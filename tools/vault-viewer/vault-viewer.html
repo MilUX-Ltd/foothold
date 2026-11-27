@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Vault Viewer v1.1.0
+  Vault Viewer v1.1.1
   A single-file, fully offline reader for Obsidian / Markdown vaults.
   Part of Foothold by MilUX  -  https://github.com/MilUX-Ltd/foothold
   Privacy: makes zero network requests; nothing leaves the machine.
@@ -10,9 +10,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-VTQ7JwNCCYR65WPhKzAVjERsu7zTfjl3nHaZQciyzow='; style-src 'unsafe-inline'; img-src blob: data:; font-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="version" content="1.1.0">
-<meta name="generator" content="Vault Viewer 1.1.0 (Foothold / MilUX)">
+<meta name="version" content="1.1.1">
+<meta name="generator" content="Vault Viewer 1.1.1 (Foothold / MilUX)">
 <title>Vault Viewer</title>
 <style>
   /* ---- Embedded brand fonts (woff2, base64). Fully offline, no network. ---- */
@@ -248,7 +249,7 @@
         <polygon points="273.24 83.72 273.28 92.36 205.61 92.35 205.6 26.36 214.24 26.36 214.25 83.71 273.24 83.72" fill="#B5B171"/>
         <rect x="174.88" y="26.36" width="8.88" height="66" fill="#B5B171"/>
       </svg>
-      <p class="eyebrow">Vault Viewer · v1.1.0</p>
+      <p class="eyebrow">Vault Viewer · v1.1.1</p>
       <h1>Read a folder of Markdown notes like a website</h1>
       <p class="lede">A single-file reader for any folder of Markdown files. No install, no cloud, nothing leaves your machine. Browse it with wikilinks, search and backlinks all working. It understands Obsidian-style links and embeds, but Obsidian isn't required.</p>
       <button class="cta" id="openBtn2">Open a vault folder →</button>
@@ -351,7 +352,8 @@ async function loadAllContent(){
 
 /* ---------- Helpers ---------- */
 function baseName(path){ return path.replace(/.*\//,"").replace(/\.md$/i,""); }
-function escapeHtml(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function escapeHtml(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;"); }
+function unescapeHtml(s){ return s.replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&amp;/g,"&"); }
 function escAttr(s){ return s.replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;"); }
 
 /* Resolve a wikilink target to a note path. target may be "Name", "Folder/Name", "Name#heading". */
@@ -564,39 +566,48 @@ function renderTaskOrInline(text){
 }
 
 /* ---------- Inline ---------- */
-function inline(text){
-  if(text==null) return "";
-  const codes=[];
-  text = escapeHtml(text);
-  // inline code (protect)
-  text = text.replace(/`([^`]+)`/g, (m,c)=>{ codes.push(c); return " C"+(codes.length-1)+" "; });
-  // note/image embeds ![[...]]
-  text = text.replace(/!\[\[([^\]]+)\]\]/g, (m,inner)=> embedPlaceholder(inner));
-  // wikilinks [[...]]
-  text = text.replace(/\[\[([^\]]+)\]\]/g, (m,inner)=> wikilink(inner));
-  // markdown images ![alt](url) — url may contain spaces (Obsidian file links)
-  text = text.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (m,alt,url)=> imageTag(alt,stripTitle(url)));
-  // markdown links [text](url) — url may contain spaces
-  text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m,t,url)=> mdLink(t,stripTitle(url)));
-  // bare autolinks <http...>
-  text = text.replace(/&lt;(https?:\/\/[^\s&]+)&gt;/g, (m,u)=>`<a href="${escAttr(u)}" target="_blank" rel="noopener">${u}</a>`);
-  // bold
+/* Inline formatting that is safe to apply to text that has already been escaped. */
+function emphasis(text){
   text = text.replace(/\*\*([^*]+?)\*\*/g,"<strong>$1</strong>");
   text = text.replace(/(^|[^\w])__([^_]+?)__(?=[^\w]|$)/g,"$1<strong>$2</strong>");
-  // italic
   text = text.replace(/\*([^*\s][^*]*?)\*/g,"<em>$1</em>");
   text = text.replace(/(^|[^\w])_([^_]+?)_(?=[^\w]|$)/g,"$1<em>$2</em>");
-  // strikethrough
   text = text.replace(/~~([^~]+?)~~/g,"<del>$1</del>");
-  // highlight
   text = text.replace(/==([^=]+?)==/g,"<mark>$1</mark>");
+  return text;
+}
+
+/* Every piece of HTML this function generates is held aside behind a placeholder, so no
+   later rule can read it back as markdown. Text from the note is escaped first (quotes
+   included) and is only ever placed in element content or inside a double-quoted attribute. */
+function inline(text){
+  if(text==null) return "";
+  const held=[];
+  const hold = html => { held.push(html); return "\u0000H"+(held.length-1)+"\u0000"; };
+  text = escapeHtml(String(text).replace(/\u0000/g,""));
+  // inline code (protect)
+  text = text.replace(/`([^`]+)`/g, (m,c)=> hold(`<code>${c}</code>`));
+  // note/image embeds ![[...]]
+  text = text.replace(/!\[\[([^\]]+)\]\]/g, (m,inner)=> hold(embedPlaceholder(unescapeHtml(inner))));
+  // wikilinks [[...]]
+  text = text.replace(/\[\[([^\]]+)\]\]/g, (m,inner)=> hold(wikilink(unescapeHtml(inner))));
+  // markdown images ![alt](url) — url may contain spaces (Obsidian file links)
+  text = text.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (m,alt,url)=> hold(imageTag(alt,stripTitle(url))));
+  // markdown links [text](url) — url may contain spaces
+  text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m,t,url)=> hold(mdLink(emphasis(t),stripTitle(url))));
+  // bare autolinks <http...>
+  text = text.replace(/&lt;(https?:\/\/[^\s&]+)&gt;/g, (m,u)=> hold(`<a href="${u}" target="_blank" rel="noopener noreferrer">${u}</a>`));
+  // bold, italic, strikethrough, highlight
+  text = emphasis(text);
   // tags
   text = text.replace(/(^|\s)#([A-Za-z][A-Za-z0-9_\/-]*)/g,(m,pre,tag)=>`${pre}<span class="tag">#${tag}</span>`);
   // line breaks
   text = text.replace(/  \n/g,"<br>\n").replace(/\n/g," ");
-  // restore code
-  text = text.replace(/ C(\d+) /g,(m,n)=>`<code>${codes[n]}</code>`);
-  return text;
+  // restore held HTML (a link can hold an image, so repeat until none are left)
+  for(let pass=0; pass<4 && text.indexOf("\u0000H")!==-1; pass++){
+    text = text.replace(/\u0000H(\d+)\u0000/g,(m,n)=> held[n]!==undefined ? held[n] : "");
+  }
+  return text.replace(/\u0000/g,"");
 }
 
 function wikilink(inner){
@@ -613,25 +624,44 @@ function wikilink(inner){
 
 function stripTitle(url){
   url = url.trim();
-  const m = /^(.*?)\s+"[^"]*"$/.exec(url);
+  const m = /^(.*?)\s+&quot;.*?&quot;$/.exec(url);
   return m ? m[1].trim() : url;
 }
 
+/* A URL from a note, already escaped. Control characters are removed first, because a
+   browser ignores tabs and newlines inside a URL scheme. Returns the scheme in lower case,
+   or "" for a relative URL. */
+function cleanUrl(url){ return url.replace(/[\u0000-\u001f\u007f]/g,"").trim(); }
+function urlScheme(url){ const m = /^([a-z][a-z0-9+.\-]*):/i.exec(url); return m ? m[1].toLowerCase() : ""; }
+function safeDecode(s){ try{ return decodeURIComponent(s); }catch(e){ return s; } }
+
 function mdLink(t,url){
+  url = cleanUrl(url);
+  const scheme = urlScheme(url);
   // internal .md link?
-  if(/\.md(#|$)/i.test(url) && !/^https?:/i.test(url)){
-    const path = resolveNote(decodeURIComponent(url.replace(/#.*$/,"")));
+  if(/\.md(#|$)/i.test(url) && !scheme){
+    const path = resolveNote(safeDecode(unescapeHtml(url).replace(/#.*$/,"")));
     if(path) return `<a class="wikilink" data-path="${escAttr(path)}">${t}</a>`;
   }
-  return `<a href="${escAttr(url)}" target="_blank" rel="noopener">${t}</a>`;
+  // only web, mail and same-page links are made clickable; anything else stays as text
+  if(scheme && scheme!=="http" && scheme!=="https" && scheme!=="mailto") return t;
+  return `<a href="${url}" target="_blank" rel="noopener noreferrer">${t}</a>`;
 }
 
 function imageTag(alt,url){
-  if(/^https?:|^data:/i.test(url)){
-    return `<img src="${escAttr(url)}" alt="${escAttr(alt)}">`;
+  url = cleanUrl(url);
+  const scheme = urlScheme(url);
+  // an image embedded in the note itself
+  if(/^data:image\/(png|jpe?g|gif|webp|avif|bmp);base64,[A-Za-z0-9+\/=]+$/i.test(url)){
+    return `<img src="${url}" alt="${alt}">`;
   }
+  // a remote image is never loaded: it would tell the remote server the note was opened
+  if(scheme==="http" || scheme==="https"){
+    return `<a class="remote-img" href="${url}" target="_blank" rel="noopener noreferrer">Remote image${alt?": "+alt:""} (not loaded; opens in your browser)</a>`;
+  }
+  if(scheme) return alt;
   // local asset, resolve async after render
-  return `<img data-asset="${escAttr(decodeURIComponent(url))}" alt="${escAttr(alt)}">`;
+  return `<img data-asset="${escAttr(safeDecode(unescapeHtml(url)))}" alt="${alt}">`;
 }
 
 function embedPlaceholder(inner){
@@ -1028,9 +1058,9 @@ function buildGraphData(){
     for(const t of linkTargets(state.content.get(n.path) || "")){
       if(t===n.path) continue;
       const b=byPath.get(t); if(!b) continue;
-      const dkey=n.path+""+t;
+      const dkey=n.path+"\u0001"+t;
       if(dirSeen.has(dkey)) continue; dirSeen.add(dkey);
-      const ukey = n.path<t ? n.path+""+t : t+""+n.path;
+      const ukey = n.path<t ? n.path+"\u0001"+t : t+"\u0001"+n.path;
       const drawLine = !undSeen.has(ukey); undSeen.add(ukey);
       const a=byPath.get(n.path);
       edges.push({a:a, b:b, drawLine:drawLine});

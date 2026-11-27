@@ -15,8 +15,12 @@ What it checks, and why (the reasons are in LESSONS.md and docs/adr/):
 4. The versions agree: the newest released heading in CHANGELOG.md, the plugin manifest and
    the marketplace entry, where the repository has them.
 5. LESSONS-INDEX.md is in step with LESSONS.md.
+6. The Vault Viewer's content security policy carries the hash of its one script, and the
+   script holds no raw control characters. A stale hash stops the viewer running at all.
 """
 
+import base64
+import hashlib
 import json
 import re
 import subprocess
@@ -118,6 +122,30 @@ def check_lessons_index():
         fail("LESSONS-INDEX.md is out of step with LESSONS.md (run lessons-index.py)")
 
 
+VIEWER = "tools/vault-viewer/vault-viewer.html"
+VIEWER_SCRIPT = re.compile(r"<script>(.*?)</script>", re.S)
+VIEWER_HASH = re.compile(r"script-src 'sha256-([A-Za-z0-9+/=]+)'")
+
+
+def check_viewer_policy():
+    text = read_text(VIEWER)
+    if text is None:
+        return
+    scripts = VIEWER_SCRIPT.findall(text)
+    if len(scripts) != 1 or text.count("<script") != 1:
+        fail(f"{VIEWER}: expected exactly one inline script")
+        return
+    script = scripts[0]
+    if re.search(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", script) or "\r" in text:
+        fail(f"{VIEWER}: the script holds a raw control character; write it as an escape")
+    declared = VIEWER_HASH.search(text)
+    actual = base64.b64encode(hashlib.sha256(script.encode("utf-8")).digest()).decode()
+    if not declared:
+        fail(f"{VIEWER}: no script hash in the content security policy")
+    elif declared.group(1) != actual:
+        fail(f"{VIEWER}: the script changed; set the policy's hash to sha256-{actual}")
+
+
 def main():
     files = tracked()
     check_forbidden(files)
@@ -125,6 +153,7 @@ def main():
     check_home_paths(files)
     check_versions(files)
     check_lessons_index()
+    check_viewer_policy()
     if failures:
         print(f"check.py: {len(failures)} problem(s)")
         for message in failures:

@@ -12,6 +12,16 @@ Privacy corrections found by a safety audit of the pack. Run `/foothold-update` 
 
 No skill changed in this release.
 
+## Tools: Vault Viewer 1.1.1, 2026-11-27
+
+A security fix to the Vault Viewer, found by a safety audit of the pack. The installed pack and template are unchanged; this is a repo-side tool, so `/foothold-update` brings nothing new into an existing vault. If you saved a copy of the viewer, replace it with this one.
+
+- A crafted line in a note could run script in the viewer as soon as the note was shown. Fixed: note text is escaped in full, and the HTML the viewer builds is never read back as markdown.
+- Only web, mail and same-page links are made clickable.
+- Remote images are no longer loaded; a link is shown in their place.
+- A content security policy blocks outbound requests and any script other than the viewer's own.
+- `tools/check.py` now fails if the viewer's script changes without its policy hash being updated.
+
 ## 2.3.0, 2026-11-24
 
 Four skills for thinking things through and checking your work before it goes out, all written by MilUX and released under the MIT licence like the rest of the pack. Run `/foothold-update` to bring them in.
