@@ -88,6 +88,20 @@ writes:
 
 Every shipped skill carries these fields.
 
+## Routes
+
+A route is a job that takes more than one skill. Each route is a page in `Skills/Routes/` with `type: route` and an ordered `steps` list. Every step is one line: the skill's name, a colon, and what the skill does at that point.
+
+```yaml
+---
+type: route
+name: A tender lands
+steps:
+  - "eligibility-check: Checks the opportunity before you spend a week on it."
+  - "bid-response: Drafts the response against the published criteria."
+---
+```
+
 ## Related
 
 - [[Knowledge/Knowledge Guide|Knowledge Guide]]

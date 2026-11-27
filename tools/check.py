@@ -18,6 +18,8 @@ What it checks, and why (the reasons are in LESSONS.md and docs/adr/):
 6. The vault template agrees with its schema (Knowledge/schema.md): relationship links
    resolve, fields sit on the right page types, and the counts of unfinished work do not
    rise (tools/schema_check.py, tools/schema-baseline.json).
+7. The map data file (data/foothold-map.json) is what tools/build_map.py builds today, names
+   no person, and has no edge or route step pointing at something that is not there.
 """
 
 import json
@@ -29,6 +31,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from schema_check import check_schema  # noqa: E402
+import build_map  # noqa: E402
 
 FORBIDDEN = [
     (re.compile(r"(^|/)\.context/"), "a sync tool's local index (LESSONS 2)"),
@@ -123,6 +126,17 @@ def check_lessons_index():
         fail("LESSONS-INDEX.md is out of step with LESSONS.md (run lessons-index.py)")
 
 
+def check_map_data():
+    data = build_map.build(ROOT)
+    for fault in build_map.problems(data):
+        fail(fault)
+    current = read_text(build_map.OUTPUT)
+    if current is None:
+        fail(f"{build_map.OUTPUT}: missing; run python3 tools/build_map.py --write")
+    elif current != build_map.render(data):
+        fail(f"{build_map.OUTPUT}: out of date; run python3 tools/build_map.py --write")
+
+
 def main():
     files = tracked()
     check_forbidden(files)
@@ -131,6 +145,7 @@ def main():
     check_versions(files)
     check_lessons_index()
     check_schema(ROOT, fail)
+    check_map_data()
     if failures:
         print(f"check.py: {len(failures)} problem(s)")
         for message in failures:

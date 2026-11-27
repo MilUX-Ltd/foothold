@@ -10,6 +10,8 @@ The vault now says how its pages fit together. Run `/foothold-update` to bring i
 
 - **Five organisation pages the pack was missing:** the British Army, the Royal Air Force, the Defence Science and Technology Laboratory (Dstl), UK Defence Innovation (UKDI) and Innovate UK. Each says what the body is, how it is organised, and how a small supplier engages with it, from public sources.
 
+- **Four routes.** A route is a job that takes more than one skill, written down in order: a tender lands; you meet someone at an event; a customer asks about your data handling; Monday morning. They are pages in `Skills/Routes/`, and you can add your own.
+
 **Changed**
 
 - **Connections are now links.** On programme, framework, portal, event and organisation pages, the `customer`, `operator`, `service` and `parent` fields now link to the page for the organisation they name, where the pack has one. "UK MOD", "UK MoD" and eleven other wordings all become one link to the UK Ministry of Defence page. Where the old text said more than a name, it is kept beside the link in a note field, such as `customer_note`.
@@ -27,6 +29,7 @@ If you have edited any of these pages, `/foothold-update` will show you the chan
 
 **For maintainers**
 
+- `tools/build_map.py` builds `data/foothold-map.json` from the template: the organisations, programmes, frameworks, portals and events with their connections; the folders and skills with what each skill reads and writes; and the routes. It copies no page text and no field that names a person, and leaves out contact pages and companies. `tools/check.py` fails if the file is out of date. Run `python3 tools/build_map.py --write` after changing the template.
 - `tools/check.py` now checks the template against the schema: a connection written as a link must point at a page that exists, each field sits only on the page types the schema allows, and the counts of unfinished work (text values not yet turned into links, skills without declarations) cannot rise.
 
 ## 2.3.1, 2026-11-27
