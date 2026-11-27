@@ -55,16 +55,12 @@ Visible from the public site, Luma calendar, and the network's own posts:
 - **Virtual Demo Days.** Online showcases between live events, themed (e.g. front-line medicine and casualty evacuation in April 2026).
 - **Webinars and member sessions.** Procurement, "escaping the project loop", country-specific routes to market (e.g. Dutch MoD), counter-drone workshops.
 - **The New Defense Summit.** Planned EDTH-hosted summit announced for 2026.
+- **The New Defense Post newsletter.** Weekly defence-tech news brief.
 - **A Discord community.** Channels covering announcements, resources, events, idea lab, team formation for hackathons, and regional hubs (London, Paris).
 
-## Key personalities
+## Public face
 
-Public-facing leadership and core operating team, captured from EDTH's website, LinkedIn, and event communications. Roles below are working descriptions drawn from public posts; titles inside the organisation may differ.
-
-| Person | Role | Public profile |
-|--------|------|----------------|
-| Dr Benjamin Wolba | Co-Founder. Public face of EDTH; sets the strategic narrative and chairs hackathon jury panels. Berlin-based. Holds a PhD from Technische Universität Dresden. Also runs the Future of Computing newsletter and conference. | [LinkedIn](https://www.linkedin.com/in/benjaminwolba/) — 20K+ followers. Personal site: [benjaminwolba.com](https://benjaminwolba.com). |
-
+Dr Benjamin Wolba, Co-Founder, is the public face of EDTH: [LinkedIn](https://www.linkedin.com/in/benjaminwolba/). Other team members are not listed here. Use the contact routes below.
 
 ## How to evaluate engaging
 
@@ -80,6 +76,7 @@ Public-facing leadership and core operating team, captured from EDTH's website, 
 - Events: [lu.ma/eurodefensetech](https://lu.ma/eurodefensetech)
 - LinkedIn: [linkedin.com/company/european-defense-tech](https://www.linkedin.com/company/european-defense-tech/)
 - Newsletter: [new-defense.com](https://www.new-defense.com)
+- Email: `mail@eurodefense.tech` (community comms).
 
 ## Sources
 

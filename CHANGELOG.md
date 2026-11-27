@@ -1,5 +1,17 @@
 # Foothold changelog
 
+## 2.3.1, 2026-11-27
+
+Privacy corrections found by a safety audit of the pack. Run `/foothold-update` to bring them in.
+
+**Removed**
+
+- Personal detail about named individuals from the European Defence Tech Hub network page and the European Defence Tech Hackathon event page. Each page now names the organisation's public face only.
+- A security clearance level from one reference contact page.
+- One line without its own public source from the Programme Cortisone page.
+
+No skill changed in this release.
+
 ## 2.3.0, 2026-11-24
 
 Four skills for thinking things through and checking your work before it goes out, all written by MilUX and released under the MIT licence like the rest of the pack. Run `/foothold-update` to bring them in.

@@ -27,7 +27,6 @@ Provide a sustainable, integrated, cohesive, and enduring Medical Information Se
 In the **Delivery Phase**:
 
 - **TPP** — awarded the main digital medical records contract. Introducing a modern, interoperable digital medical record system for recruitment and ongoing care of service personnel.
-- **Avenue3** — awarded £2.5M for **Project Mercury**, a Deployed Clinical Record system enabling clinicians to access military medical records anywhere in the world, including offline via NFC technology. First live release Spring 2026.
 - Currently procuring a **Laboratory Information Management System (LIMS)** for DMS deployments and operations.
 
 ## Related
