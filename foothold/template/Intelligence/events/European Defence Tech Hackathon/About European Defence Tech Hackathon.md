@@ -56,14 +56,9 @@ The cadence is too dense to list exhaustively. Indicative editions across 2025‚Ä
 
 A planned **New Defense Summit** sits alongside the hackathons as EDTH's annual flagship.
 
-## Key personalities
+## Public face
 
-Public-facing leadership and operating team across the hackathon series. Roles below are working descriptions drawn from public posts; titles inside the organisation may differ.
-
-| Person | Role | Public profile |
-|--------|------|----------------|
-| Dr Benjamin Wolba | Co-Founder, EDTH. Public face of the hackathon series; chairs Demo Day juries and post-event narrative. Berlin-based. PhD from Technische Universit√§t Dresden. | [LinkedIn](https://www.linkedin.com/in/benjaminwolba/). |
-
+Dr Benjamin Wolba, Co-Founder of EDTH, is the public face of the hackathon series: [LinkedIn](https://www.linkedin.com/in/benjaminwolba/). Other team members are not listed here.
 
 Hackathon weekends also bring in a recurring jury and mentor circuit drawn from defence-tech founders, primes, and operators. Repeat names from London editions include people from Orqa FPV, airqit, Point Zenith, Quantum Systems, SKD Systems, Sky, Snake Island Institute, and DroneTector. Mentor and jury seats are invitation-only.
 
