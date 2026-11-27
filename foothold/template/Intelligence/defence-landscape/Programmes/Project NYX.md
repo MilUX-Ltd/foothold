@@ -1,8 +1,8 @@
 ---
 type: programme
 name: Project NYX
-customer: British Army
-service: Army
+customer: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
+service: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
 status: active
 category: uncrewed-air-systems
 created: 2026-10-15

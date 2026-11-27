@@ -4,9 +4,12 @@ name: Space Technology Solutions
 reference: RM6370
 status: active
 category: gca
-operator: Government Commercial Agency (GCA, formerly Crown Commercial Service), in collaboration with the MOD
+operator:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/government/Crown Commercial Service|Government Commercial Agency]]"
+operator_note: "Government Commercial Agency (GCA, formerly Crown Commercial Service), in collaboration with the MOD"
 term: 1 July 2025 to 30 July 2031, optional two-year extension
-customer: UK public sector buyers (including defence and security)
+audience: "UK public sector buyers (including defence and security)"
 agreement_type: Dynamic Market (under Procurement Act 2023)
 duration: 6 years, with an option to extend for a further 2 years
 predecessor: Space-Enabled and Geospatial Services dynamic purchasing system (RM6235)

@@ -35,8 +35,8 @@ A connection is a field in a page's frontmatter whose value is a link to another
 |---|---|---|---|
 | `parent` | any page | a page of the same kind, or an index | Sits under |
 | `customer` | programme, framework, portal, customer-engagement | organisation | Who the work is for |
-| `operator` | framework, portal, event-series, network | organisation | Who runs it |
-| `service` | programme | organisation | Which service it belongs to |
+| `operator` | framework, portal, event-series, network, organisation | organisation | Who runs it |
+| `service` | programme | organisation, or one of three words | Which service it belongs to |
 | `member_of` | organisation, cluster | network | Belongs to |
 | `listed_on` | framework | portal | Where its opportunities are published |
 
@@ -51,21 +51,24 @@ operator: "[[CRM/organisations/government/Crown Commercial Service|Crown Commerc
 ---
 ```
 
-A field can hold more than one link:
+A field can hold more than one link, written as a list.
+
+Five rules:
+
+1. **Link to a page that exists.** If the organisation has no page yet, add one first, or leave the value as plain text until you do. The pack holds public bodies and not companies, so a company that runs a framework or portal stays as plain text.
+2. **Keep the detail beside the link.** A field names the page it connects to. Anything more ("on its behalf", "since 2026", "initial phase") goes in a note field with the same name and `_note` on the end, or in the page's text.
+3. **A programme no one service owns.** `service` may hold one of three plain words in place of a link: `Joint`, `Civil` or `Industry`.
+4. **Who it is for is not who buys it.** `customer` is always an organisation. When a page is for a group and not an organisation ("defence supplier community"), say so in the plain-text field `audience`.
+5. **A link in the body is a mention.** It shows that one page refers to another, and no more. Use a field when the connection has one of the six meanings above.
 
 ```yaml
 customer:
-  - "[[UK Ministry of Defence]]"
-  - "[[Home Office]]"
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/NAD Group/National Armaments Materiel (NA-M)|National Armaments Materiel]]"
+customer_note: "UK MOD / DE&S (via EDP)"
+service: Joint
+audience: "Defence supplier community"
 ```
-
-Three rules:
-
-1. **Link to a page that exists.** If the organisation has no page yet, add one first, or leave the value as plain text until you do.
-2. **Keep the detail in the body.** A field names the page it connects to. Anything more ("operated on its behalf by", "since 2026") belongs in the page's text.
-3. **A link in the body is a mention.** It shows that one page refers to another, and no more. Use a field when the connection has one of the six meanings above.
-
-Not every value in the shipped pages is a link yet. The pack is converting its own text values release by release.
 
 ## What a skill reads and writes
 

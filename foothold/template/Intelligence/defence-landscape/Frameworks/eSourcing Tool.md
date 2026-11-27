@@ -4,7 +4,7 @@ name: eSourcing Tool
 also_known_as: MOD eSourcing Tool; underpins the Defence Sourcing Portal
 status: active
 category: mod-commercial
-customer: UK MoD
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 delivered_by: Jaggaer (e-sourcing platform); Commerce Decisions (AWARD® for complex strategic procurements)
 parent_platform: "[[Intelligence/defence-landscape/Portals/Defence Sourcing Portal|Defence Sourcing Portal (DSP)]]"
 website_user_guide: https://contracts.mod.uk/web/user-guide.html

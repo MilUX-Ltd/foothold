@@ -2,7 +2,7 @@
 type: programme
 name: Picasso
 status: active
-customer: UK MOD
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 service: Joint
 category: geoint
 created: 2026-05-20

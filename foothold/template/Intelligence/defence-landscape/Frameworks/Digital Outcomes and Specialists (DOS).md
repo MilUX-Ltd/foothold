@@ -5,8 +5,9 @@ abbreviation: DOS
 current_iteration: DOS7 (RM1043.9)
 status: active
 category: gca
-operator: Government Commercial Agency (GCA), formerly Crown Commercial Service
-customer: UK public sector
+operator: "[[CRM/organisations/government/Crown Commercial Service|Government Commercial Agency]]"
+operator_note: "Government Commercial Agency (GCA), formerly Crown Commercial Service"
+audience: "UK public sector"
 created: 2026-05-20
 last_reviewed: 2026-10-15
 tags: [framework, gca, ccs, dos, digital, public-sector]

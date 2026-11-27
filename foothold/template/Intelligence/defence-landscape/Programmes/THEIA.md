@@ -1,8 +1,8 @@
 ---
 type: programme
 name: THEIA
-customer: British Army
-service: Army
+customer: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
+service: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
 status: active
 category: digital-transformation
 created: 2026-05-20

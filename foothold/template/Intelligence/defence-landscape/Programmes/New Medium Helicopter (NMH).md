@@ -1,8 +1,8 @@
 ---
 type: programme
 name: New Medium Helicopter (NMH)
-customer: Royal Air Force
-service: Air
+customer: "[[CRM/organisations/mod/Royal Air Force/Royal Air Force|Royal Air Force]]"
+service: "[[CRM/organisations/mod/Royal Air Force/Royal Air Force|Royal Air Force]]"
 status: active
 category: rotary-wing
 created: 2026-05-22

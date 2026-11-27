@@ -4,7 +4,10 @@ name: DVD (Defence Vehicle Dynamics)
 cadence: biennial (even years)
 venue: UTAC Millbrook, Bedfordshire
 status: active
-operator: Delivered for the National Armaments Director Group and Army Headquarters; DE&S-facing
+operator:
+  - "[[CRM/organisations/mod/NAD Group/NAD Group|NAD Group]]"
+  - "[[CRM/organisations/mod/British Army/British Army|British Army]]"
+operator_note: "Delivered for the National Armaments Director Group and Army Headquarters; DE&S-facing"
 website: https://www.theevent.co.uk
 last_updated: 2026-10-15
 tags:

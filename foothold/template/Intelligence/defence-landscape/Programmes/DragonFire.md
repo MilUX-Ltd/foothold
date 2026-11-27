@@ -2,8 +2,10 @@
 type: programme
 name: DragonFire
 full_name: Laser Directed Energy Weapon (LDEW) Capability Demonstrator
-customer: MoD / Royal Navy
-service: Navy (initial)
+customer: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
+customer_note: "MoD / Royal Navy"
+service: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
+service_note: "Navy (initial)"
 status: active
 category: directed-energy
 created: 2026-05-22

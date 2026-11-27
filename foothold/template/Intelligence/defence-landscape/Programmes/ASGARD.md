@@ -1,8 +1,8 @@
 ---
 type: programme
 name: ASGARD
-customer: British Army
-service: Army
+customer: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
+service: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
 status: active
 category: digital-data
 created: 2026-05-20

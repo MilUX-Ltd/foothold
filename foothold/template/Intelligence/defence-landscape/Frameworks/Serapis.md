@@ -1,7 +1,8 @@
 ---
 type: framework
 name: Serapis
-customer: Dstl (MoD and Front Line Commands via Dstl)
+customer: "[[CRM/organisations/mod/Defence Science and Technology Laboratory (Dstl)|Dstl]]"
+customer_note: "Dstl (MoD and Front Line Commands via Dstl)"
 status: active
 category: science-and-technology-research
 created: 2026-05-22

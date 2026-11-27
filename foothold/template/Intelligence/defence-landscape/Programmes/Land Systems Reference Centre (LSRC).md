@@ -2,7 +2,7 @@
 type: programme
 name: Land Systems Reference Centre (LSRC)
 status: active
-customer: UK MOD
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 service: Joint
 category: test-facility
 created: 2026-05-20

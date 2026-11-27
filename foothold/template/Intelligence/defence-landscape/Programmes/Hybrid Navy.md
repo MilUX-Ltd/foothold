@@ -1,8 +1,8 @@
 ---
 type: programme
 name: Hybrid Navy
-customer: Royal Navy
-service: Navy
+customer: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
+service: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
 status: active
 category: autonomy
 created: 2026-10-15

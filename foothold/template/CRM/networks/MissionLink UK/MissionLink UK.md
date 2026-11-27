@@ -3,7 +3,7 @@ type: network
 name: MissionLink UK
 flavour: formal
 status: active
-operator: MissionLink UK Ltd
+operator: "[[CRM/networks/MissionLink UK/MissionLink UK|MissionLink UK]]"
 companies_house: "14762535"
 membership_model: invite-only, non-profit
 website: https://www.missionlink.co.uk

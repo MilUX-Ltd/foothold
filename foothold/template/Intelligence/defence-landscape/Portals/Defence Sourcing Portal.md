@@ -3,8 +3,9 @@ type: portal
 name: Defence Sourcing Portal
 acronym: DSP
 status: active
-operator: UK MoD (e-sourcing platform delivered by Jaggaer; AWARD® supplied by Commerce Decisions)
-customer: Defence supplier community
+operator: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+operator_note: "UK MoD (e-sourcing platform delivered by Jaggaer; AWARD® supplied by Commerce Decisions)"
+audience: "Defence supplier community"
 opportunity_threshold: c.£10,000 and above
 helpdesk: 24-hour
 cost: free

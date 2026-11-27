@@ -2,7 +2,7 @@
 type: programme
 name: Land Deployable Gateway (LDG)
 status: active
-customer: UK MOD
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 service: Joint
 category: tactical-communications
 created: 2026-05-20

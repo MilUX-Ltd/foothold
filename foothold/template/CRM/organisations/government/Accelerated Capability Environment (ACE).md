@@ -2,7 +2,7 @@
 type: organisation
 name: Accelerated Capability Environment
 acronym: ACE
-parent: Home Office
+parent: "[[CRM/organisations/government/Home Office|Home Office]]"
 parent_unit: Homeland Security Group
 established: 2017
 network_size: "260+ organisations and experts"

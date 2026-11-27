@@ -2,7 +2,8 @@
 type: organisation
 name: UK National Authority for Counter-Eavesdropping
 acronym: UK NACE
-parent: FCDO Services (part of Foreign, Commonwealth and Development Office)
+parent: "[[CRM/organisations/government/FCDO|FCDO]]"
+parent_note: "FCDO Services (part of Foreign, Commonwealth and Development Office)"
 established: 1945 (evolved from Diplomatic Wireless Service, Bletchley Park 1940s)
 status: active
 technical_authority: one of three UK National Technical Authorities (with NCSC and NPSA)

@@ -3,7 +3,8 @@ type: portal
 name: Find a Tender Service
 acronym: FTS
 status: active
-operator: UK Government (Cabinet Office, Government Commercial Function)
+operator: "[[CRM/organisations/government/Cabinet Office|Cabinet Office]]"
+operator_note: "UK Government (Cabinet Office, Government Commercial Function)"
 launch_date: 1 January 2021 (post-Brexit replacement for OJEU / TED)
 sits_within: Central Digital Platform (under Procurement Act 2023)
 high_value_threshold: c.£139,688 including VAT (covered procurements)

@@ -6,7 +6,10 @@ full_name: Commercial Delivery Partner (CommDP)
 status: active
 category: defence
 operator: Multiple suppliers; lead award per the 2020 CommDP project award
-customer: UK MOD Commercial functions
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/NAD Group/National Armaments Commercial & Industry (NA-C&I)|National Armaments Commercial & Industry]]"
+customer_note: "UK MOD Commercial functions"
 created: 2026-05-20
 last_reviewed: 2026-05-20
 tags: [framework, defence-procurement, cdp, commdp, mod, commercial]

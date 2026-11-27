@@ -4,7 +4,10 @@ name: PROGENY
 full_name: Progeny Maritime Research Framework (PMRF)
 status: active
 category: defence
-customer: UK MoD; Dstl and wider MOD maritime S&T
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/Defence Science and Technology Laboratory (Dstl)|Dstl]]"
+customer_note: "UK MoD; Dstl and wider MOD maritime S&T"
 prime_contractor: QinetiQ
 estimated_value: up to £152 million
 trl_range: TRL 1 (exploratory) to high TRL (de-risking for procurement)

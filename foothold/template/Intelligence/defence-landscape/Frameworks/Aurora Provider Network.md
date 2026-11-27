@@ -5,7 +5,10 @@ abbreviation: APN
 status: active
 category: supplier-framework
 operator: QinetiQ (Aurora Engineering Partnership prime — QinetiQ, AtkinsRéalis, BMT)
-customer: UK MOD / DE&S (via EDP)
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/NAD Group/National Armaments Materiel (NA-M)|National Armaments Materiel]]"
+customer_note: "UK MOD / DE&S (via EDP)"
 created: 2026-05-22
 last_reviewed: 2026-05-22
 tags: [framework, defence-procurement, edp, aurora, qinetiq, mod, des, pn-evolve, futures-lab, supplier-framework]

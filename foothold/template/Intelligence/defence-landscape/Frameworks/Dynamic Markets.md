@@ -3,7 +3,8 @@ type: framework
 name: Dynamic Markets
 status: active
 category: mod-commercial
-customer: UK MoD and the wider UK public sector
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+customer_note: "UK MoD and the wider UK public sector"
 legislative_basis: Procurement Act 2023; Procurement Regulations 2024
 replaces: Dynamic Purchasing Systems (DPS) and qualification systems under the previous regime
 effective_date: 24 February 2025 (Procurement Act 2023 came into force)

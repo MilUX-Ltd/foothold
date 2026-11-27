@@ -4,8 +4,12 @@ name: HTCDF
 full_name: Hypersonic Technologies & Capability Development Framework
 status: active
 category: defence
-customer: UK MOD (DE&S / NA-M)
-operator: Defence Equipment & Support (now National Armaments Materiel, NA-M)
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/NAD Group/National Armaments Materiel (NA-M)|National Armaments Materiel]]"
+customer_note: "UK MOD (DE&S / NA-M)"
+operator: "[[CRM/organisations/mod/NAD Group/National Armaments Materiel (NA-M)|National Armaments Materiel]]"
+operator_note: "Defence Equipment & Support (now National Armaments Materiel, NA-M)"
 estimated_max_value: c.£1 billion across the framework
 duration: 7 years
 supplier_count: 90 organisations (from industry and academia)

@@ -2,8 +2,8 @@
 type: portal
 name: MOD Acquisition Pipeline
 status: active
-operator: UK MoD
-customer: Defence supplier community, primes, investors
+operator: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+audience: "Defence supplier community, primes, investors"
 publication_cadence: refreshed and published every 6 months
 forward_look_horizon: 12 to 18 months
 inclusion_threshold: procurement activity valued at £2 million or above

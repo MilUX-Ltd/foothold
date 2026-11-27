@@ -3,8 +3,12 @@ type: framework
 name: SME Searchlight
 status: active
 category: mod-research
-customer: UK MoD; Dstl is the operating customer
-operator: Defence Science and Technology Laboratory (Dstl)
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/Defence Science and Technology Laboratory (Dstl)|Dstl]]"
+customer_note: "UK MoD; Dstl is the operating customer"
+operator: "[[CRM/organisations/mod/Defence Science and Technology Laboratory (Dstl)|Dstl]]"
+operator_note: "Defence Science and Technology Laboratory (Dstl)"
 launched: 2018-2019 (initial 12-month programme; ongoing follow-on)
 strategic_aim: attract non-traditional Defence suppliers and SMEs to deliver projected £40m to £45m increase in Dstl research spending with external companies
 target: 33% government external spend with SMEs (government's stated target)

@@ -2,7 +2,7 @@
 type: network
 flavour: formal
 website: https://www.graildefense.com
-parent-org: Tiberius Aerospace
+parent: Tiberius Aerospace
 date: 2026-05-23
 status: reference
 tags: [defence, technology, coalition, alliance, network]

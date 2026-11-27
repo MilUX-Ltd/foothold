@@ -4,7 +4,10 @@ name: DDAD
 full_name: Digital Decision Accelerators for Defence (Open Framework)
 status: active
 category: defence-digital
-customer: UK MOD / Defence Digital
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/NAD Group/National Armaments Digital & Data (NA-D&D)|National Armaments Digital & Data]]"
+customer_note: "UK MOD / Defence Digital"
 delivery_vehicle_for: ASGARD (British Army Transformative Capability Initiative)
 estimated_value: c.£180,000,000 over four core years (with options to extend)
 procurement_regime: Procurement Act 2023; Open Framework

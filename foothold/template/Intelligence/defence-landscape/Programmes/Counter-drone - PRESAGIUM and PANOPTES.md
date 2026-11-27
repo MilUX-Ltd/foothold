@@ -1,7 +1,10 @@
 ---
 type: programme
 name: Counter-drone (PRESAGIUM and PANOPTES)
-customer: UK MOD (RAF Regiment and wider Defence users; UKDI for PANOPTES)
+customer:
+  - "[[CRM/organisations/mod/Royal Air Force/Royal Air Force|Royal Air Force]]"
+  - "[[CRM/organisations/mod/UK Defence Innovation (UKDI)|UK Defence Innovation]]"
+customer_note: "UK MOD (RAF Regiment and wider Defence users; UKDI for PANOPTES)"
 service: Joint
 status: active
 category: counter-uas

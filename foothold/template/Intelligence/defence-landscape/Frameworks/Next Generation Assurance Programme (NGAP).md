@@ -5,7 +5,7 @@ abbreviation: NGAP
 status: active
 category: defence
 operator: TBC
-customer: UK MOD
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 created: 2026-05-20
 last_reviewed: 2026-05-20
 tags: [framework, defence-procurement, ngap, mod, stub]

@@ -1,8 +1,9 @@
 ---
 type: programme
 name: Connectivity in Low Earth Orbit (C-LEO)
-customer: UK Space Agency
-service: Space
+customer: "[[CRM/organisations/government/UK Space Agency|UK Space Agency]]"
+service: Civil
+service_note: "Space"
 status: active
 category: satellite-communications
 created: 2026-05-22

@@ -4,8 +4,12 @@ name: Weapons Sector Research Framework
 acronym: WSRF
 status: active
 category: defence-research
-customer: UK MoD; Dstl is the operating customer; also used by Front Line Commands, Weapons Evaluation and Capability Assurance (WECA), and DE&S
-operator: Defence Science and Technology Laboratory (Dstl)
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/Defence Science and Technology Laboratory (Dstl)|Dstl]]"
+customer_note: "UK MoD; Dstl is the operating customer; also used by Front Line Commands, Weapons Evaluation and Capability Assurance (WECA), and DE&S"
+operator: "[[CRM/organisations/mod/Defence Science and Technology Laboratory (Dstl)|Dstl]]"
+operator_note: "Defence Science and Technology Laboratory (Dstl)"
 prime_contractor: QinetiQ
 key_partners: MBDA, Thales
 contract_value: £300 million

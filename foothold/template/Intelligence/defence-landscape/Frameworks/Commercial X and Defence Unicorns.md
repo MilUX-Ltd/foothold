@@ -3,8 +3,10 @@ type: framework
 name: Commercial X and Defence Unicorns
 status: active
 category: defence
-operator: Commercial X (MOD)
-customer: MOD-wide
+operator: "[[CRM/organisations/mod/NAD Group/National Armaments Commercial & Industry (NA-C&I)|National Armaments Commercial & Industry]]"
+operator_note: "Commercial X (MOD)"
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+customer_note: "MOD-wide"
 created: 2026-10-15
 last_reviewed: 2026-10-15
 tags: [framework, defence-procurement, commercial-x, defence-unicorns, innovation, mod, sme, new-entrants]

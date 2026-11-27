@@ -2,7 +2,7 @@
 type: programme
 name: SKYNET
 status: active
-customer: UK MOD
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 service: Joint
 category: satcomms
 created: 2026-05-20

@@ -2,7 +2,7 @@
 type: programme
 name: TRINITY
 status: demonstration-and-manufacture
-customer: UK MOD
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 service: Joint
 category: tactical-communications
 prime: BAE Systems (Team Vigilant)

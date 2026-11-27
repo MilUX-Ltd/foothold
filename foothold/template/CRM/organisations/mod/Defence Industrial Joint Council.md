@@ -4,7 +4,7 @@ name: Defence Industrial Joint Council
 acronym: DIJC
 predecessor: Defence Suppliers Forum
 established: First meeting June 2025
-parent: UK Ministry of Defence
+parent: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 co_chairs: a Defence minister and an industry chief executive
 status: active
 website: https://www.gov.uk/government/groups/defence-industrial-joint-council

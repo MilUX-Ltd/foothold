@@ -1,8 +1,12 @@
 ---
 type: programme
 name: Aerospace Technology Institute (ATI) Programme
-customer: UK civil aerospace sector (via BIST and Innovate UK)
-service: Civil aerospace
+customer:
+  - "[[CRM/organisations/government/BIST|BIST]]"
+  - "[[CRM/organisations/government/Innovate UK|Innovate UK]]"
+customer_note: "UK civil aerospace sector (via BIST and Innovate UK)"
+service: Civil
+service_note: "Civil aerospace"
 status: active
 category: civil-aerospace-rd
 created: 2026-05-22

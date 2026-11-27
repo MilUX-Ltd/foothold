@@ -6,7 +6,10 @@ full_name: Programme Delivery Partner (Successor)
 status: active
 category: defence
 operator: Turner & Townsend (PDP appointed lead; supply chain includes wider supplier base)
-customer: UK MOD / DE&S
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/NAD Group/National Armaments Materiel (NA-M)|National Armaments Materiel]]"
+customer_note: "UK MOD / DE&S"
 created: 2026-05-20
 last_reviewed: 2026-05-20
 tags: [framework, defence-procurement, pdp-s, mod, des, turner-townsend]

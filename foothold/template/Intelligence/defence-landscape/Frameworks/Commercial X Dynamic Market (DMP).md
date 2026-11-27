@@ -5,8 +5,12 @@ abbreviation: DMP
 full_name: Commercial X Dynamic Market Place
 status: active
 category: defence
-operator: Commercial X (MOD Commercial)
-customer: MOD-wide (Commercial X led)
+operator: "[[CRM/organisations/mod/NAD Group/National Armaments Commercial & Industry (NA-C&I)|National Armaments Commercial & Industry]]"
+operator_note: "Commercial X (MOD Commercial)"
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/NAD Group/National Armaments Commercial & Industry (NA-C&I)|National Armaments Commercial & Industry]]"
+customer_note: "MOD-wide (Commercial X led)"
 created: 2026-06-10
 last_reviewed: 2026-06-10
 tags: [framework, defence-procurement, dynamic-market, commercial-x, innovation, mod, procurement-act-2023, sme]

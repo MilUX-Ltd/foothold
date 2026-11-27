@@ -1,8 +1,9 @@
 ---
 type: programme
 name: Emergency Services Network (ESN)
-customer: Home Office (UK emergency services)
-service: Home Office
+customer: "[[CRM/organisations/government/Home Office|Home Office]]"
+customer_note: "Home Office (UK emergency services)"
+service: "[[CRM/organisations/government/Home Office|Home Office]]"
 status: active
 category: communications
 created: 2026-05-22

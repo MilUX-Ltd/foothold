@@ -6,7 +6,8 @@ also_known_as: IRISU
 established: 2016
 status: active
 category: mod-component
-parent: UK Ministry of Defence (under Defence Science and Technology group, MOD Head Office)
+parent: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+parent_note: "UK Ministry of Defence (under Defence Science and Technology group, MOD Head Office)"
 website: https://www.gov.uk/government/groups/defence-science-and-technology
 last_updated: 2026-10-15
 tags:

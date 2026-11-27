@@ -27,11 +27,13 @@ BASELINE = "tools/schema-baseline.json"
 RELATIONSHIPS = {
     "parent": None,
     "customer": {"programme", "framework", "portal", "customer-engagement"},
-    "operator": {"framework", "portal", "event-series", "network"},
+    "operator": {"framework", "portal", "event-series", "network", "organisation"},
     "service": {"programme"},
     "member_of": {"organisation", "cluster"},
     "listed_on": {"framework"},
 }
+# plain words the service field may hold beside links, for programmes no one service owns
+SERVICE_WORDS = {"Joint", "Civil", "Industry"}
 # earlier spellings, to be folded into the fields above
 RETIRED_FIELDS = {"parent_programme": "parent", "parent-org": "parent", "operated_by": "operator"}
 
@@ -143,6 +145,8 @@ def check_schema(root, fail):
             for value in fields[field]:
                 links = WIKILINK.findall(value)
                 if not links:
+                    if not value.strip() or (field == "service" and value in SERVICE_WORDS):
+                        continue
                     unlinked += 1
                     continue
                 for inner in links:

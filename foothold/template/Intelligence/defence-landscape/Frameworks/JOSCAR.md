@@ -5,7 +5,7 @@ full_name: Joint Supply Chain Accreditation Register
 status: active
 category: accreditation
 operator: Hellios Information Limited
-customer: UK Defence, Security, Aerospace and Space buyer community
+audience: "UK Defence, Security, Aerospace and Space buyer community"
 created: 2026-05-20
 last_reviewed: 2026-10-15
 tags: [framework, accreditation, joscar, hellios, defence, aerospace, security]

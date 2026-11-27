@@ -2,8 +2,8 @@
 type: programme
 name: Land ISTAR
 full_name: Land Intelligence, Surveillance, Target Acquisition and Reconnaissance
-customer: British Army
-service: Army
+customer: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
+service: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
 status: active
 category: c4isr
 created: 2026-05-20

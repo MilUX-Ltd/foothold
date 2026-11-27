@@ -4,7 +4,8 @@ name: Army Warfighting Experiment
 acronym: AWE
 established: 2018
 former_name: URBan EXperimentation (URBEX)
-parent: British Army Innovation
+parent: "[[CRM/organisations/mod/British Army/Army Innovation|Army Innovation]]"
+parent_note: "British Army Innovation"
 parent_service: British Army
 status: active
 category: mod-component

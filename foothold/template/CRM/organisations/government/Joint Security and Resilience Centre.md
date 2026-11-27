@@ -2,7 +2,7 @@
 type: organisation
 name: Joint Security and Resilience Centre
 acronym: JSaRC
-parent: Home Office
+parent: "[[CRM/organisations/government/Home Office|Home Office]]"
 parent_unit: Homeland Security Group
 founded: 2016
 status: active

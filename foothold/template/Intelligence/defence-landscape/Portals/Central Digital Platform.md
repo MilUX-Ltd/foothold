@@ -3,9 +3,10 @@ type: portal
 name: Central Digital Platform
 acronym: CDP
 status: active
-operator: UK Government (Cabinet Office, Government Commercial Function)
+operator: "[[CRM/organisations/government/Cabinet Office|Cabinet Office]]"
+operator_note: "UK Government (Cabinet Office, Government Commercial Function)"
 delivery_partner: Ernst & Young
-customer: UK public sector contracting authorities and suppliers
+audience: "UK public sector contracting authorities and suppliers"
 legislative_basis: Procurement Act 2023; Procurement Regulations 2024
 launch_date: 24 February 2025
 website: https://www.gov.uk/find-a-tender

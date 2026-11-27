@@ -1,8 +1,9 @@
 ---
 type: programme
 name: Home Office Biometrics (HOB)
-customer: Home Office (law enforcement, immigration, border security)
-service: Home Office
+customer: "[[CRM/organisations/government/Home Office|Home Office]]"
+customer_note: "Home Office (law enforcement, immigration, border security)"
+service: "[[CRM/organisations/government/Home Office|Home Office]]"
 status: active
 category: identity-biometrics
 created: 2026-05-22

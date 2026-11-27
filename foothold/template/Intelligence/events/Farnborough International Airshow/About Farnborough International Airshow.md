@@ -4,7 +4,8 @@ name: Farnborough International Airshow
 cadence: biennial (even years)
 venue: Farnborough, Hampshire
 status: active
-operator: Farnborough International Limited (FIL); wholly-owned subsidiary of ADS Group
+operator: "[[CRM/organisations/trade bodies/ADS Group|ADS Group]]"
+operator_note: "Farnborough International Limited (FIL); wholly-owned subsidiary of ADS Group"
 website: https://www.farnboroughairshow.com
 last_updated: 2026-10-15
 tags:

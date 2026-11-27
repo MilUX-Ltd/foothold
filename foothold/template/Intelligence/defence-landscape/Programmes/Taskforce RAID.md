@@ -2,7 +2,8 @@
 type: programme
 name: Taskforce RAID
 full_name: Rapid AI Delivery Taskforce (TF RAID)
-customer: UK MOD (reports to the Chief of the Defence Staff)
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+customer_note: "UK MOD (reports to the Chief of the Defence Staff)"
 service: Joint
 status: active
 category: artificial-intelligence

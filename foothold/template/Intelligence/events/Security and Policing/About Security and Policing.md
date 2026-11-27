@@ -4,7 +4,7 @@ name: Security and Policing
 cadence: annual
 venue: Farnborough, Hampshire
 status: active
-operator: Home Office
+operator: "[[CRM/organisations/government/Home Office|Home Office]]"
 access: closed (vetted attendance)
 website: https://www.securityandpolicing.co.uk
 last_updated: 2026-10-15
