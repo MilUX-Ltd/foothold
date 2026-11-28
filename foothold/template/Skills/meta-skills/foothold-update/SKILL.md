@@ -1,9 +1,9 @@
 ---
 name: foothold-update
 description: Bring the latest Foothold release into the person's vault without losing their own work. Reads the file list of the latest release on GitHub (never a branch), sorts every change, shows the difference and asks about each change to a skill, instruction file, script or setting, lists other changes and asks once, and never touches the person's own pages, the protected pages or Obsidian's settings. A run with nobody to answer only reports. Use when the person says "update Foothold", "/foothold-update", "check for Foothold updates", "is there anything new in Foothold", or similar.
-audited: 2026-06-08
-audit_verdict: pass
-audited_with: skill-safety-audit v3
+audited: 2026-11-28
+audit_verdict: pass with cautions
+audited_with: skill-safety-audit (independent)
 origin: built
 maintainer: MilUX
 license: MIT

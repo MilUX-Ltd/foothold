@@ -1,9 +1,9 @@
 ---
 name: foothold-setup
 description: Install Foothold: ask six short questions, lay the vault down and land the person on it, then offer an optional guided brain-dump interview and optional scheduled jobs. Installs from the template in the Foothold release folder the person gave you (the folder holding Start Here.md), or from the template bundled inside the Claude plugin; no network or GitHub API needed. Asks before writing, creates folders at the user's chosen path, substitutes placeholders, elicits the user's context through two rich forms (with plain-question fallbacks where forms aren't available) if they want the interview, and offers optional scheduled jobs, including an update check that only reports. Use when the user says "set up Foothold", "install Foothold", "onboard me", "read Start Here and set Foothold up", "tell Foothold about my business", or runs /foothold-setup. Needs no terminal for the install itself; it uses Python, where the tool can run it, only to work out the record's checksums, and works without it otherwise.
-audited: 2026-07-02
-audit_verdict: pass
-audited_with: skill-safety-audit v3
+audited: 2026-11-28
+audit_verdict: pass with cautions
+audited_with: skill-safety-audit (independent)
 origin: built
 maintainer: MilUX
 license: MIT
