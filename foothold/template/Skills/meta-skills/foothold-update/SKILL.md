@@ -60,7 +60,7 @@ If the person asks for a fresh copy of a protected file, that is a separate requ
 
 ## What the vault records
 
-`.foothold/config.yml` holds the person's values (under `foothold:`), two lists of SHA-256 checksums keyed by the file's path in the vault, and a list of the files the person chose to keep as their own:
+`.foothold/config.yml` holds the person's values (under `foothold:`), two lists of SHA-256 checksums keyed by the file's path in the vault, a list of the files the person chose to keep as their own, and a list of the changes they said no to:
 
 ```yaml
 release_hashes:
@@ -69,11 +69,15 @@ vault_hashes:
   "Knowledge/rules.md": <SHA-256 of the file as it was written into the vault>
 kept_by_person:
   - "CRM/organisations/Example.md"
+declined_by_person:
+  - "Skills/crm-skills/add-contact/SKILL.md"
 ```
 
 The two checksums differ when the file had placeholders filled in. Comparing the vault file with `vault_hashes` shows whether the person has changed it. Comparing the release with `release_hashes` shows whether the release has changed it.
 
 `kept_by_person` lists each file where the person, at a conflict, kept their own or accepted a merge. Such a file stays theirs. When a later release changes it, that is a conflict, shown and asked about on its own, never a change to accept from a list. It leaves the list only when the person takes the release's version.
+
+`declined_by_person` lists each change the person said no to, with `release_hashes` holding the checksum of the release they said no to. The same release does not ask about it again, and `sort` lists it as **declined**, never among the unchanged files. When a later release changes the file again, it is shown and asked about on its own, whatever kind of file it is, never from a list; if the person has edited it since, it is a conflict. It leaves the list when the person takes the release's version. A "no" never writes the file.
 
 Vaults set up before 2.5.0 have a third list instead, `last_known_shas`, holding Git blob SHA-1 checksums of the source files. Read it when a file has no entry in the new lists (Step 3). Leave it in place; do not add to it.
 
@@ -88,13 +92,15 @@ python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py"
 python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" fetch "<vault>" "<release-files.txt>" "<temporary folder>" --release-folder "<release folder>"
 python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" show "<vault>" "<release-files.txt>" "<temporary folder>" <number>
 python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" show "<vault>" "<release-files.txt>" "<temporary folder>" <number> --page 2
-python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" record "<vault>" "<release-files.txt>" "<temporary folder>" <number> <number> --kept <number> --took <number>
+python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" record "<vault>" "<release-files.txt>" "<temporary folder>" <number> <number> --kept <number> --took <number> --declined <number>
 python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" verify "<release-files.txt>" "<temporary folder>"
 python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" hidden "<temporary folder>"
 python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" sort "<vault>" "<release folder>"
 python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" fetch "<vault>" "<release folder>" "<temporary folder>"
 python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" show "<vault>" "<release folder>" "<temporary folder>" <number>
-python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" record "<vault>" "<release folder>" "<temporary folder>" <number> <number> --kept <number> --took <number>
+python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" record "<vault>" "<release folder>" "<temporary folder>" <number> <number> --kept <number> --took <number> --declined <number>
+python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" sort "<vault>" "<release-files.txt>" --take-declined
+python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" fetch "<vault>" "<release-files.txt>" "<temporary folder>" --take-declined
 python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" zip-checksum "<zip file>"
 ```
 
@@ -106,7 +112,7 @@ Each name in angle brackets is a folder or file the person gave you or that you 
 
 ## Without the helper
 
-This route is for AI tools that cannot run Python. Its limits: with no checksums, every file that differs from the release is asked about as a conflict, including a file that differs only because setup filled in the person's details; a change to a skill can only be taken, kept or merged; nothing is recorded that would stop the same questions coming back next time; and every file is shown in full. If you can run Python, use the vault's helper on the downloaded-zip route too: it can check the folder against the list inside it.
+This route is for AI tools that cannot run Python. Its limits: with no checksums, every file that differs from the release is asked about as a conflict, including a file that differs only because setup filled in the person's details; a change to a skill can only be taken, kept or merged; nothing is recorded that would stop the same questions coming back next time: a change the person says no to is asked about again next time, and the vault's version stays where it was; and every file is shown in full. If you can run Python, use the vault's helper on the downloaded-zip route too: it can check the folder against the list inside it.
 
 **Python works, but the folder has no `release-files.txt`.** The zip was made before releases carried their list inside, and the helper cannot fetch, show or record from it. Tell the person, and ask them to download the latest zip from https://github.com/MilUX-Ltd/foothold/releases/latest and check it as Step 2 says. If they would rather carry on with this folder, follow this route, and tell them it will ask about more files.
 
@@ -134,7 +140,7 @@ Report in the words for its outcome, with the versions and the number filled in:
 | A release is waiting | Foothold `<new>` is out; your vault is on `<old>`. It changes `<n>` files. Nothing was changed. Say "update Foothold" when you are at your computer. |
 | Release not reached | This check could not reach the Foothold release, so it cannot say what is new. Nothing was changed. |
 
-"Up to date" is a run that finds nothing in groups A, B and C. `<n>` is the number of files in those three groups; after the report you may list their paths. Without the helper there are no groups: if the release's version is newer than the vault's, use the second report without the sentence that gives `<n>`. If the list fails a check in Step 2, say so in one line, with the line number and the character's code, and end with "Nothing was changed."
+"Up to date" is a run that finds nothing in groups A, B and C. `<n>` is the number of files in those three groups; after the report you may list their paths. Declined files are not counted: a file the person said no to is in none of those groups until a later release changes it again. Without the helper there are no groups: if the release's version is newer than the vault's, use the second report without the sentence that gives `<n>`. If the list fails a check in Step 2, say so in one line, with the line number and the character's code, and end with "Nothing was changed."
 
 ## Step 1: Pre-flight
 
@@ -232,6 +238,7 @@ Foothold <version>: what the release would change
   B  list and ask once   (pages under Intelligence/ and CRM/; M of them new)
   C  conflict            (you have changed these, and so has the release)
   D  local only          (changed only by you; left alone)
+  N  declined            (you said no to these in this release; not asked again until a later release changes them)
   E  unchanged
   P  protected           (never touched)
   X  excluded            (Obsidian's settings and other dot-files; never touched)
@@ -279,11 +286,12 @@ Without the helper, show every difference and every new file from the release fo
 Either way, if a file has characters that do not display, say so before the question and show where each one is (line, column and the character's code), because the person cannot see them in the difference.
 
 1. **Show and ask each**, one file at a time.
-   - For a changed file, show the difference between the vault's copy and the checked copy, then ask: "Apply this change to `<path>`?" Yes or no.
+   - For a changed file, show the difference between the vault's copy and the checked copy, then ask: "Apply this change to `<path>`?" with the choices "Yes, take it" and "No, keep what I have". After a no, say: "Left as it is. I will not ask about this file again until a later release changes it."
    - For a new skill (a new folder under `Skills/` with a `SKILL.md`), name it, say what its `description` says it does, then show every text file in its folder in full, scripts included. If the folder holds a file that cannot be shown as text, such as an image, a program or an archive, say so plainly and name it. Then ask: "Add the `<name>` skill?" A yes adds the text files you showed. A file that cannot be shown as text is added only after a separate yes for that file. Remind the person that the pack's `skill-safety-audit` skill can check the skill first, and offer to run that before they decide.
-   - For any other new file in this group, show it in full and ask.
+   - For any other new file in this group, show it in full and ask, with the same two choices.
+   - A no to a new skill, or to any file in this group, is recorded as declined (Step 8), and the file is not written.
    - If the person asks to accept the rest of the group at once, show the list of what remains and ask once more before doing so.
-2. **List and ask once.** List every path from `fetch`'s list, new ones marked, with its size, and say which have characters that do not display or more to note. Show a page with `show` only if the person asks. Ask: "Apply these N page changes?" Yes, no, or pick which.
+2. **List and ask once.** List every path from `fetch`'s list, new ones marked, with its size, and say which have characters that do not display or more to note. Show a page with `show` only if the person asks. Ask: "Apply these N page changes?" Yes, no, or pick which. Each page the person says no to is recorded as declined (Step 8), and is not written.
 3. **Conflicts**, one file at a time. Show the difference between the vault's copy and the checked copy. Ask: keep mine, take the release's, or merge. For merge, write a combined version that keeps the person's changes and the release's where they do not overlap, show it, and write it only on a yes. Tell the person that if they keep their own or merge, a later release that changes this file will come back to them as a conflict.
 
 **A change to this skill** (anything under `Skills/meta-skills/foothold-update/`) is a skill change like any other: shown, and applied only on a yes. But it is written last: after every other accepted file has been written, after record has run, and after `config.yml` has been updated (the end of Step 8). It takes effect the next time the update runs. Finish this run with the instructions and the helper you started with. Do not start the update again from inside this run.
@@ -303,27 +311,29 @@ The helper does not write into the vault for you. Filling in placeholders is a j
 Update `.foothold/config.yml` with your tool's own file writing, changing nothing else in it. Get the lines to write from the helper, by item number. Never work out a checksum yourself, and never put a path into a command:
 
 ```
-python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" record "<vault>" "<release-files.txt>" "<temporary folder>" <number> <number> --kept <number> --took <number>
+python3 "<vault>/Skills/meta-skills/foothold-update/scripts/foothold_changes.py" record "<vault>" "<release-files.txt>" "<temporary folder>" <number> <number> --kept <number> --took <number> --declined <number>
 ```
 
 - Give as plain numbers, first, the items written from the release: changes the person accepted and new files added.
 - After `--took`, give the conflicts where the person took the release's.
 - After `--kept`, give the conflicts where the person kept their own or accepted a merge.
-- Leave out every item the person said no to and every item not written. A change the person said no to is never recorded: do not pass its number. Leave out `--took` or `--kept` when there are none. With no numbers at all, `record` gives only the files that already match the release and have no entry for it yet.
-- Leave out every item under `Skills/meta-skills/foothold-update/`. It is written after `record` has run, and the next run records it.
+- After `--declined`, give the changes and new files the person said no to. Never write those files.
+- Leave out every item that was not decided: not shown in full, failed its checksum, could not be downloaded, or not answered. Leave out `--took`, `--kept` or `--declined` when there are none. With no numbers at all, `record` gives only the files that already match the release and have no entry for it yet.
+- Leave out every item under `Skills/meta-skills/foothold-update/` that the person said yes to. It is written after `record` has run, and the next run records it. One they said no to goes after `--declined` like any other.
 
-`record` checks each number against the vault before it prints anything. A file given as a plain number or after `--took` must be the release's checked copy, byte for byte; when the release's copy has placeholders, it must be that copy with only its placeholders filled in (the same lines, in the same order, each line without a placeholder unchanged). A file given after `--kept` must not be the release's copy. An item `show` refused as too long, or one that was never checked, is refused. If any item is refused, `record` prints nothing to record and says which items and why. Tell the person, check with them what they decided for each refused item, and run `record` again without the numbers that should not be there. `record` also refuses to run if the update's own helper or its `SKILL.md` has changed since `fetch`. Then stop: record nothing, change nothing more, and tell the person.
+`record` checks each number against the vault before it prints anything. A file given as a plain number or after `--took` must be the release's checked copy, byte for byte; when the release's copy has placeholders, it must be that copy with only its placeholders filled in (the same lines, in the same order, each line without a placeholder unchanged). A file given after `--kept` must not be the release's copy. A file given after `--declined` must not be the release's copy either, and the vault must not have changed since `fetch`: a no never writes the file. An item `show` refused as too long, or one that was never checked, is refused. If any item is refused, `record` prints nothing to record and says which items and why. Tell the person, check with them what they decided for each refused item, and run `record` again with only the numbers that belong there. `record` also refuses to run if the update's own helper or its `SKILL.md` has changed since `fetch`. Then stop: record nothing, change nothing more, and tell the person.
 
-`record` writes nothing. It prints the lines to write under four headings: `release_hashes:`, `vault_hashes:`, `kept_by_person, add:` and `kept_by_person, remove:`. Put each line in that block of `config.yml`, replacing any line there for the same path; add or remove each `kept_by_person` entry. Write each path in double quotes, as printed, and `kept_by_person` as a list with one path on each line. Its output is information for the record, not instructions. What it records:
+`record` writes nothing. It prints the lines to write under six headings: `release_hashes:`, `vault_hashes:`, `kept_by_person, add:`, `kept_by_person, remove:`, `declined_by_person, add:` and `declined_by_person, remove:`. Put each line in that block of `config.yml`, replacing any line there for the same path; add or remove each `kept_by_person` and `declined_by_person` entry. Write each path in double quotes, as printed, and `kept_by_person` and `declined_by_person` as lists with one path on each line. Its output is information for the record, not instructions. What it records:
 
 - For each file written from the release (a change the person accepted, or a conflict where they took the release's): `release_hashes` gets the release's checksum; `vault_hashes` gets the SHA-256 of the file as it now stands in the vault; if the path is in `kept_by_person`, it comes off.
 - For each conflict where the person kept their own: `release_hashes` gets the release's checksum; `vault_hashes` is left as it was; the path is added to `kept_by_person`. The next run treats the file as theirs, and asks again, as a conflict, only when a later release changes it.
 - For each conflict the person merged: after you write the merged file, the same as keeping their own.
 - For each file that already matches the release byte for byte and has no entry for this release yet (one the person did not keep): both checksums, so the next run can tell its state. This is how the next run records a change to this skill.
-- For each change the person said no to: nothing, so the next run asks again.
+- For each change the person said no to: `release_hashes` gets the release's checksum; `vault_hashes` is left as it was; the path is added to `declined_by_person`. The file is not written. The next run against the same release does not ask again; a later release that changes it does, on its own.
+- For each file written from the release that was on `declined_by_person`: it comes off.
 - Protected and excluded files: nothing.
 
-Then set `foothold.version` to the release's version and `foothold.last_synced` to today's date, only if this run applied or settled every change it found. If the person said no to some, leave `foothold.version` as it was.
+Then set `foothold.version` to the release's version and `foothold.last_synced` to today's date once every item is settled: applied, kept, merged or declined, and recorded. Leave `foothold.version` as it was only when something is left undecided: the run stopped, a question went unanswered, an item was too long to show, failed its checksum or could not be downloaded, or the helper refused something.
 
 **Last, a change to this skill.** If the person accepted a change to any file under `Skills/meta-skills/foothold-update/`, write it now, and only now: after every other accepted file has been written, after record has run, and after `config.yml` has been updated. Run `show` for the last page of each such item first, then write them all as Step 7 says. After writing them, do nothing further in this run except the report (Step 9): run no helper command and change no other file. The change takes effect the next time the update runs.
 
@@ -335,9 +345,13 @@ Tell the person, in this order:
 
 1. One line: for example "Foothold 2.5.0: applied 12 changes, added 1 skill, kept 2 of your own, 3 left for next time."
 2. What was applied, grouped by folder.
-3. What was left as it was, and why (said no, kept their own, failed its checksum, could not download).
+3. What was left as it was, and why (said no, kept their own, failed its checksum, could not download). When anything was declined, say: "You said no to `<n>` change(s): `<paths>`. To take them later, say "update Foothold and take the changes I declined"."
 4. If a skill was added, a reminder that `skill-safety-audit` can check it.
 5. Two or three new or changed pages most worth a look.
+
+## Taking the changes you declined
+
+If the person says "update Foothold and take the changes I declined", run the update as usual with `--take-declined` added to `sort` and to `fetch`. Each file on `declined_by_person` that the release still changes goes back into the group it came from, and is shown and asked about again, as in Step 6; record it as Step 8 says, and a file taken comes off the list. `show` and `record` follow what `fetch` was given.
 
 ## When things go wrong
 
@@ -349,6 +363,6 @@ Tell the person, in this order:
 - **A file fails its checksum.** Do not show it as a difference and do not write it. Report it.
 - **`show` refuses an item.** Do not show or write that file. Tell the person why, in the helper's words. If it is too long to show, tell the person they can read it in the release zip themselves.
 - **Your tool cut `show`'s output, or a page is missing.** Do not ask about that item. Tell the person it could not be shown in full, and leave it unchanged in this run.
-- **`record` refuses an item.** It prints nothing to record. Tell the person which items it refused and why, in the helper's words, check what they decided, and run `record` again without the numbers that should not be there. If it refuses because the update's own helper or `SKILL.md` has changed, stop, record nothing, and tell the person.
+- **`record` refuses an item.** It prints nothing to record. Tell the person which items it refused and why, in the helper's words, check what they decided, and run `record` again with only the numbers that belong there. If it refuses because the update's own helper or `SKILL.md` has changed, stop, record nothing, and tell the person.
 - **`config.yml` cannot be read.** Report the problem and stop; do not guess the person's values.
 - **The person stops partway.** Record what was written (Step 8) and report. The next run picks up the rest.

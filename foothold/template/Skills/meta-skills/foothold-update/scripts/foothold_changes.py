@@ -96,10 +96,11 @@ ASK_EACH = "show and ask each"
 ASK_ONCE = "list and ask once"
 CONFLICT = "conflict"
 LOCAL_ONLY = "local only"
+DECLINED = "declined"
 UNCHANGED = "unchanged"
 PROTECTED = "protected"
 EXCLUDED = "excluded"
-ORDER = (ASK_EACH, ASK_ONCE, CONFLICT, LOCAL_ONLY, UNCHANGED, PROTECTED, EXCLUDED)
+ORDER = (ASK_EACH, ASK_ONCE, CONFLICT, LOCAL_ONLY, DECLINED, UNCHANGED, PROTECTED, EXCLUDED)
 TO_LOOK_AT = (ASK_EACH, ASK_ONCE, CONFLICT)
 
 # Names compared after casefold(). A file with one of these names is always show and ask each.
@@ -135,8 +136,9 @@ VERSION = re.compile(r"[0-9]+\.[0-9]+\.[0-9]+")  # used with fullmatch
 PLACEHOLDER = re.compile(r"\{\{([a-z_]+)\}\}")
 ANGLE = re.compile(r"<([a-z_]+)>")
 CONFIG_BLOCKS = {"foothold", "release_hashes", "vault_hashes", "last_known_shas",
+                 "declined_by_person",
                  "kept_by_person"}
-LIST_BLOCKS = {"kept_by_person"}
+LIST_BLOCKS = {"kept_by_person", "declined_by_person"}
 SKIP_NAMES = {".DS_Store", "Thumbs.db", "desktop.ini"}
 SKIP_FOLDED = {name.casefold() for name in SKIP_NAMES}
 # The placeholders setup fills, and only these: the list in the setup skill, which
@@ -207,6 +209,9 @@ class Config:
     release_hashes: dict = field(default_factory=dict)  # vault path -> SHA-256 of its source
     legacy: dict = field(default_factory=dict)  # vault path -> git blob SHA-1 (last_known_shas)
     kept: list = field(default_factory=list)  # vault paths the person kept or merged
+    # vault paths where the person said no to the release's change; release_hashes holds the
+    # checksum of the release they said no to
+    declined: list = field(default_factory=list)
 
 
 @dataclass
@@ -644,8 +649,16 @@ def parse_config(text):
             continue
         if block in LIST_BLOCKS and raw.lstrip(" ").startswith("-"):
             item = _scalar(raw.lstrip(" ")[1:])
-            if item and item not in config.kept:
-                config.kept.append(item)
+            target = config.kept if block == "kept_by_person" else config.declined
+            if block == "declined_by_person" and item:
+                why = path_problem(item)
+                if why or excluded(item):
+                    raise ChangesError(
+                        "the declined_by_person list in .foothold/config.yml holds an entry that "
+                        f"is not a path the update could have recorded ({why or 'a dot-path'}); "
+                        "stopping, nothing was changed")
+            if item and item not in target:
+                target.append(item)
             continue
         if not raw.startswith(" "):
             key, _, rest = raw.partition(":")
@@ -669,7 +682,7 @@ def parse_config(text):
 
 
 def render_config(config):
-    """The five blocks as YAML, with every key and value quoted."""
+    """The six blocks as YAML, with every key and value quoted."""
     out = ["foothold:"]
     out += [f"  {key}: {json.dumps(value)}" for key, value in config.values.items()]
     for name, table in (
@@ -682,6 +695,9 @@ def render_config(config):
     kept = sorted(set(config.kept))
     out.append("kept_by_person:" if kept else "kept_by_person: []")
     out += [f"  - {json.dumps(path)}" for path in kept]
+    declined = sorted(set(config.declined))
+    out.append("declined_by_person:" if declined else "declined_by_person: []")
+    out += [f"  - {json.dumps(path)}" for path in declined]
     return "\n".join(out) + "\n"
 
 
@@ -859,8 +875,14 @@ def _one_page_each(release, config):
                 "the vault with your values filled in; stopping, nothing was changed")
 
 
-def classify(release, config, vault_root, protected):
-    """Sort every file in the release. Returns {template path: Change}."""
+def classify(release, config, vault_root, protected, take_declined=False):
+    """Sort every file in the release. Returns {template path: Change}.
+
+    A file on declined_by_person is DECLINED while the release is the one the person said no to
+    (its release_hashes entry). When a later release changes it, it is show and ask each,
+    whatever kind of file it is, or a conflict if the person has edited it since: never list
+    and ask once. With take_declined, a declined file the release still changes goes back into
+    the group it came from."""
     vault_root = Path(vault_root)
     protected_template = {item.casefold() for item in protected}
     protected_vault = set()
@@ -870,6 +892,7 @@ def classify(release, config, vault_root, protected):
         except ChangesError:
             pass
     kept = {path.casefold() for path in config.kept}
+    declined = {path.casefold() for path in config.declined}
     _one_page_each(release, config)
     result, vault_paths = {}, {}
     for tpath, rsha in sorted(release.files.items()):
@@ -914,6 +937,10 @@ def classify(release, config, vault_root, protected):
         if state in ("case", "blocked"):
             result[tpath] = Change(CONFLICT, vpath)
             continue
+        if vpath.casefold() in declined and vpath.casefold() not in kept:
+            result[tpath] = _declined_change(config, vault_root, vpath, rsha, sort_kind, state,
+                                             take_declined)
+            continue
         if state == "absent" and not local.is_symlink():
             result[tpath] = Change(sort_kind, vpath, new=True)
             continue
@@ -943,6 +970,29 @@ def classify(release, config, vault_root, protected):
             category = CONFLICT
         result[tpath] = Change(category, vpath)
     return result
+
+
+def _declined_change(config, vault_root, vpath, rsha, sort_kind, state, take_declined):
+    """How a file on declined_by_person sorts. The same release the person said no to:
+    DECLINED, or with take_declined the group it came from. A later release: show and ask each,
+    never list and ask once, or a conflict if the person has edited the file since."""
+    same = config.release_hashes.get(vpath) == rsha
+    local = Path(vault_root) / vpath
+    if state == "absent" and not local.is_symlink():
+        if same:
+            return Change(sort_kind if take_declined else DECLINED, vpath, new=True)
+        return Change(ASK_EACH, vpath, new=True)
+    if local.is_symlink() or not local.is_file():
+        return Change(CONFLICT, vpath)
+    lsha = sha256_bytes(local.read_bytes())
+    if lsha == rsha:
+        return Change(UNCHANGED, vpath)
+    if same and not take_declined:
+        return Change(DECLINED, vpath)
+    written = config.vault_hashes.get(vpath)
+    if written is None or lsha != written:
+        return Change(CONFLICT, vpath)
+    return Change(sort_kind if same else ASK_EACH, vpath)
 
 
 def read_release_files(path):
@@ -1061,16 +1111,17 @@ def check_not_older(release, config):
             "Stopping, nothing was changed")
 
 
-def sort_release(vault, release, skill_md=DEFAULT_SKILL):
+def sort_release(vault, release, skill_md=DEFAULT_SKILL, take_declined=False):
     config = read_vault_config(vault)
     check_not_older(release, config)
     protected = read_protected(Path(skill_md).read_text(encoding="utf-8"))
-    return classify(release, config, vault, protected)
+    return classify(release, config, vault, protected, take_declined)
 
 
-def sort_from_paths(vault, release_source, skill_md, release_files=None):
+def sort_from_paths(vault, release_source, skill_md, release_files=None, take_declined=False):
     read_vault_config(vault)
-    return sort_release(vault, load_release(release_source, release_files), skill_md)
+    return sort_release(vault, load_release(release_source, release_files), skill_md,
+                        take_declined)
 
 
 def to_look_at(result):
@@ -1230,7 +1281,7 @@ def _save(store, number, data):
 
 
 def fetch(vault, release_files, temp, skill_md=DEFAULT_SKILL, download=None,
-          release_folder=None):
+          release_folder=None, take_declined=False):
     """Download, check and save every file in groups A, B and C. Returns the numbered items.
 
     Each file is fetched once, from release_url() and nothing else, or copied from the release
@@ -1241,7 +1292,8 @@ def fetch(vault, release_files, temp, skill_md=DEFAULT_SKILL, download=None,
     vault, temp = Path(vault), Path(temp)
     release, release_folder = load_list(release_files, release_folder)
     _check_temp(vault, temp)
-    result = sort_release(vault, release, skill_md)
+    take_declined = take_declined is True
+    result = sort_release(vault, release, skill_md, take_declined)
     run = _run_checksums(skill_md)
     download = download or https_download
     store = temp / FILES
@@ -1276,7 +1328,8 @@ def fetch(vault, release_files, temp, skill_md=DEFAULT_SKILL, download=None,
             item["text"] = False
         item["too_long"] = _too_long(data) is not None
     with open(temp / MANIFEST, "x", encoding="utf-8") as handle:
-        json.dump({"release": release.version, **run, "items": items}, handle, indent=1)
+        json.dump({"release": release.version, **run, "take_declined": take_declined,
+                   "items": items}, handle, indent=1)
     _fetch_report(release.version, items)
     return items
 
@@ -1346,6 +1399,11 @@ def _read_manifest(temp):
         raise ChangesError("the list from fetch cannot be read; run fetch again into a new "
                            "empty folder")
     return manifest
+
+
+def _takes_declined(temp):
+    """Whether fetch ran with --take-declined, so show and record sort the same way."""
+    return _read_manifest(temp).get("take_declined") is True
 
 
 def _manifest_item(vault, release, temp, number, skill_md=DEFAULT_SKILL):
@@ -1544,7 +1602,7 @@ def show(vault, release_files, temp, number, skill_md=DEFAULT_SKILL, page=1):
     vault, temp = Path(vault), Path(temp)
     release, _ = load_list(release_files)
     item, tpath, vault_path, total = _manifest_item(vault, release, temp, number, skill_md)
-    now = sort_release(vault, release, skill_md).get(tpath)
+    now = sort_release(vault, release, skill_md, _takes_declined(temp)).get(tpath)
     if (now is None or now.category != item["group"] or now.new != item["new"]
             or now.vault_path != vault_path):
         raise ChangesError(
@@ -1735,12 +1793,18 @@ def _record_item(vault, release, config, temp, number, choice, skill_md):
     group = item["group"]
     sort_kind = ASK_EACH if ASK_EACH in (kind(tpath), kind(vault_path)) else ASK_ONCE
     kept = {path.casefold() for path in config.kept}
-    always_conflict = (vault_path.casefold() in kept
-                       and config.release_hashes.get(vault_path) != digest)
+    changed_again = config.release_hashes.get(vault_path) != digest
+    always_conflict = vault_path.casefold() in kept and changed_again
+    # A file the person said no to, that a later release changes again, is asked about singly.
+    if vault_path.casefold() in {path.casefold() for path in config.declined} and changed_again:
+        sort_kind = ASK_EACH
     if group not in (CONFLICT, sort_kind) or (always_conflict and group != CONFLICT):
         raise ChangesError(f"item {number} in the list from fetch does not match the release "
                            "and the vault; run fetch again into a new empty folder")
     conflict = group == CONFLICT
+    if choice == "declined":
+        return _declined_item(vault, release, config, temp, number, item, tpath, vault_path,
+                              digest, skill_md)
     if choice == "written" and conflict:
         raise ChangesError(f"item {number} is a conflict: give it after --took if the person "
                            "took the release's, or after --kept if they kept theirs or merged")
@@ -1763,11 +1827,38 @@ def _record_item(vault, release, config, temp, number, choice, skill_md):
         if problem:
             raise ChangesError(f"{problem}, so it cannot be recorded as written from the "
                                "release. If the person kept their own, give it after --kept; "
-                               "if they said no, leave its number out")
+                               "if they said no, give it after --declined")
     return tpath, vault_path, data
 
 
-def record(vault, release_files, temp, written=(), kept=(), took=(), skill_md=DEFAULT_SKILL):
+def _declined_item(vault, release, config, temp, number, item, tpath, vault_path, digest,
+                   skill_md):
+    """Check an item the person said no to. It must be a change or a new file, not a conflict;
+    it must have been shown in full; the vault's copy must not be the release's copy; and the
+    vault must still sort it exactly as fetch did, so nothing has been written to it since."""
+    if item["group"] == CONFLICT:
+        raise ChangesError(f"item {number} is a conflict: a conflict is kept, taken or merged "
+                           "(--kept or --took), never declined")
+    _, copy = _checked_copy(temp, number, digest)
+    why = _too_long(copy)
+    if why:
+        raise ChangesError(f"show refused item {number} ({why}); an item not shown in full is "
+                           "left undecided, not declined")
+    local = Path(vault) / vault_path
+    if _inside(vault, local) and not local.is_symlink() and local.is_file():
+        if _fill_problem(tpath, copy, local.read_bytes(), config.values) is None:
+            raise ChangesError(f"the file in the vault is the release's copy, so item {number} was "
+                               "not declined; if the person said yes, give it as a plain number")
+    now = sort_release(vault, release, skill_md, _takes_declined(temp)).get(tpath)
+    if now is None or now.category != item["group"] or now.new != item["new"]:
+        raise ChangesError(f"the vault has changed since fetch, so item {number} is no longer the "
+                           "change the person said no to; nothing about it is recorded. Run "
+                           "fetch again into a new empty folder")
+    return tpath, vault_path, None
+
+
+def record(vault, release_files, temp, written=(), kept=(), took=(), declined=(),
+           skill_md=DEFAULT_SKILL):
     """The lines Step 8 writes into .foothold/config.yml, for items named by number. Writes
     nothing: the AI writes the lines with its own file writing.
 
@@ -1777,7 +1868,11 @@ def record(vault, release_files, temp, written=(), kept=(), took=(), skill_md=DE
     release's checksum), vault_hashes (the SHA-256 of the vault file as it now stands) and comes
     off kept_by_person. kept: conflicts the person kept or merged; the vault's file must not be
     the release's copy. Each gets release_hashes and joins kept_by_person; vault_hashes is left
-    alone. An item show refused, or that was not checked, is refused. If any item is refused,
+    alone. declined: changes and new files the person said no to; the vault's file must not be
+    the release's copy and must not have changed since fetch. Each gets release_hashes (the
+    checksum of the release they said no to) and joins declined_by_person; vault_hashes is left
+    alone, and the file is never written. An item show refused, or that was not checked, is
+    refused. If any item is refused,
     nothing is printed. Files that now match the release byte for byte, are not kept, and have
     no entry or a stale one get both checksums. Numbers are optional: with none, only those are
     recorded.
@@ -1786,14 +1881,16 @@ def record(vault, release_files, temp, written=(), kept=(), took=(), skill_md=DE
     release, _ = load_list(release_files)
     config = read_vault_config(vault)
     chosen = [(n, "written") for n in written] + [(n, "took") for n in took] + \
-        [(n, "kept") for n in kept]
+        [(n, "kept") for n in kept] + [(n, "declined") for n in declined]
     numbers = [n for n, _ in chosen]
     if len(set(numbers)) != len(numbers):
         raise ChangesError("an item number is given more than once; give each item once")
     if chosen or (temp / MANIFEST).exists():
         _same_run(_read_manifest(temp), skill_md)
     kept_now = {path.casefold(): path for path in config.kept}
+    declined_now = {path.casefold(): path for path in config.declined}
     rel_set, vault_set, kept_add, kept_remove, refused = {}, {}, [], [], []
+    declined_add, declined_remove = [], []
     for number, choice in chosen:
         try:
             tpath, vault_path, data = _record_item(vault, release, config, temp, number, choice,
@@ -1803,6 +1900,12 @@ def record(vault, release_files, temp, written=(), kept=(), took=(), skill_md=DE
             refused.append(why if why.startswith(f"item {number} ") else f"item {number}: {why}")
             continue
         rel_set[vault_path] = release.files[tpath]
+        if choice == "declined":
+            if vault_path.casefold() not in declined_now and vault_path not in declined_add:
+                declined_add.append(vault_path)
+            continue
+        if vault_path.casefold() in declined_now:
+            declined_remove.append(declined_now[vault_path.casefold()])
         if choice == "kept":
             if vault_path.casefold() not in kept_now and vault_path not in kept_add:
                 kept_add.append(vault_path)
@@ -1814,9 +1917,11 @@ def record(vault, release_files, temp, written=(), kept=(), took=(), skill_md=DE
         raise ChangesError(
             "record refused, and printed nothing to record:\n  " + "\n  ".join(refused)
             + "\nCheck with the person what they decided for each refused item. A change the "
-            "person said no to is never recorded: leave its number out. Then run record again.")
+            "person said no to goes after --declined, and is never written. Then run record "
+            "again.")
     newly_kept = {path.casefold() for path in kept_add}
-    for tpath, change in sort_release(vault, release, skill_md).items():
+    take = _takes_declined(temp) if (temp / MANIFEST).exists() else False
+    for tpath, change in sort_release(vault, release, skill_md, take).items():
         vpath, digest = change.vault_path, release.files[tpath]
         if (change.category != UNCHANGED or vpath in rel_set
                 or vpath.casefold() in kept_now or vpath.casefold() in newly_kept):
@@ -1828,6 +1933,8 @@ def record(vault, release_files, temp, written=(), kept=(), took=(), skill_md=DE
             continue
         if sha256_bytes(local.read_bytes()) == digest:
             rel_set[vpath] = vault_set[vpath] = digest
+            if vpath.casefold() in declined_now:
+                declined_remove.append(declined_now[vpath.casefold()])
 
     def block(title, lines):
         return [title] + (lines or ["(none)"])
@@ -1843,6 +1950,10 @@ def record(vault, release_files, temp, written=(), kept=(), took=(), skill_md=DE
     out += block("kept_by_person, add:", [f"  - {json.dumps(p)}" for p in sorted(kept_add)])
     out += block("kept_by_person, remove:",
                  [f"  - {json.dumps(p)}" for p in sorted(set(kept_remove))])
+    out += block("declined_by_person, add:",
+                 [f"  - {json.dumps(p)}" for p in sorted(declined_add)])
+    out += block("declined_by_person, remove:",
+                 [f"  - {json.dumps(p)}" for p in sorted(set(declined_remove))])
     return "\n".join(out) + "\n"
 
 
@@ -2091,11 +2202,15 @@ def main(argv=None):
     s.add_argument("--skill", default=str(DEFAULT_SKILL))
     s.add_argument("--json", action="store_true")
     s.add_argument("--release-files", help="with a release folder: refuse it unless it matches")
+    s.add_argument("--take-declined", action="store_true",
+                   help="sort the changes the person declined back into their groups")
     g = sub.add_parser("fetch", help="download, check and save every file to look at")
     g.add_argument("vault")
     g.add_argument("release_files")
     g.add_argument("temp", help="a new, empty temporary folder outside the vault")
     g.add_argument("--release-folder", help="copy from the release folder the person gave")
+    g.add_argument("--take-declined", action="store_true",
+                   help="fetch the changes the person declined, to ask about them again")
     g.add_argument("--skill", default=str(DEFAULT_SKILL))
     w = sub.add_parser("show", help="print item N from fetch, from its checked copy")
     w.add_argument("vault")
@@ -2114,6 +2229,8 @@ def main(argv=None):
                    help="conflicts where the person kept their own or merged")
     r.add_argument("--took", nargs="+", type=int, default=[],
                    help="conflicts where the person took the release's")
+    r.add_argument("--declined", nargs="+", type=int, default=[],
+                   help="changes and new files the person said no to; never written")
     r.add_argument("--skill", default=str(DEFAULT_SKILL))
     v = sub.add_parser("verify", help="check a download folder against release-files.txt")
     v.add_argument("release_files")
@@ -2131,18 +2248,20 @@ def main(argv=None):
         return exc.code if isinstance(exc.code, int) else 2
     try:
         if args.command == "sort":
-            result = sort_from_paths(args.vault, args.release, args.skill, args.release_files)
+            result = sort_from_paths(args.vault, args.release, args.skill, args.release_files,
+                                     take_declined=args.take_declined)
             _report(args.release, result, args.json)
         elif args.command == "fetch":
             items = fetch(args.vault, args.release_files, args.temp, args.skill,
-                          release_folder=args.release_folder)
+                          release_folder=args.release_folder, take_declined=args.take_declined)
             return 0 if all(item["status"] == "ok" for item in items) else 1
         elif args.command == "show":
             sys.stdout.write(show(args.vault, args.release_files, args.temp, args.number,
                                   args.skill, page=args.page))
         elif args.command == "record":
             sys.stdout.write(record(args.vault, args.release_files, args.temp, args.numbers,
-                                    kept=args.kept, took=args.took, skill_md=args.skill))
+                                    kept=args.kept, took=args.took, declined=args.declined,
+                                    skill_md=args.skill))
         elif args.command == "verify":
             results = verify_folder(load_list(args.release_files)[0], args.folder)
             words = {"ok": "OK", "failed": "FAILED its checksum",

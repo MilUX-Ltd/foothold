@@ -13,6 +13,7 @@ The glossary for this repository.
 | Setup | `foothold-setup`: lays the vault down from the template and runs onboarding. The README says how to start it. |
 | Update | `/foothold-update`, the vault-bundled skill that compares the vault with the latest release and applies changed template files only with the user's yes, never overwriting their own work. |
 | `release_hashes`, `vault_hashes` | The update skill's record, in the vault's `.foothold/config.yml`, of each file's SHA-256: as in the release it came from, and as written into the vault. Used to tell a user's edit from a release's change. |
+| `declined_by_person` | The update's record of the changes the person said no to, with `release_hashes` holding the release they said no to. Not asked again for that release; asked about singly when a later release changes the file. |
 | `last_known_shas` | The record vaults set up before 2.5.0 hold instead: git blob SHA-1s. The update reads it once and records SHA-256 from then on. |
 | `{{pack_owner}}` | The placeholder replaced with the user's name at setup. Files carrying it are listed by hand in the update skill. One of setup's placeholders. |
 | Guide file | The `<Folder> Guide.md` page in every template folder, saying what goes there. |

@@ -280,8 +280,11 @@ class U1SkillWording(unittest.TestCase):
     def test_step_8_says_what_record_checks(self):
         text = UPDATE_SKILL.read_text(encoding="utf-8")
         step8 = " ".join(text[text.index("## Step 8"):text.index("## Step 9")].split())
-        self.assertIn("A change the person said no to is never recorded: do not pass its number",
-                      step8)
+        # Maintainer's decision, 28 November 2026: a no is recorded as declined, and is never
+        # written; record refuses a declined item whose vault copy is the release's.
+        self.assertIn("After `--declined`, give the changes and new files the person said no to. "
+                      "Never write those files.", step8)
+        self.assertIn("a no never writes the file", step8)
         self.assertIn("byte for byte", step8)
         self.assertIn("prints nothing to record", step8)
 
