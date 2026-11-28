@@ -3,7 +3,7 @@ type: portal
 name: D3IP
 status: active
 operator: D3IP (a brand of DII Ltd)
-customer: defence innovation community at Dorset Innovation Park
+audience: "defence innovation community at Dorset Innovation Park"
 co_located_with: Defence BattleLab
 website: https://www.d3ip.net
 portal: https://portal.d3ip.net/

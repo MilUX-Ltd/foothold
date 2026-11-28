@@ -1,7 +1,7 @@
 ---
 type: organisation
 name: Resilience Directorate
-parent: Cabinet Office
+parent: "[[CRM/organisations/government/Cabinet Office|Cabinet Office]]"
 established: September 2022
 status: active
 owns: UK Government Resilience Framework (December 2022)

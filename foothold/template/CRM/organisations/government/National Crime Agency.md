@@ -2,7 +2,7 @@
 type: organisation
 name: National Crime Agency
 acronym: NCA
-parent: Home Office
+parent: "[[CRM/organisations/government/Home Office|Home Office]]"
 status: active
 established: 7 October 2013 (under the Crime and Courts Act 2013)
 website: https://www.nationalcrimeagency.gov.uk/

@@ -1,7 +1,8 @@
 ---
 type: programme
 name: AUKUS Pillar 2
-customer: MoD (UK partner with US, Australia)
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+customer_note: "MoD (UK partner with US, Australia)"
 service: Joint
 status: active
 category: advanced-capabilities

@@ -3,7 +3,7 @@ type: organisation
 name: Defence Academy of the United Kingdom
 short-name: Defence Academy
 location: Shrivenham, Watchfield, Swindon, SN6 8ST
-parent: Ministry of Defence
+parent: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 website: https://www.da.mod.uk
 status: active
 created: 2026-05-20

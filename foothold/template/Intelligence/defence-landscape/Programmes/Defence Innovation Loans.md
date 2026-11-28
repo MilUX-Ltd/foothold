@@ -2,8 +2,12 @@
 type: programme
 name: Defence Innovation Loans
 fy: 2025-26
-customer: UK Defence Innovation (UKDI, formerly DASA) / Innovate UK Loans Ltd
-service: Defence
+customer:
+  - "[[CRM/organisations/mod/UK Defence Innovation (UKDI)|UK Defence Innovation]]"
+  - "[[CRM/organisations/government/Innovate UK|Innovate UK]]"
+customer_note: "UK Defence Innovation (UKDI, formerly DASA) / Innovate UK Loans Ltd"
+service: Joint
+service_note: "Defence"
 status: paused
 category: sme-funding
 created: 2026-05-22

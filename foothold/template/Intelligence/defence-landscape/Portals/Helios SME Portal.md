@@ -3,7 +3,8 @@ type: portal
 name: Helios SME Portal
 status: active
 operator: Hellios Information Limited (with the JOSCAR Governance Group)
-customer: UK MoD, BAE Systems and other defence/aerospace primes, SME community
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+customer_note: "UK MoD, BAE Systems and other defence/aerospace primes, SME community"
 launched_at: Farnborough International Airshow (initial launch)
 cost_to_sme: free
 eligibility: UK SMEs only

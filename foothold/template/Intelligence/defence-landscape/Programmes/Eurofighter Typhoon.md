@@ -1,8 +1,9 @@
 ---
 type: programme
 name: Eurofighter Typhoon
-customer: Royal Air Force (UK partner in four-nation programme)
-service: Air
+customer: "[[CRM/organisations/mod/Royal Air Force/Royal Air Force|Royal Air Force]]"
+customer_note: "Royal Air Force (UK partner in four-nation programme)"
+service: "[[CRM/organisations/mod/Royal Air Force/Royal Air Force|Royal Air Force]]"
 status: active
 category: combat-air
 created: 2026-05-22

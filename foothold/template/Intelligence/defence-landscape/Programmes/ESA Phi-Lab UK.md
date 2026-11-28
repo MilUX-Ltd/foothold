@@ -1,8 +1,10 @@
 ---
 type: programme
 name: ESA Phi-Lab UK
-customer: ESA / UK Space Agency
-service: Space (Earth observation, transformative)
+customer: "[[CRM/organisations/government/UK Space Agency|UK Space Agency]]"
+customer_note: "ESA / UK Space Agency"
+service: Civil
+service_note: "Space (Earth observation, transformative)"
 status: active
 category: space-innovation
 created: 2026-05-22

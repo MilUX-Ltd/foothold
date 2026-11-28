@@ -1,8 +1,11 @@
 ---
 type: programme
 name: Project ANVIL
-customer: British Army / Dstl
-service: Army
+customer:
+  - "[[CRM/organisations/mod/British Army/British Army|British Army]]"
+  - "[[CRM/organisations/mod/Defence Science and Technology Laboratory (Dstl)|Dstl]]"
+customer_note: "British Army / Dstl"
+service: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
 status: active
 category: ai-computer-vision
 created: 2026-07-28

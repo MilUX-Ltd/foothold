@@ -1,7 +1,8 @@
 ---
 type: programme
 name: SC21 — Supply Chains for the 21st Century
-customer: ADS-managed (UK aerospace and defence sectors)
+customer: "[[CRM/organisations/trade bodies/ADS Group|ADS Group]]"
+customer_note: "ADS-managed (UK aerospace and defence sectors)"
 service: Industry
 status: active
 category: supply-chain-improvement

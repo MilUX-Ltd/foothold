@@ -6,8 +6,9 @@ reference: RM1557.15
 g_cloud_15_value: about £14bn over a four-year term
 status: active
 category: gca
-operator: Government Commercial Agency (GCA), formerly Crown Commercial Service
-customer: UK public sector (central government, local authorities, NHS, devolved administrations, wider public sector)
+operator: "[[CRM/organisations/government/Crown Commercial Service|Government Commercial Agency]]"
+operator_note: "Government Commercial Agency (GCA), formerly Crown Commercial Service"
+audience: "UK public sector (central government, local authorities, NHS, devolved administrations, wider public sector)"
 agreement_type: framework; four-year term, reopens to new suppliers after 18 and 36 months
 service_categories: "5 lots: 1a IaaS and PaaS; 1b IaaS and PaaS above OFFICIAL; 2a Infrastructure Software; 2b Other SaaS; 3 Cloud support"
 website: https://www.gca.gov.uk/agreements/RM1557.15

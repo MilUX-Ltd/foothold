@@ -20,6 +20,10 @@ audit_verdict: pass
 audited_with: skill-safety-audit v3
 origin: built
 replicated_from: Footing v1.2.0
+reads:
+  - CRM
+writes:
+  - CRM
 ---
 
 # Import Relationships

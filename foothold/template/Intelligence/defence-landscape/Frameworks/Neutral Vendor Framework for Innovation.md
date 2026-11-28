@@ -4,8 +4,10 @@ name: Neutral Vendor Framework for Innovation
 abbreviation: NVFi
 status: active
 category: defence
-operator: Ministry of Defence (Commercial X); neutral vendor Constellia
-customer: UK public sector (MOD framework open to other public bodies)
+operator: "[[CRM/organisations/mod/NAD Group/National Armaments Commercial & Industry (NA-C&I)|National Armaments Commercial & Industry]]"
+operator_note: "Ministry of Defence (Commercial X); neutral vendor Constellia"
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+customer_note: "UK public sector (MOD framework open to other public bodies)"
 agreement_type: neutral-vendor framework (a managed-service procurement model)
 contract_cap: up to £50m per contract (MOD routes-to-market page)
 last_updated: 2026-10-15

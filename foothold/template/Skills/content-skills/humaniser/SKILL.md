@@ -7,6 +7,9 @@ audited_with: skill-safety-audit v3
 origin: forked
 maintainer: MilUX
 source: "@blader/humanizer"
+reads:
+  - Context
+writes: []
 ---
 
 # Humaniser — remove AI-writing patterns from your public content

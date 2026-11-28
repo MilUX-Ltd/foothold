@@ -2,7 +2,7 @@
 type: organisation
 name: Defence Investors' Advisory Group
 acronym: DIAG
-parent: UK Ministry of Defence
+parent: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 status: active
 permanent_footing_announced: 23 April 2026
 co_chairs: two, from UK venture capital and an international institutional investor

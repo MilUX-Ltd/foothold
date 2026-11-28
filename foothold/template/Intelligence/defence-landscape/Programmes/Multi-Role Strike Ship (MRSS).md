@@ -2,8 +2,8 @@
 type: programme
 name: Multi-Role Strike Ship (MRSS)
 former_name: Multi-Role Support Ship
-customer: Royal Navy
-service: Navy
+customer: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
+service: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
 status: cancelled
 category: amphibious-warfare
 created: 2026-05-22

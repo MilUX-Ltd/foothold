@@ -15,13 +15,14 @@ The discipline is binary. If an agent should behave a certain way every time, th
 
 ## Structure
 
-Two files ship with the pack. The rest are optional: create them when you need them, not before.
+Three files ship with the pack. The rest are optional: create them when you need them, not before.
 
 ```
 Knowledge/
 ├── Knowledge Guide.md          (this file)
 ├── rules.md                    (numbered rules, R-01, R-02, ...)
 ├── tagging-policy.md           (vault tag taxonomy)
+├── schema.md                   (page types, connections, what skills read and write)
 ├── hypotheses.md               (optional: ideas under test, not yet rules)
 ├── domains/                    (optional: per-domain operating notes)
 │   ├── brand.md
@@ -35,6 +36,8 @@ Knowledge/
 **rules.md.** The numbered rule list. Every rule has a stable identifier (R-01, R-02, ...). Numbers are not reused. Rules carry a one-line statement and a paragraph of context. Deprecation marks the rule as no-longer-active but keeps the identifier reserved.
 
 **tagging-policy.md.** The vault tag taxonomy. Documents what each tag means, what it does not mean, and the conventions for applying tags across page types.
+
+**schema.md.** How the pages fit together: the page types, the six named connections between pages, and the two fields each skill uses to say what it reads and writes.
 
 **hypotheses.md (optional).** Operating ideas that might become rules but aren't there yet. Each hypothesis has a date, a statement, and an evidence trail that grows as observations accumulate. Promotion to a rule happens at review time. Create the file when you have your first hypothesis worth tracking.
 

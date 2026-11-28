@@ -2,8 +2,10 @@
 type: programme
 name: EUREKA SMART
 full_name: SMART Cluster on Advanced Manufacturing
-customer: Innovate UK (UK funding)
-service: Industry (advanced manufacturing)
+customer: "[[CRM/organisations/government/Innovate UK|Innovate UK]]"
+customer_note: "Innovate UK (UK funding)"
+service: Industry
+service_note: "Industry (advanced manufacturing)"
 status: active
 category: international-collaborative-rd
 created: 2026-05-22

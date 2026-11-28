@@ -2,8 +2,9 @@
 type: portal
 name: Contracts Finder
 status: active
-operator: UK Government (Cabinet Office Government Commercial Function)
-customer: UK public sector (suppliers and contracting authorities)
+operator: "[[CRM/organisations/government/Cabinet Office|Cabinet Office]]"
+operator_note: "UK Government (Cabinet Office Government Commercial Function)"
+audience: "UK public sector (suppliers and contracting authorities)"
 scope: contracts above the gov.uk-published thresholds
 central_govt_threshold: c.£12,000 (including VAT, current gov.uk guidance)
 sub_central_threshold: c.£25,000 (wider public sector and NHS)

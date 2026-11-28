@@ -10,6 +10,8 @@ source: "phuryn/pm-skills v2.0.0 (pm-go-to-market/competitive-battlecard), MIT. 
 modified_by: "MilUX Ltd, 2026"
 changes: "Adapted for defence-sector founders; MilUX proprietary framing and internal references removed for public release."
 category: discovery-gtm
+reads: []
+writes: []
 ---
 
 # Competitive Battlecard

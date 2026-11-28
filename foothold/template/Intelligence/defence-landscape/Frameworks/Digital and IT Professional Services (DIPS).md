@@ -4,10 +4,12 @@ name: Digital and IT Professional Services
 abbreviation: DIPS
 status: active
 category: gca
-operator: Government Commercial Agency (GCA), formerly Crown Commercial Service
+operator: "[[CRM/organisations/government/Crown Commercial Service|Government Commercial Agency]]"
+operator_note: "Government Commercial Agency (GCA), formerly Crown Commercial Service"
 reference: RM6249
 term: 17 November 2023 to 16 November 2027, no extensions
-customer: MOD customers only
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+customer_note: "MOD customers only"
 created: 2026-05-20
 last_reviewed: 2026-10-15
 tags: [framework, gca, ccs, dips, defence-digital, mod]

@@ -18,6 +18,12 @@ audit_verdict: pass
 audited_with: skill-safety-audit v3
 origin: built
 replicated_from: Footing v2.0.0
+reads:
+  - Context
+  - Resources/Ways of Working
+  - CRM
+writes:
+  - Operations
 ---
 
 # AI Readiness

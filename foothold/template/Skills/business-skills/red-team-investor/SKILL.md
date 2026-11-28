@@ -8,6 +8,8 @@ audited_with: skill-safety-audit
 origin: built
 maintainer: MilUX
 license: MIT
+reads: []
+writes: []
 ---
 
 # Red-Team Investor

@@ -3,7 +3,7 @@ type: organisation
 name: Homeland Security Group
 acronym: HSG
 formerly: Office for Security and Counter-Terrorism (OSCT)
-parent: Home Office
+parent: "[[CRM/organisations/government/Home Office|Home Office]]"
 established: 2007 (as OSCT); renamed HSG in 2021
 status: active
 reports_to: Home Secretary and Minister of State for Security

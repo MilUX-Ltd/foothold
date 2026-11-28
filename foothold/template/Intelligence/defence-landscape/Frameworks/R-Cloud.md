@@ -4,8 +4,12 @@ name: R-Cloud
 full_name: Research Cloud
 status: active
 category: defence-research
-customer: UK MoD; Dstl is the operating customer
-operator: Defence Science and Technology Laboratory (Dstl)
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/Defence Science and Technology Laboratory (Dstl)|Dstl]]"
+customer_note: "UK MoD; Dstl is the operating customer"
+operator: "[[CRM/organisations/mod/Defence Science and Technology Laboratory (Dstl)|Dstl]]"
+operator_note: "Defence Science and Technology Laboratory (Dstl)"
 nature: Dynamic Purchasing System (DPS) / dynamic agreement; join at any time
 ip_ownership: retained by suppliers
 website: https://rcloud.dstl.gov.uk/

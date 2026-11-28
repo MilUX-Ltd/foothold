@@ -2,7 +2,10 @@
 type: framework
 name: Innovate UK Contracts for Innovation
 formerly: Small Business Research Initiative (SBRI)
-operator: Innovate UK / UKRI
+operator:
+  - "[[CRM/organisations/government/Innovate UK|Innovate UK]]"
+  - "[[CRM/organisations/government/UKRI|UKRI]]"
+operator_note: "Innovate UK / UKRI"
 delivery_partner: Innovate UK Business Connect
 status: active (rebranded from SBRI)
 mechanism: Pre-commercial procurement (PCP) — public sector R&D contracts

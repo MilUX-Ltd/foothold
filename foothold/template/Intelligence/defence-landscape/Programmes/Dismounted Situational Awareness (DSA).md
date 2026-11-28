@@ -2,8 +2,8 @@
 type: programme
 name: Dismounted Situational Awareness (DSA)
 status: active
-customer: UK MOD
-service: Army
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+service: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
 category: c2bm
 created: 2026-05-20
 last_reviewed: 2026-05-20

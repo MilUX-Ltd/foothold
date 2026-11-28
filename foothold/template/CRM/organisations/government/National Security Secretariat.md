@@ -2,7 +2,7 @@
 type: organisation
 name: National Security Secretariat
 acronym: NSS
-parent: Cabinet Office
+parent: "[[CRM/organisations/government/Cabinet Office|Cabinet Office]]"
 supports: National Security Adviser and National Security Council
 established: 2010 (alongside the NSC)
 status: active

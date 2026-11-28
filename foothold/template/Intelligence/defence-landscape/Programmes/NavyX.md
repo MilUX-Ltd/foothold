@@ -2,8 +2,8 @@
 type: programme
 name: NavyX
 full_name: Royal Navy's Autonomy and Lethality Accelerator
-customer: Royal Navy
-service: Navy
+customer: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
+service: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
 status: consolidated
 category: autonomy-accelerator
 created: 2026-05-22

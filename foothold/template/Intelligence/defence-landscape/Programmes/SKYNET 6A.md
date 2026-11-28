@@ -1,8 +1,8 @@
 ---
 type: programme
 name: SKYNET 6A
-parent_programme: "[[Intelligence/defence-landscape/Programmes/SKYNET|SKYNET]]"
-customer: UK MoD
+parent: "[[Intelligence/defence-landscape/Programmes/SKYNET|SKYNET]]"
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 service: Joint
 status: active
 category: satcomms

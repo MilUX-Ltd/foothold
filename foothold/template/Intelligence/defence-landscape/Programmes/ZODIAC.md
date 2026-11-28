@@ -1,9 +1,9 @@
 ---
 type: programme
 name: ZODIAC
-customer: British Army
-service: Army
-parent_programme: "[[Intelligence/defence-landscape/Programmes/Land ISTAR|Land ISTAR]]"
+customer: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
+service: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
+parent: "[[Intelligence/defence-landscape/Programmes/Land ISTAR|Land ISTAR]]"
 status: active
 category: c4isr
 created: 2026-05-20

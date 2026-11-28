@@ -2,7 +2,10 @@
 type: programme
 name: Digital Targeting Web
 abbreviation: DTW
-customer: UK MOD (Cyber & Specialist Operations Command, with UK Defence Innovation)
+customer:
+  - "[[CRM/organisations/mod/Cyber and Specialist Operations Command|Cyber and Specialist Operations Command]]"
+  - "[[CRM/organisations/mod/UK Defence Innovation (UKDI)|UK Defence Innovation]]"
+customer_note: "UK MOD (Cyber & Specialist Operations Command, with UK Defence Innovation)"
 service: Joint
 status: active
 category: c4isr

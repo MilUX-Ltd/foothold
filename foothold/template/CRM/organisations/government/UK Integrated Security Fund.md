@@ -5,7 +5,8 @@ acronym: UKISF
 also_known_as: ISF
 predecessor: Conflict, Stability and Security Fund (CSSF); also absorbed the National Cyber Programme and the Economic Deterrence Initiative (EDI)
 established: 1 April 2024
-parent: Cabinet Office (Integrated Security Fund Unit)
+parent: "[[CRM/organisations/government/Cabinet Office|Cabinet Office]]"
+parent_note: "Cabinet Office (Integrated Security Fund Unit)"
 governance: Ministerial board reporting to the National Security Council
 status: active
 operating_scope: over 90 countries and territories; UK and international

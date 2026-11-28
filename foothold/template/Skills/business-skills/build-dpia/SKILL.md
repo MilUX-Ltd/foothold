@@ -19,6 +19,15 @@ audited: 2026-06-27
 audit_verdict: pass
 audited_with: skill-safety-audit v3
 origin: built
+reads:
+  - Context
+  - CRM/contacts
+  - CRM/organisations
+  - Knowledge
+  - Resources
+  - Operations
+writes:
+  - Operations
 ---
 
 # Build a DPIA

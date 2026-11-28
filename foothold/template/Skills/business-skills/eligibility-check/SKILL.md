@@ -18,6 +18,12 @@ audited: 2026-07-02
 audit_verdict: pass
 audited_with: skill-safety-audit v3
 origin: built
+reads:
+  - Context
+  - Intelligence/defence-landscape
+  - Customer Engagements
+writes:
+  - Customer Engagements
 ---
 
 # Eligibility Check

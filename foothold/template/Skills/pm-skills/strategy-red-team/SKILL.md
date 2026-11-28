@@ -10,6 +10,8 @@ source: "phuryn/pm-skills v2.0.0 (pm-execution/strategy-red-team), MIT. Copyrigh
 modified_by: "MilUX Ltd, 2026"
 changes: "Adapted for defence-sector founders; MilUX proprietary framing and internal references removed for public release."
 category: strategy
+reads: []
+writes: []
 ---
 
 # Strategy Red-Team: attack the assumptions before reality does

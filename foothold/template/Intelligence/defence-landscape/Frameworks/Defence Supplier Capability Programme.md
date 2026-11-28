@@ -4,7 +4,8 @@ name: Defence Supplier Capability Development Programme
 acronym: DSCDP
 status: active
 category: defence-sme-development
-customer: UK MoD; UK-based SMEs and mid-tier suppliers
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+customer_note: "UK MoD; UK-based SMEs and mid-tier suppliers"
 operator: Grant Thornton UK LLP, on behalf of MOD
 support_per_supplier: up to £200,000 of customised business-development support over 12 months
 matched_resource: companies required to demonstrate matched resource commitment via the time they spend on improvement activities

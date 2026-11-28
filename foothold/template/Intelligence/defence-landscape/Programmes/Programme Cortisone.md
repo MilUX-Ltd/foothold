@@ -2,7 +2,8 @@
 type: programme
 name: Programme Cortisone
 status: active
-customer: UK MOD — Defence Medical Services
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+customer_note: "UK MOD — Defence Medical Services"
 service: Joint
 category: digital-healthcare
 created: 2026-05-20

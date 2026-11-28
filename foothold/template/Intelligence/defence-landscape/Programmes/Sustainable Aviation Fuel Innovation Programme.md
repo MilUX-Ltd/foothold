@@ -3,7 +3,8 @@ type: programme
 name: Sustainable Aviation Fuel Innovation Programme
 short_name: SAF IP
 customer: Department for Transport (DfT)
-service: Civil aviation
+service: Civil
+service_note: "Civil aviation"
 status: active
 category: clean-aviation
 created: 2026-05-22

@@ -1,8 +1,12 @@
 ---
 type: programme
 name: Future Flight Challenge
-customer: UKRI / Innovate UK / DfT
-service: Civil aviation
+customer:
+  - "[[CRM/organisations/government/UKRI|UKRI]]"
+  - "[[CRM/organisations/government/Innovate UK|Innovate UK]]"
+customer_note: "UKRI / Innovate UK / DfT"
+service: Civil
+service_note: "Civil aviation"
 status: active
 category: advanced-air-mobility
 created: 2026-05-22

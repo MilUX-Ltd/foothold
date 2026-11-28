@@ -9,6 +9,8 @@ license: MIT
 audited: 2026-11-24
 audit_verdict: pass with cautions
 audited_with: skill-safety-audit (independent)
+reads: []
+writes: []
 ---
 
 # Process interviewer

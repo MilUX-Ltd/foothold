@@ -2,7 +2,8 @@
 type: organisation
 name: NATO Operational Experimentation
 acronym: NATO OPEX
-parent: NATO Allied Command Transformation (ACT)
+parent: "[[CRM/organisations/foreign government/NATO ACT|NATO ACT]]"
+parent_note: "NATO Allied Command Transformation (ACT)"
 location: Norfolk, Virginia, USA (HQ SACT)
 status: active
 focus: controlled experimentation to test concepts before committing significant resources

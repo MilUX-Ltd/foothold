@@ -3,7 +3,7 @@ type: portal
 name: RAINCLOUD DEFENSE
 status: active
 operator: RAINCLOUD GROUP (US-based; offices in US, UK, UAE, Ukraine)
-customer: Defence-technology and dual-use companies, investors, advisors, and operators globally
+audience: "Defence-technology and dual-use companies, investors, advisors, and operators globally"
 cost_to_sme: free (invitation-only)
 eligibility: open application, vetted by RAINCLOUD team
 website: https://raindefense.ai

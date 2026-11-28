@@ -2,7 +2,8 @@
 type: organisation
 name: Counter Terrorism Policing
 acronym: CTP
-parent: Home Office (policy); national policing network operationally
+parent: "[[CRM/organisations/government/Home Office|Home Office]]"
+parent_note: "Home Office (policy); national policing network operationally"
 status: active
 operating_model: national network of regional Counter Terrorism Units (CTUs) coordinated by CTP HQ
 also_owns: NaCTSO (running ProtectUK)

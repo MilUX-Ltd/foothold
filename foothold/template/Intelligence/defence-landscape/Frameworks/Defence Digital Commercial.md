@@ -3,10 +3,14 @@ type: framework
 name: Defence Digital Commercial
 status: active
 category: defence-digital
-customer: UK MoD; NA-D&D (formerly Defence Digital)
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/NAD Group/National Armaments Digital & Data (NA-D&D)|National Armaments Digital & Data]]"
+customer_note: "UK MoD; NA-D&D (formerly Defence Digital)"
 nature: umbrella term for the commercial-routes portfolio inside Defence Digital, not a single framework
 notable_constituents: DDAD; R-Cloud; TacCIS; Defence Tech Scaler; Foundry; D2S (Defence Digital Service)
-operator: NA-D&D Commercial
+operator: "[[CRM/organisations/mod/NAD Group/National Armaments Digital & Data (NA-D&D)|National Armaments Digital & Data]]"
+operator_note: "NA-D&D Commercial"
 last_updated: 2026-10-15
 tags:
   - framework

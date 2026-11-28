@@ -7,6 +7,12 @@ audited_with: skill-safety-audit v3
 origin: built
 maintainer: MilUX
 license: MIT
+reads:
+  - CRM/organisations
+  - CRM/contacts
+  - Intelligence/defence-landscape
+writes:
+  - CRM/organisations
 ---
 
 # add-organisation

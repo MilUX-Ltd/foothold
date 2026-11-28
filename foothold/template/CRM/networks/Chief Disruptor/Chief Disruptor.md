@@ -3,7 +3,8 @@ type: network
 name: Chief Disruptor
 flavour: formal
 status: active
-operator: Nimbus Ninety Ltd (trading as Chief Disruptor)
+operator: "[[CRM/networks/Chief Disruptor/Chief Disruptor|Chief Disruptor]]"
+operator_note: "Nimbus Ninety Ltd (trading as Chief Disruptor)"
 companies_house: "06803745"
 founded: 2005
 membership_model: application-based; Associate and Full tiers

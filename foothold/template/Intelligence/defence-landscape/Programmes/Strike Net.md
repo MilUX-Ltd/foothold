@@ -4,8 +4,8 @@ name: Strike Net
 former_name: Naval Strike Network
 launched: 2022
 status: active
-customer: Royal Navy
-service: Navy
+customer: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
+service: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
 category: c4isr
 created: 2026-05-20
 last_reviewed: 2026-05-20

@@ -1,8 +1,9 @@
 ---
 type: programme
 name: Project VANAHEIM
-customer: British Army / US Army
-service: Army
+customer: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
+customer_note: "British Army / US Army"
+service: "[[CRM/organisations/mod/British Army/British Army|British Army]]"
 status: active
 category: counter-uas
 created: 2026-07-28

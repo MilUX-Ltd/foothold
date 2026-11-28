@@ -3,7 +3,7 @@ type: portal
 name: DefTechLink
 status: active
 operator: DefTechLink (private US-based company)
-customer: Defence-tech and dual-use SMEs across allied markets
+audience: "Defence-tech and dual-use SMEs across allied markets"
 cost_to_sme: paid (subscription; one-month free trial)
 eligibility: open registration
 website: https://deftechlink.com

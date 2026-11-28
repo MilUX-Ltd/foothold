@@ -4,7 +4,7 @@ name: Army Innovation
 status: active
 category: mod-component
 parent_service: British Army
-parent_programme: Future Soldier
+parent: Future Soldier
 website: https://www.army.mod.uk/learn-and-explore/army-of-the-future/modernisation/army-innovation/
 last_updated: 2026-10-15
 tags:

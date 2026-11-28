@@ -18,6 +18,10 @@ audit_verdict: pass
 audited_with: skill-safety-audit v3
 origin: built
 replicated_from: Footing v2.0.0
+reads:
+  - Resources/Ways of Working
+writes:
+  - Resources/Ways of Working
 ---
 
 # SOP Capture

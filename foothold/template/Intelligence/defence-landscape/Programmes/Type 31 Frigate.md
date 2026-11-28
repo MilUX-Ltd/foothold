@@ -2,8 +2,8 @@
 type: programme
 name: Type 31 Frigate
 class: Inspiration class
-customer: Royal Navy
-service: Navy
+customer: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
+service: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
 status: active
 category: surface-ship
 created: 2026-05-22

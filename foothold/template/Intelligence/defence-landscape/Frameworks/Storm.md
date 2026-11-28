@@ -4,7 +4,8 @@ name: STORM
 full_name: Science and Technology Oriented Research and Development in Missile Defence
 status: active
 category: defence
-customer: UK MOD; Missile Defence Centre (MDC)
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+customer_note: "UK MOD; Missile Defence Centre (MDC)"
 co_location: Missile Defence Centre, Farnborough
 estimated_value: c.£110 million to £251 million
 duration: 3-year core period plus 3-year optional extension

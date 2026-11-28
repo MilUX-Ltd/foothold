@@ -1,7 +1,7 @@
 ---
 type: organisation
 name: ProtectUK
-operated_by: National Counter Terrorism Security Office (NaCTSO)
+operator: National Counter Terrorism Security Office (NaCTSO)
 delivery_partnership: Counter Terrorism Alliance (NaCTSO + Home Office + Pool Reinsurance)
 parent_ecosystem: Home Office / Counter Terrorism Policing
 status: active

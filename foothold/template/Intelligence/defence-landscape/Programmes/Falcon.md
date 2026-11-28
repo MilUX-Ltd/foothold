@@ -2,7 +2,7 @@
 type: programme
 name: Falcon
 status: in-service
-customer: UK MOD
+customer: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
 service: Joint
 category: tactical-communications
 successor: "[[Intelligence/defence-landscape/Programmes/TRINITY|TRINITY]]"

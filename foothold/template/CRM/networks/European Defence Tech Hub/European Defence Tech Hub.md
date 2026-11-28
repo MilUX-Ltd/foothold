@@ -5,7 +5,7 @@ brand_spelling: European Defense Tech Hub
 abbreviation: EDTH
 flavour: formal
 status: active
-operator: European Defense Tech Hub
+operator: "[[CRM/networks/European Defence Tech Hub/European Defence Tech Hub|European Defence Tech Hub]]"
 website: https://eurodefense.tech
 events_calendar: https://lu.ma/eurodefensetech
 linkedin: https://www.linkedin.com/company/european-defense-tech/

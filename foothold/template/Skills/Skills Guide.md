@@ -59,14 +59,31 @@ The `SKILL.md` frontmatter is the skill's interface to the agent runtime:
 ---
 name: skill-name
 description: One or two sentences describing when this skill should be used. Include trigger phrases the agent can match against ("Use when the user says ..."). The description is what the agent uses to decide whether to invoke this skill.
+reads:
+  - Context
+writes:
+  - Customer Engagements
 ---
 ```
 
 The description is the most important field. Agents read it to decide whether to run the skill. Be specific about when the skill should fire and when it should not.
 
+`reads` and `writes` list the vault folders the skill reads from and writes to, so you and your agent can see what it will touch before it runs. A skill that works only in the conversation has `reads: []` and `writes: []`. See [[Knowledge/schema|Schema]].
+
 ## Canonical example
 
 The shipped Foothold defaults include `foothold-setup` (the install-and-onboarding skill that lays your pack down) and `foothold-update` (the additive content-update skill). Both follow the same shape: YAML frontmatter declaring the skill name and description, then phased Markdown instructions the agent reads at runtime. Use them as patterns when you write your own.
+
+## Routes
+
+A route is a job that takes more than one skill, written down in order. Four ship with the pack, in `Skills/Routes/`:
+
+- [[Skills/Routes/A tender lands|A tender lands]]
+- [[Skills/Routes/You meet someone at an event|You meet someone at an event]]
+- [[Skills/Routes/A customer asks about your data handling|A customer asks about your data handling]]
+- [[Skills/Routes/Monday morning|Monday morning]]
+
+Each route page has `type: route` and a `steps` list in its frontmatter. Every step names one skill and says what it does at that point. Add your own routes for the jobs you do often.
 
 ## Related
 - [[Skills/Skill Examples|Skill Examples]]: what each shipped skill does

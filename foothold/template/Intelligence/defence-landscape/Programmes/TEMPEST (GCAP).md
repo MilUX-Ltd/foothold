@@ -3,8 +3,14 @@ type: programme
 name: TEMPEST (GCAP)
 full_name: Tempest / Global Combat Air Programme
 status: active
-customer: UK MOD (RAF lead) + Italy + Japan
-service: RAF / Joint
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/Royal Air Force/Royal Air Force|Royal Air Force]]"
+customer_note: "UK MOD (RAF lead) + Italy + Japan"
+service:
+  - "[[CRM/organisations/mod/Royal Air Force/Royal Air Force|Royal Air Force]]"
+  - Joint
+service_note: "RAF / Joint"
 category: combat-air
 created: 2026-05-20
 last_reviewed: 2026-10-15

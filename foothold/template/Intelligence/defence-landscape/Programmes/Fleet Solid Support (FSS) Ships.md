@@ -1,8 +1,9 @@
 ---
 type: programme
 name: Fleet Solid Support (FSS) Ships
-customer: Royal Fleet Auxiliary
-service: Navy
+customer: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
+customer_note: "Royal Fleet Auxiliary"
+service: "[[CRM/organisations/mod/Royal Navy/Royal Navy|Royal Navy]]"
 status: active
 category: support-ship
 created: 2026-05-22

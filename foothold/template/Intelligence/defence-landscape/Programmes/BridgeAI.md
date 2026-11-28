@@ -1,8 +1,9 @@
 ---
 type: programme
 name: BridgeAI
-customer: Innovate UK
-service: Cross-sector (civilian)
+customer: "[[CRM/organisations/government/Innovate UK|Innovate UK]]"
+service: Civil
+service_note: "Cross-sector (civilian)"
 status: active
 category: ai-adoption
 created: 2026-05-22

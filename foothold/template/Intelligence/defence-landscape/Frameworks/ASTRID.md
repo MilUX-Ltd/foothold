@@ -4,8 +4,12 @@ name: ASTRID
 full_name: Analysis for Science and Technology Research in Defence
 status: active
 category: defence
-operator: Dstl (typical)
-customer: UK MOD / Dstl
+operator: "[[CRM/organisations/mod/Defence Science and Technology Laboratory (Dstl)|Dstl]]"
+operator_note: "Dstl (typical)"
+customer:
+  - "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+  - "[[CRM/organisations/mod/Defence Science and Technology Laboratory (Dstl)|Dstl]]"
+customer_note: "UK MOD / Dstl"
 created: 2026-05-20
 last_reviewed: 2026-10-15
 tags: [framework, defence-procurement, astrid, dstl, st, mod]

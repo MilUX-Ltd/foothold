@@ -6,7 +6,8 @@ acronym: F&FD
 former_name: Development, Concepts and Doctrine Centre (DCDC)
 status: active
 category: mod-component
-parent: UK Ministry of Defence (within Military Strategic Headquarters, MSHQ)
+parent: "[[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]"
+parent_note: "UK Ministry of Defence (within Military Strategic Headquarters, MSHQ)"
 website: https://www.gov.uk/government/groups/defence-futures-and-force-design-ffd
 former_website: https://www.gov.uk/government/groups/development-concepts-and-doctrine-centre
 contact: MSHQ-FFD-Digital@mod.gov.uk

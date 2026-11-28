@@ -1,7 +1,7 @@
 ---
 type: organisation
 name: T&E Marketplace
-parent_programme: T&E Transformation Programme (MOD)
+parent: T&E Transformation Programme (MOD)
 status: in delivery, full launch planned end of 2026 with pilot earlier in the year
 category: centre-of-excellence
 last_updated: 2026-10-15
