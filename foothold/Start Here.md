@@ -24,6 +24,6 @@ The person you are working with has given you this folder. These rules come befo
 
 Then read `setup/SKILL.md` and follow it, using `template` in this folder as the template.
 
-## Checking this is the real thing
+## Checking the download
 
-This is release 2.5.0 of github.com/MilUX-Ltd/foothold. The release page lists a checksum for the zip you downloaded.
+This is release 2.5.0 of github.com/MilUX-Ltd/foothold. The release page lists a checksum for the zip you downloaded. If yours matches, the zip was not damaged on the way to you. It does not prove who made it.

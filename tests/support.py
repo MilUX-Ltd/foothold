@@ -30,7 +30,7 @@ def load_helper():
 START_HERE = (
     "# Start here\n\n"
     "This folder is Foothold {version}: folders, notes and AI skills.\n\n"
-    "## Checking this is the real thing\n\n"
+    "## Checking the download\n\n"
     "This is release {version} of github.com/MilUX-Ltd/foothold.\n"
 )
 
