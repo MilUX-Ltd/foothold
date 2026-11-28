@@ -43,6 +43,6 @@ last_reviewed: {{install_date}}
 
 ## Related
 
-- [[Context/{{pack_owner}}|{{pack_owner}}]]
-- [[Context/{{pack_org}}|{{pack_org}}]]
+- [[Context/{{pack_owner_file}}|{{pack_owner}}]]
+- [[Context/{{pack_org_file}}|{{pack_org}}]]
 - [[Knowledge/domains/brand|Knowledge/domains/brand]] — operational policy on brand voice (if you keep one)

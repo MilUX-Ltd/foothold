@@ -147,7 +147,7 @@ SKIP_FOLDED = {name.casefold() for name in SKIP_NAMES}
 SETUP_PLACEHOLDERS = (
     "pack_name", "pack_slug", "pack_owner", "pack_owner_first", "pack_owner_role",
     "pack_owner_email", "pack_owner_linkedin", "pack_owner_phone", "pack_org", "pack_org_slug",
-    "pack_org_website", "install_date",
+    "pack_org_website", "install_date", "pack_owner_file", "pack_org_file",
 )
 # The values that go into file names have a file-name form in the record, under this name with
 # _file on the end, which setup made to pass the path rule. Paths use it; page text uses the value.
@@ -166,6 +166,7 @@ RELEASE_BASE = "https://raw.githubusercontent.com/MilUX-Ltd/foothold/refs/tags/v
 MAX_DOWNLOAD = 5 * 1024 * 1024
 TIMEOUT = 30
 MANIFEST = "foothold-fetch.json"  # the index: item number, release path, checksum, status
+SHOWN = "foothold-shown.json"  # the items whose last page show has printed, by number
 FILES = "files"  # checked copies, saved as files/0001.txt (.bin if not text) and so on, by item number
 # show prints at most PAGE_LINES lines and PAGE_CHARS characters a page (header and footer
 # included), cuts a line longer than WRAP characters into pieces, lists notes about hidden
@@ -1623,6 +1624,7 @@ def show(vault, release_files, temp, number, skill_md=DEFAULT_SKILL, page=1):
     if text is None:
         head.append(f"The release's copy cannot be shown as text ({len(data)} bytes). Name it to "
                     "the person; it is added or changed only after its own yes.")
+        _note_shown(temp, number)
         return _page(head, [[]], page, number, digest)
     if len(data) > SHOW_CAP:
         why = _too_long(data)
@@ -1673,7 +1675,39 @@ def show(vault, release_files, temp, number, skill_md=DEFAULT_SKILL, page=1):
             f"{MAX_PAGES} pages show will print. Do not change it in this run. Tell the person "
             "to compare it with the release zip themselves (the downloaded-zip route in Step 2 "
             "of the skill)")
-    return _page(head, pages, page, number, digest)
+    text = _page(head, pages, page, number, digest)
+    if page == len(pages):
+        _note_shown(temp, number)
+    return text
+
+
+def _note_shown(temp, number):
+    """Note that item N's last page has been printed. The note is the helper's own file beside
+    the index and, like the index, not trusted: record uses it only to refuse an item that was
+    never shown, so a tampered note can at worst let through what was let through before it."""
+    path = Path(temp) / SHOWN
+    numbers = _shown_items(temp)
+    if number in numbers:
+        return
+    numbers.add(number)
+    if path.is_symlink():
+        raise ChangesError("the note of shown items in the temporary folder is a link; run fetch "
+                           "again into a new empty folder")
+    path.write_text(json.dumps(sorted(numbers)), encoding="utf-8")
+
+
+def _shown_items(temp):
+    """The item numbers whose last page show has printed, or none if there is no note."""
+    path = Path(temp) / SHOWN
+    if path.is_symlink() or not path.is_file():
+        return set()
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return set()
+    if not isinstance(data, list):
+        return set()
+    return {n for n in data if isinstance(n, int) and not isinstance(n, bool)}
 
 
 def _page(head, pages, page, number, digest):
@@ -1802,6 +1836,11 @@ def _record_item(vault, release, config, temp, number, choice, skill_md):
         raise ChangesError(f"item {number} in the list from fetch does not match the release "
                            "and the vault; run fetch again into a new empty folder")
     conflict = group == CONFLICT
+    # A show-and-ask-each item or a conflict is decided only after the person has seen it all.
+    # A list-and-ask-once page is decided from the list, so it needs no note.
+    if group != ASK_ONCE and number not in _shown_items(temp):
+        raise ChangesError(f"item {number} was never shown: show it to the person first, every "
+                           "page of it, and record it only after they have decided")
     if choice == "declined":
         return _declined_item(vault, release, config, temp, number, item, tpath, vault_path,
                               digest, skill_md)

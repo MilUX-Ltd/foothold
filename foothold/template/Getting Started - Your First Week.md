@@ -7,13 +7,14 @@ tags: [getting-started, onboarding]
 
 # Getting Started: Your First Week
 
-The vault is installed and your Context pages are written. This page turns that into a working habit, one small win a day. Nothing here takes more than half an hour. Tick things off as you go; this page is yours to edit.
+The vault is installed and your Context pages are started. This page turns that into a working habit, one small win a day. Nothing here takes more than half an hour. Tick things off as you go; this page is yours to edit.
 
 If you asked setup to schedule a check-in, your AI tool will nudge you in a week. If you did not, tell it now: "remind me in a week to review my Getting Started progress".
 
 ## Day 1: check the foundations
 
-- [ ] Read `Context/{{pack_owner}}.md` and `Context/{{pack_org}}.md`. Onboarding wrote these from your answers; fix anything it got wrong. Everything agents do for you starts from these pages, so accuracy here pays compound interest.
+- [ ] If you have not yet told Foothold about your business, say "tell Foothold about my business". It asks about your work and fills in your pages; allow up to an hour.
+- [ ] Read `Context/{{pack_owner_file}}.md` and `Context/{{pack_org_file}}.md`. Setup wrote these from your answers; fix anything it got wrong. Everything agents do for you starts from these pages, so accuracy here pays compound interest.
 - [ ] Skim the four load-bearing Guides: Knowledge, Operations, Context, CRM. Ten minutes total; you now know where everything lives.
 - [ ] Note two habits. Quick captures land in `Inbox/`, and you file them once a week. New pages start from a template: run "Insert template" from the command palette and pick one from `Templates/` (set Obsidian up once first: see the [[Templates/Templates Guide|Templates Guide]]).
 

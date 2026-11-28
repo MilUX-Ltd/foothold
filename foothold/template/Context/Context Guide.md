@@ -16,17 +16,17 @@ Context is small and stable. The seven canonical files at the root of this folde
 ```
 Context/
 ├── Context Guide.md            (this file)
-├── {{pack_owner}}.md           (operator profile)
-├── {{pack_org}}.md             (organisation page)
+├── {{pack_owner_file}}.md           (operator profile)
+├── {{pack_org_file}}.md             (organisation page)
 ├── Brand.md
 ├── Strategy.md
 ├── Team.md
 └── Stakeholders.md
 ```
 
-**{{pack_owner}}.md.** Your own profile. Biography, current role, history, capabilities, public-facing one-liner, contact details. Agents read this when they need to introduce you, draft something in your voice, or answer a question about your background. Sharable-by-design content only; this page may end up referenced in outbound messages.
+**{{pack_owner_file}}.md.** Your own profile. Biography, current role, history, capabilities, public-facing one-liner, contact details. Agents read this when they need to introduce you, draft something in your voice, or answer a question about your background. Sharable-by-design content only; this page may end up referenced in outbound messages.
 
-**{{pack_org}}.md.** Your organisation. Mission, strapline, services at a one-line summary, founder team, current engagements, public links (website, LinkedIn). The canonical "what does this company do" page.
+**{{pack_org_file}}.md.** Your organisation. Mission, strapline, services at a one-line summary, founder team, current engagements, public links (website, LinkedIn). The canonical "what does this company do" page.
 
 **Brand.md.** Brand positioning. What the brand stands for, who it's for, the value proposition, the strapline, any verbal-identity rules (preferred words, banned words, tone notes). Brand voice deviations or evolving conventions that agents need to internalise belong in `Knowledge/domains/brand.md` (an optional page; see the [[Knowledge/Knowledge Guide|Knowledge Guide]]) rather than here; this page is the public-facing positioning.
 
@@ -44,7 +44,7 @@ Context/
 
 **Adding subfolders.** Two patterns earn a subfolder.
 
-- `Context/team/` if the team grows beyond what a single file represents well. One file per team member, each carrying the same frontmatter pattern as `{{pack_owner}}.md`.
+- `Context/team/` if the team grows beyond what a single file represents well. One file per team member, each carrying the same frontmatter pattern as `{{pack_owner_file}}.md`.
 - `Context/programmes/` if your organisation runs named internal programmes that aren't customer-facing services. These are organisational identity, not delivery.
 
 Anything else should be challenged: does it really belong in Context, or does it have a natural home elsewhere?
@@ -59,7 +59,7 @@ Context pages are `status: active` and stay that way. They change by being edite
 
 Required fields per page.
 
-**{{pack_owner}}.md:**
+**{{pack_owner_file}}.md:**
 
 ```yaml
 ---
@@ -71,7 +71,7 @@ email: ...
 ---
 ```
 
-**{{pack_org}}.md:**
+**{{pack_org_file}}.md:**
 
 ```yaml
 ---
@@ -96,7 +96,7 @@ last_reviewed: YYYY-MM-DD
 
 ## Canonical example
 
-See `{{pack_owner}}.md` for the canonical operator-profile shape: one-paragraph biography, current role, capabilities, history, contact details, public links. The Foothold default ships with worked content as a worked example. Replace the content with yours and the structure tells you what good looks like.
+See `{{pack_owner_file}}.md` for the canonical operator-profile shape: one-paragraph biography, current role, capabilities, history, contact details, public links. The Foothold default ships with worked content as a worked example. Replace the content with yours and the structure tells you what good looks like.
 
 ## Related
 

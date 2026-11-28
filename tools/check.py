@@ -50,6 +50,10 @@ they catch a problem before the commit as well as in CI:
     be used only inside its own skill's folder. Every name setup fills that goes into a file
     name has its file-name form (<name>_file) in the record, and the update's helper holds
     setup's list exactly (fifth safety audit, V6, V8, V10).
+15. In the template's text, {{pack_owner}} and {{pack_org}} never name a page: not in a wikilink's
+    target and not directly before .md. Text that names the person's or the organisation's page
+    uses {{pack_owner_file}} or {{pack_org_file}}, the file-name forms the page is saved under;
+    the names themselves are for what a reader sees (seventh safety audit, X4).
 """
 
 import importlib.util
@@ -424,6 +428,23 @@ def check_setup_placeholders(root, files, fail):
                  f"{UPDATE_SKILL}")
 
 
+PAGE_BY_VALUE = re.compile(
+    r"\[\[[^\]|]*\{\{pack_(?:owner|org)\}\}|\{\{pack_(?:owner|org)\}\}\.md")
+
+
+def check_page_links(root, files, fail):
+    prefix = "foothold/template/"
+    for path in files:
+        if not path.startswith(prefix):
+            continue
+        for number, line in enumerate(_template_text(root, path).splitlines(), 1):
+            match = PAGE_BY_VALUE.search(line)
+            if match:
+                fail(f"{path}: line {number} names a page by {match.group(0)!r}; a link target or "
+                     "a .md path takes {{pack_owner_file}} or {{pack_org_file}}, the page's "
+                     "file-name form")
+
+
 def check_readme_prompt(root, version, fail):
     text = read_text("README.md", root)
     if text is None:
@@ -466,6 +487,7 @@ def main():
     check_pack_owner_protected(ROOT, every, fail)
     check_readme_prompt(ROOT, version, fail)
     check_setup_placeholders(ROOT, every, fail)
+    check_page_links(ROOT, every, fail)
     if failures:
         print(f"check.py: {len(failures)} problem(s)")
         for message in failures:

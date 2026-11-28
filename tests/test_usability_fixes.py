@@ -445,13 +445,16 @@ class G2SetupOrder(unittest.TestCase):
         self.assertIn("Shall I set Foothold up at", section)
 
     def test_ask_copy_fill_build_record_in_that_order(self):
+        # G3: the first build, from the six answers, comes before the record; the interview's
+        # Phase B Build comes after it.
         order = [self.at("### Step A.1"), self.at("### Step A.5"), self.at("### Step A.7"),
-                 self.at("## Phase B Build"), self.at("## Write the record")]
+                 self.at("## First build"), self.at("## Write the record"),
+                 self.at("## Phase B Build")]
         self.assertEqual(order, sorted(order))
 
     def test_the_record_is_written_once_at_the_end(self):
-        record = self.text[self.at("## Write the record"):self.at("## Phase D")]
-        self.assertIn("once, after the schedule questions", flat(record))
+        record = self.text[self.at("## Write the record"):self.at("## Your vault is ready")]
+        self.assertIn("written once, here, and never again", flat(record))
         self.assertNotIn("Step A.4: Write `.foothold/config.yml`", self.text)
 
     def test_the_interview_does_not_ask_for_name_or_role_again(self):

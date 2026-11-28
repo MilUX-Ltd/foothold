@@ -23,6 +23,24 @@ import check
 
 changes = load_helper()
 
+
+class _EveryItem:
+    def __contains__(self, number):
+        return True
+
+
+def setUpModule():
+    # Seventh audit, X3: record now refuses a show-and-ask-each item or a conflict whose last page
+    # show never printed. These tests are about record's other checks, so every item counts as
+    # shown here; tests/test_fix_round_8.py tests the rule itself.
+    global _shown
+    _shown = mock.patch.object(changes, "_shown_items", lambda temp: _EveryItem())
+    _shown.start()
+
+
+def tearDownModule():
+    _shown.stop()
+
 SETUP_SKILL = ROOT / "foothold/skills/foothold-setup/SKILL.md"
 SMALL_SKILL = "## Protected files\n\n- `Home.md`\n- `Context/<pack_owner>.md`\n- `Context/<pack_org>.md`\n\n## End\n"
 TOP = "foothold-2.6.0"
@@ -468,10 +486,13 @@ class SetupOrder(unittest.TestCase):
         self.assertLess(self.text.index("### Step A.1"), self.text.index("### Step A.2: Check"))
         self.assertNotIn("## Pre-flight Check", self.text)
 
-    def test_the_record_is_written_once_after_the_schedule_questions(self):
-        self.assertLess(self.text.index("## Phase C"), self.text.index("## Write the record"))
-        self.assertLess(self.text.index("## Write the record"), self.text.index("## Phase D"))
+    def test_the_record_is_written_once_after_the_first_build(self):
+        # G3: the record comes before the optional interview and the schedule question, so the
+        # vault is complete before either; only its schedule: section changes afterwards.
+        self.assertLess(self.text.index("## First build"), self.text.index("## Write the record"))
+        self.assertLess(self.text.index("## Write the record"), self.text.index("## Phase C"))
         self.assertNotIn("append a `schedule:` section", self.text)
+        self.assertIn("only its `schedule:` section changes", self.text)
 
 
 # ---- 12 and 13: update wording ------------------------------------------------------------------

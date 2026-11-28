@@ -84,12 +84,12 @@ The [latest release](https://github.com/MilUX-Ltd/foothold/releases/latest) page
 
 Tell your AI tool: "Read Start Here and set Foothold up for me." Setup works only from the folder you downloaded; it fetches no instructions from the internet. It will:
 
-1. **Ask where to put your vault.** By default a folder called `Foothold` in an `Obsidian` folder in your home folder. It asks before it writes anything.
-2. **Lay down your vault.** A copy of the `template` folder, with your details filled in.
-3. **Run a guided brain dump.** Six short areas: who you are, what you sell into defence, your positioning, your voice, your current priorities, and your tool stack. Type, paste links, or upload documents against any of them; the single best input is a dictation transcript, rambled and untidied. Skip anything you like. Give it the hour it deserves; everything the vault does afterwards is built from this.
-4. **Offer a context drop.** One final question inviting you to paste links, upload files, or point at a local folder of source material. The more you give it, the more personalised your vault will be.
+1. **Ask six short questions.** Where to put your vault (by default a folder called `Foothold` in an `Obsidian` folder in your home folder), your name and role, your organisation, and, if you like, its website and your work email. It asks before it writes anything.
+2. **Lay down your vault.** A copy of the `template` folder, with your details filled in, ready in a few minutes.
+3. **Offer a guided brain dump, now or later.** Six short areas: who you are, what you sell into defence, your positioning, your voice, your current priorities, and your tool stack. Type, paste links, or upload documents against any of them; the single best input is a dictation transcript, rambled and untidied. Skip anything you like, or say "tell Foothold about my business" whenever you like. It takes up to an hour, and it is what makes the vault yours.
+4. **Offer a context drop,** as part of the brain dump. One final question inviting you to paste links, upload files, or point at a local folder of source material.
 5. **Build your canonical pages.** The skill drafts your operator profile, organisation page, brand and strategy pages, email signature, and voice notes from the answers and corpus.
-6. **Offer the running rhythm, if your AI tool can schedule jobs.** A check for new releases (it only reports), a daily brief on weekday mornings, a monthly curation sweep, and a one-week check-in. Each is optional, needs your yes, and can be cancelled later.
+6. **Offer the running rhythm, if your AI tool can schedule jobs.** One question: a check for new releases (it only reports), a daily brief on weekday mornings, a monthly curation sweep, and a one-week check-in. None is set up unless you ask; each needs your yes, and can be cancelled later.
 
 When the skill finishes, it tells you where the vault was created and which schedule (if any) is now in place.
 

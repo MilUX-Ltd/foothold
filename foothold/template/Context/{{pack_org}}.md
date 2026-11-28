@@ -30,7 +30,7 @@ tags: [organisation]
 
 ## Founder team
 
-- *Who founded and runs {{pack_org}}, with their role. Your own profile is [[Context/{{pack_owner}}|{{pack_owner}}]].*
+- *Who founded and runs {{pack_org}}, with their role. Your own profile is [[Context/{{pack_owner_file}}|{{pack_owner}}]].*
 
 ## Current engagements
 

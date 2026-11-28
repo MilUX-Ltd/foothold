@@ -10,6 +10,7 @@ import json
 import re
 import tempfile
 import unittest
+from unittest import mock
 from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 from urllib.parse import unquote
@@ -17,6 +18,24 @@ from urllib.parse import unquote
 from support import UPDATE_SKILL, load_helper, write
 
 changes = load_helper()
+
+
+class _EveryItem:
+    def __contains__(self, number):
+        return True
+
+
+def setUpModule():
+    # Seventh audit, X3: record now refuses a show-and-ask-each item or a conflict whose last page
+    # show never printed. These tests are about record's other checks, so every item counts as
+    # shown here; tests/test_fix_round_8.py tests the rule itself.
+    global _shown
+    _shown = mock.patch.object(changes, "_shown_items", lambda temp: _EveryItem())
+    _shown.start()
+
+
+def tearDownModule():
+    _shown.stop()
 
 SMALL_SKILL = "## Protected files\n\n- `Home.md`\n\n## End\n"
 SKILL_A, SKILL_B, PAGE = "Skills/a/SKILL.md", "Skills/b/SKILL.md", "CRM/Page.md"

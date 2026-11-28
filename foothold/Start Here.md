@@ -6,7 +6,7 @@ This folder is Foothold 2.5.0: folders, notes and AI skills for a small UK defen
 
 1. Put this folder somewhere your AI tool can read and write files.
 2. Give your AI tool this file and say: "Read Start Here and set Foothold up for me."
-3. Answer its questions. Allow about an hour; most of it is telling it about your business.
+3. Answer six short questions. Your vault is ready in a few minutes; telling it about your business can follow.
 
 Setup makes a copy of the `template` folder as your own vault and fills it in from your answers. It asks before it writes anything. Nothing is sent anywhere by Foothold; your AI tool sends what it always sends to whoever provides it.
 
