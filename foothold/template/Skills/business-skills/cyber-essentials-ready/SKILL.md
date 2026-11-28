@@ -68,7 +68,7 @@ NCSC's configuration packs are written for IT teams using device management soft
 
 Run every step. None of these are optional.
 
-1. **Version check first.** Before any other work, confirm the user is on the latest published version of this skill. See Step 1.
+1. **Version check first.** Before any other work, tell the user which version of this skill they have, which question set it covers and when it was last reviewed, and ask whether that is still the question set IASME uses for their assessment. See Step 1.
 2. **Never demote the only admin.** Before any account change that touches admin rights, confirm a separate, working admin account exists. See Step 6 preconditions.
 3. **Backup before changing anything.** A Time Machine snapshot on Mac, a Restore Point on Windows. See Step 5.
 4. **Consent per control.** Before applying any setting change, summarise what will change, where the reversal lives, and ask the user to confirm. The user can always say "skip" and you record it.

@@ -51,7 +51,7 @@ class Test11SkillReadsReleasesOnly(unittest.TestCase):
         allowed = (
             r"https://github\.com/MilUX-Ltd/foothold/releases/latest/download/[A-Za-z0-9._-]+",
             r"https://github\.com/MilUX-Ltd/foothold/releases/latest",
-            r"https://raw\.githubusercontent\.com/MilUX-Ltd/foothold/v<version>/foothold/template/<path>",
+            r"https://raw\.githubusercontent\.com/MilUX-Ltd/foothold/refs/tags/v<version>/foothold/template/<path>",
         )
         for url in re.findall(r"https?://[^\s`)\"']+", self.text):
             url = url.rstrip(".,;:")
@@ -151,12 +151,14 @@ class Test12Sorting(FixtureCase):
         "Resources/Templates/deck.html",
         "Operations/settings.json",
         "Operations/config.yml",
-    }
-    ASK_ONCE = {
-        "Intelligence/defence-landscape/Army.md",
+        # Deny by default (audit M2, 28 November 2026): only plain .md pages under
+        # Intelligence/ or CRM/ are list and ask once, so these three moved here.
         "Resources/Reference/Acronyms.md",
         "Templates/Contact.md",
         "Resources/Reference/New page.md",
+    }
+    ASK_ONCE = {
+        "Intelligence/defence-landscape/Army.md",
     }
 
     def test_release_version_is_read_from_the_file_list(self):
@@ -236,10 +238,16 @@ class Test13NoStoredChecksum(FixtureCase):
                 self.assertEqual(result[path].category, changes.CONFLICT)
 
     def test_an_old_style_record_that_still_matches_is_offered(self):
-        path = "Resources/Reference/Acronyms.md"
+        # Was Resources/Reference/Acronyms.md, which is now show and ask each (audit M2); the
+        # same check on a page that is still list and ask once keeps the assertion as strict.
+        path = "Intelligence/defence-landscape/Army.md"
         cfg = self.without_record(path)
         cfg.legacy[path] = blob_sha1(self.OLD[path])
         self.assertEqual(self.sort(cfg)[path].category, changes.ASK_ONCE)
+        path = "Resources/Reference/Acronyms.md"
+        cfg = self.without_record(path)
+        cfg.legacy[path] = blob_sha1(self.OLD[path])
+        self.assertEqual(self.sort(cfg)[path].category, changes.ASK_EACH)
 
     def test_an_old_style_record_that_no_longer_matches_is_a_conflict(self):
         path = "Resources/Reference/Acronyms.md"

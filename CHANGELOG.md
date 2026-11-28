@@ -12,7 +12,7 @@ Foothold now comes as a release you can download, and updates ask before they ch
 
 **Changed**
 
-- **`/foothold-update` reads the latest release, never a branch.** It shows you every change before making it. A change to a skill, an instruction file such as `CLAUDE.md`, a script or a settings file is shown file by file and needs its own yes. Reference pages are listed and need one yes. A new skill is shown in full and added only if you say yes.
+- **`/foothold-update` reads the latest release, never a branch.** It checks every file against its checksum before showing it to you, and writes the copy it checked. Reference pages under `Intelligence/` and `CRM/` are listed and need one yes. Every other change, including any skill, instruction file such as `CLAUDE.md`, guide, script or settings file, is shown file by file and needs its own yes. A new skill is shown in full, every file of it, and added only if you say yes. The update tells you if a file holds characters you cannot see.
 - **The update leaves `.obsidian/` alone.** Your Obsidian settings are yours.
 - **The update no longer replaces itself and runs again.** A change to it is shown like any other skill change and takes effect the next time.
 - **A scheduled update only reports.** It lists what a new release would change and changes nothing.
@@ -21,10 +21,16 @@ Foothold now comes as a release you can download, and updates ask before they ch
 - **`build-dpia` and `cyber-essentials-ready` no longer check for updates over the internet.** Each tells you its version and when it was last reviewed.
 - **Five more pages are protected from updates:** `Getting Started - Your First Week.md`, the two `write-sow` assets that carry your name, `Knowledge/domains/brand.md` and the organisation page setup writes in `Context/`.
 
+**For vaults set up before 2.5.0**
+
+- Until you run `/foothold-update` once, your vault keeps the old update skill. The old skill reads `main` of the repository, not a release, and adds new files and applies changes without asking about each one, including when it runs on a schedule. Run the update yourself once, and accept the change to the update skill, to move to the new behaviour. If you set up a scheduled update, cancel it before then.
+
 **For maintainers**
 
+- Vaults set up before 2.5.0 still read `main` until their update skill is replaced (ADR 003). Review every merge to `main` as if it were a release until those vaults have moved.
 - A release is a tag `vX.Y.Z` on `main` (ADR 003, which supersedes ADR 002). `.github/workflows/release.yml` refuses a tag that does not match the version records or is not on `main`, runs every check, builds the release with `tools/build_release.py` and publishes it. The zip is the same bytes every time for the same tree.
 - The only zips that may be offered to users are those the release workflow builds from a tag.
+- File names in the pack may use only letters, digits, space and `- _ . ( ) & { } '`, and no two may differ only in capitals. `tools/check.py`, `tools/build_release.py` and the update's helper all refuse anything else. `tools/build_release.py` also refuses to build when `foothold/` has uncommitted changes, unless `--allow-dirty` is passed for a local or test build.
 - `tools/check.py` now also checks that filenames are ASCII and legal on Windows, that nothing under `foothold/` points at `main` of this repository, that `Start Here.md` names the version, that every file carrying the `pack_owner` placeholder is protected from updates, and that the README names the current zip.
 - Unit tests for the release tooling and the update's sorting are in `tests/`: `python3 -m unittest discover -s tests`.
 

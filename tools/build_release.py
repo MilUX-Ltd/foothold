@@ -22,14 +22,18 @@ The zip is the same bytes every time for the same tree: entries in name order, a
 fixed permissions, no extra fields, and stored without compression, so the bytes do not depend
 on the zlib library of the machine that builds it.
 
-The build stops with a message naming the file if any name in the zip is not plain ASCII or
-not legal on Windows, or if Start Here names a version other than the one being built.
+The build stops with a message naming the file if any name in the zip is outside the allow-list
+(bad_name), if two names differ only in capitals, or if Start Here names a version other than the
+one being built. It also stops if foothold/ has changes Git has not committed, so a published zip
+can always be rebuilt from its tag; --allow-dirty lets a local or test build go ahead. The release
+workflow never passes it.
 """
 
 import argparse
 import hashlib
 import json
 import re
+import subprocess
 import sys
 import zipfile
 from pathlib import Path
@@ -40,8 +44,13 @@ FIXED_DATE = (1980, 1, 1, 0, 0, 0)
 FILE_MODE = 0o100644
 SKIP_NAMES = {".DS_Store", "Thumbs.db", "desktop.ini"}
 SKIP_DIRS = {"__pycache__", ".git"}
-WINDOWS_ILLEGAL = set('<>:"\\|?*')
+# The allow-list for every path a release can carry. The update skill's helper
+# (foothold_changes.path_problem) holds the same rule for the person's computer, and
+# tests/test_safety_fixes.py checks that the two agree.
+SAFE_CHARACTER = re.compile(r"[A-Za-z0-9 ._()&{}'-]")
 WINDOWS_DEVICES = re.compile(r"^(CON|PRN|AUX|NUL|COM[0-9]|LPT[0-9])(\..*)?$", re.I)
+MAX_PART = 200
+MAX_PATH = 400
 VERSION = re.compile(r"^\d+\.\d+\.\d+$")
 ANY_VERSION = re.compile(r"(?<!\d)(?<!\d\.)\d+\.\d+\.\d+(?!\.?\d)")
 
@@ -51,24 +60,81 @@ class ReleaseError(Exception):
 
 
 def bad_name(path):
-    """Return why a zip path is not allowed, or None if it is fine.
+    """Return why a path is not allowed in a release, or None if it is fine.
 
-    Allowed: printable ASCII only; no character Windows refuses; no part that is a Windows
-    device name or ends in a dot or a space.
+    Allowed characters: ASCII letters and digits, space, and - _ . ( ) & { } ' with / only
+    between parts. Everything else is refused, including shell characters such as $ ` " ; |,
+    and anything that is not ASCII. No part may be empty, '.' or '..', begin or end with a
+    space, end with a dot (Windows drops both), begin with '-' (it would read as an option), or
+    be a Windows reserved name. No part over 200 characters and no path over 400.
     """
+    if not path:
+        return "'': an empty path"
+    if len(path) > MAX_PATH:
+        return f"{path!r}: longer than {MAX_PATH} characters"
     for ch in path:
-        if not (32 <= ord(ch) < 127):
-            return f"{path!r}: not plain ASCII"
-        if ch in WINDOWS_ILLEGAL:
-            return f"{path!r}: the character {ch!r} is not allowed in a Windows filename"
+        if ch != "/" and not SAFE_CHARACTER.fullmatch(ch):
+            if not (32 <= ord(ch) < 127):
+                return f"{path!r}: not plain ASCII (the character {ch!r})"
+            return f"{path!r}: the character {ch!r} is not allowed in a release path"
     for part in path.split("/"):
-        if part == "":
-            return f"{path!r}: empty path part"
+        if part in ("", ".", ".."):
+            return f"{path!r}: an empty, '.' or '..' path part"
+        if part.startswith(" ") or part.endswith(" "):
+            return f"{path!r}: {part!r} begins or ends with a space, which Windows drops"
+        if part.endswith("."):
+            return f"{path!r}: {part!r} ends in a dot, which Windows drops"
+        if part.startswith("-"):
+            return f"{path!r}: {part!r} begins with '-', which a command would read as an option"
         if WINDOWS_DEVICES.match(part):
             return f"{path!r}: {part!r} is a reserved name on Windows"
-        if part.endswith(".") or part.endswith(" "):
-            return f"{path!r}: {part!r} ends in a dot or a space, which Windows drops"
+        if len(part) > MAX_PART:
+            return f"{path!r}: a part is longer than {MAX_PART} characters"
     return None
+
+
+def case_twins(paths):
+    """Pairs of paths that differ only in capitals: one file on macOS and Windows."""
+    seen, twins = {}, []
+    for path in sorted(paths):
+        key = path.casefold()
+        if key in seen:
+            twins.append((seen[key], path))
+        else:
+            seen[key] = path
+    return twins
+
+
+def check_case_collisions(entries):
+    twins = case_twins(entries)
+    if twins:
+        raise ReleaseError(
+            "names that differ only in capitals, which are one file on macOS and Windows:\n  "
+            + "\n  ".join(f"{a!r} and {b!r}" for a, b in twins)
+        )
+
+
+def refuse_if_dirty(root):
+    """Stop if foothold/ has changes Git has not committed, or if Git cannot say."""
+    try:
+        out = subprocess.run(
+            ["git", "status", "--porcelain", "--untracked-files=all", "--", "foothold"],
+            cwd=root, capture_output=True, text=True,
+        )
+    except OSError as exc:
+        raise ReleaseError(f"cannot run git to check for uncommitted changes ({exc})")
+    if out.returncode != 0:
+        raise ReleaseError(
+            "cannot tell whether foothold/ has uncommitted changes (git status failed: "
+            f"{out.stderr.strip()}); use --allow-dirty only for a local or test build"
+        )
+    changed = [line for line in out.stdout.splitlines() if line.strip()]
+    if changed:
+        shown = "\n  ".join(changed[:10]) + ("\n  ..." if len(changed) > 10 else "")
+        raise ReleaseError(
+            "foothold/ has uncommitted changes, so this zip could not be rebuilt from a tag:\n  "
+            f"{shown}\nCommit them, or pass --allow-dirty for a local or test build."
+        )
 
 
 def pack_version(root):
@@ -161,6 +227,7 @@ def collect(root, version):
     problems = [why for why in (bad_name(name) for name in entries) if why]
     if problems:
         raise ReleaseError("names not allowed in a release:\n  " + "\n  ".join(problems))
+    check_case_collisions(entries)
     return sorted(entries.items())
 
 
@@ -229,8 +296,14 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description="Build the release files for the pack.")
     parser.add_argument("--out", required=True, help="folder to write the release files into")
     parser.add_argument("--version", help="refuse to build unless the pack is this version")
+    parser.add_argument(
+        "--allow-dirty", action="store_true",
+        help="build even if foothold/ has uncommitted changes (local and test builds only)",
+    )
     args = parser.parse_args(argv)
     try:
+        if not args.allow_dirty:
+            refuse_if_dirty(ROOT)
         result = build(ROOT, Path(args.out), args.version)
     except ReleaseError as exc:
         print(f"build_release.py: {exc}", file=sys.stderr)

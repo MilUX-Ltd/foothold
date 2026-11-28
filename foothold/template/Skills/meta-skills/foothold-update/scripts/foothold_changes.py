@@ -6,29 +6,45 @@ network. Standard library only, Python 3.9 or later. SKILL.md, beside this folde
 same rules in words, for AI tools that cannot run Python.
 
     python3 foothold_changes.py sort <vault folder> <release-files.txt or release folder>
+        [--release-files <release-files.txt>]
+    python3 foothold_changes.py verify <release-files.txt> <download folder>
+    python3 foothold_changes.py hidden <file or folder> [...]
+    python3 foothold_changes.py hash-folder <folder>
     python3 foothold_changes.py hash <file> [<file> ...]
-    python3 foothold_changes.py check <release-files.txt> <template path> <downloaded file>
 
-Pass every path as its own argument. Never join paths or file text into a command.
+Every argument is a folder or file the person named, or one you made: the vault, a temporary
+folder, the downloaded release-files.txt. No command takes a path read from the release, so a
+file name in the release never reaches a command line. Pass every path as its own argument.
+
+Every path in a release must pass path_problem(): letters, digits, space and - _ . ( ) & { } '
+only, with / between parts. The whole list is refused if one path fails, or if two paths differ
+only in capitals. Names are compared without regard to capitals throughout, because the default
+file systems on macOS and Windows do the same.
 
 `sort` puts each file in the release into one group:
 
-- show and ask each: skills, instruction files, scripts and settings. Show the difference
-  for each one and ask about each one.
-- list and ask once: everything else. List them by name and ask once.
-- conflict: the file in the vault was changed by the person, or has no stored checksum. Show
-  the difference and ask: keep mine, take the release's, or merge.
+- show and ask each: anything not in the next group. Show the difference for each one and ask
+  about each one.
+- list and ask once: a .md page under Intelligence/ or CRM/ that is not a guide or an
+  instruction file and has no part beginning with a dot. List them by name and ask once.
+- conflict: the file in the vault was changed by the person, has no stored checksum, or
+  matches the release path only without regard to capitals. Show the difference and ask: keep
+  mine, take the release's, or merge.
 - local only: the person changed it and the release did not. Nothing to do.
 - unchanged: the vault already matches. Nothing to do.
 - protected: on the protected list in SKILL.md. Never touched.
 - excluded: under .obsidian/. Never touched.
+
+A path that would land outside the vault stops the whole run.
 """
 
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
+import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -41,19 +57,20 @@ PROTECTED = "protected"
 EXCLUDED = "excluded"
 ORDER = (ASK_EACH, ASK_ONCE, CONFLICT, LOCAL_ONLY, UNCHANGED, PROTECTED, EXCLUDED)
 
+# Names compared after casefold(). A file with one of these names is always show and ask each.
 INSTRUCTION_NAMES = {
-    "claude.md", "agents.md", "gemini.md", "start here.md", "copilot-instructions.md",
-    ".cursorrules", ".windsurfrules", ".clinerules",
+    "claude.md", "agents.md", "agent.md", "gemini.md", "readme.md", "skill.md",
+    "start here.md", "copilot-instructions.md",
 }
-INSTRUCTION_FOLDERS = {"Skills", "Knowledge"}
-SCRIPT_EXT = {
-    ".py", ".sh", ".bash", ".zsh", ".fish", ".js", ".mjs", ".cjs", ".ts", ".ps1", ".psm1",
-    ".bat", ".cmd", ".vbs", ".rb", ".pl", ".php", ".html", ".htm", ".svg", ".applescript",
-    ".scpt", ".command", ".exe", ".app", ".jar",
-}
-SETTINGS_EXT = {
-    ".json", ".yml", ".yaml", ".toml", ".ini", ".cfg", ".conf", ".env", ".plist", ".xml",
-}
+ASK_ONCE_FOLDERS = {"intelligence", "crm"}
+EXCLUDED_FOLDER = ".obsidian"
+
+# The allow-list for every path a release can carry. tools/build_release.py holds the same
+# rule (bad_name) and tests/test_safety_fixes.py checks that the two agree.
+SAFE_CHARACTER = re.compile(r"[A-Za-z0-9 ._()&{}'-]")
+RESERVED_NAME = re.compile(r"^(CON|PRN|AUX|NUL|COM[0-9]|LPT[0-9])(\..*)?$", re.I)
+MAX_PART = 200
+MAX_PATH = 400
 LINE = re.compile(r"^([0-9a-f]{64})  (.+)$")
 TOP = re.compile(r"^foothold-(\d+\.\d+\.\d+)$")
 PLACEHOLDER = re.compile(r"\{\{([a-z_]+)\}\}")
@@ -95,20 +112,58 @@ def blob_sha1(data):
     return hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
 
 
+def path_problem(path):
+    """Return why a release path is not allowed, or None if it is fine.
+
+    Allowed: ASCII letters and digits, space, and - _ . ( ) & { } ' with / only between parts.
+    No part may be empty, '.' or '..', begin or end with a space, end with a dot, begin with
+    '-', or be a Windows reserved name. No part over 200 characters, no path over 400.
+    """
+    if not path:
+        return "an empty path"
+    if len(path) > MAX_PATH:
+        return f"longer than {MAX_PATH} characters"
+    for ch in path:
+        if ch != "/" and not SAFE_CHARACTER.fullmatch(ch):
+            return f"the character {ch!r} is not allowed"
+    for part in path.split("/"):
+        if part in ("", ".", ".."):
+            return f"an empty, '.' or '..' part"
+        if part.startswith(" ") or part.endswith(" "):
+            return f"the part {part!r} begins or ends with a space"
+        if part.endswith("."):
+            return f"the part {part!r} ends with a dot"
+        if part.startswith("-"):
+            return f"the part {part!r} begins with '-'"
+        if RESERVED_NAME.match(part):
+            return f"the part {part!r} is a reserved name on Windows"
+        if len(part) > MAX_PART:
+            return f"a part is longer than {MAX_PART} characters"
+    return None
+
+
 def _safe_parts(path, what):
-    if not path or "\\" in path or "\0" in path or path.startswith("/"):
-        raise ChangesError(f"{what} {path!r}: not a safe relative path")
-    if any(not (32 <= ord(ch) < 127) for ch in path):
-        raise ChangesError(f"{what} {path!r}: not plain ASCII")
-    parts = path.split("/")
-    if any(part in ("", ".", "..") for part in parts):
-        raise ChangesError(f"{what} {path!r}: not a safe relative path")
-    return parts
+    why = path_problem(path)
+    if why:
+        raise ChangesError(f"{what} {path!r}: not allowed ({why}); refusing the whole list")
+    return path.split("/")
+
+
+def _no_case_twins(paths, what):
+    seen = {}
+    for path in paths:
+        key = path.casefold()
+        if key in seen:
+            raise ChangesError(
+                f"{what}: {seen[key]!r} and {path!r} differ only in capitals or are the same "
+                "path twice; refusing the whole list"
+            )
+        seen[key] = path
 
 
 def parse_release_files(text):
     """Read release-files.txt. Only lines under foothold-X.Y.Z/template/ are kept."""
-    version, files, seen = None, {}, 0
+    version, files, seen, every = None, {}, 0, []
     for number, raw in enumerate(text.splitlines(), 1):
         if not raw.strip():
             continue
@@ -125,10 +180,12 @@ def parse_release_files(text):
         elif top.group(1) != version:
             raise ChangesError(f"release-files.txt line {number}: more than one version")
         seen += 1
+        every.append(path)
         if len(parts) > 2 and parts[1] == "template":
             files["/".join(parts[2:])] = digest
     if not seen:
         raise ChangesError("release-files.txt: empty")
+    _no_case_twins(every, "release-files.txt")
     return Release(version=version, files=files)
 
 
@@ -149,7 +206,31 @@ def release_from_folder(folder):
             rel = path.relative_to(base).as_posix()
             _safe_parts(rel, "release file")
             files[rel] = sha256_bytes(path.read_bytes())
+    _no_case_twins(files, f"{folder.name}/template")
     return Release(version=top.group(1), files=files)
+
+
+def check_folder_against_list(folder_release, listed):
+    """Refuse a release folder unless it holds exactly the files release-files.txt lists."""
+    if folder_release.version != listed.version:
+        raise ChangesError(
+            f"the folder is release {folder_release.version} but release-files.txt is "
+            f"{listed.version}; refusing"
+        )
+    problems = []
+    for path in sorted(set(folder_release.files) | set(listed.files)):
+        have, want = folder_release.files.get(path), listed.files.get(path)
+        if want is None:
+            problems.append(f"{path}: in the folder but not in release-files.txt")
+        elif have is None:
+            problems.append(f"{path}: in release-files.txt but not in the folder")
+        elif have != want:
+            problems.append(f"{path}: does not match its checksum in release-files.txt")
+    if problems:
+        raise ChangesError(
+            "the release folder does not match release-files.txt; refusing:\n  "
+            + "\n  ".join(problems)
+        )
 
 
 def _scalar(text):
@@ -269,36 +350,78 @@ def read_protected(skill_text):
     return protected
 
 
+def _value(name, values):
+    """A placeholder's value from config.yml, checked before it goes into a path."""
+    if name not in values:
+        return "{{" + name + "}}"
+    value = values[name]
+    why = None if value else "it is empty"
+    if why is None and ("/" in value or value.startswith(".")):
+        why = "it holds '/' or begins with a dot"
+    why = why or path_problem(value)
+    if why:
+        raise ChangesError(
+            f"the value of {name} in .foothold/config.yml, {value!r}, cannot be used in a file "
+            f"name ({why}); stopping, nothing was changed"
+        )
+    return value
+
+
 def substitute(path, values):
     """Fill placeholders in a template path with the vault's values, and check the result."""
-    filled = PLACEHOLDER.sub(lambda m: values.get(m.group(1), m.group(0)), path)
-    if not filled or "\\" in filled or "\0" in filled or filled.startswith("/"):
-        raise ChangesError(f"{path!r} becomes {filled!r}, which is not a safe vault path")
-    if any(part in ("", ".", "..") for part in filled.split("/")):
-        raise ChangesError(f"{path!r} becomes {filled!r}, which is not a safe vault path")
+    filled = PLACEHOLDER.sub(lambda m: _value(m.group(1), values), path)
+    why = path_problem(filled)
+    if why:
+        raise ChangesError(f"{path!r} becomes {filled!r}, which is not a safe vault path ({why})")
     return filled
 
 
 def kind(path):
-    """ASK_EACH for anything that instructs an AI or changes settings, else ASK_ONCE."""
+    """ASK_ONCE only for a plain .md page under Intelligence/ or CRM/; ASK_EACH for the rest.
+
+    Deny by default: a file is list and ask once only if all of these hold, compared without
+    regard to capitals. It is under Intelligence/ or CRM/. Its extension is .md. Its name is not
+    a guide (* Guide.md) or an instruction file (CLAUDE.md, AGENTS.md, AGENT.md, GEMINI.md,
+    README.md, SKILL.md, *.local.md). No part of its path begins with a dot.
+    """
     parts = path.split("/")
-    name = parts[-1].lower()
-    suffix = Path(name).suffix
-    if parts[0] in INSTRUCTION_FOLDERS:
+    name = parts[-1].casefold()
+    if len(parts) < 2 or parts[0].casefold() not in ASK_ONCE_FOLDERS:
         return ASK_EACH
-    if name in INSTRUCTION_NAMES:
+    if not name.endswith(".md"):
         return ASK_EACH
-    if any(part.startswith(".") for part in parts[:-1]):
+    if name in INSTRUCTION_NAMES or name == "guide.md" or name.endswith(" guide.md"):
         return ASK_EACH
-    if name.startswith(".") and name != ".gitkeep":
+    if name.endswith(".local.md"):
         return ASK_EACH
-    if suffix in SCRIPT_EXT or suffix in SETTINGS_EXT:
+    if any(part.startswith(".") for part in parts):
         return ASK_EACH
     return ASK_ONCE
 
 
 def excluded(path):
-    return path == ".obsidian" or path.startswith(".obsidian/")
+    return path.split("/")[0].casefold() == EXCLUDED_FOLDER
+
+
+def _on_disk(vault_root, vpath):
+    """How vpath stands in the vault, comparing names exactly, part by part.
+
+    'exact': every part exists with exactly this name. 'absent': some part does not exist in any
+    capitals. 'case': some part exists only with other capitals (on macOS and Windows that is
+    the same file). 'blocked': a part that should be a folder is a file.
+    """
+    here = Path(vault_root)
+    parts = vpath.split("/")
+    for i, part in enumerate(parts):
+        if not here.is_dir() or here.is_symlink() and i:
+            return "blocked"
+        names = os.listdir(here)
+        if part not in names:
+            if any(n.casefold() == part.casefold() for n in names):
+                return "case"
+            return "absent"
+        here = here / part
+    return "exact"
 
 
 def _inside(vault_root, path):
@@ -312,27 +435,51 @@ def _inside(vault_root, path):
 def classify(release, config, vault_root, protected):
     """Sort every file in the release. Returns {template path: Change}."""
     vault_root = Path(vault_root)
+    protected_template = {item.casefold() for item in protected}
     protected_vault = set()
     for item in protected:
         try:
-            protected_vault.add(substitute(item, config.values))
+            protected_vault.add(substitute(item, config.values).casefold())
         except ChangesError:
             pass
-    result = {}
+    result, vault_paths = {}, {}
     for tpath, rsha in sorted(release.files.items()):
+        if excluded(tpath):
+            result[tpath] = Change(EXCLUDED, tpath)
+            continue
+        if tpath.casefold() in protected_template:
+            try:
+                shown = substitute(tpath, config.values)
+            except ChangesError:
+                shown = tpath
+            result[tpath] = Change(PROTECTED, shown)
+            continue
         vpath = substitute(tpath, config.values)
-        if excluded(tpath) or excluded(vpath):
+        if excluded(vpath):
             result[tpath] = Change(EXCLUDED, vpath)
             continue
-        if tpath in protected or vpath in protected_vault:
+        if vpath.casefold() in protected_vault:
             result[tpath] = Change(PROTECTED, vpath)
             continue
+        twin = vault_paths.setdefault(vpath.casefold(), tpath)
+        if twin != tpath:
+            raise ChangesError(
+                f"{twin!r} and {tpath!r} both become {vpath!r} in the vault; stopping, nothing "
+                "was changed"
+            )
         local = vault_root / vpath
         if not _inside(vault_root, local):
+            raise ChangesError(
+                f"{tpath!r} would be written at {vpath!r}, which is outside the vault (a "
+                "linked folder, or a name that leaves it); stopping, nothing was changed"
+            )
+        sort_kind = ASK_EACH if ASK_EACH in (kind(tpath), kind(vpath)) else ASK_ONCE
+        state = _on_disk(vault_root, vpath)
+        if state in ("case", "blocked"):
             result[tpath] = Change(CONFLICT, vpath)
             continue
-        if not local.exists() and not local.is_symlink():
-            result[tpath] = Change(kind(tpath), vpath, new=True)
+        if state == "absent" and not local.is_symlink():
+            result[tpath] = Change(sort_kind, vpath, new=True)
             continue
         if local.is_symlink() or not local.is_file():
             result[tpath] = Change(CONFLICT, vpath)
@@ -347,40 +494,132 @@ def classify(release, config, vault_root, protected):
         same_release = source is not None and source == rsha
         if written is not None:
             if lsha == written:
-                category = UNCHANGED if same_release else kind(tpath)
+                category = UNCHANGED if same_release else sort_kind
             else:
                 category = LOCAL_ONLY if same_release else CONFLICT
         elif vpath in config.legacy:
-            category = kind(tpath) if blob_sha1(data) == config.legacy[vpath] else CONFLICT
+            category = sort_kind if blob_sha1(data) == config.legacy[vpath] else CONFLICT
         else:
             category = CONFLICT
         result[tpath] = Change(category, vpath)
     return result
 
 
-def load_release(source):
+def read_release_files(path):
+    return parse_release_files(Path(path).read_text(encoding="utf-8"))
+
+
+def load_release(source, release_files=None):
+    """Read a release from release-files.txt or from an unzipped folder.
+
+    For a folder, the checksums are worked out from the folder's own files, which proves
+    nothing about where they came from. Give release_files, when it can be had, and the folder
+    is refused unless it matches it exactly.
+    """
     source = Path(source)
     if source.is_dir():
-        return release_from_folder(source)
-    return parse_release_files(source.read_text(encoding="utf-8"))
+        release = release_from_folder(source)
+        if release_files is not None:
+            check_folder_against_list(release, read_release_files(release_files))
+        return release
+    return read_release_files(source)
 
 
-def sort_from_paths(vault, release_source, skill_md):
+def sort_from_paths(vault, release_source, skill_md, release_files=None):
     vault = Path(vault)
     config_file = vault / ".foothold/config.yml"
     if not config_file.is_file():
         raise ChangesError(f"{config_file}: not found; this does not look like a Foothold vault")
     config = parse_config(config_file.read_text(encoding="utf-8"))
     protected = read_protected(Path(skill_md).read_text(encoding="utf-8"))
-    return classify(load_release(release_source), config, vault, protected)
+    return classify(load_release(release_source, release_files), config, vault, protected)
 
 
-def check_file(release_files, template_path, downloaded):
-    release = parse_release_files(Path(release_files).read_text(encoding="utf-8"))
-    want = release.files.get(template_path)
-    if want is None:
-        raise ChangesError(f"{template_path!r} is not in the release")
-    return sha256_bytes(Path(downloaded).read_bytes()) == want
+def _files_under(folder):
+    """Every file under folder as (relative posix path, Path), refusing links."""
+    folder = Path(folder)
+    if not folder.is_dir():
+        raise ChangesError(f"{folder}: not a folder")
+    found = []
+    for path in sorted(folder.rglob("*")):
+        if path.is_symlink():
+            raise ChangesError(f"{path}: a link; not trusted")
+        if path.is_file() and path.name not in SKIP_NAMES:
+            found.append((path.relative_to(folder).as_posix(), path))
+    return found
+
+
+def verify_folder(release, folder):
+    """Check each file in a download folder, laid out by template path, against the list.
+
+    Returns {template path: 'ok' | 'failed' | 'not in the release'}.
+    """
+    results = {}
+    for rel, path in _files_under(folder):
+        want = release.files.get(rel)
+        if want is None:
+            results[rel] = "not in the release"
+        elif sha256_bytes(path.read_bytes()) == want:
+            results[rel] = "ok"
+        else:
+            results[rel] = "failed"
+    return results
+
+
+def _hidden(ch):
+    code = ord(ch)
+    if ch in "\t\r\n":
+        return False
+    if unicodedata.category(ch) in ("Cc", "Cf", "Co", "Cn", "Zl", "Zp"):
+        return True
+    if unicodedata.category(ch) == "Zs" and ch != " ":
+        return True
+    return 0xFE00 <= code <= 0xFE0F or 0xE0100 <= code <= 0xE01EF
+
+
+def hidden_characters(data):
+    """Characters in UTF-8 text that do not display: control, zero-width, direction-changing,
+    Tag and variation characters, odd spaces. Returns [(line, column, 'U+XXXX', name)].
+
+    Raises ChangesError if the bytes are not UTF-8 text.
+    """
+    try:
+        text = data.decode("utf-8")
+    except UnicodeDecodeError as exc:
+        raise ChangesError(f"cannot be shown as text (not UTF-8 at byte {exc.start})")
+    found, line, column = [], 1, 0
+    for ch in text:
+        if ch == "\n":
+            line, column = line + 1, 0
+            continue
+        column += 1
+        if _hidden(ch):
+            found.append((line, column, f"U+{ord(ch):04X}", unicodedata.name(ch, "no name")))
+    return found
+
+
+def _hidden_report(targets):
+    """Print what hidden_characters finds in each file or folder. True if anything was found."""
+    any_found = False
+    for target in targets:
+        target = Path(target)
+        if target.is_dir():
+            items = _files_under(target)
+        else:
+            items = [(target.name, target)]
+        for rel, path in items:
+            try:
+                found = hidden_characters(path.read_bytes())
+            except ChangesError as exc:
+                print(f"{rel}: {exc}")
+                any_found = True
+                continue
+            for line, column, code, name in found:
+                print(f"{rel}:{line}:{column} {code} {name}")
+                any_found = True
+    if not any_found:
+        print("No characters that do not display, and every file is text.")
+    return any_found
 
 
 def _report(release_source, result, as_json):
@@ -410,24 +649,42 @@ def main(argv=None):
     s.add_argument("release", help="release-files.txt, or an unzipped foothold-X.Y.Z folder")
     s.add_argument("--skill", default=str(Path(__file__).resolve().parent.parent / "SKILL.md"))
     s.add_argument("--json", action="store_true")
+    s.add_argument("--release-files", help="with a release folder: refuse it unless it matches")
+    v = sub.add_parser("verify", help="check a download folder against release-files.txt")
+    v.add_argument("release_files")
+    v.add_argument("folder", help="a temporary folder holding the downloads by template path")
+    d = sub.add_parser("hidden", help="report characters that do not display")
+    d.add_argument("targets", nargs="+", help="files or folders")
+    f = sub.add_parser("hash-folder", help="print the SHA-256 of every file under a folder")
+    f.add_argument("folder")
     h = sub.add_parser("hash", help="print the SHA-256 of each file")
     h.add_argument("files", nargs="+")
-    c = sub.add_parser("check", help="check a downloaded file against release-files.txt")
-    c.add_argument("release_files")
-    c.add_argument("template_path")
-    c.add_argument("downloaded")
-    args = parser.parse_args(argv)
+    try:
+        args = parser.parse_args(argv)
+    except SystemExit as exc:
+        return exc.code if isinstance(exc.code, int) else 2
     try:
         if args.command == "sort":
-            _report(args.release, sort_from_paths(args.vault, args.release, args.skill), args.json)
-        elif args.command == "hash":
+            result = sort_from_paths(args.vault, args.release, args.skill, args.release_files)
+            _report(args.release, result, args.json)
+        elif args.command == "verify":
+            results = verify_folder(read_release_files(args.release_files), args.folder)
+            words = {"ok": "OK", "failed": "FAILED its checksum",
+                     "not in the release": "NOT IN THE RELEASE"}
+            for rel, outcome in results.items():
+                print(f"{words[outcome]}: {rel}")
+            if not results:
+                print("No files found in the folder.")
+                return 1
+            return 0 if all(o == "ok" for o in results.values()) else 1
+        elif args.command == "hidden":
+            return 1 if _hidden_report(args.targets) else 0
+        elif args.command == "hash-folder":
+            for rel, path in _files_under(args.folder):
+                print(f"{sha256_bytes(path.read_bytes())}  {rel}")
+        else:
             for name in args.files:
                 print(f"{sha256_bytes(Path(name).read_bytes())}  {name}")
-        else:
-            if not check_file(args.release_files, args.template_path, args.downloaded):
-                print(f"MISMATCH: {args.downloaded} is not {args.template_path} from the release")
-                return 1
-            print(f"OK: {args.downloaded} matches {args.template_path}")
     except (ChangesError, OSError, ValueError) as exc:
         print(f"foothold_changes.py: {exc}", file=sys.stderr)
         return 2

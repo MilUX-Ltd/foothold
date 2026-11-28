@@ -33,9 +33,16 @@ be a new decision superseding it. This is that decision.
 
 ## Consequences
 
-- Merging to `main` no longer reaches users. A change reaches them when the maintainer tags a
-  release, so the review of a release tag is the release review. `main` stays protected as
-  ADR 002 set out, because every release is cut from it.
+- For vaults on 2.5.0 or later, merging to `main` does not reach users. A change reaches them
+  when the maintainer tags a release, so the review of a release tag is the release review.
+  `main` stays protected as ADR 002 set out, because every release is cut from it.
+- Vaults set up before 2.5.0 still read `main`. Their update skill is the old one: it reads the
+  file tree of `main` when it runs, and adds new files and applies changes without asking about
+  each one, including from a scheduled task. That stays true until the old skill is replaced,
+  which happens the first time the person runs the old update after this decision is merged
+  and accepts its offer to update itself. We cannot change how the old skill behaves. So until
+  those vaults have moved to 2.5.0, a merge to `main` still reaches some users, and `main` must
+  be reviewed as if it were a release.
 - A release needs tag protection, so a tag cannot be moved once published. That is a
   repository setting only an owner can turn on.
 - Vaults installed before 2.5.0 hold Git blob SHA-1 checksums (`last_known_shas`). The update

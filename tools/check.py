@@ -24,8 +24,12 @@ What it checks, and why (the reasons are in LESSONS.md and docs/adr/):
 Release rules (docs/adr/003). These look at tracked files and at new files not yet added, so
 they catch a problem before the commit as well as in CI:
 
-8. Every filename is plain ASCII and legal on Windows (non-ASCII names broke installs at
-   1.2.1 and 1.2.2; tools/build_release.py refuses the same names).
+8. Every filename passes the release allow-list: ASCII letters and digits, space, and
+   - _ . ( ) & { } ' only, so no shell character can reach a command an AI tool builds from a
+   file name; legal on Windows; no part beginning with '-'. No two paths differ only in
+   capitals, because macOS and Windows treat them as one file (non-ASCII names broke installs at
+   1.2.1 and 1.2.2; the 2.5.0 safety audit, H1 and H2; tools/build_release.py refuses the same
+   names).
 9. No file under foothold/ holds an address on main of this repository. Users receive only
    what a release tag holds, never what main holds at the moment they ask.
 10. foothold/Start Here.md exists and names the pack's version and no other.
@@ -169,6 +173,11 @@ def check_filenames(files, fail):
             fail(f"{path}: filename not allowed ({why})")
 
 
+def check_case_collisions(files, fail):
+    for first, second in build_release.case_twins(files):
+        fail(f"{first} and {second}: differ only in capitals, which is one file on macOS and Windows")
+
+
 def check_no_main_address(root, files, fail):
     for path in files:
         if not path.startswith("foothold/"):
@@ -261,6 +270,7 @@ def main():
     every = all_files()
     version = newest_version()
     check_filenames(every, fail)
+    check_case_collisions(every, fail)
     check_no_main_address(ROOT, every, fail)
     check_start_here(ROOT, version, fail)
     check_pack_owner_protected(ROOT, every, fail)

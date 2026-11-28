@@ -139,4 +139,4 @@ Tell the founder, in plain English, where everything is: the DPIA markdown, the 
 
 ## Consent and audit footer
 
-This skill is maintained by MilUX as part of the Foothold pack. It does not phone home, send telemetry, or collect any data about the founder or their business. It reads the founder's own vault to draft the DPIA, writes only to the founder's `Operations/` folder (and, with consent, registers a scheduled task), and makes no external calls except the version check and, if the founder asks, fetching public ICO guidance. Every write and every schedule is made with the founder's explicit consent.
+This skill is maintained by MilUX as part of the Foothold pack. It does not phone home, send telemetry, or collect any data about the founder or their business. It reads the founder's own vault to draft the DPIA, writes only to the founder's `Operations/` folder (and, with consent, registers a scheduled task), and makes no external calls except, if the founder asks, fetching public ICO guidance. Every write and every schedule is made with the founder's explicit consent.
