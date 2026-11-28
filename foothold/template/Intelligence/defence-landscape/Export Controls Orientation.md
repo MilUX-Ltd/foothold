@@ -60,6 +60,6 @@ Work through these before you pitch internationally, demo abroad, publish techni
 
 ## Related
 
-- [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]]
+- [[Intelligence/defence-landscape/Founders Procurement Playbook|Founder's Procurement Playbook]]
 - [[Intelligence/defence-landscape/Security Clearance Primer|Security Clearance Primer]]
 - [[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]]

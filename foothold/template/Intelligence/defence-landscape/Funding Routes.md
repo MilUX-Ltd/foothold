@@ -12,7 +12,7 @@ tags: [defence-landscape, uk-defence, funding, playbook, ukdi]
 
 # Funding Routes
 
-The [[Intelligence/defence-landscape/Founder's Procurement Playbook|Procurement Playbook]] answers "how do I sell". This page answers "how do I stay alive long enough to sell". Award sizes, timelines and terms move; check the scheme's own gov.uk page before planning around a number here. For MOD innovation money, the single place to check is UK Defence Innovation's [live funding page](https://www.gov.uk/government/collections/live-funding-opportunities); this page deliberately does not list closing dates that will go stale.
+The [[Intelligence/defence-landscape/Founders Procurement Playbook|Procurement Playbook]] answers "how do I sell". This page answers "how do I stay alive long enough to sell". Award sizes, timelines and terms move; check the scheme's own gov.uk page before planning around a number here. For MOD innovation money, the single place to check is UK Defence Innovation's [live funding page](https://www.gov.uk/government/collections/live-funding-opportunities); this page deliberately does not list closing dates that will go stale.
 
 **What changed in 2026.** DASA is now part of **UK Defence Innovation (UKDI)**. The Defence Open Call has not reopened (a new "Innovating for Defence" route is being developed, no date), Defence Innovation Loans are **paused**, and the **Security Open Call** is open. See [[Intelligence/defence-landscape/UKDI - How to Engage|UKDI: How to Engage]].
 
@@ -53,7 +53,7 @@ Three questions cut the table down fast.
 
 ## Mixing routes
 
-The strong pattern in UK defence tech is sequenced, not simultaneous: competition win (proof and a defence customer relationship), then DTEP or BattleLab (prime relationship and operational evidence), then either revenue or a priced round with the evidence pack those phases built. The weak pattern is grant-chaining: a company that strings competition wins for years without an exploitation route is a research charity with a cap table. The [[Intelligence/defence-landscape/Founder's Procurement Playbook|Playbook]]'s failure modes section applies in full.
+The strong pattern in UK defence tech is sequenced, not simultaneous: competition win (proof and a defence customer relationship), then DTEP or BattleLab (prime relationship and operational evidence), then either revenue or a priced round with the evidence pack those phases built. The weak pattern is grant-chaining: a company that strings competition wins for years without an exploitation route is a research charity with a cap table. The [[Intelligence/defence-landscape/Founders Procurement Playbook|Playbook]]'s failure modes section applies in full.
 
 ## Who is behind each route
 
@@ -61,7 +61,7 @@ Entities live in the CRM and the landscape maps, not here: see [[Intelligence/de
 
 ## Related
 
-- [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]]
+- [[Intelligence/defence-landscape/Founders Procurement Playbook|Founder's Procurement Playbook]]
 - [[Intelligence/defence-landscape/Accelerators and Investors|Accelerators and Investors]]
 - [[Intelligence/defence-landscape/UKDI - How to Engage|UKDI: How to Engage]]
 - [[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]]

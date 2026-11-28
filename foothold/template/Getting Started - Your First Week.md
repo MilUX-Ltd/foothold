@@ -38,7 +38,7 @@ Pick the option that matches your reality:
 
 ## Day 5: learn the landscape
 
-- [ ] Read the [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]], then the [[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]].
+- [ ] Read the [[Intelligence/defence-landscape/Founders Procurement Playbook|Founder's Procurement Playbook]], then the [[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]].
 - [ ] Register on the [[Intelligence/defence-landscape/Portals/Defence Sourcing Portal|Defence Sourcing Portal]] and set alerts. Free, ten minutes, and every MOD tender over £10k now finds you.
 - [ ] Skim the [[Resources/Reading List|Reading List]] and pick one thing to read this month.
 

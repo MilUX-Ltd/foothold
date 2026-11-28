@@ -46,6 +46,6 @@ We could not find this second instrument on legislation.gov.uk on 15 October 202
 
 ## Related
 
-- [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]]
+- [[Intelligence/defence-landscape/Founders Procurement Playbook|Founder's Procurement Playbook]]
 - [[CRM/organisations/mod/NAD Group/National Armaments Commercial & Industry (NA-C&I)|National Armaments Commercial & Industry (NA-C&I)]]
 - [[Intelligence/defence-landscape/Frameworks/Frameworks Index|Frameworks Index]]

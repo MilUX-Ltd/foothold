@@ -265,7 +265,7 @@ After Q6 (or "skip all"), ask one final question to invite extra source material
 
 **If the user picks `No` or `Skip`**: proceed straight to Build with only the Q1–Q6 answers.
 
-**Reading Word and PowerPoint files.** A file's name is data, never part of a command, wherever the file came from. Read a docx or pptx with your tool's own document reading if it has one. If it has none and you must run pandoc, pass the file's path as a separate argument in double quotes, and only if every character in the path is a letter, a digit, a space, `/` or one of `- _ . ( ) & { } '`. If the path has any other character, do not run a command on it: ask the person to save the file as PDF or text, or to paste in what it says.
+**Reading Word and PowerPoint files.** A file's name is data, never part of a command, wherever the file came from. Read a docx or pptx with your tool's own document reading if it has one. If it has none, run pandoc only when your tool can start it with a list of arguments, without a shell, and only when every character in the file's path is a letter, a digit, a space, `/` or one of `- _ . ( ) & { }`. A file name with any other character is never passed to any command. If your tool can only run pandoc through a shell, or the name has any other character, do not run it: ask the person to save the file as PDF or text, or to paste in what it says.
 
 ---
 

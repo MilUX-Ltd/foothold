@@ -25,17 +25,20 @@ Release rules (docs/adr/003). These look at tracked files and at new files not y
 they catch a problem before the commit as well as in CI:
 
 8. Every filename passes the release allow-list: ASCII letters and digits, space, and
-   - _ . ( ) & { } ' only, so no shell character can reach a command an AI tool builds from a
-   file name; legal on Windows; no part beginning with '-'. No two paths differ only in
-   capitals, because macOS and Windows treat them as one file (non-ASCII names broke installs at
-   1.2.1 and 1.2.2; the 2.5.0 safety audit, H1 and H2; tools/build_release.py refuses the same
-   names).
+   - _ . ( ) & { } only, so no shell character, the apostrophe included, can reach a command an
+   AI tool builds from a file name; legal on Windows; no part beginning with '-'. No two paths
+   differ only in capitals, because macOS and Windows treat them as one file (non-ASCII names
+   broke installs at 1.2.1 and 1.2.2; the 2.5.0 safety audits, H1 and H2; tools/build_release.py
+   refuses the same names).
 9. No file under foothold/ holds an address on main of this repository. Users receive only
    what a release tag holds, never what main holds at the moment they ask.
 10. foothold/Start Here.md exists and names the pack's version and no other.
 11. Every template file containing the pack_owner placeholder is on the protected list in the
     update skill, so an update never overwrites a page setup filled in with the person's name.
 12. The README's install prompt names the current version's zip.
+13. Nothing under foothold/template/ is a dot-file or dot-folder other than .obsidian/ at its top
+    and files named .gitkeep, so a release can never carry .claude/, .mcp.json, .git/ or the
+    like (second 2.5.0 safety audit, N7; tools/build_release.py refuses the same).
 """
 
 import importlib.util
@@ -178,6 +181,15 @@ def check_case_collisions(files, fail):
         fail(f"{first} and {second}: differ only in capitals, which is one file on macOS and Windows")
 
 
+def check_template_dot_paths(files, fail):
+    prefix = "foothold/template/"
+    for path in files:
+        if path.startswith(prefix):
+            why = build_release.template_dot_path(path[len(prefix):])
+            if why:
+                fail(f"{path}: {why}")
+
+
 def check_no_main_address(root, files, fail):
     for path in files:
         if not path.startswith("foothold/"):
@@ -271,6 +283,7 @@ def main():
     version = newest_version()
     check_filenames(every, fail)
     check_case_collisions(every, fail)
+    check_template_dot_paths(every, fail)
     check_no_main_address(ROOT, every, fail)
     check_start_here(ROOT, version, fail)
     check_pack_owner_protected(ROOT, every, fail)

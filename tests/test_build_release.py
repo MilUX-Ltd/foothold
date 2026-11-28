@@ -27,7 +27,7 @@ class BuildCase(unittest.TestCase):
 
     def build(self, name="out", repo=None):
         out = self.tmp / name
-        result = build_release.build(repo or self.repo, out)
+        result = build_release.build(repo or self.repo, out, from_tree=True)
         return out, result
 
 

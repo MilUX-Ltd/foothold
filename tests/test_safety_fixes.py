@@ -60,7 +60,7 @@ REFUSED_PATHS = (
 )
 ALLOWED_PATHS = (
     "Context/{{pack_owner}}.md",
-    "Intelligence/defence-landscape/Founder's Procurement Playbook.md",
+    "Intelligence/defence-landscape/Founders Procurement Playbook.md",
     "Keen D&S Tech Fund.md",
     "Defence AI Centre (DAIC).md",
     "Pitch Deck Example - Apple (light).html",
@@ -155,7 +155,7 @@ class H1AllowListInTheBuildAndTheGate(unittest.TestCase):
                 write(bad, "x\n")
                 try:
                     with self.assertRaises(build_release.ReleaseError) as caught:
-                        build_release.build(self.repo, Path(self._tmp.name) / "out")
+                        build_release.build(self.repo, Path(self._tmp.name) / "out", from_tree=True)
                     self.assertIn(path.split("/")[-1], str(caught.exception))
                 finally:
                     bad.unlink()
@@ -288,7 +288,7 @@ class M2DenyByDefault(unittest.TestCase):
         "CRM/Organisations/UK MOD.md",
         "intelligence/x.md",
         "crm/Contacts/a.MD",
-        "Intelligence/defence-landscape/Founder's Procurement Playbook.md",
+        "Intelligence/defence-landscape/Founders Procurement Playbook.md",
     )
 
     def test_only_reference_pages_under_intelligence_and_crm_are_asked_once(self):
@@ -488,11 +488,21 @@ class M6LeavingTheVault(unittest.TestCase):
                     changes.classify(release, config({"pack_owner": value}), self.vault, set())
 
     def test_an_ordinary_name_is_accepted(self):
-        release = changes.parse_release_files(listing(["Intelligence/{{pack_owner}}.md"]))
+        # Third audit, T1: an apostrophe is allowed only in a protected file's name.
+        release = changes.parse_release_files(listing(["Context/{{pack_owner}}.md"]))
         got = changes.classify(release, config({"pack_owner": "Siobhan O'Neill"}),
+                               self.vault, {"Context/{{pack_owner}}.md"})
+        self.assertEqual(got["Context/{{pack_owner}}.md"].category, changes.PROTECTED)
+        self.assertEqual(got["Context/{{pack_owner}}.md"].vault_path,
+                         "Context/Siobhan O'Neill.md")
+        release = changes.parse_release_files(listing(["Intelligence/{{pack_owner}}.md"]))
+        with self.assertRaises(changes.ChangesError):
+            changes.classify(release, config({"pack_owner": "Siobhan O'Neill"}),
+                             self.vault, set())
+        got = changes.classify(release, config({"pack_owner": "Siobhan Neill"}),
                                self.vault, set())
         self.assertEqual(got["Intelligence/{{pack_owner}}.md"].vault_path,
-                         "Intelligence/Siobhan O'Neill.md")
+                         "Intelligence/Siobhan Neill.md")
 
     def test_a_path_that_resolves_outside_the_vault_refuses_the_whole_run(self):
         outside = self.tmp / "outside"

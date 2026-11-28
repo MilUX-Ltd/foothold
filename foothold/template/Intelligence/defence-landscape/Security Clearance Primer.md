@@ -61,6 +61,6 @@ Only what published UKSV guidance says: vetting assesses honesty, integrity, fin
 
 ## Related
 
-- [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]]
+- [[Intelligence/defence-landscape/Founders Procurement Playbook|Founder's Procurement Playbook]]
 - [[Intelligence/defence-landscape/Export Controls Orientation|Export Controls Orientation]]
 - [[Intelligence/defence-landscape/Defence Landscape Index|Defence Landscape Index]]

@@ -47,4 +47,4 @@ The SME Action Plan, led by the Defence Office for Small Business Growth, commit
 - [[Intelligence/defence-landscape/Frameworks/Frameworks Index|Frameworks Index]]
 - [[Intelligence/defence-landscape/Frameworks/Commercial X Dynamic Market (DMP)|Commercial X Dynamic Market (DMP)]]
 - [[Intelligence/defence-landscape/UKDI - How to Engage|UKDI: How to Engage]]
-- [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]]
+- [[Intelligence/defence-landscape/Founders Procurement Playbook|Founder's Procurement Playbook]]

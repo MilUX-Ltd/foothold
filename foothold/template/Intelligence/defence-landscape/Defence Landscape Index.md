@@ -25,7 +25,7 @@ The original framing of this landscape as the "Valley of Death" came from inink 
 Each map covers one functional view over the landscape. Entities are wikilinked to canonical CRM pages.
 
 - [[Intelligence/defence-landscape/Defence Landscape Updates|What's New in the Defence Landscape]]. What changed in this pack and when, newest first.
-- [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]]. Which route fits your situation; the decision layer over everything below.
+- [[Intelligence/defence-landscape/Founders Procurement Playbook|Founder's Procurement Playbook]]. Which route fits your situation; the decision layer over everything below.
 - [[Intelligence/defence-landscape/Defence Investment Plan 2026|Defence Investment Plan 2026]]. The four-year money (£298bn), what it buys and what it cancelled, read as a demand signal for SMEs.
 - [[Intelligence/defence-landscape/UKDI - How to Engage|UKDI: How to Engage]]. What UK Defence Innovation has open, paused and coming, and how to reach an Innovation Partner.
 - [[Intelligence/defence-landscape/Single-Source Contract Rules|Single-Source Contract Rules]]. The 2026 profit-incentive change and what is still to come.

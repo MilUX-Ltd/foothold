@@ -22,11 +22,15 @@ The zip is the same bytes every time for the same tree: entries in name order, a
 fixed permissions, no extra fields, and stored without compression, so the bytes do not depend
 on the zlib library of the machine that builds it.
 
-The build stops with a message naming the file if any name in the zip is outside the allow-list
-(bad_name), if two names differ only in capitals, or if Start Here names a version other than the
-one being built. It also stops if foothold/ has changes Git has not committed, so a published zip
-can always be rebuilt from its tag; --allow-dirty lets a local or test build go ahead. The release
-workflow never passes it.
+The build takes its files from Git: only files Git tracks can enter a release, so an ignored or
+untracked file never does. It stops with a message naming the file if any name in the zip is
+outside the allow-list (bad_name), if two names differ only in capitals, if the template holds a
+dot-file or dot-folder other than .obsidian/ at its top and .gitkeep files, or if Start Here names
+a version other than the one being built. It also stops if foothold/ has changes Git has not
+committed, so a published zip can always be rebuilt from its tag; --allow-dirty lets a local or
+test build go ahead. --from-tree walks the folder instead of asking Git, for a test build in a
+folder that is not a Git checkout; it is refused unless --allow-dirty is also given, and it warns
+that the result is not a release build. The release workflow passes neither.
 """
 
 import argparse
@@ -47,11 +51,11 @@ SKIP_DIRS = {"__pycache__", ".git"}
 # The allow-list for every path a release can carry. The update skill's helper
 # (foothold_changes.path_problem) holds the same rule for the person's computer, and
 # tests/test_safety_fixes.py checks that the two agree.
-SAFE_CHARACTER = re.compile(r"[A-Za-z0-9 ._()&{}'-]")
+SAFE_CHARACTER = re.compile(r"[A-Za-z0-9 ._()&{}-]")
 WINDOWS_DEVICES = re.compile(r"^(CON|PRN|AUX|NUL|COM[0-9]|LPT[0-9])(\..*)?$", re.I)
 MAX_PART = 200
 MAX_PATH = 400
-VERSION = re.compile(r"^\d+\.\d+\.\d+$")
+VERSION = re.compile(r"[0-9]+\.[0-9]+\.[0-9]+")  # used with fullmatch
 ANY_VERSION = re.compile(r"(?<!\d)(?<!\d\.)\d+\.\d+\.\d+(?!\.?\d)")
 
 
@@ -62,9 +66,9 @@ class ReleaseError(Exception):
 def bad_name(path):
     """Return why a path is not allowed in a release, or None if it is fine.
 
-    Allowed characters: ASCII letters and digits, space, and - _ . ( ) & { } ' with / only
-    between parts. Everything else is refused, including shell characters such as $ ` " ; |,
-    and anything that is not ASCII. No part may be empty, '.' or '..', begin or end with a
+    Allowed characters: ASCII letters and digits, space, and - _ . ( ) & { } with / only
+    between parts. Everything else is refused, including the apostrophe, shell characters such
+    as $ ` " ' ; |, and anything that is not ASCII. No part may be empty, '.' or '..', begin or end with a
     space, end with a dot (Windows drops both), begin with '-' (it would read as an option), or
     be a Windows reserved name. No part over 200 characters and no path over 400.
     """
@@ -140,7 +144,7 @@ def refuse_if_dirty(root):
 def pack_version(root):
     manifest = Path(root) / "foothold/.claude-plugin/plugin.json"
     version = json.loads(manifest.read_text(encoding="utf-8")).get("version", "")
-    if not VERSION.match(version or ""):
+    if not isinstance(version, str) or not VERSION.fullmatch(version):
         raise ReleaseError(f"{manifest}: version {version!r} is not X.Y.Z")
     return version
 
@@ -171,36 +175,97 @@ def fill_start_here(text, version):
     return text
 
 
-def _walk(base):
-    """Every file under base, as (relative posix path, Path), leaving out OS clutter."""
+def tracked(root, paths):
+    """The files Git tracks under paths, relative to root, which must be the top of a checkout."""
+    root = Path(root)
+    try:
+        top = subprocess.run(["git", "rev-parse", "--show-toplevel"], cwd=root,
+                             capture_output=True, text=True)
+        out = subprocess.run(["git", "ls-files", "-z", "--", *paths], cwd=root,
+                             capture_output=True)
+    except OSError as exc:
+        raise ReleaseError(f"cannot run git to list the files it tracks ({exc})")
+    if top.returncode != 0 or out.returncode != 0 or \
+            Path(top.stdout.strip()).resolve() != root.resolve():
+        raise ReleaseError(
+            f"{root} is not the top of a Git checkout, so the files Git tracks cannot be listed; "
+            "use --from-tree only for a test build outside Git"
+        )
+    return sorted(p for p in out.stdout.decode("utf-8").split("\0") if p)
+
+
+def _keep(rel, path):
+    if any(part in SKIP_DIRS for part in rel.split("/")):
+        return False
+    if path.is_symlink():
+        raise ReleaseError(f"{path}: symbolic links are not allowed in a release")
+    return path.name not in SKIP_NAMES and not path.name.endswith(".pyc")
+
+
+def _walk(root, source, from_tree):
+    """Every file under root/source, as (relative posix path, Path), leaving out OS clutter.
+
+    From Git's list of tracked files, or with from_tree from the folder itself.
+    """
+    base = Path(root) / source
     found = []
-    for path in sorted(base.rglob("*")):
-        rel = path.relative_to(base)
-        if any(part in SKIP_DIRS for part in rel.parts):
+    if from_tree:
+        for path in sorted(base.rglob("*")):
+            rel = path.relative_to(base).as_posix()
+            if _keep(rel, path) and path.is_file():
+                found.append((rel, path))
+        return found
+    for name in tracked(root, [source]):
+        path = Path(root) / name
+        rel = path.relative_to(base).as_posix()
+        if not _keep(rel, path):
             continue
-        if path.is_symlink():
-            raise ReleaseError(f"{path}: symbolic links are not allowed in a release")
-        if path.is_file() and path.name not in SKIP_NAMES and not path.name.endswith(".pyc"):
-            found.append((rel.as_posix(), path))
+        if not path.is_file():
+            raise ReleaseError(f"{name}: Git tracks it but it is not a file on disk")
+        found.append((rel, path))
     return found
 
 
 def _drop_needless_gitkeep(files):
-    """Leave out a .gitkeep whose folder holds anything else."""
+    """Leave out a .gitkeep whose folder holds anything else that is being shipped."""
+    rels = [rel for rel, _ in files]
     kept = []
     for rel, path in files:
         if path.name == ".gitkeep":
-            others = [p for p in path.parent.iterdir() if p.name != ".gitkeep"]
-            others = [p for p in others if p.name not in SKIP_NAMES and p.name not in SKIP_DIRS]
-            if others:
+            folder = rel[: -len(".gitkeep")]
+            if any(other != rel and other.startswith(folder) for other in rels):
                 continue
         kept.append((rel, path))
     return kept
 
 
-def collect(root, version):
+def template_dot_path(rel):
+    """Why a template path is not allowed for its dot parts, or None.
+
+    The template may hold .obsidian/ at its top (for a first install; the update never touches
+    it) and files named .gitkeep. Any other part beginning with a dot is refused: a release must
+    never carry .claude/, .mcp.json, .git/, .foothold/, .vscode/ or anything like them.
+    """
+    parts = rel.split("/")
+    for i, part in enumerate(parts):
+        if not part.startswith("."):
+            continue
+        if i == 0 and part == ".obsidian" and len(parts) > 1:
+            continue
+        if i == len(parts) - 1 and part == ".gitkeep":
+            continue
+        return f"{rel!r}: a dot-file or dot-folder other than .obsidian/ and .gitkeep"
+    return None
+
+
+def collect(root, version, from_tree=False):
     """The zip's entries as a sorted list of (zip path, bytes)."""
     root = Path(root)
+    if not from_tree:
+        missing = sorted({"foothold/Start Here.md", "LICENSE"}
+                         - set(tracked(root, ["foothold/Start Here.md", "LICENSE"])))
+        if missing:
+            raise ReleaseError(f"{', '.join(missing)}: not tracked by Git")
     top = f"foothold-{version}"
     entries = {}
 
@@ -221,7 +286,12 @@ def collect(root, version):
         base = root / source
         if not base.is_dir():
             raise ReleaseError(f"{source}/: missing")
-        for rel, path in _drop_needless_gitkeep(_walk(base)):
+        found = _walk(root, source, from_tree)
+        if target == "template":
+            dots = [why for why in (template_dot_path(rel) for rel, _ in found) if why]
+            if dots:
+                raise ReleaseError("not allowed in the template:\n  " + "\n  ".join(dots))
+        for rel, path in _drop_needless_gitkeep(found):
             entries[f"{top}/{target}/{rel}"] = path.read_bytes()
 
     problems = [why for why in (bad_name(name) for name in entries) if why]
@@ -256,8 +326,12 @@ def release_notes(version, checksum):
     )
 
 
-def build(root, out_dir, version=None):
-    """Build the release files into out_dir and return their paths and the zip checksum."""
+def build(root, out_dir, version=None, from_tree=False):
+    """Build the release files into out_dir and return their paths and the zip checksum.
+
+    The files come from Git's list of tracked files; from_tree walks the folder instead, for a
+    test build outside Git. The release workflow never uses it.
+    """
     root = Path(root)
     found = pack_version(root)
     if version is not None and version != found:
@@ -266,7 +340,7 @@ def build(root, out_dir, version=None):
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
 
-    entries = collect(root, version)
+    entries = collect(root, version, from_tree)
     zip_path = out / f"foothold-{version}.zip"
     write_zip(entries, zip_path)
     checksum = hashlib.sha256(zip_path.read_bytes()).hexdigest()
@@ -300,11 +374,22 @@ def main(argv=None):
         "--allow-dirty", action="store_true",
         help="build even if foothold/ has uncommitted changes (local and test builds only)",
     )
+    parser.add_argument(
+        "--from-tree", action="store_true",
+        help="walk the folder instead of taking Git's tracked files (test builds outside Git only)",
+    )
     args = parser.parse_args(argv)
+    if args.from_tree and not args.allow_dirty:
+        print("build_release.py: --from-tree walks the folder, so it can take files Git ignores; "
+              "it is for test builds only and needs --allow-dirty as well", file=sys.stderr)
+        return 1
+    if args.from_tree:
+        print("build_release.py: warning: --from-tree build. This is not a release build; never "
+              "offer its zip to users.", file=sys.stderr)
     try:
         if not args.allow_dirty:
             refuse_if_dirty(ROOT)
-        result = build(ROOT, Path(args.out), args.version)
+        result = build(ROOT, Path(args.out), args.version, args.from_tree)
     except ReleaseError as exc:
         print(f"build_release.py: {exc}", file=sys.stderr)
         return 1

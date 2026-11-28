@@ -37,7 +37,7 @@ A full review of the landscape against public sources from May to October 2026.
 - **The Defence Open Call has not reopened** and **Defence Innovation Loans are paused**; the Security Open Call is open. See [[Intelligence/defence-landscape/UKDI - How to Engage|UKDI: How to Engage]].
 - New page: [[Intelligence/defence-landscape/Frameworks/Commercial X and Defence Unicorns|Commercial X and Defence Unicorns]]. Contracts up to £50m and under two years, from the 2026 SME Action Plan, with Defence Unicorns aimed at firms new to the MOD.
 - New page: [[Intelligence/defence-landscape/Single-Source Contract Rules|Single-Source Contract Rules]]. The 2026 profit-incentive change and what is still to come.
-- [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]] is rewritten for 2026.
+- [[Intelligence/defence-landscape/Founders Procurement Playbook|Founder's Procurement Playbook]] is rewritten for 2026.
 
 ### Programmes
 

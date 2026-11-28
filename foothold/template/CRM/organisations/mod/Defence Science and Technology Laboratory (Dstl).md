@@ -71,7 +71,7 @@ Programme pages in this pack that involve Dstl include [[Intelligence/defence-la
 - [[CRM/organisations/mod/UK Ministry of Defence|UK Ministry of Defence]]: sponsor and owner.
 - [[CRM/organisations/mod/Defence AI Centre (DAIC)|Defence AI Centre (DAIC)]]: draws core team members from Dstl.
 - [[Intelligence/defence-landscape/Frameworks/Frameworks Index|Frameworks Index]]: commercial routes.
-- [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]]: how MOD buys.
+- [[Intelligence/defence-landscape/Founders Procurement Playbook|Founder's Procurement Playbook]]: how MOD buys.
 
 ## Sources
 
