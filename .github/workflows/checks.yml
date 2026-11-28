@@ -1,6 +1,6 @@
-# The repository's gate, tools/check.py, on every pull request and on main. Standard library
-# Python only. main is protected and requires this job, so nothing reaches the pack's users
-# without it passing (docs/adr/002).
+# The repository's gate, tools/check.py, and the unit tests in tests/, on every pull request and
+# on main. Standard library Python only. main is protected and requires this job, and every
+# release is cut from main (docs/adr/003), so nothing reaches the pack's users without it passing.
 name: checks
 
 on:
@@ -24,3 +24,11 @@ jobs:
           python-version: "3.12"
       - name: The gate
         run: python3 tools/check.py
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests
+      - name: The release builds, and builds to the same bytes twice
+        run: |
+          python3 tools/build_release.py --out "$RUNNER_TEMP/a"
+          python3 tools/build_release.py --out "$RUNNER_TEMP/b"
+          cmp "$RUNNER_TEMP"/a/foothold-*.zip "$RUNNER_TEMP"/b/foothold-*.zip
+          cmp "$RUNNER_TEMP/a/release-files.txt" "$RUNNER_TEMP/b/release-files.txt"
