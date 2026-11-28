@@ -18,7 +18,6 @@ requirements_doc: Cyber Essentials Requirements for IT Infrastructure v3.3
 question_set_effective: 2026-04-26
 last_reviewed: 2026-09-08
 maintainer: MilUX
-manifest_url: https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/business-skills/cyber-essentials-ready/manifest.json
 license: Foothold pack, MIT
 audited: 2026-09-08
 audit_verdict: pass
@@ -69,7 +68,7 @@ NCSC's configuration packs are written for IT teams using device management soft
 
 Run every step. None of these are optional.
 
-1. **Version check first.** Before any other work, confirm the user is on the latest published version of this skill. See Step 1.
+1. **Version check first.** Before any other work, tell the user which version of this skill they have, which question set it covers and when it was last reviewed, and ask whether that is still the question set IASME uses for their assessment. See Step 1.
 2. **Never demote the only admin.** Before any account change that touches admin rights, confirm a separate, working admin account exists. See Step 6 preconditions.
 3. **Backup before changing anything.** A Time Machine snapshot on Mac, a Restore Point on Windows. See Step 5.
 4. **Consent per control.** Before applying any setting change, summarise what will change, where the reversal lives, and ask the user to confirm. The user can always say "skip" and you record it.
@@ -84,11 +83,10 @@ Run every step. None of these are optional.
 
 The first thing you do, before you greet the user properly, is confirm this skill is current.
 
-Read the local `manifest.json` alongside this `SKILL.md`. Then fetch the `manifest_url` from the frontmatter. Compare `version` fields.
+Read the local `manifest.json` alongside this `SKILL.md`. Do not fetch anything to check it.
 
-- If versions match, say so briefly and move on.
-- If the remote version is newer, tell the user there is a newer version of this skill and they should run `/foothold-update` first. Stop here. Do not continue with an outdated copy.
-- If the manifest URL is unreachable, tell the user honestly that you could not check for an update, give them the URL to check manually, and ask whether to proceed anyway.
+- Tell the user, briefly, the skill's `version`, the question set it covers (`question_set`, effective from `question_set_effective`) and when it was `last_reviewed`.
+- Ask whether that is still the question set IASME uses for their assessment. If they say it is not, or they are not sure, suggest they run `/foothold-update` first, which shows what a newer Foothold release would change and asks before changing anything. Then ask whether to proceed with this copy.
 
 This is not optional. Cyber Essentials requirements evolve with the IASME question set. An outdated skill can mislead the user.
 

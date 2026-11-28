@@ -1,6 +1,8 @@
 ---
 type: operator
 status: active
+name: {{pack_owner}}
+role: {{pack_owner_role}}
 created: {{install_date}}
 linkedin: {{pack_owner_linkedin}}
 email: {{pack_owner_email}}

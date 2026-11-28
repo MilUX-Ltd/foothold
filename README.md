@@ -46,23 +46,23 @@ Founders running defence-sector businesses, including founders who are new to AI
 
 ## Getting started
 
-This is the install walkthrough. The whole thing takes about ten minutes once you have Cowork and Obsidian open.
+There are two ways to get Foothold. Both give you the same release, and neither needs a sign-up.
 
 ### What you'll need
 
-- **A paid Claude subscription, with Cowork.** Cowork is Anthropic's desktop app for non-developers, and it runs inside a paid Claude plan. Sign up and subscribe at [claude.com](https://claude.com), then download the Claude desktop app; Cowork is a tab inside it. There is a running cost here: budget for one Claude subscription per person who will run the vault.
-- **Obsidian.** Free knowledge management app. Download from [obsidian.md](https://obsidian.md). Obsidian Sync, used for keeping a vault in step across devices or people, is a paid add-on; a free alternative is covered under Scaling across a team below.
+- An AI tool that can read and write files in a folder.
+- A notes app that opens a folder of Markdown files is useful for reading your vault; Obsidian is free and is the one we use. Obsidian Sync, a paid add-on, keeps a vault in step across devices or people; a free alternative is covered under Running Foothold in a small firm below.
 
-### Prefer a different stack?
+### What we use
 
-Claude and Obsidian are the pairing we build for, and the one this walkthrough assumes. The pack itself is plain Markdown, though, so it can be configured differently: open-source tools such as OpenCowork in place of Cowork, models you already run (including self-hosted ones), and whichever sync arrangement your setup needs. That is bespoke work rather than a walkthrough, and MilUX does it as a service. If you want the pack set up your way, email matt@milux.co.uk.
+MilUX runs Foothold with Claude, and with OpenWork on locally hosted models. The pack itself is plain Markdown, so it can be set up other ways too, including with models you already run and whichever sync arrangement suits you. If you want the pack set up your way, MilUX does that as a service: email matt@milux.co.uk.
 
 ### What it costs, honestly
 
 | Item | Cost | Ongoing effort |
 |------|------|----------------|
 | Foothold itself | Free, MIT licensed | — |
-| Claude subscription (with Cowork) | Your Claude plan, per person ([claude.com](https://claude.com) has current pricing) | — |
+| Your AI tool | Whatever you already pay for it | None |
 | Obsidian | Free | — |
 | Obsidian Sync (optional, for multi-device) | Paid add-on; free git alternative documented in the pack | — |
 | Keeping the vault honest | — | Plan for about half an hour a week of review and correction, less as it learns |
@@ -70,68 +70,59 @@ Claude and Obsidian are the pairing we build for, and the one this walkthrough a
 
 The half-hour a week is the real cost. It is also how the vault learns your business: the corrections you make are the teaching.
 
-### Step 1 — Run the setup
+### Step 1: Get the release
 
-Open a new Cowork chat and paste the following:
+**Download the zip.** Get `foothold-2.5.0.zip` from the [latest release](https://github.com/MilUX-Ltd/foothold/releases/latest), unzip it, and give your AI tool the Start Here file inside.
 
-```
-Fetch https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/skills/foothold-setup/SKILL.md and follow the instructions in it exactly.
-```
+**Or ask your AI tool to fetch it.** Paste this:
 
-The skill takes over from here. It will:
+    Download https://github.com/MilUX-Ltd/foothold/releases/download/v2.5.0/foothold-2.5.0.zip. Check that its SHA-256 checksum is <checksum>. If it is not, stop and tell me. If it is, unzip it and read Start Here.md inside.
 
-1. **Lay down your vault.** Create a folder structure at `~/Obsidian/Foothold/` (or a custom path if you specify one). Silent step, takes a few seconds.
-2. **Run a guided brain dump.** Two short forms covering six areas: who you are, what you sell into defence, your positioning, your voice, your current priorities, and your tool stack. Type, paste links, or upload documents against any of them; the single best input is a dictation transcript, rambled and untidied. Skip anything you like. Give it the hour it deserves; everything the vault does afterwards is built from this.
-3. **Offer a context drop.** One final question inviting you to paste links, upload files, or point at a local folder of source material. The more you give it, the more personalised your vault will be.
-4. **Build your canonical pages.** Silently. The skill drafts your operator profile, organisation page, brand and strategy pages, email signature, and voice notes from the answers and corpus.
-5. **Offer the running rhythm.** Whether to schedule `/foothold-update` (weekly or monthly), a daily brief on weekday mornings, a monthly curation sweep, and a one-week check-in. Everything is optional and can be cancelled later.
+The [latest release](https://github.com/MilUX-Ltd/foothold/releases/latest) page has this prompt with the real checksum in place of `<checksum>`. Copy it from there. The same page lists the checksum, so you can check a zip you downloaded yourself.
+
+### Step 2: Run the setup
+
+Tell your AI tool: "Read Start Here and set Foothold up for me." Setup works only from the folder you downloaded; it fetches no instructions from the internet. It will:
+
+1. **Ask six short questions.** Where to put your vault (by default a folder called `Foothold` in an `Obsidian` folder in your home folder), your name and role, your organisation, and, if you like, its website and your work email. It asks before it writes anything.
+2. **Lay down your vault.** A copy of the `template` folder, with your details filled in, ready in a few minutes.
+3. **Offer a guided brain dump, now or later.** Six short areas: who you are, what you sell into defence, your positioning, your voice, your current priorities, and your tool stack. Type, paste links, or upload documents against any of them; the single best input is a dictation transcript, rambled and untidied. Skip anything you like, or say "tell Foothold about my business" whenever you like. It takes up to an hour, and it is what makes the vault yours.
+4. **Offer a context drop,** as part of the brain dump. One final question inviting you to paste links, upload files, or point at a local folder of source material.
+5. **Build your canonical pages.** The skill drafts your operator profile, organisation page, brand and strategy pages, email signature, and voice notes from the answers and corpus.
+6. **Offer the running rhythm, if your AI tool can schedule jobs.** One question: a check for new releases (it only reports), a daily brief on weekday mornings, a monthly curation sweep, and a one-week check-in. None is set up unless you ask; each needs your yes, and can be cancelled later.
 
 When the skill finishes, it tells you where the vault was created and which schedule (if any) is now in place.
 
-### Step 2 — Open your vault in Obsidian
+### Step 3: Open your vault in Obsidian
 
 1. Launch Obsidian.
 2. Click "Open folder as vault".
-3. Point at your new Foothold vault folder (default: `~/Obsidian/Foothold/`).
+3. Point at your new Foothold vault folder.
 4. Click "Open".
 
 Your vault is live. The top-level folders appear in the sidebar.
 
 ## Keeping your pack up to date
 
-Foothold evolves. New content gets added, existing pages get sharpened, new skills land. After your initial install, all updates happen through a skill that lives inside your vault: no marketplace refreshing, no plugin reinstalling, no Cowork restarting.
+Ask your AI tool to run the update skill. It reads the latest release, shows you what would change, and asks before changing any skill or instruction. It never changes your own pages.
 
-### How to trigger an update
+### How to run an update
 
-1. Open Cowork and make sure it's pointed at your Foothold vault folder. Cowork picks up the vault's skills automatically from the vault's `Skills/` folder.
-2. In a Cowork chat, type:
+Open your AI tool on your vault folder and ask it to run `/foothold-update`, or say "update Foothold". The skill lives in your vault at `Skills/meta-skills/foothold-update/SKILL.md`, placed there by setup. It needs no GitHub account, no sign-in and no Git on your machine.
 
-   ```
-   /foothold-update
-   ```
+The skill reads the list of files in the latest release, with a checksum for each, and compares it with your vault. It never reads from a branch that can change under you, and it checks every file it fetches against its checksum before writing it.
 
-   Or ask in natural language: "update Foothold", "pull the latest from the Foothold repo", "see if there's anything new in Foothold". Any of those triggers the same skill.
+### What it asks you
 
-3. The skill goes straight to the public Foothold repository on GitHub via a plain HTTPS request and compares what's there to what you have. It works out the state of every file: new on GitHub, changed upstream since you last pulled, edited locally, or in conflict (you've edited and so has upstream). You're told what's safe to apply automatically and asked what to do about anything you've personalised.
-4. When it finishes, you'll see a short report of what was added, what was updated, what was merged, and what was left alone.
+The update keeps two checksums for every file in `.foothold/config.yml`: what the release held when the file was last written, and what was written into your vault. That tells it which of these situations each file is in:
 
-### Why this works without any setup
+- **A change to a skill, an instruction file, a script or a setting.** You see the difference for each file, and each one needs its own yes. A new skill is shown in full, with a reminder that the pack's `skill-safety-audit` skill can check it first.
+- **A change to a reference page.** Listed by name; one yes applies them.
+- **A file you have edited that the release has also changed.** You see the difference and choose: keep yours, take the release's, or merge.
+- **A file you have edited that the release has not changed.** Left alone.
+- **Your Obsidian settings and the pages setup built for you.** Never touched.
 
-The `/foothold-update` skill lives at `Skills/foothold-update/SKILL.md` inside your vault. It was placed there by the initial `/foothold-setup` run. Cowork sees it the moment your vault is open. The skill makes a plain HTTPS request to the public Foothold GitHub URLs: no GitHub account, no auth, no Terminal, no Git on your machine.
-
-### How conflicts are handled
-
-The update skill is a three-way reconcile. It tracks the SHA (the GitHub blob identifier) of every file at the moment it was last pulled to your vault, stored in `.foothold/config.yml` under `last_known_shas:`. On each run, it compares three things per file: what was last pulled, what's currently on GitHub, and the SHA of the version sitting in your vault right now.
-
-That tells it which of these situations each file is in:
-
-- **Untouched both sides.** Skip; nothing to do.
-- **Upstream-only change.** You haven't edited the file; upstream has. Safe to apply, applied by default with a chance to veto.
-- **Local edit only.** You've edited; upstream hasn't changed. Skip; there's nothing new to bring in.
-- **New on GitHub.** Add it.
-- **Conflict.** You've edited the file AND upstream has new changes. You're asked per file: take theirs (overwrite local), keep mine (skip), or merge (the skill proposes a combined version that integrates upstream's changes into your edited file and asks you to confirm before writing).
-
-Your personalised content is never overwritten without an explicit yes from you.
+A scheduled update only reports what is available; it changes nothing. A change to the update skill itself is shown like any other skill change and takes effect the next time you run it.
 
 ## Where your data lives
 

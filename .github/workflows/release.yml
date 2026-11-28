@@ -1,0 +1,103 @@
+# Publishes a release when the maintainer pushes a tag vX.Y.Z (docs/adr/003). Standard library
+# Python only. The verify job is read-only. The release job is the only job in the repository
+# that may write, and it writes only the release. Actions are pinned by commit SHA, the same pins
+# as checks.yml; the release is made with the gh command that GitHub's runners already carry.
+name: release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions: {}
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      version: ${{ steps.build.outputs.version }}
+      zip_sha256: ${{ steps.build.outputs.zip_sha256 }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12"
+      - name: The tag matches the version records and is on main
+        env:
+          TAG: ${{ github.ref_name }}
+        run: python3 tools/release_guard.py --tag "$TAG" --commit "$GITHUB_SHA" --main-ref origin/main
+      - name: The gate
+        run: python3 tools/check.py
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests
+      - name: Build twice; the bytes must match and the zip must hold exactly the files listed
+        id: build
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version="${TAG#v}"
+          a="$RUNNER_TEMP/a"
+          b="$RUNNER_TEMP/b"
+          python3 tools/build_release.py --version "$version" --out "$a"
+          python3 tools/build_release.py --version "$version" --out "$b"
+          cmp "$a/foothold-$version.zip" "$b/foothold-$version.zip"
+          cmp "$a/release-files.txt" "$b/release-files.txt"
+          (cd "$a" && sha256sum -c SHA256SUMS.txt)
+          mkdir "$RUNNER_TEMP/unzipped"
+          unzip -q "$a/foothold-$version.zip" -d "$RUNNER_TEMP/unzipped"
+          (cd "$RUNNER_TEMP/unzipped" && sha256sum --quiet -c "$a/release-files.txt")
+          diff <(unzip -Z1 "$a/foothold-$version.zip" | grep -vxF "foothold-$version/release-files.txt" | sort) <(cut -c67- "$a/release-files.txt" | sort)
+          cmp "$RUNNER_TEMP/unzipped/foothold-$version/release-files.txt" "$a/release-files.txt"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "zip_sha256=$(cut -d' ' -f1 "$a/SHA256SUMS.txt")" >> "$GITHUB_OUTPUT"
+
+  release:
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12"
+      - name: The tag still matches and is on main
+        env:
+          TAG: ${{ github.ref_name }}
+        run: python3 tools/release_guard.py --tag "$TAG" --commit "$GITHUB_SHA" --main-ref origin/main
+      - name: Build, and check it is the zip the verify job built
+        env:
+          VERSION: ${{ needs.verify.outputs.version }}
+          WANT: ${{ needs.verify.outputs.zip_sha256 }}
+        run: |
+          python3 tools/build_release.py --version "$VERSION" --out dist
+          have="$(cut -d' ' -f1 dist/SHA256SUMS.txt)"
+          if [ "$have" != "$WANT" ]; then
+            echo "The zip built here ($have) is not the one the verify job built ($WANT)."
+            exit 1
+          fi
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.ref_name }}
+          VERSION: ${{ needs.verify.outputs.version }}
+        run: |
+          gh release create "$TAG" \
+            "dist/foothold-$VERSION.zip" \
+            dist/SHA256SUMS.txt \
+            dist/release-files.txt \
+            --verify-tag \
+            --title "Foothold $VERSION" \
+            --notes-file dist/release-notes.md

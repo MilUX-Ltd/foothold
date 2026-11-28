@@ -4879,6 +4879,12 @@
    "type": "parent"
   },
   {
+   "from": "Context/{{pack_org}}",
+   "origin": "path",
+   "to": "Context",
+   "type": "in_folder"
+  },
+  {
    "from": "Intelligence/defence-landscape",
    "origin": "folder",
    "to": "Intelligence",
@@ -10710,6 +10716,15 @@
    "path": "Context"
   },
   {
+   "id": "Context/{{pack_org}}",
+   "kind": "organisation",
+   "layer": "defence",
+   "name": "{{pack_org}}",
+   "path": "Context/{{pack_org}}.md",
+   "status": "active",
+   "website": "{{pack_org_website}}"
+  },
+  {
    "guide": "Customer Engagements/Customer Engagements Guide.md",
    "id": "Customer Engagements",
    "kind": "folder",
@@ -12011,7 +12026,7 @@
   },
   {
    "category": "meta-skills",
-   "description": "Pull the latest content from the public Foothold GitHub repo into the user's installed pack and reconcile it with anything they've edited locally.",
+   "description": "Bring the latest Foothold release into the person's vault without losing their own work.",
    "id": "Skills/meta-skills/foothold-update",
    "kind": "skill",
    "layer": "business",
@@ -12422,7 +12437,7 @@
    "status": "active"
   }
  ],
- "pack_version": "2.4.0",
+ "pack_version": "2.5.0",
  "routes": [
   {
    "id": "Skills/Routes/A customer asks about your data handling",

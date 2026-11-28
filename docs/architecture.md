@@ -94,7 +94,7 @@ When you're not sure where something goes, read the relevant Guide. When you can
 
 ## Templating
 
-Foothold uses placeholders for everything specific to you. The `foothold-setup` skill fills them in during install, from your answers to the onboarding brain dump.
+Foothold uses placeholders for everything specific to you. The `foothold-setup` skill fills them in during install, from the details it asks for before it writes anything, or by a stated rule. The setup skill holds the fixed list; placeholders other skills fill later are listed there as not setup's, and `tools/check.py` fails on one that is on neither list.
 
 | Placeholder | Meaning |
 |-------------|---------|
@@ -102,6 +102,7 @@ Foothold uses placeholders for everything specific to you. The `foothold-setup` 
 | `{{pack_slug}}` | Slugified pack name for paths |
 | `{{pack_owner}}` | Your full name |
 | `{{pack_owner_first}}` | Your first name |
+| `{{pack_owner_role}}` | Your role |
 | `{{pack_owner_email}}` | Your primary email |
 | `{{pack_owner_linkedin}}` | Your LinkedIn URL (optional) |
 | `{{pack_owner_phone}}` | Your phone number (optional) |
@@ -109,16 +110,18 @@ Foothold uses placeholders for everything specific to you. The `foothold-setup` 
 | `{{pack_org_slug}}` | Slugified organisation name |
 | `{{pack_org_website}}` | Your organisation's website |
 | `{{install_date}}` | The install date |
+| `{{pack_owner_file}}` | Your page's file name, in links and paths |
+| `{{pack_org_file}}` | Your organisation page's file name, in links and paths |
 
-A small `.foothold/config.yml` in the pack root tracks the current substitution values, your schedule choices, and the SHA of every file as last pulled from GitHub, used by `/foothold-update`'s three-way reconcile.
+A small `.foothold/config.yml` in the pack root tracks the current substitution values, your schedule choices, and two SHA-256 checksums for every file (as in the release it came from, and as written into your vault), used by `/foothold-update` to tell your edits from a release's changes.
 
 ## How setup and updates work
 
-There is no bash installer and no separate plugin. Both setup and update are Cowork skills that fetch plain files over HTTPS from the public GitHub repo. See the README for the full walkthrough; in outline:
+There is no bash installer. Each version is a GitHub release, made from a tag on `main` by the release workflow (ADR 003), holding a zip of `Start Here.md`, the licence, the template and the setup skill. Setup works from that folder, or from the template bundled in the Claude plugin, and fetches nothing. Update reads the latest release. See the README for the walkthrough; in outline:
 
-**`foothold-setup`** (run once, via the one-line prompt in the README). Lays down the folder structure, runs a guided brain dump across six categories (two rich forms, or plain questions where forms aren't available), offers a context drop for files and links, builds your canonical pages from everything you gave it, and offers the running rhythm: scheduled updates, a weekday daily brief, a monthly curation sweep, and a one-week check-in. Re-running it later is discovery-first: it reads what the vault already knows and asks only what has changed.
+**`foothold-setup`** (run once, from `Start Here.md` in the release folder). Asks six short questions, lays down the folder structure, builds what it can from those answers and lands you on the vault. It then offers, as optional extras, a guided brain dump across six categories (two rich forms, or plain questions where forms aren't available) with a context drop for files and links, from which it builds your canonical pages (now, or later when you say "tell Foothold about my business"), and the running rhythm, each optional and each needing a yes: a scheduled update check that only reports, a weekday daily brief, a monthly curation sweep, and a one-week check-in. Re-running it later is discovery-first: it reads what the vault already knows and asks only what has changed.
 
-**`/foothold-update`** (run any time, manually or on a schedule). Compares your vault against the current state of the GitHub repo using the SHA history in `.foothold/config.yml`, and reconciles file by file: applies upstream-only changes automatically, leaves your own edits alone, adds anything new, and asks you to resolve genuine conflicts. Your personalised content is never overwritten without an explicit yes.
+**`/foothold-update`** (run any time; a scheduled run only reports). Reads the latest release's file list, compares your vault with it using the checksums in `.foothold/config.yml`, and sorts every change. Reference pages under `Intelligence/` and `CRM/` are listed and need one yes; every other change, including any skill, instruction file, guide, script or setting, is shown file by file and needs its own yes; anything you have edited is shown with the difference and you choose. It never touches `.obsidian/` or the protected pages, never deletes, and checks every file it fetches against its checksum.
 
 ## One operator, agents with boundaries
 

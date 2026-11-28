@@ -53,7 +53,7 @@ A DPIA is a documented assessment of how a project or business processes persona
 
 ### Step 1. Version check
 
-Read the local `manifest.json` next to this `SKILL.md`, then fetch the `manifest_url` it lists and compare `version`. If the remote is newer, tell the founder to run `/foothold-update` first and stop. If you cannot reach the manifest, say so and ask whether to proceed.
+Read the local `manifest.json` next to this `SKILL.md` and tell the founder, briefly, the skill's `version` and when it was `last_reviewed`. Do not fetch anything to check it. If they want the latest, `/foothold-update` shows what a newer Foothold release would change and asks before changing anything.
 
 ### Step 2. Read the vault
 
@@ -139,4 +139,4 @@ Tell the founder, in plain English, where everything is: the DPIA markdown, the 
 
 ## Consent and audit footer
 
-This skill is maintained by MilUX as part of the Foothold pack. It does not phone home, send telemetry, or collect any data about the founder or their business. It reads the founder's own vault to draft the DPIA, writes only to the founder's `Operations/` folder (and, with consent, registers a scheduled task), and makes no external calls except the version check and, if the founder asks, fetching public ICO guidance. Every write and every schedule is made with the founder's explicit consent.
+This skill is maintained by MilUX as part of the Foothold pack. It does not phone home, send telemetry, or collect any data about the founder or their business. It reads the founder's own vault to draft the DPIA, writes only to the founder's `Operations/` folder (and, with consent, registers a scheduled task), and makes no external calls except, if the founder asks, fetching public ICO guidance. Every write and every schedule is made with the founder's explicit consent.

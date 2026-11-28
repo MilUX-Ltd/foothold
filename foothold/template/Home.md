@@ -14,8 +14,8 @@ This is the landing page for everything that follows. Use it as a daily entry po
 
 - **[[Getting Started - Your First Week]]** — one small win a day for your first week. Start here.
 - **[[How to Use This Vault]]** — the four working habits that make the system compound: brief it like an intern, describe processes so they can be automated, watch for repeatable patterns, review the work and the working.
-- **`Context/{{pack_owner}}.md`** — your operator profile. Check it reads well and revise.
-- **`Context/{{pack_org}}.md`** — your organisation page. Same.
+- **`Context/{{pack_owner_file}}.md`**: your operator profile. Check it reads well and revise.
+- **`Context/{{pack_org_file}}.md`**: your organisation page. Same.
 - **Read the Guides.** Every folder has a `<Folder Name> Guide.md` at its root. Knowledge Guide, Operations Guide, Context Guide, and CRM Guide are the load-bearing ones.
 - **[[Intelligence/defence-landscape/Defence Landscape Updates|What's New in the Defence Landscape]]**: what changed in the pack's landscape pages, and when.
 - **Capture first, file later.** Quick captures go in `Inbox/`. Note templates for each kind of page are in `Templates/`.

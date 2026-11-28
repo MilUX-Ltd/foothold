@@ -31,6 +31,6 @@ last_reviewed: {{install_date}}
 
 ## Related
 
-- [[Context/{{pack_owner}}|{{pack_owner}}]]
-- [[Context/{{pack_org}}|{{pack_org}}]]
+- [[Context/{{pack_owner_file}}|{{pack_owner}}]]
+- [[Context/{{pack_org_file}}|{{pack_org}}]]
 - [[CRM/CRM Guide|CRM Guide]] — for transactional relationships

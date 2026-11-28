@@ -70,6 +70,6 @@ Help centre: accelerator@dstl.gov.uk, or 01980 950000 (option 3, 9am to midday, 
 ## Related
 
 - [[Intelligence/defence-landscape/Funding Routes|Funding Routes]]
-- [[Intelligence/defence-landscape/Founder's Procurement Playbook|Founder's Procurement Playbook]]
+- [[Intelligence/defence-landscape/Founders Procurement Playbook|Founder's Procurement Playbook]]
 - [[Intelligence/defence-landscape/Innovation Organisations|Innovation Organisations]]
 - [[CRM/organisations/mod/NAD Group/National Armaments Innovation (NA-Innov)|National Armaments Innovation (NA-Innov)]]
