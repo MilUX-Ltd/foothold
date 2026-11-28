@@ -20,8 +20,21 @@ What it checks, and why (the reasons are in LESSONS.md and docs/adr/):
    rise (tools/schema_check.py, tools/schema-baseline.json).
 7. The map data file (data/foothold-map.json) is what tools/build_map.py builds today, names
    no person, and has no edge or route step pointing at something that is not there.
+
+Release rules (docs/adr/003). These look at tracked files and at new files not yet added, so
+they catch a problem before the commit as well as in CI:
+
+8. Every filename is plain ASCII and legal on Windows (non-ASCII names broke installs at
+   1.2.1 and 1.2.2; tools/build_release.py refuses the same names).
+9. No file under foothold/ holds an address on main of this repository. Users receive only
+   what a release tag holds, never what main holds at the moment they ask.
+10. foothold/Start Here.md exists and names the pack's version and no other.
+11. Every template file containing the pack_owner placeholder is on the protected list in the
+    update skill, so an update never overwrites a page setup filled in with the person's name.
+12. The README's install prompt names the current version's zip.
 """
 
+import importlib.util
 import json
 import re
 import subprocess
@@ -32,6 +45,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from schema_check import check_schema  # noqa: E402
 import build_map  # noqa: E402
+import build_release  # noqa: E402
 
 FORBIDDEN = [
     (re.compile(r"(^|/)\.context/"), "a sync tool's local index (LESSONS 2)"),
@@ -40,6 +54,14 @@ FORBIDDEN = [
     (re.compile(r"(^|/)\.DS_Store$"), "a macOS .DS_Store file"),
     (re.compile(r"\.(sqlite|sqlite3|db)$"), "a database file"),
 ]
+MAIN_ADDRESS = re.compile(
+    r"milux-ltd/foothold\b[^\s\"'<>()\[\]`]*?[/=@]main(?![\w-])(?!\.\w)", re.I
+)
+ANY_VERSION = re.compile(r"(?<!\d)(?<!\d\.)\d+\.\d+\.\d+(?!\.?\d)")
+ZIP_NAME = re.compile(r"foothold-(\d+\.\d+\.\d+)\.zip")
+PACK_OWNER = "{{" + "pack_owner" + "}}"
+UPDATE_SKILL = "foothold/template/Skills/meta-skills/foothold-update/SKILL.md"
+UPDATE_HELPER = "foothold/template/Skills/meta-skills/foothold-update/scripts/foothold_changes.py"
 HOME_PATH = re.compile(r"/Users/[A-Za-z0-9._-]+/")
 RELEASED = re.compile(r"^## (\d+\.\d+\.\d+)\b", re.M)
 LESSON = re.compile(r"^(\d+)\. \*\*(.+?)\*\*(?:\s*\(([^)]*)\))?", re.M)
@@ -58,11 +80,25 @@ def tracked():
     return [p for p in out.split("\0") if p]
 
 
-def read_text(path):
+def all_files():
+    """Tracked files, and new files not yet added that Git does not ignore."""
+    out = subprocess.run(
+        ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+        cwd=ROOT, capture_output=True, check=True,
+    ).stdout.decode()
+    return sorted({p for p in out.split("\0") if p and (ROOT / p).is_file()})
+
+
+def read_text(path, root=ROOT):
     try:
-        return (ROOT / path).read_text(encoding="utf-8")
-    except (UnicodeDecodeError, FileNotFoundError):
+        return (Path(root) / path).read_text(encoding="utf-8")
+    except (UnicodeDecodeError, FileNotFoundError, IsADirectoryError):
         return None
+
+
+def newest_version():
+    released = RELEASED.findall(read_text("CHANGELOG.md") or "")
+    return released[0] if released else None
 
 
 def check_forbidden(files):
@@ -126,6 +162,82 @@ def check_lessons_index():
         fail("LESSONS-INDEX.md is out of step with LESSONS.md (run lessons-index.py)")
 
 
+def check_filenames(files, fail):
+    for path in files:
+        why = build_release.bad_name(path)
+        if why:
+            fail(f"{path}: filename not allowed ({why})")
+
+
+def check_no_main_address(root, files, fail):
+    for path in files:
+        if not path.startswith("foothold/"):
+            continue
+        text = read_text(path, root)
+        match = text and MAIN_ADDRESS.search(text)
+        if match:
+            fail(f"{path}: holds an address on main of this repository ({match.group(0)})")
+
+
+def check_start_here(root, version, fail):
+    text = read_text("foothold/Start Here.md", root)
+    if text is None:
+        fail("foothold/Start Here.md: missing")
+        return
+    named = set(ANY_VERSION.findall(text))
+    if version not in named:
+        fail(f"foothold/Start Here.md: does not name the pack's version {version}")
+    others = sorted(named - {version})
+    if others:
+        fail(f"foothold/Start Here.md: names {', '.join(others)}, not only {version}")
+
+
+def _load_helper(root):
+    path = Path(root) / UPDATE_HELPER
+    if not path.is_file():
+        path = ROOT / UPDATE_HELPER
+    spec = importlib.util.spec_from_file_location("foothold_changes", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def check_pack_owner_protected(root, files, fail):
+    skill = read_text(UPDATE_SKILL, root)
+    if skill is None:
+        fail(f"{UPDATE_SKILL}: missing, so the protected list cannot be read")
+        return
+    helper = _load_helper(root)
+    try:
+        protected = helper.read_protected(skill)
+    except helper.ChangesError as exc:
+        fail(f"{UPDATE_SKILL}: {exc}")
+        return
+    prefix = "foothold/template/"
+    for path in files:
+        if not path.startswith(prefix):
+            continue
+        rel = path[len(prefix):]
+        text = read_text(path, root) or ""
+        if (PACK_OWNER in rel or PACK_OWNER in text) and rel not in protected:
+            fail(
+                f"{path}: carries the pack_owner placeholder but is not on the protected list "
+                f"in {UPDATE_SKILL}"
+            )
+
+
+def check_readme_prompt(root, version, fail):
+    text = read_text("README.md", root)
+    if text is None:
+        fail("README.md: missing")
+        return
+    if f"foothold-{version}.zip" not in text:
+        fail(f"README.md: the install prompt does not name foothold-{version}.zip")
+    others = sorted(set(ZIP_NAME.findall(text)) - {version})
+    if others:
+        fail(f"README.md: names the zip for {', '.join(others)}, not only {version}")
+
+
 def check_map_data():
     data = build_map.build(ROOT)
     for fault in build_map.problems(data):
@@ -146,6 +258,13 @@ def main():
     check_lessons_index()
     check_schema(ROOT, fail)
     check_map_data()
+    every = all_files()
+    version = newest_version()
+    check_filenames(every, fail)
+    check_no_main_address(ROOT, every, fail)
+    check_start_here(ROOT, version, fail)
+    check_pack_owner_protected(ROOT, every, fail)
+    check_readme_prompt(ROOT, version, fail)
     if failures:
         print(f"check.py: {len(failures)} problem(s)")
         for message in failures:

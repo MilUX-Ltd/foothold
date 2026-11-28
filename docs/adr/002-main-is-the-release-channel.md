@@ -1,6 +1,7 @@
 # ADR 002: `main` is the release channel, so it is protected
 
-Status: accepted, October 2026. Records how the pack already works.
+Status: superseded by [ADR 003](003-a-release-is-a-tag.md), November 2026. Accepted October 2026;
+recorded how the pack worked until 2.5.0.
 
 ## Context
 

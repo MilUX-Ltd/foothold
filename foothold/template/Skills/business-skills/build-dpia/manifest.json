@@ -6,8 +6,7 @@
   "maintainer": "MilUX",
   "maintainer_url": "https://milux.co.uk",
   "license": "MIT",
-  "manifest_url": "https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/business-skills/build-dpia/manifest.json",
-  "release_notes_url": "https://github.com/MilUX-Ltd/foothold/blob/main/CHANGELOG.md",
+  "release_notes_url": "https://github.com/MilUX-Ltd/foothold/releases",
   "scope": {
     "in": ["whole-business DPIA from the founder's vault", "lawful basis", "tools and data types", "quarterly review", "PDF export"],
     "out": ["legal advice", "the certification or ICO submission itself"]

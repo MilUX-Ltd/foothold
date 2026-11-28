@@ -6,8 +6,7 @@
   "maintainer": "MilUX",
   "maintainer_url": "https://milux.co.uk",
   "license": "MIT",
-  "manifest_url": "https://raw.githubusercontent.com/MilUX-Ltd/foothold/main/foothold/template/Skills/brand-skills/design-system-setup/manifest.json",
-  "release_notes_url": "https://github.com/MilUX-Ltd/foothold/blob/main/foothold/template/Skills/brand-skills/design-system-setup/CHANGELOG.md",
+  "release_notes_url": "https://github.com/MilUX-Ltd/foothold/releases",
   "runtime": "node",
   "dependencies": "none",
   "scope": {

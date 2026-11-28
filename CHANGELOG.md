@@ -1,5 +1,33 @@
 # Foothold changelog
 
+## 2.5.0, 2026-11-28
+
+Foothold now comes as a release you can download, and updates ask before they change anything that instructs your AI. Run `/foothold-update` to bring this release in; this once, it will ask about more files than usual.
+
+**New**
+
+- **Releases.** Each version is a GitHub release holding `foothold-2.5.0.zip`, its checksum, and a list of every file in it with its checksum. Unzip it and give your AI tool `Start Here.md`, or paste the prompt from the release page into your AI tool.
+- **`Start Here.md`.** The way in, for you and for your AI tool. It sets the rules your AI follows: work from the folder, ask before writing, send nothing anywhere, and set up no scheduled job without a yes.
+- **A licence file.** `LICENSE` (MIT, MilUX Ltd) and `THIRD-PARTY-NOTICES.md` are now at the top of the repository.
+
+**Changed**
+
+- **`/foothold-update` reads the latest release, never a branch.** It shows you every change before making it. A change to a skill, an instruction file such as `CLAUDE.md`, a script or a settings file is shown file by file and needs its own yes. Reference pages are listed and need one yes. A new skill is shown in full and added only if you say yes.
+- **The update leaves `.obsidian/` alone.** Your Obsidian settings are yours.
+- **The update no longer replaces itself and runs again.** A change to it is shown like any other skill change and takes effect the next time.
+- **A scheduled update only reports.** It lists what a new release would change and changes nothing.
+- **A file with no record of what it held is treated as yours.** The update shows you the difference and asks, instead of overwriting it.
+- **Setup works from the release folder** as well as from the Claude plugin. Forms and scheduled jobs are optional: an AI tool without them asks in the conversation and carries on. Setup asks once before it writes anything.
+- **`build-dpia` and `cyber-essentials-ready` no longer check for updates over the internet.** Each tells you its version and when it was last reviewed.
+- **Five more pages are protected from updates:** `Getting Started - Your First Week.md`, the two `write-sow` assets that carry your name, `Knowledge/domains/brand.md` and the organisation page setup writes in `Context/`.
+
+**For maintainers**
+
+- A release is a tag `vX.Y.Z` on `main` (ADR 003, which supersedes ADR 002). `.github/workflows/release.yml` refuses a tag that does not match the version records or is not on `main`, runs every check, builds the release with `tools/build_release.py` and publishes it. The zip is the same bytes every time for the same tree.
+- The only zips that may be offered to users are those the release workflow builds from a tag.
+- `tools/check.py` now also checks that filenames are ASCII and legal on Windows, that nothing under `foothold/` points at `main` of this repository, that `Start Here.md` names the version, that every file carrying the `pack_owner` placeholder is protected from updates, and that the README names the current zip.
+- Unit tests for the release tooling and the update's sorting are in `tests/`: `python3 -m unittest discover -s tests`.
+
 ## 2.4.0, 2026-11-27
 
 The vault now says how its pages fit together. Run `/foothold-update` to bring it in.
