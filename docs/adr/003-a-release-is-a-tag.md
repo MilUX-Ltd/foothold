@@ -22,6 +22,16 @@ be a new decision superseding it. This is that decision.
   `foothold-X.Y.Z.zip`, `SHA256SUMS.txt` and `release-files.txt`.
 - The zip is built the same way every time, so the same tag gives the same bytes and anyone can
   check a published zip against the repository.
+- The zip carries `release-files.txt` at the top of its folder, listing every other file in the
+  zip; the published `release-files.txt` is the same bytes. A person who downloads only the zip,
+  checks its SHA-256 against the release page and vouches for the unzipped folder, can have the
+  update's helper run from that folder's own list: it refuses the folder if any file in it is
+  missing, extra or different from the list, and copies from the folder without using the
+  network. A downloaded `release-files.txt`, when there is one, comes first, and the folder must
+  match it. When the person names a folder, the update still tries once to download the
+  published list, and uses the folder's own list only when that fails. The helper refuses a
+  release older than the vault's recorded version. (Usability fixes and fifth safety audit,
+  November 2026.)
 - The release job is the only job with permission to write. Every other job is read-only.
 - Setup works from the release folder the person was given (or the Claude plugin) and never
   fetches instructions from the internet. The update reads the latest release's
@@ -49,3 +59,10 @@ be a new decision superseding it. This is that decision.
   reads them once and records SHA-256 checksums from then on.
 - Whether a given AI tool can download a release file has to be walked through by a person on
   that tool. Where it cannot, the update falls back to the person downloading the zip.
+- The list inside the zip shows damage and lets the update do its bookkeeping. It adds no proof
+  of who made the zip, because whoever made the zip made the list inside it too. The person's own
+  comparison of the zip's SHA-256 with the release page is still the only check of where the zip
+  came from. The helper's `zip-checksum` works the SHA-256 out for them; it never compares it.
+- The zip's checksum changes from the earlier candidate builds, because the zip now holds one
+  more file. The release workflow's check that the zip holds exactly the files listed must leave
+  the list itself out of that comparison.

@@ -4879,6 +4879,12 @@
    "type": "parent"
   },
   {
+   "from": "Context/{{pack_org}}",
+   "origin": "path",
+   "to": "Context",
+   "type": "in_folder"
+  },
+  {
    "from": "Intelligence/defence-landscape",
    "origin": "folder",
    "to": "Intelligence",
@@ -10708,6 +10714,15 @@
    "layer": "business",
    "name": "Context",
    "path": "Context"
+  },
+  {
+   "id": "Context/{{pack_org}}",
+   "kind": "organisation",
+   "layer": "defence",
+   "name": "{{pack_org}}",
+   "path": "Context/{{pack_org}}.md",
+   "status": "active",
+   "website": "{{pack_org_website}}"
   },
   {
    "guide": "Customer Engagements/Customer Engagements Guide.md",

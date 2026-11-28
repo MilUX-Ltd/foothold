@@ -54,7 +54,8 @@ jobs:
           mkdir "$RUNNER_TEMP/unzipped"
           unzip -q "$a/foothold-$version.zip" -d "$RUNNER_TEMP/unzipped"
           (cd "$RUNNER_TEMP/unzipped" && sha256sum --quiet -c "$a/release-files.txt")
-          diff <(unzip -Z1 "$a/foothold-$version.zip" | sort) <(cut -c67- "$a/release-files.txt" | sort)
+          diff <(unzip -Z1 "$a/foothold-$version.zip" | grep -vxF "foothold-$version/release-files.txt" | sort) <(cut -c67- "$a/release-files.txt" | sort)
+          cmp "$RUNNER_TEMP/unzipped/foothold-$version/release-files.txt" "$a/release-files.txt"
           echo "version=$version" >> "$GITHUB_OUTPUT"
           echo "zip_sha256=$(cut -d' ' -f1 "$a/SHA256SUMS.txt")" >> "$GITHUB_OUTPUT"
 

@@ -41,7 +41,7 @@ Knowledge/
 
 **hypotheses.md (optional).** Operating ideas that might become rules but aren't there yet. Each hypothesis has a date, a statement, and an evidence trail that grows as observations accumulate. Promotion to a rule happens at review time. Create the file when you have your first hypothesis worth tracking.
 
-**domains/ (optional).** Per-domain operating notes. One file per domain that has standing operating concerns: brand voice, agent messaging, content workflow, security posture. These are reference for agents, updated as the domain evolves. Create the folder when your first domain earns a page. Setup writes `domains/brand.md` from your brand answers when you give it enough to go on.
+**domains/ (optional).** Per-domain operating notes. One file per domain that has standing operating concerns: brand voice, agent messaging, content workflow, security posture. These are reference for agents, updated as the domain evolves. The folder is there from the start; add a page when a domain earns one. Setup writes `domains/brand.md` from your brand answers when you give it enough to go on.
 
 **reviews/ (optional).** Periodic review digests. Weekly review surfaces patterns across the last seven days; monthly looks at cross-week patterns; quarterly aligns the rule set with accumulated evidence. Each review is a durable record in the vault. Create the folder when you start writing reviews that feed your rules; work reviews can live in `Daily/Reviews/` instead (see the [[Daily/Daily Guide|Daily Guide]]).
 

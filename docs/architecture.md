@@ -94,7 +94,7 @@ When you're not sure where something goes, read the relevant Guide. When you can
 
 ## Templating
 
-Foothold uses placeholders for everything specific to you. The `foothold-setup` skill fills them in during install, from your answers to the onboarding brain dump.
+Foothold uses placeholders for everything specific to you. The `foothold-setup` skill fills them in during install, from the details it asks for before it writes anything, or by a stated rule. The setup skill holds the fixed list; placeholders other skills fill later are listed there as not setup's, and `tools/check.py` fails on one that is on neither list.
 
 | Placeholder | Meaning |
 |-------------|---------|
@@ -102,6 +102,7 @@ Foothold uses placeholders for everything specific to you. The `foothold-setup` 
 | `{{pack_slug}}` | Slugified pack name for paths |
 | `{{pack_owner}}` | Your full name |
 | `{{pack_owner_first}}` | Your first name |
+| `{{pack_owner_role}}` | Your role |
 | `{{pack_owner_email}}` | Your primary email |
 | `{{pack_owner_linkedin}}` | Your LinkedIn URL (optional) |
 | `{{pack_owner_phone}}` | Your phone number (optional) |

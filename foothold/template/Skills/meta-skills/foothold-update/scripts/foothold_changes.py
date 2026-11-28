@@ -10,20 +10,33 @@ AI tools that cannot run Python.
 
     python3 foothold_changes.py sort <vault folder> <release-files.txt or release folder>
         [--release-files <release-files.txt>]
-    python3 foothold_changes.py fetch <vault folder> <release-files.txt> <temporary folder>
-        [--release-folder <release folder>]
-    python3 foothold_changes.py show <vault folder> <release-files.txt> <temporary folder> <number>
-        [--page <page>]
-    python3 foothold_changes.py record <vault folder> <release-files.txt> <temporary folder>
-        [<number> ...] [--kept <number> ...] [--took <number> ...]
-    python3 foothold_changes.py verify <release-files.txt> <temporary folder>
+    python3 foothold_changes.py fetch <vault folder> <release-files.txt or release folder>
+        <temporary folder> [--release-folder <release folder>]
+    python3 foothold_changes.py show <vault folder> <release-files.txt or release folder>
+        <temporary folder> <number> [--page <page>]
+    python3 foothold_changes.py record <vault folder> <release-files.txt or release folder>
+        <temporary folder> [<number> ...] [--kept <number> ...] [--took <number> ...]
+    python3 foothold_changes.py verify <release-files.txt or release folder> <temporary folder>
     python3 foothold_changes.py hidden <temporary folder>
     python3 foothold_changes.py hash-folder <folder>
+    python3 foothold_changes.py zip-checksum <zip file>
 
 Every argument is a folder or file the person named, or one you made: the vault, a temporary
-folder, the downloaded release-files.txt, the release folder the person gave you, and numbers
-that fetch printed. No command takes a path read from the release or the vault, so a file name in
-the release never reaches a command line. Pass every path as its own argument.
+folder, the downloaded release-files.txt, the release folder the person gave you, the zip file
+the person gave you, and numbers that fetch printed. No command takes a path read from the
+release or the vault, so a file name in the release never reaches a command line. Pass every path
+as its own argument.
+
+Where a command takes release-files.txt, it also takes the unzipped release folder the person
+vouched for. The helper then reads the list inside that folder (foothold-X.Y.Z/release-files.txt,
+which the release build puts there) and refuses the folder if any file in it is missing, extra or
+different from that list, the list itself excepted. fetch then copies from the folder and uses no
+network at all. The list inside the folder shows damage and lets the bookkeeping work; it is no
+proof of who made the zip, because whoever made the zip made the list too. Only the person's own
+check of the zip's SHA-256 against the release page shows that, and zip-checksum works the
+zip's SHA-256 out for them to compare: it never compares it itself. A downloaded release-files.txt,
+when there is one, comes first: the folder must match it, and the folder's own list must be the
+same bytes.
 
 Every path in a release must pass path_problem(): letters, digits, space and - _ . ( ) & { }
 only, with / between parts. The whole list is refused if one path fails, if two paths differ
@@ -47,7 +60,8 @@ the same. A refusal names the line and the character, never the path itself.
   .mcp.json and the like), other than a file named .gitkeep. Never fetched or touched.
 
 `fetch` downloads each file in the first three groups once, checks it against its SHA-256 before
-saving it in the temporary folder under its item number (files/0001.bin and so on, never a name
+saving it in the temporary folder under its item number (files/0001.txt, or .bin for a
+copy that is not text, and so on, never a name
 from the release), and prints a numbered list. `show` prints item N from that checked copy, one
 page at a time, with characters that do not display pointed out, and refuses if the copy no
 longer matches its checksum, is too long to show, or is no longer the change fetch listed. Every
@@ -70,6 +84,7 @@ import json
 import os
 import re
 import ssl
+import stat
 import sys
 import unicodedata
 import urllib.parse
@@ -124,6 +139,20 @@ CONFIG_BLOCKS = {"foothold", "release_hashes", "vault_hashes", "last_known_shas"
 LIST_BLOCKS = {"kept_by_person"}
 SKIP_NAMES = {".DS_Store", "Thumbs.db", "desktop.ini"}
 SKIP_FOLDED = {name.casefold() for name in SKIP_NAMES}
+# The placeholders setup fills, and only these: the list in the setup skill, which
+# tools/check.py holds this to. record lets a vault file differ from the release's copy only by
+# these, each filled with its value in the vault's record, as Step 7 of SKILL.md fills them.
+SETUP_PLACEHOLDERS = (
+    "pack_name", "pack_slug", "pack_owner", "pack_owner_first", "pack_owner_role",
+    "pack_owner_email", "pack_owner_linkedin", "pack_owner_phone", "pack_org", "pack_org_slug",
+    "pack_org_website", "install_date",
+)
+# The values that go into file names have a file-name form in the record, under this name with
+# _file on the end, which setup made to pass the path rule. Paths use it; page text uses the value.
+FILE_FORM = "_file"
+FOLDER_LIST = "release-files.txt"  # the list the release build puts at the top of the zip's folder
+MAX_LIST = 2 * 1024 * 1024
+MAX_ZIP = 200 * 1024 * 1024
 
 # Characters that show as nothing, or as a blank, beyond the categories _hidden() checks.
 INVISIBLE = {0x034F, 0x115F, 0x1160, 0x17B4, 0x17B5, 0x2800, 0x3164, 0xFFA0}
@@ -135,7 +164,7 @@ RELEASE_BASE = "https://raw.githubusercontent.com/MilUX-Ltd/foothold/refs/tags/v
 MAX_DOWNLOAD = 5 * 1024 * 1024
 TIMEOUT = 30
 MANIFEST = "foothold-fetch.json"  # the index: item number, release path, checksum, status
-FILES = "files"  # checked copies, saved as files/0001.bin and so on, by item number
+FILES = "files"  # checked copies, saved as files/0001.txt (.bin if not text) and so on, by item number
 # show prints at most PAGE_LINES lines and PAGE_CHARS characters a page (header and footer
 # included), cuts a line longer than WRAP characters into pieces, lists notes about hidden
 # characters in at most NOTES_BUDGET characters, and refuses text over SHOW_CAP bytes or more
@@ -154,9 +183,6 @@ BLANK_RUN = 5
 MARK = "## foothold-update: "
 CONTENT = "| "
 MARKER_IN_TEXT = re.compile(r"##(\s*foothold-update\s*:)", re.I)
-# A placeholder in a file's text, as setup fills them: a name of up to 100 characters
-# between double curly brackets.
-TEXT_PLACEHOLDER = re.compile(r"\{\{[^{}\n]{1,100}\}\}")
 STATUSES = ("ok", "failed", "could not download")
 HELPER_FILE = Path(__file__).resolve()
 DEFAULT_SKILL = HELPER_FILE.parent.parent / "SKILL.md"
@@ -171,6 +197,7 @@ class Release:
     version: str
     files: dict  # template path -> SHA-256
     lines: dict = field(default_factory=dict)  # template path -> line in release-files.txt
+    every: dict = field(default_factory=dict)  # every listed path -> (SHA-256, line number)
 
 
 @dataclass
@@ -295,7 +322,10 @@ def parse_release_files(text):
     if not seen:
         raise ChangesError("release-files.txt: empty")
     _no_case_twins(every, "release-files.txt")
-    return Release(version=version, files=files, lines=lines)
+    listed = {path: (LINE.match(raw).group(1), number)
+              for number, raw in enumerate(text.splitlines(), 1) if raw.strip()
+              for path in [LINE.match(raw).group(2)]}
+    return Release(version=version, files=files, lines=lines, every=listed)
 
 
 def release_from_folder(folder):
@@ -344,6 +374,206 @@ def check_folder_against_list(folder_release, listed):
             "the release folder does not match release-files.txt; refusing:\n  "
             + "\n  ".join(problems)
         )
+
+
+def _whole_folder(folder):
+    """Every file in an unzipped release folder, as {path as release-files.txt writes it: SHA-256},
+    leaving out the folder's own release-files.txt and system files such as .DS_Store. A link
+    anywhere in the folder, or a name the path rule refuses, refuses the folder."""
+    folder = Path(folder)
+    if folder.is_symlink() or not folder.is_dir():
+        raise ChangesError("the release folder is not a folder, or is a link; not trusted")
+    top = TOP.fullmatch(folder.name)
+    if not top:
+        raise ChangesError("the release folder is not named foothold-X.Y.Z")
+    own = f"{folder.name}/{FOLDER_LIST}"
+    found = {}
+    for path in sorted(folder.rglob("*")):
+        if path.is_symlink():
+            raise ChangesError("a link inside the release folder; not trusted")
+        if not path.is_file() or path.name in SKIP_NAMES:
+            continue
+        name = f"{folder.name}/{path.relative_to(folder).as_posix()}"
+        why = path_problem(name)
+        if why:
+            raise ChangesError(f"a file in the release folder: {why}; refusing")
+        if name != own:
+            found[name] = sha256_bytes(path.read_bytes())
+    _no_case_twins(((p, None) for p in found), "the release folder:")
+    return found
+
+
+def check_whole_folder(folder, listed):
+    """Refuse a release folder unless every file in it, the template and everything beside it,
+    is exactly a file release-files.txt lists, with its checksum; its own release-files.txt
+    excepted. A problem names the list's line, never a path from the folder."""
+    folder = Path(folder)
+    top = TOP.fullmatch(folder.name)
+    if not top or top.group(1) != listed.version:
+        raise ChangesError(
+            f"the folder is not release {listed.version}, the release release-files.txt names; "
+            "refusing")
+    found = _whole_folder(folder)
+    problems = []
+    for path in sorted(set(found) | set(listed.every)):
+        have = found.get(path)
+        want, line = listed.every.get(path, (None, None))
+        if want is None:
+            problems.append("a file in the folder that release-files.txt does not list")
+        elif have is None:
+            problems.append(f"release-files.txt line {line}: not in the folder")
+        elif have != want:
+            problems.append(f"release-files.txt line {line}: the folder's file does not match "
+                            "its checksum")
+    if problems:
+        shown = problems[:20] + ([f"and {len(problems) - 20} more"] if len(problems) > 20 else [])
+        raise ChangesError(
+            "the release folder does not match release-files.txt; refusing:\n  "
+            + "\n  ".join(shown)
+        )
+
+
+def _own_list_bytes(folder):
+    """The bytes of the release-files.txt inside a release folder, or None if it has none. It
+    must be a plain file, not a link, and not larger than MAX_LIST."""
+    listed = Path(folder) / FOLDER_LIST
+    if not os.path.lexists(listed):
+        return None
+    if listed.is_symlink() or not listed.is_file():
+        raise ChangesError("the release folder's release-files.txt is a link or not a file; "
+                           "not trusted")
+    if listed.stat().st_size > MAX_LIST:
+        raise ChangesError("the release folder's release-files.txt is too large; not trusted")
+    return listed.read_bytes()
+
+
+def folder_list(folder):
+    """The release a vouched-for folder holds, read from the list inside it.
+
+    Reads foothold-X.Y.Z/release-files.txt, applies the path rule to every line, and refuses the
+    folder unless it holds exactly the files the list names (the list itself excepted). The list
+    shows damage and makes the bookkeeping work; it proves nothing about who made the zip."""
+    folder = Path(folder)
+    if folder.is_symlink() or not folder.is_dir():
+        raise ChangesError("the release folder is not a folder, or is a link; not trusted")
+    data = _own_list_bytes(folder)
+    if data is None:
+        raise ChangesError(
+            "the release folder has no release-files.txt inside it, so it comes from an older "
+            "zip, made before releases carried their list inside. The helper cannot fetch, show "
+            "or record from it. Ask the person to download the latest zip and check it, or "
+            "follow 'Without the helper' in the skill")
+    try:
+        text = data.decode("utf-8")
+    except UnicodeDecodeError:
+        raise ChangesError("the release folder's release-files.txt is not text; refusing")
+    release = parse_release_files(text)
+    check_whole_folder(folder, release)
+    return release
+
+
+def check_downloaded_against_folder(folder, listed, listed_bytes):
+    """A downloaded release-files.txt and the folder the person gave: the folder must match the
+    downloaded list in full, and the list inside the folder, if it has one, must be the same
+    bytes as the downloaded one."""
+    check_folder_against_list(release_from_folder(folder), listed)
+    check_whole_folder(folder, listed)
+    own = _own_list_bytes(folder)
+    if own is not None and own != listed_bytes:
+        raise ChangesError("the release-files.txt inside the release folder is not the same as "
+                           "the one downloaded from the release; refusing")
+
+
+def load_list(source, release_folder=None):
+    """The release a command works from, and the release folder to copy from, if any.
+
+    source is release-files.txt, or the unzipped release folder the person vouched for, whose own
+    list is then used (folder_list). release_folder is the folder to check against a downloaded
+    list and copy from; it cannot be given beside a folder in place of the list."""
+    source = Path(source)
+    if source.is_dir():
+        if release_folder is not None:
+            raise ChangesError("give the release folder once: in place of release-files.txt, or "
+                               "with --release-folder beside a downloaded release-files.txt")
+        return folder_list(source), source
+    data = source.read_bytes()
+    try:
+        release = parse_release_files(data.decode("utf-8"))
+    except UnicodeDecodeError:
+        raise ChangesError("release-files.txt is not text; refusing")
+    if release_folder is not None:
+        check_downloaded_against_folder(release_folder, release, data)
+    return release, release_folder
+
+
+def zip_checksum(path):
+    """The SHA-256 of the zip file the person named, for them to compare with the release page.
+
+    The path comes from the person, not the release, but it gets the same character rule as
+    every other path the helper takes: letters, digits, space and - _ . ( ) & { } with / between
+    parts, an optional / at the start, and nothing else. It must end in .zip, be a regular file
+    and not a link, and be no larger than MAX_ZIP. It is opened without blocking and without
+    following a link, and the file opened must be the one looked at (same device and inode) and
+    a regular file, so a link, a pipe or a device put in its place between the two is refused
+    rather than waited on. A path that starts with ~ is refused with its own message: the helper
+    does not expand it. This function works the checksum out; it never compares it with
+    anything."""
+    if not isinstance(path, str):
+        path = str(path)
+    if path.startswith("~"):
+        raise ChangesError(
+            "the zip's path starts with ~, which this helper does not expand. Write the path in "
+            "full, from the top of the disk (for example /Users/<name>/Downloads/foothold.zip), "
+            "and run it again")
+    why = path_problem(path[1:] if path.startswith("/") else path)
+    if why:
+        raise ChangesError(
+            f"the zip's path cannot be used here ({why}). Ask the person to move or rename the "
+            "zip so that its folder and name use only letters, digits, spaces and - _ . ( ) & { }, "
+            "for example into their Downloads folder as foothold.zip, and to tell you where it "
+            "is now")
+    if not path.casefold().endswith(".zip"):
+        raise ChangesError("that is not a .zip file; ask the person for the zip they downloaded")
+    too_large = (f"the file is larger than {MAX_ZIP // (1024 * 1024)} MB, so it is not a "
+                 "Foothold zip; ask the person for the zip they downloaded")
+    try:
+        before = os.lstat(path)
+    except OSError as exc:
+        raise ChangesError(f"cannot find the zip ({type(exc).__name__}); ask the person where it "
+                           "is")
+    if stat.S_ISLNK(before.st_mode):
+        raise ChangesError("the zip's path is a link; ask the person for the zip itself")
+    if not stat.S_ISREG(before.st_mode):
+        raise ChangesError("that is not a plain file; ask the person for the zip itself")
+    if before.st_size > MAX_ZIP:
+        raise ChangesError(too_large)
+    digest, total = hashlib.sha256(), 0
+    flags = (os.O_RDONLY | getattr(os, "O_BINARY", 0) | getattr(os, "O_NONBLOCK", 0)
+             | getattr(os, "O_NOFOLLOW", 0))
+    try:
+        descriptor = os.open(path, flags)
+    except OSError as exc:
+        raise ChangesError(f"cannot open the zip ({type(exc).__name__}); ask the person to check "
+                           "where it is and try again")
+    try:
+        now = os.fstat(descriptor)
+        if (now.st_dev, now.st_ino) != (before.st_dev, before.st_ino) or \
+                not stat.S_ISREG(now.st_mode):
+            raise ChangesError("the zip changed while it was being opened; ask the person to "
+                               "check where it is and try again")
+    except BaseException:
+        os.close(descriptor)
+        raise
+    with os.fdopen(descriptor, "rb") as handle:
+        while True:
+            chunk = handle.read(1024 * 1024)
+            if not chunk:
+                break
+            total += len(chunk)
+            if total > MAX_ZIP:
+                raise ChangesError(too_large)
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def _scalar(text):
@@ -476,6 +706,16 @@ def _value(name, values, protected_only):
 
     With protected_only, the value may hold an apostrophe, because the path is on the protected
     list. Otherwise it must pass the release's own rule, apostrophe refused."""
+    form = values.get(name + FILE_FORM)
+    if form:
+        why = path_problem(form)
+        if why is None and ("/" in form or form.startswith(".")):
+            why = "it holds '/' or begins with a dot"
+        if why:
+            raise ChangesError(
+                f"the file-name form of {name} in .foothold/config.yml ({name}{FILE_FORM}) cannot "
+                f"be used in a file name ({why}); stopping, nothing was changed")
+        return form
     if name not in values:
         return "{{" + name + "}}"
     value = values[name]
@@ -591,6 +831,34 @@ def _where(release, tpath):
     return f"release-files.txt line {number}" if number else "a file in the release"
 
 
+def _one_page_each(release, config):
+    """Refuse a release and a record that would put two files in one place in the vault, the
+    protected pages included: the person's page and their organisation's page, or either of
+    them and a page the release already has, such as Context/Brand.md."""
+    owner = config.values.get("pack_owner" + FILE_FORM) or config.values.get("pack_owner")
+    org = config.values.get("pack_org" + FILE_FORM) or config.values.get("pack_org")
+    if owner and org and owner.casefold() == org.casefold():
+        raise ChangesError(
+            "your page and your organisation's page would be the same file in the vault "
+            "(pack_owner and pack_org have the same file-name form in .foothold/config.yml); "
+            "stopping, nothing was changed. Give the organisation's page its own name in the "
+            'foothold: block, for example pack_org_file: "Jane Smith (organisation)", and '
+            "rename that page in Context to match")
+    seen = {}
+    for tpath in sorted(release.files):
+        if excluded(tpath):
+            continue
+        try:
+            where = substitute(tpath, config.values, protected_only=True).casefold()
+        except ChangesError:
+            continue
+        twin = seen.setdefault(where, tpath)
+        if twin != tpath:
+            raise ChangesError(
+                f"{_where(release, twin)} and {_where(release, tpath)} would be the same file in "
+                "the vault with your values filled in; stopping, nothing was changed")
+
+
 def classify(release, config, vault_root, protected):
     """Sort every file in the release. Returns {template path: Change}."""
     vault_root = Path(vault_root)
@@ -602,6 +870,7 @@ def classify(release, config, vault_root, protected):
         except ChangesError:
             pass
     kept = {path.casefold() for path in config.kept}
+    _one_page_each(release, config)
     result, vault_paths = {}, {}
     for tpath, rsha in sorted(release.files.items()):
         if excluded(tpath):
@@ -689,10 +958,14 @@ def load_release(source, release_files=None):
     """
     source = Path(source)
     if source.is_dir():
-        release = release_from_folder(source)
         if release_files is not None:
-            check_folder_against_list(release, read_release_files(release_files))
-        return release
+            data = Path(release_files).read_bytes()
+            listed = parse_release_files(data.decode("utf-8"))
+            check_downloaded_against_folder(source, listed, data)
+            return listed
+        if _own_list_bytes(source) is not None:
+            return folder_list(source)
+        return release_from_folder(source)
     return read_release_files(source)
 
 
@@ -700,11 +973,97 @@ def read_vault_config(vault):
     config_file = Path(vault) / ".foothold/config.yml"
     if not config_file.is_file():
         raise ChangesError(f"{config_file}: not found; this does not look like a Foothold vault")
-    return parse_config(config_file.read_text(encoding="utf-8"))
+    config = parse_config(config_file.read_text(encoding="utf-8"))
+    _derive_forms(config.values)
+    return config
+
+
+# Pages Context/ already has, which the person's and the organisation's pages must not take.
+CONTEXT_PAGES = ("Brand", "Strategy", "Team", "Stakeholders", "Context Guide")
+
+
+def file_name_form(value, org=False, owner_form=None):
+    """The file-name form of a value, by setup's rules (Step A.4 of the setup skill): accents
+    dropped, every character the path rule refuses replaced by a space, runs of spaces made one,
+    spaces, dots and hyphens trimmed from both ends; Profile or Organisation if nothing is left
+    or it is a name Windows reserves; ' (profile)' added to the person's form if it names a page
+    Context/ already has, ' (organisation)' to the organisation's if it is the person's form or
+    names such a page, compared without regard to capitals."""
+    text = "".join(ch for ch in unicodedata.normalize("NFKD", value)
+                   if not unicodedata.combining(ch))
+    text = "".join(ch if SAFE_CHARACTER.fullmatch(ch) else " " for ch in text)
+    text = re.sub(r" +", " ", text).strip(" .-")
+    if not text or RESERVED_NAME.fullmatch(text):
+        text = "Organisation" if org else "Profile"
+    taken = {page.casefold() for page in CONTEXT_PAGES}
+    if org:
+        if text.casefold() in taken or (owner_form and text.casefold() == owner_form.casefold()):
+            text += " (organisation)"
+    elif text.casefold() in taken:
+        text += " (profile)"
+    return text
+
+
+def _derive_forms(values):
+    """A record made before setup wrote file-name forms: work them out from the values by
+    setup's rules, in memory only, and stop if one is not safe in a file name."""
+    owner_form = values.get("pack_owner" + FILE_FORM)
+    if not owner_form and values.get("pack_owner"):
+        owner_form = values["pack_owner" + FILE_FORM] = file_name_form(values["pack_owner"])
+        _check_derived("pack_owner", owner_form)
+    if not values.get("pack_org" + FILE_FORM) and values.get("pack_org"):
+        form = values["pack_org" + FILE_FORM] = file_name_form(
+            values["pack_org"], org=True, owner_form=owner_form)
+        _check_derived("pack_org", form)
+
+
+def _check_derived(name, form):
+    why = path_problem(form)
+    if why:
+        raise ChangesError(
+            f"your record has no file-name form for {name}, and the one worked out from its value "
+            f"cannot be used in a file name ({why}). Stopping, nothing was changed. Add a line to "
+            f"the foothold: block of .foothold/config.yml giving the name of the page as it is in "
+            f"your vault's Context folder, without .md, for example "
+            f'{name}{FILE_FORM}: "Jane Smith", then run the update again')
+
+
+SHORT_VERSION = re.compile(r"[0-9]{1,9}\.[0-9]{1,9}\.[0-9]{1,9}")  # used with fullmatch
+
+
+def _version_key(text):
+    """X.Y.Z as three numbers, or None if it is not three groups of at most nine digits."""
+    if not isinstance(text, str) or not SHORT_VERSION.fullmatch(text):
+        return None
+    return tuple(int(part) for part in text.split("."))
+
+
+def check_not_older(release, config):
+    """Never step a vault back: refuse a release older than the version the vault records. A
+    version that is missing or not X.Y.Z, in the vault's record or the release, stops the run;
+    the comparison is never skipped."""
+    recorded = config.values.get("version")
+    have, found = _version_key(recorded), _version_key(release.version)
+    if have is None:
+        raise ChangesError(
+            "the version in .foothold/config.yml (foothold.version) is missing or is not three "
+            "numbers in X.Y.Z form, such as 2.5.0, so this update cannot tell whether the "
+            "release would step your vault back. Stopping, nothing was changed. Put the "
+            "version your vault is on in X.Y.Z form, then run the update again")
+    if found is None:
+        raise ChangesError(
+            "the release's version is not three numbers in X.Y.Z form of at most nine digits "
+            "each; refusing it. Stopping, nothing was changed")
+    if found < have:
+        raise ChangesError(
+            f"this release is Foothold {release.version}, older than the Foothold "
+            f"{config.values['version']} your vault is on; an update never steps a vault back. "
+            "Stopping, nothing was changed")
 
 
 def sort_release(vault, release, skill_md=DEFAULT_SKILL):
     config = read_vault_config(vault)
+    check_not_older(release, config)
     protected = read_protected(Path(skill_md).read_text(encoding="utf-8"))
     return classify(release, config, vault, protected)
 
@@ -840,15 +1199,32 @@ def _from_folder(release_folder, tpath):
     return path.read_bytes()
 
 
-def _stored(number):
-    """Where item N's checked copy is kept: files/0001.bin and so on. The name holds no text
-    from the release, so nothing in the temporary folder has a name a release chose."""
-    return f"{number:04d}.bin"
+def _is_text(data):
+    try:
+        data.decode("utf-8")
+        return True
+    except UnicodeDecodeError:
+        return False
+
+
+def _stored(number, text=True):
+    """Where item N's checked copy is kept: files/0001.txt for a copy that is text (UTF-8), and
+    files/0001.bin for one that is not. The name holds only the item's number and whether it is
+    text, never anything from the release."""
+    return f"{number:04d}.{'txt' if text else 'bin'}"
+
+
+def _find_stored(base, number):
+    """Item N's checked copy under base, by its number alone: exactly one of 000N.txt and
+    000N.bin, or None if there is not exactly one."""
+    found = [base / _stored(number, kind) for kind in (True, False)
+             if os.path.lexists(base / _stored(number, kind))]
+    return found[0] if len(found) == 1 else None
 
 
 def _save(store, number, data):
     store.mkdir(exist_ok=True)
-    target = store / _stored(number)
+    target = store / _stored(number, _is_text(data))
     with open(target, "xb") as handle:
         handle.write(data)
 
@@ -858,14 +1234,12 @@ def fetch(vault, release_files, temp, skill_md=DEFAULT_SKILL, download=None,
     """Download, check and save every file in groups A, B and C. Returns the numbered items.
 
     Each file is fetched once, from release_url() and nothing else, or copied from the release
-    folder the person gave. It is saved as <temp>/files/<number>.bin only if its SHA-256 matches
+    folder the person gave. It is saved as <temp>/files/<number>.txt (.bin if not text) only if its SHA-256 matches
     release-files.txt. The list is also written to <temp>/foothold-fetch.json, the index that
     show, record and verify read.
     """
     vault, temp = Path(vault), Path(temp)
-    release = read_release_files(release_files)
-    if release_folder is not None:
-        check_folder_against_list(release_from_folder(release_folder), release)
+    release, release_folder = load_list(release_files, release_folder)
     _check_temp(vault, temp)
     result = sort_release(vault, release, skill_md)
     run = _run_checksums(skill_md)
@@ -1009,13 +1383,17 @@ def _manifest_item(vault, release, temp, number, skill_md=DEFAULT_SKILL):
 
 
 def _checked_copy(temp, number, digest):
-    """Item N's checked copy, files/000N.bin, and its bytes, refused unless it still matches
-    its SHA-256 in release-files.txt."""
-    copy = Path(temp) / FILES / _stored(number)
-    if copy.is_symlink() or not copy.is_file():
-        raise ChangesError(f"the copy of item {number} is missing from the temporary folder; run "
-                           "fetch again into a new empty folder")
+    """Item N's checked copy, files/000N.txt or files/000N.bin, and its bytes, refused unless
+    there is exactly one, it still matches its SHA-256 in release-files.txt, and its name says
+    rightly whether it is text."""
+    copy = _find_stored(Path(temp) / FILES, number)
+    if copy is None or copy.is_symlink() or not copy.is_file():
+        raise ChangesError(f"the copy of item {number} is missing from the temporary folder, or "
+                           "is there twice; run fetch again into a new empty folder")
     data = copy.read_bytes()
+    if copy.name != _stored(number, _is_text(data)):
+        raise ChangesError(f"the copy of item {number} in the temporary folder is under the wrong "
+                           "name; run fetch again into a new empty folder")
     if sha256_bytes(data) != digest:
         raise ChangesError(f"the copy of item {number} in the temporary folder no longer matches "
                            "its checksum; do not show or write it. Run fetch again into a new "
@@ -1164,7 +1542,7 @@ def show(vault, release_files, temp, number, skill_md=DEFAULT_SKILL, page=1):
     MAX_PAGES pages is refused, and so is an item whose group has changed since fetch.
     """
     vault, temp = Path(vault), Path(temp)
-    release = read_release_files(release_files)
+    release, _ = load_list(release_files)
     item, tpath, vault_path, total = _manifest_item(vault, release, temp, number, skill_md)
     now = sort_release(vault, release, skill_md).get(tpath)
     if (now is None or now.category != item["group"] or now.new != item["new"]
@@ -1303,44 +1681,47 @@ def _vault_file(vault, vault_path, number):
     return local.read_bytes()
 
 
-def _fill_problem(tpath, release_data, vault_data):
+def fill_setup_placeholders(text, values):
+    """The text with each of setup's placeholders that has a value in the vault's record
+    replaced by that value, and every other placeholder left as it is (Step 7 of SKILL.md)."""
+    for name in SETUP_PLACEHOLDERS:
+        value = values.get(name)
+        if value:
+            text = text.replace("{{" + name + "}}", value)
+    return text
+
+
+def _fill_problem(tpath, release_data, vault_data, values):
     """Why the vault's file is not the release's checked copy, or None.
 
-    With no placeholder in the release file's name or text, the two must be the same bytes.
-    With one, the vault's file must have the same number of lines, every line of the release's
-    copy that holds no placeholder must be the same in the vault, and every line that holds one
-    must match it with each placeholder replaced by any text on that line, or left as it is.
-    The reason names line numbers only, never text."""
+    The vault's file must be the release's copy byte for byte, or, for text, the release's copy
+    with each of setup's placeholders that has a value in the vault's record replaced by exactly
+    that value, and nothing else changed: no other placeholder filled, no placeholder with an
+    empty value filled, no other text. The reason names line numbers only, never text."""
     if sha256_bytes(vault_data) == sha256_bytes(release_data):
         return None
     not_copy = "the file in the vault is not the release's copy"
     try:
         theirs = release_data.decode("utf-8")
     except UnicodeDecodeError:
-        theirs = None
-    if theirs is None or not (TEXT_PLACEHOLDER.search(theirs) or TEXT_PLACEHOLDER.search(tpath)):
-        return f"{not_copy} (its SHA-256 differs, and the release's copy has no placeholders)"
+        return f"{not_copy} (its SHA-256 differs, and the release's copy is not text)"
+    want = fill_setup_placeholders(theirs, values)
+    if want == theirs:
+        return f"{not_copy} (its SHA-256 differs, and the release's copy has no placeholders " \
+               "with a value in your record)"
     try:
         mine = vault_data.decode("utf-8")
     except UnicodeDecodeError:
         return f"{not_copy} (it is not text)"
-    want, have = theirs.split("\n"), mine.split("\n")
-    if len(want) != len(have):
-        return (f"{not_copy} with its placeholders filled in: it has {len(have)} lines where "
-                f"the release's copy has {len(want)}")
-    for number, (line, got) in enumerate(zip(want, have), 1):
-        if line == got:
-            continue
-        literal = TEXT_PLACEHOLDER.split(line)
-        if len(literal) == 1:
-            return (f"{not_copy} with its placeholders filled in: line {number} differs and "
-                    "holds no placeholder")
-        if len(literal) > 11:
-            return f"{not_copy}: line {number} holds more placeholders than record checks"
-        if not re.fullmatch(".*?".join(re.escape(part) for part in literal), got):
-            return (f"{not_copy} with its placeholders filled in: line {number} differs by more "
-                    "than its placeholders")
-    return None
+    if mine == want:
+        return None
+    want_lines, have = want.split("\n"), mine.split("\n")
+    if len(want_lines) != len(have):
+        return (f"{not_copy} with setup's placeholders filled in from your record: it has "
+                f"{len(have)} lines where that copy has {len(want_lines)}")
+    number = next(n for n, (a, b) in enumerate(zip(want_lines, have), 1) if a != b)
+    return (f"{not_copy} with setup's placeholders filled in from your record: line {number} "
+            "differs")
 
 
 def _record_item(vault, release, config, temp, number, choice, skill_md):
@@ -1378,7 +1759,7 @@ def _record_item(vault, release, config, temp, number, choice, skill_md):
                                "as the person's own; if the person took the release's, give it "
                                "after --took")
     else:
-        problem = _fill_problem(tpath, copy, data)
+        problem = _fill_problem(tpath, copy, data, config.values)
         if problem:
             raise ChangesError(f"{problem}, so it cannot be recorded as written from the "
                                "release. If the person kept their own, give it after --kept; "
@@ -1402,7 +1783,7 @@ def record(vault, release_files, temp, written=(), kept=(), took=(), skill_md=DE
     recorded.
     """
     vault, temp = Path(vault), Path(temp)
-    release = read_release_files(release_files)
+    release, _ = load_list(release_files)
     config = read_vault_config(vault)
     chosen = [(n, "written") for n in written] + [(n, "took") for n in took] + \
         [(n, "kept") for n in kept]
@@ -1488,7 +1869,7 @@ def _files_under(folder):
 def verify_folder(release, folder):
     """Check a folder against the list.
 
-    A folder that fetch filled is checked item by item: files/0001.bin against item 1's
+    A folder that fetch filled is checked item by item: files/0001.txt or .bin against item 1's
     checksum, and so on. Any other folder, laid out by template path, is checked against every
     template file in release-files.txt. Returns {path: 'ok' | 'failed' | 'missing' |
     'not in the release' | 'skipped'}.
@@ -1526,7 +1907,8 @@ def _verify_fetched(release, folder):
         tpath = item.get("path")
         if not isinstance(tpath, str) or path_problem(tpath):
             continue
-        name = _stored(item["number"])
+        stored = _find_stored(base, item["number"])
+        name = stored.name if stored is not None else _stored(item["number"])
         expected.add(name)
         want = release.files.get(tpath)
         if want is None:
@@ -1740,6 +2122,9 @@ def main(argv=None):
     d.add_argument("targets", nargs="+", help="the temporary folder fetch filled")
     f = sub.add_parser("hash-folder", help="print the SHA-256 of every file under a folder")
     f.add_argument("folder")
+    z = sub.add_parser("zip-checksum",
+                       help="print the SHA-256 of the zip file the person gave, for them to compare")
+    z.add_argument("zip")
     try:
         args = parser.parse_args(argv)
     except SystemExit as exc:
@@ -1759,7 +2144,7 @@ def main(argv=None):
             sys.stdout.write(record(args.vault, args.release_files, args.temp, args.numbers,
                                     kept=args.kept, took=args.took, skill_md=args.skill))
         elif args.command == "verify":
-            results = verify_folder(read_release_files(args.release_files), args.folder)
+            results = verify_folder(load_list(args.release_files)[0], args.folder)
             words = {"ok": "OK", "failed": "FAILED its checksum",
                      "not in the release": "NOT IN THE RELEASE",
                      "missing": "MISSING, not downloaded", "skipped": "SKIPPED, NOT CHECKED"}
@@ -1771,6 +2156,11 @@ def main(argv=None):
             return 0 if all(o == "ok" for o in results.values()) else 1
         elif args.command == "hidden":
             return 1 if _hidden_report(args.targets) else 0
+        elif args.command == "zip-checksum":
+            digest = zip_checksum(args.zip)
+            print(f"SHA-256 of the zip file you named: {digest}")
+            print("This helper does not compare it with anything. The person compares it with "
+                  "the SHA-256 on the release page, character by character.")
         else:
             for rel, path in _files_under(args.folder)[0]:
                 print(f"{sha256_bytes(path.read_bytes())}  {rel}")

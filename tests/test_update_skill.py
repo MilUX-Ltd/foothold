@@ -109,7 +109,7 @@ class FixtureCase(unittest.TestCase):
     NEW["Daily/Daily Guide.md"] = "daily v1\n"  # unchanged upstream
 
     PROTECTED = {"Home.md", "Context/{{pack_owner}}.md"}
-    VALUES = {"pack_owner": "Jane Smith"}
+    VALUES = {"version": "2.5.0", "pack_owner": "Jane Smith"}
 
     def setUp(self):
         self._tmp = tempfile.TemporaryDirectory()
@@ -288,7 +288,7 @@ class TestHostileInput(unittest.TestCase):
             release = changes.parse_release_files(
                 f"{'0' * 64}  {TOP}/template/Context/{{{{pack_owner}}}}.md\n"
             )
-            cfg = changes.Config(values={"pack_owner": "../../x"}, vault_hashes={},
+            cfg = changes.Config(values={"version": "2.5.0", "pack_owner": "../../x"}, vault_hashes={},
                                  release_hashes={}, legacy={})
             with self.assertRaises(changes.ChangesError):
                 changes.classify(release, cfg, Path(tmp), set())
@@ -315,7 +315,7 @@ class TestHostileInput(unittest.TestCase):
 
     def test_config_round_trip(self):
         cfg = changes.Config(
-            values={"pack_owner": "Jane Smith", "pack_org": "Acme: Defence"},
+            values={"version": "2.5.0", "pack_owner": "Jane Smith", "pack_org": "Acme: Defence"},
             vault_hashes={"Resources/C# notes.md": "a" * 64, "Home.md": "b" * 64},
             release_hashes={"Resources/C# notes.md": "c" * 64},
             legacy={"Old: page.md": "d" * 40},

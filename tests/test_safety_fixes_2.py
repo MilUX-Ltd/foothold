@@ -111,7 +111,7 @@ class H1ApostropheRemoved(unittest.TestCase):
         # Third audit, T1: only in the name of a protected file, never one the update writes.
         with tempfile.TemporaryDirectory() as tmp:
             release = changes.parse_release_files(listing({"Context/{{pack_owner}}.md": "x"}))
-            cfg = changes.Config(values={"pack_owner": "Siobhan O'Neill"})
+            cfg = changes.Config(values={"version": "2.5.0", "pack_owner": "Siobhan O'Neill"})
             got = changes.classify(release, cfg, Path(tmp), {"Context/{{pack_owner}}.md"})
             self.assertEqual(got["Context/{{pack_owner}}.md"].vault_path,
                              "Context/Siobhan O'Neill.md")
@@ -151,7 +151,7 @@ class FetchCase(unittest.TestCase):
             write(self.vault / path, body)
         old = {"Skills/x/SKILL.md": "skill v1\n", "Intelligence/a b (c) & {d}.md": "page v1\n",
                "CRM/mine.md": "release v1\n", "Knowledge/same.md": "same\n", "Ideas/.gitkeep": ""}
-        cfg = changes.Config(values={"pack_owner": "Jane Smith"},
+        cfg = changes.Config(values={"version": "2.5.0", "pack_owner": "Jane Smith"},
                              vault_hashes={p: sha256(b) for p, b in old.items()},
                              release_hashes={p: sha256(b) for p, b in old.items()})
         write(self.vault / ".foothold/config.yml", changes.render_config(cfg))
@@ -219,14 +219,14 @@ class H1FetchAndShow(FetchCase):
                      ".claude/settings.json", "Ideas/.gitkeep"):
             self.assertFalse(any(path.replace(" ", "%20") in u for u in self.asked), path)
         # Third audit, T1: checked copies are saved by item number, never by release name.
-        self.assertEqual((self.temp / "files/0003.bin").read_text(encoding="utf-8"),
+        self.assertEqual((self.temp / "files/0003.txt").read_text(encoding="utf-8"),
                          "brand new​ page\n")
         self.assertFalse((self.temp / "files/Intelligence").exists())
 
     def test_a_file_that_fails_its_checksum_is_never_saved(self):
         items, out = self.fetch(**{"Skills/x/SKILL.md": "tampered\n"})
         self.assertEqual(items[0]["status"], "failed")
-        self.assertFalse((self.temp / "files/0001.bin").exists())
+        self.assertFalse((self.temp / "files/0001.txt").exists())
         self.assertFalse((self.temp / "files/Skills/x/SKILL.md").exists())
         self.assertIn("FAILED its checksum", out)
 
@@ -270,7 +270,7 @@ class H1FetchAndShow(FetchCase):
 
     def test_show_refuses_a_copy_changed_after_it_was_checked(self):
         self.fetch()
-        write(self.temp / "files/0001.bin", "swapped after the check\n")
+        write(self.temp / "files/0001.txt", "swapped after the check\n")
         with self.assertRaises(changes.ChangesError) as caught:
             changes.show(self.vault, self.listed, self.temp, 1, self.skill)
         self.assertIn("no longer matches its checksum", str(caught.exception))
@@ -376,7 +376,12 @@ class H1TheOnlyNetworkCode(unittest.TestCase):
 
     def test_the_helper_has_one_way_out_and_runs_nothing(self):
         source = HELPER.read_text(encoding="utf-8")
-        self.assertEqual(source.count(".open("), 1)
+        # One opener for the network; os.open only in zip_checksum, to open the person's zip
+        # without blocking (fifth audit, V3).
+        self.assertEqual(source.count(".open(") - source.count("os.open("), 1)
+        self.assertEqual(source.count("os.open("), 1)
+        zip_body = source[source.index("def zip_checksum("):source.index("def _scalar(")]
+        self.assertIn("os.open(", zip_body)
         for url in re.findall(r"https?://[^\s\"'`]*", source):
             self.assertTrue(url.startswith(
                 "https://raw.githubusercontent.com/MilUX-Ltd/foothold/refs/tags/v"), url)
@@ -392,7 +397,8 @@ class H1TheOnlyNetworkCode(unittest.TestCase):
 
 class H1SkillHasNoReleasePathInACommand(unittest.TestCase):
     ALLOWED = {"<vault>", "<release-files.txt>", "<temporary folder>", "<number>",
-               "<release folder>", "<TEMPLATE_ROOT>", "<target>", "<file or folder>"}
+               "<release folder>", "<TEMPLATE_ROOT>", "<target>", "<file or folder>",
+               "<zip file>"}
 
     def code_lines(self, path):
         text = path.read_text(encoding="utf-8")
@@ -511,7 +517,7 @@ class N2KeepMineStaysTheirs(unittest.TestCase):
         self.assertEqual(self.sort(sha256(b"2.7.0"), cfg), changes.CONFLICT)
 
     def test_the_record_round_trips(self):
-        cfg = changes.Config(values={"pack_owner": "Jane"}, kept=["CRM/b.md", "CRM/a (x) & {y}.md"])
+        cfg = changes.Config(values={"version": "2.5.0", "pack_owner": "Jane"}, kept=["CRM/b.md", "CRM/a (x) & {y}.md"])
         text = changes.render_config(cfg)
         self.assertIn('kept_by_person:\n  - "CRM/a (x) & {y}.md"\n  - "CRM/b.md"\n', text)
         self.assertEqual(sorted(changes.parse_config(text).kept), sorted(cfg.kept))
@@ -575,7 +581,7 @@ class N3VerifyAFetchFolder(FetchCase):
             changes.fetch(self.vault, self.listed, self.temp, self.skill,
                           download=self.fake_download())
         self.assertEqual(run_cli("verify", self.listed, self.temp)[0], 0)
-        (self.temp / "files/0003.bin").unlink()
+        (self.temp / "files/0003.txt").unlink()
         code, out, _ = run_cli("verify", self.listed, self.temp)
         self.assertEqual(code, 1)
         self.assertIn("MISSING", out)

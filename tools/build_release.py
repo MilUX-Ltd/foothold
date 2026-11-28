@@ -8,12 +8,16 @@ check a published zip against the repository. Standard library only, Python 3.9 
 
 It writes four files into the output folder:
 
-- foothold-X.Y.Z.zip: one folder, foothold-X.Y.Z/, holding Start Here.md, LICENSE, template/
-  (from foothold/template/) and setup/ (from foothold/skills/foothold-setup/). No plugin
-  manifest. Empty-folder markers (.gitkeep) are left out where the folder has other content.
+- foothold-X.Y.Z.zip: one folder, foothold-X.Y.Z/, holding Start Here.md, LICENSE,
+  release-files.txt, template/ (from foothold/template/) and setup/ (from
+  foothold/skills/foothold-setup/). No plugin manifest. Empty-folder markers (.gitkeep) are left
+  out where the folder has other content.
 - SHA256SUMS.txt: the zip's SHA-256, in the format `sha256sum -c` reads.
-- release-files.txt: one line per file in the zip, its SHA-256, two spaces, then its path.
-  The update skill reads this from the latest release.
+- release-files.txt: one line per file in the zip other than itself, its SHA-256, two spaces,
+  then its path. The update skill reads this from the latest release. The zip carries the same
+  file, byte for byte, at the top of its folder, so a person who downloads only the zip can still
+  have the update's helper check the unzipped folder and do its bookkeeping. It shows damage; it
+  is no proof of who made the zip, because whoever made the zip made the list inside it too.
 - release-notes.md: the body of the release page, with the install prompt that names this
   version and the zip's checksum. The prompt lives here and not in the zip or the README,
   because a file cannot carry the checksum of the zip it is inside.
@@ -301,6 +305,24 @@ def collect(root, version, from_tree=False):
     return sorted(entries.items())
 
 
+LIST_NAME = "release-files.txt"
+
+
+def listing(entries):
+    """release-files.txt: one line per entry, its SHA-256, two spaces, its path, in name order."""
+    return "".join(f"{hashlib.sha256(data).hexdigest()}  {name}\n" for name, data in entries)
+
+
+def with_listing(entries, version):
+    """The entries with release-files.txt added at the top of the zip's folder. The list names
+    every other entry and not itself, so it can be the same bytes inside the zip and beside it."""
+    name = f"foothold-{version}/{LIST_NAME}"
+    if any(entry == name for entry, _ in entries):
+        raise ReleaseError(f"{name}: already in the zip; the build adds it")
+    text = listing(entries).encode("utf-8")
+    return sorted(entries + [(name, text)]), text
+
+
 def write_zip(entries, target):
     with zipfile.ZipFile(target, "w", compression=zipfile.ZIP_STORED) as zf:
         for name, data in entries:
@@ -320,8 +342,9 @@ def release_notes(version, checksum):
         "Here file inside, or paste this prompt into your AI tool:\n\n"
         f"    {install_prompt(version, checksum)}\n\n"
         f"SHA-256 of `foothold-{version}.zip`: `{checksum}`\n\n"
-        "`release-files.txt` lists every file in the zip with its SHA-256. The update skill "
-        "reads it to see what has changed.\n\n"
+        "`release-files.txt` lists every other file in the zip with its SHA-256. The update "
+        "skill reads it to see what has changed. The same file is inside the zip, so the update "
+        "can check an unzipped folder against it; it shows damage, not who made the zip.\n\n"
         f"What changed is in CHANGELOG.md under {version}.\n"
     )
 
@@ -340,19 +363,15 @@ def build(root, out_dir, version=None, from_tree=False):
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
 
-    entries = collect(root, version, from_tree)
+    entries, listed = with_listing(collect(root, version, from_tree), version)
     zip_path = out / f"foothold-{version}.zip"
     write_zip(entries, zip_path)
     checksum = hashlib.sha256(zip_path.read_bytes()).hexdigest()
 
     sums = out / "SHA256SUMS.txt"
     sums.write_text(f"{checksum}  {zip_path.name}\n", encoding="utf-8", newline="\n")
-    listing = out / "release-files.txt"
-    listing.write_text(
-        "".join(f"{hashlib.sha256(data).hexdigest()}  {name}\n" for name, data in entries),
-        encoding="utf-8",
-        newline="\n",
-    )
+    list_path = out / LIST_NAME
+    list_path.write_bytes(listed)
     notes = out / "release-notes.md"
     notes.write_text(release_notes(version, checksum), encoding="utf-8", newline="\n")
     return {
@@ -360,7 +379,7 @@ def build(root, out_dir, version=None, from_tree=False):
         "zip": zip_path,
         "zip_sha256": checksum,
         "sums": sums,
-        "files": listing,
+        "files": list_path,
         "notes": notes,
         "count": len(entries),
     }

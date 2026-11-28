@@ -80,7 +80,7 @@ class Case(unittest.TestCase):
             write(self.vault / path, body)
         old = {"Skills/x/SKILL.md": "skill v1\n", "Intelligence/a b (c) & {d}.md": "page v1\n",
                "CRM/mine.md": "release v1\n", "Knowledge/same.md": "same\n"}
-        cfg = changes.Config(values={"pack_owner": self.OWNER, "pack_org": "Smith & Co"},
+        cfg = changes.Config(values={"version": "2.5.0", "pack_owner": self.OWNER, "pack_org": "Smith & Co"},
                              vault_hashes={p: sha256(b) for p, b in old.items()},
                              release_hashes={p: sha256(b) for p, b in old.items()},
                              kept=list(self.KEPT))
@@ -133,16 +133,16 @@ class T1RecordByNumber(Case):
     def test_the_vault_checksum_is_the_file_as_it_now_stands(self):
         # Fourth audit, U1: the file must be the release's copy with only its placeholders
         # filled in, so the release's page here carries one.
-        self.RELEASE = dict(self.RELEASE, **{"Intelligence/new.md": "brand new page, {{title}}\n"})
+        self.RELEASE = dict(self.RELEASE, **{"Intelligence/new.md": "brand new page, {{pack_owner}}\n"})
         self.listed.write_text(listing(self.RELEASE), encoding="utf-8")
         items, _ = self.fetch()
         n = self.number(items, "Intelligence/new.md")
-        write(self.vault / "Intelligence/new.md", "brand new page, filled in\n")
+        write(self.vault / "Intelligence/new.md", "brand new page, Jane Smith\n")
         out = changes.record(self.vault, self.listed, self.temp, [n], skill_md=self.skill)
         vlt = out[out.index("vault_hashes"):out.index("kept_by_person")]
         rel = out[out.index("release_hashes"):out.index("vault_hashes")]
-        self.assertIn('"Intelligence/new.md": ' + sha256("brand new page, filled in\n"), vlt)
-        self.assertIn('"Intelligence/new.md": ' + sha256("brand new page, {{title}}\n"), rel)
+        self.assertIn('"Intelligence/new.md": ' + sha256("brand new page, Jane Smith\n"), vlt)
+        self.assertIn('"Intelligence/new.md": ' + sha256("brand new page, {{pack_owner}}\n"), rel)
 
     def test_keep_mine_records_the_release_and_adds_to_the_list(self):
         items, _ = self.fetch()
@@ -238,26 +238,26 @@ class T1CopiesAreSavedByNumber(Case):
         items, _ = self.fetch()
         saved = sorted(p.relative_to(self.temp).as_posix() for p in self.temp.rglob("*")
                        if p.is_file())
-        self.assertEqual(saved, ["files/0001.bin", "files/0002.bin", "files/0003.bin",
-                                 "files/0004.bin", changes.MANIFEST])
+        self.assertEqual(saved, ["files/0001.txt", "files/0002.txt", "files/0003.txt",
+                                 "files/0004.txt", changes.MANIFEST])
         for item in items:
             text = changes.show(self.vault, self.listed, self.temp, item["number"], self.skill)
             where = [l for l in text.splitlines()
                      if l.startswith("## foothold-update: The checked copy is at: ")]
             self.assertEqual(len(where), 1)
-            self.assertTrue(where[0].endswith(f"files/{item['number']:04d}.bin"), where[0])
+            self.assertTrue(where[0].endswith(f"files/{item['number']:04d}.txt"), where[0])
 
     def test_verify_checks_the_numbered_copies(self):
         self.fetch()
         self.assertEqual(run_cli("verify", self.listed, self.temp)[0], 0)
-        write(self.temp / "files/0002.bin", "swapped")
+        write(self.temp / "files/0002.txt", "swapped")
         code, out, _ = run_cli("verify", self.listed, self.temp)
         self.assertEqual(code, 1)
         self.assertIn("FAILED its checksum", out)
 
     def test_show_refuses_a_swapped_numbered_copy(self):
         self.fetch()
-        write(self.temp / "files/0001.bin", "swapped after the check\n")
+        write(self.temp / "files/0001.txt", "swapped after the check\n")
         with self.assertRaises(changes.ChangesError):
             changes.show(self.vault, self.listed, self.temp, 1, self.skill)
 
@@ -326,7 +326,8 @@ class T1ApostropheOnlyInProtectedPaths(unittest.TestCase):
     def test_fetch_stops_before_anything_is_fetched_or_written(self):
         tmp = Path(self._tmp.name)
         write(self.vault / ".foothold/config.yml",
-              changes.render_config(changes.Config(values={"pack_owner": "Ann O'Neill"})))
+              changes.render_config(changes.Config(values={"version": "2.5.0", "pack_owner": "Ann O'Neill",
+                                                           "pack_owner_file": "Ann O'Neill"})))
         skill = tmp / "SKILL.md"
         skill.write_text(SMALL_SKILL, encoding="utf-8")
         listed = tmp / "release-files.txt"
@@ -345,7 +346,7 @@ class T1ApostropheOnlyInProtectedPaths(unittest.TestCase):
 
 class T1SkillProse(unittest.TestCase):
     ALLOWED = {"<vault>", "<release-files.txt>", "<temporary folder>", "<number>",
-               "<release folder>", "<TEMPLATE_ROOT>", "<target>"}
+               "<release folder>", "<TEMPLATE_ROOT>", "<target>", "<zip file>"}
 
     def setUp(self):
         self.text = UPDATE_SKILL.read_text(encoding="utf-8")

@@ -55,7 +55,7 @@ class Vault(unittest.TestCase):
         self.vault.mkdir()
         for path, body in self.VAULT.items():
             write(self.vault / path, body)
-        cfg = self.MODULE.Config(values={"pack_owner": "Jane Smith"},
+        cfg = self.MODULE.Config(values={"version": "2.5.0", "pack_owner": "Jane Smith"},
                                  vault_hashes={p: sha256(b) for p, b in self.OLD.items()},
                                  release_hashes={p: sha256(b) for p, b in self.OLD.items()},
                                  kept=list(self.KEPT))
@@ -197,8 +197,12 @@ class U1Placeholders(Vault):
         write(self.vault / "Knowledge/Owner.md", text)
 
     def test_a_faithful_fill_is_recorded(self):
+        # Fifth audit, V8: only setup's placeholders with a value in the record are filled, and
+        # only with that value; {{today_iso}} is another skill's and stays as it is.
+        cfg = self.MODULE.Config(values={"version": "2.5.0", "pack_owner": "Jane Smith", "pack_owner_first": "Jane"})
+        write(self.vault / ".foothold/config.yml", self.MODULE.render_config(cfg))
         self.fetch()
-        filled = "# Notes for Jane Smith\nFixed line.\nSigned Jane, 2026-11-28.\n"
+        filled = "# Notes for Jane Smith\nFixed line.\nSigned Jane, {{today_iso}}.\n"
         self.write_vault(filled)
         out = self.record([1])
         vlt = out[out.index("vault_hashes"):out.index("kept_by_person")]
@@ -518,7 +522,7 @@ class U4StaleIndex(Vault):
         items, _ = self.fetch()
         n = self.number(items, "Knowledge/K.md")
         write(self.vault / "Knowledge/K.md", "k v2\n")
-        write(self.temp / "files" / f"{n:04d}.bin", "swapped\n")
+        write(self.temp / "files" / f"{n:04d}.txt", "swapped\n")
         with self.assertRaises(changes.ChangesError) as caught:
             self.record([n])
         self.assertIn("checksum", str(caught.exception))
@@ -576,14 +580,14 @@ class U5Framing(Vault):
                 first_content = next(i for i, l in enumerate(lines) if l.startswith("| "))
                 self.assertLess(where[0], first_content)
                 self.assertEqual(lines[where[0]],
-                                 f"{MARK} The checked copy is at: {self.temp / 'files' / f'{n:04d}.bin'}")
+                                 f"{MARK} The checked copy is at: {self.temp / 'files' / f'{n:04d}.txt'}")
 
 
 class U5SkillWording(unittest.TestCase):
     def test_step_7_works_the_copy_out_from_the_number(self):
         text = UPDATE_SKILL.read_text(encoding="utf-8")
         step7 = " ".join(text[text.index("## Step 7"):text.index("## Step 8")].split())
-        self.assertIn("<temporary folder>/files/0007.bin", step7)
+        self.assertIn("<temporary folder>/files/0007.txt", step7)
         self.assertIn("never take it from the output", step7)
         self.assertNotIn("read it from there", step7)
 

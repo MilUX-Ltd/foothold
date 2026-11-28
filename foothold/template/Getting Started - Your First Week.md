@@ -9,7 +9,7 @@ tags: [getting-started, onboarding]
 
 The vault is installed and your Context pages are written. This page turns that into a working habit, one small win a day. Nothing here takes more than half an hour. Tick things off as you go; this page is yours to edit.
 
-If you asked setup to schedule a check-in, Cowork will nudge you in a week. If you did not, tell it now: "remind me in a week to review my Getting Started progress".
+If you asked setup to schedule a check-in, your AI tool will nudge you in a week. If you did not, tell it now: "remind me in a week to review my Getting Started progress".
 
 ## Day 1: check the foundations
 
@@ -21,7 +21,7 @@ If you asked setup to schedule a check-in, Cowork will nudge you in a week. If y
 
 Pick the option that matches your reality:
 
-- **You already run a CRM** (HubSpot, Salesforce, Pipedrive, a spreadsheet with pretensions). Run `/import-relationships`. If your CRM has a Cowork connector it reads directly; otherwise a CSV export works. It triages with you first, so only living relationships come in.
+- **You already run a CRM** (HubSpot, Salesforce, Pipedrive, a spreadsheet with pretensions). Run `/import-relationships`. If your AI tool has a connector for your CRM, it reads directly; otherwise a CSV export works. It triages with you first, so only living relationships come in.
 - **You want to keep your current CRM.** Fine; the vault CRM then holds relationship knowledge (what was said, what matters to them) rather than pipeline. Add people as you meet them with `/add-contact`.
 - **You are starting from scratch.** After every real conversation this week, run `/add-contact`. Five contacts entered well beats fifty entered badly.
 

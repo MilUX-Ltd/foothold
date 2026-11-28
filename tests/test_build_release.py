@@ -71,7 +71,8 @@ class Test2Layout(BuildCase):
         tops = {n.split("/", 1)[0] for n in names}
         self.assertEqual(tops, {"foothold-1.2.3"})
         second = {n.split("/")[1] for n in names}
-        self.assertEqual(second, {"Start Here.md", "LICENSE", "template", "setup"})
+        self.assertEqual(second, {"Start Here.md", "LICENSE", "release-files.txt", "template",
+                                  "setup"})
         self.assertIn("foothold-1.2.3/setup/SKILL.md", names)
         self.assertIn("foothold-1.2.3/template/CLAUDE.md", names)
         self.assertIn("foothold-1.2.3/template/.obsidian/app.json", names)
@@ -105,7 +106,8 @@ class Test3FileList(BuildCase):
             listed[path] = digest
         self.assertEqual(len(listed), len(lines), "a path is listed twice")
         with zipfile.ZipFile(out / "foothold-1.2.3.zip") as zf:
-            in_zip = {n: sha256(zf.read(n)) for n in zf.namelist() if not n.endswith("/")}
+            in_zip = {n: sha256(zf.read(n)) for n in zf.namelist() if not n.endswith("/")
+                      and n != "foothold-1.2.3/release-files.txt"}
         self.assertEqual(listed, in_zip)
 
 

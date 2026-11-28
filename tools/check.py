@@ -39,6 +39,17 @@ they catch a problem before the commit as well as in CI:
 13. Nothing under foothold/template/ is a dot-file or dot-folder other than .obsidian/ at its top
     and files named .gitkeep, so a release can never carry .claude/, .mcp.json, .git/ or the
     like (second 2.5.0 safety audit, N7; tools/build_release.py refuses the same).
+14. Every placeholder in the template written as a name in double curly brackets (letters,
+    digits and _ only), in a file's name or its text, is on one of the two lists in the setup
+    skill: the placeholders setup fills, or those that are not setup's. So a new install-time
+    placeholder cannot be added without joining setup's list. Every name on setup's list is a key
+    of the foothold: block in the record setup writes, no name on the other list is, and every
+    page setup builds is on the update skill's protected list (usability fixes, G2; finding S5).
+    Placeholders written with spaces, '-' or '.' inside the brackets, or with angle brackets in
+    a file name, fail; files that are not UTF-8 are read too. A name on the not-setup's list may
+    be used only inside its own skill's folder. Every name setup fills that goes into a file
+    name has its file-name form (<name>_file) in the record, and the update's helper holds
+    setup's list exactly (fifth safety audit, V6, V8, V10).
 """
 
 import importlib.util
@@ -69,6 +80,11 @@ ZIP_NAME = re.compile(r"foothold-(\d+\.\d+\.\d+)\.zip")
 PACK_OWNER = "{{" + "pack_owner" + "}}"
 UPDATE_SKILL = "foothold/template/Skills/meta-skills/foothold-update/SKILL.md"
 UPDATE_HELPER = "foothold/template/Skills/meta-skills/foothold-update/scripts/foothold_changes.py"
+SETUP_SKILL = "foothold/skills/foothold-setup/SKILL.md"
+NAMED_PLACEHOLDER = re.compile(r"\{\{([A-Za-z_][A-Za-z0-9_]*)\}\}")
+LOOSE_PLACEHOLDER = re.compile(r"\{\{\s*([A-Za-z_][A-Za-z0-9_.-]*)\s*\}\}")
+SETUP_FILLS = "### The placeholders setup fills"
+NOT_SETUPS = "### Placeholders that are not setup's"
 HOME_PATH = re.compile(r"/Users/[A-Za-z0-9._-]+/")
 RELEASED = re.compile(r"^## (\d+\.\d+\.\d+)\b", re.M)
 LESSON = re.compile(r"^(\d+)\. \*\*(.+?)\*\*(?:\s*\(([^)]*)\))?", re.M)
@@ -247,6 +263,167 @@ def check_pack_owner_protected(root, files, fail):
             )
 
 
+def _section(text, heading):
+    """The lines under a heading, up to the next heading of any level, or None if it is absent."""
+    lines = text.splitlines()
+    for i, line in enumerate(lines):
+        if line.strip() == heading:
+            body = []
+            for rest in lines[i + 1:]:
+                if rest.startswith("#"):
+                    break
+                body.append(rest)
+            return "\n".join(body)
+    return None
+
+
+def setup_placeholder_lists(text):
+    """The two lists in the setup skill, as (setup fills, not setup's), each in the order given.
+    A list that is missing comes back as None."""
+    out = []
+    for heading in (SETUP_FILLS, NOT_SETUPS):
+        body = _section(text, heading)
+        if body is None:
+            out.append(None)
+            continue
+        names = []
+        for line in body.splitlines():
+            if line.lstrip().startswith("- "):
+                for code in re.findall(r"`([^`]+)`", line):
+                    match = NAMED_PLACEHOLDER.fullmatch(code)
+                    if match and match.group(1) not in names:
+                        names.append(match.group(1))
+        out.append(names)
+    return tuple(out)
+
+
+def not_setup_owners(text):
+    """{name: the skill it belongs to}, from lines of the not-setup's list written
+    '- <skill>: `{{name}}`, ...'."""
+    owners = {}
+    for line in (_section(text, NOT_SETUPS) or "").splitlines():
+        match = re.match(r"^\s*-\s+([a-z0-9-]+):", line)
+        if not match:
+            continue
+        for code in re.findall(r"`([^`]+)`", line):
+            name = NAMED_PLACEHOLDER.fullmatch(code)
+            if name:
+                owners[name.group(1)] = match.group(1)
+    return owners
+
+
+def helper_setup_names(root):
+    """The update helper's own list of setup's placeholders, or None if root has no helper."""
+    if not (Path(root) / UPDATE_HELPER).is_file():
+        return None
+    return list(_load_helper(root).SETUP_PLACEHOLDERS)
+
+
+def _template_text(root, path):
+    try:
+        return (Path(root) / path).read_bytes().decode("utf-8", errors="replace")
+    except (FileNotFoundError, IsADirectoryError):
+        return ""
+
+
+def record_keys(text):
+    """The keys of the foothold: block in the setup skill's example of .foothold/config.yml."""
+    match = re.search(r"```yaml\nfoothold:\n((?:  .*\n)*)", text)
+    if not match:
+        return None
+    return [line.split(":", 1)[0].strip() for line in match.group(1).splitlines() if ":" in line]
+
+
+def built_pages(text):
+    """The pages in the setup skill's "Pages to populate" table, in template form."""
+    pages = []
+    for line in text.splitlines():
+        match = re.match(r"^\|\s*`([^`]+)`\s*\|", line)
+        if match and "/" in match.group(1) and match.group(1).endswith(".md"):
+            pages.append(helper_angle(match.group(1)))
+    return pages
+
+
+def helper_angle(path):
+    return re.sub(r"<([a-z_]+)>", lambda m: "{{" + m.group(1) + "}}", path)
+
+
+def check_setup_placeholders(root, files, fail):
+    setup = read_text(SETUP_SKILL, root)
+    if setup is None:
+        fail(f"{SETUP_SKILL}: missing, so the list of setup's placeholders cannot be read")
+        return
+    fills, others = setup_placeholder_lists(setup)
+    if not fills or others is None:
+        fail(f"{SETUP_SKILL}: needs the two lists '{SETUP_FILLS[4:]}' and '{NOT_SETUPS[4:]}'")
+        return
+    both = sorted(set(fills) & set(others))
+    if both:
+        fail(f"{SETUP_SKILL}: on both lists: {', '.join(both)}")
+    keys = record_keys(setup)
+    if keys is None:
+        fail(f"{SETUP_SKILL}: no example of the foothold: block of .foothold/config.yml")
+        keys = []
+    for name in fills:
+        if name not in keys:
+            fail(f"{SETUP_SKILL}: setup fills {name}, but the record's foothold: block does not "
+                 "list it")
+    for name in others:
+        if name in keys:
+            fail(f"{SETUP_SKILL}: {name} is not setup's, but it is a key of the record's "
+                 "foothold: block, so the update would fill it")
+    helper_names = helper_setup_names(root)
+    if helper_names is not None and sorted(helper_names) != sorted(fills):
+        fail(f"{UPDATE_HELPER}: SETUP_PLACEHOLDERS is not the list of the placeholders setup "
+             f"fills in {SETUP_SKILL}; the helper must hold exactly that list")
+    owners = not_setup_owners(setup)
+    known = set(fills) | set(others)
+    prefix = "foothold/template/"
+    in_names = set()
+    for path in files:
+        if not path.startswith(prefix):
+            continue
+        rel = path[len(prefix):]
+        if "<" in rel or ">" in rel:
+            fail(f"{path}: a file name in the template may not hold < or >")
+        text = _template_text(root, path)
+        for where in (rel, text):
+            for match in LOOSE_PLACEHOLDER.finditer(where):
+                name = match.group(1)
+                if match.group(0) != "{{" + name + "}}" or not NAMED_PLACEHOLDER.fullmatch(
+                        match.group(0)):
+                    fail(f"{path}: the placeholder {match.group(0)!r} is not written as a name "
+                         "of letters, digits and _ in double curly brackets with no spaces")
+        names_here = set(NAMED_PLACEHOLDER.findall(rel))
+        in_names |= names_here
+        found = names_here | set(NAMED_PLACEHOLDER.findall(text))
+        for name in sorted(found - known):
+            fail(f"{path}: the placeholder {name} is on neither list in {SETUP_SKILL}; add it to "
+                 "the placeholders setup fills, or to those that are not setup's")
+        for name in sorted(found & set(others)):
+            owner = owners.get(name)
+            if owner and f"/{owner}/" not in "/" + rel:
+                fail(f"{path}: the placeholder {name} belongs to {owner}, but this file is not in "
+                     f"{owner}'s folder; only {owner} may use it")
+    for name in sorted(in_names & set(fills)):
+        if name + "_file" not in keys:
+            fail(f"{SETUP_SKILL}: {name} goes into a file name, but the record's foothold: block "
+                 f"does not list its file-name form, {name}_file")
+    update = read_text(UPDATE_SKILL, root)
+    if update is None:
+        return
+    helper = _load_helper(root)
+    try:
+        protected = helper.read_protected(update)
+    except helper.ChangesError as exc:
+        fail(f"{UPDATE_SKILL}: {exc}")
+        return
+    for page in built_pages(setup):
+        if page not in protected:
+            fail(f"{SETUP_SKILL}: setup builds {page}, but it is not on the protected list in "
+                 f"{UPDATE_SKILL}")
+
+
 def check_readme_prompt(root, version, fail):
     text = read_text("README.md", root)
     if text is None:
@@ -288,6 +465,7 @@ def main():
     check_start_here(ROOT, version, fail)
     check_pack_owner_protected(ROOT, every, fail)
     check_readme_prompt(ROOT, version, fail)
+    check_setup_placeholders(ROOT, every, fail)
     if failures:
         print(f"check.py: {len(failures)} problem(s)")
         for message in failures:
